@@ -63,12 +63,13 @@ const queryClient = new QueryClient({
 })
 
 // Create a new router instance
-// Note: basepath matches vite.config.ts base path
+// Note: basepath matches the app's path in app.json
 const router = createRouter({
   routeTree,
   context: { queryClient },
   defaultPreload: 'intent',
   defaultPreloadStaleTime: 0,
+  basepath: '/login',
 })
 
 // Register the router instance for type safety
