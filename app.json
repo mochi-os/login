@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "label": "app_name",
+  "paths": ["login"],
+
+  "architecture": {"engine": "starlark", "version": 2},
+  "execute": ["login.star"],
+
+  "actions": {
+    "": {"file": "web/dist/index.html", "public": true},
+    "assets": {"files": "web/dist/assets", "public": true},
+    "images": {"files": "web/dist/images", "public": true},
+    "identity": {"file": "web/dist/index.html", "public": true},
+    "otp": {"file": "web/dist/index.html", "public": true},
+    "signup": {"file": "web/dist/index.html", "public": true}
+  }
+}
