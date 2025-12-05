@@ -62,14 +62,21 @@ const queryClient = new QueryClient({
   }),
 })
 
+// Extract basepath from URL: /login -> /login, /login/otp -> /login
+const getBasepath = () => {
+  const pathname = window.location.pathname
+  // Match first path segment: /login or /login/...
+  const match = pathname.match(/^(\/[^/]+)/)
+  return match ? match[1] : '/'
+}
+
 // Create a new router instance
-// Note: basepath matches the app's path in app.json
 const router = createRouter({
   routeTree,
   context: { queryClient },
   defaultPreload: 'intent',
   defaultPreloadStaleTime: 0,
-  basepath: '/login',
+  basepath: getBasepath(),
 })
 
 // Register the router instance for type safety
