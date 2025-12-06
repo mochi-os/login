@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="120" height="100">
+  <defs>
+    <linearGradient id="mochiGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FEFEFE"/>
+      <stop offset="100%" style="stop-color:#F5F0E8"/>
+    </linearGradient>
+    
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#E8DFD0" flood-opacity="0.5"/>
+    </filter>
+    
+    <radialGradient id="blushGrad">
+      <stop offset="0%" style="stop-color:#FFB5B5; stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#FFB5B5; stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Body - same proportions as mochi-final, centered -->
+  <path d="M60 5 
+           C82 5, 93 18, 93 38
+           C93 54, 82 67, 60 67
+           C38 67, 27 54, 27 38
+           C27 18, 38 5, 60 5Z" 
+        fill="url(#mochiGrad)" 
+        stroke="#E0D8C8" 
+        stroke-width="1.5"
+        filter="url(#softShadow)"/>
+  
+  <!-- Left eye -->
+  <ellipse cx="51" cy="35" rx="3.5" ry="4.2" fill="#3D3D3D"/>
+  <ellipse cx="49.8" cy="33.5" rx="1.2" ry="1.5" fill="#FFFFFF"/>
+  
+  <!-- Right eye -->
+  <ellipse cx="69" cy="35" rx="3.5" ry="4.2" fill="#3D3D3D"/>
+  <ellipse cx="67.8" cy="33.5" rx="1.2" ry="1.5" fill="#FFFFFF"/>
+  
+  <!-- Smile -->
+  <path d="M53 46 Q60 52, 67 46" fill="none" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Blush -->
+  <ellipse cx="40" cy="41" rx="6" ry="4.3" fill="url(#blushGrad)"/>
+  <ellipse cx="80" cy="41" rx="6" ry="4.3" fill="url(#blushGrad)"/>
+  
+  <!-- Wordmark below -->
+  <text x="60" y="88" 
+        font-family="Nunito, system-ui, -apple-system, sans-serif" 
+        font-size="20" 
+        font-weight="300" 
+        fill="#4A4A4A" 
+        text-anchor="middle"
+        letter-spacing="2">mochi</text>
+</svg>

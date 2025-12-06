@@ -222,8 +222,7 @@ export function UserAuthForm({
     return (
       <div className={cn('grid gap-4', className)}>
         <div className='space-y-2 text-center'>
-          <h3 className='text-lg font-semibold'>Enter Login Code</h3>
-          <p className='text-muted-foreground text-sm'>Paste your login code</p>
+          <p className='text-muted-foreground text-sm'>Paste the login code you received by email</p>
           <p className='text-sm font-medium'>{userEmail}</p>
         </div>
 

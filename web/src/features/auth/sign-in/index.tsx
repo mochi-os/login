@@ -5,7 +5,6 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
 } from '@/components/ui/card'
 import { AuthLayout } from '../auth-layout'
 import { UserAuthForm } from './components/user-auth-form'
@@ -19,9 +18,8 @@ export function SignIn() {
       <Card className='gap-4'>
         {step === 'email' && (
           <CardHeader>
-            <CardTitle className='text-lg tracking-tight'>Sign in</CardTitle>
             <CardDescription>
-              Enter your email address 
+              Sign in with your email address
             </CardDescription>
           </CardHeader>
         )}
