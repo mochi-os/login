@@ -135,10 +135,20 @@ export function UserAuthForm({
           description: result.message || 'Please try again or contact support.',
         })
       }
-    } catch (_error) {
-      toast.error('Failed to send verification code', {
-        description: 'Please try again or contact support.',
-      })
+    } catch (error) {
+      const apiError = error as { message?: string; data?: { error?: string; message?: string } }
+      const errorCode = apiError.data?.error
+      const errorMessage = apiError.data?.message || apiError.message
+
+      if (errorCode === 'signup_disabled') {
+        toast.error('Registration disabled', {
+          description: errorMessage || 'New user signup is disabled.',
+        })
+      } else {
+        toast.error('Failed to send verification code', {
+          description: errorMessage || 'Please try again or contact support.',
+        })
+      }
     } finally {
       setIsLoading(false)
     }
@@ -183,10 +193,21 @@ export function UserAuthForm({
             result.message || 'Please check your email and try again.',
         })
       }
-    } catch (_error) {
-      toast.error('Verification failed', {
-        description: 'Please try again or contact support.',
-      })
+    } catch (error) {
+      // Extract error message from API error
+      const apiError = error as { message?: string; data?: { error?: string; message?: string } }
+      const errorCode = apiError.data?.error
+      const errorMessage = apiError.data?.message || apiError.message
+
+      if (errorCode === 'signup_disabled') {
+        toast.error('Registration disabled', {
+          description: errorMessage || 'New user signup is disabled.',
+        })
+      } else {
+        toast.error('Verification failed', {
+          description: errorMessage || 'Please try again or contact support.',
+        })
+      }
     } finally {
       setIsLoading(false)
     }
