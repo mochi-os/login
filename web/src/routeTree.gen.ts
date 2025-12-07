@@ -9,16 +9,10 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SignupRouteImport } from './routes/signup'
 import { Route as OtpRouteImport } from './routes/otp'
 import { Route as IdentityRouteImport } from './routes/identity'
 import { Route as IndexRouteImport } from './routes/index'
 
-const SignupRoute = SignupRouteImport.update({
-  id: '/signup',
-  path: '/signup',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const OtpRoute = OtpRouteImport.update({
   id: '/otp',
   path: '/otp',
@@ -39,45 +33,34 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/identity': typeof IdentityRoute
   '/otp': typeof OtpRoute
-  '/signup': typeof SignupRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/identity': typeof IdentityRoute
   '/otp': typeof OtpRoute
-  '/signup': typeof SignupRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/identity': typeof IdentityRoute
   '/otp': typeof OtpRoute
-  '/signup': typeof SignupRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/identity' | '/otp' | '/signup'
+  fullPaths: '/' | '/identity' | '/otp'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/identity' | '/otp' | '/signup'
-  id: '__root__' | '/' | '/identity' | '/otp' | '/signup'
+  to: '/' | '/identity' | '/otp'
+  id: '__root__' | '/' | '/identity' | '/otp'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   IdentityRoute: typeof IdentityRoute
   OtpRoute: typeof OtpRoute
-  SignupRoute: typeof SignupRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/signup': {
-      id: '/signup'
-      path: '/signup'
-      fullPath: '/signup'
-      preLoaderRoute: typeof SignupRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/otp': {
       id: '/otp'
       path: '/otp'
@@ -106,7 +89,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   IdentityRoute: IdentityRoute,
   OtpRoute: OtpRoute,
-  SignupRoute: SignupRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
