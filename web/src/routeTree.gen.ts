@@ -10,7 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as OtpRouteImport } from './routes/otp'
-import { Route as MfaRouteImport } from './routes/mfa'
+import { Route as MethodsRouteImport } from './routes/methods'
 import { Route as IdentityRouteImport } from './routes/identity'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -19,9 +19,9 @@ const OtpRoute = OtpRouteImport.update({
   path: '/otp',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MfaRoute = MfaRouteImport.update({
-  id: '/mfa',
-  path: '/mfa',
+const MethodsRoute = MethodsRouteImport.update({
+  id: '/methods',
+  path: '/methods',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IdentityRoute = IdentityRouteImport.update({
@@ -38,34 +38,34 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/identity': typeof IdentityRoute
-  '/mfa': typeof MfaRoute
+  '/methods': typeof MethodsRoute
   '/otp': typeof OtpRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/identity': typeof IdentityRoute
-  '/mfa': typeof MfaRoute
+  '/methods': typeof MethodsRoute
   '/otp': typeof OtpRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/identity': typeof IdentityRoute
-  '/mfa': typeof MfaRoute
+  '/methods': typeof MethodsRoute
   '/otp': typeof OtpRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/identity' | '/mfa' | '/otp'
+  fullPaths: '/' | '/identity' | '/methods' | '/otp'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/identity' | '/mfa' | '/otp'
-  id: '__root__' | '/' | '/identity' | '/mfa' | '/otp'
+  to: '/' | '/identity' | '/methods' | '/otp'
+  id: '__root__' | '/' | '/identity' | '/methods' | '/otp'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   IdentityRoute: typeof IdentityRoute
-  MfaRoute: typeof MfaRoute
+  MethodsRoute: typeof MethodsRoute
   OtpRoute: typeof OtpRoute
 }
 
@@ -78,11 +78,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OtpRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/mfa': {
-      id: '/mfa'
-      path: '/mfa'
-      fullPath: '/mfa'
-      preLoaderRoute: typeof MfaRouteImport
+    '/methods': {
+      id: '/methods'
+      path: '/methods'
+      fullPath: '/methods'
+      preLoaderRoute: typeof MethodsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/identity': {
@@ -105,7 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   IdentityRoute: IdentityRoute,
-  MfaRoute: MfaRoute,
+  MethodsRoute: MethodsRoute,
   OtpRoute: OtpRoute,
 }
 export const routeTree = rootRouteImport

@@ -30,6 +30,37 @@ import {
 } from '@/api/types/auth'
 import { requestHelpers } from '@/lib/request'
 
+// Login flow
+interface BeginLoginRequest {
+  email: string
+}
+
+interface BeginLoginResponse {
+  methods: string[]
+  hasPasskey?: boolean
+  new?: boolean
+}
+
+interface TotpLoginRequest {
+  email: string
+  code: string
+}
+
+interface TotpLoginResponse {
+  token?: string
+  login?: string
+  name?: string
+  mfa?: boolean
+  partial?: string
+  remaining?: string[]
+}
+
+const beginLogin = (payload: BeginLoginRequest) =>
+  requestHelpers.post<BeginLoginResponse>(endpoints.auth.begin, payload)
+
+const totpLogin = (payload: TotpLoginRequest) =>
+  requestHelpers.post<TotpLoginResponse>(endpoints.auth.totpLogin, payload)
+
 // Email auth
 const requestCode = (payload: RequestCodeRequest) =>
   requestHelpers.post<RequestCodeResponse>(endpoints.auth.code, payload)
@@ -119,6 +150,9 @@ const userMethodsSet = (payload: MethodsSetRequest) =>
   requestHelpers.post<{ ok: boolean }>(endpoints.auth.userMethods.set, payload)
 
 export const authApi = {
+  // Login flow
+  beginLogin,
+  totpLogin,
   // Email auth
   requestCode,
   verifyCode,

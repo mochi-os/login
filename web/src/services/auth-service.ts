@@ -45,6 +45,68 @@ const completeAuth = (response: {
   return false
 }
 
+interface BeginLoginResponse {
+  methods: string[]
+  hasPasskey?: boolean
+  new?: boolean
+}
+
+export const beginLogin = async (email: string): Promise<BeginLoginResponse> => {
+  try {
+    const response = await authApi.beginLogin({ email })
+
+    mergeProfileCookie({ email })
+
+    const currentUser = useAuthStore.getState().user
+    useAuthStore.getState().setUser({
+      ...currentUser,
+      email,
+    })
+
+    return response
+  } catch (error) {
+    console.error('Failed to begin login', error)
+    throw error
+  }
+}
+
+interface TotpLoginResponse {
+  token?: string
+  login?: string
+  name?: string
+  mfa?: boolean
+  partial?: string
+  remaining?: string[]
+}
+
+export const totpLogin = async (
+  email: string,
+  code: string
+): Promise<TotpLoginResponse & { success: boolean }> => {
+  try {
+    const response = await authApi.totpLogin({ email, code })
+
+    // Check for MFA requirement
+    if (response.mfa && response.partial && response.remaining) {
+      useAuthStore.getState().setMfa(response.partial, response.remaining)
+      return {
+        ...response,
+        success: true,
+      }
+    }
+
+    const success = completeAuth(response)
+
+    return {
+      ...response,
+      success,
+    }
+  } catch (error) {
+    console.error('Failed to login with TOTP', error)
+    throw error
+  }
+}
+
 export const requestCode = async (
   email: string
 ): Promise<RequestCodeResponse> => {

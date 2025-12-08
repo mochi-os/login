@@ -138,8 +138,8 @@ export function MethodSelector({ methods, onSelect, redirectTo }: MethodSelector
         onClick={handleCancel}
         disabled={isLoading !== null}
       >
-        <ArrowLeft className='mr-2 h-4 w-4' />
-        Cancel and start over
+        Start again
+        <ArrowLeft className='ml-2 h-4 w-4' />
       </Button>
     </div>
   )

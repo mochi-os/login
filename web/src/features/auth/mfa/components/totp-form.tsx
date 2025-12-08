@@ -25,10 +25,11 @@ const totpSchema = z.object({
 
 interface TotpFormProps {
   onSuccess: () => void
-  onBack: () => void
+  onBack?: () => void
+  showBack?: boolean
 }
 
-export function TotpForm({ onSuccess, onBack }: TotpFormProps) {
+export function TotpForm({ onSuccess, onBack, showBack = true }: TotpFormProps) {
   const [isLoading, setIsLoading] = useState(false)
 
   const form = useForm<z.infer<typeof totpSchema>>({
@@ -109,24 +110,26 @@ export function TotpForm({ onSuccess, onBack }: TotpFormProps) {
 
           <div className='space-y-2'>
             <Button type='submit' className='w-full' disabled={isLoading}>
+              Verify
               {isLoading ? (
                 <Loader2 className='animate-spin' />
               ) : (
                 <Smartphone />
               )}
-              Verify
             </Button>
 
-            <Button
-              type='button'
-              variant='ghost'
-              onClick={onBack}
-              className='w-full'
-              disabled={isLoading}
-            >
-              <ArrowLeft className='mr-2 h-4 w-4' />
-              Back to methods
-            </Button>
+{showBack && onBack && (
+              <Button
+                type='button'
+                variant='ghost'
+                onClick={onBack}
+                className='w-full'
+                disabled={isLoading}
+              >
+                Back to methods
+                <ArrowLeft className='ml-2 h-4 w-4' />
+              </Button>
+            )}
           </div>
         </form>
       </Form>

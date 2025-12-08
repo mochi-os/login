@@ -1,7 +1,9 @@
 const endpoints = {
   auth: {
+    begin: '/_/auth/begin',
     code: '/_/auth/code',
     verify: '/_/auth/verify',
+    totpLogin: '/_/auth/totp',
     methods: '/_/auth/methods',
     mfa: '/_/auth/mfa',
     identity: '/login/identity/create',
