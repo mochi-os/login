@@ -24,19 +24,18 @@ const completeAuth = (response: {
       mergeProfileCookie({ email })
     }
 
-    const user: AuthUser | null = email
-      ? {
-          email,
-          ...(nameFromResponse
-            ? { name: nameFromResponse }
-            : profile.name
-              ? { name: profile.name }
-              : {}),
-          accountNo: response.user?.accountNo,
-          role: response.user?.role,
-          exp: response.user?.exp,
-        }
-      : null
+    // Build user object - email is optional (passkey login may not have it)
+    const user: AuthUser = {
+      ...(email ? { email } : {}),
+      ...(nameFromResponse
+        ? { name: nameFromResponse }
+        : profile.name
+          ? { name: profile.name }
+          : {}),
+      accountNo: response.user?.accountNo,
+      role: response.user?.role,
+      exp: response.user?.exp,
+    }
 
     useAuthStore.getState().setAuth(user, login)
     useAuthStore.getState().clearMfa()
@@ -289,17 +288,13 @@ export const submitIdentity = async ({
   privacy,
 }: IdentityPayload): Promise<void> => {
   try {
-    const body = new URLSearchParams()
-    body.set('name', name)
-    body.set('privacy', privacy)
-
     const response = await fetch(`${window.location.origin}/_/identity`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/json',
       },
       credentials: 'include',
-      body,
+      body: JSON.stringify({ name, privacy }),
     })
 
     if (!response.ok) {

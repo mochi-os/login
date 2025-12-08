@@ -1,5 +1,5 @@
 export interface AuthUser {
-  email: string
+  email?: string
   name?: string
   accountNo?: string
   role?: string[]

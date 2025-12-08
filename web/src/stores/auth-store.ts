@@ -10,7 +10,7 @@ import {
 const TOKEN_COOKIE = 'token'
 
 export interface AuthUser {
-  email: string
+  email?: string
   name?: string
 }
 
