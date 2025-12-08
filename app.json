@@ -14,6 +14,29 @@
     "assets": {"files": "web/dist/assets", "public": true},
     "images": {"files": "web/dist/images", "public": true},
     "identity": {"file": "web/dist/index.html", "public": true},
-    "otp": {"file": "web/dist/index.html", "public": true}
+    "mfa": {"file": "web/dist/index.html", "public": true},
+    "otp": {"file": "web/dist/index.html", "public": true},
+
+    "logout": {"function": "action_logout"},
+    "identity/create": {"function": "action_identity_create"},
+
+    "methods/get": {"function": "action_methods_get"},
+    "methods/set": {"function": "action_methods_set"},
+    "methods/reset": {"function": "action_methods_reset"},
+
+    "passkey/list": {"function": "action_passkey_list"},
+    "passkey/count": {"function": "action_passkey_count"},
+    "passkey/register/begin": {"function": "action_passkey_register_begin"},
+    "passkey/register/finish": {"function": "action_passkey_register_finish"},
+    "passkey/rename": {"function": "action_passkey_rename"},
+    "passkey/delete": {"function": "action_passkey_delete"},
+
+    "totp/setup": {"function": "action_totp_setup"},
+    "totp/verify": {"function": "action_totp_verify"},
+    "totp/enabled": {"function": "action_totp_enabled"},
+    "totp/disable": {"function": "action_totp_disable"},
+
+    "recovery/generate": {"function": "action_recovery_generate"},
+    "recovery/count": {"function": "action_recovery_count"}
   }
 }

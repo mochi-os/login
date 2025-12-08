@@ -3,8 +3,7 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useNavigate } from '@tanstack/react-router'
-import { requestCode } from '@/services/auth-service'
-import { verifyCode } from '@/services/auth-service'
+import { requestCode, verifyCode } from '@/services/auth-service'
 import { Loader2, Mail, ArrowLeft, Copy } from 'lucide-react'
 import { toast } from 'sonner'
 import { useAuthStore } from '@/stores/auth-store'
@@ -161,6 +160,17 @@ export function UserAuthForm({
 
     try {
       const result = await verifyCode(data.code)
+
+      // Check for MFA requirement
+      if (result.mfa && result.partial && result.remaining) {
+        toast.info('Additional verification required')
+        navigate({
+          to: '/mfa',
+          search: { redirect: redirectTo },
+          replace: true,
+        })
+        return
+      }
 
       // verifyCode handles setting auth in the store
       // Just check if it was successful

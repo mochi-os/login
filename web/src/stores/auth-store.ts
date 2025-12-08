@@ -14,6 +14,12 @@ export interface AuthUser {
   name?: string
 }
 
+export interface MfaState {
+  required: boolean
+  partial: string
+  remaining: string[]
+}
+
 interface AuthState {
   user: AuthUser | null
   token: string
@@ -23,6 +29,7 @@ interface AuthState {
   identityPrivacy: IdentityPrivacy | ''
   isAuthenticated: boolean
   hasIdentity: boolean
+  mfa: MfaState
 
   setAuth: (user: AuthUser | null, token: string) => void
   setUser: (user: AuthUser | null) => void
@@ -33,6 +40,8 @@ interface AuthState {
   initialize: () => void
   setIdentity: (name: string, privacy: IdentityPrivacy) => void
   clearIdentity: () => void
+  setMfa: (partial: string, remaining: string[]) => void
+  clearMfa: () => void
 }
 
 export const useAuthStore = create<AuthState>()((set, get) => {
@@ -59,6 +68,7 @@ export const useAuthStore = create<AuthState>()((set, get) => {
     identityPrivacy: initialIdentityPrivacy,
     isAuthenticated: Boolean(initialToken),
     hasIdentity: Boolean(initialIdentityName),
+    mfa: { required: false, partial: '', remaining: [] },
 
     setAuth: (user, token) => {
       if (token) {
@@ -174,6 +184,7 @@ export const useAuthStore = create<AuthState>()((set, get) => {
         hasIdentity: false,
         isLoading: false,
         isInitialized: true,
+        mfa: { required: false, partial: '', remaining: [] },
       })
     },
 
@@ -197,6 +208,18 @@ export const useAuthStore = create<AuthState>()((set, get) => {
         identityName: '',
         identityPrivacy: '',
         hasIdentity: false,
+      })
+    },
+
+    setMfa: (partial, remaining) => {
+      set({
+        mfa: { required: true, partial, remaining },
+      })
+    },
+
+    clearMfa: () => {
+      set({
+        mfa: { required: false, partial: '', remaining: [] },
       })
     },
   }
