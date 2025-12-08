@@ -37,9 +37,10 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
   const [isLoading, setIsLoading] = useState(false)
   const [completedMethods, setCompletedMethods] = useState<string[]>([])
 
-  const needsTotp = mfa.remaining.includes('totp')
+  const remaining = mfa.remaining || []
+  const needsTotp = remaining.includes('totp')
   // TODO: Passkey MFA requires server-side implementation
-  const needsPasskey = mfa.remaining.includes('passkey')
+  const needsPasskey = remaining.includes('passkey')
 
   const form = useForm<z.infer<typeof mfaSchema>>({
     resolver: zodResolver(mfaSchema),

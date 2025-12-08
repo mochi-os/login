@@ -73,7 +73,7 @@ const getMethods = () =>
 
 // MFA
 const completeMfa = (payload: MfaRequest) =>
-  requestHelpers.post<MfaResponse>(endpoints.auth.mfa, payload)
+  requestHelpers.post<MfaResponse>(endpoints.auth.methods, payload)
 
 // Passkey login (unauthenticated)
 const passkeyLoginBegin = () =>
