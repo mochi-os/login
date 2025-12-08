@@ -116,8 +116,8 @@ export function UserAuthForm({
       const result = await beginLogin(data.email)
       setRequiredMethods(result.methods)
 
-      // If passkey is the only method, trigger passkey login
-      if (result.methods.length === 1 && result.methods[0] === 'passkey') {
+      // If passkey is required (alone or with other methods), trigger passkey login first
+      if (result.methods.includes('passkey')) {
         setIsLoading(false)
         if (onPasskeyLogin) {
           onPasskeyLogin()
