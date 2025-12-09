@@ -79,10 +79,20 @@ export function Recovery() {
           description: 'Please check your recovery code and try again.',
         })
       }
-    } catch {
-      toast.error('Invalid recovery code', {
-        description: 'Please check your recovery code and try again.',
-      })
+    } catch (error) {
+      const apiError = error as { data?: { error?: string; message?: string } }
+      const errorCode = apiError.data?.error
+      const errorMessage = apiError.data?.message
+
+      if (errorCode === 'suspended') {
+        toast.error('Account suspended', {
+          description: errorMessage || 'Your account has been suspended.',
+        })
+      } else {
+        toast.error('Invalid recovery code', {
+          description: 'Please check your recovery code and try again.',
+        })
+      }
     } finally {
       setIsLoading(false)
     }

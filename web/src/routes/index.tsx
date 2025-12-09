@@ -5,6 +5,7 @@ import { SignIn } from '@/features/auth/sign-in'
 
 const searchSchema = z.object({
   redirect: z.string().optional(),
+  reauth: z.string().optional(),
 })
 
 export const Route = createFileRoute('/')({
@@ -16,6 +17,13 @@ export const Route = createFileRoute('/')({
       store.syncFromCookie()
     }
 
+    // If server indicated reauth is needed (suspended, expired session, etc),
+    // clear auth state to break redirect loop and show login form
+    if (search.reauth) {
+      store.clearAuth()
+      return
+    }
+
     // If already authenticated, redirect away from login page
     if (store.isAuthenticated) {
       if (!store.hasIdentity) {
@@ -25,24 +33,6 @@ export const Route = createFileRoute('/')({
             redirect: search.redirect,
           },
         })
-      }
-
-      // Use redirect param if provided and valid
-      const redirectUrl = search.redirect
-      if (redirectUrl && typeof redirectUrl === 'string') {
-        // Validate it's a relative URL (security: prevent open redirect)
-        try {
-          const url = new URL(redirectUrl, window.location.origin)
-          // Only allow same-origin redirects
-          if (url.origin === window.location.origin) {
-            // Use window.location for cross-app navigation
-            window.location.href = url.pathname + url.search + url.hash
-            // Return early to prevent route from loading
-            return
-          }
-        } catch {
-          // Invalid URL, fall through to default
-        }
       }
 
       // Default: redirect to default app (cross-app navigation)

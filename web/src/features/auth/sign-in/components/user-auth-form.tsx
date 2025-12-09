@@ -323,7 +323,11 @@ export function UserAuthForm({
       const errorCode = apiError.data?.error
       const errorMessage = apiError.data?.message || apiError.message
 
-      if (errorCode === 'signup_disabled') {
+      if (errorCode === 'suspended') {
+        toast.error('Account suspended', {
+          description: errorMessage || 'Your account has been suspended.',
+        })
+      } else if (errorCode === 'signup_disabled') {
         toast.error('Registration disabled', {
           description: errorMessage || 'New user signup is disabled.',
         })

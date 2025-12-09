@@ -158,9 +158,19 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
         })
       }
     } catch (error) {
-      toast.error('Invalid code', {
-        description: 'Please check your code and try again.',
-      })
+      const apiError = error as { data?: { error?: string; message?: string } }
+      const errorCode = apiError.data?.error
+      const errorMessage = apiError.data?.message
+
+      if (errorCode === 'suspended') {
+        toast.error('Account suspended', {
+          description: errorMessage || 'Your account has been suspended.',
+        })
+      } else {
+        toast.error('Invalid code', {
+          description: 'Please check your code and try again.',
+        })
+      }
     } finally {
       setIsLoading(false)
     }

@@ -37,7 +37,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
     resolver: zodResolver(identitySchema),
     defaultValues: {
       name: '',
-      privacy: 'private',
+      privacy: 'public',
     },
   })
 
