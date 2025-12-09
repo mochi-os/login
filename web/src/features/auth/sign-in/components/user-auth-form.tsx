@@ -74,11 +74,7 @@ export function UserAuthForm({
   const needsTotp = requiredMethods.includes('totp')
 
   // Handle successful login completion
-  async function handleLoginSuccess(name?: string) {
-    toast.success('Logged in', {
-      description: name ? `Signed in as ${name}` : 'Successfully signed in',
-    })
-
+  async function handleLoginSuccess() {
     // Small delay to ensure store state is updated and cookies are synced
     await new Promise((resolve) => setTimeout(resolve, 250))
 
@@ -233,7 +229,7 @@ export function UserAuthForm({
         }
 
         if (result.login) {
-          await handleLoginSuccess(result.name)
+          await handleLoginSuccess()
         } else {
           toast.error('Invalid authenticator code', {
             description: 'Please check your authenticator app and try again.',
@@ -251,7 +247,7 @@ export function UserAuthForm({
             handleMfaRequired()
             return
           } else if (totpResult.success) {
-            await handleLoginSuccess(totpResult.name)
+            await handleLoginSuccess()
             return
           } else {
             toast.error('Invalid code', {
@@ -288,7 +284,7 @@ export function UserAuthForm({
                 handleMfaRequired()
                 return
               } else if (totpResult.success) {
-                await handleLoginSuccess(totpResult.name)
+                await handleLoginSuccess()
                 return
               } else {
                 toast.error('Invalid code', {
@@ -310,8 +306,8 @@ export function UserAuthForm({
           return
         }
 
-        if (result.success && result.login) {
-          await handleLoginSuccess(result.name)
+        if (result.success && result.token) {
+          await handleLoginSuccess()
         } else {
           toast.error('Invalid verification code', {
             description: result.message || 'Please check your email and try again.',

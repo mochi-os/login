@@ -28,8 +28,9 @@ export const Route = createFileRoute('/codes')({
         })
       }
 
-      window.location.href = targetPath
-      return
+      window.location.replace(targetPath)
+      // Return a pending promise to prevent route from rendering
+      return new Promise(() => {})
     }
 
     // If no MFA in progress, redirect to login

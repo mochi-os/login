@@ -35,10 +35,11 @@ export const Route = createFileRoute('/')({
         })
       }
 
-      // Default: redirect to default app (cross-app navigation)
-      window.location.href = import.meta.env.VITE_DEFAULT_APP_URL
-      // Return early to prevent route from loading
-      return
+      // Redirect to the requested page or default app
+      const targetUrl = search.redirect || import.meta.env.VITE_DEFAULT_APP_URL || '/'
+      window.location.replace(targetUrl)
+      // Return a pending promise to prevent route from rendering
+      return new Promise(() => {})
     }
 
     // Not authenticated, allow login page to render

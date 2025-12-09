@@ -15,7 +15,7 @@ def action_identity_create(a):
         a.error(400, "name required")
         return
     entity = mochi.entity.create("person", name, privacy)
-    a.json({"status": "ok", "entity": entity.id})
+    a.json({"status": "ok", "entity": entity})
 
 def action_methods_get(a):
     """Get user's required authentication methods"""
