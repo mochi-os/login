@@ -9,24 +9,24 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as OtpRouteImport } from './routes/otp'
-import { Route as MethodsRouteImport } from './routes/methods'
+import { Route as RecoveryRouteImport } from './routes/recovery'
 import { Route as IdentityRouteImport } from './routes/identity'
+import { Route as CodesRouteImport } from './routes/codes'
 import { Route as IndexRouteImport } from './routes/index'
 
-const OtpRoute = OtpRouteImport.update({
-  id: '/otp',
-  path: '/otp',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MethodsRoute = MethodsRouteImport.update({
-  id: '/methods',
-  path: '/methods',
+const RecoveryRoute = RecoveryRouteImport.update({
+  id: '/recovery',
+  path: '/recovery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IdentityRoute = IdentityRouteImport.update({
   id: '/identity',
   path: '/identity',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CodesRoute = CodesRouteImport.update({
+  id: '/codes',
+  path: '/codes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -37,52 +37,45 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/codes': typeof CodesRoute
   '/identity': typeof IdentityRoute
-  '/methods': typeof MethodsRoute
-  '/otp': typeof OtpRoute
+  '/recovery': typeof RecoveryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/codes': typeof CodesRoute
   '/identity': typeof IdentityRoute
-  '/methods': typeof MethodsRoute
-  '/otp': typeof OtpRoute
+  '/recovery': typeof RecoveryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/codes': typeof CodesRoute
   '/identity': typeof IdentityRoute
-  '/methods': typeof MethodsRoute
-  '/otp': typeof OtpRoute
+  '/recovery': typeof RecoveryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/identity' | '/methods' | '/otp'
+  fullPaths: '/' | '/codes' | '/identity' | '/recovery'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/identity' | '/methods' | '/otp'
-  id: '__root__' | '/' | '/identity' | '/methods' | '/otp'
+  to: '/' | '/codes' | '/identity' | '/recovery'
+  id: '__root__' | '/' | '/codes' | '/identity' | '/recovery'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CodesRoute: typeof CodesRoute
   IdentityRoute: typeof IdentityRoute
-  MethodsRoute: typeof MethodsRoute
-  OtpRoute: typeof OtpRoute
+  RecoveryRoute: typeof RecoveryRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/otp': {
-      id: '/otp'
-      path: '/otp'
-      fullPath: '/otp'
-      preLoaderRoute: typeof OtpRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/methods': {
-      id: '/methods'
-      path: '/methods'
-      fullPath: '/methods'
-      preLoaderRoute: typeof MethodsRouteImport
+    '/recovery': {
+      id: '/recovery'
+      path: '/recovery'
+      fullPath: '/recovery'
+      preLoaderRoute: typeof RecoveryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/identity': {
@@ -90,6 +83,13 @@ declare module '@tanstack/react-router' {
       path: '/identity'
       fullPath: '/identity'
       preLoaderRoute: typeof IdentityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/codes': {
+      id: '/codes'
+      path: '/codes'
+      fullPath: '/codes'
+      preLoaderRoute: typeof CodesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -104,9 +104,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CodesRoute: CodesRoute,
   IdentityRoute: IdentityRoute,
-  MethodsRoute: MethodsRoute,
-  OtpRoute: OtpRoute,
+  RecoveryRoute: RecoveryRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

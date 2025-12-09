@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useNavigate } from '@tanstack/react-router'
+import { useNavigate, Link } from '@tanstack/react-router'
 import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa } from '@/services/auth-service'
 import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Smartphone } from 'lucide-react'
 import { toast } from 'sonner'
@@ -100,7 +100,7 @@ export function UserAuthForm({
   // Handle MFA redirect
   function handleMfaRequired() {
         navigate({
-      to: '/methods',
+      to: '/codes',
       search: redirectTo && redirectTo !== '/' ? { redirect: redirectTo } : {},
       replace: true,
     })
@@ -451,6 +451,17 @@ export function UserAuthForm({
                 Start again
                 <ArrowLeft />
               </Button>
+
+            </div>
+
+            <div className='pt-4 text-center'>
+              <Link
+                to='/recovery'
+                search={redirectTo && redirectTo !== '/' ? { redirect: redirectTo } : {}}
+                className='text-muted-foreground/70 hover:text-muted-foreground text-xs underline-offset-4 hover:underline'
+              >
+                Lost access? Use a recovery code
+              </Link>
             </div>
           </form>
         </Form>

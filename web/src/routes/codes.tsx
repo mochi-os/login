@@ -7,7 +7,7 @@ const searchSchema = z.object({
   redirect: z.string().optional(),
 })
 
-export const Route = createFileRoute('/methods')({
+export const Route = createFileRoute('/codes')({
   beforeLoad: ({ search }) => {
     const store = useAuthStore.getState()
 

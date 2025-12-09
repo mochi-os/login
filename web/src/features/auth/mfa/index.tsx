@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from '@tanstack/react-router'
+import { useNavigate, Link } from '@tanstack/react-router'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -289,7 +289,18 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
                 Start again
                 <ArrowLeft />
               </Button>
+
             </form>
+
+            <div className='pt-4 text-center'>
+              <Link
+                to='/recovery'
+                search={redirectTo && redirectTo !== '/' ? { redirect: redirectTo } : {}}
+                className='text-muted-foreground/70 hover:text-muted-foreground text-xs underline-offset-4 hover:underline'
+              >
+                Lost access? Use a recovery code
+              </Link>
+            </div>
           </Form>
         </CardContent>
       </Card>

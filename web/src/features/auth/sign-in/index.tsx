@@ -35,7 +35,7 @@ export function SignIn() {
       if (result.success) {
         if (result.mfa) {
           navigate({
-            to: '/methods',
+            to: '/codes',
             search: { redirect },
             replace: true,
           })
