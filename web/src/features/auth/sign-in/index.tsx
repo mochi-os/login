@@ -34,7 +34,6 @@ export function SignIn() {
       const result = await passkeyLogin()
       if (result.success) {
         if (result.mfa) {
-          toast.info('Additional verification required')
           navigate({
             to: '/methods',
             search: { redirect },

@@ -52,7 +52,6 @@ export function MethodSelector({ methods, onSelect, redirectTo }: MethodSelector
 
       if (response.mfa && response.remaining) {
         // More MFA required
-        toast.info('Additional verification required')
       } else if (response.token) {
         toast.success('Verification successful')
 
@@ -93,7 +92,7 @@ export function MethodSelector({ methods, onSelect, redirectTo }: MethodSelector
     clearMfa()
     navigate({
       to: '/',
-      search: { redirect: redirectTo },
+      search: redirectTo && redirectTo !== '/' ? { redirect: redirectTo } : {},
       replace: true,
     })
   }
@@ -139,7 +138,7 @@ export function MethodSelector({ methods, onSelect, redirectTo }: MethodSelector
         disabled={isLoading !== null}
       >
         Start again
-        <ArrowLeft className='ml-2 h-4 w-4' />
+        <ArrowLeft />
       </Button>
     </div>
   )

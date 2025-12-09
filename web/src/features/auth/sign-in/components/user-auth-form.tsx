@@ -99,10 +99,9 @@ export function UserAuthForm({
 
   // Handle MFA redirect
   function handleMfaRequired() {
-    toast.info('Additional verification required')
-    navigate({
+        navigate({
       to: '/methods',
-      search: { redirect: redirectTo },
+      search: redirectTo && redirectTo !== '/' ? { redirect: redirectTo } : {},
       replace: true,
     })
   }
@@ -440,13 +439,7 @@ export function UserAuthForm({
             <div className='space-y-2'>
               <Button type='submit' className='w-full' disabled={isLoading}>
                 Log in
-                {isLoading ? (
-                  <Loader2 className='animate-spin' />
-                ) : needsTotp && !needsEmail ? (
-                  <Smartphone />
-                ) : (
-                  <Mail />
-                )}
+                {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight />}
               </Button>
 
               <Button
@@ -455,8 +448,8 @@ export function UserAuthForm({
                 onClick={goBackToEmail}
                 className='w-full'
               >
-                Back
-                <ArrowLeft className='ml-2 h-4 w-4' />
+                Start again
+                <ArrowLeft />
               </Button>
             </div>
           </form>

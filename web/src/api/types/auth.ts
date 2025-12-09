@@ -74,8 +74,10 @@ export interface MeResponse {
 // MFA types
 export interface MfaRequest {
   partial: string
-  method: string
+  method?: string
   code?: string
+  email_code?: string
+  totp_code?: string
 }
 
 export interface MfaResponse {

@@ -201,6 +201,42 @@ export const completeMfa = async (
   }
 }
 
+export const completeMfaMultiple = async (codes: {
+  email_code?: string
+  totp_code?: string
+}): Promise<MfaResponse & { success: boolean }> => {
+  try {
+    const { mfa } = useAuthStore.getState()
+    if (!mfa.partial) {
+      throw new Error('No MFA session')
+    }
+
+    const response = await authApi.completeMfa({
+      partial: mfa.partial,
+      ...codes,
+    })
+
+    // Check if more MFA is required
+    if (response.mfa && response.partial && response.remaining) {
+      useAuthStore.getState().setMfa(response.partial, response.remaining)
+      return {
+        ...response,
+        success: true, // Partial success - more MFA required
+      }
+    }
+
+    const success = completeAuth(response)
+
+    return {
+      ...response,
+      success,
+    }
+  } catch (error) {
+    console.error('Failed to complete MFA', error)
+    throw error
+  }
+}
+
 export const passkeyLogin = async (): Promise<{
   success: boolean
   mfa?: boolean

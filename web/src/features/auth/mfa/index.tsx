@@ -3,7 +3,7 @@ import { useNavigate } from '@tanstack/react-router'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Loader2, ArrowLeft, Smartphone, Key } from 'lucide-react'
+import { Loader2, ArrowLeft, ArrowRight, Smartphone, Key, Mail } from 'lucide-react'
 import { toast } from 'sonner'
 import { Card, CardContent, CardDescription, CardHeader } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -19,11 +19,13 @@ import {
   InputOTPGroup,
   InputOTPSlot,
 } from '@/components/ui/input-otp'
+import { Input } from '@/components/ui/input'
 import { AuthLayout } from '../auth-layout'
 import { useAuthStore } from '@/stores/auth-store'
-import { completeMfa } from '@/services/auth-service'
+import { completeMfa, completeMfaMultiple } from '@/services/auth-service'
 
 const mfaSchema = z.object({
+  emailCode: z.string().optional(),
   totpCode: z.string().optional(),
 })
 
@@ -38,20 +40,17 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
   const [completedMethods, setCompletedMethods] = useState<string[]>([])
 
   const remaining = mfa.remaining || []
+  const needsEmail = remaining.includes('email')
   const needsTotp = remaining.includes('totp')
   // TODO: Passkey MFA requires server-side implementation
   const needsPasskey = remaining.includes('passkey')
 
   const form = useForm<z.infer<typeof mfaSchema>>({
     resolver: zodResolver(mfaSchema),
-    defaultValues: { totpCode: '' },
+    defaultValues: { emailCode: '', totpCode: '' },
   })
 
-  const handleSuccess = async (name?: string) => {
-    toast.success('Logged in', {
-      description: name ? `Signed in as ${name}` : 'Successfully signed in',
-    })
-
+  const handleSuccess = async () => {
     await new Promise((resolve) => setTimeout(resolve, 250))
 
     const store = useAuthStore.getState()
@@ -73,7 +72,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
     clearMfa()
     navigate({
       to: '/',
-      search: { redirect: redirectTo },
+      search: redirectTo && redirectTo !== '/' ? { redirect: redirectTo } : {},
       replace: true,
     })
   }
@@ -89,22 +88,73 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
     setIsLoading(true)
 
     try {
+      // When both email and TOTP are required, validate both atomically
+      if (needsEmail && needsTotp) {
+        if (!data.emailCode || !data.totpCode) {
+          toast.error('Invalid code', {
+            description: 'Please check your codes and try again.',
+          })
+          return
+        }
+
+        const result = await completeMfaMultiple({
+          email_code: data.emailCode,
+          totp_code: data.totpCode,
+        })
+
+        if (result.mfa && result.remaining) {
+          // More methods required (passkey?)
+          setCompletedMethods([...completedMethods, 'email', 'totp'])
+          return
+        }
+
+        if (result.success) {
+          await handleSuccess()
+          return
+        }
+
+        toast.error('Invalid code', {
+          description: 'Please check your codes and try again.',
+        })
+        return
+      }
+
+      // Handle email-only verification
+      if (needsEmail && data.emailCode) {
+        const result = await completeMfa('email', data.emailCode)
+
+        if (result.mfa && result.remaining) {
+          setCompletedMethods([...completedMethods, 'email'])
+          return
+        }
+
+        if (result.success) {
+          await handleSuccess()
+          return
+        }
+
+        toast.error('Invalid code', {
+          description: 'Please check your code and try again.',
+        })
+        return
+      }
+
+      // Handle TOTP-only verification
       if (needsTotp && data.totpCode) {
         const result = await completeMfa('totp', data.totpCode)
 
         if (result.mfa && result.remaining) {
           setCompletedMethods([...completedMethods, 'totp'])
-          toast.info('Additional verification required')
           return
         }
 
         if (result.success) {
-          await handleSuccess(result.name)
+          await handleSuccess()
           return
         }
 
         toast.error('Invalid code', {
-          description: 'Please check your authenticator code and try again.',
+          description: 'Please check your code and try again.',
         })
       }
     } catch (error) {
@@ -119,9 +169,13 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
   // Build description based on remaining methods
   const getDescription = () => {
     const methods: string[] = []
+    if (needsEmail) methods.push('email code')
     if (needsTotp) methods.push('authenticator code')
     if (needsPasskey) methods.push('passkey')
 
+    if (methods.length === 0) {
+      return 'Complete verification to continue'
+    }
     if (methods.length === 1) {
       return `Enter your ${methods[0]}`
     }
@@ -137,13 +191,38 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
         <CardContent>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className='grid gap-4'>
+              {needsEmail && (
+                <FormField
+                  control={form.control}
+                  name='emailCode'
+                  render={({ field }) => (
+                    <FormItem>
+                      {(needsTotp || needsPasskey) && (
+                        <div className='flex items-center gap-2 text-sm font-medium mb-2'>
+                          <Mail className='h-4 w-4' />
+                          <span>Email code</span>
+                        </div>
+                      )}
+                      <FormControl>
+                        <Input
+                          placeholder='Email code'
+                          className='text-center font-mono tracking-wider'
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              )}
+
               {needsTotp && (
                 <FormField
                   control={form.control}
                   name='totpCode'
                   render={({ field }) => (
                     <FormItem className='flex flex-col items-center'>
-                      {needsPasskey && (
+                      {(needsEmail || needsPasskey) && (
                         <div className='mb-2 flex items-center gap-2 text-sm font-medium self-start'>
                           <Smartphone className='h-4 w-4' />
                           <span>Authenticator code</span>
@@ -174,7 +253,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
 
               {needsPasskey && (
                 <div className='space-y-2'>
-                  {needsTotp && (
+                  {(needsEmail || needsTotp) && (
                     <div className='mb-2 flex items-center gap-2 text-sm font-medium'>
                       <Key className='h-4 w-4' />
                       <span>Passkey</span>
@@ -193,10 +272,10 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
                 </div>
               )}
 
-              {needsTotp && (
+              {(needsEmail || needsTotp) && (
                 <Button type='submit' className='w-full' disabled={isLoading}>
                   Log in
-                  {isLoading && <Loader2 className='animate-spin' />}
+                  {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight />}
                 </Button>
               )}
 
@@ -208,7 +287,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
                 disabled={isLoading}
               >
                 Start again
-                <ArrowLeft className='ml-2 h-4 w-4' />
+                <ArrowLeft />
               </Button>
             </form>
           </Form>

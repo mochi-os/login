@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Loader2, ArrowLeft, Smartphone } from 'lucide-react'
+import { Loader2, ArrowLeft, ArrowRight } from 'lucide-react'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import {
@@ -111,11 +111,7 @@ export function TotpForm({ onSuccess, onBack, showBack = true }: TotpFormProps) 
           <div className='space-y-2'>
             <Button type='submit' className='w-full' disabled={isLoading}>
               Verify
-              {isLoading ? (
-                <Loader2 className='animate-spin' />
-              ) : (
-                <Smartphone />
-              )}
+              {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight />}
             </Button>
 
 {showBack && onBack && (
@@ -126,8 +122,8 @@ export function TotpForm({ onSuccess, onBack, showBack = true }: TotpFormProps) 
                 className='w-full'
                 disabled={isLoading}
               >
-                Back to methods
-                <ArrowLeft className='ml-2 h-4 w-4' />
+                Start again
+                <ArrowLeft />
               </Button>
             )}
           </div>
