@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useNavigate } from '@tanstack/react-router'
-import { useAuth } from './useAuth'
+import { useAuth } from '@/hooks/useAuth'
 
 /**
  * Hook to enforce authentication in components

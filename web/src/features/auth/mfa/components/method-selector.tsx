@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from '@tanstack/react-router'
 import { Key, Smartphone, FileKey, ArrowLeft, Loader2 } from 'lucide-react'
 import { toast } from 'sonner'
-import { Button } from '@/components/ui/button'
+import { Button } from '@mochi/common'
 import { useAuthStore } from '@/stores/auth-store'
 
 interface MethodSelectorProps {

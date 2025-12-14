@@ -1,10 +1,10 @@
-import {
-  AUTH_COOKIES,
-  getCookie,
-  setCookie,
-  removeCookie,
-  type CookieOptions,
-} from '@/lib/cookies'
+import { getCookie, setCookie, removeCookie, type CookieOptions } from '@mochi/common'
+
+// Auth cookies constants
+const AUTH_COOKIES = {
+  PROFILE: 'mochi_me',
+  TOKEN: 'token',
+} as const
 
 export type IdentityPrivacy = 'public' | 'private'
 

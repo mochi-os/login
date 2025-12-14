@@ -4,8 +4,8 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { toast } from 'sonner'
 import { submitIdentity } from '@/services/auth-service'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+import { Button } from '@mochi/common'
+import { Input } from '@mochi/common'
 import {
   Form,
   FormControl,
@@ -13,11 +13,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form'
+} from '@mochi/common'
 import {
   RadioGroup,
   RadioGroupItem,
-} from '@/components/ui/radio-group'
+} from '@mochi/common'
 
 const identitySchema = z.object({
   name: z.string().min(2, 'Please enter your name'),

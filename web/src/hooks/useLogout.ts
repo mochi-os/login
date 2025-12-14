@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import { useNavigate } from '@tanstack/react-router'
 import { toast } from 'sonner'
-import { useAuth } from './useAuth'
+import { useAuth } from '@/hooks/useAuth'
 
 export function useLogout() {
   const { logout: clearAuth, setLoading, isLoading } = useAuth()

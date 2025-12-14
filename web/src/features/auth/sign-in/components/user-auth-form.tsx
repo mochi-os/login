@@ -7,16 +7,7 @@ import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa } from '@/s
 import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Smartphone } from 'lucide-react'
 import { toast } from 'sonner'
 import { useAuthStore } from '@/stores/auth-store'
-import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
-import {
-  Form,
-  FormField,
-  FormItem,
-  FormMessage,
-  FormControl,
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
+import { cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input } from '@mochi/common'
 import {
   InputOTP,
   InputOTPGroup,

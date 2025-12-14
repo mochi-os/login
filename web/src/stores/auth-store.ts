@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { getCookie, setCookie, removeCookie } from '@/lib/cookies'
+import { getCookie, setCookie, removeCookie } from '@mochi/common'
 import {
   clearProfileCookie,
   mergeProfileCookie,

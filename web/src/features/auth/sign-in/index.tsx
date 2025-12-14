@@ -7,8 +7,8 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
+} from '@mochi/common'
+import { Button } from '@mochi/common'
 import { AuthLayout } from '../auth-layout'
 import { UserAuthForm } from './components/user-auth-form'
 import { passkeyLogin } from '@/services/auth-service'
