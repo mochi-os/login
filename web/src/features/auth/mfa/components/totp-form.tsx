@@ -4,19 +4,17 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2, ArrowLeft, ArrowRight } from 'lucide-react'
 import { toast } from 'sonner'
-import { Button } from '@mochi/common'
 import {
+  Button,
   Form,
   FormField,
   FormItem,
   FormControl,
   FormMessage,
-} from '@mochi/common'
-import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from '@/components/ui/input-otp'
+} from '@mochi/common'
 import { completeMfa } from '@/services/auth-service'
 
 const totpSchema = z.object({

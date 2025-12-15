@@ -7,12 +7,7 @@ import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa } from '@/s
 import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Smartphone } from 'lucide-react'
 import { toast } from 'sonner'
 import { useAuthStore } from '@/stores/auth-store'
-import { cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input } from '@mochi/common'
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSlot,
-} from '@/components/ui/input-otp'
+import { cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot } from '@mochi/common'
 
 const devConsole = globalThis.console
 

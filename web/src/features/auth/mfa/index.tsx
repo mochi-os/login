@@ -5,21 +5,22 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2, ArrowLeft, ArrowRight, Smartphone, Key, Mail } from 'lucide-react'
 import { toast } from 'sonner'
-import { Card, CardContent, CardDescription, CardHeader } from '@mochi/common'
-import { Button } from '@mochi/common'
 import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  Button,
   Form,
   FormField,
   FormItem,
   FormControl,
   FormMessage,
-} from '@mochi/common'
-import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from '@/components/ui/input-otp'
-import { Input } from '@mochi/common'
+  Input,
+} from '@mochi/common'
 import { AuthLayout } from '../auth-layout'
 import { useAuthStore } from '@/stores/auth-store'
 import { completeMfa, completeMfaMultiple } from '@/services/auth-service'
