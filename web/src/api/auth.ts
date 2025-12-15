@@ -28,7 +28,7 @@ import {
   type VerifyCodeRequest,
   type VerifyCodeResponse,
 } from '@/api/types/auth'
-import { requestHelpers } from '@/lib/request'
+import { requestHelpers } from '@mochi/common'
 
 // Login flow
 interface BeginLoginRequest {
