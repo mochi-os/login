@@ -134,7 +134,7 @@ export function UserAuthForm({
                     try {
                       if (navigator.clipboard && navigator.clipboard.writeText) {
                         await navigator.clipboard.writeText(code)
-                        toast.success('Code copied to clipboard!')
+                        toast.success('Code copied')
                       } else {
                         const textArea = document.createElement('textarea')
                         textArea.value = code
@@ -148,7 +148,7 @@ export function UserAuthForm({
                         try {
                           const successful = document.execCommand('copy')
                           if (successful) {
-                            toast.success('Code copied to clipboard!')
+                            toast.success('Code copied')
                           } else {
                             throw new Error('Copy command failed')
                           }

@@ -13,7 +13,7 @@ export function useLogout() {
 
       clearAuth()
 
-      toast.success('Logged out successfully')
+      toast.success('Logged out')
 
       navigate({
         to: import.meta.env.VITE_AUTH_LOGIN_URL,
