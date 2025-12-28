@@ -76,7 +76,6 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
               <FormLabel>Display name</FormLabel>
               <FormControl>
                 <Input
-                  placeholder="Jane Doe"
                   autoComplete="off"
                   {...field}
                 />
@@ -101,7 +100,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
                   <FormItem className="space-y-0">
                     <label className="flex cursor-pointer items-start gap-3 rounded-md border p-3 has-[[data-state=checked]]:border-primary">
                       <FormControl>
-                        <RadioGroupItem value="public" />
+                        <RadioGroupItem value="public" className="data-[state=checked]:border-blue-500 data-[state=checked]:bg-blue-500" />
                       </FormControl>
                       <div className="space-y-1">
                         <span className="text-sm font-medium">Public</span>
@@ -115,7 +114,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
                   <FormItem className="space-y-0">
                     <label className="flex cursor-pointer items-start gap-3 rounded-md border p-3 has-[[data-state=checked]]:border-primary">
                       <FormControl>
-                        <RadioGroupItem value="private" />
+                        <RadioGroupItem value="private" className="data-[state=checked]:border-blue-500 data-[state=checked]:bg-blue-500" />
                       </FormControl>
                       <div className="space-y-1">
                         <span className="text-sm font-medium">Private</span>
