@@ -98,7 +98,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
                   className="grid gap-4 sm:grid-cols-2"
                 >
                   <FormItem className="space-y-0">
-                    <label className="flex cursor-pointer items-start gap-3 rounded-md border p-3 has-[[data-state=checked]]:border-primary">
+                    <label className="flex cursor-pointer items-start gap-3 rounded-md border-2 p-3 has-[[data-state=checked]]:border-blue-500 has-[[data-state=checked]]:bg-blue-50 dark:has-[[data-state=checked]]:bg-blue-950">
                       <FormControl>
                         <RadioGroupItem value="public" className="data-[state=checked]:border-blue-500 data-[state=checked]:bg-blue-500" />
                       </FormControl>
@@ -112,7 +112,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
                   </FormItem>
 
                   <FormItem className="space-y-0">
-                    <label className="flex cursor-pointer items-start gap-3 rounded-md border p-3 has-[[data-state=checked]]:border-primary">
+                    <label className="flex cursor-pointer items-start gap-3 rounded-md border-2 p-3 has-[[data-state=checked]]:border-blue-500 has-[[data-state=checked]]:bg-blue-50 dark:has-[[data-state=checked]]:bg-blue-950">
                       <FormControl>
                         <RadioGroupItem value="private" className="data-[state=checked]:border-blue-500 data-[state=checked]:bg-blue-500" />
                       </FormControl>
