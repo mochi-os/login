@@ -98,28 +98,32 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
                   value={field.value}
                   className="grid gap-4 sm:grid-cols-2"
                 >
-                  <FormItem className="space-y-1 rounded-md border p-3">
-                    <FormControl>
-                      <RadioGroupItem value="public" />
-                    </FormControl>
-                    <FormLabel className="text-sm font-medium">
-                      Public
-                    </FormLabel>
-                    <p className="text-sm text-muted-foreground">
-                      Other users can find your profile.
-                    </p>
+                  <FormItem className="space-y-0">
+                    <label className="flex cursor-pointer items-start gap-3 rounded-md border p-3 has-[[data-state=checked]]:border-primary">
+                      <FormControl>
+                        <RadioGroupItem value="public" />
+                      </FormControl>
+                      <div className="space-y-1">
+                        <span className="text-sm font-medium">Public</span>
+                        <p className="text-sm text-muted-foreground">
+                          Other users can find your profile.
+                        </p>
+                      </div>
+                    </label>
                   </FormItem>
 
-                  <FormItem className="space-y-1 rounded-md border p-3">
-                    <FormControl>
-                      <RadioGroupItem value="private" />
-                    </FormControl>
-                    <FormLabel className="text-sm font-medium">
-                      Private
-                    </FormLabel>
-                    <p className="text-sm text-muted-foreground">
-                      Stay hidden from directory searches.
-                    </p>
+                  <FormItem className="space-y-0">
+                    <label className="flex cursor-pointer items-start gap-3 rounded-md border p-3 has-[[data-state=checked]]:border-primary">
+                      <FormControl>
+                        <RadioGroupItem value="private" />
+                      </FormControl>
+                      <div className="space-y-1">
+                        <span className="text-sm font-medium">Private</span>
+                        <p className="text-sm text-muted-foreground">
+                          Stay hidden from directory searches.
+                        </p>
+                      </div>
+                    </label>
                   </FormItem>
                 </RadioGroup>
               </FormControl>
