@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { toast } from 'sonner'
+import { Loader2, ArrowRight } from 'lucide-react'
 import { submitIdentity } from '@/services/auth-service'
 import { Button } from '@mochi/common'
 import { Input } from '@mochi/common'
@@ -73,7 +74,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Display name</FormLabel>
+              <FormLabel>Your name, as you'd like others to see it</FormLabel>
               <FormControl>
                 <Input
                   autoComplete="off"
@@ -132,7 +133,8 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
         />
 
         <Button className="w-full" disabled={isSubmitting}>
-          {isSubmitting ? 'Saving…' : 'Continue'}
+          Continue
+          {isSubmitting ? <Loader2 className="animate-spin" /> : <ArrowRight />}
         </Button>
       </form>
     </Form>

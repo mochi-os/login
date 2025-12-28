@@ -58,7 +58,7 @@ function IdentityRouteComponent() {
       <Card>
         <CardHeader>
           <CardTitle className="text-lg tracking-tight">
-            Finish setting up your profile
+            Finish setting up your account
           </CardTitle>
         </CardHeader>
         <CardContent>
