@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from '@tanstack/react-router'
 import { Key, Smartphone, FileKey, ArrowLeft, Loader2 } from 'lucide-react'
-import { toast } from 'sonner'
-import { Button } from '@mochi/common'
+import { Button, toast } from '@mochi/common'
 import { useAuthStore } from '@/stores/auth-store'
 
 interface MethodSelectorProps {
@@ -13,7 +12,7 @@ interface MethodSelectorProps {
 
 const methodLabels: Record<string, { label: string; icon: React.ElementType; description: string }> = {
   totp: {
-    label: 'Authenticator App',
+    label: 'Authenticator app',
     icon: Smartphone,
     description: 'Enter a code from your authenticator app',
   },
@@ -23,7 +22,7 @@ const methodLabels: Record<string, { label: string; icon: React.ElementType; des
     description: 'Use your passkey or security key',
   },
   recovery: {
-    label: 'Recovery Code',
+    label: 'Recovery code',
     icon: FileKey,
     description: 'Use a backup recovery code',
   },
