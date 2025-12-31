@@ -3,7 +3,6 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2, ArrowLeft, ArrowRight } from 'lucide-react'
-import { toast } from 'sonner'
 import {
   Button,
   Form,
@@ -14,6 +13,7 @@ import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
+  toast,
 } from '@mochi/common'
 import { completeMfa } from '@/services/auth-service'
 

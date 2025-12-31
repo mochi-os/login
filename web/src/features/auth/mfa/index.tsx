@@ -4,7 +4,6 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2, ArrowLeft, ArrowRight, Smartphone, Key, Mail } from 'lucide-react'
-import { toast } from 'sonner'
 import {
   Card,
   CardContent,
@@ -18,6 +17,7 @@ import {
   FormMessage,
   InputOTP,
   InputOTPGroup,
+  toast,
   InputOTPSlot,
   Input,
 } from '@mochi/common'

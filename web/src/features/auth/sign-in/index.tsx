@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import { useSearch, useNavigate } from '@tanstack/react-router'
 import { Key, Loader2 } from 'lucide-react'
-import { toast } from 'sonner'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
+  toast,
 } from '@mochi/common'
 import { Button } from '@mochi/common'
 import { AuthLayout } from '../auth-layout'

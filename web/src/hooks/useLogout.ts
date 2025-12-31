@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import { useNavigate } from '@tanstack/react-router'
-import { toast } from 'sonner'
+import { toast } from '@mochi/common'
 import { useAuth } from '@/hooks/useAuth'
 
 export function useLogout() {
