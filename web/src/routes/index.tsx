@@ -1,5 +1,6 @@
 import { z } from 'zod'
 import { createFileRoute, redirect } from '@tanstack/react-router'
+import { requestHelpers } from '@mochi/common'
 import { useAuthStore } from '@/stores/auth-store'
 import { SignIn } from '@/features/auth/sign-in'
 
@@ -9,7 +10,7 @@ const searchSchema = z.object({
 })
 
 export const Route = createFileRoute('/')({
-  beforeLoad: ({ search }) => {
+  beforeLoad: async ({ search }) => {
     const store = useAuthStore.getState()
 
     // Sync from cookies if not initialized (handles page refresh)
@@ -24,8 +25,17 @@ export const Route = createFileRoute('/')({
       return
     }
 
-    // If already authenticated, redirect away from login page
+    // If already authenticated, verify token is still valid before redirecting
     if (store.isAuthenticated) {
+      try {
+        // Verify token with a lightweight API call
+        await requestHelpers.get('/_/identity')
+      } catch {
+        // Token is invalid/expired, clear auth and show login form
+        store.clearAuth()
+        return
+      }
+
       if (!store.hasIdentity) {
         throw redirect({
           to: '/identity',
