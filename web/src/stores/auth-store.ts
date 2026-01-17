@@ -73,7 +73,7 @@ export const useAuthStore = create<AuthState>()((set, get) => {
     setAuth: (user, token) => {
       if (token) {
         setCookie(TOKEN_COOKIE, token, {
-          maxAge: 60 * 60 * 24 * 7,
+          maxAge: 60 * 60 * 24 * 365,
           path: '/',
           sameSite: 'strict',
           secure: window.location.protocol === 'https:',
@@ -113,7 +113,7 @@ export const useAuthStore = create<AuthState>()((set, get) => {
     setToken: (token) => {
       if (token) {
         setCookie(TOKEN_COOKIE, token, {
-          maxAge: 60 * 60 * 24 * 7,
+          maxAge: 60 * 60 * 24 * 365,
           path: '/',
           sameSite: 'strict',
           secure: window.location.protocol === 'https:',
