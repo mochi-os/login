@@ -1,13 +1,9 @@
 import { create } from 'zustand'
 import { getCookie, setCookie, removeCookie } from '@mochi/common'
-import {
-  clearProfileCookie,
-  mergeProfileCookie,
-  readProfileCookie,
-  type IdentityPrivacy,
-} from '@/lib/profile-cookie'
 
 const TOKEN_COOKIE = 'token'
+
+export type IdentityPrivacy = 'public' | 'private'
 
 export interface AuthUser {
   email?: string
@@ -35,7 +31,6 @@ interface AuthState {
   setUser: (user: AuthUser | null) => void
   setToken: (token: string) => void
   setLoading: (isLoading: boolean) => void
-  syncFromCookie: () => void
   clearAuth: () => void
   initialize: () => void
   setIdentity: (name: string, privacy: IdentityPrivacy) => void
@@ -46,28 +41,16 @@ interface AuthState {
 
 export const useAuthStore = create<AuthState>()((set, get) => {
   const initialToken = getCookie(TOKEN_COOKIE) || ''
-  const profile = readProfileCookie()
-  const initialEmail = profile.email || ''
-  const initialIdentityName = profile.name || ''
-  const initialIdentityPrivacy: IdentityPrivacy | '' = profile.privacy || ''
-
-  const initialUser: AuthUser | null =
-    initialEmail !== ''
-      ? {
-          email: initialEmail,
-          ...(profile.name ? { name: profile.name } : {}),
-        }
-      : null
 
   return {
-    user: initialUser,
+    user: null,
     token: initialToken,
     isLoading: false,
     isInitialized: false,
-    identityName: initialIdentityName,
-    identityPrivacy: initialIdentityPrivacy,
+    identityName: '',
+    identityPrivacy: '',
     isAuthenticated: Boolean(initialToken),
-    hasIdentity: Boolean(initialIdentityName),
+    hasIdentity: false,
     mfa: { required: false, partial: '', remaining: [] },
 
     setAuth: (user, token) => {
@@ -80,30 +63,17 @@ export const useAuthStore = create<AuthState>()((set, get) => {
         })
       }
 
-      const currentProfile = readProfileCookie()
-      const mergedProfile = mergeProfileCookie({
-        email: user?.email ?? currentProfile.email ?? null,
-        name: currentProfile.name || user?.name || undefined,
-      })
-
       set({
         user,
         token,
         isAuthenticated: Boolean(token),
-        identityName: mergedProfile.name || '',
-        identityPrivacy: mergedProfile.privacy || '',
-        hasIdentity: Boolean(mergedProfile.name),
+        identityName: user?.name || '',
+        hasIdentity: Boolean(user?.name),
         isInitialized: true,
       })
     },
 
     setUser: (user) => {
-      const currentProfile = readProfileCookie()
-      mergeProfileCookie({
-        email: user?.email ?? currentProfile.email ?? null,
-        name: currentProfile.name || user?.name || undefined,
-      })
-
       set({
         user,
         isAuthenticated: Boolean(get().token),
@@ -132,48 +102,8 @@ export const useAuthStore = create<AuthState>()((set, get) => {
       set({ isLoading })
     },
 
-    syncFromCookie: () => {
-      const cookieToken = getCookie(TOKEN_COOKIE) || ''
-      const profile = readProfileCookie()
-      const cookieEmail = profile.email || ''
-      const cookieIdentityName = profile.name || ''
-      const cookieIdentityPrivacy: IdentityPrivacy | '' = profile.privacy || ''
-      const storeToken = get().token
-      const storeEmail = get().user?.email
-      const storeIdentityName = get().identityName
-      const storeIdentityPrivacy = get().identityPrivacy
-
-      if (
-        cookieToken !== storeToken ||
-        cookieEmail !== storeEmail ||
-        cookieIdentityName !== storeIdentityName ||
-        cookieIdentityPrivacy !== storeIdentityPrivacy
-      ) {
-        const user: AuthUser | null =
-          cookieEmail !== ''
-            ? {
-                email: cookieEmail,
-                ...(profile.name ? { name: profile.name } : {}),
-              }
-            : get().user
-
-        set({
-          user,
-          token: cookieToken,
-          isAuthenticated: Boolean(cookieToken),
-          identityName: cookieIdentityName,
-          identityPrivacy: cookieIdentityPrivacy,
-          hasIdentity: Boolean(cookieIdentityName),
-          isInitialized: true,
-        })
-      } else {
-        set({ isInitialized: true })
-      }
-    },
-
     clearAuth: () => {
       removeCookie(TOKEN_COOKIE, '/')
-      clearProfileCookie()
 
       set({
         user: null,
@@ -189,21 +119,23 @@ export const useAuthStore = create<AuthState>()((set, get) => {
     },
 
     initialize: () => {
-      get().syncFromCookie()
+      const cookieToken = getCookie(TOKEN_COOKIE) || ''
+      set({
+        token: cookieToken,
+        isAuthenticated: Boolean(cookieToken),
+        isInitialized: true,
+      })
     },
 
     setIdentity: (name, privacy) => {
-      const profile = mergeProfileCookie({ name, privacy })
-
       set({
-        identityName: profile.name || '',
-        identityPrivacy: profile.privacy || '',
-        hasIdentity: Boolean(profile.name),
+        identityName: name,
+        identityPrivacy: privacy,
+        hasIdentity: Boolean(name),
       })
     },
 
     clearIdentity: () => {
-      mergeProfileCookie({ name: null, privacy: null })
       set({
         identityName: '',
         identityPrivacy: '',

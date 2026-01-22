@@ -5,7 +5,6 @@ import authApi, {
   type VerifyCodeResponse,
 } from '@/api/auth'
 import { useAuthStore } from '@/stores/auth-store'
-import { mergeProfileCookie, readProfileCookie } from '@/lib/profile-cookie'
 
 // Helper to complete authentication (shared by email verify, MFA, passkey, recovery)
 const completeAuth = (response: {
@@ -15,23 +14,13 @@ const completeAuth = (response: {
   user?: AuthUser
 }) => {
   const login = response.token || ''
-  const profile = readProfileCookie()
-  const email = response.user?.email || profile.email
+  const email = response.user?.email || useAuthStore.getState().user?.email
   const nameFromResponse = response.name || response.user?.name
 
   if (login) {
-    if (email && !profile.email) {
-      mergeProfileCookie({ email })
-    }
-
-    // Build user object - email is optional (passkey login may not have it)
     const user: AuthUser = {
       ...(email ? { email } : {}),
-      ...(nameFromResponse
-        ? { name: nameFromResponse }
-        : profile.name
-          ? { name: profile.name }
-          : {}),
+      ...(nameFromResponse ? { name: nameFromResponse } : {}),
       accountNo: response.user?.accountNo,
       role: response.user?.role,
       exp: response.user?.exp,
@@ -53,8 +42,6 @@ interface BeginLoginResponse {
 export const beginLogin = async (email: string): Promise<BeginLoginResponse> => {
   try {
     const response = await authApi.beginLogin({ email })
-
-    mergeProfileCookie({ email })
 
     const currentUser = useAuthStore.getState().user
     useAuthStore.getState().setUser({
@@ -119,10 +106,6 @@ export const requestCode = async (
     if (!isSuccess) {
       throw new Error(response.message || 'Failed to request login code')
     }
-
-    mergeProfileCookie({
-      email,
-    })
 
     const currentUser = useAuthStore.getState().user
     useAuthStore.getState().setUser({
