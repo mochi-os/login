@@ -216,7 +216,6 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
                       )}
                       <FormControl>
                         <Input
-                          placeholder='Email code'
                           className='text-center font-mono tracking-wider'
                           {...field}
                         />

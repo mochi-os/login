@@ -13,7 +13,7 @@ export const Route = createFileRoute('/codes')({
 
     // Sync from cookies if not initialized
     if (!store.isInitialized) {
-      store.syncFromCookie()
+      store.initialize()
     }
 
     // If already fully authenticated, redirect away

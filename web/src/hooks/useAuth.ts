@@ -14,7 +14,7 @@ export function useAuth() {
   const setUser = useAuthStore((state) => state.setUser)
   const setToken = useAuthStore((state) => state.setToken)
   const setLoading = useAuthStore((state) => state.setLoading)
-  const syncFromCookie = useAuthStore((state) => state.syncFromCookie)
+  const initialize = useAuthStore((state) => state.initialize)
   const clearAuth = useAuthStore((state) => state.clearAuth)
   const setIdentity = useAuthStore((state) => state.setIdentity)
   const clearIdentity = useAuthStore((state) => state.clearIdentity)
@@ -35,7 +35,7 @@ export function useAuth() {
     setUser,
     setToken,
     setLoading,
-    syncFromCookie,
+    initialize,
     logout: clearAuth,
     setIdentity,
     clearIdentity,

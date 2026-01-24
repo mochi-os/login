@@ -13,7 +13,7 @@ export const Route = createFileRoute('/recovery')({
 
     // Sync from cookies if not initialized
     if (!store.isInitialized) {
-      store.syncFromCookie()
+      store.initialize()
     }
 
     // If already authenticated, redirect away

@@ -376,7 +376,6 @@ export function UserAuthForm({
                     )}
                     <FormControl>
                       <Input
-                        placeholder='Email code'
                         className='text-center font-mono tracking-wider'
                         {...field}
                       />

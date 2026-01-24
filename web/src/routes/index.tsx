@@ -15,7 +15,7 @@ export const Route = createFileRoute('/')({
 
     // Sync from cookies if not initialized (handles page refresh)
     if (!store.isInitialized) {
-      store.syncFromCookie()
+      store.initialize()
     }
 
     // If server indicated reauth is needed (suspended, expired session, etc),

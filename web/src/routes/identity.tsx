@@ -16,7 +16,7 @@ export const Route = createFileRoute('/identity')({
     const store = useAuthStore.getState()
 
     if (!store.isInitialized) {
-      store.syncFromCookie()
+      store.initialize()
     }
 
     if (!store.isAuthenticated) {
