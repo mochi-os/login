@@ -7,6 +7,7 @@ import {
   CardDescription,
   CardHeader,
   toast,
+  getErrorMessage,
 } from '@mochi/common'
 import { Button } from '@mochi/common'
 import { AuthLayout } from '../auth-layout'
@@ -60,9 +61,7 @@ export function SignIn() {
       if (error instanceof Error && error.name === 'NotAllowedError') {
         toast.error('Passkey login cancelled')
       } else {
-        toast.error('Passkey login failed', {
-          description: error instanceof Error ? error.message : undefined,
-        })
+        toast.error(getErrorMessage(error, 'Passkey login failed'))
       }
     } finally {
       setIsPasskeyLoading(false)

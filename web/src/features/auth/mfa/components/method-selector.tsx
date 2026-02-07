@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from '@tanstack/react-router'
 import { Key, Smartphone, FileKey, ArrowLeft, Loader2 } from 'lucide-react'
-import { Button, toast } from '@mochi/common'
+import { Button, toast, getErrorMessage } from '@mochi/common'
 import { useAuthStore } from '@/stores/auth-store'
 
 interface MethodSelectorProps {
@@ -72,8 +72,7 @@ export function MethodSelector({ methods, onSelect, redirectTo }: MethodSelector
         }
       }
     } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : 'Passkey verification failed'
-      toast.error('Verification failed', { description: errorMessage })
+      toast.error(getErrorMessage(error, 'Passkey verification failed'))
     } finally {
       setIsLoading(null)
     }

@@ -3,7 +3,7 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2, ArrowRight } from 'lucide-react'
-import { toast } from '@mochi/common'
+import { toast, getErrorMessage } from '@mochi/common'
 import { submitIdentity } from '@/services/auth-service'
 import { Button } from '@mochi/common'
 import { Input } from '@mochi/common'
@@ -57,10 +57,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
       })
       handleRedirect(redirectTo)
     } catch (error) {
-      toast.error('Failed to save identity', {
-        description:
-          error instanceof Error ? error.message : 'Please try again.',
-      })
+      toast.error(getErrorMessage(error, 'Failed to save identity'))
     } finally {
       setIsSubmitting(false)
     }
