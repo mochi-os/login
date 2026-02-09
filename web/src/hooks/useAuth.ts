@@ -1,4 +1,5 @@
 import { useAuthStore, type AuthUser } from '@/stores/auth-store'
+import { authManager } from '@mochi/common'
 
 export function useAuth() {
   const user = useAuthStore((state) => state.user)
@@ -36,7 +37,8 @@ export function useAuth() {
     setToken,
     setLoading,
     initialize,
-    logout: clearAuth,
+    logout: () => authManager.logout(),
+    clearAuth, // Expose clearAuth for internal use if needed
     setIdentity,
     clearIdentity,
   }

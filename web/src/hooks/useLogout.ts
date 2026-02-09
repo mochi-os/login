@@ -1,37 +1,20 @@
 import { useCallback } from 'react'
-import { useNavigate } from '@tanstack/react-router'
-import { toast } from '@mochi/common'
-import { useAuth } from '@/hooks/useAuth'
+import { toast, authManager } from '@mochi/common'
+import { useAuthStore } from '@/stores/auth-store'
 
 export function useLogout() {
-  const { logout: clearAuth, setLoading, isLoading } = useAuth()
-  const navigate = useNavigate()
+  const setLoading = useAuthStore((state) => state.setLoading)
+  const isLoading = useAuthStore((state) => state.isLoading)
 
   const logout = useCallback(async () => {
     try {
       setLoading(true)
-
-      clearAuth()
-
+      await authManager.logout()
       toast.success('Logged out')
-
-      navigate({
-        to: import.meta.env.VITE_AUTH_LOGIN_URL,
-        replace: true,
-      })
     } catch (_error) {
-      clearAuth()
-
       toast.error('Logged out (with errors)')
-
-      navigate({
-        to: import.meta.env.VITE_AUTH_LOGIN_URL,
-        replace: true,
-      })
-    } finally {
-      setLoading(false)
     }
-  }, [clearAuth, setLoading, navigate])
+  }, [setLoading])
 
   return {
     logout,

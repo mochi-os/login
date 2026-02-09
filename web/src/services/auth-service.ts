@@ -4,7 +4,11 @@ import authApi, {
   type RequestCodeResponse,
   type VerifyCodeResponse,
 } from '@/api/auth'
+import { authManager } from '@mochi/common'
 import { useAuthStore } from '@/stores/auth-store'
+
+export const logout = () => authManager.logout()
+
 
 // Helper to complete authentication (shared by email verify, MFA, passkey, recovery)
 const completeAuth = (response: {
@@ -274,13 +278,6 @@ export const recoveryLogin = async (
   }
 }
 
-export const logout = async (): Promise<void> => {
-  try {
-    useAuthStore.getState().clearAuth()
-  } catch (error) {
-    console.error('Logout failed', error)
-  }
-}
 
 export const loadUserProfile = async (): Promise<AuthUser | null> => {
   try {
