@@ -19,6 +19,7 @@ import {
   RadioGroup,
   RadioGroupItem,
 } from '@mochi/common'
+import { mergeProfileCookie, readProfileCookie } from '@/lib/profile-cookie'
 
 const identitySchema = z.object({
   name: z.string().min(2, 'Please enter your name'),
@@ -33,11 +34,12 @@ interface IdentityFormProps {
 
 export function IdentityForm({ redirectTo }: IdentityFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const initialProfile = readProfileCookie()
 
   const form = useForm<IdentityFormValues>({
     resolver: zodResolver(identitySchema),
     defaultValues: {
-      name: '',
+      name: initialProfile.name || '',
       privacy: 'public',
     },
   })
@@ -76,6 +78,11 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
                 <Input
                   autoComplete="off"
                   {...field}
+                  onChange={(event) => {
+                    field.onChange(event)
+                    const nextName = event.target.value.trim()
+                    mergeProfileCookie({ name: nextName || null })
+                  }}
                 />
               </FormControl>
               <FormMessage />
@@ -137,4 +144,3 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
     </Form>
   )
 }
-

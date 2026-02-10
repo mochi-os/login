@@ -4,7 +4,7 @@ import authApi, {
   type RequestCodeResponse,
   type VerifyCodeResponse,
 } from '@/api/auth'
-import { authManager } from '@mochi/common'
+import { authManager, requestHelpers } from '@mochi/common'
 import { useAuthStore } from '@/stores/auth-store'
 
 export const logout = () => authManager.logout()
@@ -281,13 +281,37 @@ export const recoveryLogin = async (
 
 export const loadUserProfile = async (): Promise<AuthUser | null> => {
   try {
-    const { token } = useAuthStore.getState()
+    const store = useAuthStore.getState()
+    const { token } = store
 
     if (!token) {
       return null
     }
 
-    return useAuthStore.getState().user
+    const data = await requestHelpers.get<{
+      user?: { email?: string; name?: string }
+      identity?: { name?: string; privacy?: 'public' | 'private' }
+    }>('/_/identity')
+
+    const currentUser = store.user || {}
+    const nextUser: AuthUser = {
+      ...currentUser,
+      ...(data.user?.email ? { email: data.user.email } : {}),
+      ...(data.identity?.name
+        ? { name: data.identity.name }
+        : data.user?.name
+          ? { name: data.user.name }
+          : {}),
+    }
+    store.setUser(nextUser)
+
+    if (data.identity?.name && data.identity.privacy) {
+      store.setIdentity(data.identity.name, data.identity.privacy)
+    } else {
+      store.clearIdentity()
+    }
+
+    return nextUser
   } catch (error) {
     console.error('Failed to load user profile', error)
     return null

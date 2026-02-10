@@ -28,8 +28,28 @@ export const Route = createFileRoute('/')({
     // If already authenticated, verify token is still valid before redirecting
     if (store.isAuthenticated) {
       try {
-        // Verify token with a lightweight API call
-        await requestHelpers.get('/_/identity')
+        // Verify token and refresh identity state from server truth
+        const data = await requestHelpers.get<{
+          user?: { email?: string; name?: string }
+          identity?: { name?: string; privacy?: 'public' | 'private' }
+        }>('/_/identity')
+
+        const nextUser = {
+          ...(store.user || {}),
+          ...(data.user?.email ? { email: data.user.email } : {}),
+          ...(data.identity?.name
+            ? { name: data.identity.name }
+            : data.user?.name
+              ? { name: data.user.name }
+              : {}),
+        }
+        store.setUser(nextUser)
+
+        if (data.identity?.name && data.identity.privacy) {
+          store.setIdentity(data.identity.name, data.identity.privacy)
+        } else {
+          store.clearIdentity()
+        }
       } catch {
         // Token is invalid/expired, clear auth and show login form
         store.clearAuth()
