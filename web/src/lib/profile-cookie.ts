@@ -11,13 +11,11 @@ export type IdentityPrivacy = 'public' | 'private'
 export interface ProfileCookieData {
   email?: string
   name?: string
-  privacy?: IdentityPrivacy
 }
 
 export interface ProfileCookiePatch {
   email?: string | null
   name?: string | null
-  privacy?: IdentityPrivacy | null
 }
 
 const defaultCookieOptions = (): CookieOptions => ({
@@ -30,9 +28,6 @@ const defaultCookieOptions = (): CookieOptions => ({
       : true,
 })
 
-const isIdentityPrivacy = (value: unknown): value is IdentityPrivacy =>
-  value === 'public' || value === 'private'
-
 const sanitizeProfile = (
   profile: ProfileCookieData
 ): ProfileCookieData => {
@@ -44,10 +39,6 @@ const sanitizeProfile = (
 
   if (typeof profile.name === 'string' && profile.name.length > 0) {
     sanitized.name = profile.name
-  }
-
-  if (isIdentityPrivacy(profile.privacy)) {
-    sanitized.privacy = profile.privacy
   }
 
   return sanitized
@@ -100,10 +91,6 @@ export const mergeProfileCookie = (
         partial.email === null ? undefined : partial.email ?? current.email,
       name:
         partial.name === null ? undefined : partial.name ?? current.name,
-      privacy:
-        partial.privacy === null
-          ? undefined
-          : partial.privacy ?? current.privacy,
     },
     options
   )
@@ -112,4 +99,3 @@ export const mergeProfileCookie = (
 export const clearProfileCookie = (): void => {
   removeCookie(AUTH_COOKIES.PROFILE, '/')
 }
-

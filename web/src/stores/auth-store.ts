@@ -1,5 +1,10 @@
 import { create } from 'zustand'
 import { getCookie, setCookie, removeCookie } from '@mochi/common'
+import {
+  clearProfileCookie,
+  mergeProfileCookie,
+  readProfileCookie,
+} from '@/lib/profile-cookie'
 
 const TOKEN_COOKIE = 'token'
 
@@ -41,16 +46,17 @@ interface AuthState {
 
 export const useAuthStore = create<AuthState>()((set, get) => {
   const initialToken = getCookie(TOKEN_COOKIE) || ''
+  const initialProfile = readProfileCookie()
 
   return {
     user: null,
     token: initialToken,
     isLoading: false,
     isInitialized: false,
-    identityName: '',
+    identityName: initialProfile.name || '',
     identityPrivacy: '',
     isAuthenticated: Boolean(initialToken),
-    hasIdentity: false,
+    hasIdentity: Boolean(initialProfile.name),
     mfa: { required: false, partial: '', remaining: [] },
 
     setAuth: (user, token) => {
@@ -62,6 +68,10 @@ export const useAuthStore = create<AuthState>()((set, get) => {
           secure: window.location.protocol === 'https:',
         })
       }
+      mergeProfileCookie({
+        email: user?.email,
+        name: user?.name ?? null,
+      })
 
       set({
         user,
@@ -74,6 +84,10 @@ export const useAuthStore = create<AuthState>()((set, get) => {
     },
 
     setUser: (user) => {
+      mergeProfileCookie({
+        email: user?.email,
+        name: user?.name,
+      })
       set({
         user,
         isAuthenticated: Boolean(get().token),
@@ -104,6 +118,7 @@ export const useAuthStore = create<AuthState>()((set, get) => {
 
     clearAuth: () => {
       removeCookie(TOKEN_COOKIE, '/')
+      clearProfileCookie()
 
       set({
         user: null,
@@ -120,14 +135,21 @@ export const useAuthStore = create<AuthState>()((set, get) => {
 
     initialize: () => {
       const cookieToken = getCookie(TOKEN_COOKIE) || ''
+      const profile = readProfileCookie()
       set({
         token: cookieToken,
+        identityName: profile.name || '',
+        identityPrivacy: '',
         isAuthenticated: Boolean(cookieToken),
+        hasIdentity: Boolean(profile.name),
         isInitialized: true,
       })
     },
 
     setIdentity: (name, privacy) => {
+      mergeProfileCookie({
+        name,
+      })
       set({
         identityName: name,
         identityPrivacy: privacy,
@@ -136,6 +158,9 @@ export const useAuthStore = create<AuthState>()((set, get) => {
     },
 
     clearIdentity: () => {
+      mergeProfileCookie({
+        name: null,
+      })
       set({
         identityName: '',
         identityPrivacy: '',
