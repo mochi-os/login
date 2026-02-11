@@ -207,5 +207,3 @@ export type {
   VerifyCodeRequest,
   VerifyCodeResponse,
 }
-
-export default authApi

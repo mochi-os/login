@@ -1,4 +1,4 @@
-import authApi, {
+import { authApi, 
   type AuthUser,
   type MfaResponse,
   type RequestCodeResponse,

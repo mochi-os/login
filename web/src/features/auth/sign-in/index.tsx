@@ -13,7 +13,7 @@ import { Button } from '@mochi/common'
 import { AuthLayout } from '../auth-layout'
 import { UserAuthForm } from './components/user-auth-form'
 import { passkeyLogin } from '@/services/auth-service'
-import authApi from '@/api/auth'
+import { authApi } from '@/api/auth'
 import { useAuthStore } from '@/stores/auth-store'
 
 export function SignIn() {
