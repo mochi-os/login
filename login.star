@@ -30,7 +30,7 @@ def action_methods_set(a):
 
 def action_methods_reset(a):
     """Admin: reset user to email only"""
-    user = int(a.input("user"))
+    user = int(a.input("user", "0"))
     mochi.user.methods.reset(user)
     a.json({"ok": True})
 
@@ -51,7 +51,7 @@ def action_passkey_register_begin(a):
 
 def action_passkey_register_finish(a):
     """Complete passkey registration"""
-    ceremony = a.input("ceremony")
+    ceremony = a.input("ceremony", "")
     credential = a.json_input("credential")
     name = a.input("name", "")
     result = mochi.passkey.register.finish(ceremony, credential, name)
@@ -59,14 +59,14 @@ def action_passkey_register_finish(a):
 
 def action_passkey_rename(a):
     """Rename a passkey"""
-    id = a.input("id")
-    name = a.input("name")
+    id = a.input("id", "")
+    name = a.input("name", "")
     mochi.passkey.rename(id, name)
     a.json({"ok": True})
 
 def action_passkey_delete(a):
     """Delete a passkey"""
-    id = a.input("id")
+    id = a.input("id", "")
     mochi.passkey.delete(id)
     a.json({"ok": True})
 
@@ -77,7 +77,7 @@ def action_totp_setup(a):
 
 def action_totp_verify(a):
     """Verify TOTP code and mark as verified"""
-    code = a.input("code")
+    code = a.input("code", "")
     ok = mochi.totp.verify(code)
     a.json({"ok": ok})
 
