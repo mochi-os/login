@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 import { useAuthStore } from '@/stores/auth-store'
-import { ThemeProvider, createQueryClient } from '@mochi/common'
+import { ThemeProvider, createQueryClient, getRouterBasepath } from '@mochi/common'
 // Generated Routes
 import { routeTree } from './routeTree.gen'
 // Styles
@@ -11,21 +11,12 @@ import './styles/index.css'
 
 const queryClient = createQueryClient()
 
-// Extract basepath from URL: /login -> /login, /login/otp -> /login
-const getBasepath = () => {
-  const pathname = window.location.pathname
-  // Match first path segment: /login or /login/...
-  const match = pathname.match(/^(\/[^/]+)/)
-  return match ? match[1] : '/'
-}
-
-// Create a new router instance
 const router = createRouter({
   routeTree,
   context: { queryClient },
   defaultPreload: 'intent',
   defaultPreloadStaleTime: 0,
-  basepath: getBasepath(),
+  basepath: getRouterBasepath(),
 })
 
 // Register the router instance for type safety
