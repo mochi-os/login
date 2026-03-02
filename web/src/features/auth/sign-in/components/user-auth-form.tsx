@@ -6,7 +6,7 @@ import { useNavigate, Link } from '@tanstack/react-router'
 import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa } from '@/services/auth-service'
 import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Smartphone } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
-import { toast } from '@mochi/common'
+import { toast, getErrorMessage } from '@mochi/common'
 import { cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot } from '@mochi/common'
 
 const devConsole = globalThis.console
@@ -176,17 +176,14 @@ export function UserAuthForm({
 
       setStep('verification')
     } catch (error) {
-      const apiError = error as { message?: string; data?: { error?: string; message?: string } }
-      const errorCode = apiError.data?.error
-      const errorMessage = apiError.data?.message || apiError.message
-
-      if (errorCode === 'signup_disabled') {
+      const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
+      if (responseData?.error === 'signup_disabled') {
         toast.error('Registration disabled', {
-          description: errorMessage || 'New user signup is disabled.',
+          description: getErrorMessage(error, 'New user signup is disabled.'),
         })
       } else {
         toast.error('Failed to continue', {
-          description: errorMessage || 'Please try again or contact support.',
+          description: getErrorMessage(error, 'Please try again or contact support.'),
         })
       }
     } finally {
@@ -228,7 +225,6 @@ export function UserAuthForm({
       if (emailVerified && needsTotp && data.totpCode) {
         try {
           const totpResult = await completeMfa('totp', data.totpCode)
-          devConsole.log('TOTP retry result:', totpResult)
           if (totpResult.mfa && totpResult.remaining) {
             handleMfaRequired()
             return
@@ -264,7 +260,6 @@ export function UserAuthForm({
           if (data.totpCode && result.remaining.includes('totp')) {
             try {
               const totpResult = await completeMfa('totp', data.totpCode)
-              devConsole.log('TOTP result:', totpResult)
               if (totpResult.mfa && totpResult.remaining) {
                 // Still more methods required
                 handleMfaRequired()
@@ -301,17 +296,15 @@ export function UserAuthForm({
         }
       }
     } catch (error) {
-      const apiError = error as { message?: string; data?: { error?: string; message?: string } }
-      const errorCode = apiError.data?.error
-      const errorMessage = apiError.data?.message || apiError.message
-
+      const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
+      const errorCode = responseData?.error
       if (errorCode === 'suspended') {
         toast.error('Account suspended', {
-          description: errorMessage || 'Your account has been suspended.',
+          description: getErrorMessage(error, 'Your account has been suspended.'),
         })
       } else if (errorCode === 'signup_disabled') {
         toast.error('Registration disabled', {
-          description: errorMessage || 'New user signup is disabled.',
+          description: getErrorMessage(error, 'New user signup is disabled.'),
         })
       } else if (errorCode === 'invalid_code' || errorCode === 'invalid code') {
         toast.error('Invalid code', {
@@ -319,7 +312,7 @@ export function UserAuthForm({
         })
       } else {
         toast.error('Verification failed', {
-          description: errorMessage || 'Please try again or contact support.',
+          description: getErrorMessage(error, 'Please try again or contact support.'),
         })
       }
     } finally {

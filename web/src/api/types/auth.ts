@@ -19,15 +19,6 @@ export interface RequestCodeResponse {
   }
 }
 
-export interface SignupRequest {
-  email: string
-}
-
-export interface SignupResponse {
-  success: boolean
-  message?: string
-}
-
 export interface VerifyCodeRequest {
   code: string
 }
@@ -52,23 +43,6 @@ export interface AuthMethodsResponse {
   passkey: boolean
   recovery: boolean
   signup: boolean
-}
-
-export interface RefreshTokenRequest {
-  refreshToken: string
-}
-
-export interface RefreshTokenResponse {
-  token: string
-  refreshToken?: string
-  login?: string
-  user?: AuthUser
-  expiresIn?: number
-  expires_in?: number
-}
-
-export interface MeResponse {
-  user: AuthUser
 }
 
 // MFA types
@@ -126,10 +100,6 @@ export interface PasskeyRegisterFinishResponse {
 export interface PasskeyLoginBeginResponse {
   // Using unknown since the exact type from @simplewebauthn/browser has strict requirements
   options: unknown
-  ceremony: string
-}
-
-export interface PasskeyLoginFinishRequest {
   ceremony: string
 }
 

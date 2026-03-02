@@ -34,8 +34,6 @@ interface AuthState {
 
   setAuth: (user: AuthUser | null, token: string) => void
   setUser: (user: AuthUser | null) => void
-  setToken: (token: string) => void
-  setLoading: (isLoading: boolean) => void
   clearAuth: () => void
   initialize: () => void
   setIdentity: (name: string, privacy: IdentityPrivacy) => void
@@ -92,28 +90,6 @@ export const useAuthStore = create<AuthState>()((set, get) => {
         user,
         isAuthenticated: Boolean(get().token),
       })
-    },
-
-    setToken: (token) => {
-      if (token) {
-        setCookie(TOKEN_COOKIE, token, {
-          maxAge: 60 * 60 * 24 * 365,
-          path: '/',
-          sameSite: 'strict',
-          secure: window.location.protocol === 'https:',
-        })
-      } else {
-        removeCookie(TOKEN_COOKIE)
-      }
-
-      set({
-        token,
-        isAuthenticated: Boolean(token),
-      })
-    },
-
-    setLoading: (isLoading) => {
-      set({ isLoading })
     },
 
     clearAuth: () => {

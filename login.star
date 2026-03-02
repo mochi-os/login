@@ -2,11 +2,6 @@
 # Unauthenticated login handled by core at /_/auth/*
 # Authenticated operations use action handlers below
 
-def action_logout(a):
-    """Log out current user"""
-    a.logout()
-    a.json({"status": "ok"})
-
 def action_identity_create(a):
     """Create user identity"""
     name = a.input("name")

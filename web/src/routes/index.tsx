@@ -2,6 +2,7 @@ import { z } from 'zod'
 import { createFileRoute, redirect } from '@tanstack/react-router'
 import { requestHelpers } from '@mochi/common'
 import { useAuthStore } from '@/stores/auth-store'
+import { safeRedirect } from '@/lib/redirect'
 import { SignIn } from '@/features/auth/sign-in'
 
 const searchSchema = z.object({
@@ -66,8 +67,7 @@ export const Route = createFileRoute('/')({
       }
 
       // Redirect to the requested page or default app
-      const targetUrl = search.redirect || import.meta.env.VITE_DEFAULT_APP_URL || '/'
-      window.location.replace(targetUrl)
+      window.location.replace(safeRedirect(search.redirect))
       // Return a pending promise to prevent route from rendering
       return new Promise(() => {})
     }

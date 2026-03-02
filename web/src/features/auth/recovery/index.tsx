@@ -4,7 +4,7 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2, ArrowLeft, ArrowRight } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, toast } from '@mochi/common'
+import { Card, CardContent, CardDescription, CardHeader, toast, getErrorMessage } from '@mochi/common'
 import { Button } from '@mochi/common'
 import {
   Form,
@@ -17,6 +17,7 @@ import { Input } from '@mochi/common'
 import { AuthLayout } from '../auth-layout'
 import { useAuthStore } from '@/stores/auth-store'
 import { recoveryLogin } from '@/services/auth-service'
+import { safeRedirect } from '@/lib/redirect'
 import { Route } from '@/routes/recovery'
 
 const recoverySchema = z.object({
@@ -43,8 +44,7 @@ export function Recovery() {
     await new Promise((resolve) => setTimeout(resolve, 250))
 
     const store = useAuthStore.getState()
-    const fallback = import.meta.env.VITE_DEFAULT_APP_URL || '/'
-    const targetPath = redirectTo || fallback
+    const targetPath = safeRedirect(redirectTo)
 
     if (store.hasIdentity) {
       window.location.href = targetPath
@@ -79,13 +79,10 @@ export function Recovery() {
         })
       }
     } catch (error) {
-      const apiError = error as { data?: { error?: string; message?: string } }
-      const errorCode = apiError.data?.error
-      const errorMessage = apiError.data?.message
-
-      if (errorCode === 'suspended') {
+      const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
+      if (responseData?.error === 'suspended') {
         toast.error('Account suspended', {
-          description: errorMessage || 'Your account has been suspended.',
+          description: getErrorMessage(error, 'Your account has been suspended.'),
         })
       } else {
         toast.error('Invalid recovery code', {

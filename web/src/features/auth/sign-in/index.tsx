@@ -13,6 +13,7 @@ import { Button } from '@mochi/common'
 import { AuthLayout } from '../auth-layout'
 import { UserAuthForm } from './components/user-auth-form'
 import { passkeyLogin } from '@/services/auth-service'
+import { safeRedirect } from '@/lib/redirect'
 import { authApi } from '@/api/auth'
 import { useAuthStore } from '@/stores/auth-store'
 
@@ -44,8 +45,7 @@ export function SignIn() {
           toast.success('Logged in')
           await new Promise((resolve) => setTimeout(resolve, 250))
           const { hasIdentity } = useAuthStore.getState()
-          const fallback = import.meta.env.VITE_DEFAULT_APP_URL || '/'
-          const targetPath = redirect || fallback
+          const targetPath = safeRedirect(redirect)
           if (hasIdentity) {
             window.location.href = targetPath
           } else {

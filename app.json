@@ -2,7 +2,7 @@
 // Copyright Alistair Cunningham 2025
 
 {
-  "version": "1.22",
+  "version": "1.24",
   "label": "app_name",
   "paths": ["login"],
 
@@ -17,12 +17,11 @@
     "mfa": {"file": "web/dist/index.html", "public": true},
     "otp": {"file": "web/dist/index.html", "public": true},
 
-    "-/logout": {"function": "action_logout"},
     "-/identity/create": {"function": "action_identity_create"},
 
     "-/methods/get": {"function": "action_methods_get"},
     "-/methods/set": {"function": "action_methods_set"},
-    "-/methods/reset": {"function": "action_methods_reset"},
+    "-/methods/reset": {"function": "action_methods_reset", "admin": true},
 
     "-/passkey/list": {"function": "action_passkey_list"},
     "-/passkey/count": {"function": "action_passkey_count"},

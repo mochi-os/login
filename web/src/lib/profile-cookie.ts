@@ -6,8 +6,6 @@ const AUTH_COOKIES = {
   TOKEN: 'token',
 } as const
 
-export type IdentityPrivacy = 'public' | 'private'
-
 export interface ProfileCookieData {
   email?: string
   name?: string

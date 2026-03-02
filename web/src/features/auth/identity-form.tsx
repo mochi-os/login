@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2, ArrowRight } from 'lucide-react'
 import { toast, getErrorMessage } from '@mochi/common'
 import { submitIdentity } from '@/services/auth-service'
+import { safeRedirect } from '@/lib/redirect'
 import { Button } from '@mochi/common'
 import { Input } from '@mochi/common'
 import {
@@ -45,9 +46,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
   })
 
   const handleRedirect = (target?: string) => {
-    const fallback = import.meta.env.VITE_DEFAULT_APP_URL || '/'
-    const destination = target && target.length > 0 ? target : fallback
-    window.location.href = destination
+    window.location.href = safeRedirect(target)
   }
 
   const onSubmit = async (values: IdentityFormValues) => {

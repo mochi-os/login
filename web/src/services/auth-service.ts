@@ -1,14 +1,12 @@
-import { authApi, 
+import { authApi,
   type AuthUser,
   type MfaResponse,
   type RequestCodeResponse,
   type VerifyCodeResponse,
 } from '@/api/auth'
-import { authManager, requestHelpers } from '@mochi/common'
+import endpoints from '@/api/endpoints'
+import { requestHelpers } from '@mochi/common'
 import { useAuthStore } from '@/stores/auth-store'
-
-export const logout = () => authManager.logout()
-
 
 // Helper to complete authentication (shared by email verify, MFA, passkey, recovery)
 const completeAuth = (response: {
@@ -279,45 +277,6 @@ export const recoveryLogin = async (
 }
 
 
-export const loadUserProfile = async (): Promise<AuthUser | null> => {
-  try {
-    const store = useAuthStore.getState()
-    const { token } = store
-
-    if (!token) {
-      return null
-    }
-
-    const data = await requestHelpers.get<{
-      user?: { email?: string; name?: string }
-      identity?: { name?: string; privacy?: 'public' | 'private' }
-    }>('/_/identity')
-
-    const currentUser = store.user || {}
-    const nextUser: AuthUser = {
-      ...currentUser,
-      ...(data.user?.email ? { email: data.user.email } : {}),
-      ...(data.identity?.name
-        ? { name: data.identity.name }
-        : data.user?.name
-          ? { name: data.user.name }
-          : {}),
-    }
-    store.setUser(nextUser)
-
-    if (data.identity?.name && data.identity.privacy) {
-      store.setIdentity(data.identity.name, data.identity.privacy)
-    } else {
-      store.clearIdentity()
-    }
-
-    return nextUser
-  } catch (error) {
-    console.error('Failed to load user profile', error)
-    return null
-  }
-}
-
 type IdentityPayload = {
   name: string
   privacy: 'public' | 'private'
@@ -327,25 +286,8 @@ export const submitIdentity = async ({
   name,
   privacy,
 }: IdentityPayload): Promise<void> => {
-  try {
-    const response = await fetch(`${window.location.origin}/_/identity`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      credentials: 'include',
-      body: JSON.stringify({ name, privacy }),
-    })
-
-    if (!response.ok) {
-      throw new Error(`Identity request failed with status ${response.status}`)
-    }
-
-    useAuthStore.getState().setIdentity(name, privacy)
-  } catch (error) {
-    console.error('Failed to submit identity', error)
-    throw error
-  }
+  await requestHelpers.post(endpoints.auth.identity, { name, privacy })
+  useAuthStore.getState().setIdentity(name, privacy)
 }
 
 export type { AuthUser, RequestCodeResponse, VerifyCodeResponse }

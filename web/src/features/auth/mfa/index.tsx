@@ -18,12 +18,14 @@ import {
   InputOTP,
   InputOTPGroup,
   toast,
+  getErrorMessage,
   InputOTPSlot,
   Input,
 } from '@mochi/common'
 import { AuthLayout } from '../auth-layout'
 import { useAuthStore } from '@/stores/auth-store'
 import { completeMfa, completeMfaMultiple } from '@/services/auth-service'
+import { safeRedirect } from '@/lib/redirect'
 
 const mfaSchema = z.object({
   emailCode: z.string().optional(),
@@ -55,8 +57,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
     await new Promise((resolve) => setTimeout(resolve, 250))
 
     const store = useAuthStore.getState()
-    const fallback = import.meta.env.VITE_DEFAULT_APP_URL || '/'
-    const targetPath = redirectTo || fallback
+    const targetPath = safeRedirect(redirectTo)
 
     if (store.hasIdentity) {
       window.location.href = targetPath
@@ -159,13 +160,10 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
         })
       }
     } catch (error) {
-      const apiError = error as { data?: { error?: string; message?: string } }
-      const errorCode = apiError.data?.error
-      const errorMessage = apiError.data?.message
-
-      if (errorCode === 'suspended') {
+      const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
+      if (responseData?.error === 'suspended') {
         toast.error('Account suspended', {
-          description: errorMessage || 'Your account has been suspended.',
+          description: getErrorMessage(error, 'Your account has been suspended.'),
         })
       } else {
         toast.error('Invalid code', {

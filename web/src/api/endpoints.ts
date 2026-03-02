@@ -6,7 +6,6 @@ const endpoints = {
     totpLogin: '/_/auth/totp',
     methods: '/_/auth/methods',
     identity: '-/identity/create',
-    logout: '-/logout',
     passkey: {
       loginBegin: '/_/auth/passkey/begin',
       loginFinish: '/_/auth/passkey/finish',
@@ -34,7 +33,5 @@ const endpoints = {
     },
   },
 } as const
-
-export type Endpoints = typeof endpoints
 
 export default endpoints
