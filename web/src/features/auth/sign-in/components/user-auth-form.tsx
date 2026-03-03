@@ -7,6 +7,7 @@ import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa } from '@/s
 import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Smartphone } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
 import { toast, getErrorMessage } from '@mochi/common'
+import { safeRedirect } from '@/lib/redirect'
 import { cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot } from '@mochi/common'
 
 const devConsole = globalThis.console
@@ -65,8 +66,7 @@ export function UserAuthForm({
     await new Promise((resolve) => setTimeout(resolve, 250))
 
     const { hasIdentity } = useAuthStore.getState()
-    const fallback = import.meta.env.VITE_DEFAULT_APP_URL || '/'
-    const targetPath = redirectTo || fallback
+    const targetPath = safeRedirect(redirectTo)
 
     if (hasIdentity) {
       window.location.href = targetPath

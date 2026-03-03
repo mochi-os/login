@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@mochi/common'
 import { AuthLayout } from '@/features/auth/auth-layout'
 import { IdentityForm } from '@/features/auth/identity-form'
 import { useAuthStore } from '@/stores/auth-store'
+import { safeRedirect } from '@/lib/redirect'
 
 const searchSchema = z.object({
   redirect: z.string().optional(),
@@ -33,19 +34,12 @@ export const Route = createFileRoute('/identity')({
 
 function IdentityRouteComponent() {
   const searchParams = Route.useSearch()
-  const redirectTo =
-    'redirect' in searchParams &&
-      typeof searchParams.redirect === 'string' &&
-      searchParams.redirect.length > 0 &&
-      searchParams.redirect !== 'undefined'
-      ? searchParams.redirect
-      : undefined
+  const redirectTo = safeRedirect(searchParams.redirect)
   const hasIdentity = useAuthStore((state) => state.hasIdentity)
 
   useEffect(() => {
     if (hasIdentity) {
-      const fallback = import.meta.env.VITE_DEFAULT_APP_URL || '/'
-      window.location.href = redirectTo || fallback
+      window.location.href = redirectTo
     }
   }, [hasIdentity, redirectTo])
 
@@ -63,6 +57,7 @@ function IdentityRouteComponent() {
         </CardHeader>
         <CardContent>
           <IdentityForm redirectTo={redirectTo} />
+
         </CardContent>
       </Card>
     </AuthLayout>
