@@ -2,6 +2,7 @@ import { z } from 'zod'
 import { createFileRoute, redirect } from '@tanstack/react-router'
 import { useAuthStore } from '@/stores/auth-store'
 import { Recovery } from '@/features/auth/recovery'
+import { safeRedirect } from '@/lib/redirect'
 
 const searchSchema = z.object({
   redirect: z.string().optional(),
@@ -18,8 +19,7 @@ export const Route = createFileRoute('/recovery')({
 
     // If already authenticated, redirect away
     if (store.isAuthenticated) {
-      const fallback = import.meta.env.VITE_DEFAULT_APP_URL || '/'
-      const targetPath = search.redirect || fallback
+      const targetPath = safeRedirect(search.redirect)
 
       if (!store.hasIdentity) {
         throw redirect({
