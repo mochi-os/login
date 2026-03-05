@@ -42,20 +42,15 @@ interface BeginLoginResponse {
 }
 
 export const beginLogin = async (email: string): Promise<BeginLoginResponse> => {
-  try {
-    const response = await authApi.beginLogin({ email })
+  const response = await authApi.beginLogin({ email })
 
-    const currentUser = useAuthStore.getState().user
-    useAuthStore.getState().setUser({
-      ...currentUser,
-      email,
-    })
+  const currentUser = useAuthStore.getState().user
+  useAuthStore.getState().setUser({
+    ...currentUser,
+    email,
+  })
 
-    return response
-  } catch (error) {
-    console.error('Failed to begin login', error)
-    throw error
-  }
+  return response
 }
 
 interface TotpLoginResponse {
@@ -71,81 +66,66 @@ export const totpLogin = async (
   email: string,
   code: string
 ): Promise<TotpLoginResponse & { success: boolean }> => {
-  try {
-    const response = await authApi.totpLogin({ email, code })
+  const response = await authApi.totpLogin({ email, code })
 
-    // Check for MFA requirement
-    if (response.mfa && response.partial && response.remaining) {
-      useAuthStore.getState().setMfa(response.partial, response.remaining)
-      return {
-        ...response,
-        success: true,
-      }
-    }
-
-    const success = completeAuth(response)
-
+  // Check for MFA requirement
+  if (response.mfa && response.partial && response.remaining) {
+    useAuthStore.getState().setMfa(response.partial, response.remaining)
     return {
       ...response,
-      success,
+      success: true,
     }
-  } catch (error) {
-    console.error('Failed to login with TOTP', error)
-    throw error
+  }
+
+  const success = completeAuth(response)
+
+  return {
+    ...response,
+    success,
   }
 }
 
 export const requestCode = async (
   email: string
 ): Promise<RequestCodeResponse> => {
-  try {
-    const response = await authApi.requestCode({ email })
+  const response = await authApi.requestCode({ email })
 
-    const responseStatus = response.status?.toLowerCase()
-    const devCode = response.data?.code
-    const isSuccess = responseStatus === 'ok' || Boolean(devCode)
+  const responseStatus = response.status?.toLowerCase()
+  const devCode = response.data?.code
+  const isSuccess = responseStatus === 'ok' || Boolean(devCode)
 
-    if (!isSuccess) {
-      throw new Error(response.message || 'Failed to request login code')
-    }
-
-    const currentUser = useAuthStore.getState().user
-    useAuthStore.getState().setUser({
-      ...currentUser,
-      email,
-    })
-
-    return response
-  } catch (error) {
-    console.error('Failed to request login code', error)
-    throw error
+  if (!isSuccess) {
+    throw new Error(response.message || 'Failed to request login code')
   }
+
+  const currentUser = useAuthStore.getState().user
+  useAuthStore.getState().setUser({
+    ...currentUser,
+    email,
+  })
+
+  return response
 }
 
 export const verifyCode = async (
   code: string
 ): Promise<VerifyCodeResponse & { success: boolean }> => {
-  try {
-    const response = await authApi.verifyCode({ code })
+  const response = await authApi.verifyCode({ code })
 
-    // Check for MFA requirement
-    if (response.mfa && response.partial && response.remaining) {
-      useAuthStore.getState().setMfa(response.partial, response.remaining)
-      return {
-        ...response,
-        success: true, // Partial success - MFA required
-      }
-    }
-
-    const success = completeAuth(response)
-
+  // Check for MFA requirement
+  if (response.mfa && response.partial && response.remaining) {
+    useAuthStore.getState().setMfa(response.partial, response.remaining)
     return {
       ...response,
-      success,
+      success: true, // Partial success - MFA required
     }
-  } catch (error) {
-    console.error('Failed to verify login code', error)
-    throw error
+  }
+
+  const success = completeAuth(response)
+
+  return {
+    ...response,
+    success,
   }
 }
 
@@ -153,36 +133,31 @@ export const completeMfa = async (
   method: string,
   code?: string
 ): Promise<MfaResponse & { success: boolean }> => {
-  try {
-    const { mfa } = useAuthStore.getState()
-    if (!mfa.partial) {
-      throw new Error('No MFA session')
-    }
+  const { mfa } = useAuthStore.getState()
+  if (!mfa.partial) {
+    throw new Error('No MFA session')
+  }
 
-    const response = await authApi.completeMfa({
-      partial: mfa.partial,
-      method,
-      code,
-    })
+  const response = await authApi.completeMfa({
+    partial: mfa.partial,
+    method,
+    code,
+  })
 
-    // Check if more MFA is required
-    if (response.mfa && response.partial && response.remaining) {
-      useAuthStore.getState().setMfa(response.partial, response.remaining)
-      return {
-        ...response,
-        success: true, // Partial success - more MFA required
-      }
-    }
-
-    const success = completeAuth(response)
-
+  // Check if more MFA is required
+  if (response.mfa && response.partial && response.remaining) {
+    useAuthStore.getState().setMfa(response.partial, response.remaining)
     return {
       ...response,
-      success,
+      success: true, // Partial success - more MFA required
     }
-  } catch (error) {
-    console.error('Failed to complete MFA', error)
-    throw error
+  }
+
+  const success = completeAuth(response)
+
+  return {
+    ...response,
+    success,
   }
 }
 
@@ -190,35 +165,30 @@ export const completeMfaMultiple = async (codes: {
   email_code?: string
   totp_code?: string
 }): Promise<MfaResponse & { success: boolean }> => {
-  try {
-    const { mfa } = useAuthStore.getState()
-    if (!mfa.partial) {
-      throw new Error('No MFA session')
-    }
+  const { mfa } = useAuthStore.getState()
+  if (!mfa.partial) {
+    throw new Error('No MFA session')
+  }
 
-    const response = await authApi.completeMfa({
-      partial: mfa.partial,
-      ...codes,
-    })
+  const response = await authApi.completeMfa({
+    partial: mfa.partial,
+    ...codes,
+  })
 
-    // Check if more MFA is required
-    if (response.mfa && response.partial && response.remaining) {
-      useAuthStore.getState().setMfa(response.partial, response.remaining)
-      return {
-        ...response,
-        success: true, // Partial success - more MFA required
-      }
-    }
-
-    const success = completeAuth(response)
-
+  // Check if more MFA is required
+  if (response.mfa && response.partial && response.remaining) {
+    useAuthStore.getState().setMfa(response.partial, response.remaining)
     return {
       ...response,
-      success,
+      success: true, // Partial success - more MFA required
     }
-  } catch (error) {
-    console.error('Failed to complete MFA', error)
-    throw error
+  }
+
+  const success = completeAuth(response)
+
+  return {
+    ...response,
+    success,
   }
 }
 
@@ -227,53 +197,43 @@ export const passkeyLogin = async (): Promise<{
   mfa?: boolean
   remaining?: string[]
 }> => {
-  try {
-    const { startAuthentication } = await import('@simplewebauthn/browser')
+  const { startAuthentication } = await import('@simplewebauthn/browser')
 
-    // Begin passkey login
-    const beginResponse = await authApi.passkeyLoginBegin()
+  // Begin passkey login
+  const beginResponse = await authApi.passkeyLoginBegin()
 
-    // Perform WebAuthn ceremony
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const credential = await startAuthentication({ optionsJSON: beginResponse.options as any })
+  // Perform WebAuthn ceremony
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const credential = await startAuthentication({ optionsJSON: beginResponse.options as any })
 
-    // Finish passkey login
-    const response = await authApi.passkeyLoginFinish(
-      beginResponse.ceremony,
-      credential
-    )
+  // Finish passkey login
+  const response = await authApi.passkeyLoginFinish(
+    beginResponse.ceremony,
+    credential
+  )
 
-    // Check for MFA requirement
-    if (response.mfa && response.partial && response.remaining) {
-      useAuthStore.getState().setMfa(response.partial, response.remaining)
-      return {
-        success: true,
-        mfa: true,
-        remaining: response.remaining,
-      }
+  // Check for MFA requirement
+  if (response.mfa && response.partial && response.remaining) {
+    useAuthStore.getState().setMfa(response.partial, response.remaining)
+    return {
+      success: true,
+      mfa: true,
+      remaining: response.remaining,
     }
-
-    const success = completeAuth(response)
-
-    return { success }
-  } catch (error) {
-    console.error('Failed to login with passkey', error)
-    throw error
   }
+
+  const success = completeAuth(response)
+
+  return { success }
 }
 
 export const recoveryLogin = async (
   username: string,
   code: string
 ): Promise<{ success: boolean }> => {
-  try {
-    const response = await authApi.recoveryLogin({ username, code })
-    const success = completeAuth(response)
-    return { success }
-  } catch (error) {
-    console.error('Failed to login with recovery code', error)
-    throw error
-  }
+  const response = await authApi.recoveryLogin({ username, code })
+  const success = completeAuth(response)
+  return { success }
 }
 
 
