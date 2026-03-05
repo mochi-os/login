@@ -4,16 +4,7 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2, ArrowLeft, ArrowRight } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, toast, getErrorMessage } from '@mochi/common'
-import { Button } from '@mochi/common'
-import {
-  Form,
-  FormField,
-  FormItem,
-  FormControl,
-  FormMessage,
-} from '@mochi/common'
-import { Input } from '@mochi/common'
+import { Card, CardContent, CardDescription, CardHeader, toast, getErrorMessage, Button, Form, FormField, FormItem, FormControl, FormMessage, Input } from '@mochi/common'
 import { AuthLayout } from '../auth-layout'
 import { useAuthStore } from '@/stores/auth-store'
 import { recoveryLogin } from '@/services/auth-service'

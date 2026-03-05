@@ -3,23 +3,9 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2, ArrowRight } from 'lucide-react'
-import { toast, getErrorMessage } from '@mochi/common'
+import { toast, getErrorMessage, Button, Input, Form, FormControl, FormField, FormItem, FormLabel, FormMessage, RadioGroup, RadioGroupItem } from '@mochi/common'
 import { submitIdentity } from '@/services/auth-service'
 import { safeRedirect } from '@/lib/redirect'
-import { Button } from '@mochi/common'
-import { Input } from '@mochi/common'
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@mochi/common'
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from '@mochi/common'
 import { mergeProfileCookie, readProfileCookie } from '@/lib/profile-cookie'
 
 const identitySchema = z.object({
