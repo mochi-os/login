@@ -1,12 +1,10 @@
 import { create } from 'zustand'
-import { getCookie, setCookie, removeCookie } from '@mochi/common'
+import { getAppToken } from '@mochi/common'
 import {
   clearProfileCookie,
   mergeProfileCookie,
   readProfileCookie,
 } from '@/lib/profile-cookie'
-
-const TOKEN_COOKIE = 'token'
 
 export type IdentityPrivacy = 'public' | 'private'
 
@@ -32,7 +30,7 @@ interface AuthState {
   hasIdentity: boolean
   mfa: MfaState
 
-  setAuth: (user: AuthUser | null, token: string) => void
+  setAuth: (user: AuthUser | null) => void
   setUser: (user: AuthUser | null) => void
   clearAuth: () => void
   initialize: () => void
@@ -43,7 +41,7 @@ interface AuthState {
 }
 
 export const useAuthStore = create<AuthState>()((set, get) => {
-  const initialToken = getCookie(TOKEN_COOKIE) || ''
+  const initialToken = getAppToken()
   const initialProfile = readProfileCookie()
 
   return {
@@ -57,15 +55,7 @@ export const useAuthStore = create<AuthState>()((set, get) => {
     hasIdentity: Boolean(initialProfile.name),
     mfa: { required: false, partial: '', remaining: [] },
 
-    setAuth: (user, token) => {
-      if (token) {
-        setCookie(TOKEN_COOKIE, token, {
-          maxAge: 60 * 60 * 24 * 365,
-          path: '/',
-          sameSite: 'strict',
-          secure: window.location.protocol === 'https:',
-        })
-      }
+    setAuth: (user) => {
       mergeProfileCookie({
         email: user?.email,
         name: user?.name ?? null,
@@ -73,8 +63,8 @@ export const useAuthStore = create<AuthState>()((set, get) => {
 
       set({
         user,
-        token,
-        isAuthenticated: Boolean(token),
+        token: '',
+        isAuthenticated: true,
         identityName: user?.name || '',
         hasIdentity: Boolean(user?.name),
         isInitialized: true,
@@ -93,7 +83,6 @@ export const useAuthStore = create<AuthState>()((set, get) => {
     },
 
     clearAuth: () => {
-      removeCookie(TOKEN_COOKIE, '/')
       clearProfileCookie()
 
       set({
@@ -110,13 +99,13 @@ export const useAuthStore = create<AuthState>()((set, get) => {
     },
 
     initialize: () => {
-      const cookieToken = getCookie(TOKEN_COOKIE) || ''
+      const metaToken = getAppToken()
       const profile = readProfileCookie()
       set({
-        token: cookieToken,
+        token: metaToken,
         identityName: profile.name || '',
         identityPrivacy: '',
-        isAuthenticated: Boolean(cookieToken),
+        isAuthenticated: Boolean(metaToken),
         hasIdentity: Boolean(profile.name),
         isInitialized: true,
       })

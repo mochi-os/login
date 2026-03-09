@@ -285,7 +285,7 @@ export function UserAuthForm({
           return
         }
 
-        if (result.success && result.token) {
+        if (result.success) {
           await handleLoginSuccess()
         } else {
           toast.error('Invalid verification code', {
