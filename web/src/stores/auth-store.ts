@@ -1,5 +1,4 @@
 import { create } from 'zustand'
-import { getAppToken } from '@mochi/common'
 import {
   clearProfileCookie,
   mergeProfileCookie,
@@ -41,17 +40,16 @@ interface AuthState {
 }
 
 export const useAuthStore = create<AuthState>()((set, get) => {
-  const initialToken = getAppToken()
   const initialProfile = readProfileCookie()
 
   return {
     user: null,
-    token: initialToken,
+    token: '',
     isLoading: false,
     isInitialized: false,
     identityName: initialProfile.name || '',
     identityPrivacy: '',
-    isAuthenticated: Boolean(initialToken),
+    isAuthenticated: false,
     hasIdentity: Boolean(initialProfile.name),
     mfa: { required: false, partial: '', remaining: [] },
 
@@ -99,13 +97,10 @@ export const useAuthStore = create<AuthState>()((set, get) => {
     },
 
     initialize: () => {
-      const metaToken = getAppToken()
       const profile = readProfileCookie()
       set({
-        token: metaToken,
         identityName: profile.name || '',
         identityPrivacy: '',
-        isAuthenticated: Boolean(metaToken),
         hasIdentity: Boolean(profile.name),
         isInitialized: true,
       })

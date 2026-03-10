@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useNavigate, Link } from '@tanstack/react-router'
+import { Link } from '@tanstack/react-router'
 import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa } from '@/services/auth-service'
 import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Smartphone } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
@@ -39,7 +39,6 @@ export function UserAuthForm({
   const [userEmail, setUserEmail] = useState('')
   const [requiredMethods, setRequiredMethods] = useState<string[]>([])
   const [emailVerified, setEmailVerified] = useState(false)
-  const navigate = useNavigate()
 
   // Use external step/setStep if provided, otherwise use internal state
   const step = externalStep ?? internalStep
@@ -69,21 +68,15 @@ export function UserAuthForm({
     if (hasIdentity) {
       window.location.href = targetPath
     } else {
-      navigate({
-        to: '/identity',
-        search: { redirect: targetPath },
-        replace: true,
-      })
+      const identityParams = targetPath && targetPath !== '/' ? `?redirect=${encodeURIComponent(targetPath)}` : ''
+      window.location.replace(`/login/identity${identityParams}`)
     }
   }
 
   // Handle MFA redirect
   function handleMfaRequired() {
-        navigate({
-      to: '/codes',
-      search: redirectTo && redirectTo !== '/' ? { redirect: redirectTo } : {},
-      replace: true,
-    })
+    const codesParams = redirectTo && redirectTo !== '/' ? `?redirect=${encodeURIComponent(redirectTo)}` : ''
+    window.location.replace(`/login/codes${codesParams}`)
   }
 
   // Step 1: Submit email to get required methods
