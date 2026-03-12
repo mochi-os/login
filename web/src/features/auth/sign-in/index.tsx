@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useSearch, useNavigate } from '@tanstack/react-router'
+import { useSearch } from '@tanstack/react-router'
 import { Key, Loader2 } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, toast, getErrorMessage, Button } from '@mochi/common'
 import { AuthLayout } from '../auth-layout'
@@ -11,7 +11,6 @@ import { useAuthStore } from '@/stores/auth-store'
 
 export function SignIn() {
   const { redirect } = useSearch({ from: '/' })
-  const navigate = useNavigate()
   const [step, setStep] = useState<'email' | 'verification'>('email')
   const [passkeyEnabled, setPasskeyEnabled] = useState(false)
   const [isPasskeyLoading, setIsPasskeyLoading] = useState(false)
@@ -28,11 +27,8 @@ export function SignIn() {
       const result = await passkeyLogin()
       if (result.success) {
         if (result.mfa) {
-          navigate({
-            to: '/codes',
-            search: { redirect },
-            replace: true,
-          })
+          const codesParams = redirect ? `?redirect=${encodeURIComponent(redirect)}` : ''
+          window.location.replace(`/login/codes${codesParams}`)
         } else {
           toast.success('Logged in')
           await new Promise((resolve) => setTimeout(resolve, 250))
@@ -41,11 +37,8 @@ export function SignIn() {
           if (hasIdentity) {
             window.location.href = targetPath
           } else {
-            navigate({
-              to: '/identity',
-              search: { redirect: targetPath },
-              replace: true,
-            })
+            const identityParams = targetPath && targetPath !== '/' ? `?redirect=${encodeURIComponent(targetPath)}` : ''
+            window.location.replace(`/login/identity${identityParams}`)
           }
         }
       }

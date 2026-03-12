@@ -8,31 +8,22 @@ import endpoints from '@/api/endpoints'
 import { requestHelpers } from '@mochi/common'
 import { useAuthStore } from '@/stores/auth-store'
 
-// Helper to complete authentication (shared by email verify, MFA, passkey, recovery)
+// Helper to complete authentication (shared by email verify, MFA, passkey, recovery).
+// The server sets the session cookie and returns {name, has_identity}.
+// No JWT token is returned — app-scoped tokens are injected into HTML on page load.
 const completeAuth = (response: {
-  token?: string
-  login?: string
   name?: string
-  user?: AuthUser
+  has_identity?: boolean
 }) => {
-  const login = response.token || ''
-  const email = response.user?.email || useAuthStore.getState().user?.email
-  const nameFromResponse = response.name || response.user?.name
-
-  if (login) {
-    const user: AuthUser = {
-      ...(email ? { email } : {}),
-      ...(nameFromResponse ? { name: nameFromResponse } : {}),
-      accountNo: response.user?.accountNo,
-      role: response.user?.role,
-      exp: response.user?.exp,
-    }
-
-    useAuthStore.getState().setAuth(user, login)
-    useAuthStore.getState().clearMfa()
-    return true
+  const email = useAuthStore.getState().user?.email
+  const user: AuthUser = {
+    ...(email ? { email } : {}),
+    ...(response.name ? { name: response.name } : {}),
   }
-  return false
+
+  useAuthStore.getState().setAuth(user)
+  useAuthStore.getState().clearMfa()
+  return true
 }
 
 interface BeginLoginResponse {
