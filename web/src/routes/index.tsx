@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { createFileRoute, redirect } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
 import { requestHelpers } from '@mochi/common'
 import { useAuthStore } from '@/stores/auth-store'
 import { safeRedirect } from '@/lib/redirect'
@@ -58,12 +58,9 @@ export const Route = createFileRoute('/')({
       }
 
       if (!store.hasIdentity) {
-        throw redirect({
-          to: '/identity',
-          search: {
-            redirect: search.redirect,
-          },
-        })
+        const params = search.redirect ? `?redirect=${encodeURIComponent(search.redirect)}` : ''
+        window.location.replace(`/login/identity${params}`)
+        return new Promise(() => {})
       }
 
       // Redirect to the requested page or default app

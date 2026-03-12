@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 import { useAuthStore } from '@/stores/auth-store'
-import { ThemeProvider, createQueryClient, getRouterBasepath } from '@mochi/common'
+import { ThemeProvider, isInShell, createQueryClient, getRouterBasepath } from '@mochi/common'
 // Generated Routes
 import { routeTree } from './routeTree.gen'
 // Styles
@@ -27,7 +27,10 @@ declare module '@tanstack/react-router' {
 }
 
 // Initialize auth state from cookie on app start
-useAuthStore.getState().initialize()
+// In shell mode, auth is initialized asynchronously via postMessage in _authenticated/route.tsx
+if (!isInShell()) {
+  useAuthStore.getState().initialize()
+}
 
 // Render the app
 const rootElement = document.getElementById('root')!
