@@ -17,6 +17,13 @@
   }
   body {
     @apply bg-background text-foreground has-[div[data-variant='inset']]:bg-sidebar min-h-svh w-full;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900'><path d='M-200,-100 C100,-200 1200,-150 1540,300' fill='none' stroke='%236366f1' stroke-width='200' opacity='0.04'/><path d='M-200,50 C100,-80 1250,-50 1540,500' fill='none' stroke='%2314b8a6' stroke-width='180' opacity='0.04'/></svg>");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  .dark body {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900'><path d='M-200,-100 C100,-200 1200,-150 1540,300' fill='none' stroke='%236366f1' stroke-width='200' opacity='0.03'/><path d='M-200,50 C100,-80 1250,-50 1540,500' fill='none' stroke='%2314b8a6' stroke-width='180' opacity='0.03'/></svg>");
   }
 
   /* Override Radix scroll locking for sticky headers */
