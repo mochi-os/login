@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { createFileRoute } from '@tanstack/react-router'
-import { requestHelpers } from '@mochi/common'
+import { requestHelpers } from '@mochi/web'
 import { useAuthStore } from '@/stores/auth-store'
 import { safeRedirect } from '@/lib/redirect'
 import { SignIn } from '@/features/auth/sign-in'

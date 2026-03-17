@@ -5,7 +5,7 @@ import { authApi,
   type VerifyCodeResponse,
 } from '@/api/auth'
 import endpoints from '@/api/endpoints'
-import { requestHelpers } from '@mochi/common'
+import { requestHelpers } from '@mochi/web'
 import { useAuthStore } from '@/stores/auth-store'
 
 // Helper to complete authentication (shared by email verify, MFA, passkey, recovery).

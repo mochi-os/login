@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 import { useAuthStore } from '@/stores/auth-store'
-import { ThemeProvider, isInShell, createQueryClient, getRouterBasepath } from '@mochi/common'
+import { ThemeProvider, isInShell, createQueryClient, getRouterBasepath } from '@mochi/web'
 // Generated Routes
 import { routeTree } from './routeTree.gen'
 // Styles

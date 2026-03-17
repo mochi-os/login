@@ -21,7 +21,7 @@ import {
   getErrorMessage,
   InputOTPSlot,
   Input,
-} from '@mochi/common'
+} from '@mochi/web'
 import { AuthLayout } from '../auth-layout'
 import { useAuthStore } from '@/stores/auth-store'
 import { completeMfa, completeMfaMultiple } from '@/services/auth-service'

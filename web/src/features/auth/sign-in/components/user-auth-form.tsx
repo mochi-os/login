@@ -6,7 +6,7 @@ import { Link } from '@tanstack/react-router'
 import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa } from '@/services/auth-service'
 import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Smartphone } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
-import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot } from '@mochi/common'
+import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot } from '@mochi/web'
 import { safeRedirect } from '@/lib/redirect'
 const devConsole = globalThis.console
 

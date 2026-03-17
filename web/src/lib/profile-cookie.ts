@@ -1,4 +1,4 @@
-import { getCookie, setCookie, removeCookie, type CookieOptions } from '@mochi/common'
+import { getCookie, setCookie, removeCookie, type CookieOptions } from '@mochi/web'
 
 // Auth cookies constants
 const AUTH_COOKIES = {
