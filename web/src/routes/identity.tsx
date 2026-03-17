@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { z } from 'zod'
 import { createFileRoute, redirect } from '@tanstack/react-router'
-import { Card, CardContent, CardHeader, CardTitle } from '@mochi/common'
+import { Card, CardContent, CardHeader, CardTitle } from '@mochi/web'
 import { AuthLayout } from '@/features/auth/auth-layout'
 import { IdentityForm } from '@/features/auth/identity-form'
 import { useAuthStore } from '@/stores/auth-store'
