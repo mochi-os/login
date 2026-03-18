@@ -3,7 +3,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { requestHelpers } from '@mochi/web'
 import { useAuthStore } from '@/stores/auth-store'
 import { safeRedirect } from '@/lib/redirect'
-import { SignIn } from '@/features/auth/sign-in'
+import { LandingPage } from '@/features/landing/landing-page'
 
 const searchSchema = z.object({
   redirect: z.string().optional(),
@@ -71,6 +71,6 @@ export const Route = createFileRoute('/')({
 
     // Not authenticated, allow login page to render
   },
-  component: SignIn,
+  component: LandingPage,
   validateSearch: searchSchema,
 })
