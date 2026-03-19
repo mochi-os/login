@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSearch } from '@tanstack/react-router'
-import { Key, Loader2 } from 'lucide-react'
+import { ArrowRight, Key, Loader2 } from 'lucide-react'
 import {
   Button,
   Dialog,
@@ -62,32 +62,32 @@ const apps = [
   {
     name: 'Feeds',
     icon: '\u{1F4E1}',
-    iconBg: 'bg-orange-50 dark:bg-orange-900/20',
-    desc: 'Aggregate RSS, forums, and email into a single, unified stream. Follow what matters, filter the noise.',
+    desc: 'Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise.',
   },
   {
     name: 'Forums',
     icon: '\u{1F4AC}',
-    iconBg: 'bg-green-50 dark:bg-green-900/20',
-    desc: 'Threaded discussions for your community or team. No ads, no algorithms \u2014 just conversation.',
+    desc: 'Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what\'s important to you.',
   },
   {
     name: 'Projects',
     icon: '\u{1F4CB}',
-    iconBg: 'bg-blue-50 dark:bg-blue-900/20',
-    desc: 'Manage tasks, track progress, and organise work with a flexible project management tool.',
+    desc: 'Manage tickets and tasks in a friendly and highly flexible Kanban-style interface.',
   },
   {
     name: 'CRM',
     icon: '\u{1F91D}',
-    iconBg: 'bg-red-50 dark:bg-red-900/20',
-    desc: 'Keep track of contacts, relationships, and interactions with a template-driven CRM that adapts to you.',
+    desc: 'Keep track of contacts, relationships, and interactions with a highly adaptable CRM.',
   },
   {
     name: 'Wikis',
     icon: '\u{1F4D6}',
-    iconBg: 'bg-purple-50 dark:bg-purple-900/20',
-    desc: 'Build a knowledge base for your team or community. Collaborative, searchable, and always yours.',
+    desc: 'Build a collaborative, replicated knowledge base for your community. Your data is always yours.',
+  },
+  {
+    name: 'Chat',
+    icon: '\u{1F4E8}',
+    desc: 'Message your friends, individually or in groups, peer-to-peer and encrypted.',
   },
 ]
 
@@ -217,9 +217,10 @@ export function LandingPage() {
             </div>
             <button
               onClick={openDialog}
-              className="inline-flex items-center px-5 py-2 rounded-[20px] bg-[#6C5CE7] text-white font-semibold text-sm shadow-[0_2px_12px_rgba(108,92,231,0.25)] hover:bg-[#5041C1] hover:shadow-[0_4px_20px_rgba(108,92,231,0.35)] hover:-translate-y-px transition-all cursor-pointer border-none"
+              className="inline-flex items-center gap-1.5 px-5 py-2 rounded-[20px] bg-[#6C5CE7] text-white font-semibold text-sm shadow-[0_2px_12px_rgba(108,92,231,0.25)] hover:bg-[#5041C1] hover:shadow-[0_4px_20px_rgba(108,92,231,0.35)] hover:-translate-y-px transition-all cursor-pointer border-none"
             >
-              Log in
+              Sign up / Log in
+              <ArrowRight className="size-4" />
             </button>
           </div>
         </div>
@@ -243,34 +244,18 @@ export function LandingPage() {
               network
             </span>
           </h1>
-          <p className="text-lg text-[#6B6B80] dark:text-muted-foreground max-w-[560px] mx-auto mb-10 leading-relaxed">
-            Mochi is a decentralised application platform. Run your apps on your
-            own node, keep your data under your control, and connect with others
-            peer-to-peer.
+          <p className="text-lg text-[#6B6B80] dark:text-muted-foreground max-w-[560px] mx-auto mb-4 leading-relaxed">
+            Mochi is a distributed application platform. Run your apps on your
+            own server, and keep your data under your control. Seamlessly
+            connect with other users on the same or other servers over the Mochi
+            peer-to-peer network.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <button
-              onClick={openDialog}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-[20px] bg-[#6C5CE7] text-white font-semibold text-[0.95rem] shadow-[0_2px_12px_rgba(108,92,231,0.25)] hover:bg-[#5041C1] hover:shadow-[0_4px_20px_rgba(108,92,231,0.35)] hover:-translate-y-px transition-all cursor-pointer border-none"
-            >
-              Create an account
-            </button>
-            <a
-              href="https://github.com/mochi-os"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-[20px] bg-white dark:bg-card font-semibold text-[0.95rem] border-[1.5px] border-[#E8E6F0] dark:border-border hover:border-[#A29BFE] hover:text-[#6C5CE7] hover:-translate-y-px transition-all no-underline text-inherit"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-              </svg>
-              View source
-            </a>
-          </div>
-          <div className="inline-flex items-center gap-2 mt-12 px-4 py-1.5 bg-[#F4F2FF] dark:bg-primary/10 rounded-full text-[0.82rem] text-[#6C5CE7] font-semibold">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#6C5CE7] animate-pulse" />
-            Version 0.3 &mdash; Early access
-          </div>
+          <p className="text-lg text-[#6B6B80] dark:text-muted-foreground max-w-[560px] mx-auto mb-4 leading-relaxed">
+            Mochi is currently version 0.3. It&rsquo;s ready for day-to-day use
+            if you&rsquo;re moderately technical, and tolerant of bugs. If
+            you&rsquo;re a developer, it&rsquo;s also ready for you to create
+            apps as long as you don&rsquo;t mind a few API changes.
+          </p>
         </div>
       </section>
 
@@ -286,28 +271,20 @@ export function LandingPage() {
             nothing you don&rsquo;t control
           </h2>
           <p className="text-[#6B6B80] dark:text-muted-foreground text-[1.05rem] max-w-[540px] leading-relaxed mb-12">
-            Mochi ships with a set of apps that cover the essentials. Each one
-            runs on your node, stores data locally, and syncs peer-to-peer with
-            the people you choose.
+            Mochi already ships with over 20 apps, with more being added
+            frequently. Major apps include:
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <ul className="space-y-4 max-w-[600px]">
             {apps.map((app) => (
-              <div
-                key={app.name}
-                className="bg-white dark:bg-card border border-[#E8E6F0] dark:border-border rounded-[20px] p-7 transition-all hover:border-[#A29BFE] hover:shadow-[0_4px_20px_rgba(108,92,231,0.08)] hover:-translate-y-0.5"
-              >
-                <div
-                  className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 text-xl ${app.iconBg}`}
-                >
-                  {app.icon}
+              <li key={app.name} className="flex items-start gap-3">
+                <span className="text-xl mt-0.5">{app.icon}</span>
+                <div>
+                  <span className="font-bold">{app.name}</span>
+                  <span className="text-[#6B6B80] dark:text-muted-foreground"> &mdash; {app.desc}</span>
                 </div>
-                <h3 className="text-[1.05rem] font-bold mb-2">{app.name}</h3>
-                <p className="text-sm text-[#6B6B80] dark:text-muted-foreground leading-relaxed">
-                  {app.desc}
-                </p>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
@@ -394,12 +371,12 @@ export function LandingPage() {
                 Create an account
               </button>
               <a
-                href="https://github.com/mochi-os"
+                href="https://git.mochi-os.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-2.5 rounded-[20px] bg-white/15 text-white font-semibold text-[0.95rem] border-[1.5px] border-white/30 hover:bg-white/25 transition-all no-underline"
               >
-                View on GitHub
+                View source
               </a>
             </div>
           </div>
@@ -408,27 +385,7 @@ export function LandingPage() {
 
       {/* Footer */}
       <footer className="py-12 px-8 text-center text-[#6B6B80] dark:text-muted-foreground text-sm">
-        <div className="flex justify-center gap-8 mb-6 flex-wrap">
-          <a
-            href="https://mochi-os.org"
-            className="text-[#6C5CE7] no-underline hover:underline"
-          >
-            App
-          </a>
-          <a
-            href="https://github.com/mochi-os"
-            className="text-[#6C5CE7] no-underline hover:underline"
-          >
-            GitHub
-          </a>
-          <a
-            href="mailto:hello@mochi-os.org"
-            className="text-[#6C5CE7] no-underline hover:underline"
-          >
-            Contact
-          </a>
-        </div>
-        <p>&copy; 2026 Mochi. Your apps, your data, your network.</p>
+        <p>&copy; 2026 Mochi.</p>
       </footer>
 
       {/* Login dialog */}
