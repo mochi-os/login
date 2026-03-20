@@ -107,11 +107,11 @@ const steps = [
 ]
 
 const tech = [
-  { name: 'Go', role: 'Backend runtime' },
-  { name: 'libp2p', role: 'P2P networking' },
-  { name: 'Starlark', role: 'App scripting' },
-  { name: 'React', role: 'Frontend UI' },
-  { name: 'TypeScript', role: 'Frontend logic' },
+  { name: 'Go', role: 'Server' },
+  { name: 'libp2p', role: 'Networking' },
+  { name: 'SQLite', role: 'Storage' },
+  { name: 'Starlark', role: 'App business logic' },
+  { name: 'React', role: 'App user interfaces' },
 ]
 
 export function LandingPage() {
@@ -298,7 +298,7 @@ export function LandingPage() {
             How it works
           </p>
           <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold leading-tight tracking-tight mb-4">
-            Decentralised by design
+            Distributed by design
           </h2>
           <p className="text-[#6B6B80] dark:text-muted-foreground text-[1.05rem] max-w-[540px] leading-relaxed mb-12">
             No central server holds your data. Each Mochi node is a full peer in
@@ -330,8 +330,7 @@ export function LandingPage() {
             Built on solid foundations
           </h2>
           <p className="text-[#6B6B80] dark:text-muted-foreground text-[1.05rem] max-w-[540px] leading-relaxed mb-8">
-            Mochi is open-source and built with a stack designed for
-            reliability, performance, and extensibility.
+            Mochi is built using the following technologies:
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {tech.map((t) => (
