@@ -219,7 +219,7 @@ export function LandingPage() {
               onClick={openDialog}
               className="inline-flex items-center gap-1.5 px-5 py-2 rounded-[20px] bg-[#6C5CE7] text-white font-semibold text-sm shadow-[0_2px_12px_rgba(108,92,231,0.25)] hover:bg-[#5041C1] hover:shadow-[0_4px_20px_rgba(108,92,231,0.35)] hover:-translate-y-px transition-all cursor-pointer border-none"
             >
-              Sign up / Log in
+              Sign up or log in
               <ArrowRight className="size-4" />
             </button>
           </div>
@@ -227,7 +227,7 @@ export function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <section className="pt-40 pb-20 px-8 text-center relative overflow-hidden">
+      <section className="pt-32 pb-12 px-8 text-center relative overflow-hidden">
         <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(ellipse,rgba(108,92,231,0.06)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-[1100px] mx-auto relative">
           <div
@@ -260,7 +260,7 @@ export function LandingPage() {
       </section>
 
       {/* Apps */}
-      <section id="apps" className="py-20 px-8">
+      <section id="apps" className="py-12 px-8">
         <div className="max-w-[1100px] mx-auto">
           <p className="font-bold text-xs uppercase tracking-widest text-[#6C5CE7] mb-3">
             Built-in apps
@@ -270,7 +270,7 @@ export function LandingPage() {
             <br />
             nothing you don&rsquo;t control
           </h2>
-          <p className="text-[#6B6B80] dark:text-muted-foreground text-[1.05rem] max-w-[540px] leading-relaxed mb-12">
+          <p className="text-[#6B6B80] dark:text-muted-foreground text-[1.05rem] max-w-[540px] leading-relaxed mb-8">
             Mochi already ships with over 20 apps, with more being added
             frequently. Major apps include:
           </p>
@@ -291,7 +291,7 @@ export function LandingPage() {
       {/* How it works */}
       <section
         id="how"
-        className="py-20 px-8 bg-white dark:bg-card border-t border-b border-[#E8E6F0] dark:border-border"
+        className="py-12 px-8 bg-white dark:bg-card border-t border-b border-[#E8E6F0] dark:border-border"
       >
         <div className="max-w-[1100px] mx-auto">
           <p className="font-bold text-xs uppercase tracking-widest text-[#6C5CE7] mb-3">
@@ -300,7 +300,7 @@ export function LandingPage() {
           <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold leading-tight tracking-tight mb-4">
             Distributed by design
           </h2>
-          <p className="text-[#6B6B80] dark:text-muted-foreground text-[1.05rem] max-w-[540px] leading-relaxed mb-12">
+          <p className="text-[#6B6B80] dark:text-muted-foreground text-[1.05rem] max-w-[540px] leading-relaxed mb-8">
             No central server holds your data. Each Mochi node is a full peer in
             the network, communicating directly with others via libp2p.
           </p>
@@ -321,7 +321,7 @@ export function LandingPage() {
       </section>
 
       {/* Tech */}
-      <section id="tech" className="py-20 px-8">
+      <section id="tech" className="py-12 px-8">
         <div className="max-w-[1100px] mx-auto">
           <p className="font-bold text-xs uppercase tracking-widest text-[#6C5CE7] mb-3">
             Under the hood
@@ -349,7 +349,7 @@ export function LandingPage() {
       </section>
 
       {/* Early access */}
-      <section className="py-20 px-8">
+      <section className="py-12 px-8">
         <div className="max-w-[1100px] mx-auto">
           <div className="bg-gradient-to-br from-[#6C5CE7] to-[#7C6CF0] text-white rounded-[20px] p-14 max-sm:p-10 text-center relative overflow-hidden">
             <div className="absolute -top-20 -right-20 w-[250px] h-[250px] bg-white/[0.06] rounded-full" />
@@ -358,9 +358,9 @@ export function LandingPage() {
               Ready to try Mochi?
             </h2>
             <p className="opacity-90 text-[1.05rem] max-w-[500px] mx-auto mb-8 leading-relaxed relative">
-              We&rsquo;re looking for early adopters who are willing to kick the
-              tyres and give honest feedback. Version 0.3 is rough around the
-              edges &mdash; but it works.
+              We&rsquo;re looking for early adopters who are willing to give
+              Mochi a try and give honest feedback. It&rsquo;s version 0.3 so
+              has some bugs, but is ready for day-to-day use.
             </p>
             <div className="flex gap-4 justify-center flex-wrap relative">
               <button
@@ -375,7 +375,7 @@ export function LandingPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-2.5 rounded-[20px] bg-white/15 text-white font-semibold text-[0.95rem] border-[1.5px] border-white/30 hover:bg-white/25 transition-all no-underline"
               >
-                View source
+                View source code
               </a>
             </div>
           </div>
@@ -383,7 +383,7 @@ export function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-8 text-center text-[#6B6B80] dark:text-muted-foreground text-sm">
+      <footer className="py-6 px-8 text-center text-[#6B6B80] dark:text-muted-foreground text-sm">
         <p>&copy; 2026 Mochi.</p>
       </footer>
 
