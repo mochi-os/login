@@ -5,7 +5,7 @@ const endpoints = {
     verify: '/_/auth/verify',
     totpLogin: '/_/auth/totp',
     methods: '/_/auth/methods',
-    identity: '-/identity/create',
+    identity: '/_/identity',
     passkey: {
       loginBegin: '/_/auth/passkey/begin',
       loginFinish: '/_/auth/passkey/finish',
