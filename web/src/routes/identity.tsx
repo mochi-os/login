@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { z } from 'zod'
 import { createFileRoute, redirect } from '@tanstack/react-router'
-import { Card, CardContent, CardHeader, CardTitle } from '@mochi/web'
+import { Card, CardContent, CardHeader, CardTitle, requestHelpers } from '@mochi/web'
 import { AuthLayout } from '@/features/auth/auth-layout'
 import { IdentityForm } from '@/features/auth/identity-form'
 import { useAuthStore } from '@/stores/auth-store'
@@ -13,14 +13,38 @@ const searchSchema = z.object({
 
 export const Route = createFileRoute('/identity')({
   validateSearch: searchSchema,
-  beforeLoad: ({ search, location }) => {
+  beforeLoad: async ({ search, location }) => {
     const store = useAuthStore.getState()
 
     if (!store.isInitialized) {
       store.initialize()
     }
 
-    if (!store.isAuthenticated) {
+    // Verify session with the server (in-memory store doesn't survive page reloads)
+    try {
+      const data = await requestHelpers.get<{
+        user?: { email?: string; name?: string }
+        identity?: { name?: string; privacy?: 'public' | 'private' }
+      }>('/_/identity')
+
+      const nextUser = {
+        ...(store.user || {}),
+        ...(data.user?.email ? { email: data.user.email } : {}),
+        ...(data.identity?.name
+          ? { name: data.identity.name }
+          : data.user?.name
+            ? { name: data.user.name }
+            : {}),
+      }
+      store.setAuth(nextUser)
+
+      if (data.identity?.name && data.identity.privacy) {
+        store.setIdentity(data.identity.name, data.identity.privacy)
+      } else {
+        store.clearIdentity()
+      }
+    } catch {
+      // No valid session — redirect to login
       throw redirect({
         to: '/',
         search: {
