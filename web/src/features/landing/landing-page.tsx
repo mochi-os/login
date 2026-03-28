@@ -241,7 +241,7 @@ export function LandingPage() {
             <br />
             your{' '}
             <span className="bg-gradient-to-br from-[#6C5CE7] to-[#A29BFE] bg-clip-text text-transparent">
-              network
+              platform
             </span>
           </h1>
           <p className="text-lg text-[#6B6B80] dark:text-muted-foreground max-w-[560px] mx-auto mb-4 leading-relaxed">
