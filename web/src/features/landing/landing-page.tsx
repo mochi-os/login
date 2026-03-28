@@ -245,10 +245,9 @@ export function LandingPage() {
             </span>
           </h1>
           <p className="text-lg text-[#6B6B80] dark:text-muted-foreground max-w-[560px] mx-auto mb-4 leading-relaxed">
-            Mochi is a distributed application platform. Run your apps on your
-            own server, and keep your data under your control. Seamlessly
-            connect with other users on the same or other servers over the Mochi
-            peer-to-peer network.
+            Mochi is a federated, multi-user platform for distributed apps.
+            Anyone can run their own server, and connect to any other user on
+            the Mochi network. Anyone can create and publish apps.
           </p>
           <p className="text-lg text-[#6B6B80] dark:text-muted-foreground max-w-[560px] mx-auto mb-4 leading-relaxed">
             Mochi is currently version 0.3. It&rsquo;s ready for day-to-day use
