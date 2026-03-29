@@ -239,10 +239,7 @@ export function LandingPage() {
           <h1 className="text-[clamp(2.2rem,5vw,3.5rem)] font-bold leading-[1.15] tracking-tight max-w-[700px] mx-auto mb-5">
             Your apps, your data,
             <br />
-            your{' '}
-            <span className="bg-gradient-to-br from-[#6C5CE7] to-[#A29BFE] bg-clip-text text-transparent">
-              platform
-            </span>
+            your platform
           </h1>
           <p className="text-lg text-[#6B6B80] dark:text-muted-foreground max-w-[560px] mx-auto mb-4 leading-relaxed">
             Mochi is a federated, multi-user platform for distributed apps.
