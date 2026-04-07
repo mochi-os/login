@@ -3,11 +3,11 @@ import { useSearch } from '@tanstack/react-router'
 import { ArrowRight, Key, Loader2 } from 'lucide-react'
 import {
   Button,
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
+  ResponsiveDialog,
+  ResponsiveDialogContent,
+  ResponsiveDialogDescription,
+  ResponsiveDialogHeader,
+  ResponsiveDialogTitle,
   toast,
   getErrorMessage,
 } from '@mochi/web'
@@ -384,16 +384,16 @@ export function LandingPage() {
       </footer>
 
       {/* Login dialog */}
-      <Dialog open={dialogOpen} onOpenChange={handleOpenChange}>
-        <DialogContent className="sm:max-w-[420px]">
-          <DialogHeader>
-            <DialogTitle>Log in to Mochi</DialogTitle>
+      <ResponsiveDialog open={dialogOpen} onOpenChange={handleOpenChange}>
+        <ResponsiveDialogContent className="sm:max-w-[420px]">
+          <ResponsiveDialogHeader>
+            <ResponsiveDialogTitle>Log in to Mochi</ResponsiveDialogTitle>
             {step === 'email' && (
-              <DialogDescription>
+              <ResponsiveDialogDescription>
                 Enter your email address to log in or create an account
-              </DialogDescription>
+              </ResponsiveDialogDescription>
             )}
-          </DialogHeader>
+          </ResponsiveDialogHeader>
           <UserAuthForm
             redirectTo={redirect}
             step={step}
@@ -427,8 +427,8 @@ export function LandingPage() {
               </Button>
             </>
           )}
-        </DialogContent>
-      </Dialog>
+        </ResponsiveDialogContent>
+      </ResponsiveDialog>
     </div>
   )
 }
