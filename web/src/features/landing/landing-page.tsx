@@ -493,29 +493,43 @@ export function LandingPage() {
                 </Button>
               )}
               {enabledOauth.size > 0 && (
-                <div className="flex gap-2 justify-center">
-                  {oauthProviders
-                    .filter((p) => enabledOauth.has(p.key))
-                    .map(({ key, label, Icon }) => (
-                      <Button
-                        key={key}
-                        type="button"
-                        variant="outline"
-                        size="icon"
-                        className="h-10 w-10"
-                        aria-label={`Continue with ${label}`}
-                        title={`Continue with ${label}`}
-                        onClick={() => handleOauthLogin(key)}
-                        disabled={oauthLoading !== null}
-                      >
-                        {oauthLoading === key ? (
-                          <Loader2 className="animate-spin" />
-                        ) : (
-                          <Icon className="h-5 w-5" />
-                        )}
-                      </Button>
-                    ))}
-                </div>
+                <>
+                  {passkeyEnabled && (
+                    <div className="relative">
+                      <div className="absolute inset-0 flex items-center">
+                        <span className="w-full border-t" />
+                      </div>
+                      <div className="relative flex justify-center text-xs uppercase">
+                        <span className="bg-background text-muted-foreground px-2 py-2">
+                          Or use
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                  <div className="flex gap-2 justify-center">
+                    {oauthProviders
+                      .filter((p) => enabledOauth.has(p.key))
+                      .map(({ key, label, Icon }) => (
+                        <Button
+                          key={key}
+                          type="button"
+                          variant="outline"
+                          size="icon"
+                          className="h-10 w-10"
+                          aria-label={`Continue with ${label}`}
+                          title={`Continue with ${label}`}
+                          onClick={() => handleOauthLogin(key)}
+                          disabled={oauthLoading !== null}
+                        >
+                          {oauthLoading === key ? (
+                            <Loader2 className="animate-spin" />
+                          ) : (
+                            <Icon className="h-5 w-5" />
+                          )}
+                        </Button>
+                      ))}
+                  </div>
+                </>
               )}
             </>
           )}
