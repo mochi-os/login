@@ -38,11 +38,52 @@ export interface VerifyCodeResponse {
   remaining?: string[]
 }
 
+export type OAuthProvider =
+  | 'facebook'
+  | 'github'
+  | 'google'
+  | 'microsoft'
+  | 'x'
+
+export interface OAuthProvidersEnabled {
+  facebook: boolean
+  github: boolean
+  google: boolean
+  microsoft: boolean
+  x: boolean
+}
+
 export interface AuthMethodsResponse {
   email: boolean
   passkey: boolean
   recovery: boolean
   signup: boolean
+  oauth?: OAuthProvidersEnabled
+}
+
+export interface OAuthBeginRequest {
+  target?: string
+  link?: boolean
+}
+
+export interface OAuthBeginResponse {
+  url: string
+}
+
+export interface OAuthIdentity {
+  provider: OAuthProvider
+  email: string
+  name: string
+  created: number
+  used: number
+}
+
+export interface OAuthListResponse {
+  identities: OAuthIdentity[]
+}
+
+export interface OAuthUnlinkRequest {
+  provider: OAuthProvider
 }
 
 // MFA types

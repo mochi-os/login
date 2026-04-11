@@ -95,3 +95,17 @@ def action_recovery_count(a):
     """Get remaining recovery code count"""
     count = mochi.recovery.count()
     a.json({"count": count})
+
+def action_oauth_list(a):
+    """List OAuth providers linked to the current user"""
+    identities = mochi.user.oauth.list()
+    a.json({"identities": identities})
+
+def action_oauth_unlink(a):
+    """Unlink an OAuth provider from the current user"""
+    provider = a.input("provider", "")
+    if not provider:
+        a.error(400, "provider required")
+        return
+    mochi.user.oauth.unlink(provider)
+    a.json({"ok": True})

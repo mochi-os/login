@@ -31,6 +31,11 @@ const endpoints = {
       get: '-/methods/get',
       set: '-/methods/set',
     },
+    oauth: {
+      begin: (provider: string) => `/_/auth/oauth/${provider}/begin`,
+      list: '-/oauth/list',
+      unlink: '-/oauth/unlink',
+    },
   },
 } as const
 

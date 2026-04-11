@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSearch } from '@tanstack/react-router'
-import { ArrowRight, Key, Loader2 } from 'lucide-react'
+import { ArrowRight, Github, Key, Loader2 } from 'lucide-react'
 import {
   Button,
   ResponsiveDialog,
@@ -12,10 +12,32 @@ import {
   getErrorMessage,
 } from '@mochi/web'
 import { UserAuthForm } from '@/features/auth/sign-in/components/user-auth-form'
+import {
+  FacebookIcon,
+  GoogleIcon,
+  MicrosoftIcon,
+  XIcon,
+} from '@/features/auth/components/brand-icons'
 import { passkeyLogin } from '@/services/auth-service'
 import { safeRedirect } from '@/lib/redirect'
 import { authApi } from '@/api/auth'
+import { type OAuthProvider } from '@/api/types/auth'
+import { oauthErrorMessage } from '@/lib/oauth-errors'
 import { useAuthStore } from '@/stores/auth-store'
+
+// Alphabetical by provider key; the filter below drops ones the operator
+// hasn't enabled, so unused providers simply never appear in the row.
+const oauthProviders: Array<{
+  key: OAuthProvider
+  label: string
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
+}> = [
+  { key: 'facebook', label: 'Facebook', Icon: FacebookIcon },
+  { key: 'github', label: 'GitHub', Icon: Github },
+  { key: 'google', label: 'Google', Icon: GoogleIcon },
+  { key: 'microsoft', label: 'Microsoft', Icon: MicrosoftIcon },
+  { key: 'x', label: 'X', Icon: XIcon },
+]
 
 function MochiLogo({ size = 32 }: { size?: number }) {
   return (
@@ -115,21 +137,64 @@ const tech = [
 ]
 
 export function LandingPage() {
-  const { redirect, reauth } = useSearch({ from: '/' })
+  const search = useSearch({ from: '/' }) as Record<string, string | undefined>
+  const { redirect, reauth } = search
   const [dialogOpen, setDialogOpen] = useState(false)
   const [step, setStep] = useState<'email' | 'verification'>('email')
   const [passkeyEnabled, setPasskeyEnabled] = useState(false)
+  const [enabledOauth, setEnabledOauth] = useState<Set<OAuthProvider>>(
+    new Set()
+  )
+  const [oauthLoading, setOauthLoading] = useState<OAuthProvider | null>(null)
   const [isPasskeyLoading, setIsPasskeyLoading] = useState(false)
 
   useEffect(() => {
     if (redirect || reauth) setDialogOpen(true)
   }, [redirect, reauth])
 
+  // Surface a callback error from the server (e.g. ?oauth_error=email_exists).
+  // Consumed once and removed from the URL so it doesn't re-fire on reload.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const err = params.get('oauth_error')
+    if (!err) return
+    const provider = params.get('provider') ?? undefined
+    toast.error(oauthErrorMessage(err, provider))
+    params.delete('oauth_error')
+    params.delete('provider')
+    params.delete('email')
+    const qs = params.toString()
+    const next = qs
+      ? `${window.location.pathname}?${qs}`
+      : window.location.pathname
+    window.history.replaceState({}, '', next + window.location.hash)
+    setDialogOpen(true)
+  }, [])
+
   useEffect(() => {
     authApi.getMethods().then((methods) => {
       setPasskeyEnabled(methods.passkey === true)
+      const enabled = new Set<OAuthProvider>()
+      if (methods.oauth) {
+        for (const provider of oauthProviders) {
+          if (methods.oauth[provider.key]) enabled.add(provider.key)
+        }
+      }
+      setEnabledOauth(enabled)
     })
   }, [])
+
+  const handleOauthLogin = async (provider: OAuthProvider) => {
+    setOauthLoading(provider)
+    try {
+      const target = redirect ? safeRedirect(redirect) : '/'
+      const { url } = await authApi.oauthBegin(provider, { target })
+      window.location.href = url
+    } catch (error) {
+      setOauthLoading(null)
+      toast.error(getErrorMessage(error, 'Could not start sign-in'))
+    }
+  }
 
   const handleOpenChange = (open: boolean) => {
     setDialogOpen(open)
@@ -400,7 +465,7 @@ export function LandingPage() {
             setStep={setStep}
             onPasskeyLogin={handlePasskeyLogin}
           />
-          {passkeyEnabled && step === 'email' && (
+          {(passkeyEnabled || enabledOauth.size > 0) && step === 'email' && (
             <>
               <div className="relative">
                 <div className="absolute inset-0 flex items-center">
@@ -412,19 +477,46 @@ export function LandingPage() {
                   </span>
                 </div>
               </div>
-              <Button
-                variant="outline"
-                className="w-full"
-                onClick={handlePasskeyLogin}
-                disabled={isPasskeyLoading}
-              >
-                Log in with passkey
-                {isPasskeyLoading ? (
-                  <Loader2 className="animate-spin" />
-                ) : (
-                  <Key />
-                )}
-              </Button>
+              {passkeyEnabled && (
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={handlePasskeyLogin}
+                  disabled={isPasskeyLoading}
+                >
+                  Log in with passkey
+                  {isPasskeyLoading ? (
+                    <Loader2 className="animate-spin" />
+                  ) : (
+                    <Key />
+                  )}
+                </Button>
+              )}
+              {enabledOauth.size > 0 && (
+                <div className="flex gap-2 justify-center">
+                  {oauthProviders
+                    .filter((p) => enabledOauth.has(p.key))
+                    .map(({ key, label, Icon }) => (
+                      <Button
+                        key={key}
+                        type="button"
+                        variant="outline"
+                        size="icon"
+                        className="h-10 w-10"
+                        aria-label={`Continue with ${label}`}
+                        title={`Continue with ${label}`}
+                        onClick={() => handleOauthLogin(key)}
+                        disabled={oauthLoading !== null}
+                      >
+                        {oauthLoading === key ? (
+                          <Loader2 className="animate-spin" />
+                        ) : (
+                          <Icon className="h-5 w-5" />
+                        )}
+                      </Button>
+                    ))}
+                </div>
+              )}
             </>
           )}
         </ResponsiveDialogContent>

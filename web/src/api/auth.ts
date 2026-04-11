@@ -6,6 +6,10 @@ import {
   type MfaResponse,
   type MethodsGetResponse,
   type MethodsSetRequest,
+  type OAuthBeginRequest,
+  type OAuthBeginResponse,
+  type OAuthListResponse,
+  type OAuthProvider,
   type PasskeyCountResponse,
   type PasskeyDeleteRequest,
   type PasskeyListResponse,
@@ -149,6 +153,19 @@ const userMethodsGet = () =>
 const userMethodsSet = (payload: MethodsSetRequest) =>
   requestHelpers.post<{ ok: boolean }>(endpoints.auth.userMethods.set, payload)
 
+// OAuth login / linking
+const oauthBegin = (provider: OAuthProvider, payload: OAuthBeginRequest = {}) =>
+  requestHelpers.post<OAuthBeginResponse>(
+    endpoints.auth.oauth.begin(provider),
+    payload
+  )
+
+const oauthList = () =>
+  requestHelpers.get<OAuthListResponse>(endpoints.auth.oauth.list)
+
+const oauthUnlink = (provider: OAuthProvider) =>
+  requestHelpers.post<{ ok: boolean }>(endpoints.auth.oauth.unlink, { provider })
+
 export const authApi = {
   // Login flow
   beginLogin,
@@ -180,6 +197,10 @@ export const authApi = {
   // User methods
   userMethodsGet,
   userMethodsSet,
+  // OAuth
+  oauthBegin,
+  oauthList,
+  oauthUnlink,
 }
 
 export type {
@@ -189,6 +210,10 @@ export type {
   MfaResponse,
   MethodsGetResponse,
   MethodsSetRequest,
+  OAuthBeginRequest,
+  OAuthBeginResponse,
+  OAuthListResponse,
+  OAuthProvider,
   PasskeyCountResponse,
   PasskeyDeleteRequest,
   PasskeyListResponse,
