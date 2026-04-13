@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2, ArrowRight } from 'lucide-react'
 import { toast, getErrorMessage, Button, Input, Form, FormControl, FormField, FormItem, FormLabel, FormMessage, RadioGroup, RadioGroupItem } from '@mochi/web'
-import { submitIdentity } from '@/services/auth-service'
+import { submitIdentity, abandonSignup } from '@/services/auth-service'
 import { safeRedirect } from '@/lib/redirect'
 import { mergeProfileCookie, readProfileCookie } from '@/lib/profile-cookie'
 
@@ -125,6 +125,24 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
           Continue
           {isSubmitting ? <Loader2 className="animate-spin" /> : <ArrowRight />}
         </Button>
+
+        <p className="text-center text-sm text-muted-foreground">
+          <button
+            type="button"
+            className="underline-offset-4 hover:underline disabled:opacity-60"
+            disabled={isSubmitting}
+            onClick={async () => {
+              try {
+                await abandonSignup()
+                window.location.href = '/login/'
+              } catch (error) {
+                toast.error(getErrorMessage(error, 'Could not cancel'))
+              }
+            }}
+          >
+            Use a different account
+          </button>
+        </p>
       </form>
     </Form>
   )

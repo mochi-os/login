@@ -241,4 +241,9 @@ export const submitIdentity = async ({
   useAuthStore.getState().setIdentity(name, privacy)
 }
 
+export const abandonSignup = async (): Promise<void> => {
+  await requestHelpers.post(endpoints.auth.abandon, {})
+  useAuthStore.getState().clearAuth()
+}
+
 export type { AuthUser, RequestCodeResponse, VerifyCodeResponse }

@@ -6,6 +6,7 @@ const endpoints = {
     totpLogin: '/_/auth/totp',
     methods: '/_/auth/methods',
     identity: '/_/identity',
+    abandon: '/_/abandon',
     passkey: {
       loginBegin: '/_/auth/passkey/begin',
       loginFinish: '/_/auth/passkey/finish',
