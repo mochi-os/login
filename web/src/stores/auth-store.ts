@@ -54,9 +54,12 @@ export const useAuthStore = create<AuthState>()((set, get) => {
     mfa: { required: false, partial: '', remaining: [] },
 
     setAuth: (user) => {
+      // Only update cookie fields that were actually supplied. Passing
+      // null would delete the field — we must not erase the OAuth-seeded
+      // name just because the server's /_/identity response omitted it.
       mergeProfileCookie({
         email: user?.email,
-        name: user?.name ?? null,
+        name: user?.name,
       })
 
       set({
@@ -118,9 +121,9 @@ export const useAuthStore = create<AuthState>()((set, get) => {
     },
 
     clearIdentity: () => {
-      mergeProfileCookie({
-        name: null,
-      })
+      // Clearing identity state must NOT wipe the profile cookie: the cookie
+      // is the OAuth-provided prefill that seeds /login/identity. It is only
+      // removed when the user explicitly logs out (clearAuth).
       set({
         identityName: '',
         identityPrivacy: '',
