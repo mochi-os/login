@@ -361,6 +361,9 @@ export function UserAuthForm({
                     <FormControl>
                       <Input
                         className='text-center font-mono tracking-wider'
+                        autoComplete='one-time-code'
+                        autoCorrect='off'
+                        spellCheck={false}
                         {...field}
                       />
                     </FormControl>
@@ -452,7 +455,12 @@ export function UserAuthForm({
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder='Email' {...field} />
+                <Input
+                  placeholder='Email'
+                  type='email'
+                  autoComplete='email'
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>

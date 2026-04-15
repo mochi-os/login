@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useSearch } from '@tanstack/react-router'
-import { ArrowRight, Github, Key, Loader2 } from 'lucide-react'
+import { AlertCircle, ArrowRight, Github, Key, Loader2 } from 'lucide-react'
 import {
   Button,
   ResponsiveDialog,
   ResponsiveDialogContent,
-  ResponsiveDialogDescription,
   ResponsiveDialogHeader,
   ResponsiveDialogTitle,
   toast,
@@ -147,19 +146,21 @@ export function LandingPage() {
   )
   const [oauthLoading, setOauthLoading] = useState<OAuthProvider | null>(null)
   const [isPasskeyLoading, setIsPasskeyLoading] = useState(false)
+  const [oauthError, setOauthError] = useState<string | null>(null)
 
   useEffect(() => {
     if (redirect || reauth) setDialogOpen(true)
   }, [redirect, reauth])
 
   // Surface a callback error from the server (e.g. ?oauth_error=email_exists).
-  // Consumed once and removed from the URL so it doesn't re-fire on reload.
+  // Stored in state and rendered as a persistent alert inside the dialog so
+  // it survives the post-redirect page flash and the dialog opening.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
     const err = params.get('oauth_error')
     if (!err) return
     const provider = params.get('provider') ?? undefined
-    toast.error(oauthErrorMessage(err, provider))
+    setOauthError(oauthErrorMessage(err, provider))
     params.delete('oauth_error')
     params.delete('provider')
     params.delete('email')
@@ -198,7 +199,10 @@ export function LandingPage() {
 
   const handleOpenChange = (open: boolean) => {
     setDialogOpen(open)
-    if (!open) setStep('email')
+    if (!open) {
+      setStep('email')
+      setOauthError(null)
+    }
   }
 
   const handlePasskeyLogin = async () => {
@@ -302,9 +306,9 @@ export function LandingPage() {
             <MochiLogo size={120} />
           </div>
           <h1 className="text-[clamp(2.2rem,5vw,3.5rem)] font-bold leading-[1.15] tracking-tight max-w-[700px] mx-auto mb-5">
-            Your apps, your data,
+            Your apps, your platform,
             <br />
-            your platform
+            your network
           </h1>
           <p className="text-lg text-[#6B6B80] dark:text-muted-foreground max-w-[560px] mx-auto mb-4 leading-relaxed">
             Mochi is a federated, multi-user platform for distributed apps.
@@ -453,12 +457,13 @@ export function LandingPage() {
         <ResponsiveDialogContent className="sm:max-w-[420px]">
           <ResponsiveDialogHeader>
             <ResponsiveDialogTitle>Log in to Mochi</ResponsiveDialogTitle>
-            {step === 'email' && (
-              <ResponsiveDialogDescription>
-                Enter your email address to log in or create an account
-              </ResponsiveDialogDescription>
-            )}
           </ResponsiveDialogHeader>
+          {oauthError && (
+            <div className="flex items-start gap-2 rounded-md border border-destructive/50 bg-destructive/10 p-3 text-sm text-destructive">
+              <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+              <span>{oauthError}</span>
+            </div>
+          )}
           <UserAuthForm
             redirectTo={redirect}
             step={step}
@@ -473,7 +478,7 @@ export function LandingPage() {
                 </div>
                 <div className="relative flex justify-center text-xs uppercase">
                   <span className="bg-background text-muted-foreground px-2 py-2">
-                    Or
+                    Or log in with
                   </span>
                 </div>
               </div>
@@ -489,7 +494,7 @@ export function LandingPage() {
                   ) : (
                     <Key className="mr-2 h-5 w-5" />
                   )}
-                  Log in with passkey
+                  Passkey
                 </Button>
               )}
               {oauthProviders
@@ -509,7 +514,7 @@ export function LandingPage() {
                     ) : (
                       <Icon className="mr-2 h-5 w-5" />
                     )}
-                    Log in with {label}
+                    {label}
                   </Button>
                 ))}
             </>

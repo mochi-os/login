@@ -215,6 +215,9 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
                       <FormControl>
                         <Input
                           className='text-center font-mono tracking-wider'
+                          autoComplete='one-time-code'
+                          autoCorrect='off'
+                          spellCheck={false}
                           {...field}
                         />
                       </FormControl>
