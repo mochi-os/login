@@ -7,7 +7,7 @@ import { LandingPage } from '@/features/landing/landing-page'
 
 const searchSchema = z.object({
   redirect: z.string().optional(),
-  reauth: z.string().optional(),
+  reauth: z.coerce.string().optional(),
 })
 
 export const Route = createFileRoute('/')({
