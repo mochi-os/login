@@ -24,6 +24,7 @@ interface UserAuthFormProps extends React.HTMLAttributes<HTMLFormElement> {
   step?: 'email' | 'verification'
   setStep?: (step: 'email' | 'verification') => void
   onPasskeyLogin?: () => void
+  disabled?: boolean
 }
 
 export function UserAuthForm({
@@ -32,6 +33,7 @@ export function UserAuthForm({
   step: externalStep,
   setStep: externalSetStep,
   onPasskeyLogin,
+  disabled = false,
   ...props
 }: UserAuthFormProps) {
   const [isLoading, setIsLoading] = useState(false)
@@ -459,6 +461,7 @@ export function UserAuthForm({
                   placeholder='Email'
                   type='email'
                   autoComplete='email'
+                  disabled={disabled || isLoading}
                   {...field}
                 />
               </FormControl>
@@ -467,7 +470,7 @@ export function UserAuthForm({
           )}
         />
 
-        <Button className='mt-2' disabled={isLoading}>
+        <Button className='mt-2' disabled={disabled || isLoading}>
           Next
           {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight />}
         </Button>

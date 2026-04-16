@@ -469,6 +469,7 @@ export function LandingPage() {
             step={step}
             setStep={setStep}
             onPasskeyLogin={handlePasskeyLogin}
+            disabled={oauthLoading !== null || isPasskeyLoading}
           />
           {(passkeyEnabled || enabledOauth.size > 0) && step === 'email' && (
             <>
@@ -487,7 +488,7 @@ export function LandingPage() {
                   variant="outline"
                   className="w-full justify-start"
                   onClick={handlePasskeyLogin}
-                  disabled={isPasskeyLoading}
+                  disabled={isPasskeyLoading || oauthLoading !== null}
                 >
                   {isPasskeyLoading ? (
                     <Loader2 className="mr-2 h-5 w-5 animate-spin" />
@@ -507,7 +508,7 @@ export function LandingPage() {
                     className="w-full justify-start"
                     aria-label={`Log in with ${label}`}
                     onClick={() => handleOauthLogin(key)}
-                    disabled={oauthLoading !== null}
+                    disabled={oauthLoading !== null || isPasskeyLoading}
                   >
                     {oauthLoading === key ? (
                       <Loader2 className="mr-2 h-5 w-5 animate-spin" />
