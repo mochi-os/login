@@ -6,7 +6,7 @@ import { Link } from '@tanstack/react-router'
 import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa } from '@/services/auth-service'
 import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Smartphone } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
-import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot } from '@mochi/web'
+import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot, shellClipboardWrite } from '@mochi/web'
 import { safeRedirect } from '@/lib/redirect'
 const devConsole = globalThis.console
 
@@ -122,37 +122,12 @@ export function UserAuthForm({
                   onClick={async (e) => {
                     e.preventDefault()
                     e.stopPropagation()
-                    const code = devCode!
-
-                    try {
-                      if (navigator.clipboard && navigator.clipboard.writeText) {
-                        await navigator.clipboard.writeText(code)
-                        toast.success('Code copied')
-                      } else {
-                        const textArea = document.createElement('textarea')
-                        textArea.value = code
-                        textArea.style.position = 'fixed'
-                        textArea.style.left = '-999999px'
-                        textArea.style.top = '-999999px'
-                        document.body.appendChild(textArea)
-                        textArea.focus()
-                        textArea.select()
-
-                        try {
-                          const successful = document.execCommand('copy')
-                          if (successful) {
-                            toast.success('Code copied')
-                          } else {
-                            throw new Error('Copy command failed')
-                          }
-                        } finally {
-                          document.body.removeChild(textArea)
-                        }
-                      }
-                    } catch (error) {
-                      devConsole?.error?.('Failed to copy code:', error)
+                    const ok = await shellClipboardWrite(devCode!)
+                    if (ok) {
+                      toast.success('Code copied')
+                    } else {
                       toast.error('Failed to copy code', {
-                        description: 'Please copy manually: ' + code,
+                        description: 'Please copy manually: ' + devCode,
                       })
                     }
                   }}
