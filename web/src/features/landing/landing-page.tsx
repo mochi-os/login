@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSearch } from '@tanstack/react-router'
+import { Trans, useLingui } from '@lingui/react/macro'
 import { AlertCircle, ArrowRight, Github, Key, Loader2 } from 'lucide-react'
 import {
   Button,
@@ -136,6 +137,7 @@ const tech = [
 ]
 
 export function LandingPage() {
+  const { t } = useLingui()
   const search = useSearch({ from: '/' }) as Record<string, string | undefined>
   const { redirect, reauth } = search
   const [dialogOpen, setDialogOpen] = useState(false)
@@ -193,7 +195,7 @@ export function LandingPage() {
       window.location.href = url
     } catch (error) {
       setOauthLoading(null)
-      toast.error(getErrorMessage(error, 'Could not start sign-in'))
+      toast.error(getErrorMessage(error, t`Could not start sign-in`))
     }
   }
 
@@ -216,7 +218,7 @@ export function LandingPage() {
             : ''
           window.location.replace(`/login/codes${codesParams}`)
         } else {
-          toast.success('Logged in')
+          toast.success(t`Logged in`)
           await new Promise((resolve) => setTimeout(resolve, 250))
           const { hasIdentity } = useAuthStore.getState()
           const targetPath = safeRedirect(redirect)
@@ -232,10 +234,11 @@ export function LandingPage() {
         }
       }
     } catch (error) {
-      if (error instanceof Error && error.name === 'NotAllowedError') {
-        toast.error('Passkey login cancelled')
+      const message = getErrorMessage(error, t`Passkey login failed`)
+      if (typeof error === 'object' && error !== null && (error as { name?: string }).name === 'NotAllowedError') {
+        toast.error(t`Passkey login cancelled`)
       } else {
-        toast.error(getErrorMessage(error, 'Passkey login failed'))
+        toast.error(message)
       }
     } finally {
       setIsPasskeyLoading(false)
@@ -269,26 +272,26 @@ export function LandingPage() {
                 href="#apps"
                 className="text-sm font-medium text-[#6B6B80] hover:text-[#6C5CE7] transition-colors no-underline"
               >
-                Apps
+                <Trans>Apps</Trans>
               </a>
               <a
                 href="#how"
                 className="text-sm font-medium text-[#6B6B80] hover:text-[#6C5CE7] transition-colors no-underline"
               >
-                How it works
+                <Trans>How it works</Trans>
               </a>
               <a
                 href="#tech"
                 className="text-sm font-medium text-[#6B6B80] hover:text-[#6C5CE7] transition-colors no-underline"
               >
-                Technology
+                <Trans>Technology</Trans>
               </a>
             </div>
             <button
               onClick={openDialog}
               className="inline-flex items-center gap-1.5 px-5 py-2 rounded-[20px] bg-[#6C5CE7] text-white font-semibold text-sm shadow-[0_2px_12px_rgba(108,92,231,0.25)] hover:bg-[#5041C1] hover:shadow-[0_4px_20px_rgba(108,92,231,0.35)] hover:-translate-y-px transition-all cursor-pointer border-none"
             >
-              Sign up or log in
+              <Trans>Sign up or log in</Trans>
               <ArrowRight className="size-4" />
             </button>
           </div>
@@ -306,20 +309,13 @@ export function LandingPage() {
             <MochiLogo size={120} />
           </div>
           <h1 className="text-[clamp(2.2rem,5vw,3.5rem)] font-bold leading-[1.15] tracking-tight max-w-[700px] mx-auto mb-5">
-            Your apps, your platform,
-            <br />
-            your network
+            <Trans>Your apps, your platform, your network</Trans>
           </h1>
           <p className="text-lg text-[#6B6B80] dark:text-muted-foreground max-w-[560px] mx-auto mb-4 leading-relaxed">
-            Mochi is a federated, multi-user platform for distributed apps.
-            Anyone can run their own server, and connect to any other user on
-            the Mochi network. Anyone can create and publish apps.
+            <Trans>Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps.</Trans>
           </p>
           <p className="text-lg text-[#6B6B80] dark:text-muted-foreground max-w-[560px] mx-auto mb-4 leading-relaxed">
-            Mochi is currently version 0.3. It&rsquo;s ready for day-to-day use
-            if you&rsquo;re moderately technical, and tolerant of bugs. If
-            you&rsquo;re a developer, it&rsquo;s also ready for you to create
-            apps as long as you don&rsquo;t mind a few API changes.
+            <Trans>Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes.</Trans>
           </p>
         </div>
       </section>
@@ -328,16 +324,13 @@ export function LandingPage() {
       <section id="apps" className="py-12 px-8">
         <div className="max-w-[1100px] mx-auto">
           <p className="font-bold text-xs uppercase tracking-widest text-[#6C5CE7] mb-3">
-            Built-in apps
+            <Trans>Built-in apps</Trans>
           </p>
           <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold leading-tight tracking-tight mb-4">
-            Everything you need,
-            <br />
-            nothing you don&rsquo;t control
+            <Trans>Everything you need, nothing you don't control</Trans>
           </h2>
           <p className="text-[#6B6B80] dark:text-muted-foreground text-[1.05rem] max-w-[540px] leading-relaxed mb-8">
-            Mochi already ships with over 20 apps, with more being added
-            frequently. Major apps include:
+            <Trans>Mochi already ships with over 20 apps, with more being added frequently. Major apps include:</Trans>
           </p>
           <ul className="space-y-4 max-w-[600px]">
             {apps.map((app) => (
@@ -360,14 +353,13 @@ export function LandingPage() {
       >
         <div className="max-w-[1100px] mx-auto">
           <p className="font-bold text-xs uppercase tracking-widest text-[#6C5CE7] mb-3">
-            How it works
+            <Trans>How it works</Trans>
           </p>
           <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold leading-tight tracking-tight mb-4">
-            Distributed by design
+            <Trans>Distributed by design</Trans>
           </h2>
           <p className="text-[#6B6B80] dark:text-muted-foreground text-[1.05rem] max-w-[540px] leading-relaxed mb-8">
-            No central server holds your data. Each Mochi node is a full peer in
-            the network, communicating directly with others via libp2p.
+            <Trans>No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p.</Trans>
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
             {steps.map((s, i) => (
@@ -389,13 +381,13 @@ export function LandingPage() {
       <section id="tech" className="py-12 px-8">
         <div className="max-w-[1100px] mx-auto">
           <p className="font-bold text-xs uppercase tracking-widest text-[#6C5CE7] mb-3">
-            Under the hood
+            <Trans>Under the hood</Trans>
           </p>
           <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold leading-tight tracking-tight mb-4">
-            Built on solid foundations
+            <Trans>Built on solid foundations</Trans>
           </h2>
           <p className="text-[#6B6B80] dark:text-muted-foreground text-[1.05rem] max-w-[540px] leading-relaxed mb-8">
-            Mochi is built using the following technologies:
+            <Trans>Mochi is built using the following technologies:</Trans>
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {tech.map((t) => (
@@ -420,19 +412,17 @@ export function LandingPage() {
             <div className="absolute -top-20 -right-20 w-[250px] h-[250px] bg-white/[0.06] rounded-full" />
             <div className="absolute -bottom-[60px] -left-[60px] w-[180px] h-[180px] bg-white/[0.04] rounded-full" />
             <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold mb-3 relative">
-              Ready to try Mochi?
+              <Trans>Ready to try Mochi?</Trans>
             </h2>
             <p className="opacity-90 text-[1.05rem] max-w-[500px] mx-auto mb-8 leading-relaxed relative">
-              We&rsquo;re looking for early adopters who are willing to give
-              Mochi a try and give honest feedback. It&rsquo;s version 0.3 so
-              has some bugs, but is ready for day-to-day use.
+              <Trans>We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use.</Trans>
             </p>
             <div className="flex gap-4 justify-center flex-wrap relative">
               <button
                 onClick={openDialog}
                 className="inline-flex items-center px-6 py-2.5 rounded-[20px] bg-white text-[#6C5CE7] font-bold text-[0.95rem] hover:bg-white/90 transition-all cursor-pointer border-none"
               >
-                Create an account
+                <Trans>Create an account</Trans>
               </button>
               <a
                 href="https://git.mochi-os.org/"
@@ -440,7 +430,7 @@ export function LandingPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-2.5 rounded-[20px] bg-white/15 text-white font-semibold text-[0.95rem] border-[1.5px] border-white/30 hover:bg-white/25 transition-all no-underline"
               >
-                View source code
+                <Trans>View source code</Trans>
               </a>
             </div>
           </div>
@@ -456,7 +446,7 @@ export function LandingPage() {
       <ResponsiveDialog open={dialogOpen} onOpenChange={handleOpenChange}>
         <ResponsiveDialogContent className="sm:max-w-[420px]">
           <ResponsiveDialogHeader>
-            <ResponsiveDialogTitle>Log in to Mochi</ResponsiveDialogTitle>
+            <ResponsiveDialogTitle><Trans>Log in to Mochi</Trans></ResponsiveDialogTitle>
           </ResponsiveDialogHeader>
           {oauthError && (
             <div className="flex items-start gap-2 rounded-md border border-destructive/50 bg-destructive/10 p-3 text-sm text-destructive">
@@ -479,7 +469,7 @@ export function LandingPage() {
                 </div>
                 <div className="relative flex justify-center text-xs uppercase">
                   <span className="bg-background text-muted-foreground px-2 py-2">
-                    Or log in with
+                    <Trans>Or log in with</Trans>
                   </span>
                 </div>
               </div>
@@ -495,7 +485,7 @@ export function LandingPage() {
                   ) : (
                     <Key className="mr-2 h-5 w-5" />
                   )}
-                  Passkey
+                  <Trans>Passkey</Trans>
                 </Button>
               )}
               {oauthProviders
@@ -506,7 +496,7 @@ export function LandingPage() {
                     type="button"
                     variant="outline"
                     className="w-full justify-start"
-                    aria-label={`Log in with ${label}`}
+                    aria-label={t`Log in with ${label}`}
                     onClick={() => handleOauthLogin(key)}
                     disabled={oauthLoading !== null || isPasskeyLoading}
                   >

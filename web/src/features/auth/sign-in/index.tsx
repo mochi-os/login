@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSearch } from '@tanstack/react-router'
+import { Trans, useLingui } from '@lingui/react/macro'
 import { Key, Loader2 } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, toast, getErrorMessage, Button } from '@mochi/web'
 import { AuthLayout } from '../auth-layout'
@@ -10,6 +11,7 @@ import { authApi } from '@/api/auth'
 import { useAuthStore } from '@/stores/auth-store'
 
 export function SignIn() {
+  const { t } = useLingui()
   const { redirect } = useSearch({ from: '/' })
   const [step, setStep] = useState<'email' | 'verification'>('email')
   const [passkeyEnabled, setPasskeyEnabled] = useState(false)
@@ -30,7 +32,7 @@ export function SignIn() {
           const codesParams = redirect ? `?redirect=${encodeURIComponent(redirect)}` : ''
           window.location.replace(`/login/codes${codesParams}`)
         } else {
-          toast.success('Logged in')
+          toast.success(t`Logged in`)
           await new Promise((resolve) => setTimeout(resolve, 250))
           const { hasIdentity } = useAuthStore.getState()
           const targetPath = safeRedirect(redirect)
@@ -43,10 +45,11 @@ export function SignIn() {
         }
       }
     } catch (error) {
-      if (error instanceof Error && error.name === 'NotAllowedError') {
-        toast.error('Passkey login cancelled')
+      const message = getErrorMessage(error, t`Passkey login failed`)
+      if (typeof error === 'object' && error !== null && (error as { name?: string }).name === 'NotAllowedError') {
+        toast.error(t`Passkey login cancelled`)
       } else {
-        toast.error(getErrorMessage(error, 'Passkey login failed'))
+        toast.error(message)
       }
     } finally {
       setIsPasskeyLoading(false)
@@ -59,7 +62,7 @@ export function SignIn() {
         {step === 'email' && (
           <CardHeader>
             <CardDescription>
-              Log in with your email address
+              <Trans>Log in with your email address</Trans>
             </CardDescription>
           </CardHeader>
         )}
@@ -78,7 +81,7 @@ export function SignIn() {
                 </div>
                 <div className='relative flex justify-center text-xs uppercase'>
                   <span className='bg-card text-muted-foreground px-2'>
-                    Or
+                    <Trans>Or</Trans>
                   </span>
                 </div>
               </div>
@@ -88,7 +91,7 @@ export function SignIn() {
                 onClick={handlePasskeyLogin}
                 disabled={isPasskeyLoading}
               >
-                Log in with passkey
+                <Trans>Log in with passkey</Trans>
                 {isPasskeyLoading ? (
                   <Loader2 className='animate-spin' />
                 ) : (
