@@ -7,7 +7,7 @@ def action_identity_create(a):
     name = a.input("name")
     privacy = a.input("privacy", "public")
     if not name:
-        a.error(400, "name required")
+        a.error_label(400, "errors.name_required")
         return
     entity = mochi.entity.create("person", name, privacy)
     a.json({"status": "ok", "entity": entity})
@@ -105,7 +105,7 @@ def action_oauth_unlink(a):
     """Unlink an OAuth provider from the current user"""
     provider = a.input("provider", "")
     if not provider:
-        a.error(400, "provider required")
+        a.error_label(400, "errors.provider_required")
         return
     mochi.user.oauth.unlink(provider)
     a.json({"ok": True})
