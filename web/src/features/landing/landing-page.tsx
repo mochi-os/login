@@ -81,64 +81,76 @@ function MochiLogo({ size = 32 }: { size?: number }) {
   )
 }
 
-const apps = [
-  {
-    name: "Feeds",
-    icon: '\u{1F4E1}',
-    desc: 'Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise.',
-  },
-  {
-    name: "Forums",
-    icon: '\u{1F4AC}',
-    desc: 'Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what\'s important to you.',
-  },
-  {
-    name: "Projects",
-    icon: '\u{1F4CB}',
-    desc: 'Manage tickets and tasks in a friendly and highly flexible Kanban-style interface.',
-  },
-  {
-    name: 'CRM',
-    icon: '\u{1F91D}',
-    desc: 'Keep track of contacts, relationships, and interactions with a highly adaptable CRM.',
-  },
-  {
-    name: "Wikis",
-    icon: '\u{1F4D6}',
-    desc: 'Build a collaborative, replicated knowledge base for your community. Your data is always yours.',
-  },
-  {
-    name: "Chat",
-    icon: '\u{1F4E8}',
-    desc: 'Message your friends, individually or in groups, peer-to-peer and encrypted.',
-  },
-]
+function useLandingApps() {
+  const { t } = useLingui()
+  return [
+    {
+      name: t`Feeds`,
+      icon: '\u{1F4E1}',
+      desc: t`Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise.`,
+    },
+    {
+      name: t`Forums`,
+      icon: '\u{1F4AC}',
+      desc: t`Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what's important to you.`,
+    },
+    {
+      name: t`Projects`,
+      icon: '\u{1F4CB}',
+      desc: t`Manage tickets and tasks in a friendly and highly flexible Kanban-style interface.`,
+    },
+    {
+      name: t`CRM`,
+      icon: '\u{1F91D}',
+      desc: t`Keep track of contacts, relationships, and interactions with a highly adaptable CRM.`,
+    },
+    {
+      name: t`Wikis`,
+      icon: '\u{1F4D6}',
+      desc: t`Build a collaborative, replicated knowledge base for your community. Your data is always yours.`,
+    },
+    {
+      name: t`Chat`,
+      icon: '\u{1F4E8}',
+      desc: t`Message your friends, individually or in groups, peer-to-peer and encrypted.`,
+    },
+  ]
+}
 
-const steps = [
-  {
-    title: "Create your node",
-    desc: "Sign up and your own Mochi node is created. Your data lives there \u2014 not on someone else's server.",
-  },
-  {
-    title: "Use the apps",
-    desc: 'Feeds, forums, projects, CRM, wikis \u2014 all built in. Or write your own apps in Starlark.',
-  },
-  {
-    title: "Connect with others",
-    desc: 'Add friends, join communities. Data syncs directly between nodes \u2014 peer-to-peer, end-to-end.',
-  },
-]
+function useLandingSteps() {
+  const { t } = useLingui()
+  return [
+    {
+      title: t`Create your node`,
+      desc: t`Sign up and your own Mochi node is created. Your data lives there \u2014 not on someone else's server.`,
+    },
+    {
+      title: t`Use the apps`,
+      desc: t`Feeds, forums, projects, CRM, wikis \u2014 all built in. Or write your own apps in Starlark.`,
+    },
+    {
+      title: t`Connect with others`,
+      desc: t`Add friends, join communities. Data syncs directly between nodes \u2014 peer-to-peer, end-to-end.`,
+    },
+  ]
+}
 
-const tech = [
-  { name: "Go", role: 'Server' },
-  { name: 'libp2p', role: 'Networking' },
-  { name: "SQLite", role: 'Storage' },
-  { name: "Starlark", role: 'App business logic' },
-  { name: "React", role: 'App user interfaces' },
-]
+function useLandingTech() {
+  const { t } = useLingui()
+  return [
+    { name: 'Go', role: t`Server` },
+    { name: 'libp2p', role: t`Networking` },
+    { name: 'SQLite', role: t`Storage` },
+    { name: 'Starlark', role: t`App business logic` },
+    { name: 'React', role: t`App user interfaces` },
+  ]
+}
 
 export function LandingPage() {
   const { t } = useLingui()
+  const apps = useLandingApps()
+  const steps = useLandingSteps()
+  const tech = useLandingTech()
   const search = useSearch({ from: '/' }) as Record<string, string | undefined>
   const { redirect, reauth } = search
   const [dialogOpen, setDialogOpen] = useState(false)
@@ -394,14 +406,14 @@ export function LandingPage() {
             <Trans>Mochi is built using the following technologies:</Trans>
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            {tech.map((t) => (
+            {tech.map((item) => (
               <div
-                key={t.name}
+                key={item.name}
                 className="bg-white dark:bg-card border border-[#E8E6F0] dark:border-border rounded-xl p-5 text-center hover:border-[#A29BFE] transition-colors"
               >
-                <div className="font-bold text-[0.95rem] mb-1">{t.name}</div>
+                <div className="font-bold text-[0.95rem] mb-1">{item.name}</div>
                 <div className="text-xs text-[#6B6B80] dark:text-muted-foreground">
-                  {t.role}
+                  {item.role}
                 </div>
               </div>
             ))}
