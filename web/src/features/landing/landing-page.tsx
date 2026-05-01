@@ -32,10 +32,10 @@ const oauthProviders: Array<{
   label: string
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
 }> = [
-  { key: 'facebook', label: 'Facebook', Icon: FacebookIcon },
-  { key: 'github', label: 'GitHub', Icon: Github },
-  { key: 'google', label: 'Google', Icon: GoogleIcon },
-  { key: 'microsoft', label: 'Microsoft', Icon: MicrosoftIcon },
+  { key: 'facebook', label: "Facebook", Icon: FacebookIcon },
+  { key: 'github', label: "GitHub", Icon: Github },
+  { key: 'google', label: "Google", Icon: GoogleIcon },
+  { key: 'microsoft', label: "Microsoft", Icon: MicrosoftIcon },
   { key: 'x', label: 'X', Icon: XIcon },
 ]
 
@@ -82,17 +82,17 @@ function MochiLogo({ size = 32 }: { size?: number }) {
 
 const apps = [
   {
-    name: 'Feeds',
+    name: "Feeds",
     icon: '\u{1F4E1}',
     desc: 'Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise.',
   },
   {
-    name: 'Forums',
+    name: "Forums",
     icon: '\u{1F4AC}',
     desc: 'Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what\'s important to you.',
   },
   {
-    name: 'Projects',
+    name: "Projects",
     icon: '\u{1F4CB}',
     desc: 'Manage tickets and tasks in a friendly and highly flexible Kanban-style interface.',
   },
@@ -102,12 +102,12 @@ const apps = [
     desc: 'Keep track of contacts, relationships, and interactions with a highly adaptable CRM.',
   },
   {
-    name: 'Wikis',
+    name: "Wikis",
     icon: '\u{1F4D6}',
     desc: 'Build a collaborative, replicated knowledge base for your community. Your data is always yours.',
   },
   {
-    name: 'Chat',
+    name: "Chat",
     icon: '\u{1F4E8}',
     desc: 'Message your friends, individually or in groups, peer-to-peer and encrypted.',
   },
@@ -115,25 +115,25 @@ const apps = [
 
 const steps = [
   {
-    title: 'Create your node',
+    title: "Create your node",
     desc: "Sign up and your own Mochi node is created. Your data lives there \u2014 not on someone else's server.",
   },
   {
-    title: 'Use the apps',
+    title: "Use the apps",
     desc: 'Feeds, forums, projects, CRM, wikis \u2014 all built in. Or write your own apps in Starlark.',
   },
   {
-    title: 'Connect with others',
+    title: "Connect with others",
     desc: 'Add friends, join communities. Data syncs directly between nodes \u2014 peer-to-peer, end-to-end.',
   },
 ]
 
 const tech = [
-  { name: 'Go', role: 'Server' },
+  { name: "Go", role: 'Server' },
   { name: 'libp2p', role: 'Networking' },
-  { name: 'SQLite', role: 'Storage' },
-  { name: 'Starlark', role: 'App business logic' },
-  { name: 'React', role: 'App user interfaces' },
+  { name: "SQLite", role: 'Storage' },
+  { name: "Starlark", role: 'App business logic' },
+  { name: "React", role: 'App user interfaces' },
 ]
 
 export function LandingPage() {

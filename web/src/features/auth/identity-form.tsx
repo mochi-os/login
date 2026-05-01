@@ -40,7 +40,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
     try {
       await submitIdentity(values)
       toast.success('Identity saved', {
-        description: 'Redirecting you to the dashboard…',
+        description: "Redirecting you to the dashboard…",
       })
       handleRedirect(redirectTo)
     } catch (error) {

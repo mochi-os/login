@@ -82,7 +82,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
   // TODO: Implement passkey MFA when server-side endpoints are available
   const handlePasskeyAuth = async () => {
     toast.error('Passkey MFA not yet implemented', {
-      description: 'Please use another verification method.',
+      description: "Please use another verification method.",
     })
   }
 
@@ -94,7 +94,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
       if (needsEmail && needsTotp) {
         if (!data.emailCode || !data.totpCode) {
           toast.error('Invalid code', {
-            description: 'Please check your codes and try again.',
+            description: "Please check your codes and try again.",
           })
           return
         }
@@ -116,7 +116,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
         }
 
         toast.error('Invalid code', {
-          description: 'Please check your codes and try again.',
+          description: "Please check your codes and try again.",
         })
         return
       }
@@ -136,7 +136,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
         }
 
         toast.error('Invalid code', {
-          description: 'Please check your code and try again.',
+          description: "Please check your code and try again.",
         })
         return
       }
@@ -156,7 +156,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
         }
 
         toast.error('Invalid code', {
-          description: 'Please check your code and try again.',
+          description: "Please check your code and try again.",
         })
       }
     } catch (error) {
@@ -167,7 +167,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
         })
       } else {
         toast.error('Invalid code', {
-          description: 'Please check your code and try again.',
+          description: "Please check your code and try again.",
         })
       }
     } finally {

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLingui } from '@lingui/react/macro'
 import { useNavigate } from '@tanstack/react-router'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
@@ -16,6 +17,7 @@ const recoverySchema = z.object({
 })
 
 export function Recovery() {
+  const { t } = useLingui()
   const navigate = useNavigate()
   const { redirect: redirectTo } = Route.useSearch()
   const [isLoading, setIsLoading] = useState(false)
@@ -29,7 +31,7 @@ export function Recovery() {
 
   const handleSuccess = async () => {
     toast.success('Logged in', {
-      description: 'Successfully signed in with recovery code',
+      description: t`Successfully signed in with recovery code`,
     })
 
     await new Promise((resolve) => setTimeout(resolve, 250))
@@ -66,7 +68,7 @@ export function Recovery() {
         await handleSuccess()
       } else {
         toast.error('Invalid recovery code', {
-          description: 'Please check your recovery code and try again.',
+          description: t`Please check your recovery code and try again.`,
         })
       }
     } catch (error) {
@@ -77,7 +79,7 @@ export function Recovery() {
         })
       } else {
         toast.error('Invalid recovery code', {
-          description: 'Please check your recovery code and try again.',
+          description: t`Please check your recovery code and try again.`,
         })
       }
     } finally {

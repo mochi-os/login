@@ -127,7 +127,7 @@ export function UserAuthForm({
                       toast.success('Code copied')
                     } else {
                       toast.error('Failed to copy code', {
-                        description: 'Please copy manually: ' + devCode,
+                        description: "Please copy manually: " + devCode,
                       })
                     }
                   }}
@@ -183,7 +183,7 @@ export function UserAuthForm({
           await handleLoginSuccess()
         } else {
           toast.error('Invalid authenticator code', {
-            description: 'Please check your authenticator app and try again.',
+            description: "Please check your authenticator app and try again.",
           })
         }
         return
@@ -201,14 +201,14 @@ export function UserAuthForm({
             return
           } else {
             toast.error('Invalid code', {
-              description: 'Please check your authenticator code and try again.',
+              description: "Please check your authenticator code and try again.",
             })
             return
           }
         } catch (err) {
           devConsole.error('TOTP retry error:', err)
           toast.error('Invalid code', {
-            description: 'Please check your authenticator code and try again.',
+            description: "Please check your authenticator code and try again.",
           })
           return
         }
@@ -237,14 +237,14 @@ export function UserAuthForm({
                 return
               } else {
                 toast.error('Invalid code', {
-                  description: 'Please check your codes and try again.',
+                  description: "Please check your codes and try again.",
                 })
                 return
               }
             } catch (err) {
               devConsole.error('TOTP error:', err)
               toast.error('Invalid code', {
-                description: 'Please check your codes and try again.',
+                description: "Please check your codes and try again.",
               })
               return
             }
@@ -276,7 +276,7 @@ export function UserAuthForm({
         })
       } else if (errorCode === 'invalid_code' || errorCode === 'invalid code') {
         toast.error('Invalid code', {
-          description: 'Please check your code and try again.',
+          description: "Please check your code and try again.",
         })
       } else {
         toast.error('Verification failed', {

@@ -126,7 +126,7 @@ export const completeMfa = async (
 ): Promise<MfaResponse & { success: boolean }> => {
   const { mfa } = useAuthStore.getState()
   if (!mfa.partial) {
-    throw new Error('No MFA session')
+    throw new Error("No MFA session")
   }
 
   const response = await authApi.completeMfa({
@@ -158,7 +158,7 @@ export const completeMfaMultiple = async (codes: {
 }): Promise<MfaResponse & { success: boolean }> => {
   const { mfa } = useAuthStore.getState()
   if (!mfa.partial) {
-    throw new Error('No MFA session')
+    throw new Error("No MFA session")
   }
 
   const response = await authApi.completeMfa({
