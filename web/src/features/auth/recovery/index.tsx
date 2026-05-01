@@ -106,7 +106,7 @@ export function Recovery() {
                   <FormItem>
                     <FormControl>
                       <Input
-                        placeholder='Recovery code'
+                        placeholder={t`Recovery code`}
                         className='font-mono tracking-wider text-center'
                         autoComplete='off'
                         {...field}
