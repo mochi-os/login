@@ -4,6 +4,7 @@ import { Trans, useLingui } from '@lingui/react/macro'
 import { AlertCircle, ArrowRight, Github, Key, Loader2 } from 'lucide-react'
 import {
   Button,
+  LanguagePicker,
   ResponsiveDialog,
   ResponsiveDialogContent,
   ResponsiveDialogHeader,
@@ -287,13 +288,16 @@ export function LandingPage() {
                 <Trans>Technology</Trans>
               </a>
             </div>
-            <button
-              onClick={openDialog}
-              className="inline-flex items-center gap-1.5 px-5 py-2 rounded-[20px] bg-[#6C5CE7] text-white font-semibold text-sm shadow-[0_2px_12px_rgba(108,92,231,0.25)] hover:bg-[#5041C1] hover:shadow-[0_4px_20px_rgba(108,92,231,0.35)] hover:-translate-y-px transition-all cursor-pointer border-none"
-            >
-              <Trans>Sign up or log in</Trans>
-              <ArrowRight className="size-4" />
-            </button>
+            <div className="flex items-center gap-2">
+              <LanguagePicker />
+              <button
+                onClick={openDialog}
+                className="inline-flex items-center gap-1.5 px-5 py-2 rounded-[20px] bg-[#6C5CE7] text-white font-semibold text-sm shadow-[0_2px_12px_rgba(108,92,231,0.25)] hover:bg-[#5041C1] hover:shadow-[0_4px_20px_rgba(108,92,231,0.35)] hover:-translate-y-px transition-all cursor-pointer border-none"
+              >
+                <Trans>Sign up or log in</Trans>
+                <ArrowRight className="size-4" />
+              </button>
+            </div>
           </div>
         </div>
       </nav>
