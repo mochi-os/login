@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Trans, useLingui } from '@lingui/react/macro'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -36,6 +37,7 @@ export function UserAuthForm({
   disabled = false,
   ...props
 }: UserAuthFormProps) {
+  const { t } = useLingui()
   const [isLoading, setIsLoading] = useState(false)
   const [internalStep, setInternalStep] = useState<'email' | 'verification'>('email')
   const [userEmail, setUserEmail] = useState('')
@@ -96,7 +98,7 @@ export function UserAuthForm({
         if (onPasskeyLogin) {
           onPasskeyLogin()
         } else {
-          toast.error('Passkey login required', {
+          toast.error(t`Passkey login required`, {
             description: 'Please use the "Log in with passkey" button.',
           })
         }
@@ -111,7 +113,7 @@ export function UserAuthForm({
           codeResult?.status?.toLowerCase() === 'ok' || Boolean(devCode)
 
         if (requestSucceeded) {
-          toast.success('Code sent.', {
+          toast.success(t`Code sent.`, {
             description: devCode ? (
               <div className='flex items-center gap-2'>
                 <span>Your code is: {devCode}</span>
@@ -124,9 +126,9 @@ export function UserAuthForm({
                     e.stopPropagation()
                     const ok = await shellClipboardWrite(devCode!)
                     if (ok) {
-                      toast.success('Code copied')
+                      toast.success(t`Code copied`)
                     } else {
-                      toast.error('Failed to copy code', {
+                      toast.error(t`Failed to copy code`, {
                         description: "Please copy manually: " + devCode,
                       })
                     }
@@ -146,12 +148,12 @@ export function UserAuthForm({
     } catch (error) {
       const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
       if (responseData?.error === 'signup_disabled') {
-        toast.error('Registration disabled', {
-          description: getErrorMessage(error, 'New user signup is disabled.'),
+        toast.error(t`Registration disabled`, {
+          description: getErrorMessage(error, t`New user signup is disabled.`),
         })
       } else {
-        toast.error('Failed to continue', {
-          description: getErrorMessage(error, 'Please try again or contact support.'),
+        toast.error(t`Failed to continue`, {
+          description: getErrorMessage(error, t`Please try again or contact support.`),
         })
       }
     } finally {
@@ -167,7 +169,7 @@ export function UserAuthForm({
       // If only TOTP is required (no email), use the TOTP login endpoint
       if (needsTotp && !needsEmail) {
         if (!data.totpCode || data.totpCode.length !== 6) {
-          toast.error('Please enter your authenticator code')
+          toast.error(t`Please enter your authenticator code`)
           setIsLoading(false)
           return
         }
@@ -182,7 +184,7 @@ export function UserAuthForm({
         if (result.login) {
           await handleLoginSuccess()
         } else {
-          toast.error('Invalid authenticator code', {
+          toast.error(t`Invalid authenticator code`, {
             description: "Please check your authenticator app and try again.",
           })
         }
@@ -200,14 +202,14 @@ export function UserAuthForm({
             await handleLoginSuccess()
             return
           } else {
-            toast.error('Invalid code', {
+            toast.error(t`Invalid code`, {
               description: "Please check your authenticator code and try again.",
             })
             return
           }
         } catch (err) {
           devConsole.error('TOTP retry error:', err)
-          toast.error('Invalid code', {
+          toast.error(t`Invalid code`, {
             description: "Please check your authenticator code and try again.",
           })
           return
@@ -236,14 +238,14 @@ export function UserAuthForm({
                 await handleLoginSuccess()
                 return
               } else {
-                toast.error('Invalid code', {
+                toast.error(t`Invalid code`, {
                   description: "Please check your codes and try again.",
                 })
                 return
               }
             } catch (err) {
               devConsole.error('TOTP error:', err)
-              toast.error('Invalid code', {
+              toast.error(t`Invalid code`, {
                 description: "Please check your codes and try again.",
               })
               return
@@ -258,7 +260,7 @@ export function UserAuthForm({
         if (result.success) {
           await handleLoginSuccess()
         } else {
-          toast.error('Invalid verification code', {
+          toast.error(t`Invalid verification code`, {
             description: result.message || 'Please check your email and try again.',
           })
         }
@@ -267,20 +269,20 @@ export function UserAuthForm({
       const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
       const errorCode = responseData?.error
       if (errorCode === 'suspended') {
-        toast.error('Account suspended', {
-          description: getErrorMessage(error, 'Your account has been suspended.'),
+        toast.error(t`Account suspended`, {
+          description: getErrorMessage(error, t`Your account has been suspended.`),
         })
       } else if (errorCode === 'signup_disabled') {
-        toast.error('Registration disabled', {
-          description: getErrorMessage(error, 'New user signup is disabled.'),
+        toast.error(t`Registration disabled`, {
+          description: getErrorMessage(error, t`New user signup is disabled.`),
         })
       } else if (errorCode === 'invalid_code' || errorCode === 'invalid code') {
-        toast.error('Invalid code', {
+        toast.error(t`Invalid code`, {
           description: "Please check your code and try again.",
         })
       } else {
-        toast.error('Verification failed', {
-          description: getErrorMessage(error, 'Please try again or contact support.'),
+        toast.error(t`Verification failed`, {
+          description: getErrorMessage(error, t`Please try again or contact support.`),
         })
       }
     } finally {
@@ -303,17 +305,17 @@ export function UserAuthForm({
           <p className='text-sm font-medium'>{userEmail}</p>
           {needsEmail && needsTotp && (
             <p className='text-muted-foreground text-sm'>
-              Enter your email code and authenticator code
+              <Trans>Enter your email code and authenticator code</Trans>
             </p>
           )}
           {needsEmail && !needsTotp && (
             <p className='text-muted-foreground text-sm'>
-              Paste the login code you received by email
+              <Trans>Paste the login code you received by email</Trans>
             </p>
           )}
           {needsTotp && !needsEmail && (
             <p className='text-muted-foreground text-sm'>
-              Enter the code from your authenticator app
+              <Trans>Enter the code from your authenticator app</Trans>
             </p>
           )}
         </div>
@@ -332,7 +334,7 @@ export function UserAuthForm({
                     {needsTotp && (
                       <div className='flex items-center gap-2 text-sm font-medium mb-2'>
                         <Mail className='h-4 w-4' />
-                        <span>Email code</span>
+                        <span><Trans>Email code</Trans></span>
                       </div>
                     )}
                     <FormControl>
@@ -359,7 +361,7 @@ export function UserAuthForm({
                     {needsEmail && (
                       <div className='flex items-center gap-2 text-sm font-medium mb-2 self-start'>
                         <Smartphone className='h-4 w-4' />
-                        <span>Authenticator code</span>
+                        <span><Trans>Authenticator code</Trans></span>
                       </div>
                     )}
                     <FormControl>
@@ -409,7 +411,7 @@ export function UserAuthForm({
                 search={redirectTo && redirectTo !== '/' ? { redirect: redirectTo } : {}}
                 className='text-muted-foreground/70 hover:text-muted-foreground text-xs underline-offset-4 hover:underline'
               >
-                Lost access? Use a recovery code
+                <Trans>Lost access? Use a recovery code</Trans>
               </Link>
             </div>
           </form>
@@ -433,7 +435,7 @@ export function UserAuthForm({
             <FormItem>
               <FormControl>
                 <Input
-                  placeholder='Email'
+                  placeholder={t`Email`}
                   type='email'
                   autoComplete='email'
                   disabled={disabled || isLoading}

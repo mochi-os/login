@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Trans, useLingui } from '@lingui/react/macro'
 import { useNavigate, Link } from '@tanstack/react-router'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
@@ -37,6 +38,7 @@ interface MfaProps {
 }
 
 export function Mfa({ redirectTo }: MfaProps = {}) {
+  const { t } = useLingui()
   const navigate = useNavigate()
   const { mfa, clearMfa } = useAuthStore()
   const [isLoading, setIsLoading] = useState(false)
@@ -81,7 +83,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
 
   // TODO: Implement passkey MFA when server-side endpoints are available
   const handlePasskeyAuth = async () => {
-    toast.error('Passkey MFA not yet implemented', {
+    toast.error(t`Passkey MFA not yet implemented`, {
       description: "Please use another verification method.",
     })
   }
@@ -93,7 +95,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
       // When both email and TOTP are required, validate both atomically
       if (needsEmail && needsTotp) {
         if (!data.emailCode || !data.totpCode) {
-          toast.error('Invalid code', {
+          toast.error(t`Invalid code`, {
             description: "Please check your codes and try again.",
           })
           return
@@ -115,7 +117,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
           return
         }
 
-        toast.error('Invalid code', {
+        toast.error(t`Invalid code`, {
           description: "Please check your codes and try again.",
         })
         return
@@ -135,7 +137,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
           return
         }
 
-        toast.error('Invalid code', {
+        toast.error(t`Invalid code`, {
           description: "Please check your code and try again.",
         })
         return
@@ -155,18 +157,18 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
           return
         }
 
-        toast.error('Invalid code', {
+        toast.error(t`Invalid code`, {
           description: "Please check your code and try again.",
         })
       }
     } catch (error) {
       const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
       if (responseData?.error === 'suspended') {
-        toast.error('Account suspended', {
-          description: getErrorMessage(error, 'Your account has been suspended.'),
+        toast.error(t`Account suspended`, {
+          description: getErrorMessage(error, t`Your account has been suspended.`),
         })
       } else {
-        toast.error('Invalid code', {
+        toast.error(t`Invalid code`, {
           description: "Please check your code and try again.",
         })
       }
@@ -209,7 +211,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
                       {(needsTotp || needsPasskey) && (
                         <div className='flex items-center gap-2 text-sm font-medium mb-2'>
                           <Mail className='h-4 w-4' />
-                          <span>Email code</span>
+                          <span><Trans>Email code</Trans></span>
                         </div>
                       )}
                       <FormControl>
@@ -236,7 +238,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
                       {(needsEmail || needsPasskey) && (
                         <div className='mb-2 flex items-center gap-2 text-sm font-medium self-start'>
                           <Smartphone className='h-4 w-4' />
-                          <span>Authenticator code</span>
+                          <span><Trans>Authenticator code</Trans></span>
                         </div>
                       )}
                       <FormControl>
@@ -267,7 +269,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
                   {(needsEmail || needsTotp) && (
                     <div className='mb-2 flex items-center gap-2 text-sm font-medium'>
                       <Key className='h-4 w-4' />
-                      <span>Passkey</span>
+                      <span><Trans>Passkey</Trans></span>
                     </div>
                   )}
                   <Button
@@ -309,7 +311,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
                 search={redirectTo && redirectTo !== '/' ? { redirect: redirectTo } : {}}
                 className='text-muted-foreground/70 hover:text-muted-foreground text-xs underline-offset-4 hover:underline'
               >
-                Lost access? Use a recovery code
+                <Trans>Lost access? Use a recovery code</Trans>
               </Link>
             </div>
           </Form>

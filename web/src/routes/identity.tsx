@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Trans } from '@lingui/react/macro'
 import { z } from 'zod'
 import { createFileRoute, redirect } from '@tanstack/react-router'
 import { Card, CardContent, CardHeader, CardTitle, requestHelpers } from '@mochi/web'
@@ -76,7 +77,7 @@ function IdentityRouteComponent() {
       <Card>
         <CardHeader>
           <CardTitle className="text-lg tracking-tight">
-            Finish setting up your account
+            <Trans>Finish setting up your account</Trans>
           </CardTitle>
         </CardHeader>
         <CardContent>

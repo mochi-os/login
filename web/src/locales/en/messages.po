@@ -29,6 +29,12 @@ msgstr "Access level"
 #~ msgid "Account removed"
 #~ msgstr "Account removed"
 
+#: src/features/auth/mfa/index.tsx:167
+#: src/features/auth/recovery/index.tsx:77
+#: src/features/auth/sign-in/components/user-auth-form.tsx:272
+msgid "Account suspended"
+msgstr "Account suspended"
+
 #: ../../../lib/web/src/features/accounts/account-add.tsx:122
 msgid "Account type"
 msgstr "Account type"
@@ -89,6 +95,11 @@ msgstr "Apps"
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Asc"
+
+#: src/features/auth/mfa/index.tsx:241
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+msgid "Authenticator code"
+msgstr "Authenticator code"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -183,6 +194,14 @@ msgstr "Close Panel"
 #~ msgid "Close search"
 #~ msgstr "Close search"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:129
+msgid "Code copied"
+msgstr "Code copied"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:116
+msgid "Code sent."
+msgstr "Code sent."
+
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Collapse sidebar"
 msgstr "Collapse sidebar"
@@ -207,6 +226,10 @@ msgstr "Contextual information and details."
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Copy"
+
+#: src/features/auth/identity-form.tsx:141
+msgid "Could not cancel"
+msgstr "Could not cancel"
 
 #: src/features/landing/landing-page.tsx:198
 msgid "Could not start sign-in"
@@ -260,6 +283,23 @@ msgstr "Distributed by design"
 #~ msgid "Download"
 #~ msgstr "Download"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:438
+msgid "Email"
+msgstr "Email"
+
+#: src/features/auth/mfa/index.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
+msgid "Email code"
+msgstr "Email code"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:318
+msgid "Enter the code from your authenticator app"
+msgstr "Enter the code from your authenticator app"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+msgid "Enter your email code and authenticator code"
+msgstr "Enter your email code and authenticator code"
+
 #: src/features/landing/landing-page.tsx:330
 msgid "Everything you need, nothing you don't control"
 msgstr "Everything you need, nothing you don't control"
@@ -272,9 +312,21 @@ msgstr "Expand sidebar"
 #~ msgid "Failed to add account"
 #~ msgstr "Failed to add account"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+msgid "Failed to continue"
+msgstr "Failed to continue"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+msgid "Failed to copy code"
+msgstr "Failed to copy code"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:226
 #~ msgid "Failed to remove account"
 #~ msgstr "Failed to remove account"
+
+#: src/features/auth/identity-form.tsx:49
+msgid "Failed to save identity"
+msgstr "Failed to save identity"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:249
 #~ msgid "Failed to send verification code"
@@ -283,6 +335,10 @@ msgstr "Expand sidebar"
 #: ../../../lib/web/src/components/notification-category-button.tsx:103
 #~ msgid "Failed to update category"
 #~ msgstr "Failed to update category"
+
+#: src/routes/identity.tsx:80
+msgid "Finish setting up your account"
+msgstr "Finish setting up your account"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -338,13 +394,39 @@ msgstr "Hide"
 msgid "How it works"
 msgstr "How it works"
 
+#: src/features/auth/identity-form.tsx:44
+msgid "Identity saved"
+msgstr "Identity saved"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:239
 msgid "Inset"
 msgstr "Inset"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#~ msgid "Invalid verification code"
-#~ msgstr "Invalid verification code"
+#: src/features/auth/sign-in/components/user-auth-form.tsx:187
+msgid "Invalid authenticator code"
+msgstr "Invalid authenticator code"
+
+#: src/features/auth/mfa/index.tsx:98
+#: src/features/auth/mfa/index.tsx:120
+#: src/features/auth/mfa/index.tsx:140
+#: src/features/auth/mfa/index.tsx:160
+#: src/features/auth/mfa/index.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:241
+#: src/features/auth/sign-in/components/user-auth-form.tsx:248
+#: src/features/auth/sign-in/components/user-auth-form.tsx:280
+msgid "Invalid code"
+msgstr "Invalid code"
+
+#: src/features/auth/recovery/index.tsx:70
+#: src/features/auth/recovery/index.tsx:81
+msgid "Invalid recovery code"
+msgstr "Invalid recovery code"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:263
+msgid "Invalid verification code"
+msgstr "Invalid verification code"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
@@ -386,6 +468,7 @@ msgstr "Log in with your email address"
 msgid "Log out"
 msgstr "Log out"
 
+#: src/features/auth/recovery/index.tsx:33
 #: src/features/auth/sign-in/index.tsx:35
 #: src/features/landing/landing-page.tsx:221
 msgid "Logged in"
@@ -399,6 +482,11 @@ msgstr "Logged out (with errors)"
 msgid "Logged out successfully"
 msgstr "Logged out successfully"
 
+#: src/features/auth/mfa/index.tsx:314
+#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+msgid "Lost access? Use a recovery code"
+msgstr "Lost access? Use a recovery code"
+
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:219
 msgid "Mark all as read"
 msgstr "Mark all as read"
@@ -406,6 +494,10 @@ msgstr "Mark all as read"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:151
 msgid "Menu"
 msgstr "Menu"
+
+#: src/features/landing/landing-page.tsx:267
+msgid "Mochi"
+msgstr "Mochi"
 
 #: src/features/landing/landing-page.tsx:333
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
@@ -422,6 +514,11 @@ msgstr "Mochi is built using the following technologies:"
 #: src/features/landing/landing-page.tsx:318
 msgid "Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes."
 msgstr "Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+msgid "New user signup is disabled."
+msgstr "New user signup is disabled."
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
 #~ msgid "Next image"
@@ -515,10 +612,15 @@ msgstr "Or log in with"
 msgid "Other"
 msgstr "Other"
 
+#: src/features/auth/identity-form.tsx:100
+msgid "Other users can find your profile."
+msgstr "Other users can find your profile."
+
 #: ../../../lib/web/src/features/access/access-list.tsx:212
 msgid "Owner"
 msgstr "Owner"
 
+#: src/features/auth/mfa/index.tsx:272
 #: src/features/landing/landing-page.tsx:488
 msgid "Passkey"
 msgstr "Passkey"
@@ -533,19 +635,52 @@ msgstr "Passkey login cancelled"
 msgid "Passkey login failed"
 msgstr "Passkey login failed"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:101
+msgid "Passkey login required"
+msgstr "Passkey login required"
+
+#: src/features/auth/mfa/index.tsx:86
+msgid "Passkey MFA not yet implemented"
+msgstr "Passkey MFA not yet implemented"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
+msgid "Paste the login code you received by email"
+msgstr "Paste the login code you received by email"
+
 #: src/features/auth/recovery/index.tsx:71
 #: src/features/auth/recovery/index.tsx:82
 msgid "Please check your recovery code and try again."
 msgstr "Please check your recovery code and try again."
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+msgid "Please enter your authenticator code"
+msgstr "Please enter your authenticator code"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+msgid "Please try again or contact support."
+msgstr "Please try again or contact support."
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 #~ msgid "Previous image"
 #~ msgstr "Previous image"
+
+#: src/features/auth/identity-form.tsx:85
+msgid "Privacy"
+msgstr "Privacy"
+
+#: src/features/auth/identity-form.tsx:112
+msgid "Private"
+msgstr "Private"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:134
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
 msgstr "Profile"
+
+#: src/features/auth/identity-form.tsx:98
+msgid "Public"
+msgstr "Public"
 
 #: src/features/landing/landing-page.tsx:415
 msgid "Ready to try Mochi?"
@@ -567,6 +702,11 @@ msgstr "Redirecting to login."
 #: ../../../lib/web/src/components/post-tags.tsx:177
 #~ msgid "Reduce interest"
 #~ msgstr "Reduce interest"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+msgid "Registration disabled"
+msgstr "Registration disabled"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:256
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:170
@@ -696,6 +836,10 @@ msgstr "Signing out..."
 msgid "Skip to Main"
 msgstr "Skip to Main"
 
+#: src/features/auth/identity-form.tsx:114
+msgid "Stay hidden from directory searches."
+msgstr "Stay hidden from directory searches."
+
 #: ../../../lib/web/src/components/coming-soon.tsx:12
 msgid "Stay tuned though!"
 msgstr "Stay tuned though!"
@@ -791,6 +935,10 @@ msgstr "Under the hood"
 msgid "Unverified"
 msgstr "Unverified"
 
+#: src/features/auth/identity-form.tsx:145
+msgid "Use a different account"
+msgstr "Use a different account"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:154
 msgid "User"
 msgstr "User"
@@ -803,9 +951,9 @@ msgstr "Verification code"
 #~ msgid "Verification code sent"
 #~ msgstr "Verification code sent"
 
-#: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#~ msgid "Verification failed"
-#~ msgstr "Verification failed"
+#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+msgid "Verification failed"
+msgstr "Verification failed"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:162
 msgid "Verify"
@@ -843,6 +991,16 @@ msgstr "We're looking for early adopters who are willing to give Mochi a try and
 msgid "Website is under maintenance!"
 msgstr "Website is under maintenance!"
 
+#: src/features/auth/mfa/index.tsx:168
+#: src/features/auth/recovery/index.tsx:78
+#: src/features/auth/sign-in/components/user-auth-form.tsx:273
+msgid "Your account has been suspended."
+msgstr "Your account has been suspended."
+
 #: src/features/landing/landing-page.tsx:312
 msgid "Your apps, your platform, your network"
 msgstr "Your apps, your platform, your network"
+
+#: src/features/auth/identity-form.tsx:63
+msgid "Your name, as you'd like others to see it"
+msgstr "Your name, as you'd like others to see it"

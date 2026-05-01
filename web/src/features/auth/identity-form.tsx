@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Trans, useLingui } from '@lingui/react/macro'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -20,6 +21,7 @@ interface IdentityFormProps {
 }
 
 export function IdentityForm({ redirectTo }: IdentityFormProps) {
+  const { t } = useLingui()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const initialProfile = readProfileCookie()
 
@@ -39,12 +41,12 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
     setIsSubmitting(true)
     try {
       await submitIdentity(values)
-      toast.success('Identity saved', {
+      toast.success(t`Identity saved`, {
         description: "Redirecting you to the dashboard…",
       })
       handleRedirect(redirectTo)
     } catch (error) {
-      toast.error(getErrorMessage(error, 'Failed to save identity'))
+      toast.error(getErrorMessage(error, t`Failed to save identity`))
     } finally {
       setIsSubmitting(false)
     }
@@ -58,7 +60,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Your name, as you'd like others to see it</FormLabel>
+              <FormLabel><Trans>Your name, as you'd like others to see it</Trans></FormLabel>
               <FormControl>
                 <Input
                   autoComplete="off"
@@ -80,7 +82,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
           name="privacy"
           render={({ field }) => (
             <FormItem className="space-y-3">
-              <FormLabel>Privacy</FormLabel>
+              <FormLabel><Trans>Privacy</Trans></FormLabel>
               <FormControl>
                 <RadioGroup
                   onValueChange={field.onChange}
@@ -93,9 +95,9 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
                         <RadioGroupItem value="public" className="data-[state=checked]:border-primary data-[state=checked]:bg-primary" />
                       </FormControl>
                       <div className="space-y-1">
-                        <span className="text-sm font-medium">Public</span>
+                        <span className="text-sm font-medium"><Trans>Public</Trans></span>
                         <p className="text-sm text-muted-foreground">
-                          Other users can find your profile.
+                          <Trans>Other users can find your profile.</Trans>
                         </p>
                       </div>
                     </label>
@@ -107,9 +109,9 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
                         <RadioGroupItem value="private" className="data-[state=checked]:border-primary data-[state=checked]:bg-primary" />
                       </FormControl>
                       <div className="space-y-1">
-                        <span className="text-sm font-medium">Private</span>
+                        <span className="text-sm font-medium"><Trans>Private</Trans></span>
                         <p className="text-sm text-muted-foreground">
-                          Stay hidden from directory searches.
+                          <Trans>Stay hidden from directory searches.</Trans>
                         </p>
                       </div>
                     </label>
@@ -136,11 +138,11 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
                 await abandonSignup()
                 window.location.href = '/login/'
               } catch (error) {
-                toast.error(getErrorMessage(error, 'Could not cancel'))
+                toast.error(getErrorMessage(error, t`Could not cancel`))
               }
             }}
           >
-            Use a different account
+            <Trans>Use a different account</Trans>
           </button>
         </p>
       </form>

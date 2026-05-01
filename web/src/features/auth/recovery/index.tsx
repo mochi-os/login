@@ -30,7 +30,7 @@ export function Recovery() {
   })
 
   const handleSuccess = async () => {
-    toast.success('Logged in', {
+    toast.success(t`Logged in`, {
       description: t`Successfully signed in with recovery code`,
     })
 
@@ -67,18 +67,18 @@ export function Recovery() {
       if (result.success) {
         await handleSuccess()
       } else {
-        toast.error('Invalid recovery code', {
+        toast.error(t`Invalid recovery code`, {
           description: t`Please check your recovery code and try again.`,
         })
       }
     } catch (error) {
       const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
       if (responseData?.error === 'suspended') {
-        toast.error('Account suspended', {
-          description: getErrorMessage(error, 'Your account has been suspended.'),
+        toast.error(t`Account suspended`, {
+          description: getErrorMessage(error, t`Your account has been suspended.`),
         })
       } else {
-        toast.error('Invalid recovery code', {
+        toast.error(t`Invalid recovery code`, {
           description: t`Please check your recovery code and try again.`,
         })
       }

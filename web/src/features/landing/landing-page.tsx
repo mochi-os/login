@@ -264,7 +264,7 @@ export function LandingPage() {
             className="flex items-center gap-2.5 no-underline text-inherit"
           >
             <MochiLogo size={32} />
-            <span className="font-bold text-xl tracking-tight">Mochi</span>
+            <span className="font-bold text-xl tracking-tight"><Trans>Mochi</Trans></span>
           </a>
           <div className="flex items-center gap-8">
             <div className="hidden md:flex items-center gap-8">
