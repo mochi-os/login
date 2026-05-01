@@ -287,8 +287,8 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
 
               {(needsEmail || needsTotp) && (
                 <Button type='submit' className='w-full' disabled={isLoading}>
-                  Log in
-                  {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight />}
+                  <Trans>Log in</Trans>
+                  {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight className="rtl:rotate-180" />}
                 </Button>
               )}
 
@@ -299,8 +299,8 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
                 className='w-full'
                 disabled={isLoading}
               >
-                Start again
-                <ArrowLeft />
+                <Trans>Start again</Trans>
+                <ArrowLeft className="rtl:rotate-180" />
               </Button>
 
             </form>

@@ -125,7 +125,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
 
         <Button className="w-full" disabled={isSubmitting}>
           Continue
-          {isSubmitting ? <Loader2 className="animate-spin" /> : <ArrowRight />}
+          {isSubmitting ? <Loader2 className="animate-spin" /> : <ArrowRight className="rtl:rotate-180" />}
         </Button>
 
         <p className="text-center text-sm text-muted-foreground">

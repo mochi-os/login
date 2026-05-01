@@ -307,7 +307,7 @@ export function LandingPage() {
                 className="inline-flex items-center gap-1.5 px-5 py-2 rounded-[20px] bg-[#6C5CE7] text-white font-semibold text-sm shadow-[0_2px_12px_rgba(108,92,231,0.25)] hover:bg-[#5041C1] hover:shadow-[0_4px_20px_rgba(108,92,231,0.35)] hover:-translate-y-px transition-all cursor-pointer border-none"
               >
                 <Trans>Sign up or log in</Trans>
-                <ArrowRight className="size-4" />
+                <ArrowRight className="size-4 rtl:rotate-180" />
               </button>
             </div>
           </div>
@@ -497,9 +497,9 @@ export function LandingPage() {
                   disabled={isPasskeyLoading || oauthLoading !== null}
                 >
                   {isPasskeyLoading ? (
-                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                    <Loader2 className="me-2 h-5 w-5 animate-spin" />
                   ) : (
-                    <Key className="mr-2 h-5 w-5" />
+                    <Key className="me-2 h-5 w-5" />
                   )}
                   <Trans>Passkey</Trans>
                 </Button>
@@ -517,9 +517,9 @@ export function LandingPage() {
                     disabled={oauthLoading !== null || isPasskeyLoading}
                   >
                     {oauthLoading === key ? (
-                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                      <Loader2 className="me-2 h-5 w-5 animate-spin" />
                     ) : (
-                      <Icon className="mr-2 h-5 w-5" />
+                      <Icon className="me-2 h-5 w-5" />
                     )}
                     {label}
                   </Button>

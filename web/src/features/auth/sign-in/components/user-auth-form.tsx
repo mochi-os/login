@@ -99,7 +99,7 @@ export function UserAuthForm({
           onPasskeyLogin()
         } else {
           toast.error(t`Passkey login required`, {
-            description: 'Please use the "Log in with passkey" button.',
+            description: t`Please use the "Log in with passkey" button.`,
           })
         }
         return
@@ -129,7 +129,7 @@ export function UserAuthForm({
                       toast.success(t`Code copied`)
                     } else {
                       toast.error(t`Failed to copy code`, {
-                        description: "Please copy manually: " + devCode,
+                        description: t`Please copy manually: ${devCode}`,
                       })
                     }
                   }}
@@ -138,7 +138,7 @@ export function UserAuthForm({
                 </Button>
               </div>
             ) : (
-              'Check your email.'
+              t`Check your email.`
             ),
           })
         }
@@ -389,8 +389,8 @@ export function UserAuthForm({
 
             <div className='space-y-2'>
               <Button type='submit' className='w-full' disabled={isLoading}>
-                Log in
-                {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight />}
+                <Trans>Log in</Trans>
+                {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight className="rtl:rotate-180" />}
               </Button>
 
               <Button
@@ -399,8 +399,8 @@ export function UserAuthForm({
                 onClick={goBackToEmail}
                 className='w-full'
               >
-                Start again
-                <ArrowLeft />
+                <Trans>Start again</Trans>
+                <ArrowLeft className="rtl:rotate-180" />
               </Button>
 
             </div>
@@ -448,8 +448,8 @@ export function UserAuthForm({
         />
 
         <Button className='mt-2' disabled={disabled || isLoading}>
-          Next
-          {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight />}
+          <Trans>Next</Trans>
+          {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight className="rtl:rotate-180" />}
         </Button>
       </form>
     </Form>
