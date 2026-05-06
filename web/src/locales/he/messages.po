@@ -42,8 +42,8 @@ msgid "Account removed"
 msgstr "החשבון הוסר"
 
 #: src/features/auth/mfa/index.tsx:167
-#: src/features/auth/recovery/index.tsx:77
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
+#: src/features/auth/recovery/index.tsx:83
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
 msgid "Account suspended"
 msgstr "החשבון הושעה"
 
@@ -72,7 +72,7 @@ msgstr "הוסף חשבון"
 msgid "Add an account to receive notifications and use services."
 msgstr "הוסף חשבון כדי לקבל התראות ולהשתמש בשירותים."
 
-#: src/features/landing/landing-page.tsx:133
+#: src/features/landing/landing-page.tsx:136
 msgid "Add friends, join communities. Data syncs directly between nodes — peer-to-peer, end-to-end."
 msgstr "הוסף חברים, הצטרף לקהילות. הנתונים מסתנכרנים ישירות בין הצמתים — peer-to-peer, מקצה לקצה."
 
@@ -108,15 +108,20 @@ msgstr "AI"
 msgid "All"
 msgstr "הכול"
 
-#: src/features/landing/landing-page.tsx:144
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:36
+msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
+msgstr "כבר קיים חשבון עם כתובת המייל הזו. התחבר תחילה, ולאחר מכן קשר את {0} מהגדרות האימות שלך."
+
+#: src/features/landing/landing-page.tsx:149
 msgid "App business logic"
 msgstr "לוגיקה עסקית של אפליקציה"
 
-#: src/features/landing/landing-page.tsx:145
+#: src/features/landing/landing-page.tsx:150
 msgid "App user interfaces"
 msgstr "ממשקי משתמש של אפליקציה"
 
-#: src/features/landing/landing-page.tsx:288
+#: src/features/landing/landing-page.tsx:295
 msgid "Apps"
 msgstr "אפליקציות"
 
@@ -128,8 +133,12 @@ msgstr "האם אתה בטוח שברצונך להתנתק? יהיה עליך ל
 msgid "Asc"
 msgstr "עולה"
 
-#: src/features/auth/mfa/index.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/mfa/index.tsx:184
+msgid "authenticator code"
+msgstr "קוד אימות"
+
+#: src/features/auth/mfa/index.tsx:243
+#: src/features/auth/sign-in/components/user-auth-form.tsx:377
 msgid "Authenticator code"
 msgstr "קוד אימות"
 
@@ -147,15 +156,15 @@ msgstr "חזור לדף הבית"
 msgid "Boost interest"
 msgstr "הגבר עניין"
 
-#: src/features/landing/landing-page.tsx:110
+#: src/features/landing/landing-page.tsx:113
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "בנה בסיס ידע שיתופי ומשוכפל עבור הקהילה שלך. הנתונים שלך תמיד שלך."
 
-#: src/features/landing/landing-page.tsx:403
+#: src/features/landing/landing-page.tsx:410
 msgid "Built on solid foundations"
 msgstr "בנוי על יסודות מוצקים"
 
-#: src/features/landing/landing-page.tsx:343
+#: src/features/landing/landing-page.tsx:350
 msgid "Built-in apps"
 msgstr "אפליקציות מובנות"
 
@@ -177,11 +186,11 @@ msgstr "קטגוריה עבור התראה זו"
 msgid "Change notification category"
 msgstr "שנה קטגוריית התראה"
 
-#: src/features/landing/landing-page.tsx:113
+#: src/features/landing/landing-page.tsx:116
 msgid "Chat"
 msgstr "צ'אט"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:141
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Check your email."
 msgstr "בדוק את הדוא\"ל שלך."
 
@@ -244,11 +253,11 @@ msgstr "סגור פאנל"
 msgid "Close search"
 msgstr "סגור חיפוש"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:129
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
 msgid "Code copied"
 msgstr "הקוד הועתק"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:116
+#: src/features/auth/sign-in/components/user-auth-form.tsx:127
 msgid "Code sent."
 msgstr "הקוד נשלח."
 
@@ -264,12 +273,16 @@ msgstr "בקרוב!"
 msgid "Compact"
 msgstr "מצומצם"
 
+#: src/features/auth/mfa/index.tsx:188
+msgid "Complete verification to continue"
+msgstr "השלם את האימות כדי להמשיך"
+
 #: ../../../lib/web/src/components/place-picker.tsx:155
 #: ../../../lib/web/src/components/travelling-picker.tsx:299
 msgid "Confirm"
 msgstr "אישור"
 
-#: src/features/landing/landing-page.tsx:132
+#: src/features/landing/landing-page.tsx:135
 msgid "Connect with others"
 msgstr "התחבר עם אחרים"
 
@@ -282,6 +295,7 @@ msgid "Contextual information and details."
 msgstr "מידע קונטקסטואלי ופרטים."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:72
+#: src/features/auth/identity-form.tsx:134
 msgid "Continue"
 msgstr "המשך"
 
@@ -289,27 +303,27 @@ msgstr "המשך"
 msgid "Copy"
 msgstr "העתק"
 
-#: src/features/auth/identity-form.tsx:141
+#: src/features/auth/identity-form.tsx:148
 msgid "Could not cancel"
 msgstr "לא ניתן היה לבטל"
 
-#: src/features/landing/landing-page.tsx:211
+#: src/features/landing/landing-page.tsx:217
 msgid "Could not start sign-in"
 msgstr "לא ניתן היה להתחיל התחברות"
 
-#: src/features/landing/landing-page.tsx:441
+#: src/features/landing/landing-page.tsx:448
 msgid "Create an account"
 msgstr "צור חשבון"
 
-#: src/features/landing/landing-page.tsx:124
+#: src/features/landing/landing-page.tsx:127
 msgid "Create your node"
 msgstr "צור את הצומת שלך"
 
-#: src/features/landing/landing-page.tsx:95
+#: src/features/landing/landing-page.tsx:98
 msgid "Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what's important to you."
 msgstr "צור פורומי דיון משלך, או הצטרף לאחרים. השתמש בתיוג ומיון AI אופציונליים כדי לראות את מה שחשוב לך."
 
-#: src/features/landing/landing-page.tsx:103
+#: src/features/landing/landing-page.tsx:106
 msgid "CRM"
 msgstr "CRM"
 
@@ -361,7 +375,7 @@ msgstr "כיוון"
 msgid "Displays the mobile sidebar."
 msgstr "מציג את סרגל הצד למובייל."
 
-#: src/features/landing/landing-page.tsx:375
+#: src/features/landing/landing-page.tsx:382
 msgid "Distributed by design"
 msgstr "מבוזר מתוקף תכנונו"
 
@@ -369,24 +383,41 @@ msgstr "מבוזר מתוקף תכנונו"
 msgid "Download"
 msgstr "הורדה"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:438
+#: src/features/auth/sign-in/components/user-auth-form.tsx:451
 msgid "Email"
 msgstr "אימייל"
 
-#: src/features/auth/mfa/index.tsx:214
-#: src/features/auth/sign-in/components/user-auth-form.tsx:337
+#: src/features/auth/mfa/index.tsx:183
+msgid "email code"
+msgstr "קוד באימייל"
+
+#: src/features/auth/mfa/index.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Email code"
 msgstr "קוד אימייל"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
+#: src/features/auth/recovery/index.tsx:101
+msgid "Enter a recovery code for \"{userEmail}\" to sign in"
+msgstr "הזן קוד שחזור עבור \"{userEmail}\" כדי להתחבר"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:331
 msgid "Enter the code from your authenticator app"
 msgstr "הזן את הקוד מאפליקציית האימות"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#. placeholder {0}: methods[0]
+#: src/features/auth/mfa/index.tsx:191
+msgid "Enter your {0}"
+msgstr "הזן את {0} שלך"
+
+#: src/features/auth/mfa/index.tsx:195
+msgid "Enter your {initial} and {last}"
+msgstr "הזן את {initial} ו-{last} שלך"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Enter your email code and authenticator code"
 msgstr "הזן את קוד האימייל ואת קוד האימות"
 
-#: src/features/landing/landing-page.tsx:346
+#: src/features/landing/landing-page.tsx:353
 msgid "Everything you need, nothing you don't control"
 msgstr "כל מה שצריך, ושום דבר שאינו בשליטתך"
 
@@ -398,11 +429,11 @@ msgstr "הרחב סרגל צד"
 msgid "Failed to add account"
 msgstr "הוספת החשבון נכשלה"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Failed to continue"
 msgstr "ההמשך נכשל"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:142
 msgid "Failed to copy code"
 msgstr "העתקת הקוד נכשלה"
 
@@ -410,7 +441,7 @@ msgstr "העתקת הקוד נכשלה"
 msgid "Failed to remove account"
 msgstr "הסרת החשבון נכשלה"
 
-#: src/features/auth/identity-form.tsx:49
+#: src/features/auth/identity-form.tsx:56
 msgid "Failed to save identity"
 msgstr "שמירת הזהות נכשלה"
 
@@ -422,11 +453,11 @@ msgstr "שליחת קוד האימות נכשלה"
 msgid "Failed to update category"
 msgstr "עדכון הקטגוריה נכשל"
 
-#: src/features/landing/landing-page.tsx:88
+#: src/features/landing/landing-page.tsx:91
 msgid "Feeds"
 msgstr "פידים"
 
-#: src/features/landing/landing-page.tsx:129
+#: src/features/landing/landing-page.tsx:132
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "פידים, פורומים, פרויקטים, CRM, ויקיים — הכול מובנה. או כתוב אפליקציות משלך ב-Starlark."
 
@@ -438,7 +469,7 @@ msgstr "סיים את הגדרת החשבון שלך"
 msgid "Floating"
 msgstr "צף"
 
-#: src/features/landing/landing-page.tsx:93
+#: src/features/landing/landing-page.tsx:96
 msgid "Forums"
 msgstr "פורומים"
 
@@ -495,12 +526,12 @@ msgstr "בית"
 msgid "Hot"
 msgstr "חם"
 
-#: src/features/landing/landing-page.tsx:294
-#: src/features/landing/landing-page.tsx:372
+#: src/features/landing/landing-page.tsx:301
+#: src/features/landing/landing-page.tsx:379
 msgid "How it works"
 msgstr "איך זה עובד"
 
-#: src/features/auth/identity-form.tsx:44
+#: src/features/auth/identity-form.tsx:51
 msgid "Identity saved"
 msgstr "הזהות נשמרה"
 
@@ -516,7 +547,7 @@ msgstr "פנימי"
 msgid "Interests"
 msgstr "תחומי עניין"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:187
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Invalid authenticator code"
 msgstr "קוד אימות לא תקין"
 
@@ -525,25 +556,25 @@ msgstr "קוד אימות לא תקין"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
-#: src/features/auth/sign-in/components/user-auth-form.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:280
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:224
+#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:293
 msgid "Invalid code"
 msgstr "קוד לא תקין"
 
-#: src/features/auth/recovery/index.tsx:70
-#: src/features/auth/recovery/index.tsx:81
+#: src/features/auth/recovery/index.tsx:76
+#: src/features/auth/recovery/index.tsx:87
 msgid "Invalid recovery code"
 msgstr "קוד שחזור לא תקין"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:263
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
 msgid "Invalid verification code"
 msgstr "קוד אימות לא תקין"
 
-#: src/features/landing/landing-page.tsx:105
+#: src/features/landing/landing-page.tsx:108
 msgid "Keep track of contacts, relationships, and interactions with a highly adaptable CRM."
 msgstr "עקוב אחר אנשי קשר, מערכות יחסים ואינטראקציות עם CRM גמיש במיוחד."
 
@@ -572,17 +603,17 @@ msgstr "טען עוד"
 msgid "Loading…"
 msgstr "טוען…"
 
-#: src/features/auth/mfa/index.tsx:290
-#: src/features/auth/recovery/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:392
+#: src/features/auth/mfa/index.tsx:292
+#: src/features/auth/recovery/index.tsx:127
+#: src/features/auth/sign-in/components/user-auth-form.tsx:405
 msgid "Log in"
 msgstr "התחבר"
 
-#: src/features/landing/landing-page.tsx:465
+#: src/features/landing/landing-page.tsx:474
 msgid "Log in to Mochi"
 msgstr "התחבר ל-Mochi"
 
-#: src/features/landing/landing-page.tsx:515
+#: src/features/landing/landing-page.tsx:524
 msgid "Log in with {label}"
 msgstr "התחבר עם {label}"
 
@@ -604,9 +635,9 @@ msgstr "התחבר עם כתובת האימייל שלך"
 msgid "Log out"
 msgstr "התנתק"
 
-#: src/features/auth/recovery/index.tsx:33
+#: src/features/auth/recovery/index.tsx:39
 #: src/features/auth/sign-in/index.tsx:35
-#: src/features/landing/landing-page.tsx:234
+#: src/features/landing/landing-page.tsx:240
 msgid "Logged in"
 msgstr "מחובר"
 
@@ -622,8 +653,12 @@ msgstr "ההתנתקות בוצעה בהצלחה"
 msgid "Logging out…"
 msgstr "מתנתק…"
 
-#: src/features/auth/mfa/index.tsx:314
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/lib/oauth-errors.ts:44
+msgid "Login session expired, please try again"
+msgstr "פג תוקף ההתחברות, נסה שוב"
+
+#: src/features/auth/mfa/index.tsx:316
+#: src/features/auth/sign-in/components/user-auth-form.tsx:427
 msgid "Lost access? Use a recovery code"
 msgstr "איבדת גישה? השתמש בקוד שחזור"
 
@@ -631,7 +666,7 @@ msgstr "איבדת גישה? השתמש בקוד שחזור"
 msgid "Luma (Default)"
 msgstr "Luma (ברירת מחדל)"
 
-#: src/features/landing/landing-page.tsx:100
+#: src/features/landing/landing-page.tsx:103
 msgid "Manage tickets and tasks in a friendly and highly flexible Kanban-style interface."
 msgstr "נהל כרטיסים ומשימות בממשק ידידותי וגמיש מאוד בסגנון Kanban."
 
@@ -644,7 +679,7 @@ msgstr "סמן הכול כנקרא"
 msgid "Menu"
 msgstr "תפריט"
 
-#: src/features/landing/landing-page.tsx:115
+#: src/features/landing/landing-page.tsx:118
 msgid "Message your friends, individually or in groups, peer-to-peer and encrypted."
 msgstr "שלח הודעות לחברים שלך, בנפרד או בקבוצות, עמית-לעמית ומוצפן."
 
@@ -652,23 +687,23 @@ msgstr "שלח הודעות לחברים שלך, בנפרד או בקבוצות,
 msgid "Metric"
 msgstr "מטרי"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:287
 msgid "Mochi"
 msgstr "Mochi"
 
-#: src/features/landing/landing-page.tsx:349
+#: src/features/landing/landing-page.tsx:356
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi כבר מגיע עם מעל 20 אפליקציות, ועוד מתווספות לעיתים קרובות. בין האפליקציות העיקריות:"
 
-#: src/features/landing/landing-page.tsx:331
+#: src/features/landing/landing-page.tsx:338
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi היא פלטפורמה פדרטיבית, רב-משתמשית עבור אפליקציות מבוזרות. כל אחד יכול להריץ שרת משלו, ולהתחבר לכל משתמש אחר ברשת Mochi. כל אחד יכול ליצור ולפרסם אפליקציות."
 
-#: src/features/landing/landing-page.tsx:406
+#: src/features/landing/landing-page.tsx:413
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi נבנה באמצעות הטכנולוגיות הבאות:"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:341
 msgid "Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes."
 msgstr "Mochi נמצא כעת בגרסה 0.3. הוא מוכן לשימוש יומיומי אם אתה טכני במידה בינונית, וסובלני לבאגים. אם אתה מפתח, הוא גם מוכן ליצירת אפליקציות כל עוד לא אכפת לך מכמה שינויים ב-API."
 
@@ -676,7 +711,7 @@ msgstr "Mochi נמצא כעת בגרסה 0.3. הוא מוכן לשימוש יו�
 msgid "Monday"
 msgstr "יום שני"
 
-#: src/features/landing/landing-page.tsx:142
+#: src/features/landing/landing-page.tsx:147
 msgid "Networking"
 msgstr "רשתות"
 
@@ -684,12 +719,16 @@ msgstr "רשתות"
 msgid "New"
 msgstr "חדש"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/lib/oauth-errors.ts:34
+msgid "New accounts are disabled on this server"
+msgstr "חשבונות חדשים מושבתים בשרת זה"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:290
 msgid "New user signup is disabled."
 msgstr "רישום משתמשים חדשים מושבת."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:451
+#: src/features/auth/sign-in/components/user-auth-form.tsx:464
 msgid "Next"
 msgstr "הבא"
 
@@ -701,7 +740,7 @@ msgstr "התמונה הבאה"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "לא הוגדרו כללי גישה. הוסף כללים כדי לשלוט במי יכול לגשת למשאב זה."
 
-#: src/features/landing/landing-page.tsx:378
+#: src/features/landing/landing-page.tsx:385
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "שום שרת מרכזי לא מחזיק את הנתונים שלך. כל צומת Mochi הוא עמית מלא ברשת, ומתקשר ישירות עם אחרים דרך libp2p."
 
@@ -778,7 +817,7 @@ msgstr "פתח הגדרות ערכת נושא"
 msgid "Or"
 msgstr "או"
 
-#: src/features/landing/landing-page.tsx:488
+#: src/features/landing/landing-page.tsx:497
 msgid "Or log in with"
 msgstr "או התחבר באמצעות"
 
@@ -786,7 +825,7 @@ msgstr "או התחבר באמצעות"
 msgid "Other"
 msgstr "אחר"
 
-#: src/features/auth/identity-form.tsx:100
+#: src/features/auth/identity-form.tsx:107
 msgid "Other users can find your profile."
 msgstr "משתמשים אחרים יכולים למצוא את הפרופיל שלך."
 
@@ -794,22 +833,26 @@ msgstr "משתמשים אחרים יכולים למצוא את הפרופיל ש
 msgid "Owner"
 msgstr "בעלים"
 
-#: src/features/auth/mfa/index.tsx:272
-#: src/features/landing/landing-page.tsx:504
+#: src/features/auth/mfa/index.tsx:185
+msgid "passkey"
+msgstr "מפתח גישה"
+
+#: src/features/auth/mfa/index.tsx:274
+#: src/features/landing/landing-page.tsx:513
 msgid "Passkey"
 msgstr "מפתח גישה"
 
 #: src/features/auth/sign-in/index.tsx:50
-#: src/features/landing/landing-page.tsx:252
+#: src/features/landing/landing-page.tsx:258
 msgid "Passkey login cancelled"
 msgstr "ההתחברות במפתח גישה בוטלה"
 
 #: src/features/auth/sign-in/index.tsx:48
-#: src/features/landing/landing-page.tsx:250
+#: src/features/landing/landing-page.tsx:256
 msgid "Passkey login failed"
 msgstr "ההתחברות במפתח גישה נכשלה"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:101
+#: src/features/auth/sign-in/components/user-auth-form.tsx:112
 msgid "Passkey login required"
 msgstr "נדרשת התחברות במפתח גישה"
 
@@ -817,29 +860,72 @@ msgstr "נדרשת התחברות במפתח גישה"
 msgid "Passkey MFA not yet implemented"
 msgstr "MFA של מפתח גישה עדיין לא מיושם"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:313
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Paste the login code you received by email"
 msgstr "הדבק את קוד ההתחברות שקיבלת באימייל"
 
-#: src/features/auth/recovery/index.tsx:71
-#: src/features/auth/recovery/index.tsx:82
+#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+msgid "Please check your authenticator app and try again."
+msgstr "בדוק את אפליקציית האימות שלך ונסה שוב."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:217
+#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+msgid "Please check your authenticator code and try again."
+msgstr "בדוק את קוד האימות שלך ונסה שוב."
+
+#: src/features/auth/mfa/index.tsx:141
+#: src/features/auth/mfa/index.tsx:161
+#: src/features/auth/mfa/index.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:294
+msgid "Please check your code and try again."
+msgstr "בדוק את הקוד שלך ונסה שוב."
+
+#: src/features/auth/mfa/index.tsx:99
+#: src/features/auth/mfa/index.tsx:121
+#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:262
+msgid "Please check your codes and try again."
+msgstr "בדוק את הקודים שלך ונסה שוב."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+msgid "Please check your email and try again."
+msgstr "בדוק את האימייל שלך ונסה שוב."
+
+#: src/features/auth/recovery/index.tsx:77
+#: src/features/auth/recovery/index.tsx:88
 msgid "Please check your recovery code and try again."
 msgstr "בדוק את קוד השחזור שלך ונסה שוב."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:132
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
 msgid "Please copy manually: {devCode}"
 msgstr "העתק ידנית: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:48
+msgid "Please enter a valid email"
+msgstr "אנא הזן כתובת אימייל תקפה"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:183
 msgid "Please enter your authenticator code"
 msgstr "הזן את קוד המאמת שלך"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/identity-form.tsx:29
+msgid "Please enter your name"
+msgstr "אנא הזן את שמך"
+
+#: src/features/auth/recovery/index.tsx:28
+msgid "Please enter your recovery code"
+msgstr "אנא הזן את קוד השחזור שלך"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:298
 msgid "Please try again or contact support."
 msgstr "נסה שוב או פנה לתמיכה."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:102
+#: src/features/auth/mfa/index.tsx:87
+msgid "Please use another verification method."
+msgstr "אנא השתמש בשיטת אימות אחרת."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:113
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "השתמש בלחצן \"התחבר באמצעות מפתח גישה\"."
 
@@ -847,11 +933,11 @@ msgstr "השתמש בלחצן \"התחבר באמצעות מפתח גישה\"."
 msgid "Previous image"
 msgstr "התמונה הקודמת"
 
-#: src/features/auth/identity-form.tsx:85
+#: src/features/auth/identity-form.tsx:92
 msgid "Privacy"
 msgstr "פרטיות"
 
-#: src/features/auth/identity-form.tsx:112
+#: src/features/auth/identity-form.tsx:119
 msgid "Private"
 msgstr "פרטי"
 
@@ -860,19 +946,19 @@ msgstr "פרטי"
 msgid "Profile"
 msgstr "פרופיל"
 
-#: src/features/landing/landing-page.tsx:98
+#: src/features/landing/landing-page.tsx:101
 msgid "Projects"
 msgstr "פרויקטים"
 
-#: src/features/auth/identity-form.tsx:98
+#: src/features/auth/identity-form.tsx:105
 msgid "Public"
 msgstr "ציבורי"
 
-#: src/features/landing/landing-page.tsx:90
+#: src/features/landing/landing-page.tsx:93
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "פרסם פידי מדיה חברתית משלך, עקוב אחר אחרים, או צבור פידים אחרים עם תיוג ומיון AI אופציונליים. עקוב אחר מה שחשוב, סנן את הרעש."
 
-#: src/features/landing/landing-page.tsx:431
+#: src/features/landing/landing-page.tsx:438
 msgid "Ready to try Mochi?"
 msgstr "מוכן לנסות את Mochi?"
 
@@ -881,7 +967,7 @@ msgstr "מוכן לנסות את Mochi?"
 msgid "Recommended"
 msgstr "מומלץ"
 
-#: src/features/auth/recovery/index.tsx:109
+#: src/features/auth/recovery/index.tsx:115
 msgid "Recovery code"
 msgstr "קוד שחזור"
 
@@ -889,12 +975,16 @@ msgstr "קוד שחזור"
 msgid "Redirecting to login."
 msgstr "מפנה לדף ההתחברות."
 
+#: src/features/auth/identity-form.tsx:52
+msgid "Redirecting you to the dashboard…"
+msgstr "מפנה אותך ללוח הבקרה…"
+
 #: ../../../lib/web/src/components/post-tags.tsx:175
 msgid "Reduce interest"
 msgstr "הפחת עניין"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
-#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
 msgid "Registration disabled"
 msgstr "הרישום מושבת"
 
@@ -1010,7 +1100,7 @@ msgstr "בחר כיוון אתר"
 msgid "Select theme preference"
 msgstr "בחר העדפת ערכת נושא"
 
-#: src/features/landing/landing-page.tsx:141
+#: src/features/landing/landing-page.tsx:146
 msgid "Server"
 msgstr "שרת"
 
@@ -1038,13 +1128,21 @@ msgstr "מציג {totalShown} מתוך {total}"
 msgid "Sidebar"
 msgstr "סרגל צד"
 
-#: src/features/landing/landing-page.tsx:125
+#: src/features/landing/landing-page.tsx:128
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "הירשם וייווצר צומת Mochi משלך. הנתונים שלך חיים שם — לא בשרת של מישהו אחר."
 
-#: src/features/landing/landing-page.tsx:309
+#: src/features/landing/landing-page.tsx:316
 msgid "Sign up or log in"
 msgstr "הירשם או התחבר"
+
+#: src/lib/oauth-errors.ts:32
+msgid "Sign-in cancelled"
+msgstr "ההתחברות בוטלה"
+
+#: src/lib/oauth-errors.ts:51
+msgid "Sign-in failed, please try again"
+msgstr "ההתחברות נכשלה, נסה שוב"
 
 #: ../../../lib/web/src/components/layout/authenticated-layout.tsx:128
 msgid "Signing out..."
@@ -1054,13 +1152,13 @@ msgstr "מתנתק..."
 msgid "Skip to Main"
 msgstr "דלג לראשי"
 
-#: src/features/auth/mfa/index.tsx:302
-#: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/mfa/index.tsx:304
+#: src/features/auth/recovery/index.tsx:138
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Start again"
 msgstr "התחל מחדש"
 
-#: src/features/auth/identity-form.tsx:114
+#: src/features/auth/identity-form.tsx:121
 msgid "Stay hidden from directory searches."
 msgstr "הישאר מוסתר מחיפושים בספרייה."
 
@@ -1068,7 +1166,7 @@ msgstr "הישאר מוסתר מחיפושים בספרייה."
 msgid "Stay tuned though!"
 msgstr "הישאר מעודכן!"
 
-#: src/features/landing/landing-page.tsx:143
+#: src/features/landing/landing-page.tsx:148
 msgid "Storage"
 msgstr "אחסון"
 
@@ -1076,7 +1174,7 @@ msgstr "אחסון"
 msgid "Subject"
 msgstr "נושא"
 
-#: src/features/auth/recovery/index.tsx:34
+#: src/features/auth/recovery/index.tsx:40
 msgid "Successfully signed in with recovery code"
 msgstr "התחברת בהצלחה עם קוד שחזור"
 
@@ -1097,9 +1195,22 @@ msgstr "תגית"
 msgid "Teams/Apps"
 msgstr "צוותים/אפליקציות"
 
-#: src/features/landing/landing-page.tsx:300
+#: src/features/landing/landing-page.tsx:307
 msgid "Technology"
 msgstr "טכנולוגיה"
+
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:42
+msgid "That {0} account is already linked to another user"
+msgstr "חשבון {0} זה כבר מקושר למשתמש אחר"
+
+#: src/lib/oauth-errors.ts:48
+msgid "That sign-in provider is not available"
+msgstr "ספק ההתחברות הזה אינו זמין"
+
+#: src/lib/oauth-errors.ts:11
+msgid "the provider"
+msgstr "הספק"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1179,7 +1290,7 @@ msgstr "לא משויך"
 msgid "Unauthorized Access"
 msgstr "גישה לא מורשית"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:407
 msgid "Under the hood"
 msgstr "מאחורי הקלעים"
 
@@ -1191,11 +1302,11 @@ msgstr "ארצות הברית"
 msgid "Unverified"
 msgstr "לא מאומת"
 
-#: src/features/auth/identity-form.tsx:145
+#: src/features/auth/identity-form.tsx:152
 msgid "Use a different account"
 msgstr "השתמש בחשבון אחר"
 
-#: src/features/landing/landing-page.tsx:128
+#: src/features/landing/landing-page.tsx:131
 msgid "Use the apps"
 msgstr "השתמש באפליקציות"
 
@@ -1212,7 +1323,7 @@ msgid "Verification code sent"
 msgstr "קוד האימות נשלח"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:297
 msgid "Verification failed"
 msgstr "האימות נכשל"
 
@@ -1223,6 +1334,10 @@ msgstr "אמת"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "אמת כתובת אימייל"
+
+#: src/features/auth/mfa/index.tsx:284
+msgid "Verify with passkey"
+msgstr "אמת באמצעות מפתח גישה"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1236,7 +1351,7 @@ msgstr "הצג הכל"
 msgid "View all notifications"
 msgstr "הצג את כל ההתראות"
 
-#: src/features/landing/landing-page.tsx:449
+#: src/features/landing/landing-page.tsx:456
 msgid "View source code"
 msgstr "הצג קוד מקור"
 
@@ -1244,7 +1359,7 @@ msgstr "הצג קוד מקור"
 msgid "We'll be back online shortly."
 msgstr "נחזור להיות מקוונים בקרוב."
 
-#: src/features/landing/landing-page.tsx:434
+#: src/features/landing/landing-page.tsx:441
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "אנחנו מחפשים מאמצים מוקדמים שמוכנים לנסות את Mochi ולתת משוב כן. זו גרסה 0.3 ולכן יש בה כמה באגים, אבל היא מוכנה לשימוש יומיומי."
 
@@ -1256,20 +1371,37 @@ msgstr "האתר בתחזוקה!"
 msgid "Wednesday"
 msgstr "יום רביעי"
 
-#: src/features/landing/landing-page.tsx:108
+#: src/features/landing/landing-page.tsx:111
 msgid "Wikis"
 msgstr "ויקים"
 
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:38
+msgid "Your {0} email is not verified"
+msgstr "האימייל שלך ב-{0} לא אומת"
+
+#: src/lib/oauth-errors.ts:46
+msgid "Your account has been suspended"
+msgstr "החשבון שלך הושעה"
+
 #: src/features/auth/mfa/index.tsx:168
-#: src/features/auth/recovery/index.tsx:78
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
+#: src/features/auth/recovery/index.tsx:84
+#: src/features/auth/sign-in/components/user-auth-form.tsx:286
 msgid "Your account has been suspended."
 msgstr "החשבון שלך הושעה."
 
-#: src/features/landing/landing-page.tsx:328
+#: src/lib/oauth-errors.ts:40
+msgid "Your account requires a passkey to sign in"
+msgstr "החשבון שלך דורש מפתח גישה להתחברות"
+
+#: src/features/landing/landing-page.tsx:335
 msgid "Your apps, your platform, your network"
 msgstr "האפליקציות שלך, הפלטפורמה שלך, הרשת שלך"
 
-#: src/features/auth/identity-form.tsx:63
+#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+msgid "Your code is: {devCode}"
+msgstr "הקוד שלך: {devCode}"
+
+#: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"
 msgstr "השם שלך, כפי שתרצה שאחרים יראו אותו"

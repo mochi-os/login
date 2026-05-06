@@ -42,8 +42,8 @@ msgid "Account removed"
 msgstr "Tinanggal ang account"
 
 #: src/features/auth/mfa/index.tsx:167
-#: src/features/auth/recovery/index.tsx:77
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
+#: src/features/auth/recovery/index.tsx:83
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
 msgid "Account suspended"
 msgstr "Na-suspend ang account"
 
@@ -72,7 +72,7 @@ msgstr "Magdagdag ng account"
 msgid "Add an account to receive notifications and use services."
 msgstr "Magdagdag ng account para makatanggap ng notification at gamitin ang mga serbisyo."
 
-#: src/features/landing/landing-page.tsx:133
+#: src/features/landing/landing-page.tsx:136
 msgid "Add friends, join communities. Data syncs directly between nodes — peer-to-peer, end-to-end."
 msgstr "Magdagdag ng mga kaibigan, sumali sa mga community. Direktang nag-sync ang data sa pagitan ng mga node — peer-to-peer, end-to-end."
 
@@ -108,15 +108,20 @@ msgstr "AI"
 msgid "All"
 msgstr "Lahat"
 
-#: src/features/landing/landing-page.tsx:144
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:36
+msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
+msgstr "May account na nagamit na ang email na iyan. Mag-sign in muna, pagkatapos i-link ang {0} mula sa iyong auth settings."
+
+#: src/features/landing/landing-page.tsx:149
 msgid "App business logic"
 msgstr "Business logic ng app"
 
-#: src/features/landing/landing-page.tsx:145
+#: src/features/landing/landing-page.tsx:150
 msgid "App user interfaces"
 msgstr "Mga user interface ng app"
 
-#: src/features/landing/landing-page.tsx:288
+#: src/features/landing/landing-page.tsx:295
 msgid "Apps"
 msgstr "Mga app"
 
@@ -128,8 +133,12 @@ msgstr "Sigurado ka bang gusto mong mag-log out? Kakailanganin mong mag-log in m
 msgid "Asc"
 msgstr "Asc"
 
-#: src/features/auth/mfa/index.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/mfa/index.tsx:184
+msgid "authenticator code"
+msgstr "authenticator code"
+
+#: src/features/auth/mfa/index.tsx:243
+#: src/features/auth/sign-in/components/user-auth-form.tsx:377
 msgid "Authenticator code"
 msgstr "Authenticator code"
 
@@ -147,15 +156,15 @@ msgstr "Bumalik sa Home"
 msgid "Boost interest"
 msgstr "Palakasin ang interes"
 
-#: src/features/landing/landing-page.tsx:110
+#: src/features/landing/landing-page.tsx:113
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Bumuo ng kolaboratibo, replicated knowledge base para sa iyong community. Sa iyo lagi ang iyong data."
 
-#: src/features/landing/landing-page.tsx:403
+#: src/features/landing/landing-page.tsx:410
 msgid "Built on solid foundations"
 msgstr "Itinayo sa matibay na pundasyon"
 
-#: src/features/landing/landing-page.tsx:343
+#: src/features/landing/landing-page.tsx:350
 msgid "Built-in apps"
 msgstr "Mga built-in na app"
 
@@ -177,11 +186,11 @@ msgstr "Category para sa notification na ito"
 msgid "Change notification category"
 msgstr "Baguhin ang category ng notification"
 
-#: src/features/landing/landing-page.tsx:113
+#: src/features/landing/landing-page.tsx:116
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:141
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Check your email."
 msgstr "Tingnan ang iyong email."
 
@@ -244,11 +253,11 @@ msgstr "Isara ang panel"
 msgid "Close search"
 msgstr "Isara ang paghahanap"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:129
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
 msgid "Code copied"
 msgstr "Nakopya ang code"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:116
+#: src/features/auth/sign-in/components/user-auth-form.tsx:127
 msgid "Code sent."
 msgstr "Naipadala ang code."
 
@@ -264,12 +273,16 @@ msgstr "Malapit nang dumating!"
 msgid "Compact"
 msgstr "Compact"
 
+#: src/features/auth/mfa/index.tsx:188
+msgid "Complete verification to continue"
+msgstr "Kumpletuhin ang verification para magpatuloy"
+
 #: ../../../lib/web/src/components/place-picker.tsx:155
 #: ../../../lib/web/src/components/travelling-picker.tsx:299
 msgid "Confirm"
 msgstr "Kumpirmahin"
 
-#: src/features/landing/landing-page.tsx:132
+#: src/features/landing/landing-page.tsx:135
 msgid "Connect with others"
 msgstr "Kumonekta sa iba"
 
@@ -282,6 +295,7 @@ msgid "Contextual information and details."
 msgstr "Contextual na impormasyon at detalye."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:72
+#: src/features/auth/identity-form.tsx:134
 msgid "Continue"
 msgstr "Magpatuloy"
 
@@ -289,27 +303,27 @@ msgstr "Magpatuloy"
 msgid "Copy"
 msgstr "Kopyahin"
 
-#: src/features/auth/identity-form.tsx:141
+#: src/features/auth/identity-form.tsx:148
 msgid "Could not cancel"
 msgstr "Hindi nakansela"
 
-#: src/features/landing/landing-page.tsx:211
+#: src/features/landing/landing-page.tsx:217
 msgid "Could not start sign-in"
 msgstr "Hindi nasimulan ang pag-sign-in"
 
-#: src/features/landing/landing-page.tsx:441
+#: src/features/landing/landing-page.tsx:448
 msgid "Create an account"
 msgstr "Gumawa ng account"
 
-#: src/features/landing/landing-page.tsx:124
+#: src/features/landing/landing-page.tsx:127
 msgid "Create your node"
 msgstr "Gumawa ng iyong node"
 
-#: src/features/landing/landing-page.tsx:95
+#: src/features/landing/landing-page.tsx:98
 msgid "Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what's important to you."
 msgstr "Gumawa ng iyong sariling mga discussion forum, o sumali sa iba. Gamitin ang opsyonal na AI tagging at sorting para makita kung ano ang mahalaga sa iyo."
 
-#: src/features/landing/landing-page.tsx:103
+#: src/features/landing/landing-page.tsx:106
 msgid "CRM"
 msgstr "CRM"
 
@@ -361,7 +375,7 @@ msgstr "Direksyon"
 msgid "Displays the mobile sidebar."
 msgstr "Ipinapakita ang mobile sidebar."
 
-#: src/features/landing/landing-page.tsx:375
+#: src/features/landing/landing-page.tsx:382
 msgid "Distributed by design"
 msgstr "Distributed by design"
 
@@ -369,24 +383,41 @@ msgstr "Distributed by design"
 msgid "Download"
 msgstr "I-download"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:438
+#: src/features/auth/sign-in/components/user-auth-form.tsx:451
 msgid "Email"
 msgstr "Email"
 
-#: src/features/auth/mfa/index.tsx:214
-#: src/features/auth/sign-in/components/user-auth-form.tsx:337
+#: src/features/auth/mfa/index.tsx:183
+msgid "email code"
+msgstr "email code"
+
+#: src/features/auth/mfa/index.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Email code"
 msgstr "Email code"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
+#: src/features/auth/recovery/index.tsx:101
+msgid "Enter a recovery code for \"{userEmail}\" to sign in"
+msgstr "Maglagay ng recovery code para sa \"{userEmail}\" para mag-sign in"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:331
 msgid "Enter the code from your authenticator app"
 msgstr "Ilagay ang code mula sa iyong authenticator app"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#. placeholder {0}: methods[0]
+#: src/features/auth/mfa/index.tsx:191
+msgid "Enter your {0}"
+msgstr "Ilagay ang iyong {0}"
+
+#: src/features/auth/mfa/index.tsx:195
+msgid "Enter your {initial} and {last}"
+msgstr "Ilagay ang iyong {initial} at {last}"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Enter your email code and authenticator code"
 msgstr "Ilagay ang iyong email code at authenticator code"
 
-#: src/features/landing/landing-page.tsx:346
+#: src/features/landing/landing-page.tsx:353
 msgid "Everything you need, nothing you don't control"
 msgstr "Lahat ng kailangan mo, walang hindi mo kontrolado"
 
@@ -398,11 +429,11 @@ msgstr "I-expand ang sidebar"
 msgid "Failed to add account"
 msgstr "Nabigong magdagdag ng account"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Failed to continue"
 msgstr "Nabigong magpatuloy"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:142
 msgid "Failed to copy code"
 msgstr "Nabigong kumopya ng code"
 
@@ -410,7 +441,7 @@ msgstr "Nabigong kumopya ng code"
 msgid "Failed to remove account"
 msgstr "Nabigong tanggalin ang account"
 
-#: src/features/auth/identity-form.tsx:49
+#: src/features/auth/identity-form.tsx:56
 msgid "Failed to save identity"
 msgstr "Nabigong i-save ang identity"
 
@@ -422,11 +453,11 @@ msgstr "Nabigong magpadala ng verification code"
 msgid "Failed to update category"
 msgstr "Nabigong i-update ang category"
 
-#: src/features/landing/landing-page.tsx:88
+#: src/features/landing/landing-page.tsx:91
 msgid "Feeds"
 msgstr "Mga feed"
 
-#: src/features/landing/landing-page.tsx:129
+#: src/features/landing/landing-page.tsx:132
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Mga feed, forum, project, CRM, wiki — lahat built in. O sumulat ng sarili mong mga app sa Starlark."
 
@@ -438,7 +469,7 @@ msgstr "Tapusin ang pag-set up ng iyong account"
 msgid "Floating"
 msgstr "Floating"
 
-#: src/features/landing/landing-page.tsx:93
+#: src/features/landing/landing-page.tsx:96
 msgid "Forums"
 msgstr "Mga forum"
 
@@ -495,12 +526,12 @@ msgstr "Home"
 msgid "Hot"
 msgstr "Hot"
 
-#: src/features/landing/landing-page.tsx:294
-#: src/features/landing/landing-page.tsx:372
+#: src/features/landing/landing-page.tsx:301
+#: src/features/landing/landing-page.tsx:379
 msgid "How it works"
 msgstr "Paano ito gumagana"
 
-#: src/features/auth/identity-form.tsx:44
+#: src/features/auth/identity-form.tsx:51
 msgid "Identity saved"
 msgstr "Nasave ang identity"
 
@@ -516,7 +547,7 @@ msgstr "Inset"
 msgid "Interests"
 msgstr "Mga interest"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:187
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Invalid authenticator code"
 msgstr "Invalid na authenticator code"
 
@@ -525,25 +556,25 @@ msgstr "Invalid na authenticator code"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
-#: src/features/auth/sign-in/components/user-auth-form.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:280
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:224
+#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:293
 msgid "Invalid code"
 msgstr "Invalid na code"
 
-#: src/features/auth/recovery/index.tsx:70
-#: src/features/auth/recovery/index.tsx:81
+#: src/features/auth/recovery/index.tsx:76
+#: src/features/auth/recovery/index.tsx:87
 msgid "Invalid recovery code"
 msgstr "Invalid na recovery code"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:263
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
 msgid "Invalid verification code"
 msgstr "Invalid na verification code"
 
-#: src/features/landing/landing-page.tsx:105
+#: src/features/landing/landing-page.tsx:108
 msgid "Keep track of contacts, relationships, and interactions with a highly adaptable CRM."
 msgstr "Subaybayan ang mga contact, relasyon, at interaction gamit ang isang highly adaptable na CRM."
 
@@ -572,17 +603,17 @@ msgstr "Mag-load ng higit pa"
 msgid "Loading…"
 msgstr "Nilo-load…"
 
-#: src/features/auth/mfa/index.tsx:290
-#: src/features/auth/recovery/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:392
+#: src/features/auth/mfa/index.tsx:292
+#: src/features/auth/recovery/index.tsx:127
+#: src/features/auth/sign-in/components/user-auth-form.tsx:405
 msgid "Log in"
 msgstr "Mag-log in"
 
-#: src/features/landing/landing-page.tsx:465
+#: src/features/landing/landing-page.tsx:474
 msgid "Log in to Mochi"
 msgstr "Mag-log in sa Mochi"
 
-#: src/features/landing/landing-page.tsx:515
+#: src/features/landing/landing-page.tsx:524
 msgid "Log in with {label}"
 msgstr "Mag-log in gamit ang {label}"
 
@@ -604,9 +635,9 @@ msgstr "Mag-log in gamit ang iyong email address"
 msgid "Log out"
 msgstr "Mag-log out"
 
-#: src/features/auth/recovery/index.tsx:33
+#: src/features/auth/recovery/index.tsx:39
 #: src/features/auth/sign-in/index.tsx:35
-#: src/features/landing/landing-page.tsx:234
+#: src/features/landing/landing-page.tsx:240
 msgid "Logged in"
 msgstr "Naka-log in"
 
@@ -622,8 +653,12 @@ msgstr "Matagumpay na nag-log out"
 msgid "Logging out…"
 msgstr "Nagla-log out…"
 
-#: src/features/auth/mfa/index.tsx:314
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/lib/oauth-errors.ts:44
+msgid "Login session expired, please try again"
+msgstr "Nag-expire na ang login session, subukan muli"
+
+#: src/features/auth/mfa/index.tsx:316
+#: src/features/auth/sign-in/components/user-auth-form.tsx:427
 msgid "Lost access? Use a recovery code"
 msgstr "Nawalan ng access? Gumamit ng recovery code"
 
@@ -631,7 +666,7 @@ msgstr "Nawalan ng access? Gumamit ng recovery code"
 msgid "Luma (Default)"
 msgstr "Luma (Default)"
 
-#: src/features/landing/landing-page.tsx:100
+#: src/features/landing/landing-page.tsx:103
 msgid "Manage tickets and tasks in a friendly and highly flexible Kanban-style interface."
 msgstr "Pamahalaan ang mga ticket at gawain sa isang madaling gamitin at flexible na Kanban-style interface."
 
@@ -644,7 +679,7 @@ msgstr "Markahan lahat bilang nabasa"
 msgid "Menu"
 msgstr "Menu"
 
-#: src/features/landing/landing-page.tsx:115
+#: src/features/landing/landing-page.tsx:118
 msgid "Message your friends, individually or in groups, peer-to-peer and encrypted."
 msgstr "I-message ang iyong mga kaibigan, isa-isa o sa grupo, peer-to-peer at encrypted."
 
@@ -652,23 +687,23 @@ msgstr "I-message ang iyong mga kaibigan, isa-isa o sa grupo, peer-to-peer at en
 msgid "Metric"
 msgstr "Metric"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:287
 msgid "Mochi"
 msgstr "Mochi"
 
-#: src/features/landing/landing-page.tsx:349
+#: src/features/landing/landing-page.tsx:356
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Ang Mochi ay may higit sa 20 app na, at marami pang idinadagdag madalas. Kabilang sa mga pangunahing app ay:"
 
-#: src/features/landing/landing-page.tsx:331
+#: src/features/landing/landing-page.tsx:338
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Ang Mochi ay isang federated, multi-user na platform para sa mga distributed app. Sinuman ay maaaring magpatakbo ng kanilang sariling server, at kumonekta sa sinumang ibang user sa Mochi network. Sinuman ay maaaring gumawa at mag-publish ng mga app."
 
-#: src/features/landing/landing-page.tsx:406
+#: src/features/landing/landing-page.tsx:413
 msgid "Mochi is built using the following technologies:"
 msgstr "Ginawa ang Mochi gamit ang mga sumusunod na teknolohiya:"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:341
 msgid "Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes."
 msgstr "Ang Mochi ay kasalukuyang nasa bersyon 0.3. Handa na ito para sa pang-araw-araw na paggamit kung katamtaman kang technical, at matiyaga sa mga bug. Kung ikaw ay isang developer, handa na rin ito para sa paggawa mo ng mga app basta't hindi ka mag-aatubili sa ilang API changes."
 
@@ -676,7 +711,7 @@ msgstr "Ang Mochi ay kasalukuyang nasa bersyon 0.3. Handa na ito para sa pang-ar
 msgid "Monday"
 msgstr "Lunes"
 
-#: src/features/landing/landing-page.tsx:142
+#: src/features/landing/landing-page.tsx:147
 msgid "Networking"
 msgstr "Networking"
 
@@ -684,12 +719,16 @@ msgstr "Networking"
 msgid "New"
 msgstr "Bago"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/lib/oauth-errors.ts:34
+msgid "New accounts are disabled on this server"
+msgstr "Naka-disable ang mga bagong account sa server na ito"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:290
 msgid "New user signup is disabled."
 msgstr "Naka-disable ang signup ng bagong user."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:451
+#: src/features/auth/sign-in/components/user-auth-form.tsx:464
 msgid "Next"
 msgstr "Susunod"
 
@@ -701,7 +740,7 @@ msgstr "Susunod na imahe"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Walang naka-configure na access rule. Magdagdag ng mga rule upang kontrolin kung sino ang maaaring mag-access sa resource na ito."
 
-#: src/features/landing/landing-page.tsx:378
+#: src/features/landing/landing-page.tsx:385
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Walang central server na humahawak sa iyong data. Ang bawat Mochi node ay isang ganap na peer sa network, direktang nakikipag-usap sa iba sa pamamagitan ng libp2p."
 
@@ -778,7 +817,7 @@ msgstr "Buksan ang mga setting ng theme"
 msgid "Or"
 msgstr "O"
 
-#: src/features/landing/landing-page.tsx:488
+#: src/features/landing/landing-page.tsx:497
 msgid "Or log in with"
 msgstr "O mag-login gamit ang"
 
@@ -786,7 +825,7 @@ msgstr "O mag-login gamit ang"
 msgid "Other"
 msgstr "Iba pa"
 
-#: src/features/auth/identity-form.tsx:100
+#: src/features/auth/identity-form.tsx:107
 msgid "Other users can find your profile."
 msgstr "Mahahanap ng ibang user ang iyong profile."
 
@@ -794,22 +833,26 @@ msgstr "Mahahanap ng ibang user ang iyong profile."
 msgid "Owner"
 msgstr "May-ari"
 
-#: src/features/auth/mfa/index.tsx:272
-#: src/features/landing/landing-page.tsx:504
+#: src/features/auth/mfa/index.tsx:185
+msgid "passkey"
+msgstr "passkey"
+
+#: src/features/auth/mfa/index.tsx:274
+#: src/features/landing/landing-page.tsx:513
 msgid "Passkey"
 msgstr "Passkey"
 
 #: src/features/auth/sign-in/index.tsx:50
-#: src/features/landing/landing-page.tsx:252
+#: src/features/landing/landing-page.tsx:258
 msgid "Passkey login cancelled"
 msgstr "Kinansela ang passkey login"
 
 #: src/features/auth/sign-in/index.tsx:48
-#: src/features/landing/landing-page.tsx:250
+#: src/features/landing/landing-page.tsx:256
 msgid "Passkey login failed"
 msgstr "Nabigo ang passkey login"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:101
+#: src/features/auth/sign-in/components/user-auth-form.tsx:112
 msgid "Passkey login required"
 msgstr "Kailangan ang passkey login"
 
@@ -817,29 +860,72 @@ msgstr "Kailangan ang passkey login"
 msgid "Passkey MFA not yet implemented"
 msgstr "Hindi pa naipapatupad ang Passkey MFA"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:313
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Paste the login code you received by email"
 msgstr "I-paste ang login code na natanggap mo sa email"
 
-#: src/features/auth/recovery/index.tsx:71
-#: src/features/auth/recovery/index.tsx:82
+#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+msgid "Please check your authenticator app and try again."
+msgstr "Pakitignan ang iyong authenticator app at subukan muli."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:217
+#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+msgid "Please check your authenticator code and try again."
+msgstr "Pakitignan ang iyong authenticator code at subukan muli."
+
+#: src/features/auth/mfa/index.tsx:141
+#: src/features/auth/mfa/index.tsx:161
+#: src/features/auth/mfa/index.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:294
+msgid "Please check your code and try again."
+msgstr "Pakitignan ang iyong code at subukan muli."
+
+#: src/features/auth/mfa/index.tsx:99
+#: src/features/auth/mfa/index.tsx:121
+#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:262
+msgid "Please check your codes and try again."
+msgstr "Pakitignan ang iyong mga code at subukan muli."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+msgid "Please check your email and try again."
+msgstr "Pakitignan ang iyong email at subukan muli."
+
+#: src/features/auth/recovery/index.tsx:77
+#: src/features/auth/recovery/index.tsx:88
 msgid "Please check your recovery code and try again."
 msgstr "Mangyaring suriin ang iyong recovery code at subukan muli."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:132
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
 msgid "Please copy manually: {devCode}"
 msgstr "Mangyaring kopyahin nang manu-mano: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:48
+msgid "Please enter a valid email"
+msgstr "Maglagay ng valid na email"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:183
 msgid "Please enter your authenticator code"
 msgstr "Mangyaring ilagay ang iyong authenticator code"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/identity-form.tsx:29
+msgid "Please enter your name"
+msgstr "Ilagay ang iyong pangalan"
+
+#: src/features/auth/recovery/index.tsx:28
+msgid "Please enter your recovery code"
+msgstr "Ilagay ang iyong recovery code"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:298
 msgid "Please try again or contact support."
 msgstr "Mangyaring subukan muli o makipag-ugnayan sa support."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:102
+#: src/features/auth/mfa/index.tsx:87
+msgid "Please use another verification method."
+msgstr "Gumamit ng ibang paraan ng verification."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:113
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Mangyaring gamitin ang \"Log in with passkey\" button."
 
@@ -847,11 +933,11 @@ msgstr "Mangyaring gamitin ang \"Log in with passkey\" button."
 msgid "Previous image"
 msgstr "Nakaraang imahe"
 
-#: src/features/auth/identity-form.tsx:85
+#: src/features/auth/identity-form.tsx:92
 msgid "Privacy"
 msgstr "Privacy"
 
-#: src/features/auth/identity-form.tsx:112
+#: src/features/auth/identity-form.tsx:119
 msgid "Private"
 msgstr "Pribado"
 
@@ -860,19 +946,19 @@ msgstr "Pribado"
 msgid "Profile"
 msgstr "Profile"
 
-#: src/features/landing/landing-page.tsx:98
+#: src/features/landing/landing-page.tsx:101
 msgid "Projects"
 msgstr "Mga Proyekto"
 
-#: src/features/auth/identity-form.tsx:98
+#: src/features/auth/identity-form.tsx:105
 msgid "Public"
 msgstr "Pampubliko"
 
-#: src/features/landing/landing-page.tsx:90
+#: src/features/landing/landing-page.tsx:93
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "I-publish ang iyong sariling social media feed, sumunod sa iba, o pagsama-samahin ang iba pang feed na may opsyonal na AI tagging at pag-sort. Sundan ang mahalaga, salain ang ingay."
 
-#: src/features/landing/landing-page.tsx:431
+#: src/features/landing/landing-page.tsx:438
 msgid "Ready to try Mochi?"
 msgstr "Handa nang subukan ang Mochi?"
 
@@ -881,7 +967,7 @@ msgstr "Handa nang subukan ang Mochi?"
 msgid "Recommended"
 msgstr "Inirerekomenda"
 
-#: src/features/auth/recovery/index.tsx:109
+#: src/features/auth/recovery/index.tsx:115
 msgid "Recovery code"
 msgstr "Recovery code"
 
@@ -889,12 +975,16 @@ msgstr "Recovery code"
 msgid "Redirecting to login."
 msgstr "Nire-redirect sa login."
 
+#: src/features/auth/identity-form.tsx:52
+msgid "Redirecting you to the dashboard…"
+msgstr "Nire-redirect ka sa dashboard…"
+
 #: ../../../lib/web/src/components/post-tags.tsx:175
 msgid "Reduce interest"
 msgstr "Bawasan ang interes"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
-#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
 msgid "Registration disabled"
 msgstr "Naka-disable ang pagpaparehistro"
 
@@ -1010,7 +1100,7 @@ msgstr "Pumili ng direksyon ng site"
 msgid "Select theme preference"
 msgstr "Pumili ng theme preference"
 
-#: src/features/landing/landing-page.tsx:141
+#: src/features/landing/landing-page.tsx:146
 msgid "Server"
 msgstr "Server"
 
@@ -1038,13 +1128,21 @@ msgstr "Ipinapakita ang {totalShown} sa {total}"
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: src/features/landing/landing-page.tsx:125
+#: src/features/landing/landing-page.tsx:128
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Mag-sign up at malilikha ang sarili mong Mochi node. Doon nakatira ang iyong data — hindi sa server ng iba."
 
-#: src/features/landing/landing-page.tsx:309
+#: src/features/landing/landing-page.tsx:316
 msgid "Sign up or log in"
 msgstr "Mag-sign up o mag-log in"
+
+#: src/lib/oauth-errors.ts:32
+msgid "Sign-in cancelled"
+msgstr "Kinansela ang sign-in"
+
+#: src/lib/oauth-errors.ts:51
+msgid "Sign-in failed, please try again"
+msgstr "Nabigo ang sign-in, subukan muli"
 
 #: ../../../lib/web/src/components/layout/authenticated-layout.tsx:128
 msgid "Signing out..."
@@ -1054,13 +1152,13 @@ msgstr "Nag-si-sign out..."
 msgid "Skip to Main"
 msgstr "Laktawan papunta sa Pangunahing Bahagi"
 
-#: src/features/auth/mfa/index.tsx:302
-#: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/mfa/index.tsx:304
+#: src/features/auth/recovery/index.tsx:138
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Start again"
 msgstr "Magsimulang muli"
 
-#: src/features/auth/identity-form.tsx:114
+#: src/features/auth/identity-form.tsx:121
 msgid "Stay hidden from directory searches."
 msgstr "Manatiling nakatago sa mga paghahanap sa direktoryo."
 
@@ -1068,7 +1166,7 @@ msgstr "Manatiling nakatago sa mga paghahanap sa direktoryo."
 msgid "Stay tuned though!"
 msgstr "Pero manatiling nakaabang!"
 
-#: src/features/landing/landing-page.tsx:143
+#: src/features/landing/landing-page.tsx:148
 msgid "Storage"
 msgstr "Storage"
 
@@ -1076,7 +1174,7 @@ msgstr "Storage"
 msgid "Subject"
 msgstr "Paksa"
 
-#: src/features/auth/recovery/index.tsx:34
+#: src/features/auth/recovery/index.tsx:40
 msgid "Successfully signed in with recovery code"
 msgstr "Matagumpay na nag-sign in gamit ang recovery code"
 
@@ -1097,9 +1195,22 @@ msgstr "Tag"
 msgid "Teams/Apps"
 msgstr "Teams/Apps"
 
-#: src/features/landing/landing-page.tsx:300
+#: src/features/landing/landing-page.tsx:307
 msgid "Technology"
 msgstr "Teknolohiya"
+
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:42
+msgid "That {0} account is already linked to another user"
+msgstr "Naka-link na sa ibang user ang {0} account na iyan"
+
+#: src/lib/oauth-errors.ts:48
+msgid "That sign-in provider is not available"
+msgstr "Hindi available ang sign-in provider na iyan"
+
+#: src/lib/oauth-errors.ts:11
+msgid "the provider"
+msgstr "ang provider"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1179,7 +1290,7 @@ msgstr "Walang nakatalaga"
 msgid "Unauthorized Access"
 msgstr "Hindi Pinahihintulutang Pag-access"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:407
 msgid "Under the hood"
 msgstr "Sa likod ng eksena"
 
@@ -1191,11 +1302,11 @@ msgstr "United States"
 msgid "Unverified"
 msgstr "Hindi naberipika"
 
-#: src/features/auth/identity-form.tsx:145
+#: src/features/auth/identity-form.tsx:152
 msgid "Use a different account"
 msgstr "Gumamit ng ibang account"
 
-#: src/features/landing/landing-page.tsx:128
+#: src/features/landing/landing-page.tsx:131
 msgid "Use the apps"
 msgstr "Gamitin ang mga app"
 
@@ -1212,7 +1323,7 @@ msgid "Verification code sent"
 msgstr "Naipadala ang verification code"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:297
 msgid "Verification failed"
 msgstr "Nabigo ang beripikasyon"
 
@@ -1223,6 +1334,10 @@ msgstr "Beripikahin"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Beripikahin ang email address"
+
+#: src/features/auth/mfa/index.tsx:284
+msgid "Verify with passkey"
+msgstr "I-verify gamit ang passkey"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1236,7 +1351,7 @@ msgstr "Tingnan lahat"
 msgid "View all notifications"
 msgstr "Tingnan lahat ng notification"
 
-#: src/features/landing/landing-page.tsx:449
+#: src/features/landing/landing-page.tsx:456
 msgid "View source code"
 msgstr "Tingnan ang source code"
 
@@ -1244,7 +1359,7 @@ msgstr "Tingnan ang source code"
 msgid "We'll be back online shortly."
 msgstr "Babalik kami online sa lalong madaling panahon."
 
-#: src/features/landing/landing-page.tsx:434
+#: src/features/landing/landing-page.tsx:441
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Naghahanap kami ng mga early adopter na handang subukan ang Mochi at magbigay ng honest na feedback. Bersyon 0.3 ito kaya may ilang bug, ngunit handa na para sa pang-araw-araw na paggamit."
 
@@ -1256,20 +1371,37 @@ msgstr "Nasa ilalim ng maintenance ang website!"
 msgid "Wednesday"
 msgstr "Miyerkules"
 
-#: src/features/landing/landing-page.tsx:108
+#: src/features/landing/landing-page.tsx:111
 msgid "Wikis"
 msgstr "Mga wiki"
 
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:38
+msgid "Your {0} email is not verified"
+msgstr "Hindi pa naka-verify ang iyong {0} email"
+
+#: src/lib/oauth-errors.ts:46
+msgid "Your account has been suspended"
+msgstr "Naka-suspend ang iyong account"
+
 #: src/features/auth/mfa/index.tsx:168
-#: src/features/auth/recovery/index.tsx:78
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
+#: src/features/auth/recovery/index.tsx:84
+#: src/features/auth/sign-in/components/user-auth-form.tsx:286
 msgid "Your account has been suspended."
 msgstr "Naka-suspend ang iyong account."
 
-#: src/features/landing/landing-page.tsx:328
+#: src/lib/oauth-errors.ts:40
+msgid "Your account requires a passkey to sign in"
+msgstr "Kailangan ng passkey ng iyong account para mag-sign in"
+
+#: src/features/landing/landing-page.tsx:335
 msgid "Your apps, your platform, your network"
 msgstr "Iyong mga app, iyong platform, iyong network"
 
-#: src/features/auth/identity-form.tsx:63
+#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+msgid "Your code is: {devCode}"
+msgstr "Ang code mo ay: {devCode}"
+
+#: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"
 msgstr "Iyong pangalan, kung paano mo gustong makita ito ng iba"

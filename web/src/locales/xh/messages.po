@@ -42,8 +42,8 @@ msgid "Account removed"
 msgstr "I-akhawunti isusiwe"
 
 #: src/features/auth/mfa/index.tsx:167
-#: src/features/auth/recovery/index.tsx:77
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
+#: src/features/auth/recovery/index.tsx:83
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
 msgid "Account suspended"
 msgstr "I-akhawunti inqunyanyisiwe"
 
@@ -72,7 +72,7 @@ msgstr "Yongeza i-akhawunti"
 msgid "Add an account to receive notifications and use services."
 msgstr "Yongeza i-akhawunti ukuze ufumane izaziso kwaye usebenzise iinkonzo."
 
-#: src/features/landing/landing-page.tsx:133
+#: src/features/landing/landing-page.tsx:136
 msgid "Add friends, join communities. Data syncs directly between nodes — peer-to-peer, end-to-end."
 msgstr "Yongeza abahlobo, ujoyine uluntu. Idatha ivumelaniswa ngokuthe ngqo phakathi kwee-nodes — peer-to-peer, ukusukela ekuqaleni ukuya ekupheleni."
 
@@ -108,15 +108,20 @@ msgstr "AI"
 msgid "All"
 msgstr "Konke"
 
-#: src/features/landing/landing-page.tsx:144
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:36
+msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
+msgstr "I-akhawunti ene-imeyile leyo sele ikhona. Ngena kuqala, emva koko udibanise i-{0} kwii-setingi zakho ze-auth."
+
+#: src/features/landing/landing-page.tsx:149
 msgid "App business logic"
 msgstr "Ingqiqo yeshishini le-app"
 
-#: src/features/landing/landing-page.tsx:145
+#: src/features/landing/landing-page.tsx:150
 msgid "App user interfaces"
 msgstr "Iijongano zomsebenzisi we-app"
 
-#: src/features/landing/landing-page.tsx:288
+#: src/features/landing/landing-page.tsx:295
 msgid "Apps"
 msgstr "Ii-apps"
 
@@ -128,8 +133,12 @@ msgstr "Uqinisekile ufuna ukuphuma? Kuya kufuneka ungene kwakhona ukuze ufikelel
 msgid "Asc"
 msgstr "Enyukayo"
 
-#: src/features/auth/mfa/index.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/mfa/index.tsx:184
+msgid "authenticator code"
+msgstr "ikhowudi yomqinisekisi"
+
+#: src/features/auth/mfa/index.tsx:243
+#: src/features/auth/sign-in/components/user-auth-form.tsx:377
 msgid "Authenticator code"
 msgstr "Ikhowudi yokuqinisekisa"
 
@@ -147,15 +156,15 @@ msgstr "Buyela eKhaya"
 msgid "Boost interest"
 msgstr "Khulisa umdla"
 
-#: src/features/landing/landing-page.tsx:110
+#: src/features/landing/landing-page.tsx:113
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Yakha isiseko solwazi esisetyenziswa ndawonye, esiphindaphindiweyo soluntu lwakho. Idatha yakho ihlala ingeyakho."
 
-#: src/features/landing/landing-page.tsx:403
+#: src/features/landing/landing-page.tsx:410
 msgid "Built on solid foundations"
 msgstr "Yakhiwe kwiziseko eziqinileyo"
 
-#: src/features/landing/landing-page.tsx:343
+#: src/features/landing/landing-page.tsx:350
 msgid "Built-in apps"
 msgstr "Ii-apps ezakhelwe ngaphakathi"
 
@@ -177,11 +186,11 @@ msgstr "Udidi lwesi saziso"
 msgid "Change notification category"
 msgstr "Tshintsha udidi lwesaziso"
 
-#: src/features/landing/landing-page.tsx:113
+#: src/features/landing/landing-page.tsx:116
 msgid "Chat"
 msgstr "Incoko"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:141
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Check your email."
 msgstr "Jonga i-imeyile yakho."
 
@@ -244,11 +253,11 @@ msgstr "Vala Iphaneli"
 msgid "Close search"
 msgstr "Vala ukukhangela"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:129
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
 msgid "Code copied"
 msgstr "Ikhowudi ikotshelwe"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:116
+#: src/features/auth/sign-in/components/user-auth-form.tsx:127
 msgid "Code sent."
 msgstr "Ikhowudi ithunyelwe."
 
@@ -264,12 +273,16 @@ msgstr "Iyeza Kungekudala!"
 msgid "Compact"
 msgstr "Mfutshane"
 
+#: src/features/auth/mfa/index.tsx:188
+msgid "Complete verification to continue"
+msgstr "Gqibezela uqinisekiso ukuze uqhubeke"
+
 #: ../../../lib/web/src/components/place-picker.tsx:155
 #: ../../../lib/web/src/components/travelling-picker.tsx:299
 msgid "Confirm"
 msgstr "Qinisekisa"
 
-#: src/features/landing/landing-page.tsx:132
+#: src/features/landing/landing-page.tsx:135
 msgid "Connect with others"
 msgstr "Dibanisa nabanye"
 
@@ -282,6 +295,7 @@ msgid "Contextual information and details."
 msgstr "Ulwazi nenkcukacha zomxholo."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:72
+#: src/features/auth/identity-form.tsx:134
 msgid "Continue"
 msgstr "Qhubeka"
 
@@ -289,27 +303,27 @@ msgstr "Qhubeka"
 msgid "Copy"
 msgstr "Kotshela"
 
-#: src/features/auth/identity-form.tsx:141
+#: src/features/auth/identity-form.tsx:148
 msgid "Could not cancel"
 msgstr "Ayikwazanga ukurhoxiswa"
 
-#: src/features/landing/landing-page.tsx:211
+#: src/features/landing/landing-page.tsx:217
 msgid "Could not start sign-in"
 msgstr "Ayikwazanga ukuqalisa ukungena"
 
-#: src/features/landing/landing-page.tsx:441
+#: src/features/landing/landing-page.tsx:448
 msgid "Create an account"
 msgstr "Yenza i-akhawunti"
 
-#: src/features/landing/landing-page.tsx:124
+#: src/features/landing/landing-page.tsx:127
 msgid "Create your node"
 msgstr "Yenza inode yakho"
 
-#: src/features/landing/landing-page.tsx:95
+#: src/features/landing/landing-page.tsx:98
 msgid "Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what's important to you."
 msgstr "Yenza ezakho iifora zengxoxo, okanye joyina ezinye. Sebenzisa ukufaka iithegi ze-AI nokuhlela ukubona okubalulekileyo kuwe."
 
-#: src/features/landing/landing-page.tsx:103
+#: src/features/landing/landing-page.tsx:106
 msgid "CRM"
 msgstr "I-CRM"
 
@@ -361,7 +375,7 @@ msgstr "Icala"
 msgid "Displays the mobile sidebar."
 msgstr "Ibonisa ibara lecala leselula."
 
-#: src/features/landing/landing-page.tsx:375
+#: src/features/landing/landing-page.tsx:382
 msgid "Distributed by design"
 msgstr "Isasazwa ngokuyilwa"
 
@@ -369,24 +383,41 @@ msgstr "Isasazwa ngokuyilwa"
 msgid "Download"
 msgstr "Khuphela"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:438
+#: src/features/auth/sign-in/components/user-auth-form.tsx:451
 msgid "Email"
 msgstr "I-imeyili"
 
-#: src/features/auth/mfa/index.tsx:214
-#: src/features/auth/sign-in/components/user-auth-form.tsx:337
+#: src/features/auth/mfa/index.tsx:183
+msgid "email code"
+msgstr "ikhowudi ye-imeyile"
+
+#: src/features/auth/mfa/index.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Email code"
 msgstr "Ikhowudi ye-imeyili"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
+#: src/features/auth/recovery/index.tsx:101
+msgid "Enter a recovery code for \"{userEmail}\" to sign in"
+msgstr "Faka ikhowudi yokufumana kwakhona ye-\"{userEmail}\" ukuze ungene"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:331
 msgid "Enter the code from your authenticator app"
 msgstr "Faka ikhowudi evela kwiapp yakho yesiqinisekisi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#. placeholder {0}: methods[0]
+#: src/features/auth/mfa/index.tsx:191
+msgid "Enter your {0}"
+msgstr "Faka i-{0} yakho"
+
+#: src/features/auth/mfa/index.tsx:195
+msgid "Enter your {initial} and {last}"
+msgstr "Faka i-{initial} kunye ne-{last} yakho"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Enter your email code and authenticator code"
 msgstr "Faka ikhowudi yakho ye-imeyili kunye nekhowudi yesiqinisekisi"
 
-#: src/features/landing/landing-page.tsx:346
+#: src/features/landing/landing-page.tsx:353
 msgid "Everything you need, nothing you don't control"
 msgstr "Yonke into oyifunayo, akukho nto ungayilawuli"
 
@@ -398,11 +429,11 @@ msgstr "Yandisa ibara lecala"
 msgid "Failed to add account"
 msgstr "Ayiphumelelanga ukongeza iakhawunti"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Failed to continue"
 msgstr "Ayiphumelelanga ukuqhubeka"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:142
 msgid "Failed to copy code"
 msgstr "Ayiphumelelanga ukukhuphela ikhowudi"
 
@@ -410,7 +441,7 @@ msgstr "Ayiphumelelanga ukukhuphela ikhowudi"
 msgid "Failed to remove account"
 msgstr "Ayiphumelelanga ukususa iakhawunti"
 
-#: src/features/auth/identity-form.tsx:49
+#: src/features/auth/identity-form.tsx:56
 msgid "Failed to save identity"
 msgstr "Ayiphumelelanga ukugcina isazisi"
 
@@ -422,11 +453,11 @@ msgstr "Ayiphumelelanga ukuthumela ikhowudi yokuqinisekisa"
 msgid "Failed to update category"
 msgstr "Ayiphumelelanga ukuhlaziya udidi"
 
-#: src/features/landing/landing-page.tsx:88
+#: src/features/landing/landing-page.tsx:91
 msgid "Feeds"
 msgstr "Iifidi"
 
-#: src/features/landing/landing-page.tsx:129
+#: src/features/landing/landing-page.tsx:132
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Iifidi, iiforamu, iiprojekthi, i-CRM, iiwiki — zonke zakhelwe ngaphakathi. Okanye bhala iiapp zakho ngeStarlark."
 
@@ -438,7 +469,7 @@ msgstr "Gqibezela ukuseta iakhawunti yakho"
 msgid "Floating"
 msgstr "Idadayo"
 
-#: src/features/landing/landing-page.tsx:93
+#: src/features/landing/landing-page.tsx:96
 msgid "Forums"
 msgstr "Iiforamu"
 
@@ -495,12 +526,12 @@ msgstr "Ekhaya"
 msgid "Hot"
 msgstr "Ishushu"
 
-#: src/features/landing/landing-page.tsx:294
-#: src/features/landing/landing-page.tsx:372
+#: src/features/landing/landing-page.tsx:301
+#: src/features/landing/landing-page.tsx:379
 msgid "How it works"
 msgstr "Indlela esebenza ngayo"
 
-#: src/features/auth/identity-form.tsx:44
+#: src/features/auth/identity-form.tsx:51
 msgid "Identity saved"
 msgstr "Isazisi sigciniwe"
 
@@ -516,7 +547,7 @@ msgstr "Yangaphakathi"
 msgid "Interests"
 msgstr "Imidla"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:187
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Invalid authenticator code"
 msgstr "Ikhowudi yesiqinisekisi engasebenziyo"
 
@@ -525,25 +556,25 @@ msgstr "Ikhowudi yesiqinisekisi engasebenziyo"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
-#: src/features/auth/sign-in/components/user-auth-form.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:280
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:224
+#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:293
 msgid "Invalid code"
 msgstr "Ikhowudi engasebenziyo"
 
-#: src/features/auth/recovery/index.tsx:70
-#: src/features/auth/recovery/index.tsx:81
+#: src/features/auth/recovery/index.tsx:76
+#: src/features/auth/recovery/index.tsx:87
 msgid "Invalid recovery code"
 msgstr "Ikhowudi yokufumana kwakhona engasebenziyo"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:263
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
 msgid "Invalid verification code"
 msgstr "Ikhowudi yokuqinisekisa engasebenziyo"
 
-#: src/features/landing/landing-page.tsx:105
+#: src/features/landing/landing-page.tsx:108
 msgid "Keep track of contacts, relationships, and interactions with a highly adaptable CRM."
 msgstr "Landela oonqakraza, ubudlelwane, kunye nokunxibelelana nge-CRM elungiseka kakuhle."
 
@@ -572,17 +603,17 @@ msgstr "Layisha okungakumbi"
 msgid "Loading…"
 msgstr "Kulayishwa…"
 
-#: src/features/auth/mfa/index.tsx:290
-#: src/features/auth/recovery/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:392
+#: src/features/auth/mfa/index.tsx:292
+#: src/features/auth/recovery/index.tsx:127
+#: src/features/auth/sign-in/components/user-auth-form.tsx:405
 msgid "Log in"
 msgstr "Ngena"
 
-#: src/features/landing/landing-page.tsx:465
+#: src/features/landing/landing-page.tsx:474
 msgid "Log in to Mochi"
 msgstr "Ngena kwiMochi"
 
-#: src/features/landing/landing-page.tsx:515
+#: src/features/landing/landing-page.tsx:524
 msgid "Log in with {label}"
 msgstr "Ngena nge-{label}"
 
@@ -604,9 +635,9 @@ msgstr "Ngena ngedilesi yakho ye-imeyili"
 msgid "Log out"
 msgstr "Phuma"
 
-#: src/features/auth/recovery/index.tsx:33
+#: src/features/auth/recovery/index.tsx:39
 #: src/features/auth/sign-in/index.tsx:35
-#: src/features/landing/landing-page.tsx:234
+#: src/features/landing/landing-page.tsx:240
 msgid "Logged in"
 msgstr "Ungenile"
 
@@ -622,8 +653,12 @@ msgstr "Uphume ngempumelelo"
 msgid "Logging out…"
 msgstr "Iyaphuma…"
 
-#: src/features/auth/mfa/index.tsx:314
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/lib/oauth-errors.ts:44
+msgid "Login session expired, please try again"
+msgstr "Iseshini yokungena iphelile, nceda uzame kwakhona"
+
+#: src/features/auth/mfa/index.tsx:316
+#: src/features/auth/sign-in/components/user-auth-form.tsx:427
 msgid "Lost access? Use a recovery code"
 msgstr "Ulahlekelwe lufikelelo? Sebenzisa ikhowudi yokubuyisa"
 
@@ -631,7 +666,7 @@ msgstr "Ulahlekelwe lufikelelo? Sebenzisa ikhowudi yokubuyisa"
 msgid "Luma (Default)"
 msgstr "Luma (Okumiselweyo)"
 
-#: src/features/landing/landing-page.tsx:100
+#: src/features/landing/landing-page.tsx:103
 msgid "Manage tickets and tasks in a friendly and highly flexible Kanban-style interface."
 msgstr "Lawula amatikiti nemisebenzi kwijongano elinobubele neliguquguqukayo kakhulu lohlobo lwe-Kanban."
 
@@ -644,7 +679,7 @@ msgstr "Phawula konke njengokufundiwe"
 msgid "Menu"
 msgstr "Imenyu"
 
-#: src/features/landing/landing-page.tsx:115
+#: src/features/landing/landing-page.tsx:118
 msgid "Message your friends, individually or in groups, peer-to-peer and encrypted."
 msgstr "Thumela imiyalezo kubahlobo bakho, ngabanye okanye ngamaqela, ngokwanqakraza kwabalingani kwaye igcinwe ngokufihliweyo."
 
@@ -652,23 +687,23 @@ msgstr "Thumela imiyalezo kubahlobo bakho, ngabanye okanye ngamaqela, ngokwanqak
 msgid "Metric"
 msgstr "I-Metric"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:287
 msgid "Mochi"
 msgstr "Mochi"
 
-#: src/features/landing/landing-page.tsx:349
+#: src/features/landing/landing-page.tsx:356
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "I-Mochi sele isiza neenkqubo ezingaphezu kwama-20, kunye nezongezelelweyo rhoqo. Iinkqubo ezinkulu ziquka:"
 
-#: src/features/landing/landing-page.tsx:331
+#: src/features/landing/landing-page.tsx:338
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "I-Mochi yiqonga elimanyeneyo, lokusetyenziswa ngabasebenzisi abaninzi kwiinkqubo ezisasazwayo. Nabani na unokusebenzisa iseva yakhe, kwaye anxulumane nawuphi na omnye umsebenzisi kwinethiwekhi ye-Mochi. Nabani na angadala kwaye apapashe iinkqubo."
 
-#: src/features/landing/landing-page.tsx:406
+#: src/features/landing/landing-page.tsx:413
 msgid "Mochi is built using the following technologies:"
 msgstr "I-Mochi yakhiwe isebenzisa ezi tekhnoloji zilandelayo:"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:341
 msgid "Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes."
 msgstr "I-Mochi okwangoku iyinguqulelo 0.3. Ilungele ukusetyenziswa imihla ngemihla ukuba unobuchwepheshe obuphakathi, kwaye unyamezele iibhugi. Ukuba ungumphuhlisi, ikwalungele wena ukuba udale iinkqubo logama ungakhathali ukuba kukho utshintsho oluthile lwe-API."
 
@@ -676,7 +711,7 @@ msgstr "I-Mochi okwangoku iyinguqulelo 0.3. Ilungele ukusetyenziswa imihla ngemi
 msgid "Monday"
 msgstr "Umvulo"
 
-#: src/features/landing/landing-page.tsx:142
+#: src/features/landing/landing-page.tsx:147
 msgid "Networking"
 msgstr "Unxulumaniso"
 
@@ -684,12 +719,16 @@ msgstr "Unxulumaniso"
 msgid "New"
 msgstr "Entsha"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/lib/oauth-errors.ts:34
+msgid "New accounts are disabled on this server"
+msgstr "Iiakhawunti ezintsha zikhutshelwe kule seva"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:290
 msgid "New user signup is disabled."
 msgstr "Ukubhalisa kwabasebenzisi abatsha kuvaliwe."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:451
+#: src/features/auth/sign-in/components/user-auth-form.tsx:464
 msgid "Next"
 msgstr "Olandelayo"
 
@@ -701,7 +740,7 @@ msgstr "Umfanekiso olandelayo"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Akukho mithetho yofikelelo emiselwe. Yongeza imithetho yokulawula ukuba ngubani onokufikelela kwesi sixhobo."
 
-#: src/features/landing/landing-page.tsx:378
+#: src/features/landing/landing-page.tsx:385
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Akukho seva ephakathi egcina idatha yakho. I-node nganye ye-Mochi ngumlingani opheleleyo kwinethiwekhi, enxibelelana ngokuthe ngqo nabanye nge-libp2p."
 
@@ -778,7 +817,7 @@ msgstr "Vula iisetingi zomxholo"
 msgid "Or"
 msgstr "Okanye"
 
-#: src/features/landing/landing-page.tsx:488
+#: src/features/landing/landing-page.tsx:497
 msgid "Or log in with"
 msgstr "Okanye ngena ngo"
 
@@ -786,7 +825,7 @@ msgstr "Okanye ngena ngo"
 msgid "Other"
 msgstr "Okunye"
 
-#: src/features/auth/identity-form.tsx:100
+#: src/features/auth/identity-form.tsx:107
 msgid "Other users can find your profile."
 msgstr "Abanye abasebenzisi banokuyifumana iprofayile yakho."
 
@@ -794,22 +833,26 @@ msgstr "Abanye abasebenzisi banokuyifumana iprofayile yakho."
 msgid "Owner"
 msgstr "Umnini"
 
-#: src/features/auth/mfa/index.tsx:272
-#: src/features/landing/landing-page.tsx:504
+#: src/features/auth/mfa/index.tsx:185
+msgid "passkey"
+msgstr "passkey"
+
+#: src/features/auth/mfa/index.tsx:274
+#: src/features/landing/landing-page.tsx:513
 msgid "Passkey"
 msgstr "I-passkey"
 
 #: src/features/auth/sign-in/index.tsx:50
-#: src/features/landing/landing-page.tsx:252
+#: src/features/landing/landing-page.tsx:258
 msgid "Passkey login cancelled"
 msgstr "Ukungena nge-passkey kurhoxisiwe"
 
 #: src/features/auth/sign-in/index.tsx:48
-#: src/features/landing/landing-page.tsx:250
+#: src/features/landing/landing-page.tsx:256
 msgid "Passkey login failed"
 msgstr "Ukungena nge-passkey akuphumelelanga"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:101
+#: src/features/auth/sign-in/components/user-auth-form.tsx:112
 msgid "Passkey login required"
 msgstr "Ukungena nge-passkey kuyafuneka"
 
@@ -817,29 +860,72 @@ msgstr "Ukungena nge-passkey kuyafuneka"
 msgid "Passkey MFA not yet implemented"
 msgstr "I-passkey MFA ayikasetyenziswa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:313
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Paste the login code you received by email"
 msgstr "Ncamathisela ikhowudi yokungena oyifumene nge-imeyile"
 
-#: src/features/auth/recovery/index.tsx:71
-#: src/features/auth/recovery/index.tsx:82
+#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+msgid "Please check your authenticator app and try again."
+msgstr "Nceda ukhangele i-app yakho yomqinisekisi uzame kwakhona."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:217
+#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+msgid "Please check your authenticator code and try again."
+msgstr "Nceda ukhangele ikhowudi yakho yomqinisekisi uzame kwakhona."
+
+#: src/features/auth/mfa/index.tsx:141
+#: src/features/auth/mfa/index.tsx:161
+#: src/features/auth/mfa/index.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:294
+msgid "Please check your code and try again."
+msgstr "Nceda ukhangele ikhowudi yakho uzame kwakhona."
+
+#: src/features/auth/mfa/index.tsx:99
+#: src/features/auth/mfa/index.tsx:121
+#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:262
+msgid "Please check your codes and try again."
+msgstr "Nceda ukhangele iikhowudi zakho uzame kwakhona."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+msgid "Please check your email and try again."
+msgstr "Nceda ukhangele i-imeyile yakho uzame kwakhona."
+
+#: src/features/auth/recovery/index.tsx:77
+#: src/features/auth/recovery/index.tsx:88
 msgid "Please check your recovery code and try again."
 msgstr "Nceda khangela ikhowudi yakho yokubuyisa kwaye uzame kwakhona."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:132
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
 msgid "Please copy manually: {devCode}"
 msgstr "Nceda khuphela ngesandla: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:48
+msgid "Please enter a valid email"
+msgstr "Nceda ufake i-imeyile esebenzayo"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:183
 msgid "Please enter your authenticator code"
 msgstr "Nceda faka ikhowudi yakho yomqinisekisi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/identity-form.tsx:29
+msgid "Please enter your name"
+msgstr "Nceda ufake igama lakho"
+
+#: src/features/auth/recovery/index.tsx:28
+msgid "Please enter your recovery code"
+msgstr "Nceda ufake ikhowudi yokufumana kwakhona"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:298
 msgid "Please try again or contact support."
 msgstr "Nceda zama kwakhona okanye qhagamshelana nenkxaso."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:102
+#: src/features/auth/mfa/index.tsx:87
+msgid "Please use another verification method."
+msgstr "Nceda usebenzise enye indlela yokuqinisekisa."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:113
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Nceda sebenzisa iqhosha elithi \"Ngena nge-passkey\"."
 
@@ -847,11 +933,11 @@ msgstr "Nceda sebenzisa iqhosha elithi \"Ngena nge-passkey\"."
 msgid "Previous image"
 msgstr "Umfanekiso ongaphambili"
 
-#: src/features/auth/identity-form.tsx:85
+#: src/features/auth/identity-form.tsx:92
 msgid "Privacy"
 msgstr "Ubumfihlo"
 
-#: src/features/auth/identity-form.tsx:112
+#: src/features/auth/identity-form.tsx:119
 msgid "Private"
 msgstr "Yangasese"
 
@@ -860,19 +946,19 @@ msgstr "Yangasese"
 msgid "Profile"
 msgstr "Iprofayile"
 
-#: src/features/landing/landing-page.tsx:98
+#: src/features/landing/landing-page.tsx:101
 msgid "Projects"
 msgstr "Iiprojekthi"
 
-#: src/features/auth/identity-form.tsx:98
+#: src/features/auth/identity-form.tsx:105
 msgid "Public"
 msgstr "Esidlangalaleni"
 
-#: src/features/landing/landing-page.tsx:90
+#: src/features/landing/landing-page.tsx:93
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Papasha iifidi zakho zoonomathotholo, landela abanye, okanye dibanisa ezinye iifidi ngokutheka kwe-AI nokuhlela ngokukhetha. Landela oko kubalulekileyo, hluza ingxolo."
 
-#: src/features/landing/landing-page.tsx:431
+#: src/features/landing/landing-page.tsx:438
 msgid "Ready to try Mochi?"
 msgstr "Ulungele ukuzama i-Mochi?"
 
@@ -881,7 +967,7 @@ msgstr "Ulungele ukuzama i-Mochi?"
 msgid "Recommended"
 msgstr "Iyacetyiswa"
 
-#: src/features/auth/recovery/index.tsx:109
+#: src/features/auth/recovery/index.tsx:115
 msgid "Recovery code"
 msgstr "Ikhowudi yokubuyisa"
 
@@ -889,12 +975,16 @@ msgstr "Ikhowudi yokubuyisa"
 msgid "Redirecting to login."
 msgstr "Iyahanjiswa kwiportal yokungena."
 
+#: src/features/auth/identity-form.tsx:52
+msgid "Redirecting you to the dashboard…"
+msgstr "Ikuthumela kwi-dashboard…"
+
 #: ../../../lib/web/src/components/post-tags.tsx:175
 msgid "Reduce interest"
 msgstr "Nciphisa umnxili"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
-#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
 msgid "Registration disabled"
 msgstr "Ubhaliso luvaliwe"
 
@@ -1010,7 +1100,7 @@ msgstr "Khetha icala lesayithi"
 msgid "Select theme preference"
 msgstr "Khetha okukhethiweyo kwetimu"
 
-#: src/features/landing/landing-page.tsx:141
+#: src/features/landing/landing-page.tsx:146
 msgid "Server"
 msgstr "Iseva"
 
@@ -1038,13 +1128,21 @@ msgstr "Kuboniswa {totalShown} kwa-{total}"
 msgid "Sidebar"
 msgstr "Ibha esecaleni"
 
-#: src/features/landing/landing-page.tsx:125
+#: src/features/landing/landing-page.tsx:128
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Bhalisa kwaye iqumrhu lakho leMochi liya kudalwa. Idata yakho ihlala apho — kungekhona kwiseva yomnye umntu."
 
-#: src/features/landing/landing-page.tsx:309
+#: src/features/landing/landing-page.tsx:316
 msgid "Sign up or log in"
 msgstr "Bhalisa okanye ungene"
+
+#: src/lib/oauth-errors.ts:32
+msgid "Sign-in cancelled"
+msgstr "Ukungena kurhoxisiwe"
+
+#: src/lib/oauth-errors.ts:51
+msgid "Sign-in failed, please try again"
+msgstr "Ukungena kuyahluleka, nceda uzame kwakhona"
 
 #: ../../../lib/web/src/components/layout/authenticated-layout.tsx:128
 msgid "Signing out..."
@@ -1054,13 +1152,13 @@ msgstr "Iyaphuma..."
 msgid "Skip to Main"
 msgstr "Tsiba uye kweyona"
 
-#: src/features/auth/mfa/index.tsx:302
-#: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/mfa/index.tsx:304
+#: src/features/auth/recovery/index.tsx:138
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Start again"
 msgstr "Qalisa kwakhona"
 
-#: src/features/auth/identity-form.tsx:114
+#: src/features/auth/identity-form.tsx:121
 msgid "Stay hidden from directory searches."
 msgstr "Hlala ufihliwe kukhangelo lwe-directory."
 
@@ -1068,7 +1166,7 @@ msgstr "Hlala ufihliwe kukhangelo lwe-directory."
 msgid "Stay tuned though!"
 msgstr "Yiba uphaphile!"
 
-#: src/features/landing/landing-page.tsx:143
+#: src/features/landing/landing-page.tsx:148
 msgid "Storage"
 msgstr "Indawo yokugcina"
 
@@ -1076,7 +1174,7 @@ msgstr "Indawo yokugcina"
 msgid "Subject"
 msgstr "Isihloko"
 
-#: src/features/auth/recovery/index.tsx:34
+#: src/features/auth/recovery/index.tsx:40
 msgid "Successfully signed in with recovery code"
 msgstr "Ungene ngempumelelo ngekhowudi yokubuyisela"
 
@@ -1097,9 +1195,22 @@ msgstr "Iletile"
 msgid "Teams/Apps"
 msgstr "Amaqela/Ii-app"
 
-#: src/features/landing/landing-page.tsx:300
+#: src/features/landing/landing-page.tsx:307
 msgid "Technology"
 msgstr "Iteknoloji"
+
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:42
+msgid "That {0} account is already linked to another user"
+msgstr "Loo akhawunti yakwa-{0} sele idityaniswe nomnye umsebenzisi"
+
+#: src/lib/oauth-errors.ts:48
+msgid "That sign-in provider is not available"
+msgstr "Loo mboneleli wokungena akafumaneki"
+
+#: src/lib/oauth-errors.ts:11
+msgid "the provider"
+msgstr "umboneleli"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1179,7 +1290,7 @@ msgstr "Akwabelwanga"
 msgid "Unauthorized Access"
 msgstr "Ufikelelo Olungavunyelwanga"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:407
 msgid "Under the hood"
 msgstr "Ngaphakathi"
 
@@ -1191,11 +1302,11 @@ msgstr "United States"
 msgid "Unverified"
 msgstr "Ayingqinwanga"
 
-#: src/features/auth/identity-form.tsx:145
+#: src/features/auth/identity-form.tsx:152
 msgid "Use a different account"
 msgstr "Sebenzisa enye i-akhawunti"
 
-#: src/features/landing/landing-page.tsx:128
+#: src/features/landing/landing-page.tsx:131
 msgid "Use the apps"
 msgstr "Sebenzisa ii-app"
 
@@ -1212,7 +1323,7 @@ msgid "Verification code sent"
 msgstr "Ikhowudi yoqinisekiso ithunyelwe"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:297
 msgid "Verification failed"
 msgstr "Uqinisekiso lusilele"
 
@@ -1223,6 +1334,10 @@ msgstr "Qinisekisa"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Qinisekisa idilesi ye-imeyile"
+
+#: src/features/auth/mfa/index.tsx:284
+msgid "Verify with passkey"
+msgstr "Qinisekisa nge-passkey"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1236,7 +1351,7 @@ msgstr "Bonisa konke"
 msgid "View all notifications"
 msgstr "Bonisa zonke izaziso"
 
-#: src/features/landing/landing-page.tsx:449
+#: src/features/landing/landing-page.tsx:456
 msgid "View source code"
 msgstr "Bonisa ikhowudi yomthombo"
 
@@ -1244,7 +1359,7 @@ msgstr "Bonisa ikhowudi yomthombo"
 msgid "We'll be back online shortly."
 msgstr "Sizakubuyela kungekudala."
 
-#: src/features/landing/landing-page.tsx:434
+#: src/features/landing/landing-page.tsx:441
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Sikhangela abantu abafuna ukuzama iMochi kwangoko kwaye banike impendulo enyanisekileyo. Yinguqulelo 0.3 ngoko inezinto ezimbalwa ezinengxaki, kodwa isilungele ukusetyenziswa imihla ngemihla."
 
@@ -1256,20 +1371,37 @@ msgstr "Iwebhusayithi iphantsi kogcino!"
 msgid "Wednesday"
 msgstr "Ulwesithathu"
 
-#: src/features/landing/landing-page.tsx:108
+#: src/features/landing/landing-page.tsx:111
 msgid "Wikis"
 msgstr "Iiwiki"
 
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:38
+msgid "Your {0} email is not verified"
+msgstr "I-imeyile yakho ye-{0} ayiqinisekiswanga"
+
+#: src/lib/oauth-errors.ts:46
+msgid "Your account has been suspended"
+msgstr "I-akhawunti yakho inqunyanyisiwe"
+
 #: src/features/auth/mfa/index.tsx:168
-#: src/features/auth/recovery/index.tsx:78
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
+#: src/features/auth/recovery/index.tsx:84
+#: src/features/auth/sign-in/components/user-auth-form.tsx:286
 msgid "Your account has been suspended."
 msgstr "I-akhawunti yakho imisiwe okwexeshana."
 
-#: src/features/landing/landing-page.tsx:328
+#: src/lib/oauth-errors.ts:40
+msgid "Your account requires a passkey to sign in"
+msgstr "I-akhawunti yakho ifuna i-passkey ukuze ingene"
+
+#: src/features/landing/landing-page.tsx:335
 msgid "Your apps, your platform, your network"
 msgstr "Ii-app zakho, iqonga lakho, uthungelwano lwakho"
 
-#: src/features/auth/identity-form.tsx:63
+#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+msgid "Your code is: {devCode}"
+msgstr "Ikhowudi yakho: {devCode}"
+
+#: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"
 msgstr "Igama lakho, njengoko ufuna abanye balibone"

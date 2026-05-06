@@ -84,7 +84,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
   // TODO: Implement passkey MFA when server-side endpoints are available
   const handlePasskeyAuth = async () => {
     toast.error(t`Passkey MFA not yet implemented`, {
-      description: "Please use another verification method.",
+      description: t`Please use another verification method.`,
     })
   }
 
@@ -96,7 +96,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
       if (needsEmail && needsTotp) {
         if (!data.emailCode || !data.totpCode) {
           toast.error(t`Invalid code`, {
-            description: "Please check your codes and try again.",
+            description: t`Please check your codes and try again.`,
           })
           return
         }
@@ -118,7 +118,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
         }
 
         toast.error(t`Invalid code`, {
-          description: "Please check your codes and try again.",
+          description: t`Please check your codes and try again.`,
         })
         return
       }
@@ -138,7 +138,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
         }
 
         toast.error(t`Invalid code`, {
-          description: "Please check your code and try again.",
+          description: t`Please check your code and try again.`,
         })
         return
       }
@@ -158,7 +158,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
         }
 
         toast.error(t`Invalid code`, {
-          description: "Please check your code and try again.",
+          description: t`Please check your code and try again.`,
         })
       }
     } catch (error) {
@@ -169,7 +169,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
         })
       } else {
         toast.error(t`Invalid code`, {
-          description: "Please check your code and try again.",
+          description: t`Please check your code and try again.`,
         })
       }
     } finally {
@@ -180,17 +180,19 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
   // Build description based on remaining methods
   const getDescription = () => {
     const methods: string[] = []
-    if (needsEmail) methods.push('email code')
-    if (needsTotp) methods.push('authenticator code')
-    if (needsPasskey) methods.push('passkey')
+    if (needsEmail) methods.push(t`email code`)
+    if (needsTotp) methods.push(t`authenticator code`)
+    if (needsPasskey) methods.push(t`passkey`)
 
     if (methods.length === 0) {
-      return 'Complete verification to continue'
+      return t`Complete verification to continue`
     }
     if (methods.length === 1) {
-      return `Enter your ${methods[0]}`
+      return t`Enter your ${methods[0]}`
     }
-    return `Enter your ${methods.slice(0, -1).join(', ')} and ${methods[methods.length - 1]}`
+    const initial = methods.slice(0, -1).join(', ')
+    const last = methods[methods.length - 1]
+    return t`Enter your ${initial} and ${last}`
   }
 
   return (
@@ -279,7 +281,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
                     onClick={handlePasskeyAuth}
                     disabled={isLoading}
                   >
-                    Verify with passkey
+                    <Trans>Verify with passkey</Trans>
                     {isLoading ? <Loader2 className='animate-spin' /> : <Key />}
                   </Button>
                 </div>

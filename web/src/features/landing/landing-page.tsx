@@ -28,6 +28,8 @@ import { useAuthStore } from '@/stores/auth-store'
 
 // Alphabetical by provider key; the filter below drops ones the operator
 // hasn't enabled, so unused providers simply never appear in the row.
+// Brand names — never translated.
+/* eslint-disable lingui/no-unlocalized-strings */
 const oauthProviders: Array<{
   key: OAuthProvider
   label: string
@@ -39,6 +41,7 @@ const oauthProviders: Array<{
   { key: 'microsoft', label: "Microsoft", Icon: MicrosoftIcon },
   { key: 'x', label: 'X', Icon: XIcon },
 ]
+/* eslint-enable lingui/no-unlocalized-strings */
 
 function MochiLogo({ size = 32 }: { size?: number }) {
   return (
@@ -137,6 +140,8 @@ function useLandingSteps() {
 
 function useLandingTech() {
   const { t } = useLingui()
+  // Tech stack names — never translated.
+  /* eslint-disable lingui/no-unlocalized-strings */
   return [
     { name: 'Go', role: t`Server` },
     { name: 'libp2p', role: t`Networking` },
@@ -144,6 +149,7 @@ function useLandingTech() {
     { name: 'Starlark', role: t`App business logic` },
     { name: 'React', role: t`App user interfaces` },
   ]
+  /* eslint-enable lingui/no-unlocalized-strings */
 }
 
 export function LandingPage() {
@@ -262,6 +268,7 @@ export function LandingPage() {
 
   return (
     <div className="min-h-svh bg-[#FAF9F6] dark:bg-background text-[#2D2D3A] dark:text-foreground">
+      {/* eslint-disable-next-line lingui/no-unlocalized-strings */}
       <style>{`
         @keyframes landing-float {
           0%, 100% { transform: translateY(0); }
@@ -455,6 +462,8 @@ export function LandingPage() {
 
       {/* Footer */}
       <footer className="py-6 px-8 text-center text-[#6B6B80] dark:text-muted-foreground text-sm">
+        {/* Copyright line — Mochi is a brand name, year is numeric. */}
+        {/* eslint-disable-next-line lingui/no-unlocalized-strings */}
         <p>&copy; 2026 Mochi.</p>
       </footer>
 

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { useNavigate } from '@tanstack/react-router'
 import { z } from 'zod'
@@ -12,9 +12,7 @@ import { recoveryLogin } from '@/services/auth-service'
 import { safeRedirect } from '@/lib/redirect'
 import { Route } from '@/routes/recovery'
 
-const recoverySchema = z.object({
-  code: z.string().min(1, 'Please enter your recovery code'),
-})
+type RecoveryFormValues = { code: string }
 
 export function Recovery() {
   const { t } = useLingui()
@@ -24,7 +22,15 @@ export function Recovery() {
   const { user } = useAuthStore()
   const userEmail = user?.email || ''
 
-  const form = useForm<z.infer<typeof recoverySchema>>({
+  const recoverySchema = useMemo(
+    () =>
+      z.object({
+        code: z.string().min(1, t`Please enter your recovery code`),
+      }),
+    [t],
+  )
+
+  const form = useForm<RecoveryFormValues>({
     resolver: zodResolver(recoverySchema),
     defaultValues: { code: '' },
   })
@@ -58,7 +64,7 @@ export function Recovery() {
     })
   }
 
-  async function onSubmit(data: z.infer<typeof recoverySchema>) {
+  async function onSubmit(data: RecoveryFormValues) {
     setIsLoading(true)
 
     try {
@@ -92,7 +98,7 @@ export function Recovery() {
       <Card className='gap-4'>
         <CardHeader>
           <CardDescription>
-            Enter a recovery code for "{userEmail}" to sign in
+            <Trans>Enter a recovery code for &quot;{userEmail}&quot; to sign in</Trans>
           </CardDescription>
         </CardHeader>
         <CardContent>

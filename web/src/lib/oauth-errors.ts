@@ -2,8 +2,13 @@
 // message. Defined in one place so the login page, auth settings page, and any
 // future caller all render the same strings.
 
+import { msg } from '@lingui/core/macro'
+import { i18n } from '@lingui/core'
+
+// Brand names — never translated.
+/* eslint-disable lingui/no-unlocalized-strings */
 const providerLabel = (provider?: string): string => {
-  if (!provider) return 'the provider'
+  if (!provider) return i18n._(msg`the provider`)
   switch (provider) {
     case 'github':
       return 'GitHub'
@@ -19,29 +24,30 @@ const providerLabel = (provider?: string): string => {
       return provider
   }
 }
+/* eslint-enable lingui/no-unlocalized-strings */
 
 export function oauthErrorMessage(code: string, provider?: string): string {
   switch (code) {
     case 'access_denied':
-      return 'Sign-in cancelled'
+      return i18n._(msg`Sign-in cancelled`)
     case 'signup_disabled':
-      return 'New accounts are disabled on this server'
+      return i18n._(msg`New accounts are disabled on this server`)
     case 'email_exists':
-      return `An account with that email already exists. Sign in first, then link ${providerLabel(provider)} from your auth settings.`
+      return i18n._(msg`An account with that email already exists. Sign in first, then link ${providerLabel(provider)} from your auth settings.`)
     case 'email_unverified':
-      return `Your ${providerLabel(provider)} email is not verified`
+      return i18n._(msg`Your ${providerLabel(provider)} email is not verified`)
     case 'oauth_disallowed':
-      return 'Your account requires a passkey to sign in'
+      return i18n._(msg`Your account requires a passkey to sign in`)
     case 'already_linked':
-      return `That ${providerLabel(provider)} account is already linked to another user`
+      return i18n._(msg`That ${providerLabel(provider)} account is already linked to another user`)
     case 'state_invalid':
-      return 'Login session expired, please try again'
+      return i18n._(msg`Login session expired, please try again`)
     case 'suspended':
-      return 'Your account has been suspended'
+      return i18n._(msg`Your account has been suspended`)
     case 'unknown_provider':
-      return 'That sign-in provider is not available'
+      return i18n._(msg`That sign-in provider is not available`)
     case 'provider_error':
     default:
-      return 'Sign-in failed, please try again'
+      return i18n._(msg`Sign-in failed, please try again`)
   }
 }

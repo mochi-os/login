@@ -42,8 +42,8 @@ msgid "Account removed"
 msgstr "Akaunti imeondolewa"
 
 #: src/features/auth/mfa/index.tsx:167
-#: src/features/auth/recovery/index.tsx:77
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
+#: src/features/auth/recovery/index.tsx:83
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
 msgid "Account suspended"
 msgstr "Akaunti imesimamishwa"
 
@@ -72,7 +72,7 @@ msgstr "Ongeza akaunti"
 msgid "Add an account to receive notifications and use services."
 msgstr "Ongeza akaunti ili kupokea arifa na kutumia huduma."
 
-#: src/features/landing/landing-page.tsx:133
+#: src/features/landing/landing-page.tsx:136
 msgid "Add friends, join communities. Data syncs directly between nodes — peer-to-peer, end-to-end."
 msgstr "Ongeza marafiki, jiunge na jamii. Data husawazishwa moja kwa moja kati ya nodi — rika kwa rika, mwisho hadi mwisho."
 
@@ -108,15 +108,20 @@ msgstr "AI"
 msgid "All"
 msgstr "Vyote"
 
-#: src/features/landing/landing-page.tsx:144
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:36
+msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
+msgstr "Akaunti yenye barua pepe hiyo tayari ipo. Ingia kwanza, kisha unganisha {0} kutoka mipangilio ya auth."
+
+#: src/features/landing/landing-page.tsx:149
 msgid "App business logic"
 msgstr "Mantiki ya biashara ya programu"
 
-#: src/features/landing/landing-page.tsx:145
+#: src/features/landing/landing-page.tsx:150
 msgid "App user interfaces"
 msgstr "Violesura vya watumiaji vya programu"
 
-#: src/features/landing/landing-page.tsx:288
+#: src/features/landing/landing-page.tsx:295
 msgid "Apps"
 msgstr "Programu"
 
@@ -128,8 +133,12 @@ msgstr "Una uhakika unataka kuondoka? Utahitaji kuingia tena kufikia akaunti yak
 msgid "Asc"
 msgstr "Pandisha"
 
-#: src/features/auth/mfa/index.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/mfa/index.tsx:184
+msgid "authenticator code"
+msgstr "msimbo wa kithibitisha"
+
+#: src/features/auth/mfa/index.tsx:243
+#: src/features/auth/sign-in/components/user-auth-form.tsx:377
 msgid "Authenticator code"
 msgstr "Msimbo wa mthibitishaji"
 
@@ -147,15 +156,15 @@ msgstr "Rudi Mwanzo"
 msgid "Boost interest"
 msgstr "Ongeza mvuto"
 
-#: src/features/landing/landing-page.tsx:110
+#: src/features/landing/landing-page.tsx:113
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Jenga maktaba ya maarifa ya kushirikiana iliyonakiliwa kwa jamii yako. Data yako daima ni yako."
 
-#: src/features/landing/landing-page.tsx:403
+#: src/features/landing/landing-page.tsx:410
 msgid "Built on solid foundations"
 msgstr "Imejengwa juu ya misingi imara"
 
-#: src/features/landing/landing-page.tsx:343
+#: src/features/landing/landing-page.tsx:350
 msgid "Built-in apps"
 msgstr "Programu zilizojengewa ndani"
 
@@ -177,11 +186,11 @@ msgstr "Kategoria ya arifa hii"
 msgid "Change notification category"
 msgstr "Badilisha kategoria ya arifa"
 
-#: src/features/landing/landing-page.tsx:113
+#: src/features/landing/landing-page.tsx:116
 msgid "Chat"
 msgstr "Gumzo"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:141
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Check your email."
 msgstr "Angalia barua pepe yako."
 
@@ -244,11 +253,11 @@ msgstr "Funga Paneli"
 msgid "Close search"
 msgstr "Funga utafutaji"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:129
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
 msgid "Code copied"
 msgstr "Msimbo umenakiliwa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:116
+#: src/features/auth/sign-in/components/user-auth-form.tsx:127
 msgid "Code sent."
 msgstr "Msimbo umetumwa."
 
@@ -264,12 +273,16 @@ msgstr "Inakuja Karibuni!"
 msgid "Compact"
 msgstr "Fupi"
 
+#: src/features/auth/mfa/index.tsx:188
+msgid "Complete verification to continue"
+msgstr "Kamilisha uhakiki ili uendelee"
+
 #: ../../../lib/web/src/components/place-picker.tsx:155
 #: ../../../lib/web/src/components/travelling-picker.tsx:299
 msgid "Confirm"
 msgstr "Thibitisha"
 
-#: src/features/landing/landing-page.tsx:132
+#: src/features/landing/landing-page.tsx:135
 msgid "Connect with others"
 msgstr "Unganisha na wengine"
 
@@ -282,6 +295,7 @@ msgid "Contextual information and details."
 msgstr "Maelezo ya muktadha na undani."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:72
+#: src/features/auth/identity-form.tsx:134
 msgid "Continue"
 msgstr "Endelea"
 
@@ -289,27 +303,27 @@ msgstr "Endelea"
 msgid "Copy"
 msgstr "Nakili"
 
-#: src/features/auth/identity-form.tsx:141
+#: src/features/auth/identity-form.tsx:148
 msgid "Could not cancel"
 msgstr "Haikuweza kughairi"
 
-#: src/features/landing/landing-page.tsx:211
+#: src/features/landing/landing-page.tsx:217
 msgid "Could not start sign-in"
 msgstr "Haikuweza kuanza kuingia"
 
-#: src/features/landing/landing-page.tsx:441
+#: src/features/landing/landing-page.tsx:448
 msgid "Create an account"
 msgstr "Unda akaunti"
 
-#: src/features/landing/landing-page.tsx:124
+#: src/features/landing/landing-page.tsx:127
 msgid "Create your node"
 msgstr "Unda nodi yako"
 
-#: src/features/landing/landing-page.tsx:95
+#: src/features/landing/landing-page.tsx:98
 msgid "Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what's important to you."
 msgstr "Unda majukwaa yako ya majadiliano, au jiunge na mengine. Tumia uwekaji tagi na upangaji wa AI wa hiari kuona kile kinachokuhusu."
 
-#: src/features/landing/landing-page.tsx:103
+#: src/features/landing/landing-page.tsx:106
 msgid "CRM"
 msgstr "CRM"
 
@@ -361,7 +375,7 @@ msgstr "Mwelekeo"
 msgid "Displays the mobile sidebar."
 msgstr "Huonyesha utepe wa simu."
 
-#: src/features/landing/landing-page.tsx:375
+#: src/features/landing/landing-page.tsx:382
 msgid "Distributed by design"
 msgstr "Imesambazwa kwa muundo"
 
@@ -369,24 +383,41 @@ msgstr "Imesambazwa kwa muundo"
 msgid "Download"
 msgstr "Pakua"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:438
+#: src/features/auth/sign-in/components/user-auth-form.tsx:451
 msgid "Email"
 msgstr "Barua pepe"
 
-#: src/features/auth/mfa/index.tsx:214
-#: src/features/auth/sign-in/components/user-auth-form.tsx:337
+#: src/features/auth/mfa/index.tsx:183
+msgid "email code"
+msgstr "msimbo wa barua pepe"
+
+#: src/features/auth/mfa/index.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Email code"
 msgstr "Msimbo wa barua pepe"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
+#: src/features/auth/recovery/index.tsx:101
+msgid "Enter a recovery code for \"{userEmail}\" to sign in"
+msgstr "Ingiza msimbo wa kurejesha kwa \"{userEmail}\" ili kuingia"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:331
 msgid "Enter the code from your authenticator app"
 msgstr "Ingiza msimbo kutoka kwa programu yako ya kithibitishi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#. placeholder {0}: methods[0]
+#: src/features/auth/mfa/index.tsx:191
+msgid "Enter your {0}"
+msgstr "Ingiza {0} yako"
+
+#: src/features/auth/mfa/index.tsx:195
+msgid "Enter your {initial} and {last}"
+msgstr "Ingiza {initial} na {last} yako"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Enter your email code and authenticator code"
 msgstr "Ingiza msimbo wako wa barua pepe na msimbo wa kithibitishi"
 
-#: src/features/landing/landing-page.tsx:346
+#: src/features/landing/landing-page.tsx:353
 msgid "Everything you need, nothing you don't control"
 msgstr "Kila kitu unachohitaji, hakuna kitu usichokidhibiti"
 
@@ -398,11 +429,11 @@ msgstr "Panua utepe"
 msgid "Failed to add account"
 msgstr "Imeshindwa kuongeza akaunti"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Failed to continue"
 msgstr "Imeshindwa kuendelea"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:142
 msgid "Failed to copy code"
 msgstr "Imeshindwa kunakili msimbo"
 
@@ -410,7 +441,7 @@ msgstr "Imeshindwa kunakili msimbo"
 msgid "Failed to remove account"
 msgstr "Imeshindwa kuondoa akaunti"
 
-#: src/features/auth/identity-form.tsx:49
+#: src/features/auth/identity-form.tsx:56
 msgid "Failed to save identity"
 msgstr "Imeshindwa kuhifadhi utambulisho"
 
@@ -422,11 +453,11 @@ msgstr "Imeshindwa kutuma msimbo wa uthibitisho"
 msgid "Failed to update category"
 msgstr "Imeshindwa kusasisha kategoria"
 
-#: src/features/landing/landing-page.tsx:88
+#: src/features/landing/landing-page.tsx:91
 msgid "Feeds"
 msgstr "Mlisho"
 
-#: src/features/landing/landing-page.tsx:129
+#: src/features/landing/landing-page.tsx:132
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Mlisho, makongamano, miradi, CRM, wikis — vyote vimejengwa ndani. Au andika programu zako mwenyewe kwa Starlark."
 
@@ -438,7 +469,7 @@ msgstr "Maliza kusanidi akaunti yako"
 msgid "Floating"
 msgstr "Inayoelea"
 
-#: src/features/landing/landing-page.tsx:93
+#: src/features/landing/landing-page.tsx:96
 msgid "Forums"
 msgstr "Makongamano"
 
@@ -495,12 +526,12 @@ msgstr "Nyumbani"
 msgid "Hot"
 msgstr "Moto"
 
-#: src/features/landing/landing-page.tsx:294
-#: src/features/landing/landing-page.tsx:372
+#: src/features/landing/landing-page.tsx:301
+#: src/features/landing/landing-page.tsx:379
 msgid "How it works"
 msgstr "Jinsi inavyofanya kazi"
 
-#: src/features/auth/identity-form.tsx:44
+#: src/features/auth/identity-form.tsx:51
 msgid "Identity saved"
 msgstr "Utambulisho umehifadhiwa"
 
@@ -516,7 +547,7 @@ msgstr "Ndani"
 msgid "Interests"
 msgstr "Mivuto"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:187
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Invalid authenticator code"
 msgstr "Msimbo wa kithibitishi batili"
 
@@ -525,25 +556,25 @@ msgstr "Msimbo wa kithibitishi batili"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
-#: src/features/auth/sign-in/components/user-auth-form.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:280
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:224
+#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:293
 msgid "Invalid code"
 msgstr "Msimbo batili"
 
-#: src/features/auth/recovery/index.tsx:70
-#: src/features/auth/recovery/index.tsx:81
+#: src/features/auth/recovery/index.tsx:76
+#: src/features/auth/recovery/index.tsx:87
 msgid "Invalid recovery code"
 msgstr "Msimbo wa urejeshaji batili"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:263
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
 msgid "Invalid verification code"
 msgstr "Msimbo wa uthibitisho batili"
 
-#: src/features/landing/landing-page.tsx:105
+#: src/features/landing/landing-page.tsx:108
 msgid "Keep track of contacts, relationships, and interactions with a highly adaptable CRM."
 msgstr "Fuatilia mawasiliano, mahusiano, na mwingiliano kwa CRM inayobadilika kwa urahisi."
 
@@ -572,17 +603,17 @@ msgstr "Pakia zaidi"
 msgid "Loading…"
 msgstr "Inapakia…"
 
-#: src/features/auth/mfa/index.tsx:290
-#: src/features/auth/recovery/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:392
+#: src/features/auth/mfa/index.tsx:292
+#: src/features/auth/recovery/index.tsx:127
+#: src/features/auth/sign-in/components/user-auth-form.tsx:405
 msgid "Log in"
 msgstr "Ingia"
 
-#: src/features/landing/landing-page.tsx:465
+#: src/features/landing/landing-page.tsx:474
 msgid "Log in to Mochi"
 msgstr "Ingia kwenye Mochi"
 
-#: src/features/landing/landing-page.tsx:515
+#: src/features/landing/landing-page.tsx:524
 msgid "Log in with {label}"
 msgstr "Ingia kwa {label}"
 
@@ -604,9 +635,9 @@ msgstr "Ingia kwa anwani yako ya barua pepe"
 msgid "Log out"
 msgstr "Toka"
 
-#: src/features/auth/recovery/index.tsx:33
+#: src/features/auth/recovery/index.tsx:39
 #: src/features/auth/sign-in/index.tsx:35
-#: src/features/landing/landing-page.tsx:234
+#: src/features/landing/landing-page.tsx:240
 msgid "Logged in"
 msgstr "Umeingia"
 
@@ -622,8 +653,12 @@ msgstr "Umetoka kwa ufanisi"
 msgid "Logging out…"
 msgstr "Inatoka…"
 
-#: src/features/auth/mfa/index.tsx:314
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/lib/oauth-errors.ts:44
+msgid "Login session expired, please try again"
+msgstr "Kipindi cha kuingia kimeisha, tafadhali jaribu tena"
+
+#: src/features/auth/mfa/index.tsx:316
+#: src/features/auth/sign-in/components/user-auth-form.tsx:427
 msgid "Lost access? Use a recovery code"
 msgstr "Umepoteza ufikiaji? Tumia msimbo wa kurejesha"
 
@@ -631,7 +666,7 @@ msgstr "Umepoteza ufikiaji? Tumia msimbo wa kurejesha"
 msgid "Luma (Default)"
 msgstr "Luma (Chaguo-msingi)"
 
-#: src/features/landing/landing-page.tsx:100
+#: src/features/landing/landing-page.tsx:103
 msgid "Manage tickets and tasks in a friendly and highly flexible Kanban-style interface."
 msgstr "Simamia tiketi na kazi katika kiolesura cha Kanban kinachofaa na kinachobadilika sana."
 
@@ -644,7 +679,7 @@ msgstr "Weka zote kama zilizosomwa"
 msgid "Menu"
 msgstr "Menyu"
 
-#: src/features/landing/landing-page.tsx:115
+#: src/features/landing/landing-page.tsx:118
 msgid "Message your friends, individually or in groups, peer-to-peer and encrypted."
 msgstr "Tuma ujumbe kwa marafiki zako, mmoja mmoja au katika vikundi, kati ya watumiaji na uliosimbwa."
 
@@ -652,23 +687,23 @@ msgstr "Tuma ujumbe kwa marafiki zako, mmoja mmoja au katika vikundi, kati ya wa
 msgid "Metric"
 msgstr "Metriki"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:287
 msgid "Mochi"
 msgstr "Mochi"
 
-#: src/features/landing/landing-page.tsx:349
+#: src/features/landing/landing-page.tsx:356
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi tayari inakuja na zaidi ya programu 20, na nyingi zaidi zinaongezwa mara kwa mara. Programu kuu ni pamoja na:"
 
-#: src/features/landing/landing-page.tsx:331
+#: src/features/landing/landing-page.tsx:338
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi ni jukwaa lililofungamanishwa la watumiaji wengi kwa programu zilizosambazwa. Mtu yeyote anaweza kuendesha seva yake mwenyewe, na kuunganishwa na mtumiaji yeyote kwenye mtandao wa Mochi. Mtu yeyote anaweza kuunda na kuchapisha programu."
 
-#: src/features/landing/landing-page.tsx:406
+#: src/features/landing/landing-page.tsx:413
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi imejengwa kwa kutumia teknolojia zifuatazo:"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:341
 msgid "Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes."
 msgstr "Mochi kwa sasa ni toleo la 0.3. Iko tayari kwa matumizi ya kila siku ikiwa una ujuzi wa wastani wa kiufundi, na unavumilia hitilafu. Ikiwa wewe ni msanidi programu, pia iko tayari kwako kuunda programu mradi tu hujali mabadiliko machache ya API."
 
@@ -676,7 +711,7 @@ msgstr "Mochi kwa sasa ni toleo la 0.3. Iko tayari kwa matumizi ya kila siku iki
 msgid "Monday"
 msgstr "Jumatatu"
 
-#: src/features/landing/landing-page.tsx:142
+#: src/features/landing/landing-page.tsx:147
 msgid "Networking"
 msgstr "Mitandao"
 
@@ -684,12 +719,16 @@ msgstr "Mitandao"
 msgid "New"
 msgstr "Mpya"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/lib/oauth-errors.ts:34
+msgid "New accounts are disabled on this server"
+msgstr "Akaunti mpya zimezimwa kwenye seva hii"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:290
 msgid "New user signup is disabled."
 msgstr "Usajili wa mtumiaji mpya umezimwa."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:451
+#: src/features/auth/sign-in/components/user-auth-form.tsx:464
 msgid "Next"
 msgstr "Inayofuata"
 
@@ -701,7 +740,7 @@ msgstr "Picha inayofuata"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Hakuna sheria za ufikiaji zilizosanidiwa. Ongeza sheria kudhibiti nani anaweza kufikia rasilimali hii."
 
-#: src/features/landing/landing-page.tsx:378
+#: src/features/landing/landing-page.tsx:385
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Hakuna seva kuu inayoshikilia data yako. Kila nodi ya Mochi ni mshirika kamili katika mtandao, ikiwasiliana moja kwa moja na nyingine kupitia libp2p."
 
@@ -778,7 +817,7 @@ msgstr "Fungua mipangilio ya mandhari"
 msgid "Or"
 msgstr "Au"
 
-#: src/features/landing/landing-page.tsx:488
+#: src/features/landing/landing-page.tsx:497
 msgid "Or log in with"
 msgstr "Au ingia kwa"
 
@@ -786,7 +825,7 @@ msgstr "Au ingia kwa"
 msgid "Other"
 msgstr "Nyingine"
 
-#: src/features/auth/identity-form.tsx:100
+#: src/features/auth/identity-form.tsx:107
 msgid "Other users can find your profile."
 msgstr "Watumiaji wengine wanaweza kupata wasifu wako."
 
@@ -794,22 +833,26 @@ msgstr "Watumiaji wengine wanaweza kupata wasifu wako."
 msgid "Owner"
 msgstr "Mmiliki"
 
-#: src/features/auth/mfa/index.tsx:272
-#: src/features/landing/landing-page.tsx:504
+#: src/features/auth/mfa/index.tsx:185
+msgid "passkey"
+msgstr "passkey"
+
+#: src/features/auth/mfa/index.tsx:274
+#: src/features/landing/landing-page.tsx:513
 msgid "Passkey"
 msgstr "Passkey"
 
 #: src/features/auth/sign-in/index.tsx:50
-#: src/features/landing/landing-page.tsx:252
+#: src/features/landing/landing-page.tsx:258
 msgid "Passkey login cancelled"
 msgstr "Kuingia kwa passkey kumeghairiwa"
 
 #: src/features/auth/sign-in/index.tsx:48
-#: src/features/landing/landing-page.tsx:250
+#: src/features/landing/landing-page.tsx:256
 msgid "Passkey login failed"
 msgstr "Kuingia kwa passkey kumeshindwa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:101
+#: src/features/auth/sign-in/components/user-auth-form.tsx:112
 msgid "Passkey login required"
 msgstr "Kuingia kwa passkey kunahitajika"
 
@@ -817,29 +860,72 @@ msgstr "Kuingia kwa passkey kunahitajika"
 msgid "Passkey MFA not yet implemented"
 msgstr "Passkey MFA bado haijatekelezwa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:313
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Paste the login code you received by email"
 msgstr "Bandika msimbo wa kuingia uliopokea kwa barua pepe"
 
-#: src/features/auth/recovery/index.tsx:71
-#: src/features/auth/recovery/index.tsx:82
+#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+msgid "Please check your authenticator app and try again."
+msgstr "Tafadhali angalia programu yako ya kithibitisha na ujaribu tena."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:217
+#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+msgid "Please check your authenticator code and try again."
+msgstr "Tafadhali angalia msimbo wako wa kithibitisha na ujaribu tena."
+
+#: src/features/auth/mfa/index.tsx:141
+#: src/features/auth/mfa/index.tsx:161
+#: src/features/auth/mfa/index.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:294
+msgid "Please check your code and try again."
+msgstr "Tafadhali angalia msimbo wako na ujaribu tena."
+
+#: src/features/auth/mfa/index.tsx:99
+#: src/features/auth/mfa/index.tsx:121
+#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:262
+msgid "Please check your codes and try again."
+msgstr "Tafadhali angalia misimbo yako na ujaribu tena."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+msgid "Please check your email and try again."
+msgstr "Tafadhali angalia barua pepe yako na ujaribu tena."
+
+#: src/features/auth/recovery/index.tsx:77
+#: src/features/auth/recovery/index.tsx:88
 msgid "Please check your recovery code and try again."
 msgstr "Tafadhali angalia msimbo wako wa kurejesha na ujaribu tena."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:132
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
 msgid "Please copy manually: {devCode}"
 msgstr "Tafadhali nakili kwa mkono: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:48
+msgid "Please enter a valid email"
+msgstr "Tafadhali ingiza barua pepe halali"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:183
 msgid "Please enter your authenticator code"
 msgstr "Tafadhali ingiza msimbo wako wa kithibitishaji"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/identity-form.tsx:29
+msgid "Please enter your name"
+msgstr "Tafadhali ingiza jina lako"
+
+#: src/features/auth/recovery/index.tsx:28
+msgid "Please enter your recovery code"
+msgstr "Tafadhali ingiza msimbo wako wa kurejesha"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:298
 msgid "Please try again or contact support."
 msgstr "Tafadhali jaribu tena au wasiliana na usaidizi."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:102
+#: src/features/auth/mfa/index.tsx:87
+msgid "Please use another verification method."
+msgstr "Tafadhali tumia njia nyingine ya uhakiki."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:113
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Tafadhali tumia kitufe cha \"Ingia kwa passkey\"."
 
@@ -847,11 +933,11 @@ msgstr "Tafadhali tumia kitufe cha \"Ingia kwa passkey\"."
 msgid "Previous image"
 msgstr "Picha iliyotangulia"
 
-#: src/features/auth/identity-form.tsx:85
+#: src/features/auth/identity-form.tsx:92
 msgid "Privacy"
 msgstr "Faragha"
 
-#: src/features/auth/identity-form.tsx:112
+#: src/features/auth/identity-form.tsx:119
 msgid "Private"
 msgstr "Ya faragha"
 
@@ -860,19 +946,19 @@ msgstr "Ya faragha"
 msgid "Profile"
 msgstr "Wasifu"
 
-#: src/features/landing/landing-page.tsx:98
+#: src/features/landing/landing-page.tsx:101
 msgid "Projects"
 msgstr "Miradi"
 
-#: src/features/auth/identity-form.tsx:98
+#: src/features/auth/identity-form.tsx:105
 msgid "Public"
 msgstr "Ya umma"
 
-#: src/features/landing/landing-page.tsx:90
+#: src/features/landing/landing-page.tsx:93
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Chapisha mlisho wako mwenyewe wa mitandao ya kijamii, fuata wengine, au kusanya mlisho mwingine kwa uwekaji lebo wa AI wa hiari na upangaji. Fuata kinachojalisha, chuja kelele."
 
-#: src/features/landing/landing-page.tsx:431
+#: src/features/landing/landing-page.tsx:438
 msgid "Ready to try Mochi?"
 msgstr "Tayari kujaribu Mochi?"
 
@@ -881,7 +967,7 @@ msgstr "Tayari kujaribu Mochi?"
 msgid "Recommended"
 msgstr "Inapendekezwa"
 
-#: src/features/auth/recovery/index.tsx:109
+#: src/features/auth/recovery/index.tsx:115
 msgid "Recovery code"
 msgstr "Msimbo wa kurejesha"
 
@@ -889,12 +975,16 @@ msgstr "Msimbo wa kurejesha"
 msgid "Redirecting to login."
 msgstr "Inaelekeza kwenye kuingia."
 
+#: src/features/auth/identity-form.tsx:52
+msgid "Redirecting you to the dashboard…"
+msgstr "Kukuelekeza kwenye dashibodi…"
+
 #: ../../../lib/web/src/components/post-tags.tsx:175
 msgid "Reduce interest"
 msgstr "Punguza shauku"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
-#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
 msgid "Registration disabled"
 msgstr "Usajili umezimwa"
 
@@ -1010,7 +1100,7 @@ msgstr "Chagua mwelekeo wa tovuti"
 msgid "Select theme preference"
 msgstr "Chagua mapendeleo ya mandhari"
 
-#: src/features/landing/landing-page.tsx:141
+#: src/features/landing/landing-page.tsx:146
 msgid "Server"
 msgstr "Seva"
 
@@ -1038,13 +1128,21 @@ msgstr "Inaonyesha {totalShown} kati ya {total}"
 msgid "Sidebar"
 msgstr "Upau wa kando"
 
-#: src/features/landing/landing-page.tsx:125
+#: src/features/landing/landing-page.tsx:128
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Jisajili na nodi yako mwenyewe ya Mochi inaundwa. Data yako iko hapo — sio kwenye seva ya mtu mwingine."
 
-#: src/features/landing/landing-page.tsx:309
+#: src/features/landing/landing-page.tsx:316
 msgid "Sign up or log in"
 msgstr "Jisajili au ingia"
+
+#: src/lib/oauth-errors.ts:32
+msgid "Sign-in cancelled"
+msgstr "Kuingia kumeghairiwa"
+
+#: src/lib/oauth-errors.ts:51
+msgid "Sign-in failed, please try again"
+msgstr "Kuingia kumeshindikana, tafadhali jaribu tena"
 
 #: ../../../lib/web/src/components/layout/authenticated-layout.tsx:128
 msgid "Signing out..."
@@ -1054,13 +1152,13 @@ msgstr "Inaondoka..."
 msgid "Skip to Main"
 msgstr "Ruka kwa Kuu"
 
-#: src/features/auth/mfa/index.tsx:302
-#: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/mfa/index.tsx:304
+#: src/features/auth/recovery/index.tsx:138
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Start again"
 msgstr "Anza tena"
 
-#: src/features/auth/identity-form.tsx:114
+#: src/features/auth/identity-form.tsx:121
 msgid "Stay hidden from directory searches."
 msgstr "Baki umefichwa kutoka kwa utafutaji wa saraka."
 
@@ -1068,7 +1166,7 @@ msgstr "Baki umefichwa kutoka kwa utafutaji wa saraka."
 msgid "Stay tuned though!"
 msgstr "Endelea kufuatilia!"
 
-#: src/features/landing/landing-page.tsx:143
+#: src/features/landing/landing-page.tsx:148
 msgid "Storage"
 msgstr "Hifadhi"
 
@@ -1076,7 +1174,7 @@ msgstr "Hifadhi"
 msgid "Subject"
 msgstr "Mada"
 
-#: src/features/auth/recovery/index.tsx:34
+#: src/features/auth/recovery/index.tsx:40
 msgid "Successfully signed in with recovery code"
 msgstr "Umeingia kwa mafanikio kwa msimbo wa urejeshaji"
 
@@ -1097,9 +1195,22 @@ msgstr "Lebo"
 msgid "Teams/Apps"
 msgstr "Timu/Programu"
 
-#: src/features/landing/landing-page.tsx:300
+#: src/features/landing/landing-page.tsx:307
 msgid "Technology"
 msgstr "Teknolojia"
+
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:42
+msgid "That {0} account is already linked to another user"
+msgstr "Akaunti hiyo ya {0} tayari imeunganishwa na mtumiaji mwingine"
+
+#: src/lib/oauth-errors.ts:48
+msgid "That sign-in provider is not available"
+msgstr "Mtoa huduma huyo wa kuingia hapatikani"
+
+#: src/lib/oauth-errors.ts:11
+msgid "the provider"
+msgstr "mtoa huduma"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1179,7 +1290,7 @@ msgstr "Haijapewa"
 msgid "Unauthorized Access"
 msgstr "Ufikiaji Usioruhusiwa"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:407
 msgid "Under the hood"
 msgstr "Chini ya kifuniko"
 
@@ -1191,11 +1302,11 @@ msgstr "Marekani"
 msgid "Unverified"
 msgstr "Haijathibitishwa"
 
-#: src/features/auth/identity-form.tsx:145
+#: src/features/auth/identity-form.tsx:152
 msgid "Use a different account"
 msgstr "Tumia akaunti tofauti"
 
-#: src/features/landing/landing-page.tsx:128
+#: src/features/landing/landing-page.tsx:131
 msgid "Use the apps"
 msgstr "Tumia programu"
 
@@ -1212,7 +1323,7 @@ msgid "Verification code sent"
 msgstr "Msimbo wa uthibitishaji umetumwa"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:297
 msgid "Verification failed"
 msgstr "Uthibitishaji umeshindwa"
 
@@ -1223,6 +1334,10 @@ msgstr "Thibitisha"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Thibitisha anwani ya barua pepe"
+
+#: src/features/auth/mfa/index.tsx:284
+msgid "Verify with passkey"
+msgstr "Hakiki kwa passkey"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1236,7 +1351,7 @@ msgstr "Tazama vyote"
 msgid "View all notifications"
 msgstr "Tazama arifa zote"
 
-#: src/features/landing/landing-page.tsx:449
+#: src/features/landing/landing-page.tsx:456
 msgid "View source code"
 msgstr "Tazama msimbo wa chanzo"
 
@@ -1244,7 +1359,7 @@ msgstr "Tazama msimbo wa chanzo"
 msgid "We'll be back online shortly."
 msgstr "Tutarudi mtandaoni hivi karibuni."
 
-#: src/features/landing/landing-page.tsx:434
+#: src/features/landing/landing-page.tsx:441
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Tunatafuta watumiaji wa awali ambao wako tayari kujaribu Mochi na kutoa maoni ya uaminifu. Ni toleo la 0.3 kwa hivyo lina baadhi ya bugs, lakini liko tayari kwa matumizi ya kila siku."
 
@@ -1256,20 +1371,37 @@ msgstr "Tovuti iko chini ya matengenezo!"
 msgid "Wednesday"
 msgstr "Jumatano"
 
-#: src/features/landing/landing-page.tsx:108
+#: src/features/landing/landing-page.tsx:111
 msgid "Wikis"
 msgstr "Wikis"
 
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:38
+msgid "Your {0} email is not verified"
+msgstr "Barua pepe yako ya {0} haijahakikiwa"
+
+#: src/lib/oauth-errors.ts:46
+msgid "Your account has been suspended"
+msgstr "Akaunti yako imesimamishwa"
+
 #: src/features/auth/mfa/index.tsx:168
-#: src/features/auth/recovery/index.tsx:78
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
+#: src/features/auth/recovery/index.tsx:84
+#: src/features/auth/sign-in/components/user-auth-form.tsx:286
 msgid "Your account has been suspended."
 msgstr "Akaunti yako imesimamishwa."
 
-#: src/features/landing/landing-page.tsx:328
+#: src/lib/oauth-errors.ts:40
+msgid "Your account requires a passkey to sign in"
+msgstr "Akaunti yako inahitaji passkey ili kuingia"
+
+#: src/features/landing/landing-page.tsx:335
 msgid "Your apps, your platform, your network"
 msgstr "Programu zako, jukwaa lako, mtandao wako"
 
-#: src/features/auth/identity-form.tsx:63
+#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+msgid "Your code is: {devCode}"
+msgstr "Msimbo wako: {devCode}"
+
+#: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"
 msgstr "Jina lako, kama ungetaka wengine kuliona"

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
@@ -11,14 +11,8 @@ import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMess
 import { safeRedirect } from '@/lib/redirect'
 const devConsole = globalThis.console
 
-const emailSchema = z.object({
-  email: z.string().email('Please enter a valid email'),
-})
-
-const verificationSchema = z.object({
-  emailCode: z.string().optional(),
-  totpCode: z.string().optional(),
-})
+type EmailFormValues = { email: string }
+type VerificationFormValues = { emailCode?: string; totpCode?: string }
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLFormElement> {
   redirectTo?: string
@@ -48,12 +42,29 @@ export function UserAuthForm({
   const step = externalStep ?? internalStep
   const setStep = externalSetStep ?? setInternalStep
 
-  const emailForm = useForm<z.infer<typeof emailSchema>>({
+  const emailSchema = useMemo(
+    () =>
+      z.object({
+        email: z.string().email(t`Please enter a valid email`),
+      }),
+    [t],
+  )
+
+  const verificationSchema = useMemo(
+    () =>
+      z.object({
+        emailCode: z.string().optional(),
+        totpCode: z.string().optional(),
+      }),
+    [],
+  )
+
+  const emailForm = useForm<EmailFormValues>({
     resolver: zodResolver(emailSchema),
     defaultValues: { email: '' },
   })
 
-  const verificationForm = useForm<z.infer<typeof verificationSchema>>({
+  const verificationForm = useForm<VerificationFormValues>({
     resolver: zodResolver(verificationSchema),
     defaultValues: { emailCode: '', totpCode: '' },
   })
@@ -84,7 +95,7 @@ export function UserAuthForm({
   }
 
   // Step 1: Submit email to get required methods
-  async function onSubmitEmail(data: z.infer<typeof emailSchema>) {
+  async function onSubmitEmail(data: EmailFormValues) {
     setIsLoading(true)
     setUserEmail(data.email)
 
@@ -116,7 +127,7 @@ export function UserAuthForm({
           toast.success(t`Code sent.`, {
             description: devCode ? (
               <div className='flex items-center gap-2'>
-                <span>Your code is: {devCode}</span>
+                <span><Trans>Your code is: {devCode}</Trans></span>
                 <Button
                   variant='ghost'
                   size='sm'
@@ -162,7 +173,7 @@ export function UserAuthForm({
   }
 
   // Step 2: Submit verification (email code and/or TOTP)
-  async function onSubmitVerification(data: z.infer<typeof verificationSchema>) {
+  async function onSubmitVerification(data: VerificationFormValues) {
     setIsLoading(true)
 
     try {
@@ -185,7 +196,7 @@ export function UserAuthForm({
           await handleLoginSuccess()
         } else {
           toast.error(t`Invalid authenticator code`, {
-            description: "Please check your authenticator app and try again.",
+            description: t`Please check your authenticator app and try again.`,
           })
         }
         return
@@ -203,14 +214,15 @@ export function UserAuthForm({
             return
           } else {
             toast.error(t`Invalid code`, {
-              description: "Please check your authenticator code and try again.",
+              description: t`Please check your authenticator code and try again.`,
             })
             return
           }
         } catch (err) {
+          // eslint-disable-next-line lingui/no-unlocalized-strings
           devConsole.error('TOTP retry error:', err)
           toast.error(t`Invalid code`, {
-            description: "Please check your authenticator code and try again.",
+            description: t`Please check your authenticator code and try again.`,
           })
           return
         }
@@ -239,14 +251,15 @@ export function UserAuthForm({
                 return
               } else {
                 toast.error(t`Invalid code`, {
-                  description: "Please check your codes and try again.",
+                  description: t`Please check your codes and try again.`,
                 })
                 return
               }
             } catch (err) {
+              // eslint-disable-next-line lingui/no-unlocalized-strings
               devConsole.error('TOTP error:', err)
               toast.error(t`Invalid code`, {
-                description: "Please check your codes and try again.",
+                description: t`Please check your codes and try again.`,
               })
               return
             }
@@ -261,7 +274,7 @@ export function UserAuthForm({
           await handleLoginSuccess()
         } else {
           toast.error(t`Invalid verification code`, {
-            description: result.message || 'Please check your email and try again.',
+            description: result.message || t`Please check your email and try again.`,
           })
         }
       }
@@ -278,7 +291,7 @@ export function UserAuthForm({
         })
       } else if (errorCode === 'invalid_code' || errorCode === 'invalid code') {
         toast.error(t`Invalid code`, {
-          description: "Please check your code and try again.",
+          description: t`Please check your code and try again.`,
         })
       } else {
         toast.error(t`Verification failed`, {

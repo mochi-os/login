@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
@@ -9,12 +9,10 @@ import { submitIdentity, abandonSignup } from '@/services/auth-service'
 import { safeRedirect } from '@/lib/redirect'
 import { mergeProfileCookie, readProfileCookie } from '@/lib/profile-cookie'
 
-const identitySchema = z.object({
-  name: z.string().min(2, 'Please enter your name'),
-  privacy: z.enum(['public', 'private']),
-})
-
-type IdentityFormValues = z.infer<typeof identitySchema>
+type IdentityFormValues = {
+  name: string
+  privacy: 'public' | 'private'
+}
 
 interface IdentityFormProps {
   redirectTo?: string
@@ -24,6 +22,15 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
   const { t } = useLingui()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const initialProfile = readProfileCookie()
+
+  const identitySchema = useMemo(
+    () =>
+      z.object({
+        name: z.string().min(2, t`Please enter your name`),
+        privacy: z.enum(['public', 'private']),
+      }),
+    [t],
+  )
 
   const form = useForm<IdentityFormValues>({
     resolver: zodResolver(identitySchema),
@@ -42,7 +49,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
     try {
       await submitIdentity(values)
       toast.success(t`Identity saved`, {
-        description: "Redirecting you to the dashboard…",
+        description: t`Redirecting you to the dashboard…`,
       })
       handleRedirect(redirectTo)
     } catch (error) {
@@ -124,7 +131,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
         />
 
         <Button className="w-full" disabled={isSubmitting}>
-          Continue
+          <Trans>Continue</Trans>
           {isSubmitting ? <Loader2 className="animate-spin" /> : <ArrowRight className="rtl:rotate-180" />}
         </Button>
 

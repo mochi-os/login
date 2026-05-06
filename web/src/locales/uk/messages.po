@@ -42,8 +42,8 @@ msgid "Account removed"
 msgstr "Обліковий запис видалено"
 
 #: src/features/auth/mfa/index.tsx:167
-#: src/features/auth/recovery/index.tsx:77
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
+#: src/features/auth/recovery/index.tsx:83
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
 msgid "Account suspended"
 msgstr "Обліковий запис призупинено"
 
@@ -72,7 +72,7 @@ msgstr "Додати обліковий запис"
 msgid "Add an account to receive notifications and use services."
 msgstr "Додайте обліковий запис, щоб отримувати сповіщення та користуватися сервісами."
 
-#: src/features/landing/landing-page.tsx:133
+#: src/features/landing/landing-page.tsx:136
 msgid "Add friends, join communities. Data syncs directly between nodes — peer-to-peer, end-to-end."
 msgstr "Додавайте друзів, приєднуйтеся до спільнот. Дані синхронізуються напряму між вузлами — peer-to-peer, end-to-end."
 
@@ -108,15 +108,20 @@ msgstr "AI"
 msgid "All"
 msgstr "Усі"
 
-#: src/features/landing/landing-page.tsx:144
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:36
+msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
+msgstr "Обліковий запис із цією електронною поштою вже існує. Спочатку ввійдіть, потім зв'яжіть {0} в налаштуваннях авторизації."
+
+#: src/features/landing/landing-page.tsx:149
 msgid "App business logic"
 msgstr "Бізнес-логіка застосунку"
 
-#: src/features/landing/landing-page.tsx:145
+#: src/features/landing/landing-page.tsx:150
 msgid "App user interfaces"
 msgstr "Інтерфейси застосунку"
 
-#: src/features/landing/landing-page.tsx:288
+#: src/features/landing/landing-page.tsx:295
 msgid "Apps"
 msgstr "Застосунки"
 
@@ -128,8 +133,12 @@ msgstr "Ви впевнені, що хочете вийти? Вам доведе
 msgid "Asc"
 msgstr "За зрост."
 
-#: src/features/auth/mfa/index.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/mfa/index.tsx:184
+msgid "authenticator code"
+msgstr "код автентифікатора"
+
+#: src/features/auth/mfa/index.tsx:243
+#: src/features/auth/sign-in/components/user-auth-form.tsx:377
 msgid "Authenticator code"
 msgstr "Код автентифікатора"
 
@@ -147,15 +156,15 @@ msgstr "Назад на головну"
 msgid "Boost interest"
 msgstr "Підвищити інтерес"
 
-#: src/features/landing/landing-page.tsx:110
+#: src/features/landing/landing-page.tsx:113
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Створіть спільну реплікаційну базу знань для вашої спільноти. Ваші дані завжди належать вам."
 
-#: src/features/landing/landing-page.tsx:403
+#: src/features/landing/landing-page.tsx:410
 msgid "Built on solid foundations"
 msgstr "Створено на надійному фундаменті"
 
-#: src/features/landing/landing-page.tsx:343
+#: src/features/landing/landing-page.tsx:350
 msgid "Built-in apps"
 msgstr "Вбудовані застосунки"
 
@@ -177,11 +186,11 @@ msgstr "Категорія цього сповіщення"
 msgid "Change notification category"
 msgstr "Змінити категорію сповіщення"
 
-#: src/features/landing/landing-page.tsx:113
+#: src/features/landing/landing-page.tsx:116
 msgid "Chat"
 msgstr "Чат"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:141
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Check your email."
 msgstr "Перевірте свою електронну пошту."
 
@@ -244,11 +253,11 @@ msgstr "Закрити панель"
 msgid "Close search"
 msgstr "Закрити пошук"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:129
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
 msgid "Code copied"
 msgstr "Код скопійовано"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:116
+#: src/features/auth/sign-in/components/user-auth-form.tsx:127
 msgid "Code sent."
 msgstr "Код надіслано."
 
@@ -264,12 +273,16 @@ msgstr "Скоро!"
 msgid "Compact"
 msgstr "Компактний"
 
+#: src/features/auth/mfa/index.tsx:188
+msgid "Complete verification to continue"
+msgstr "Завершіть перевірку, щоб продовжити"
+
 #: ../../../lib/web/src/components/place-picker.tsx:155
 #: ../../../lib/web/src/components/travelling-picker.tsx:299
 msgid "Confirm"
 msgstr "Підтвердити"
 
-#: src/features/landing/landing-page.tsx:132
+#: src/features/landing/landing-page.tsx:135
 msgid "Connect with others"
 msgstr "Зв'язок з іншими"
 
@@ -282,6 +295,7 @@ msgid "Contextual information and details."
 msgstr "Контекстна інформація та деталі."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:72
+#: src/features/auth/identity-form.tsx:134
 msgid "Continue"
 msgstr "Продовжити"
 
@@ -289,27 +303,27 @@ msgstr "Продовжити"
 msgid "Copy"
 msgstr "Копіювати"
 
-#: src/features/auth/identity-form.tsx:141
+#: src/features/auth/identity-form.tsx:148
 msgid "Could not cancel"
 msgstr "Не вдалося скасувати"
 
-#: src/features/landing/landing-page.tsx:211
+#: src/features/landing/landing-page.tsx:217
 msgid "Could not start sign-in"
 msgstr "Не вдалося розпочати вхід"
 
-#: src/features/landing/landing-page.tsx:441
+#: src/features/landing/landing-page.tsx:448
 msgid "Create an account"
 msgstr "Створити обліковий запис"
 
-#: src/features/landing/landing-page.tsx:124
+#: src/features/landing/landing-page.tsx:127
 msgid "Create your node"
 msgstr "Створіть свій вузол"
 
-#: src/features/landing/landing-page.tsx:95
+#: src/features/landing/landing-page.tsx:98
 msgid "Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what's important to you."
 msgstr "Створюйте власні форуми для обговорень або приєднуйтеся до інших. Використовуйте опціональне AI-тегування та сортування, щоб бачити те, що для вас важливо."
 
-#: src/features/landing/landing-page.tsx:103
+#: src/features/landing/landing-page.tsx:106
 msgid "CRM"
 msgstr "CRM"
 
@@ -361,7 +375,7 @@ msgstr "Напрямок"
 msgid "Displays the mobile sidebar."
 msgstr "Відображає мобільну бічну панель."
 
-#: src/features/landing/landing-page.tsx:375
+#: src/features/landing/landing-page.tsx:382
 msgid "Distributed by design"
 msgstr "Децентралізований за задумом"
 
@@ -369,24 +383,41 @@ msgstr "Децентралізований за задумом"
 msgid "Download"
 msgstr "Завантажити"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:438
+#: src/features/auth/sign-in/components/user-auth-form.tsx:451
 msgid "Email"
 msgstr "Електронна пошта"
 
-#: src/features/auth/mfa/index.tsx:214
-#: src/features/auth/sign-in/components/user-auth-form.tsx:337
+#: src/features/auth/mfa/index.tsx:183
+msgid "email code"
+msgstr "код через email"
+
+#: src/features/auth/mfa/index.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Email code"
 msgstr "Код електронної пошти"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
+#: src/features/auth/recovery/index.tsx:101
+msgid "Enter a recovery code for \"{userEmail}\" to sign in"
+msgstr "Введіть код відновлення для \"{userEmail}\", щоб увійти"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:331
 msgid "Enter the code from your authenticator app"
 msgstr "Введіть код із застосунку автентифікації"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#. placeholder {0}: methods[0]
+#: src/features/auth/mfa/index.tsx:191
+msgid "Enter your {0}"
+msgstr "Введіть {0}"
+
+#: src/features/auth/mfa/index.tsx:195
+msgid "Enter your {initial} and {last}"
+msgstr "Введіть {initial} та {last}"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Enter your email code and authenticator code"
 msgstr "Введіть код електронної пошти та код автентифікатора"
 
-#: src/features/landing/landing-page.tsx:346
+#: src/features/landing/landing-page.tsx:353
 msgid "Everything you need, nothing you don't control"
 msgstr "Усе, що вам потрібно, нічого, що ви не контролюєте"
 
@@ -398,11 +429,11 @@ msgstr "Розгорнути бічну панель"
 msgid "Failed to add account"
 msgstr "Не вдалося додати обліковий запис"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Failed to continue"
 msgstr "Не вдалося продовжити"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:142
 msgid "Failed to copy code"
 msgstr "Не вдалося скопіювати код"
 
@@ -410,7 +441,7 @@ msgstr "Не вдалося скопіювати код"
 msgid "Failed to remove account"
 msgstr "Не вдалося видалити обліковий запис"
 
-#: src/features/auth/identity-form.tsx:49
+#: src/features/auth/identity-form.tsx:56
 msgid "Failed to save identity"
 msgstr "Не вдалося зберегти ідентичність"
 
@@ -422,11 +453,11 @@ msgstr "Не вдалося надіслати код підтвердження
 msgid "Failed to update category"
 msgstr "Не вдалося оновити категорію"
 
-#: src/features/landing/landing-page.tsx:88
+#: src/features/landing/landing-page.tsx:91
 msgid "Feeds"
 msgstr "Стрічки"
 
-#: src/features/landing/landing-page.tsx:129
+#: src/features/landing/landing-page.tsx:132
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Стрічки, форуми, проєкти, CRM, вікі — усе вбудовано. Або напишіть власні застосунки на Starlark."
 
@@ -438,7 +469,7 @@ msgstr "Завершіть налаштування свого обліково�
 msgid "Floating"
 msgstr "Плаваючий"
 
-#: src/features/landing/landing-page.tsx:93
+#: src/features/landing/landing-page.tsx:96
 msgid "Forums"
 msgstr "Форуми"
 
@@ -495,12 +526,12 @@ msgstr "Головна"
 msgid "Hot"
 msgstr "Популярне"
 
-#: src/features/landing/landing-page.tsx:294
-#: src/features/landing/landing-page.tsx:372
+#: src/features/landing/landing-page.tsx:301
+#: src/features/landing/landing-page.tsx:379
 msgid "How it works"
 msgstr "Як це працює"
 
-#: src/features/auth/identity-form.tsx:44
+#: src/features/auth/identity-form.tsx:51
 msgid "Identity saved"
 msgstr "Ідентичність збережено"
 
@@ -516,7 +547,7 @@ msgstr "Вставлений"
 msgid "Interests"
 msgstr "Інтереси"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:187
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Invalid authenticator code"
 msgstr "Недійсний код автентифікатора"
 
@@ -525,25 +556,25 @@ msgstr "Недійсний код автентифікатора"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
-#: src/features/auth/sign-in/components/user-auth-form.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:280
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:224
+#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:293
 msgid "Invalid code"
 msgstr "Недійсний код"
 
-#: src/features/auth/recovery/index.tsx:70
-#: src/features/auth/recovery/index.tsx:81
+#: src/features/auth/recovery/index.tsx:76
+#: src/features/auth/recovery/index.tsx:87
 msgid "Invalid recovery code"
 msgstr "Недійсний код відновлення"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:263
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
 msgid "Invalid verification code"
 msgstr "Недійсний код підтвердження"
 
-#: src/features/landing/landing-page.tsx:105
+#: src/features/landing/landing-page.tsx:108
 msgid "Keep track of contacts, relationships, and interactions with a highly adaptable CRM."
 msgstr "Стежте за контактами, відносинами та взаємодіями за допомогою гнучкої CRM."
 
@@ -572,17 +603,17 @@ msgstr "Завантажити більше"
 msgid "Loading…"
 msgstr "Завантаження…"
 
-#: src/features/auth/mfa/index.tsx:290
-#: src/features/auth/recovery/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:392
+#: src/features/auth/mfa/index.tsx:292
+#: src/features/auth/recovery/index.tsx:127
+#: src/features/auth/sign-in/components/user-auth-form.tsx:405
 msgid "Log in"
 msgstr "Увійти"
 
-#: src/features/landing/landing-page.tsx:465
+#: src/features/landing/landing-page.tsx:474
 msgid "Log in to Mochi"
 msgstr "Увійти в Mochi"
 
-#: src/features/landing/landing-page.tsx:515
+#: src/features/landing/landing-page.tsx:524
 msgid "Log in with {label}"
 msgstr "Увійти за допомогою {label}"
 
@@ -604,9 +635,9 @@ msgstr "Увійти за допомогою електронної пошти"
 msgid "Log out"
 msgstr "Вийти"
 
-#: src/features/auth/recovery/index.tsx:33
+#: src/features/auth/recovery/index.tsx:39
 #: src/features/auth/sign-in/index.tsx:35
-#: src/features/landing/landing-page.tsx:234
+#: src/features/landing/landing-page.tsx:240
 msgid "Logged in"
 msgstr "Виконано вхід"
 
@@ -622,8 +653,12 @@ msgstr "Вихід виконано успішно"
 msgid "Logging out…"
 msgstr "Виконується вихід…"
 
-#: src/features/auth/mfa/index.tsx:314
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/lib/oauth-errors.ts:44
+msgid "Login session expired, please try again"
+msgstr "Сеанс увійшов, спробуйте ще раз"
+
+#: src/features/auth/mfa/index.tsx:316
+#: src/features/auth/sign-in/components/user-auth-form.tsx:427
 msgid "Lost access? Use a recovery code"
 msgstr "Втратили доступ? Використайте резервний код"
 
@@ -631,7 +666,7 @@ msgstr "Втратили доступ? Використайте резервни
 msgid "Luma (Default)"
 msgstr "Luma (за замовчуванням)"
 
-#: src/features/landing/landing-page.tsx:100
+#: src/features/landing/landing-page.tsx:103
 msgid "Manage tickets and tasks in a friendly and highly flexible Kanban-style interface."
 msgstr "Керування квитками та завданнями в зручному та дуже гнучкому інтерфейсі у стилі Kanban."
 
@@ -644,7 +679,7 @@ msgstr "Позначити все як прочитане"
 msgid "Menu"
 msgstr "Меню"
 
-#: src/features/landing/landing-page.tsx:115
+#: src/features/landing/landing-page.tsx:118
 msgid "Message your friends, individually or in groups, peer-to-peer and encrypted."
 msgstr "Спілкуйтеся з друзями індивідуально або в групах, peer-to-peer і зашифровано."
 
@@ -652,23 +687,23 @@ msgstr "Спілкуйтеся з друзями індивідуально аб
 msgid "Metric"
 msgstr "Метричні"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:287
 msgid "Mochi"
 msgstr "Mochi"
 
-#: src/features/landing/landing-page.tsx:349
+#: src/features/landing/landing-page.tsx:356
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi вже постачається з більш ніж 20 додатками, причому нові додаються часто. Серед основних додатків:"
 
-#: src/features/landing/landing-page.tsx:331
+#: src/features/landing/landing-page.tsx:338
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi — це федеративна, багатокористувацька платформа для розподілених додатків. Будь-хто може запустити власний сервер і підключитися до будь-якого іншого користувача в мережі Mochi. Будь-хто може створювати та публікувати додатки."
 
-#: src/features/landing/landing-page.tsx:406
+#: src/features/landing/landing-page.tsx:413
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi побудовано з використанням таких технологій:"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:341
 msgid "Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes."
 msgstr "Поточна версія Mochi — 0.3. Вона готова до щоденного використання, якщо ви помірно технічно підковані та толерантні до помилок. Якщо ви розробник, ви також можете створювати додатки, якщо вас не бентежать кілька змін API."
 
@@ -676,7 +711,7 @@ msgstr "Поточна версія Mochi — 0.3. Вона готова до щ
 msgid "Monday"
 msgstr "Понеділок"
 
-#: src/features/landing/landing-page.tsx:142
+#: src/features/landing/landing-page.tsx:147
 msgid "Networking"
 msgstr "Мережа"
 
@@ -684,12 +719,16 @@ msgstr "Мережа"
 msgid "New"
 msgstr "Нове"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/lib/oauth-errors.ts:34
+msgid "New accounts are disabled on this server"
+msgstr "На цьому сервері створення нових облікових записів вимкнено"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:290
 msgid "New user signup is disabled."
 msgstr "Реєстрація нових користувачів вимкнена."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:451
+#: src/features/auth/sign-in/components/user-auth-form.tsx:464
 msgid "Next"
 msgstr "Далі"
 
@@ -701,7 +740,7 @@ msgstr "Наступне зображення"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Правила доступу не налаштовано. Додайте правила, щоб керувати, хто може мати доступ до цього ресурсу."
 
-#: src/features/landing/landing-page.tsx:378
+#: src/features/landing/landing-page.tsx:385
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Жоден центральний сервер не зберігає ваші дані. Кожен вузол Mochi — це повноцінний учасник мережі, що спілкується безпосередньо з іншими через libp2p."
 
@@ -778,7 +817,7 @@ msgstr "Відкрити налаштування теми"
 msgid "Or"
 msgstr "Або"
 
-#: src/features/landing/landing-page.tsx:488
+#: src/features/landing/landing-page.tsx:497
 msgid "Or log in with"
 msgstr "Або увійти через"
 
@@ -786,7 +825,7 @@ msgstr "Або увійти через"
 msgid "Other"
 msgstr "Інше"
 
-#: src/features/auth/identity-form.tsx:100
+#: src/features/auth/identity-form.tsx:107
 msgid "Other users can find your profile."
 msgstr "Інші користувачі можуть знайти ваш профіль."
 
@@ -794,22 +833,26 @@ msgstr "Інші користувачі можуть знайти ваш про�
 msgid "Owner"
 msgstr "Власник"
 
-#: src/features/auth/mfa/index.tsx:272
-#: src/features/landing/landing-page.tsx:504
+#: src/features/auth/mfa/index.tsx:185
+msgid "passkey"
+msgstr "passkey"
+
+#: src/features/auth/mfa/index.tsx:274
+#: src/features/landing/landing-page.tsx:513
 msgid "Passkey"
 msgstr "Ключ доступу"
 
 #: src/features/auth/sign-in/index.tsx:50
-#: src/features/landing/landing-page.tsx:252
+#: src/features/landing/landing-page.tsx:258
 msgid "Passkey login cancelled"
 msgstr "Вхід з ключем доступу скасовано"
 
 #: src/features/auth/sign-in/index.tsx:48
-#: src/features/landing/landing-page.tsx:250
+#: src/features/landing/landing-page.tsx:256
 msgid "Passkey login failed"
 msgstr "Не вдалося увійти з ключем доступу"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:101
+#: src/features/auth/sign-in/components/user-auth-form.tsx:112
 msgid "Passkey login required"
 msgstr "Потрібен вхід із ключем доступу"
 
@@ -817,29 +860,72 @@ msgstr "Потрібен вхід із ключем доступу"
 msgid "Passkey MFA not yet implemented"
 msgstr "MFA з ключем доступу ще не реалізовано"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:313
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Paste the login code you received by email"
 msgstr "Вставте код входу, який ви отримали електронною поштою"
 
-#: src/features/auth/recovery/index.tsx:71
-#: src/features/auth/recovery/index.tsx:82
+#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+msgid "Please check your authenticator app and try again."
+msgstr "Перевірте додаток-автентифікатор і спробуйте ще раз."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:217
+#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+msgid "Please check your authenticator code and try again."
+msgstr "Перевірте код автентифікатора і спробуйте ще раз."
+
+#: src/features/auth/mfa/index.tsx:141
+#: src/features/auth/mfa/index.tsx:161
+#: src/features/auth/mfa/index.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:294
+msgid "Please check your code and try again."
+msgstr "Перевірте код і спробуйте ще раз."
+
+#: src/features/auth/mfa/index.tsx:99
+#: src/features/auth/mfa/index.tsx:121
+#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:262
+msgid "Please check your codes and try again."
+msgstr "Перевірте коди і спробуйте ще раз."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+msgid "Please check your email and try again."
+msgstr "Перевірте email і спробуйте ще раз."
+
+#: src/features/auth/recovery/index.tsx:77
+#: src/features/auth/recovery/index.tsx:88
 msgid "Please check your recovery code and try again."
 msgstr "Будь ласка, перевірте свій резервний код та спробуйте ще раз."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:132
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
 msgid "Please copy manually: {devCode}"
 msgstr "Скопіюйте вручну: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:48
+msgid "Please enter a valid email"
+msgstr "Введіть коректну електронну адресу"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:183
 msgid "Please enter your authenticator code"
 msgstr "Будь ласка, введіть код автентифікатора"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/identity-form.tsx:29
+msgid "Please enter your name"
+msgstr "Введіть ваше ім'я"
+
+#: src/features/auth/recovery/index.tsx:28
+msgid "Please enter your recovery code"
+msgstr "Введіть код відновлення"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:298
 msgid "Please try again or contact support."
 msgstr "Будь ласка, спробуйте ще раз або зверніться до служби підтримки."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:102
+#: src/features/auth/mfa/index.tsx:87
+msgid "Please use another verification method."
+msgstr "Скористайтеся іншим методом перевірки."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:113
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Будь ласка, використовуйте кнопку \"Увійти з ключем доступу\"."
 
@@ -847,11 +933,11 @@ msgstr "Будь ласка, використовуйте кнопку \"Уві�
 msgid "Previous image"
 msgstr "Попереднє зображення"
 
-#: src/features/auth/identity-form.tsx:85
+#: src/features/auth/identity-form.tsx:92
 msgid "Privacy"
 msgstr "Приватність"
 
-#: src/features/auth/identity-form.tsx:112
+#: src/features/auth/identity-form.tsx:119
 msgid "Private"
 msgstr "Приватний"
 
@@ -860,19 +946,19 @@ msgstr "Приватний"
 msgid "Profile"
 msgstr "Профіль"
 
-#: src/features/landing/landing-page.tsx:98
+#: src/features/landing/landing-page.tsx:101
 msgid "Projects"
 msgstr "Проєкти"
 
-#: src/features/auth/identity-form.tsx:98
+#: src/features/auth/identity-form.tsx:105
 msgid "Public"
 msgstr "Публічний"
 
-#: src/features/landing/landing-page.tsx:90
+#: src/features/landing/landing-page.tsx:93
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Публікуйте власні стрічки в соцмережах, підписуйтесь на інших або об'єднуйте інші стрічки з опціональним AI-тегуванням і сортуванням. Стежте за тим, що важливо, відфільтровуйте шум."
 
-#: src/features/landing/landing-page.tsx:431
+#: src/features/landing/landing-page.tsx:438
 msgid "Ready to try Mochi?"
 msgstr "Готові спробувати Mochi?"
 
@@ -881,7 +967,7 @@ msgstr "Готові спробувати Mochi?"
 msgid "Recommended"
 msgstr "Рекомендоване"
 
-#: src/features/auth/recovery/index.tsx:109
+#: src/features/auth/recovery/index.tsx:115
 msgid "Recovery code"
 msgstr "Резервний код"
 
@@ -889,12 +975,16 @@ msgstr "Резервний код"
 msgid "Redirecting to login."
 msgstr "Перенаправлення на сторінку входу."
 
+#: src/features/auth/identity-form.tsx:52
+msgid "Redirecting you to the dashboard…"
+msgstr "Перенаправлення на панель керування…"
+
 #: ../../../lib/web/src/components/post-tags.tsx:175
 msgid "Reduce interest"
 msgstr "Зменшити інтерес"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
-#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
 msgid "Registration disabled"
 msgstr "Реєстрація вимкнена"
 
@@ -1010,7 +1100,7 @@ msgstr "Виберіть напрямок сайту"
 msgid "Select theme preference"
 msgstr "Виберіть тему"
 
-#: src/features/landing/landing-page.tsx:141
+#: src/features/landing/landing-page.tsx:146
 msgid "Server"
 msgstr "Сервер"
 
@@ -1038,13 +1128,21 @@ msgstr "Показано {totalShown} з {total}"
 msgid "Sidebar"
 msgstr "Бічна панель"
 
-#: src/features/landing/landing-page.tsx:125
+#: src/features/landing/landing-page.tsx:128
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Зареєструйтеся, і буде створено ваш власний вузол Mochi. Ваші дані зберігаються там — не на чужому сервері."
 
-#: src/features/landing/landing-page.tsx:309
+#: src/features/landing/landing-page.tsx:316
 msgid "Sign up or log in"
 msgstr "Зареєструватися або увійти"
+
+#: src/lib/oauth-errors.ts:32
+msgid "Sign-in cancelled"
+msgstr "Вхід скасовано"
+
+#: src/lib/oauth-errors.ts:51
+msgid "Sign-in failed, please try again"
+msgstr "Не вдалося увійти, спробуйте ще раз"
 
 #: ../../../lib/web/src/components/layout/authenticated-layout.tsx:128
 msgid "Signing out..."
@@ -1054,13 +1152,13 @@ msgstr "Вихід..."
 msgid "Skip to Main"
 msgstr "Перейти до основного"
 
-#: src/features/auth/mfa/index.tsx:302
-#: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/mfa/index.tsx:304
+#: src/features/auth/recovery/index.tsx:138
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Start again"
 msgstr "Почати знову"
 
-#: src/features/auth/identity-form.tsx:114
+#: src/features/auth/identity-form.tsx:121
 msgid "Stay hidden from directory searches."
 msgstr "Залишатися прихованим від пошуку в каталозі."
 
@@ -1068,7 +1166,7 @@ msgstr "Залишатися прихованим від пошуку в кат�
 msgid "Stay tuned though!"
 msgstr "Слідкуйте за оновленнями!"
 
-#: src/features/landing/landing-page.tsx:143
+#: src/features/landing/landing-page.tsx:148
 msgid "Storage"
 msgstr "Сховище"
 
@@ -1076,7 +1174,7 @@ msgstr "Сховище"
 msgid "Subject"
 msgstr "Тема"
 
-#: src/features/auth/recovery/index.tsx:34
+#: src/features/auth/recovery/index.tsx:40
 msgid "Successfully signed in with recovery code"
 msgstr "Успішний вхід з кодом відновлення"
 
@@ -1097,9 +1195,22 @@ msgstr "Тег"
 msgid "Teams/Apps"
 msgstr "Команди/застосунки"
 
-#: src/features/landing/landing-page.tsx:300
+#: src/features/landing/landing-page.tsx:307
 msgid "Technology"
 msgstr "Технологія"
+
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:42
+msgid "That {0} account is already linked to another user"
+msgstr "Цей обліковий запис {0} вже прив'язаний до іншого користувача"
+
+#: src/lib/oauth-errors.ts:48
+msgid "That sign-in provider is not available"
+msgstr "Цей провайдер входу недоступний"
+
+#: src/lib/oauth-errors.ts:11
+msgid "the provider"
+msgstr "провайдер"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1179,7 +1290,7 @@ msgstr "Не призначено"
 msgid "Unauthorized Access"
 msgstr "Неавторизований доступ"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:407
 msgid "Under the hood"
 msgstr "Під капотом"
 
@@ -1191,11 +1302,11 @@ msgstr "Сполучені Штати"
 msgid "Unverified"
 msgstr "Не перевірено"
 
-#: src/features/auth/identity-form.tsx:145
+#: src/features/auth/identity-form.tsx:152
 msgid "Use a different account"
 msgstr "Використати інший обліковий запис"
 
-#: src/features/landing/landing-page.tsx:128
+#: src/features/landing/landing-page.tsx:131
 msgid "Use the apps"
 msgstr "Користуйтеся застосунками"
 
@@ -1212,7 +1323,7 @@ msgid "Verification code sent"
 msgstr "Код підтвердження надіслано"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:297
 msgid "Verification failed"
 msgstr "Перевірка не вдалася"
 
@@ -1223,6 +1334,10 @@ msgstr "Перевірити"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Підтвердити електронну адресу"
+
+#: src/features/auth/mfa/index.tsx:284
+msgid "Verify with passkey"
+msgstr "Підтвердити через passkey"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1236,7 +1351,7 @@ msgstr "Переглянути всі"
 msgid "View all notifications"
 msgstr "Переглянути всі сповіщення"
 
-#: src/features/landing/landing-page.tsx:449
+#: src/features/landing/landing-page.tsx:456
 msgid "View source code"
 msgstr "Переглянути вихідний код"
 
@@ -1244,7 +1359,7 @@ msgstr "Переглянути вихідний код"
 msgid "We'll be back online shortly."
 msgstr "Ми скоро повернемося онлайн."
 
-#: src/features/landing/landing-page.tsx:434
+#: src/features/landing/landing-page.tsx:441
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Ми шукаємо ранніх користувачів, які готові спробувати Mochi та залишити чесний відгук. Це версія 0.3, тож є помилки, але вона готова до щоденного використання."
 
@@ -1256,20 +1371,37 @@ msgstr "Вебсайт на технічному обслуговуванні!"
 msgid "Wednesday"
 msgstr "Середа"
 
-#: src/features/landing/landing-page.tsx:108
+#: src/features/landing/landing-page.tsx:111
 msgid "Wikis"
 msgstr "Вікі"
 
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:38
+msgid "Your {0} email is not verified"
+msgstr "Ваш email {0} не підтверджено"
+
+#: src/lib/oauth-errors.ts:46
+msgid "Your account has been suspended"
+msgstr "Ваш обліковий запис заблоковано"
+
 #: src/features/auth/mfa/index.tsx:168
-#: src/features/auth/recovery/index.tsx:78
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
+#: src/features/auth/recovery/index.tsx:84
+#: src/features/auth/sign-in/components/user-auth-form.tsx:286
 msgid "Your account has been suspended."
 msgstr "Ваш обліковий запис призупинено."
 
-#: src/features/landing/landing-page.tsx:328
+#: src/lib/oauth-errors.ts:40
+msgid "Your account requires a passkey to sign in"
+msgstr "Для входу в обліковий запис потрібен passkey"
+
+#: src/features/landing/landing-page.tsx:335
 msgid "Your apps, your platform, your network"
 msgstr "Ваші застосунки, ваша платформа, ваша мережа"
 
-#: src/features/auth/identity-form.tsx:63
+#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+msgid "Your code is: {devCode}"
+msgstr "Ваш код: {devCode}"
+
+#: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"
 msgstr "Ваше імʼя, як ви хочете, щоб його бачили інші"

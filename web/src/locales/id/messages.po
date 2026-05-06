@@ -42,8 +42,8 @@ msgid "Account removed"
 msgstr "Akun dihapus"
 
 #: src/features/auth/mfa/index.tsx:167
-#: src/features/auth/recovery/index.tsx:77
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
+#: src/features/auth/recovery/index.tsx:83
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
 msgid "Account suspended"
 msgstr "Akun ditangguhkan"
 
@@ -72,7 +72,7 @@ msgstr "Tambah akun"
 msgid "Add an account to receive notifications and use services."
 msgstr "Tambahkan akun untuk menerima notifikasi dan menggunakan layanan."
 
-#: src/features/landing/landing-page.tsx:133
+#: src/features/landing/landing-page.tsx:136
 msgid "Add friends, join communities. Data syncs directly between nodes — peer-to-peer, end-to-end."
 msgstr "Tambah teman, gabung komunitas. Data tersinkronisasi langsung antar node — peer-to-peer, end-to-end."
 
@@ -108,15 +108,20 @@ msgstr "AI"
 msgid "All"
 msgstr "Semua"
 
-#: src/features/landing/landing-page.tsx:144
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:36
+msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
+msgstr "Akun dengan email tersebut sudah ada. Masuk dulu, lalu tautkan {0} dari pengaturan auth Anda."
+
+#: src/features/landing/landing-page.tsx:149
 msgid "App business logic"
 msgstr "Logika bisnis aplikasi"
 
-#: src/features/landing/landing-page.tsx:145
+#: src/features/landing/landing-page.tsx:150
 msgid "App user interfaces"
 msgstr "Antarmuka pengguna aplikasi"
 
-#: src/features/landing/landing-page.tsx:288
+#: src/features/landing/landing-page.tsx:295
 msgid "Apps"
 msgstr "Aplikasi"
 
@@ -128,8 +133,12 @@ msgstr "Apakah Anda yakin ingin keluar? Anda perlu masuk kembali untuk mengakses
 msgid "Asc"
 msgstr "Naik"
 
-#: src/features/auth/mfa/index.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/mfa/index.tsx:184
+msgid "authenticator code"
+msgstr "kode autentikator"
+
+#: src/features/auth/mfa/index.tsx:243
+#: src/features/auth/sign-in/components/user-auth-form.tsx:377
 msgid "Authenticator code"
 msgstr "Kode authenticator"
 
@@ -147,15 +156,15 @@ msgstr "Kembali ke Beranda"
 msgid "Boost interest"
 msgstr "Tingkatkan minat"
 
-#: src/features/landing/landing-page.tsx:110
+#: src/features/landing/landing-page.tsx:113
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Bangun basis pengetahuan kolaboratif dan tereplikasi untuk komunitas Anda. Data Anda selalu menjadi milik Anda."
 
-#: src/features/landing/landing-page.tsx:403
+#: src/features/landing/landing-page.tsx:410
 msgid "Built on solid foundations"
 msgstr "Dibangun di atas fondasi yang kokoh"
 
-#: src/features/landing/landing-page.tsx:343
+#: src/features/landing/landing-page.tsx:350
 msgid "Built-in apps"
 msgstr "Aplikasi bawaan"
 
@@ -177,11 +186,11 @@ msgstr "Kategori untuk notifikasi ini"
 msgid "Change notification category"
 msgstr "Ubah kategori notifikasi"
 
-#: src/features/landing/landing-page.tsx:113
+#: src/features/landing/landing-page.tsx:116
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:141
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Check your email."
 msgstr "Periksa email Anda."
 
@@ -244,11 +253,11 @@ msgstr "Tutup Panel"
 msgid "Close search"
 msgstr "Tutup pencarian"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:129
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
 msgid "Code copied"
 msgstr "Kode disalin"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:116
+#: src/features/auth/sign-in/components/user-auth-form.tsx:127
 msgid "Code sent."
 msgstr "Kode terkirim."
 
@@ -264,12 +273,16 @@ msgstr "Segera Hadir!"
 msgid "Compact"
 msgstr "Kompak"
 
+#: src/features/auth/mfa/index.tsx:188
+msgid "Complete verification to continue"
+msgstr "Selesaikan verifikasi untuk melanjutkan"
+
 #: ../../../lib/web/src/components/place-picker.tsx:155
 #: ../../../lib/web/src/components/travelling-picker.tsx:299
 msgid "Confirm"
 msgstr "Konfirmasi"
 
-#: src/features/landing/landing-page.tsx:132
+#: src/features/landing/landing-page.tsx:135
 msgid "Connect with others"
 msgstr "Terhubung dengan orang lain"
 
@@ -282,6 +295,7 @@ msgid "Contextual information and details."
 msgstr "Informasi dan detail kontekstual."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:72
+#: src/features/auth/identity-form.tsx:134
 msgid "Continue"
 msgstr "Lanjutkan"
 
@@ -289,27 +303,27 @@ msgstr "Lanjutkan"
 msgid "Copy"
 msgstr "Salin"
 
-#: src/features/auth/identity-form.tsx:141
+#: src/features/auth/identity-form.tsx:148
 msgid "Could not cancel"
 msgstr "Tidak dapat membatalkan"
 
-#: src/features/landing/landing-page.tsx:211
+#: src/features/landing/landing-page.tsx:217
 msgid "Could not start sign-in"
 msgstr "Tidak dapat memulai sign-in"
 
-#: src/features/landing/landing-page.tsx:441
+#: src/features/landing/landing-page.tsx:448
 msgid "Create an account"
 msgstr "Buat akun"
 
-#: src/features/landing/landing-page.tsx:124
+#: src/features/landing/landing-page.tsx:127
 msgid "Create your node"
 msgstr "Buat node Anda"
 
-#: src/features/landing/landing-page.tsx:95
+#: src/features/landing/landing-page.tsx:98
 msgid "Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what's important to you."
 msgstr "Buat forum diskusi Anda sendiri, atau gabung dengan yang lain. Gunakan tagging dan pengurutan AI opsional untuk melihat apa yang penting bagi Anda."
 
-#: src/features/landing/landing-page.tsx:103
+#: src/features/landing/landing-page.tsx:106
 msgid "CRM"
 msgstr "CRM"
 
@@ -361,7 +375,7 @@ msgstr "Arah"
 msgid "Displays the mobile sidebar."
 msgstr "Menampilkan sidebar seluler."
 
-#: src/features/landing/landing-page.tsx:375
+#: src/features/landing/landing-page.tsx:382
 msgid "Distributed by design"
 msgstr "Terdistribusi sejak awal"
 
@@ -369,24 +383,41 @@ msgstr "Terdistribusi sejak awal"
 msgid "Download"
 msgstr "Unduh"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:438
+#: src/features/auth/sign-in/components/user-auth-form.tsx:451
 msgid "Email"
 msgstr "Email"
 
-#: src/features/auth/mfa/index.tsx:214
-#: src/features/auth/sign-in/components/user-auth-form.tsx:337
+#: src/features/auth/mfa/index.tsx:183
+msgid "email code"
+msgstr "kode email"
+
+#: src/features/auth/mfa/index.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Email code"
 msgstr "Kode email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
+#: src/features/auth/recovery/index.tsx:101
+msgid "Enter a recovery code for \"{userEmail}\" to sign in"
+msgstr "Masukkan kode pemulihan untuk \"{userEmail}\" untuk masuk"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:331
 msgid "Enter the code from your authenticator app"
 msgstr "Masukkan kode dari aplikasi authenticator Anda"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#. placeholder {0}: methods[0]
+#: src/features/auth/mfa/index.tsx:191
+msgid "Enter your {0}"
+msgstr "Masukkan {0} Anda"
+
+#: src/features/auth/mfa/index.tsx:195
+msgid "Enter your {initial} and {last}"
+msgstr "Masukkan {initial} dan {last} Anda"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Enter your email code and authenticator code"
 msgstr "Masukkan kode email dan kode authenticator Anda"
 
-#: src/features/landing/landing-page.tsx:346
+#: src/features/landing/landing-page.tsx:353
 msgid "Everything you need, nothing you don't control"
 msgstr "Semua yang Anda butuhkan, tanpa hal yang tidak Anda kendalikan"
 
@@ -398,11 +429,11 @@ msgstr "Perluas sidebar"
 msgid "Failed to add account"
 msgstr "Gagal menambahkan akun"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Failed to continue"
 msgstr "Gagal melanjutkan"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:142
 msgid "Failed to copy code"
 msgstr "Gagal menyalin kode"
 
@@ -410,7 +441,7 @@ msgstr "Gagal menyalin kode"
 msgid "Failed to remove account"
 msgstr "Gagal menghapus akun"
 
-#: src/features/auth/identity-form.tsx:49
+#: src/features/auth/identity-form.tsx:56
 msgid "Failed to save identity"
 msgstr "Gagal menyimpan identitas"
 
@@ -422,11 +453,11 @@ msgstr "Gagal mengirim kode verifikasi"
 msgid "Failed to update category"
 msgstr "Gagal memperbarui kategori"
 
-#: src/features/landing/landing-page.tsx:88
+#: src/features/landing/landing-page.tsx:91
 msgid "Feeds"
 msgstr "Feed"
 
-#: src/features/landing/landing-page.tsx:129
+#: src/features/landing/landing-page.tsx:132
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Feed, forum, proyek, CRM, wiki — semuanya bawaan. Atau tulis aplikasi Anda sendiri dalam Starlark."
 
@@ -438,7 +469,7 @@ msgstr "Selesaikan pengaturan akun Anda"
 msgid "Floating"
 msgstr "Mengambang"
 
-#: src/features/landing/landing-page.tsx:93
+#: src/features/landing/landing-page.tsx:96
 msgid "Forums"
 msgstr "Forum"
 
@@ -495,12 +526,12 @@ msgstr "Beranda"
 msgid "Hot"
 msgstr "Populer"
 
-#: src/features/landing/landing-page.tsx:294
-#: src/features/landing/landing-page.tsx:372
+#: src/features/landing/landing-page.tsx:301
+#: src/features/landing/landing-page.tsx:379
 msgid "How it works"
 msgstr "Cara kerjanya"
 
-#: src/features/auth/identity-form.tsx:44
+#: src/features/auth/identity-form.tsx:51
 msgid "Identity saved"
 msgstr "Identitas disimpan"
 
@@ -516,7 +547,7 @@ msgstr "Inset"
 msgid "Interests"
 msgstr "Minat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:187
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Invalid authenticator code"
 msgstr "Kode authenticator tidak valid"
 
@@ -525,25 +556,25 @@ msgstr "Kode authenticator tidak valid"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
-#: src/features/auth/sign-in/components/user-auth-form.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:280
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:224
+#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:293
 msgid "Invalid code"
 msgstr "Kode tidak valid"
 
-#: src/features/auth/recovery/index.tsx:70
-#: src/features/auth/recovery/index.tsx:81
+#: src/features/auth/recovery/index.tsx:76
+#: src/features/auth/recovery/index.tsx:87
 msgid "Invalid recovery code"
 msgstr "Kode pemulihan tidak valid"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:263
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
 msgid "Invalid verification code"
 msgstr "Kode verifikasi tidak valid"
 
-#: src/features/landing/landing-page.tsx:105
+#: src/features/landing/landing-page.tsx:108
 msgid "Keep track of contacts, relationships, and interactions with a highly adaptable CRM."
 msgstr "Lacak kontak, hubungan, dan interaksi dengan CRM yang sangat adaptif."
 
@@ -572,17 +603,17 @@ msgstr "Muat lebih banyak"
 msgid "Loading…"
 msgstr "Memuat…"
 
-#: src/features/auth/mfa/index.tsx:290
-#: src/features/auth/recovery/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:392
+#: src/features/auth/mfa/index.tsx:292
+#: src/features/auth/recovery/index.tsx:127
+#: src/features/auth/sign-in/components/user-auth-form.tsx:405
 msgid "Log in"
 msgstr "Masuk"
 
-#: src/features/landing/landing-page.tsx:465
+#: src/features/landing/landing-page.tsx:474
 msgid "Log in to Mochi"
 msgstr "Masuk ke Mochi"
 
-#: src/features/landing/landing-page.tsx:515
+#: src/features/landing/landing-page.tsx:524
 msgid "Log in with {label}"
 msgstr "Masuk dengan {label}"
 
@@ -604,9 +635,9 @@ msgstr "Masuk dengan alamat email Anda"
 msgid "Log out"
 msgstr "Keluar"
 
-#: src/features/auth/recovery/index.tsx:33
+#: src/features/auth/recovery/index.tsx:39
 #: src/features/auth/sign-in/index.tsx:35
-#: src/features/landing/landing-page.tsx:234
+#: src/features/landing/landing-page.tsx:240
 msgid "Logged in"
 msgstr "Masuk"
 
@@ -622,8 +653,12 @@ msgstr "Berhasil keluar"
 msgid "Logging out…"
 msgstr "Sedang keluar…"
 
-#: src/features/auth/mfa/index.tsx:314
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/lib/oauth-errors.ts:44
+msgid "Login session expired, please try again"
+msgstr "Sesi login kedaluwarsa, coba lagi"
+
+#: src/features/auth/mfa/index.tsx:316
+#: src/features/auth/sign-in/components/user-auth-form.tsx:427
 msgid "Lost access? Use a recovery code"
 msgstr "Kehilangan akses? Gunakan kode pemulihan"
 
@@ -631,7 +666,7 @@ msgstr "Kehilangan akses? Gunakan kode pemulihan"
 msgid "Luma (Default)"
 msgstr "Luma (Default)"
 
-#: src/features/landing/landing-page.tsx:100
+#: src/features/landing/landing-page.tsx:103
 msgid "Manage tickets and tasks in a friendly and highly flexible Kanban-style interface."
 msgstr "Kelola tiket dan tugas dalam antarmuka bergaya Kanban yang ramah dan sangat fleksibel."
 
@@ -644,7 +679,7 @@ msgstr "Tandai semua sebagai sudah dibaca"
 msgid "Menu"
 msgstr "Menu"
 
-#: src/features/landing/landing-page.tsx:115
+#: src/features/landing/landing-page.tsx:118
 msgid "Message your friends, individually or in groups, peer-to-peer and encrypted."
 msgstr "Kirim pesan ke teman Anda, secara individu atau dalam grup, peer-to-peer dan terenkripsi."
 
@@ -652,23 +687,23 @@ msgstr "Kirim pesan ke teman Anda, secara individu atau dalam grup, peer-to-peer
 msgid "Metric"
 msgstr "Metrik"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:287
 msgid "Mochi"
 msgstr "Mochi"
 
-#: src/features/landing/landing-page.tsx:349
+#: src/features/landing/landing-page.tsx:356
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi sudah hadir dengan lebih dari 20 aplikasi, dengan lebih banyak lagi yang ditambahkan secara berkala. Aplikasi utama meliputi:"
 
-#: src/features/landing/landing-page.tsx:331
+#: src/features/landing/landing-page.tsx:338
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi adalah platform federasi multi-pengguna untuk aplikasi terdistribusi. Siapa pun dapat menjalankan server mereka sendiri, dan terhubung dengan pengguna lain di jaringan Mochi. Siapa pun dapat membuat dan menerbitkan aplikasi."
 
-#: src/features/landing/landing-page.tsx:406
+#: src/features/landing/landing-page.tsx:413
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi dibangun menggunakan teknologi berikut:"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:341
 msgid "Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes."
 msgstr "Mochi saat ini berada di versi 0.3. Sudah siap untuk penggunaan sehari-hari jika Anda cukup teknis, dan toleran terhadap bug. Jika Anda seorang developer, juga sudah siap untuk Anda membuat aplikasi selama Anda tidak keberatan dengan beberapa perubahan API."
 
@@ -676,7 +711,7 @@ msgstr "Mochi saat ini berada di versi 0.3. Sudah siap untuk penggunaan sehari-h
 msgid "Monday"
 msgstr "Senin"
 
-#: src/features/landing/landing-page.tsx:142
+#: src/features/landing/landing-page.tsx:147
 msgid "Networking"
 msgstr "Jaringan"
 
@@ -684,12 +719,16 @@ msgstr "Jaringan"
 msgid "New"
 msgstr "Baru"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/lib/oauth-errors.ts:34
+msgid "New accounts are disabled on this server"
+msgstr "Akun baru dinonaktifkan di server ini"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:290
 msgid "New user signup is disabled."
 msgstr "Pendaftaran pengguna baru dinonaktifkan."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:451
+#: src/features/auth/sign-in/components/user-auth-form.tsx:464
 msgid "Next"
 msgstr "Berikutnya"
 
@@ -701,7 +740,7 @@ msgstr "Gambar berikutnya"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Tidak ada aturan akses yang dikonfigurasi. Tambahkan aturan untuk mengontrol siapa yang dapat mengakses sumber daya ini."
 
-#: src/features/landing/landing-page.tsx:378
+#: src/features/landing/landing-page.tsx:385
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Tidak ada server pusat yang menyimpan data Anda. Setiap node Mochi adalah peer penuh dalam jaringan, berkomunikasi langsung dengan yang lain melalui libp2p."
 
@@ -778,7 +817,7 @@ msgstr "Buka pengaturan tema"
 msgid "Or"
 msgstr "Atau"
 
-#: src/features/landing/landing-page.tsx:488
+#: src/features/landing/landing-page.tsx:497
 msgid "Or log in with"
 msgstr "Atau masuk dengan"
 
@@ -786,7 +825,7 @@ msgstr "Atau masuk dengan"
 msgid "Other"
 msgstr "Lainnya"
 
-#: src/features/auth/identity-form.tsx:100
+#: src/features/auth/identity-form.tsx:107
 msgid "Other users can find your profile."
 msgstr "Pengguna lain dapat menemukan profil Anda."
 
@@ -794,22 +833,26 @@ msgstr "Pengguna lain dapat menemukan profil Anda."
 msgid "Owner"
 msgstr "Pemilik"
 
-#: src/features/auth/mfa/index.tsx:272
-#: src/features/landing/landing-page.tsx:504
+#: src/features/auth/mfa/index.tsx:185
+msgid "passkey"
+msgstr "passkey"
+
+#: src/features/auth/mfa/index.tsx:274
+#: src/features/landing/landing-page.tsx:513
 msgid "Passkey"
 msgstr "Passkey"
 
 #: src/features/auth/sign-in/index.tsx:50
-#: src/features/landing/landing-page.tsx:252
+#: src/features/landing/landing-page.tsx:258
 msgid "Passkey login cancelled"
 msgstr "Login passkey dibatalkan"
 
 #: src/features/auth/sign-in/index.tsx:48
-#: src/features/landing/landing-page.tsx:250
+#: src/features/landing/landing-page.tsx:256
 msgid "Passkey login failed"
 msgstr "Login passkey gagal"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:101
+#: src/features/auth/sign-in/components/user-auth-form.tsx:112
 msgid "Passkey login required"
 msgstr "Login passkey diperlukan"
 
@@ -817,29 +860,72 @@ msgstr "Login passkey diperlukan"
 msgid "Passkey MFA not yet implemented"
 msgstr "Passkey MFA belum diimplementasikan"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:313
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Paste the login code you received by email"
 msgstr "Tempel kode login yang Anda terima melalui email"
 
-#: src/features/auth/recovery/index.tsx:71
-#: src/features/auth/recovery/index.tsx:82
+#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+msgid "Please check your authenticator app and try again."
+msgstr "Periksa aplikasi autentikator Anda dan coba lagi."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:217
+#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+msgid "Please check your authenticator code and try again."
+msgstr "Periksa kode autentikator Anda dan coba lagi."
+
+#: src/features/auth/mfa/index.tsx:141
+#: src/features/auth/mfa/index.tsx:161
+#: src/features/auth/mfa/index.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:294
+msgid "Please check your code and try again."
+msgstr "Periksa kode Anda dan coba lagi."
+
+#: src/features/auth/mfa/index.tsx:99
+#: src/features/auth/mfa/index.tsx:121
+#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:262
+msgid "Please check your codes and try again."
+msgstr "Periksa kode-kode Anda dan coba lagi."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+msgid "Please check your email and try again."
+msgstr "Periksa email Anda dan coba lagi."
+
+#: src/features/auth/recovery/index.tsx:77
+#: src/features/auth/recovery/index.tsx:88
 msgid "Please check your recovery code and try again."
 msgstr "Harap periksa kode pemulihan Anda dan coba lagi."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:132
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
 msgid "Please copy manually: {devCode}"
 msgstr "Harap salin secara manual: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:48
+msgid "Please enter a valid email"
+msgstr "Masukkan email yang valid"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:183
 msgid "Please enter your authenticator code"
 msgstr "Harap masukkan kode autentikator Anda"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/identity-form.tsx:29
+msgid "Please enter your name"
+msgstr "Masukkan nama Anda"
+
+#: src/features/auth/recovery/index.tsx:28
+msgid "Please enter your recovery code"
+msgstr "Masukkan kode pemulihan Anda"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:298
 msgid "Please try again or contact support."
 msgstr "Harap coba lagi atau hubungi dukungan."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:102
+#: src/features/auth/mfa/index.tsx:87
+msgid "Please use another verification method."
+msgstr "Gunakan metode verifikasi lain."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:113
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Harap gunakan tombol \"Masuk dengan passkey\"."
 
@@ -847,11 +933,11 @@ msgstr "Harap gunakan tombol \"Masuk dengan passkey\"."
 msgid "Previous image"
 msgstr "Gambar sebelumnya"
 
-#: src/features/auth/identity-form.tsx:85
+#: src/features/auth/identity-form.tsx:92
 msgid "Privacy"
 msgstr "Privasi"
 
-#: src/features/auth/identity-form.tsx:112
+#: src/features/auth/identity-form.tsx:119
 msgid "Private"
 msgstr "Pribadi"
 
@@ -860,19 +946,19 @@ msgstr "Pribadi"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/features/landing/landing-page.tsx:98
+#: src/features/landing/landing-page.tsx:101
 msgid "Projects"
 msgstr "Proyek"
 
-#: src/features/auth/identity-form.tsx:98
+#: src/features/auth/identity-form.tsx:105
 msgid "Public"
 msgstr "Publik"
 
-#: src/features/landing/landing-page.tsx:90
+#: src/features/landing/landing-page.tsx:93
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Terbitkan feed media sosial Anda sendiri, ikuti yang lain, atau agregasi feed lain dengan tagging dan sorting AI opsional. Ikuti yang penting, filter kebisingan."
 
-#: src/features/landing/landing-page.tsx:431
+#: src/features/landing/landing-page.tsx:438
 msgid "Ready to try Mochi?"
 msgstr "Siap mencoba Mochi?"
 
@@ -881,7 +967,7 @@ msgstr "Siap mencoba Mochi?"
 msgid "Recommended"
 msgstr "Direkomendasikan"
 
-#: src/features/auth/recovery/index.tsx:109
+#: src/features/auth/recovery/index.tsx:115
 msgid "Recovery code"
 msgstr "Kode pemulihan"
 
@@ -889,12 +975,16 @@ msgstr "Kode pemulihan"
 msgid "Redirecting to login."
 msgstr "Mengalihkan ke login."
 
+#: src/features/auth/identity-form.tsx:52
+msgid "Redirecting you to the dashboard…"
+msgstr "Mengarahkan Anda ke dashboard…"
+
 #: ../../../lib/web/src/components/post-tags.tsx:175
 msgid "Reduce interest"
 msgstr "Kurangi minat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
-#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
 msgid "Registration disabled"
 msgstr "Pendaftaran dinonaktifkan"
 
@@ -1010,7 +1100,7 @@ msgstr "Pilih arah situs"
 msgid "Select theme preference"
 msgstr "Pilih preferensi tema"
 
-#: src/features/landing/landing-page.tsx:141
+#: src/features/landing/landing-page.tsx:146
 msgid "Server"
 msgstr "Server"
 
@@ -1038,13 +1128,21 @@ msgstr "Menampilkan {totalShown} dari {total}"
 msgid "Sidebar"
 msgstr "Bilah samping"
 
-#: src/features/landing/landing-page.tsx:125
+#: src/features/landing/landing-page.tsx:128
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Daftar dan node Mochi Anda sendiri dibuat. Data Anda tinggal di sana — bukan di server orang lain."
 
-#: src/features/landing/landing-page.tsx:309
+#: src/features/landing/landing-page.tsx:316
 msgid "Sign up or log in"
 msgstr "Daftar atau masuk"
+
+#: src/lib/oauth-errors.ts:32
+msgid "Sign-in cancelled"
+msgstr "Login dibatalkan"
+
+#: src/lib/oauth-errors.ts:51
+msgid "Sign-in failed, please try again"
+msgstr "Login gagal, coba lagi"
 
 #: ../../../lib/web/src/components/layout/authenticated-layout.tsx:128
 msgid "Signing out..."
@@ -1054,13 +1152,13 @@ msgstr "Keluar..."
 msgid "Skip to Main"
 msgstr "Lewati ke Utama"
 
-#: src/features/auth/mfa/index.tsx:302
-#: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/mfa/index.tsx:304
+#: src/features/auth/recovery/index.tsx:138
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Start again"
 msgstr "Mulai ulang"
 
-#: src/features/auth/identity-form.tsx:114
+#: src/features/auth/identity-form.tsx:121
 msgid "Stay hidden from directory searches."
 msgstr "Tetap tersembunyi dari pencarian direktori."
 
@@ -1068,7 +1166,7 @@ msgstr "Tetap tersembunyi dari pencarian direktori."
 msgid "Stay tuned though!"
 msgstr "Tetap pantau!"
 
-#: src/features/landing/landing-page.tsx:143
+#: src/features/landing/landing-page.tsx:148
 msgid "Storage"
 msgstr "Penyimpanan"
 
@@ -1076,7 +1174,7 @@ msgstr "Penyimpanan"
 msgid "Subject"
 msgstr "Subjek"
 
-#: src/features/auth/recovery/index.tsx:34
+#: src/features/auth/recovery/index.tsx:40
 msgid "Successfully signed in with recovery code"
 msgstr "Berhasil masuk dengan kode pemulihan"
 
@@ -1097,9 +1195,22 @@ msgstr "Tag"
 msgid "Teams/Apps"
 msgstr "Tim/Aplikasi"
 
-#: src/features/landing/landing-page.tsx:300
+#: src/features/landing/landing-page.tsx:307
 msgid "Technology"
 msgstr "Teknologi"
+
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:42
+msgid "That {0} account is already linked to another user"
+msgstr "Akun {0} tersebut sudah ditautkan ke pengguna lain"
+
+#: src/lib/oauth-errors.ts:48
+msgid "That sign-in provider is not available"
+msgstr "Penyedia login tersebut tidak tersedia"
+
+#: src/lib/oauth-errors.ts:11
+msgid "the provider"
+msgstr "penyedia"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1179,7 +1290,7 @@ msgstr "Tidak ditugaskan"
 msgid "Unauthorized Access"
 msgstr "Akses Tidak Diizinkan"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:407
 msgid "Under the hood"
 msgstr "Di balik layar"
 
@@ -1191,11 +1302,11 @@ msgstr "Amerika Serikat"
 msgid "Unverified"
 msgstr "Belum diverifikasi"
 
-#: src/features/auth/identity-form.tsx:145
+#: src/features/auth/identity-form.tsx:152
 msgid "Use a different account"
 msgstr "Gunakan akun lain"
 
-#: src/features/landing/landing-page.tsx:128
+#: src/features/landing/landing-page.tsx:131
 msgid "Use the apps"
 msgstr "Gunakan aplikasi"
 
@@ -1212,7 +1323,7 @@ msgid "Verification code sent"
 msgstr "Kode verifikasi terkirim"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:297
 msgid "Verification failed"
 msgstr "Verifikasi gagal"
 
@@ -1223,6 +1334,10 @@ msgstr "Verifikasi"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Verifikasi alamat email"
+
+#: src/features/auth/mfa/index.tsx:284
+msgid "Verify with passkey"
+msgstr "Verifikasi dengan passkey"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1236,7 +1351,7 @@ msgstr "Lihat semua"
 msgid "View all notifications"
 msgstr "Lihat semua notifikasi"
 
-#: src/features/landing/landing-page.tsx:449
+#: src/features/landing/landing-page.tsx:456
 msgid "View source code"
 msgstr "Lihat kode sumber"
 
@@ -1244,7 +1359,7 @@ msgstr "Lihat kode sumber"
 msgid "We'll be back online shortly."
 msgstr "Kami akan kembali online sebentar lagi."
 
-#: src/features/landing/landing-page.tsx:434
+#: src/features/landing/landing-page.tsx:441
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Kami mencari pengguna awal yang bersedia mencoba Mochi dan memberikan umpan balik yang jujur. Ini adalah versi 0.3 jadi memiliki beberapa bug, tetapi siap untuk penggunaan sehari-hari."
 
@@ -1256,20 +1371,37 @@ msgstr "Situs web sedang dalam pemeliharaan!"
 msgid "Wednesday"
 msgstr "Rabu"
 
-#: src/features/landing/landing-page.tsx:108
+#: src/features/landing/landing-page.tsx:111
 msgid "Wikis"
 msgstr "Wiki"
 
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:38
+msgid "Your {0} email is not verified"
+msgstr "Email {0} Anda belum diverifikasi"
+
+#: src/lib/oauth-errors.ts:46
+msgid "Your account has been suspended"
+msgstr "Akun Anda telah ditangguhkan"
+
 #: src/features/auth/mfa/index.tsx:168
-#: src/features/auth/recovery/index.tsx:78
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
+#: src/features/auth/recovery/index.tsx:84
+#: src/features/auth/sign-in/components/user-auth-form.tsx:286
 msgid "Your account has been suspended."
 msgstr "Akun Anda telah ditangguhkan."
 
-#: src/features/landing/landing-page.tsx:328
+#: src/lib/oauth-errors.ts:40
+msgid "Your account requires a passkey to sign in"
+msgstr "Akun Anda memerlukan passkey untuk masuk"
+
+#: src/features/landing/landing-page.tsx:335
 msgid "Your apps, your platform, your network"
 msgstr "Aplikasi Anda, platform Anda, jaringan Anda"
 
-#: src/features/auth/identity-form.tsx:63
+#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+msgid "Your code is: {devCode}"
+msgstr "Kode Anda: {devCode}"
+
+#: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"
 msgstr "Nama Anda, seperti yang ingin dilihat orang lain"

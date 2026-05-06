@@ -42,8 +42,8 @@ msgid "Account removed"
 msgstr "Konto fjernet"
 
 #: src/features/auth/mfa/index.tsx:167
-#: src/features/auth/recovery/index.tsx:77
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
+#: src/features/auth/recovery/index.tsx:83
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
 msgid "Account suspended"
 msgstr "Konto suspenderet"
 
@@ -72,7 +72,7 @@ msgstr "Tilføj konto"
 msgid "Add an account to receive notifications and use services."
 msgstr "Tilføj en konto for at modtage notifikationer og bruge tjenester."
 
-#: src/features/landing/landing-page.tsx:133
+#: src/features/landing/landing-page.tsx:136
 msgid "Add friends, join communities. Data syncs directly between nodes — peer-to-peer, end-to-end."
 msgstr "Tilføj venner, deltag i fællesskaber. Data synkroniseres direkte mellem noder — peer-to-peer, end-to-end."
 
@@ -108,15 +108,20 @@ msgstr "AI"
 msgid "All"
 msgstr "Alle"
 
-#: src/features/landing/landing-page.tsx:144
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:36
+msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
+msgstr "En konto med den e-mail findes allerede. Log ind først, og link derefter {0} fra dine auth-indstillinger."
+
+#: src/features/landing/landing-page.tsx:149
 msgid "App business logic"
 msgstr "App-forretningslogik"
 
-#: src/features/landing/landing-page.tsx:145
+#: src/features/landing/landing-page.tsx:150
 msgid "App user interfaces"
 msgstr "App-brugergrænseflader"
 
-#: src/features/landing/landing-page.tsx:288
+#: src/features/landing/landing-page.tsx:295
 msgid "Apps"
 msgstr "Apps"
 
@@ -128,8 +133,12 @@ msgstr "Er du sikker på, at du vil logge ud? Du skal logge ind igen for at få 
 msgid "Asc"
 msgstr "Stigende"
 
-#: src/features/auth/mfa/index.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/mfa/index.tsx:184
+msgid "authenticator code"
+msgstr "autentificeringskode"
+
+#: src/features/auth/mfa/index.tsx:243
+#: src/features/auth/sign-in/components/user-auth-form.tsx:377
 msgid "Authenticator code"
 msgstr "Authenticator-kode"
 
@@ -147,15 +156,15 @@ msgstr "Tilbage til hjem"
 msgid "Boost interest"
 msgstr "Fremhæv interesse"
 
-#: src/features/landing/landing-page.tsx:110
+#: src/features/landing/landing-page.tsx:113
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Byg en samarbejdsbaseret, replikeret videnbase til dit fællesskab. Dine data er altid dine."
 
-#: src/features/landing/landing-page.tsx:403
+#: src/features/landing/landing-page.tsx:410
 msgid "Built on solid foundations"
 msgstr "Bygget på solide fundamenter"
 
-#: src/features/landing/landing-page.tsx:343
+#: src/features/landing/landing-page.tsx:350
 msgid "Built-in apps"
 msgstr "Indbyggede apps"
 
@@ -177,11 +186,11 @@ msgstr "Kategori for denne notifikation"
 msgid "Change notification category"
 msgstr "Skift notifikationskategori"
 
-#: src/features/landing/landing-page.tsx:113
+#: src/features/landing/landing-page.tsx:116
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:141
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Check your email."
 msgstr "Tjek din e-mail."
 
@@ -244,11 +253,11 @@ msgstr "Luk panel"
 msgid "Close search"
 msgstr "Luk søgning"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:129
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
 msgid "Code copied"
 msgstr "Kode kopieret"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:116
+#: src/features/auth/sign-in/components/user-auth-form.tsx:127
 msgid "Code sent."
 msgstr "Kode sendt."
 
@@ -264,12 +273,16 @@ msgstr "Kommer snart!"
 msgid "Compact"
 msgstr "Kompakt"
 
+#: src/features/auth/mfa/index.tsx:188
+msgid "Complete verification to continue"
+msgstr "Fuldfør verificering for at fortsætte"
+
 #: ../../../lib/web/src/components/place-picker.tsx:155
 #: ../../../lib/web/src/components/travelling-picker.tsx:299
 msgid "Confirm"
 msgstr "Bekræft"
 
-#: src/features/landing/landing-page.tsx:132
+#: src/features/landing/landing-page.tsx:135
 msgid "Connect with others"
 msgstr "Forbind med andre"
 
@@ -282,6 +295,7 @@ msgid "Contextual information and details."
 msgstr "Kontekstuelle oplysninger og detaljer."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:72
+#: src/features/auth/identity-form.tsx:134
 msgid "Continue"
 msgstr "Fortsæt"
 
@@ -289,27 +303,27 @@ msgstr "Fortsæt"
 msgid "Copy"
 msgstr "Kopier"
 
-#: src/features/auth/identity-form.tsx:141
+#: src/features/auth/identity-form.tsx:148
 msgid "Could not cancel"
 msgstr "Kunne ikke annullere"
 
-#: src/features/landing/landing-page.tsx:211
+#: src/features/landing/landing-page.tsx:217
 msgid "Could not start sign-in"
 msgstr "Kunne ikke starte login"
 
-#: src/features/landing/landing-page.tsx:441
+#: src/features/landing/landing-page.tsx:448
 msgid "Create an account"
 msgstr "Opret en konto"
 
-#: src/features/landing/landing-page.tsx:124
+#: src/features/landing/landing-page.tsx:127
 msgid "Create your node"
 msgstr "Opret din node"
 
-#: src/features/landing/landing-page.tsx:95
+#: src/features/landing/landing-page.tsx:98
 msgid "Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what's important to you."
 msgstr "Opret dine egne diskussionsfora, eller deltag i andres. Brug valgfri AI-tagging og -sortering til at se det, der er vigtigt for dig."
 
-#: src/features/landing/landing-page.tsx:103
+#: src/features/landing/landing-page.tsx:106
 msgid "CRM"
 msgstr "CRM"
 
@@ -361,7 +375,7 @@ msgstr "Retning"
 msgid "Displays the mobile sidebar."
 msgstr "Viser mobil-sidebjælken."
 
-#: src/features/landing/landing-page.tsx:375
+#: src/features/landing/landing-page.tsx:382
 msgid "Distributed by design"
 msgstr "Distribueret af design"
 
@@ -369,24 +383,41 @@ msgstr "Distribueret af design"
 msgid "Download"
 msgstr "Download"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:438
+#: src/features/auth/sign-in/components/user-auth-form.tsx:451
 msgid "Email"
 msgstr "E-mail"
 
-#: src/features/auth/mfa/index.tsx:214
-#: src/features/auth/sign-in/components/user-auth-form.tsx:337
+#: src/features/auth/mfa/index.tsx:183
+msgid "email code"
+msgstr "e-mailkode"
+
+#: src/features/auth/mfa/index.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Email code"
 msgstr "E-mailkode"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
+#: src/features/auth/recovery/index.tsx:101
+msgid "Enter a recovery code for \"{userEmail}\" to sign in"
+msgstr "Indtast en gendannelseskode for \"{userEmail}\" for at logge ind"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:331
 msgid "Enter the code from your authenticator app"
 msgstr "Indtast koden fra din godkendelsesapp"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#. placeholder {0}: methods[0]
+#: src/features/auth/mfa/index.tsx:191
+msgid "Enter your {0}"
+msgstr "Indtast din {0}"
+
+#: src/features/auth/mfa/index.tsx:195
+msgid "Enter your {initial} and {last}"
+msgstr "Indtast din {initial} og {last}"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Enter your email code and authenticator code"
 msgstr "Indtast din e-mailkode og godkendelseskode"
 
-#: src/features/landing/landing-page.tsx:346
+#: src/features/landing/landing-page.tsx:353
 msgid "Everything you need, nothing you don't control"
 msgstr "Alt hvad du behøver, intet du ikke styrer"
 
@@ -398,11 +429,11 @@ msgstr "Udvid sidebjælke"
 msgid "Failed to add account"
 msgstr "Kunne ikke tilføje konto"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Failed to continue"
 msgstr "Kunne ikke fortsætte"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:142
 msgid "Failed to copy code"
 msgstr "Kunne ikke kopiere kode"
 
@@ -410,7 +441,7 @@ msgstr "Kunne ikke kopiere kode"
 msgid "Failed to remove account"
 msgstr "Kunne ikke fjerne konto"
 
-#: src/features/auth/identity-form.tsx:49
+#: src/features/auth/identity-form.tsx:56
 msgid "Failed to save identity"
 msgstr "Kunne ikke gemme identitet"
 
@@ -422,11 +453,11 @@ msgstr "Kunne ikke sende verifikationskode"
 msgid "Failed to update category"
 msgstr "Kunne ikke opdatere kategori"
 
-#: src/features/landing/landing-page.tsx:88
+#: src/features/landing/landing-page.tsx:91
 msgid "Feeds"
 msgstr "Feeds"
 
-#: src/features/landing/landing-page.tsx:129
+#: src/features/landing/landing-page.tsx:132
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Feeds, fora, projekter, CRM, wikier — alle indbygget. Eller skriv dine egne apps i Starlark."
 
@@ -438,7 +469,7 @@ msgstr "Afslut opsætning af din konto"
 msgid "Floating"
 msgstr "Flydende"
 
-#: src/features/landing/landing-page.tsx:93
+#: src/features/landing/landing-page.tsx:96
 msgid "Forums"
 msgstr "Fora"
 
@@ -495,12 +526,12 @@ msgstr "Hjem"
 msgid "Hot"
 msgstr "Populære"
 
-#: src/features/landing/landing-page.tsx:294
-#: src/features/landing/landing-page.tsx:372
+#: src/features/landing/landing-page.tsx:301
+#: src/features/landing/landing-page.tsx:379
 msgid "How it works"
 msgstr "Sådan virker det"
 
-#: src/features/auth/identity-form.tsx:44
+#: src/features/auth/identity-form.tsx:51
 msgid "Identity saved"
 msgstr "Identitet gemt"
 
@@ -516,7 +547,7 @@ msgstr "Indsat"
 msgid "Interests"
 msgstr "Interesser"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:187
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Invalid authenticator code"
 msgstr "Ugyldig godkendelseskode"
 
@@ -525,25 +556,25 @@ msgstr "Ugyldig godkendelseskode"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
-#: src/features/auth/sign-in/components/user-auth-form.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:280
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:224
+#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:293
 msgid "Invalid code"
 msgstr "Ugyldig kode"
 
-#: src/features/auth/recovery/index.tsx:70
-#: src/features/auth/recovery/index.tsx:81
+#: src/features/auth/recovery/index.tsx:76
+#: src/features/auth/recovery/index.tsx:87
 msgid "Invalid recovery code"
 msgstr "Ugyldig gendannelseskode"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:263
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
 msgid "Invalid verification code"
 msgstr "Ugyldig verifikationskode"
 
-#: src/features/landing/landing-page.tsx:105
+#: src/features/landing/landing-page.tsx:108
 msgid "Keep track of contacts, relationships, and interactions with a highly adaptable CRM."
 msgstr "Hold styr på kontakter, relationer og interaktioner med en yderst tilpasningsdygtig CRM."
 
@@ -572,17 +603,17 @@ msgstr "Indlæs flere"
 msgid "Loading…"
 msgstr "Indlæser…"
 
-#: src/features/auth/mfa/index.tsx:290
-#: src/features/auth/recovery/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:392
+#: src/features/auth/mfa/index.tsx:292
+#: src/features/auth/recovery/index.tsx:127
+#: src/features/auth/sign-in/components/user-auth-form.tsx:405
 msgid "Log in"
 msgstr "Log ind"
 
-#: src/features/landing/landing-page.tsx:465
+#: src/features/landing/landing-page.tsx:474
 msgid "Log in to Mochi"
 msgstr "Log ind på Mochi"
 
-#: src/features/landing/landing-page.tsx:515
+#: src/features/landing/landing-page.tsx:524
 msgid "Log in with {label}"
 msgstr "Log ind med {label}"
 
@@ -604,9 +635,9 @@ msgstr "Log ind med din e-mailadresse"
 msgid "Log out"
 msgstr "Log ud"
 
-#: src/features/auth/recovery/index.tsx:33
+#: src/features/auth/recovery/index.tsx:39
 #: src/features/auth/sign-in/index.tsx:35
-#: src/features/landing/landing-page.tsx:234
+#: src/features/landing/landing-page.tsx:240
 msgid "Logged in"
 msgstr "Logget ind"
 
@@ -622,8 +653,12 @@ msgstr "Logget ud"
 msgid "Logging out…"
 msgstr "Logger ud…"
 
-#: src/features/auth/mfa/index.tsx:314
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/lib/oauth-errors.ts:44
+msgid "Login session expired, please try again"
+msgstr "Login-sessionen er udløbet, prøv venligst igen"
+
+#: src/features/auth/mfa/index.tsx:316
+#: src/features/auth/sign-in/components/user-auth-form.tsx:427
 msgid "Lost access? Use a recovery code"
 msgstr "Mistet adgang? Brug en gendannelseskode"
 
@@ -631,7 +666,7 @@ msgstr "Mistet adgang? Brug en gendannelseskode"
 msgid "Luma (Default)"
 msgstr "Luma (standard)"
 
-#: src/features/landing/landing-page.tsx:100
+#: src/features/landing/landing-page.tsx:103
 msgid "Manage tickets and tasks in a friendly and highly flexible Kanban-style interface."
 msgstr "Administrer sager og opgaver i en venlig og meget fleksibel Kanban-grænseflade."
 
@@ -644,7 +679,7 @@ msgstr "Markér alle som læst"
 msgid "Menu"
 msgstr "Menu"
 
-#: src/features/landing/landing-page.tsx:115
+#: src/features/landing/landing-page.tsx:118
 msgid "Message your friends, individually or in groups, peer-to-peer and encrypted."
 msgstr "Send beskeder til dine venner, individuelt eller i grupper, peer-to-peer og krypteret."
 
@@ -652,23 +687,23 @@ msgstr "Send beskeder til dine venner, individuelt eller i grupper, peer-to-peer
 msgid "Metric"
 msgstr "Metrisk"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:287
 msgid "Mochi"
 msgstr "Mochi"
 
-#: src/features/landing/landing-page.tsx:349
+#: src/features/landing/landing-page.tsx:356
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi leveres allerede med over 20 apps, og flere kommer til løbende. Større apps omfatter:"
 
-#: src/features/landing/landing-page.tsx:331
+#: src/features/landing/landing-page.tsx:338
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi er en fødereret platform for flere brugere til distribuerede apps. Alle kan køre deres egen server og forbinde til enhver anden bruger på Mochi-netværket. Alle kan oprette og udgive apps."
 
-#: src/features/landing/landing-page.tsx:406
+#: src/features/landing/landing-page.tsx:413
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi er bygget med følgende teknologier:"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:341
 msgid "Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes."
 msgstr "Mochi er i øjeblikket version 0.3. Den er klar til daglig brug, hvis du er nogenlunde teknisk og kan tolerere fejl. Hvis du er udvikler, er den også klar til, at du kan oprette apps, så længe du kan leve med nogle få API-ændringer."
 
@@ -676,7 +711,7 @@ msgstr "Mochi er i øjeblikket version 0.3. Den er klar til daglig brug, hvis du
 msgid "Monday"
 msgstr "Mandag"
 
-#: src/features/landing/landing-page.tsx:142
+#: src/features/landing/landing-page.tsx:147
 msgid "Networking"
 msgstr "Netværk"
 
@@ -684,12 +719,16 @@ msgstr "Netværk"
 msgid "New"
 msgstr "Ny"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/lib/oauth-errors.ts:34
+msgid "New accounts are disabled on this server"
+msgstr "Nye konti er deaktiveret på denne server"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:290
 msgid "New user signup is disabled."
 msgstr "Tilmelding af nye brugere er deaktiveret."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:451
+#: src/features/auth/sign-in/components/user-auth-form.tsx:464
 msgid "Next"
 msgstr "Næste"
 
@@ -701,7 +740,7 @@ msgstr "Næste billede"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Ingen adgangsregler konfigureret. Tilføj regler for at styre, hvem der har adgang til denne ressource."
 
-#: src/features/landing/landing-page.tsx:378
+#: src/features/landing/landing-page.tsx:385
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Ingen central server opbevarer dine data. Hver Mochi-node er en fuld peer i netværket og kommunikerer direkte med andre via libp2p."
 
@@ -778,7 +817,7 @@ msgstr "Åbn temaindstillinger"
 msgid "Or"
 msgstr "Eller"
 
-#: src/features/landing/landing-page.tsx:488
+#: src/features/landing/landing-page.tsx:497
 msgid "Or log in with"
 msgstr "Eller log ind med"
 
@@ -786,7 +825,7 @@ msgstr "Eller log ind med"
 msgid "Other"
 msgstr "Andet"
 
-#: src/features/auth/identity-form.tsx:100
+#: src/features/auth/identity-form.tsx:107
 msgid "Other users can find your profile."
 msgstr "Andre brugere kan finde din profil."
 
@@ -794,22 +833,26 @@ msgstr "Andre brugere kan finde din profil."
 msgid "Owner"
 msgstr "Ejer"
 
-#: src/features/auth/mfa/index.tsx:272
-#: src/features/landing/landing-page.tsx:504
+#: src/features/auth/mfa/index.tsx:185
+msgid "passkey"
+msgstr "passkey"
+
+#: src/features/auth/mfa/index.tsx:274
+#: src/features/landing/landing-page.tsx:513
 msgid "Passkey"
 msgstr "Adgangsnøgle"
 
 #: src/features/auth/sign-in/index.tsx:50
-#: src/features/landing/landing-page.tsx:252
+#: src/features/landing/landing-page.tsx:258
 msgid "Passkey login cancelled"
 msgstr "Logind med adgangsnøgle annulleret"
 
 #: src/features/auth/sign-in/index.tsx:48
-#: src/features/landing/landing-page.tsx:250
+#: src/features/landing/landing-page.tsx:256
 msgid "Passkey login failed"
 msgstr "Logind med adgangsnøgle mislykkedes"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:101
+#: src/features/auth/sign-in/components/user-auth-form.tsx:112
 msgid "Passkey login required"
 msgstr "Logind med adgangsnøgle kræves"
 
@@ -817,29 +860,72 @@ msgstr "Logind med adgangsnøgle kræves"
 msgid "Passkey MFA not yet implemented"
 msgstr "Adgangsnøgle-MFA er endnu ikke implementeret"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:313
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Paste the login code you received by email"
 msgstr "Indsæt den logindkode, du modtog på e-mail"
 
-#: src/features/auth/recovery/index.tsx:71
-#: src/features/auth/recovery/index.tsx:82
+#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+msgid "Please check your authenticator app and try again."
+msgstr "Tjek venligst din autentificerings-app og prøv igen."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:217
+#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+msgid "Please check your authenticator code and try again."
+msgstr "Tjek venligst din autentificeringskode og prøv igen."
+
+#: src/features/auth/mfa/index.tsx:141
+#: src/features/auth/mfa/index.tsx:161
+#: src/features/auth/mfa/index.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:294
+msgid "Please check your code and try again."
+msgstr "Tjek venligst din kode og prøv igen."
+
+#: src/features/auth/mfa/index.tsx:99
+#: src/features/auth/mfa/index.tsx:121
+#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:262
+msgid "Please check your codes and try again."
+msgstr "Tjek venligst dine koder og prøv igen."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+msgid "Please check your email and try again."
+msgstr "Tjek venligst din e-mail og prøv igen."
+
+#: src/features/auth/recovery/index.tsx:77
+#: src/features/auth/recovery/index.tsx:88
 msgid "Please check your recovery code and try again."
 msgstr "Kontrollér din gendannelseskode, og prøv igen."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:132
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
 msgid "Please copy manually: {devCode}"
 msgstr "Kopiér manuelt: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:48
+msgid "Please enter a valid email"
+msgstr "Indtast en gyldig e-mail"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:183
 msgid "Please enter your authenticator code"
 msgstr "Indtast din autentificeringskode"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/identity-form.tsx:29
+msgid "Please enter your name"
+msgstr "Indtast dit navn"
+
+#: src/features/auth/recovery/index.tsx:28
+msgid "Please enter your recovery code"
+msgstr "Indtast din gendannelseskode"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:298
 msgid "Please try again or contact support."
 msgstr "Prøv igen, eller kontakt support."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:102
+#: src/features/auth/mfa/index.tsx:87
+msgid "Please use another verification method."
+msgstr "Brug venligst en anden verificeringsmetode."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:113
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Brug knappen \"Log ind med adgangsnøgle\"."
 
@@ -847,11 +933,11 @@ msgstr "Brug knappen \"Log ind med adgangsnøgle\"."
 msgid "Previous image"
 msgstr "Forrige billede"
 
-#: src/features/auth/identity-form.tsx:85
+#: src/features/auth/identity-form.tsx:92
 msgid "Privacy"
 msgstr "Privatliv"
 
-#: src/features/auth/identity-form.tsx:112
+#: src/features/auth/identity-form.tsx:119
 msgid "Private"
 msgstr "Privat"
 
@@ -860,19 +946,19 @@ msgstr "Privat"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/features/landing/landing-page.tsx:98
+#: src/features/landing/landing-page.tsx:101
 msgid "Projects"
 msgstr "Projekter"
 
-#: src/features/auth/identity-form.tsx:98
+#: src/features/auth/identity-form.tsx:105
 msgid "Public"
 msgstr "Offentlig"
 
-#: src/features/landing/landing-page.tsx:90
+#: src/features/landing/landing-page.tsx:93
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Udgiv dine egne sociale mediefeeds, følg andre, eller saml andre feeds med valgfri AI-tagging og -sortering. Følg det, der betyder noget, og filtrér støjen fra."
 
-#: src/features/landing/landing-page.tsx:431
+#: src/features/landing/landing-page.tsx:438
 msgid "Ready to try Mochi?"
 msgstr "Klar til at prøve Mochi?"
 
@@ -881,7 +967,7 @@ msgstr "Klar til at prøve Mochi?"
 msgid "Recommended"
 msgstr "Anbefalet"
 
-#: src/features/auth/recovery/index.tsx:109
+#: src/features/auth/recovery/index.tsx:115
 msgid "Recovery code"
 msgstr "Gendannelseskode"
 
@@ -889,12 +975,16 @@ msgstr "Gendannelseskode"
 msgid "Redirecting to login."
 msgstr "Omdirigerer til logind."
 
+#: src/features/auth/identity-form.tsx:52
+msgid "Redirecting you to the dashboard…"
+msgstr "Omdirigerer dig til dashboardet…"
+
 #: ../../../lib/web/src/components/post-tags.tsx:175
 msgid "Reduce interest"
 msgstr "Reducér interesse"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
-#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
 msgid "Registration disabled"
 msgstr "Registrering deaktiveret"
 
@@ -1010,7 +1100,7 @@ msgstr "Vælg sideretning"
 msgid "Select theme preference"
 msgstr "Vælg temapræference"
 
-#: src/features/landing/landing-page.tsx:141
+#: src/features/landing/landing-page.tsx:146
 msgid "Server"
 msgstr "Server"
 
@@ -1038,13 +1128,21 @@ msgstr "Viser {totalShown} af {total}"
 msgid "Sidebar"
 msgstr "Sidepanel"
 
-#: src/features/landing/landing-page.tsx:125
+#: src/features/landing/landing-page.tsx:128
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Tilmeld dig, og din egen Mochi-node oprettes. Dine data findes der — ikke på en andens server."
 
-#: src/features/landing/landing-page.tsx:309
+#: src/features/landing/landing-page.tsx:316
 msgid "Sign up or log in"
 msgstr "Tilmeld dig eller log ind"
+
+#: src/lib/oauth-errors.ts:32
+msgid "Sign-in cancelled"
+msgstr "Login annulleret"
+
+#: src/lib/oauth-errors.ts:51
+msgid "Sign-in failed, please try again"
+msgstr "Login mislykkedes, prøv venligst igen"
 
 #: ../../../lib/web/src/components/layout/authenticated-layout.tsx:128
 msgid "Signing out..."
@@ -1054,13 +1152,13 @@ msgstr "Logger ud..."
 msgid "Skip to Main"
 msgstr "Spring til hovedindhold"
 
-#: src/features/auth/mfa/index.tsx:302
-#: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/mfa/index.tsx:304
+#: src/features/auth/recovery/index.tsx:138
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Start again"
 msgstr "Start igen"
 
-#: src/features/auth/identity-form.tsx:114
+#: src/features/auth/identity-form.tsx:121
 msgid "Stay hidden from directory searches."
 msgstr "Forbliv skjult fra søgninger i mappen."
 
@@ -1068,7 +1166,7 @@ msgstr "Forbliv skjult fra søgninger i mappen."
 msgid "Stay tuned though!"
 msgstr "Hold dig dog opdateret!"
 
-#: src/features/landing/landing-page.tsx:143
+#: src/features/landing/landing-page.tsx:148
 msgid "Storage"
 msgstr "Lagerplads"
 
@@ -1076,7 +1174,7 @@ msgstr "Lagerplads"
 msgid "Subject"
 msgstr "Emne"
 
-#: src/features/auth/recovery/index.tsx:34
+#: src/features/auth/recovery/index.tsx:40
 msgid "Successfully signed in with recovery code"
 msgstr "Logget ind med gendannelseskode"
 
@@ -1097,9 +1195,22 @@ msgstr "Tag"
 msgid "Teams/Apps"
 msgstr "Teams/Apps"
 
-#: src/features/landing/landing-page.tsx:300
+#: src/features/landing/landing-page.tsx:307
 msgid "Technology"
 msgstr "Teknologi"
+
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:42
+msgid "That {0} account is already linked to another user"
+msgstr "Den {0}-konto er allerede knyttet til en anden bruger"
+
+#: src/lib/oauth-errors.ts:48
+msgid "That sign-in provider is not available"
+msgstr "Den login-udbyder er ikke tilgængelig"
+
+#: src/lib/oauth-errors.ts:11
+msgid "the provider"
+msgstr "udbyderen"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1179,7 +1290,7 @@ msgstr "Ikke tildelt"
 msgid "Unauthorized Access"
 msgstr "Uautoriseret adgang"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:407
 msgid "Under the hood"
 msgstr "Under motorhjelmen"
 
@@ -1191,11 +1302,11 @@ msgstr "USA"
 msgid "Unverified"
 msgstr "Uverificeret"
 
-#: src/features/auth/identity-form.tsx:145
+#: src/features/auth/identity-form.tsx:152
 msgid "Use a different account"
 msgstr "Brug en anden konto"
 
-#: src/features/landing/landing-page.tsx:128
+#: src/features/landing/landing-page.tsx:131
 msgid "Use the apps"
 msgstr "Brug appsene"
 
@@ -1212,7 +1323,7 @@ msgid "Verification code sent"
 msgstr "Verifikationskode sendt"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:297
 msgid "Verification failed"
 msgstr "Verifikation mislykkedes"
 
@@ -1223,6 +1334,10 @@ msgstr "Verificer"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Verificer e-mailadresse"
+
+#: src/features/auth/mfa/index.tsx:284
+msgid "Verify with passkey"
+msgstr "Verificer med passkey"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1236,7 +1351,7 @@ msgstr "Vis alle"
 msgid "View all notifications"
 msgstr "Vis alle notifikationer"
 
-#: src/features/landing/landing-page.tsx:449
+#: src/features/landing/landing-page.tsx:456
 msgid "View source code"
 msgstr "Vis kildekode"
 
@@ -1244,7 +1359,7 @@ msgstr "Vis kildekode"
 msgid "We'll be back online shortly."
 msgstr "Vi er online igen om kort tid."
 
-#: src/features/landing/landing-page.tsx:434
+#: src/features/landing/landing-page.tsx:441
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Vi søger tidlige brugere, som er villige til at prøve Mochi og give ærlig feedback. Det er version 0.3, så der er nogle fejl, men det er klar til daglig brug."
 
@@ -1256,20 +1371,37 @@ msgstr "Webstedet er under vedligeholdelse!"
 msgid "Wednesday"
 msgstr "Onsdag"
 
-#: src/features/landing/landing-page.tsx:108
+#: src/features/landing/landing-page.tsx:111
 msgid "Wikis"
 msgstr "Wikier"
 
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:38
+msgid "Your {0} email is not verified"
+msgstr "Din {0}-e-mail er ikke verificeret"
+
+#: src/lib/oauth-errors.ts:46
+msgid "Your account has been suspended"
+msgstr "Din konto er blevet suspenderet"
+
 #: src/features/auth/mfa/index.tsx:168
-#: src/features/auth/recovery/index.tsx:78
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
+#: src/features/auth/recovery/index.tsx:84
+#: src/features/auth/sign-in/components/user-auth-form.tsx:286
 msgid "Your account has been suspended."
 msgstr "Din konto er blevet suspenderet."
 
-#: src/features/landing/landing-page.tsx:328
+#: src/lib/oauth-errors.ts:40
+msgid "Your account requires a passkey to sign in"
+msgstr "Din konto kræver en passkey for at logge ind"
+
+#: src/features/landing/landing-page.tsx:335
 msgid "Your apps, your platform, your network"
 msgstr "Dine apps, din platform, dit netværk"
 
-#: src/features/auth/identity-form.tsx:63
+#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+msgid "Your code is: {devCode}"
+msgstr "Din kode er: {devCode}"
+
+#: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"
 msgstr "Dit navn, som du vil have andre til at se det"

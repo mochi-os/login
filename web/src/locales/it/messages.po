@@ -42,8 +42,8 @@ msgid "Account removed"
 msgstr "Account rimosso"
 
 #: src/features/auth/mfa/index.tsx:167
-#: src/features/auth/recovery/index.tsx:77
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
+#: src/features/auth/recovery/index.tsx:83
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
 msgid "Account suspended"
 msgstr "Account sospeso"
 
@@ -72,7 +72,7 @@ msgstr "Aggiungi account"
 msgid "Add an account to receive notifications and use services."
 msgstr "Aggiungi un account per ricevere notifiche e usare i servizi."
 
-#: src/features/landing/landing-page.tsx:133
+#: src/features/landing/landing-page.tsx:136
 msgid "Add friends, join communities. Data syncs directly between nodes — peer-to-peer, end-to-end."
 msgstr "Aggiungi amici, unisciti alle comunità. I dati si sincronizzano direttamente tra i nodi — peer-to-peer, end-to-end."
 
@@ -108,15 +108,20 @@ msgstr "IA"
 msgid "All"
 msgstr "Tutti"
 
-#: src/features/landing/landing-page.tsx:144
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:36
+msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
+msgstr "Esiste già un account con questa email. Accedi prima, poi collega {0} dalle impostazioni di autenticazione."
+
+#: src/features/landing/landing-page.tsx:149
 msgid "App business logic"
 msgstr "Logica di business dell'app"
 
-#: src/features/landing/landing-page.tsx:145
+#: src/features/landing/landing-page.tsx:150
 msgid "App user interfaces"
 msgstr "Interfacce utente dell'app"
 
-#: src/features/landing/landing-page.tsx:288
+#: src/features/landing/landing-page.tsx:295
 msgid "Apps"
 msgstr "App"
 
@@ -128,8 +133,12 @@ msgstr "Sei sicuro di voler uscire? Dovrai accedere nuovamente per accedere al t
 msgid "Asc"
 msgstr "Cresc."
 
-#: src/features/auth/mfa/index.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/mfa/index.tsx:184
+msgid "authenticator code"
+msgstr "codice dell'autenticatore"
+
+#: src/features/auth/mfa/index.tsx:243
+#: src/features/auth/sign-in/components/user-auth-form.tsx:377
 msgid "Authenticator code"
 msgstr "Codice dell'autenticatore"
 
@@ -147,15 +156,15 @@ msgstr "Torna alla home"
 msgid "Boost interest"
 msgstr "Aumenta l'interesse"
 
-#: src/features/landing/landing-page.tsx:110
+#: src/features/landing/landing-page.tsx:113
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Costruisci una base di conoscenza collaborativa e replicata per la tua comunità. I tuoi dati sono sempre tuoi."
 
-#: src/features/landing/landing-page.tsx:403
+#: src/features/landing/landing-page.tsx:410
 msgid "Built on solid foundations"
 msgstr "Costruito su fondamenta solide"
 
-#: src/features/landing/landing-page.tsx:343
+#: src/features/landing/landing-page.tsx:350
 msgid "Built-in apps"
 msgstr "App integrate"
 
@@ -177,11 +186,11 @@ msgstr "Categoria per questa notifica"
 msgid "Change notification category"
 msgstr "Cambia categoria di notifica"
 
-#: src/features/landing/landing-page.tsx:113
+#: src/features/landing/landing-page.tsx:116
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:141
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Check your email."
 msgstr "Controlla la tua email."
 
@@ -244,11 +253,11 @@ msgstr "Chiudi pannello"
 msgid "Close search"
 msgstr "Chiudi ricerca"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:129
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
 msgid "Code copied"
 msgstr "Codice copiato"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:116
+#: src/features/auth/sign-in/components/user-auth-form.tsx:127
 msgid "Code sent."
 msgstr "Codice inviato."
 
@@ -264,12 +273,16 @@ msgstr "In arrivo!"
 msgid "Compact"
 msgstr "Compatto"
 
+#: src/features/auth/mfa/index.tsx:188
+msgid "Complete verification to continue"
+msgstr "Completa la verifica per continuare"
+
 #: ../../../lib/web/src/components/place-picker.tsx:155
 #: ../../../lib/web/src/components/travelling-picker.tsx:299
 msgid "Confirm"
 msgstr "Conferma"
 
-#: src/features/landing/landing-page.tsx:132
+#: src/features/landing/landing-page.tsx:135
 msgid "Connect with others"
 msgstr "Connettiti con gli altri"
 
@@ -282,6 +295,7 @@ msgid "Contextual information and details."
 msgstr "Informazioni e dettagli contestuali."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:72
+#: src/features/auth/identity-form.tsx:134
 msgid "Continue"
 msgstr "Continua"
 
@@ -289,27 +303,27 @@ msgstr "Continua"
 msgid "Copy"
 msgstr "Copia"
 
-#: src/features/auth/identity-form.tsx:141
+#: src/features/auth/identity-form.tsx:148
 msgid "Could not cancel"
 msgstr "Impossibile annullare"
 
-#: src/features/landing/landing-page.tsx:211
+#: src/features/landing/landing-page.tsx:217
 msgid "Could not start sign-in"
 msgstr "Impossibile avviare l'accesso"
 
-#: src/features/landing/landing-page.tsx:441
+#: src/features/landing/landing-page.tsx:448
 msgid "Create an account"
 msgstr "Crea un account"
 
-#: src/features/landing/landing-page.tsx:124
+#: src/features/landing/landing-page.tsx:127
 msgid "Create your node"
 msgstr "Crea il tuo nodo"
 
-#: src/features/landing/landing-page.tsx:95
+#: src/features/landing/landing-page.tsx:98
 msgid "Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what's important to you."
 msgstr "Crea i tuoi forum di discussione o unisciti ad altri. Usa tagging e ordinamento IA opzionali per vedere ciò che è importante per te."
 
-#: src/features/landing/landing-page.tsx:103
+#: src/features/landing/landing-page.tsx:106
 msgid "CRM"
 msgstr "CRM"
 
@@ -361,7 +375,7 @@ msgstr "Direzione"
 msgid "Displays the mobile sidebar."
 msgstr "Mostra la barra laterale mobile."
 
-#: src/features/landing/landing-page.tsx:375
+#: src/features/landing/landing-page.tsx:382
 msgid "Distributed by design"
 msgstr "Distribuito per progettazione"
 
@@ -369,24 +383,41 @@ msgstr "Distribuito per progettazione"
 msgid "Download"
 msgstr "Scarica"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:438
+#: src/features/auth/sign-in/components/user-auth-form.tsx:451
 msgid "Email"
 msgstr "Email"
 
-#: src/features/auth/mfa/index.tsx:214
-#: src/features/auth/sign-in/components/user-auth-form.tsx:337
+#: src/features/auth/mfa/index.tsx:183
+msgid "email code"
+msgstr "codice email"
+
+#: src/features/auth/mfa/index.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Email code"
 msgstr "Codice email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
+#: src/features/auth/recovery/index.tsx:101
+msgid "Enter a recovery code for \"{userEmail}\" to sign in"
+msgstr "Inserisci un codice di recupero per \"{userEmail}\" per accedere"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:331
 msgid "Enter the code from your authenticator app"
 msgstr "Inserisci il codice della tua app di autenticazione"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#. placeholder {0}: methods[0]
+#: src/features/auth/mfa/index.tsx:191
+msgid "Enter your {0}"
+msgstr "Inserisci il tuo {0}"
+
+#: src/features/auth/mfa/index.tsx:195
+msgid "Enter your {initial} and {last}"
+msgstr "Inserisci il tuo {initial} e {last}"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Enter your email code and authenticator code"
 msgstr "Inserisci il codice email e il codice dell'autenticatore"
 
-#: src/features/landing/landing-page.tsx:346
+#: src/features/landing/landing-page.tsx:353
 msgid "Everything you need, nothing you don't control"
 msgstr "Tutto ciò di cui hai bisogno, niente che non controlli"
 
@@ -398,11 +429,11 @@ msgstr "Espandi barra laterale"
 msgid "Failed to add account"
 msgstr "Impossibile aggiungere l'account"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Failed to continue"
 msgstr "Impossibile continuare"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:142
 msgid "Failed to copy code"
 msgstr "Impossibile copiare il codice"
 
@@ -410,7 +441,7 @@ msgstr "Impossibile copiare il codice"
 msgid "Failed to remove account"
 msgstr "Impossibile rimuovere l'account"
 
-#: src/features/auth/identity-form.tsx:49
+#: src/features/auth/identity-form.tsx:56
 msgid "Failed to save identity"
 msgstr "Impossibile salvare l'identità"
 
@@ -422,11 +453,11 @@ msgstr "Impossibile inviare il codice di verifica"
 msgid "Failed to update category"
 msgstr "Impossibile aggiornare la categoria"
 
-#: src/features/landing/landing-page.tsx:88
+#: src/features/landing/landing-page.tsx:91
 msgid "Feeds"
 msgstr "Feed"
 
-#: src/features/landing/landing-page.tsx:129
+#: src/features/landing/landing-page.tsx:132
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Feed, forum, progetti, CRM, wiki — tutto integrato. Oppure scrivi le tue app in Starlark."
 
@@ -438,7 +469,7 @@ msgstr "Termina la configurazione del tuo account"
 msgid "Floating"
 msgstr "Fluttuante"
 
-#: src/features/landing/landing-page.tsx:93
+#: src/features/landing/landing-page.tsx:96
 msgid "Forums"
 msgstr "Forum"
 
@@ -495,12 +526,12 @@ msgstr "Home"
 msgid "Hot"
 msgstr "Popolare"
 
-#: src/features/landing/landing-page.tsx:294
-#: src/features/landing/landing-page.tsx:372
+#: src/features/landing/landing-page.tsx:301
+#: src/features/landing/landing-page.tsx:379
 msgid "How it works"
 msgstr "Come funziona"
 
-#: src/features/auth/identity-form.tsx:44
+#: src/features/auth/identity-form.tsx:51
 msgid "Identity saved"
 msgstr "Identità salvata"
 
@@ -516,7 +547,7 @@ msgstr "Incassato"
 msgid "Interests"
 msgstr "Interessi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:187
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Invalid authenticator code"
 msgstr "Codice autenticatore non valido"
 
@@ -525,25 +556,25 @@ msgstr "Codice autenticatore non valido"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
-#: src/features/auth/sign-in/components/user-auth-form.tsx:241
-#: src/features/auth/sign-in/components/user-auth-form.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:280
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:224
+#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:293
 msgid "Invalid code"
 msgstr "Codice non valido"
 
-#: src/features/auth/recovery/index.tsx:70
-#: src/features/auth/recovery/index.tsx:81
+#: src/features/auth/recovery/index.tsx:76
+#: src/features/auth/recovery/index.tsx:87
 msgid "Invalid recovery code"
 msgstr "Codice di recupero non valido"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:263
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
 msgid "Invalid verification code"
 msgstr "Codice di verifica non valido"
 
-#: src/features/landing/landing-page.tsx:105
+#: src/features/landing/landing-page.tsx:108
 msgid "Keep track of contacts, relationships, and interactions with a highly adaptable CRM."
 msgstr "Tieni traccia di contatti, relazioni e interazioni con un CRM altamente adattabile."
 
@@ -572,17 +603,17 @@ msgstr "Carica altri"
 msgid "Loading…"
 msgstr "Caricamento…"
 
-#: src/features/auth/mfa/index.tsx:290
-#: src/features/auth/recovery/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:392
+#: src/features/auth/mfa/index.tsx:292
+#: src/features/auth/recovery/index.tsx:127
+#: src/features/auth/sign-in/components/user-auth-form.tsx:405
 msgid "Log in"
 msgstr "Accedi"
 
-#: src/features/landing/landing-page.tsx:465
+#: src/features/landing/landing-page.tsx:474
 msgid "Log in to Mochi"
 msgstr "Accedi a Mochi"
 
-#: src/features/landing/landing-page.tsx:515
+#: src/features/landing/landing-page.tsx:524
 msgid "Log in with {label}"
 msgstr "Accedi con {label}"
 
@@ -604,9 +635,9 @@ msgstr "Accedi con il tuo indirizzo email"
 msgid "Log out"
 msgstr "Esci"
 
-#: src/features/auth/recovery/index.tsx:33
+#: src/features/auth/recovery/index.tsx:39
 #: src/features/auth/sign-in/index.tsx:35
-#: src/features/landing/landing-page.tsx:234
+#: src/features/landing/landing-page.tsx:240
 msgid "Logged in"
 msgstr "Accesso effettuato"
 
@@ -622,8 +653,12 @@ msgstr "Disconnesso correttamente"
 msgid "Logging out…"
 msgstr "Disconnessione in corso…"
 
-#: src/features/auth/mfa/index.tsx:314
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/lib/oauth-errors.ts:44
+msgid "Login session expired, please try again"
+msgstr "Sessione di accesso scaduta, riprova"
+
+#: src/features/auth/mfa/index.tsx:316
+#: src/features/auth/sign-in/components/user-auth-form.tsx:427
 msgid "Lost access? Use a recovery code"
 msgstr "Hai perso l'accesso? Usa un codice di recupero"
 
@@ -631,7 +666,7 @@ msgstr "Hai perso l'accesso? Usa un codice di recupero"
 msgid "Luma (Default)"
 msgstr "Luma (predefinito)"
 
-#: src/features/landing/landing-page.tsx:100
+#: src/features/landing/landing-page.tsx:103
 msgid "Manage tickets and tasks in a friendly and highly flexible Kanban-style interface."
 msgstr "Gestisci ticket e attività con un'interfaccia in stile Kanban intuitiva e altamente flessibile."
 
@@ -644,7 +679,7 @@ msgstr "Segna tutto come letto"
 msgid "Menu"
 msgstr "Menu"
 
-#: src/features/landing/landing-page.tsx:115
+#: src/features/landing/landing-page.tsx:118
 msgid "Message your friends, individually or in groups, peer-to-peer and encrypted."
 msgstr "Invia messaggi ai tuoi amici, singolarmente o in gruppo, peer-to-peer e crittografati."
 
@@ -652,23 +687,23 @@ msgstr "Invia messaggi ai tuoi amici, singolarmente o in gruppo, peer-to-peer e 
 msgid "Metric"
 msgstr "Metrico"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:287
 msgid "Mochi"
 msgstr "Mochi"
 
-#: src/features/landing/landing-page.tsx:349
+#: src/features/landing/landing-page.tsx:356
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi include già oltre 20 app, e altre vengono aggiunte di frequente. Le app principali includono:"
 
-#: src/features/landing/landing-page.tsx:331
+#: src/features/landing/landing-page.tsx:338
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi è una piattaforma federata multiutente per app distribuite. Chiunque può gestire il proprio server e connettersi a qualsiasi altro utente sulla rete Mochi. Chiunque può creare e pubblicare app."
 
-#: src/features/landing/landing-page.tsx:406
+#: src/features/landing/landing-page.tsx:413
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi è realizzato con le seguenti tecnologie:"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:341
 msgid "Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes."
 msgstr "Mochi è attualmente alla versione 0.3. È pronto per l'uso quotidiano se hai un livello tecnico medio e sei tollerante ai bug. Se sei uno sviluppatore, è anche pronto per creare app, purché tu accetti alcune modifiche alle API."
 
@@ -676,7 +711,7 @@ msgstr "Mochi è attualmente alla versione 0.3. È pronto per l'uso quotidiano s
 msgid "Monday"
 msgstr "Lunedì"
 
-#: src/features/landing/landing-page.tsx:142
+#: src/features/landing/landing-page.tsx:147
 msgid "Networking"
 msgstr "Rete"
 
@@ -684,12 +719,16 @@ msgstr "Rete"
 msgid "New"
 msgstr "Nuovo"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/lib/oauth-errors.ts:34
+msgid "New accounts are disabled on this server"
+msgstr "I nuovi account sono disabilitati su questo server"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:290
 msgid "New user signup is disabled."
 msgstr "La registrazione di nuovi utenti è disabilitata."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:451
+#: src/features/auth/sign-in/components/user-auth-form.tsx:464
 msgid "Next"
 msgstr "Avanti"
 
@@ -701,7 +740,7 @@ msgstr "Immagine successiva"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Nessuna regola di accesso configurata. Aggiungi regole per controllare chi può accedere a questa risorsa."
 
-#: src/features/landing/landing-page.tsx:378
+#: src/features/landing/landing-page.tsx:385
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Nessun server centrale conserva i tuoi dati. Ogni nodo Mochi è un peer a pieno titolo nella rete, comunicando direttamente con gli altri tramite libp2p."
 
@@ -778,7 +817,7 @@ msgstr "Apri impostazioni tema"
 msgid "Or"
 msgstr "Oppure"
 
-#: src/features/landing/landing-page.tsx:488
+#: src/features/landing/landing-page.tsx:497
 msgid "Or log in with"
 msgstr "Oppure accedi con"
 
@@ -786,7 +825,7 @@ msgstr "Oppure accedi con"
 msgid "Other"
 msgstr "Altro"
 
-#: src/features/auth/identity-form.tsx:100
+#: src/features/auth/identity-form.tsx:107
 msgid "Other users can find your profile."
 msgstr "Altri utenti possono trovare il tuo profilo."
 
@@ -794,22 +833,26 @@ msgstr "Altri utenti possono trovare il tuo profilo."
 msgid "Owner"
 msgstr "Proprietario"
 
-#: src/features/auth/mfa/index.tsx:272
-#: src/features/landing/landing-page.tsx:504
+#: src/features/auth/mfa/index.tsx:185
+msgid "passkey"
+msgstr "passkey"
+
+#: src/features/auth/mfa/index.tsx:274
+#: src/features/landing/landing-page.tsx:513
 msgid "Passkey"
 msgstr "Passkey"
 
 #: src/features/auth/sign-in/index.tsx:50
-#: src/features/landing/landing-page.tsx:252
+#: src/features/landing/landing-page.tsx:258
 msgid "Passkey login cancelled"
 msgstr "Accesso con passkey annullato"
 
 #: src/features/auth/sign-in/index.tsx:48
-#: src/features/landing/landing-page.tsx:250
+#: src/features/landing/landing-page.tsx:256
 msgid "Passkey login failed"
 msgstr "Accesso con passkey non riuscito"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:101
+#: src/features/auth/sign-in/components/user-auth-form.tsx:112
 msgid "Passkey login required"
 msgstr "Accesso con passkey richiesto"
 
@@ -817,29 +860,72 @@ msgstr "Accesso con passkey richiesto"
 msgid "Passkey MFA not yet implemented"
 msgstr "MFA con passkey non ancora implementato"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:313
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Paste the login code you received by email"
 msgstr "Incolla il codice di accesso che hai ricevuto via email"
 
-#: src/features/auth/recovery/index.tsx:71
-#: src/features/auth/recovery/index.tsx:82
+#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+msgid "Please check your authenticator app and try again."
+msgstr "Controlla la tua app autenticatore e riprova."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:217
+#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+msgid "Please check your authenticator code and try again."
+msgstr "Controlla il tuo codice dell'autenticatore e riprova."
+
+#: src/features/auth/mfa/index.tsx:141
+#: src/features/auth/mfa/index.tsx:161
+#: src/features/auth/mfa/index.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:294
+msgid "Please check your code and try again."
+msgstr "Controlla il tuo codice e riprova."
+
+#: src/features/auth/mfa/index.tsx:99
+#: src/features/auth/mfa/index.tsx:121
+#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:262
+msgid "Please check your codes and try again."
+msgstr "Controlla i tuoi codici e riprova."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+msgid "Please check your email and try again."
+msgstr "Controlla la tua email e riprova."
+
+#: src/features/auth/recovery/index.tsx:77
+#: src/features/auth/recovery/index.tsx:88
 msgid "Please check your recovery code and try again."
 msgstr "Verifica il tuo codice di recupero e riprova."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:132
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
 msgid "Please copy manually: {devCode}"
 msgstr "Copia manualmente: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:48
+msgid "Please enter a valid email"
+msgstr "Inserisci un'email valida"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:183
 msgid "Please enter your authenticator code"
 msgstr "Inserisci il codice del tuo autenticatore"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/identity-form.tsx:29
+msgid "Please enter your name"
+msgstr "Inserisci il tuo nome"
+
+#: src/features/auth/recovery/index.tsx:28
+msgid "Please enter your recovery code"
+msgstr "Inserisci il tuo codice di recupero"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:298
 msgid "Please try again or contact support."
 msgstr "Riprova o contatta l'assistenza."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:102
+#: src/features/auth/mfa/index.tsx:87
+msgid "Please use another verification method."
+msgstr "Usa un altro metodo di verifica."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:113
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Usa il pulsante \"Accedi con passkey\"."
 
@@ -847,11 +933,11 @@ msgstr "Usa il pulsante \"Accedi con passkey\"."
 msgid "Previous image"
 msgstr "Immagine precedente"
 
-#: src/features/auth/identity-form.tsx:85
+#: src/features/auth/identity-form.tsx:92
 msgid "Privacy"
 msgstr "Privacy"
 
-#: src/features/auth/identity-form.tsx:112
+#: src/features/auth/identity-form.tsx:119
 msgid "Private"
 msgstr "Privato"
 
@@ -860,19 +946,19 @@ msgstr "Privato"
 msgid "Profile"
 msgstr "Profilo"
 
-#: src/features/landing/landing-page.tsx:98
+#: src/features/landing/landing-page.tsx:101
 msgid "Projects"
 msgstr "Progetti"
 
-#: src/features/auth/identity-form.tsx:98
+#: src/features/auth/identity-form.tsx:105
 msgid "Public"
 msgstr "Pubblico"
 
-#: src/features/landing/landing-page.tsx:90
+#: src/features/landing/landing-page.tsx:93
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Pubblica i tuoi feed di social media, segui altri o aggrega altri feed con tagging e ordinamento AI opzionali. Segui ciò che conta, filtra il rumore."
 
-#: src/features/landing/landing-page.tsx:431
+#: src/features/landing/landing-page.tsx:438
 msgid "Ready to try Mochi?"
 msgstr "Pronto a provare Mochi?"
 
@@ -881,7 +967,7 @@ msgstr "Pronto a provare Mochi?"
 msgid "Recommended"
 msgstr "Consigliato"
 
-#: src/features/auth/recovery/index.tsx:109
+#: src/features/auth/recovery/index.tsx:115
 msgid "Recovery code"
 msgstr "Codice di recupero"
 
@@ -889,12 +975,16 @@ msgstr "Codice di recupero"
 msgid "Redirecting to login."
 msgstr "Reindirizzamento all'accesso."
 
+#: src/features/auth/identity-form.tsx:52
+msgid "Redirecting you to the dashboard…"
+msgstr "Reindirizzamento alla dashboard…"
+
 #: ../../../lib/web/src/components/post-tags.tsx:175
 msgid "Reduce interest"
 msgstr "Riduci interesse"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
-#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
 msgid "Registration disabled"
 msgstr "Registrazione disabilitata"
 
@@ -1010,7 +1100,7 @@ msgstr "Seleziona direzione del sito"
 msgid "Select theme preference"
 msgstr "Seleziona preferenza del tema"
 
-#: src/features/landing/landing-page.tsx:141
+#: src/features/landing/landing-page.tsx:146
 msgid "Server"
 msgstr "Server"
 
@@ -1038,13 +1128,21 @@ msgstr "Visualizzati {totalShown} di {total}"
 msgid "Sidebar"
 msgstr "Barra laterale"
 
-#: src/features/landing/landing-page.tsx:125
+#: src/features/landing/landing-page.tsx:128
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Registrati e verrà creato il tuo nodo Mochi personale. I tuoi dati vivono lì, non sul server di qualcun altro."
 
-#: src/features/landing/landing-page.tsx:309
+#: src/features/landing/landing-page.tsx:316
 msgid "Sign up or log in"
 msgstr "Registrati o accedi"
+
+#: src/lib/oauth-errors.ts:32
+msgid "Sign-in cancelled"
+msgstr "Accesso annullato"
+
+#: src/lib/oauth-errors.ts:51
+msgid "Sign-in failed, please try again"
+msgstr "Accesso fallito, riprova"
 
 #: ../../../lib/web/src/components/layout/authenticated-layout.tsx:128
 msgid "Signing out..."
@@ -1054,13 +1152,13 @@ msgstr "Disconnessione in corso..."
 msgid "Skip to Main"
 msgstr "Vai al contenuto principale"
 
-#: src/features/auth/mfa/index.tsx:302
-#: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/mfa/index.tsx:304
+#: src/features/auth/recovery/index.tsx:138
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Start again"
 msgstr "Ricomincia"
 
-#: src/features/auth/identity-form.tsx:114
+#: src/features/auth/identity-form.tsx:121
 msgid "Stay hidden from directory searches."
 msgstr "Rimani nascosto dalle ricerche nella directory."
 
@@ -1068,7 +1166,7 @@ msgstr "Rimani nascosto dalle ricerche nella directory."
 msgid "Stay tuned though!"
 msgstr "Resta sintonizzato!"
 
-#: src/features/landing/landing-page.tsx:143
+#: src/features/landing/landing-page.tsx:148
 msgid "Storage"
 msgstr "Archiviazione"
 
@@ -1076,7 +1174,7 @@ msgstr "Archiviazione"
 msgid "Subject"
 msgstr "Oggetto"
 
-#: src/features/auth/recovery/index.tsx:34
+#: src/features/auth/recovery/index.tsx:40
 msgid "Successfully signed in with recovery code"
 msgstr "Accesso effettuato con codice di recupero"
 
@@ -1097,9 +1195,22 @@ msgstr "Tag"
 msgid "Teams/Apps"
 msgstr "Team/App"
 
-#: src/features/landing/landing-page.tsx:300
+#: src/features/landing/landing-page.tsx:307
 msgid "Technology"
 msgstr "Tecnologia"
+
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:42
+msgid "That {0} account is already linked to another user"
+msgstr "Quell'account {0} è già collegato a un altro utente"
+
+#: src/lib/oauth-errors.ts:48
+msgid "That sign-in provider is not available"
+msgstr "Quel provider di accesso non è disponibile"
+
+#: src/lib/oauth-errors.ts:11
+msgid "the provider"
+msgstr "il provider"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1179,7 +1290,7 @@ msgstr "Non assegnato"
 msgid "Unauthorized Access"
 msgstr "Accesso non autorizzato"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:407
 msgid "Under the hood"
 msgstr "Dietro le quinte"
 
@@ -1191,11 +1302,11 @@ msgstr "Stati Uniti"
 msgid "Unverified"
 msgstr "Non verificato"
 
-#: src/features/auth/identity-form.tsx:145
+#: src/features/auth/identity-form.tsx:152
 msgid "Use a different account"
 msgstr "Usa un account diverso"
 
-#: src/features/landing/landing-page.tsx:128
+#: src/features/landing/landing-page.tsx:131
 msgid "Use the apps"
 msgstr "Usa le app"
 
@@ -1212,7 +1323,7 @@ msgid "Verification code sent"
 msgstr "Codice di verifica inviato"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:297
 msgid "Verification failed"
 msgstr "Verifica non riuscita"
 
@@ -1223,6 +1334,10 @@ msgstr "Verifica"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Verifica indirizzo email"
+
+#: src/features/auth/mfa/index.tsx:284
+msgid "Verify with passkey"
+msgstr "Verifica con passkey"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1236,7 +1351,7 @@ msgstr "Visualizza tutto"
 msgid "View all notifications"
 msgstr "Visualizza tutte le notifiche"
 
-#: src/features/landing/landing-page.tsx:449
+#: src/features/landing/landing-page.tsx:456
 msgid "View source code"
 msgstr "Visualizza codice sorgente"
 
@@ -1244,7 +1359,7 @@ msgstr "Visualizza codice sorgente"
 msgid "We'll be back online shortly."
 msgstr "Torneremo online a breve."
 
-#: src/features/landing/landing-page.tsx:434
+#: src/features/landing/landing-page.tsx:441
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Cerchiamo early adopter disposti a provare Mochi e a dare un feedback sincero. È la versione 0.3 e ha qualche bug, ma è pronta per l'uso quotidiano."
 
@@ -1256,20 +1371,37 @@ msgstr "Il sito è in manutenzione!"
 msgid "Wednesday"
 msgstr "Mercoledì"
 
-#: src/features/landing/landing-page.tsx:108
+#: src/features/landing/landing-page.tsx:111
 msgid "Wikis"
 msgstr "Wiki"
 
+#. placeholder {0}: providerLabel(provider)
+#: src/lib/oauth-errors.ts:38
+msgid "Your {0} email is not verified"
+msgstr "La tua email {0} non è verificata"
+
+#: src/lib/oauth-errors.ts:46
+msgid "Your account has been suspended"
+msgstr "Il tuo account è stato sospeso"
+
 #: src/features/auth/mfa/index.tsx:168
-#: src/features/auth/recovery/index.tsx:78
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
+#: src/features/auth/recovery/index.tsx:84
+#: src/features/auth/sign-in/components/user-auth-form.tsx:286
 msgid "Your account has been suspended."
 msgstr "Il tuo account è stato sospeso."
 
-#: src/features/landing/landing-page.tsx:328
+#: src/lib/oauth-errors.ts:40
+msgid "Your account requires a passkey to sign in"
+msgstr "Il tuo account richiede una passkey per accedere"
+
+#: src/features/landing/landing-page.tsx:335
 msgid "Your apps, your platform, your network"
 msgstr "Le tue app, la tua piattaforma, la tua rete"
 
-#: src/features/auth/identity-form.tsx:63
+#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+msgid "Your code is: {devCode}"
+msgstr "Il tuo codice è: {devCode}"
+
+#: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"
 msgstr "Il tuo nome, come vorresti che altri lo vedessero"
