@@ -2,7 +2,7 @@
 // Copyright Alistair Cunningham 2025-2026
 
 {
-  "version": "2.33",
+  "version": "2.34",
   "label": "app.name",
   "paths": ["login"],
 
@@ -16,6 +16,11 @@
     "identity": {"file": "web/dist/index.html", "public": true},
     "mfa": {"file": "web/dist/index.html", "public": true},
     "otp": {"file": "web/dist/index.html", "public": true},
+    "rules": {"file": "web/dist/index.html", "public": true},
+    "terms": {"file": "web/dist/index.html", "public": true},
+    "privacy": {"file": "web/dist/index.html", "public": true},
+
+    "-/document/get": {"function": "action_document_get", "public": true},
 
     "-/identity/create": {"function": "action_identity_create"},
 

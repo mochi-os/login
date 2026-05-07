@@ -9,14 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as RulesRouteImport } from './routes/rules'
 import { Route as RecoveryRouteImport } from './routes/recovery'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as IdentityRouteImport } from './routes/identity'
 import { Route as CodesRouteImport } from './routes/codes'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RulesRoute = RulesRouteImport.update({
+  id: '/rules',
+  path: '/rules',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RecoveryRoute = RecoveryRouteImport.update({
   id: '/recovery',
   path: '/recovery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IdentityRoute = IdentityRouteImport.update({
@@ -39,43 +57,98 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/codes': typeof CodesRoute
   '/identity': typeof IdentityRoute
+  '/privacy': typeof PrivacyRoute
   '/recovery': typeof RecoveryRoute
+  '/rules': typeof RulesRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/codes': typeof CodesRoute
   '/identity': typeof IdentityRoute
+  '/privacy': typeof PrivacyRoute
   '/recovery': typeof RecoveryRoute
+  '/rules': typeof RulesRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/codes': typeof CodesRoute
   '/identity': typeof IdentityRoute
+  '/privacy': typeof PrivacyRoute
   '/recovery': typeof RecoveryRoute
+  '/rules': typeof RulesRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/codes' | '/identity' | '/recovery'
+  fullPaths:
+    | '/'
+    | '/codes'
+    | '/identity'
+    | '/privacy'
+    | '/recovery'
+    | '/rules'
+    | '/terms'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/codes' | '/identity' | '/recovery'
-  id: '__root__' | '/' | '/codes' | '/identity' | '/recovery'
+  to:
+    | '/'
+    | '/codes'
+    | '/identity'
+    | '/privacy'
+    | '/recovery'
+    | '/rules'
+    | '/terms'
+  id:
+    | '__root__'
+    | '/'
+    | '/codes'
+    | '/identity'
+    | '/privacy'
+    | '/recovery'
+    | '/rules'
+    | '/terms'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CodesRoute: typeof CodesRoute
   IdentityRoute: typeof IdentityRoute
+  PrivacyRoute: typeof PrivacyRoute
   RecoveryRoute: typeof RecoveryRoute
+  RulesRoute: typeof RulesRoute
+  TermsRoute: typeof TermsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rules': {
+      id: '/rules'
+      path: '/rules'
+      fullPath: '/rules'
+      preLoaderRoute: typeof RulesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/recovery': {
       id: '/recovery'
       path: '/recovery'
       fullPath: '/recovery'
       preLoaderRoute: typeof RecoveryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/identity': {
@@ -106,7 +179,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CodesRoute: CodesRoute,
   IdentityRoute: IdentityRoute,
+  PrivacyRoute: PrivacyRoute,
   RecoveryRoute: RecoveryRoute,
+  RulesRoute: RulesRoute,
+  TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

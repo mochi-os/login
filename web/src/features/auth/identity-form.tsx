@@ -135,6 +135,15 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
           {isSubmitting ? <Loader2 className="animate-spin" /> : <ArrowRight className="rtl:rotate-180" />}
         </Button>
 
+        <p className="text-center text-xs text-muted-foreground">
+          <Trans>
+            By creating your account, you agree to the{' '}
+            <a href="/login/rules" className="underline-offset-4 hover:underline">Server rules</a>,{' '}
+            <a href="/login/terms" className="underline-offset-4 hover:underline">Terms and conditions</a>, and{' '}
+            <a href="/login/privacy" className="underline-offset-4 hover:underline">Privacy</a>.
+          </Trans>
+        </p>
+
         <p className="text-center text-sm text-muted-foreground">
           <button
             type="button"

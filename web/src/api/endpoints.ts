@@ -38,6 +38,9 @@ const endpoints = {
       unlink: '-/oauth/unlink',
     },
   },
+  document: {
+    get: '-/document/get',
+  },
 } as const
 
 export default endpoints

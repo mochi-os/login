@@ -461,7 +461,20 @@ export function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-6 px-8 text-center text-[#6B6B80] dark:text-muted-foreground text-sm">
+      <footer className="py-6 px-8 text-center text-[#6B6B80] dark:text-muted-foreground text-sm space-y-2">
+        <p className="space-x-2">
+          <a href="/login/rules" className="hover:text-[#6C5CE7] transition-colors">
+            <Trans>Server rules</Trans>
+          </a>
+          <span aria-hidden="true">·</span>
+          <a href="/login/terms" className="hover:text-[#6C5CE7] transition-colors">
+            <Trans>Terms and conditions</Trans>
+          </a>
+          <span aria-hidden="true">·</span>
+          <a href="/login/privacy" className="hover:text-[#6C5CE7] transition-colors">
+            <Trans>Privacy</Trans>
+          </a>
+        </p>
         {/* Copyright line — Mochi is a brand name, year is numeric. */}
         {/* eslint-disable-next-line lingui/no-unlocalized-strings */}
         <p>&copy; 2026 Mochi.</p>
@@ -535,6 +548,19 @@ export function LandingPage() {
                 ))}
             </>
           )}
+          <p className="text-center text-xs text-muted-foreground space-x-2 pt-2">
+            <a href="/login/rules" className="hover:text-foreground transition-colors">
+              <Trans>Server rules</Trans>
+            </a>
+            <span aria-hidden="true">·</span>
+            <a href="/login/terms" className="hover:text-foreground transition-colors">
+              <Trans>Terms and conditions</Trans>
+            </a>
+            <span aria-hidden="true">·</span>
+            <a href="/login/privacy" className="hover:text-foreground transition-colors">
+              <Trans>Privacy</Trans>
+            </a>
+          </p>
         </ResponsiveDialogContent>
       </ResponsiveDialog>
     </div>
