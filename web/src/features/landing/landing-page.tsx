@@ -45,42 +45,12 @@ const oauthProviders: Array<{
 
 function MochiLogo({ size = 32 }: { size?: number }) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 32 32"
+    <img
+      src="/login/images/logo-header.png"
+      alt="Mochi"
       width={size}
       height={size}
-    >
-      <defs>
-        <linearGradient id="mg" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#FEFEFE" />
-          <stop offset="100%" stopColor="#F5F0E8" />
-        </linearGradient>
-        <radialGradient id="bg">
-          <stop offset="0%" stopColor="#FFB5B5" stopOpacity={0.7} />
-          <stop offset="100%" stopColor="#FFB5B5" stopOpacity={0} />
-        </radialGradient>
-      </defs>
-      <path
-        d="M16 2.5 C25.5 2.5, 30.5 9, 30.5 17.5 C30.5 25, 25 29.5, 16 29.5 C7 29.5, 1.5 25, 1.5 17.5 C1.5 9, 6.5 2.5, 16 2.5Z"
-        fill="url(#mg)"
-        stroke="#E0D8C8"
-        strokeWidth={1}
-      />
-      <ellipse cx={12} cy={16} rx={2} ry={2.4} fill="#3D3D3D" />
-      <ellipse cx={11.4} cy={15.2} rx={0.7} ry={0.9} fill="#FFFFFF" />
-      <ellipse cx={20} cy={16} rx={2} ry={2.4} fill="#3D3D3D" />
-      <ellipse cx={19.4} cy={15.2} rx={0.7} ry={0.9} fill="#FFFFFF" />
-      <path
-        d="M13.5 21 Q16 24, 18.5 21"
-        fill="none"
-        stroke="#3D3D3D"
-        strokeWidth={1.2}
-        strokeLinecap="round"
-      />
-      <ellipse cx={7} cy={18.5} rx={3} ry={2} fill="url(#bg)" />
-      <ellipse cx={25} cy={18.5} rx={3} ry={2} fill="url(#bg)" />
-    </svg>
+    />
   )
 }
 
@@ -276,53 +246,20 @@ export function LandingPage() {
         }
       `}</style>
 
-      {/* Nav */}
-      <nav className="fixed top-0 w-full z-50 bg-[#FAF9F6]/85 dark:bg-background/85 backdrop-blur-xl border-b border-[#E8E6F0] dark:border-border">
-        <div className="max-w-[1100px] mx-auto px-8 h-16 flex items-center justify-between">
-          <a
-            href="/"
-            className="flex items-center gap-2.5 no-underline text-inherit"
-          >
-            <MochiLogo size={32} />
-            <span className="font-bold text-xl tracking-tight"><Trans>Mochi</Trans></span>
-          </a>
-          <div className="flex items-center gap-8">
-            <div className="hidden md:flex items-center gap-8">
-              <a
-                href="#apps"
-                className="text-sm font-medium text-[#6B6B80] hover:text-[#6C5CE7] transition-colors no-underline"
-              >
-                <Trans>Apps</Trans>
-              </a>
-              <a
-                href="#how"
-                className="text-sm font-medium text-[#6B6B80] hover:text-[#6C5CE7] transition-colors no-underline"
-              >
-                <Trans>How it works</Trans>
-              </a>
-              <a
-                href="#tech"
-                className="text-sm font-medium text-[#6B6B80] hover:text-[#6C5CE7] transition-colors no-underline"
-              >
-                <Trans>Technology</Trans>
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <LanguagePicker />
-              <button
-                onClick={openDialog}
-                className="inline-flex items-center gap-1.5 px-5 py-2 rounded-[20px] bg-[#6C5CE7] text-white font-semibold text-sm shadow-[0_2px_12px_rgba(108,92,231,0.25)] hover:bg-[#5041C1] hover:shadow-[0_4px_20px_rgba(108,92,231,0.35)] hover:-translate-y-px transition-all cursor-pointer border-none"
-              >
-                <Trans>Sign up or log in</Trans>
-                <ArrowRight className="size-4 rtl:rotate-180" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      {/* Top actions — scroll with page */}
+      <div className="max-w-[1100px] mx-auto px-8 pt-4 flex items-center justify-end gap-2">
+        <LanguagePicker />
+        <button
+          onClick={openDialog}
+          className="inline-flex items-center gap-1.5 px-5 py-2 rounded-[20px] bg-[#6C5CE7] text-white font-semibold text-sm shadow-[0_2px_12px_rgba(108,92,231,0.25)] hover:bg-[#5041C1] hover:shadow-[0_4px_20px_rgba(108,92,231,0.35)] hover:-translate-y-px transition-all cursor-pointer border-none"
+        >
+          <Trans>Sign up or log in</Trans>
+          <ArrowRight className="size-4 rtl:rotate-180" />
+        </button>
+      </div>
 
       {/* Hero */}
-      <section className="pt-32 pb-12 px-8 text-center relative overflow-hidden">
+      <section className="pt-8 pb-12 px-8 text-center relative overflow-hidden">
         <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(ellipse,rgba(108,92,231,0.06)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-[1100px] mx-auto relative">
           <div

@@ -13,12 +13,15 @@ export function AuthLayout({ children }: AuthLayoutProps) {
         <LanguagePicker />
       </div>
       <div className='mx-auto flex w-full flex-col justify-center space-y-2 py-8 sm:w-[480px] sm:p-8'>
-        <div className='mb-4 flex items-center justify-center'>
+        <div className='mb-4 flex flex-col items-center justify-center gap-2'>
           <img
-            src='/login/images/logo-vertical.svg'
+            src='/login/images/logo-header.png'
             alt='Mochi'
-            className='h-48'
+            className='h-40 w-40'
           />
+          <span className='text-3xl font-light tracking-[0.2em] text-foreground/80'>
+            mochi
+          </span>
         </div>
         {children}
       </div>
