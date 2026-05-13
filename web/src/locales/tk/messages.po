@@ -37,13 +37,17 @@ msgstr "Giriş derejesi"
 msgid "Account added"
 msgstr "Hasap goşuldy"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:134
+msgid "Account already on this server"
+msgstr "Hasap eýýäm bu serwerde"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:224
 msgid "Account removed"
 msgstr "Hasap aýryldy"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:343
 msgid "Account suspended"
 msgstr "Hasap togtadyldy"
 
@@ -72,7 +76,7 @@ msgstr "Hasap goşmak"
 msgid "Add an account to receive notifications and use services."
 msgstr "Bildirişleri almak we hyzmatlary ulanmak üçin hasap goşuň."
 
-#: src/features/landing/landing-page.tsx:136
+#: src/features/landing/landing-page.tsx:106
 msgid "Add friends, join communities. Data syncs directly between nodes — peer-to-peer, end-to-end."
 msgstr "Dostlar goşuň, jemgyýetlere goşulyň. Maglumatlar nodelar arasynda göni sinhronlanýar — peer-to-peer, ahyrdan ahyra."
 
@@ -100,6 +104,10 @@ msgstr "Görnüş goşmak"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Görnüşi we ýerleşişini öz islegleriňize görä sazlaň."
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:534
+msgid "Advanced"
+msgstr "Goşmaça"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:38
 msgid "AI"
 msgstr "AI"
@@ -113,17 +121,13 @@ msgstr "Hemmesi"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Şol e-poçta bilen hasap eýýäm bar. Ilki giriň, soňra autentifikasiýa sazlamalaryndan {0} baglanyşdyryň."
 
-#: src/features/landing/landing-page.tsx:149
+#: src/features/landing/landing-page.tsx:119
 msgid "App business logic"
 msgstr "Programma biznes logikasy"
 
-#: src/features/landing/landing-page.tsx:150
+#: src/features/landing/landing-page.tsx:120
 msgid "App user interfaces"
 msgstr "Programma ulanyjy interfeýsleri"
-
-#: src/features/landing/landing-page.tsx:295
-msgid "Apps"
-msgstr "Programmalar"
 
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:24
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
@@ -138,7 +142,7 @@ msgid "authenticator code"
 msgstr "autentifikator kody"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:377
+#: src/features/auth/sign-in/components/user-auth-form.tsx:435
 msgid "Authenticator code"
 msgstr "Autentifikator kody"
 
@@ -156,15 +160,15 @@ msgstr "Esasy sahypa yza"
 msgid "Boost interest"
 msgstr "Gyzyklanmany ýokarlandyrmak"
 
-#: src/features/landing/landing-page.tsx:113
+#: src/features/landing/landing-page.tsx:83
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Jemgyýetiňiz üçin bilelikde işleýän, replikalanan bilim binýadyny guruň. Maglumatyňyz hemişe siziň."
 
-#: src/features/landing/landing-page.tsx:410
+#: src/features/landing/landing-page.tsx:347
 msgid "Built on solid foundations"
 msgstr "Berk binýada gurulan"
 
-#: src/features/landing/landing-page.tsx:350
+#: src/features/landing/landing-page.tsx:287
 msgid "Built-in apps"
 msgstr "Içerki programmalar"
 
@@ -179,6 +183,7 @@ msgstr "Hasap döredip, <0>Server düzgünleri</0>, <1>Şertler we düzgünler</
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
+#: src/routes/replicating.tsx:116
 msgid "Cancel"
 msgstr "Ýatyrmak"
 
@@ -190,13 +195,29 @@ msgstr "Bu bildiriş üçin kategoriýa"
 msgid "Change notification category"
 msgstr "Bildiriş kategoriýasyny üýtgetmek"
 
-#: src/features/landing/landing-page.tsx:116
+#: src/features/landing/landing-page.tsx:86
 msgid "Chat"
 msgstr "Söhbetdeşlik"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Check the address after @ and try again."
+msgstr "@ belgisinden soňky salgyny barlap, ýene synanyşyň."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Check the username before @ and try again."
+msgstr "@ belgisinden öňki ulanyjy adyny barlap, ýene synanyşyň."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Check your email."
 msgstr "E-poçtaňyzy barlaň."
+
+#: src/routes/replicating.tsx:97
+msgid "Checking every few seconds…"
+msgstr "Her birnäçe sekuntdan barlanýar…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+msgid "Choose a different local email or log in instead."
+msgstr "Başga ýerli e-poçta saýlaň ýa-da ýerine giriň."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:315
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -214,7 +235,7 @@ msgstr "Çepden saga ýa-da sagdan çepe sahypa ugry arasynda saýlaň"
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "Ulgam islegi, açyk görnüş ýa-da goýy görnüş arasynda saýlaň"
 
-#: ../../../lib/web/src/components/language-picker.tsx:167
+#: ../../../lib/web/src/components/language-picker.tsx:174
 msgid "Choose language"
 msgstr "Dil saýlaň"
 
@@ -257,11 +278,11 @@ msgstr "Paneli ýapmak"
 msgid "Close search"
 msgstr "Gözlegi ýapmak"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Code copied"
 msgstr "Kod nusgalandy"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:127
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
 msgid "Code sent."
 msgstr "Kod iberildi."
 
@@ -269,11 +290,16 @@ msgstr "Kod iberildi."
 msgid "Collapse sidebar"
 msgstr "Gapdal paneli ýygyrmak"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:93
+msgid "Comfortable"
+msgstr "Rahat"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:9
 msgid "Coming Soon!"
 msgstr "Tiz wagtda!"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:302
+#: ../../../lib/web/src/lib/preference-utils.ts:92
 msgid "Compact"
 msgstr "Gysga"
 
@@ -286,7 +312,7 @@ msgstr "Dowam etmek üçin barlagy tamamlaň"
 msgid "Confirm"
 msgstr "Tassyklamak"
 
-#: src/features/landing/landing-page.tsx:135
+#: src/features/landing/landing-page.tsx:105
 msgid "Connect with others"
 msgstr "Başgalar bilen baglanyşmak"
 
@@ -308,30 +334,36 @@ msgid "Copy"
 msgstr "Nusgalamak"
 
 #: src/features/auth/identity-form.tsx:157
+#: src/routes/replicating.tsx:111
 msgid "Could not cancel"
 msgstr "Ýatyryp bolmady"
 
+#: ../../../lib/web/src/features/document/document-page.tsx:81
 #: src/features/document/document-page.tsx:60
 msgid "Could not load this document. Please try again later."
 msgstr "Bu resminamany ýüklemedi. Soň gaýtadan synanyşyň."
 
-#: src/features/landing/landing-page.tsx:217
+#: src/features/auth/sign-in/components/user-auth-form.tsx:138
+msgid "Could not reach the source server"
+msgstr "Çeşme serweri bilen baglanyşyk gurup bolmady"
+
+#: src/features/landing/landing-page.tsx:187
 msgid "Could not start sign-in"
 msgstr "Girişi başlap bolmady"
 
-#: src/features/landing/landing-page.tsx:448
+#: src/features/landing/landing-page.tsx:385
 msgid "Create an account"
 msgstr "Hasap döretmek"
 
-#: src/features/landing/landing-page.tsx:127
+#: src/features/landing/landing-page.tsx:97
 msgid "Create your node"
 msgstr "Nodeyňyzy dörediň"
 
-#: src/features/landing/landing-page.tsx:98
+#: src/features/landing/landing-page.tsx:68
 msgid "Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what's important to you."
 msgstr "Öz pikir alyşma forumlaryňyzy dörediň ýa-da başgalara goşulyň. Saýlama AI bellik we tertipleşdirme bilen size möhüm zatlary görüň."
 
-#: src/features/landing/landing-page.tsx:106
+#: src/features/landing/landing-page.tsx:76
 msgid "CRM"
 msgstr "CRM"
 
@@ -364,7 +396,7 @@ msgstr "Ýokary"
 msgid "Details Panel"
 msgstr "Jikme-jiklikler paneli"
 
-#: ../../../lib/web/src/components/language-picker.tsx:145
+#: ../../../lib/web/src/components/language-picker.tsx:152
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
 #: ../../../lib/web/src/lib/preference-utils.ts:25
@@ -383,7 +415,7 @@ msgstr "Ugur"
 msgid "Displays the mobile sidebar."
 msgstr "Mobil gapdal paneli görkezýär."
 
-#: src/features/landing/landing-page.tsx:382
+#: src/features/landing/landing-page.tsx:319
 msgid "Distributed by design"
 msgstr "Dizaýn boýunça paýlanan"
 
@@ -391,16 +423,24 @@ msgstr "Dizaýn boýunça paýlanan"
 msgid "Download"
 msgstr "Ýükläp al"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:451
+#: ../../../lib/web/src/lib/preference-utils.ts:134
+msgid "Dyslexia-friendly"
+msgstr "Disleksiýa uýgunlaşan"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:509
 msgid "Email"
 msgstr "E-poçta"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+msgid "Email already in use"
+msgstr "E-poçta eýýäm ulanylýar"
 
 #: src/features/auth/mfa/index.tsx:183
 msgid "email code"
 msgstr "e-poçta kody"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:350
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Email code"
 msgstr "E-poçta kody"
 
@@ -408,7 +448,7 @@ msgstr "E-poçta kody"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Girmek üçin \"{userEmail}\" üçin dikeldiş kody giriziň"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:331
+#: src/features/auth/sign-in/components/user-auth-form.tsx:389
 msgid "Enter the code from your authenticator app"
 msgstr "Autentifikator programmaňyzdan kody giriziň"
 
@@ -421,11 +461,11 @@ msgstr "{0} giriziň"
 msgid "Enter your {initial} and {last}"
 msgstr "{initial} we {last} giriziň"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:379
 msgid "Enter your email code and authenticator code"
 msgstr "E-poçta kodyňyzy we autentifikator kodyňyzy giriziň"
 
-#: src/features/landing/landing-page.tsx:353
+#: src/features/landing/landing-page.tsx:290
 msgid "Everything you need, nothing you don't control"
 msgstr "Size gerek bolan zatlaryň ählisi, gözegçilik etmeýän zatlaryňyz hiç biri"
 
@@ -433,15 +473,19 @@ msgstr "Size gerek bolan zatlaryň ählisi, gözegçilik etmeýän zatlaryňyz h
 msgid "Expand sidebar"
 msgstr "Gapdal paneli giňelt"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:124
+msgid "Extra large"
+msgstr "Goşmaça uly"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "Hasap goşulmady"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:224
 msgid "Failed to continue"
 msgstr "Dowam edilmedi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:142
+#: src/features/auth/sign-in/components/user-auth-form.tsx:200
 msgid "Failed to copy code"
 msgstr "Kod göçürilmedi"
 
@@ -461,15 +505,15 @@ msgstr "Tassyklama kody iberilmedi"
 msgid "Failed to update category"
 msgstr "Kategoriýa täzelenmedi"
 
-#: src/features/landing/landing-page.tsx:91
+#: src/features/landing/landing-page.tsx:61
 msgid "Feeds"
 msgstr "Akymlar"
 
-#: src/features/landing/landing-page.tsx:132
+#: src/features/landing/landing-page.tsx:102
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Akymlar, forumlar, taslamalar, CRM, wikiler — hemmesi gurlan. Ýa-da Starlarkda öz programmalaryňyzy ýazyň."
 
-#: src/routes/identity.tsx:80
+#: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Hasabyňyzy gurnamagy tamamlaň"
 
@@ -477,7 +521,7 @@ msgstr "Hasabyňyzy gurnamagy tamamlaň"
 msgid "Floating"
 msgstr "Ýüzýän"
 
-#: src/features/landing/landing-page.tsx:96
+#: src/features/landing/landing-page.tsx:66
 msgid "Forums"
 msgstr "Forumlar"
 
@@ -488,6 +532,14 @@ msgstr "Anna"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Kimden"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:91
+#: ../../../lib/web/src/lib/preference-utils.ts:101
+#: ../../../lib/web/src/lib/preference-utils.ts:112
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
+msgid "From theme"
+msgstr "Temadan"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:307
 msgid "Full layout"
@@ -534,8 +586,7 @@ msgstr "Baş sahypa"
 msgid "Hot"
 msgstr "Gyzgyn"
 
-#: src/features/landing/landing-page.tsx:301
-#: src/features/landing/landing-page.tsx:379
+#: src/features/landing/landing-page.tsx:316
 msgid "How it works"
 msgstr "Nähili işleýär"
 
@@ -555,7 +606,7 @@ msgstr "Içki"
 msgid "Interests"
 msgstr "Gyzyklanmalar"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:198
+#: src/features/auth/sign-in/components/user-auth-form.tsx:256
 msgid "Invalid authenticator code"
 msgstr "Nädogry autentifikator kody"
 
@@ -564,11 +615,11 @@ msgstr "Nädogry autentifikator kody"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:224
-#: src/features/auth/sign-in/components/user-auth-form.tsx:253
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
+#: src/features/auth/sign-in/components/user-auth-form.tsx:282
+#: src/features/auth/sign-in/components/user-auth-form.tsx:311
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
+#: src/features/auth/sign-in/components/user-auth-form.tsx:351
 msgid "Invalid code"
 msgstr "Nädogry kod"
 
@@ -578,13 +629,18 @@ msgid "Invalid recovery code"
 msgstr "Nädogry dikeldiş kody"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:334
 msgid "Invalid verification code"
 msgstr "Nädogry tassyklama kody"
 
-#: src/features/landing/landing-page.tsx:108
+#: src/features/landing/landing-page.tsx:78
 msgid "Keep track of contacts, relationships, and interactions with a highly adaptable CRM."
 msgstr "Aragatnaşyklary, gatnaşyklary we täsirleşmeleri ýokary uýgunlaşýan CRM bilen yzarlaň."
+
+#: ../../../lib/web/src/lib/preference-utils.ts:105
+#: ../../../lib/web/src/lib/preference-utils.ts:123
+msgid "Large"
+msgstr "Uly"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
@@ -608,21 +664,22 @@ msgid "Load more"
 msgstr "Has köp ýükle"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
+#: ../../../lib/web/src/features/document/document-page.tsx:87
 #: src/features/document/document-page.tsx:66
 msgid "Loading…"
 msgstr "Ýüklenýär…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:405
+#: src/features/auth/sign-in/components/user-auth-form.tsx:463
 msgid "Log in"
 msgstr "Gir"
 
-#: src/features/landing/landing-page.tsx:487
+#: src/features/landing/landing-page.tsx:424
 msgid "Log in to Mochi"
 msgstr "Mochi gir"
 
-#: src/features/landing/landing-page.tsx:537
+#: src/features/landing/landing-page.tsx:474
 msgid "Log in with {label}"
 msgstr "{label} bilen gir"
 
@@ -646,7 +703,7 @@ msgstr "Çyk"
 
 #: src/features/auth/recovery/index.tsx:39
 #: src/features/auth/sign-in/index.tsx:35
-#: src/features/landing/landing-page.tsx:240
+#: src/features/landing/landing-page.tsx:210
 msgid "Logged in"
 msgstr "Girdi"
 
@@ -667,11 +724,11 @@ msgid "Login session expired, please try again"
 msgstr "Giriş sessiýasynyň möhleti gutardy, täzeden synanyşyň"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:427
+#: src/features/auth/sign-in/components/user-auth-form.tsx:485
 msgid "Lost access? Use a recovery code"
 msgstr "Rugsat ýitirildimi? Dikeldiş kody ulanyň"
 
-#: src/features/landing/landing-page.tsx:103
+#: src/features/landing/landing-page.tsx:73
 msgid "Manage tickets and tasks in a friendly and highly flexible Kanban-style interface."
 msgstr "Petekleri we işleri ýakymly we ýokary çeýe Kanban stilindäki interfeýs bilen dolandyr."
 
@@ -680,11 +737,15 @@ msgstr "Petekleri we işleri ýakymly we ýokary çeýe Kanban stilindäki inter
 msgid "Mark all as read"
 msgstr "Hemmesini okaldy diýip belgile"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:104
+msgid "Medium"
+msgstr "Orta"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
 msgstr "Menýu"
 
-#: src/features/landing/landing-page.tsx:118
+#: src/features/landing/landing-page.tsx:88
 msgid "Message your friends, individually or in groups, peer-to-peer and encrypted."
 msgstr "Dostlaryňyza aýratyn ýa-da toparlarda, P2P we şifrlenen habarlary iberiň."
 
@@ -692,23 +753,19 @@ msgstr "Dostlaryňyza aýratyn ýa-da toparlarda, P2P we şifrlenen habarlary ib
 msgid "Metric"
 msgstr "Metrik"
 
-#: src/features/landing/landing-page.tsx:287
-msgid "Mochi"
-msgstr "Mochi"
-
-#: src/features/landing/landing-page.tsx:356
+#: src/features/landing/landing-page.tsx:293
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi eýýäm 20-den gowrak programma bilen iberilýär, ýygy-ýygydan has köp goşulýar. Esasy programmalar:"
 
-#: src/features/landing/landing-page.tsx:338
+#: src/features/landing/landing-page.tsx:275
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi paýlanan programmalar üçin federatiw, köp ulanyjyly platformadyr. Her kim öz serwerini işledip, Mochi torundaky başga ulanyjy bilen birikdirip biler. Her kim programmalary döredip we çap edip biler."
 
-#: src/features/landing/landing-page.tsx:413
+#: src/features/landing/landing-page.tsx:350
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi aşakdaky tehnologiýalary ulanyp gurlan:"
 
-#: src/features/landing/landing-page.tsx:341
+#: src/features/landing/landing-page.tsx:278
 msgid "Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes."
 msgstr "Mochi häzirki wagtda 0.3 wersiýasy. Ortaça tehniki we Bug-lara çydamly bolsaňyz, gündelik ulanmaga taýýardyr. Eger döredijiseňiz, birnäçe API üýtgemelerine garşy bolmasaňyz, programmalary döretmäge hem taýýardyr."
 
@@ -716,7 +773,7 @@ msgstr "Mochi häzirki wagtda 0.3 wersiýasy. Ortaça tehniki we Bug-lara çydam
 msgid "Monday"
 msgstr "Duşenbe"
 
-#: src/features/landing/landing-page.tsx:147
+#: src/features/landing/landing-page.tsx:117
 msgid "Networking"
 msgstr "Tory işletmek"
 
@@ -728,12 +785,13 @@ msgstr "Täze"
 msgid "New accounts are disabled on this server"
 msgstr "Bu serwerde täze hasaplar öçürilen"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
-#: src/features/auth/sign-in/components/user-auth-form.tsx:290
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:221
+#: src/features/auth/sign-in/components/user-auth-form.tsx:348
 msgid "New user signup is disabled."
 msgstr "Täze ulanyjy hasaba almak öçürilen."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:464
+#: src/features/auth/sign-in/components/user-auth-form.tsx:522
 msgid "Next"
 msgstr "Indiki"
 
@@ -745,7 +803,7 @@ msgstr "Indiki surat"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Giriş düzgünleri ýok. Bu çeşmä kim girip biljekdigini dolandyrmak üçin düzgünler goşuň."
 
-#: src/features/landing/landing-page.tsx:385
+#: src/features/landing/landing-page.tsx:322
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Maglumatlaryňyzy hiç bir merkezi serwer saklamaýar. Her Mochi düwüni torda doly deň hukukly bolup, libp2p arkaly beýlekiler bilen göni habarlaşýar."
 
@@ -757,9 +815,9 @@ msgstr "Baglanan hasaplar ýok"
 msgid "No groups available"
 msgstr "Elýeterli toparlar ýok"
 
-#: ../../../lib/web/src/components/language-picker.tsx:177
-msgid "No matches."
-msgstr "Gabat gelmeler ýok."
+#: src/features/auth/sign-in/components/user-auth-form.tsx:142
+msgid "No matching account on the source server"
+msgstr "Çeşme serwerde gabat gelýän hasap ýok"
 
 #: ../../../lib/web/src/components/place-picker.tsx:129
 msgid "No places found"
@@ -787,8 +845,14 @@ msgid "No users found"
 msgstr "Ulanyjylar tapylmady"
 
 #: ../../../lib/web/src/components/person-picker.tsx:349
+#: ../../../lib/web/src/lib/preference-utils.ts:102
+#: ../../../lib/web/src/lib/preference-utils.ts:113
 msgid "None"
 msgstr "Hiç biri"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:122
+msgid "Normal"
+msgstr "Adaty"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -822,7 +886,7 @@ msgstr "Tema sazlamalaryny aç"
 msgid "Or"
 msgstr "Ýa-da"
 
-#: src/features/landing/landing-page.tsx:510
+#: src/features/landing/landing-page.tsx:447
 msgid "Or log in with"
 msgstr "Ýa-da şu bilen giriň"
 
@@ -843,21 +907,21 @@ msgid "passkey"
 msgstr "passkey"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:526
+#: src/features/landing/landing-page.tsx:463
 msgid "Passkey"
 msgstr "Passkey"
 
 #: src/features/auth/sign-in/index.tsx:50
-#: src/features/landing/landing-page.tsx:258
+#: src/features/landing/landing-page.tsx:228
 msgid "Passkey login cancelled"
 msgstr "Passkey girişi ýatyryldy"
 
 #: src/features/auth/sign-in/index.tsx:48
-#: src/features/landing/landing-page.tsx:256
+#: src/features/landing/landing-page.tsx:226
 msgid "Passkey login failed"
 msgstr "Passkey girişi şowsuz boldy"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:112
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Passkey login required"
 msgstr "Passkey girişi talap edilýär"
 
@@ -865,34 +929,34 @@ msgstr "Passkey girişi talap edilýär"
 msgid "Passkey MFA not yet implemented"
 msgstr "Passkey MFA henizem amala aşyrylmady"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:326
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Paste the login code you received by email"
 msgstr "Elektron poçtaňyzdan alan giriş kodyny goýuň"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+#: src/features/auth/sign-in/components/user-auth-form.tsx:257
 msgid "Please check your authenticator app and try again."
 msgstr "Autentifikator programmaňyzy barlaň we gaýtadan synanyşyň."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:217
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+#: src/features/auth/sign-in/components/user-auth-form.tsx:275
+#: src/features/auth/sign-in/components/user-auth-form.tsx:283
 msgid "Please check your authenticator code and try again."
 msgstr "Autentifikator kodyňyzy barlaň we gaýtadan synanyşyň."
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:294
+#: src/features/auth/sign-in/components/user-auth-form.tsx:352
 msgid "Please check your code and try again."
 msgstr "Kodyňyzy barlaň we gaýtadan synanyşyň."
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:254
-#: src/features/auth/sign-in/components/user-auth-form.tsx:262
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Please check your codes and try again."
 msgstr "Kodlaryňyzy barlaň we gaýtadan synanyşyň."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:335
 msgid "Please check your email and try again."
 msgstr "Elektron poçtaňyzy barlaň we gaýtadan synanyşyň."
 
@@ -901,15 +965,15 @@ msgstr "Elektron poçtaňyzy barlaň we gaýtadan synanyşyň."
 msgid "Please check your recovery code and try again."
 msgstr "Dikeldiş kodyňyzy barlaň we gaýtadan synanyşyň."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Please copy manually: {devCode}"
 msgstr "El bilen göçüriň: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:48
+#: src/features/auth/sign-in/components/user-auth-form.tsx:49
 msgid "Please enter a valid email"
 msgstr "Dogry elektron poçta giriziň"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:183
+#: src/features/auth/sign-in/components/user-auth-form.tsx:241
 msgid "Please enter your authenticator code"
 msgstr "Autentifikator kodyňyzy giriziň"
 
@@ -921,8 +985,9 @@ msgstr "Adyňyzy giriziň"
 msgid "Please enter your recovery code"
 msgstr "Dikeldiş kodyňyzy giriziň"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
-#: src/features/auth/sign-in/components/user-auth-form.tsx:298
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+#: src/features/auth/sign-in/components/user-auth-form.tsx:356
 msgid "Please try again or contact support."
 msgstr "Gaýtadan synanyşyň ýa-da goldaw bilen habarlaşyň."
 
@@ -930,7 +995,7 @@ msgstr "Gaýtadan synanyşyň ýa-da goldaw bilen habarlaşyň."
 msgid "Please use another verification method."
 msgstr "Başga barlag usulyny ulanyň."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:113
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "\"Passkey bilen gir\" düwmesini ulanyň."
 
@@ -938,9 +1003,11 @@ msgstr "\"Passkey bilen gir\" düwmesini ulanyň."
 msgid "Previous image"
 msgstr "Öňki surat"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:24
+#: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:475
-#: src/features/landing/landing-page.tsx:561
+#: src/features/landing/landing-page.tsx:412
+#: src/features/landing/landing-page.tsx:498
 msgid "Privacy"
 msgstr "Gizlinlik"
 
@@ -953,7 +1020,7 @@ msgstr "Şahsy"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/features/landing/landing-page.tsx:101
+#: src/features/landing/landing-page.tsx:71
 msgid "Projects"
 msgstr "Taslamalar"
 
@@ -961,11 +1028,11 @@ msgstr "Taslamalar"
 msgid "Public"
 msgstr "Köpçülige açyk"
 
-#: src/features/landing/landing-page.tsx:93
+#: src/features/landing/landing-page.tsx:63
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Öz sosial media akymlaryňy çap et, başgalary yzarla ýa-da goşmaça AI taglamak we tertipleşdirmek bilen başga akymlary toplumlaşdyr. Möhüm zatlary yzarla, galmagaly süz."
 
-#: src/features/landing/landing-page.tsx:438
+#: src/features/landing/landing-page.tsx:375
 msgid "Ready to try Mochi?"
 msgstr "Mochi-ny synap görmäge taýýarmy?"
 
@@ -990,8 +1057,9 @@ msgstr "Dashboard-a gönükdirilýär…"
 msgid "Reduce interest"
 msgstr "Gyzyklanmany azalt"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
-#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:146
+#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Registration disabled"
 msgstr "Hasaba alyş öçürildi"
 
@@ -1020,6 +1088,14 @@ msgstr "Girişi aýyrmak?"
 #: ../../../lib/web/src/components/post-tags.tsx:190
 msgid "Remove interest"
 msgstr "Gyzyklanmany aýyr"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+msgid "Replicate an existing account from another server"
+msgstr "Başga serwerden bar bolan hasaby göçüriň"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+msgid "Replication signup failed"
+msgstr "Göçürmek arkaly hasaba alma şowsuz boldy"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 msgid "Reset"
@@ -1065,10 +1141,6 @@ msgstr "Ulanyjylary gözle"
 msgid "Search..."
 msgstr "Gözle..."
 
-#: ../../../lib/web/src/components/language-picker.tsx:175
-msgid "Search…"
-msgstr "Gözle…"
-
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
 #: ../../../lib/web/src/components/search-entity-page.tsx:149
 #: ../../../lib/web/src/features/access/access-dialog.tsx:199
@@ -1107,12 +1179,18 @@ msgstr "Saýtyň ugruny saýla"
 msgid "Select theme preference"
 msgstr "Tema saýlawyňy saýla"
 
-#: src/features/landing/landing-page.tsx:146
+#: ../../../lib/web/src/lib/preference-utils.ts:133
+msgid "Serif"
+msgstr ""
+
+#: src/features/landing/landing-page.tsx:116
 msgid "Server"
 msgstr "Server"
 
-#: src/features/landing/landing-page.tsx:467
-#: src/features/landing/landing-page.tsx:553
+#: ../../../lib/web/src/components/server-documents-footer.tsx:16
+#: ../../../lib/web/src/features/document/document-page.tsx:37
+#: src/features/landing/landing-page.tsx:404
+#: src/features/landing/landing-page.tsx:490
 msgid "Server rules"
 msgstr "Server düzgünleri"
 
@@ -1140,11 +1218,11 @@ msgstr "{total} sany {totalShown} görkezilýär"
 msgid "Sidebar"
 msgstr "Gapdal panel"
 
-#: src/features/landing/landing-page.tsx:128
+#: src/features/landing/landing-page.tsx:98
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Hasaba al we öz Mochi düwüniň döredilsin. Maglumatlaryň şol ýerde ýaşaýar — başganyň serwerinde däl."
 
-#: src/features/landing/landing-page.tsx:316
+#: src/features/landing/landing-page.tsx:256
 msgid "Sign up or log in"
 msgstr "Hasaba al ýa-da gir"
 
@@ -1164,9 +1242,18 @@ msgstr "Çykylýar..."
 msgid "Skip to Main"
 msgstr "Esasy mazmuna geç"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:103
+#: ../../../lib/web/src/lib/preference-utils.ts:121
+msgid "Small"
+msgstr "Kiçi"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:94
+msgid "Spacious"
+msgstr "Giňiş"
+
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:415
+#: src/features/auth/sign-in/components/user-auth-form.tsx:473
 msgid "Start again"
 msgstr "Täzeden başla"
 
@@ -1178,7 +1265,7 @@ msgstr "Katalog gözleglerinden gizlenip dur."
 msgid "Stay tuned though!"
 msgstr "Ýöne biziň habarymyzda bol!"
 
-#: src/features/landing/landing-page.tsx:148
+#: src/features/landing/landing-page.tsx:118
 msgid "Storage"
 msgstr "Saklaw"
 
@@ -1196,6 +1283,7 @@ msgstr "Ýekşenbe"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
 #: ../../../lib/web/src/lib/preference-utils.ts:18
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "Ulgam"
 
@@ -1207,12 +1295,10 @@ msgstr "Bellik"
 msgid "Teams/Apps"
 msgstr "Toparlar/Programmalar"
 
-#: src/features/landing/landing-page.tsx:307
-msgid "Technology"
-msgstr "Tehnologiýa"
-
-#: src/features/landing/landing-page.tsx:471
-#: src/features/landing/landing-page.tsx:557
+#: ../../../lib/web/src/components/server-documents-footer.tsx:20
+#: ../../../lib/web/src/features/document/document-page.tsx:39
+#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:494
 msgid "Terms and conditions"
 msgstr "Şertler"
 
@@ -1307,7 +1393,7 @@ msgstr "Bellenilmedik"
 msgid "Unauthorized Access"
 msgstr "Rugsatsyz giriş"
 
-#: src/features/landing/landing-page.tsx:407
+#: src/features/landing/landing-page.tsx:344
 msgid "Under the hood"
 msgstr "Içki ýagdaý"
 
@@ -1323,9 +1409,13 @@ msgstr "Tassyklanmadyk"
 msgid "Use a different account"
 msgstr "Başga hasaby ulan"
 
-#: src/features/landing/landing-page.tsx:131
+#: src/features/landing/landing-page.tsx:101
 msgid "Use the apps"
 msgstr "Programmalary ulan"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:55
+msgid "Use the form alice@a.mochi-os.org"
+msgstr "alice@a.mochi-os.org görnüşini ulanyň"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1340,7 +1430,7 @@ msgid "Verification code sent"
 msgstr "Tassyklama kody iberildi"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:297
+#: src/features/auth/sign-in/components/user-auth-form.tsx:355
 msgid "Verification failed"
 msgstr "Tassyklama şowsuz boldy"
 
@@ -1368,17 +1458,29 @@ msgstr "Hemmesini görkez"
 msgid "View all notifications"
 msgstr "Ähli bildirişleri görkez"
 
-#: src/features/landing/landing-page.tsx:456
+#: src/features/landing/landing-page.tsx:393
 msgid "View source code"
 msgstr "Çeşme kody görkez"
+
+#: src/routes/replicating.tsx:80
+msgid "Waiting for approval"
+msgstr "Tassyklamasyna garaşylýar"
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:12
 msgid "We'll be back online shortly."
 msgstr "Tiz wagtda gaýdyp geleris."
 
-#: src/features/landing/landing-page.tsx:441
+#: src/features/landing/landing-page.tsx:378
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Mochi-ä synanyşmaga we adalatly pikir bermäge taýýar irki ulanyjylary gözleýäris. Ol 0.3 görnüşinde, käbir bug-lary bar, ýöne gündelik ulanmaga taýýar."
+
+#: src/routes/replicating.tsx:84
+msgid "We've sent a replication request to <0>{sourceLabel}</0>. Approve it on the source server's settings page to complete sign-up."
+msgstr "Biz <0>{sourceLabel}</0> salgysyna göçürmek soragyny iberdik. Hasaba almany tamamlamak üçin ony çeşme serweriň sazlamalar sahypasynda tassyklaň."
+
+#: src/routes/replicating.tsx:88
+msgid "We've sent a replication request to the source server. Approve it on its settings page to complete sign-up."
+msgstr "Biz çeşme serwere göçürmek soragyny iberdik. Hasaba almany tamamlamak üçin ony sazlamalar sahypasynda tassyklaň."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:9
 msgid "Website is under maintenance!"
@@ -1388,7 +1490,7 @@ msgstr "Web sahypasy abatlaýyşa düşdi!"
 msgid "Wednesday"
 msgstr "Çarşenbe"
 
-#: src/features/landing/landing-page.tsx:111
+#: src/features/landing/landing-page.tsx:81
 msgid "Wikis"
 msgstr "Wikiler"
 
@@ -1403,19 +1505,23 @@ msgstr "Hasabyň togtadyldy"
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:286
+#: src/features/auth/sign-in/components/user-auth-form.tsx:344
 msgid "Your account has been suspended."
 msgstr "Hasabyň togtadyldy."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:135
+msgid "Your account is already replicated here. Log in instead."
+msgstr "Hasabyňyz şu ýerde eýýäm göçürilen. Ýerine giriň."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "Hasabyň girmek üçin passkey talap edýär"
 
-#: src/features/landing/landing-page.tsx:335
+#: src/features/landing/landing-page.tsx:272
 msgid "Your apps, your platform, your network"
 msgstr "Programmalaryň, platformaň, toryň"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:188
 msgid "Your code is: {devCode}"
 msgstr "Kodyň: {devCode}"
 

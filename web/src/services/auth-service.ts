@@ -98,6 +98,20 @@ export const requestCode = async (
   return response
 }
 
+export const signupReplicate = async (
+  email: string,
+  source: string,
+  sourceUsername: string,
+) => {
+  const response = await authApi.replicate({
+    email,
+    source,
+    source_username: sourceUsername,
+  })
+  useAuthStore.getState().setUser({ email })
+  return response
+}
+
 export const verifyCode = async (
   code: string
 ): Promise<VerifyCodeResponse & { success: boolean }> => {

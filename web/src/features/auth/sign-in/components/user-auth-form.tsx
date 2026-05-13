@@ -4,14 +4,14 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Link } from '@tanstack/react-router'
-import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa } from '@/services/auth-service'
-import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Smartphone } from 'lucide-react'
+import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa, signupReplicate } from '@/services/auth-service'
+import { Loader2, Mail, ArrowLeft, ArrowRight, ChevronRight, Copy, Smartphone } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
 import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot, shellClipboardWrite } from '@mochi/web'
 import { safeRedirect } from '@/lib/redirect'
 const devConsole = globalThis.console
 
-type EmailFormValues = { email: string }
+type EmailFormValues = { email: string; replicateFrom?: string }
 type VerificationFormValues = { emailCode?: string; totpCode?: string }
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLFormElement> {
@@ -37,6 +37,7 @@ export function UserAuthForm({
   const [userEmail, setUserEmail] = useState('')
   const [requiredMethods, setRequiredMethods] = useState<string[]>([])
   const [emailVerified, setEmailVerified] = useState(false)
+  const [advancedOpen, setAdvancedOpen] = useState(false)
 
   // Use external step/setStep if provided, otherwise use internal state
   const step = externalStep ?? internalStep
@@ -46,6 +47,13 @@ export function UserAuthForm({
     () =>
       z.object({
         email: z.string().email(t`Please enter a valid email`),
+        replicateFrom: z
+          .string()
+          .optional()
+          .refine(
+            (value) => !value || /^[^@\s]+@[^@\s]+$/.test(value.trim()),
+            t`Use the form alice@a.mochi-os.org`,
+          ),
       }),
     [t],
   )
@@ -61,7 +69,7 @@ export function UserAuthForm({
 
   const emailForm = useForm<EmailFormValues>({
     resolver: zodResolver(emailSchema),
-    defaultValues: { email: '' },
+    defaultValues: { email: '', replicateFrom: '' },
   })
 
   const verificationForm = useForm<VerificationFormValues>({
@@ -94,10 +102,60 @@ export function UserAuthForm({
     window.location.replace(`/login/codes${codesParams}`)
   }
 
-  // Step 1: Submit email to get required methods
+  // Step 1: Submit email to get required methods. If the Advanced
+  // disclosure has a replicate-from value, route to /_/auth/replicate
+  // instead — this creates a pending-replication placeholder on this
+  // server and emits a link-request to the source. The user lands on
+  // the /replicating waiting page.
   async function onSubmitEmail(data: EmailFormValues) {
     setIsLoading(true)
     setUserEmail(data.email)
+
+    const replicateValue = (data.replicateFrom ?? '').trim()
+    if (replicateValue) {
+      const at = replicateValue.lastIndexOf('@')
+      const sourceUsername = replicateValue.slice(0, at)
+      const source = replicateValue.slice(at + 1)
+      try {
+        await signupReplicate(data.email, source, sourceUsername)
+        const params = new URLSearchParams({
+          source,
+          source_user: sourceUsername,
+        })
+        window.location.href = `/login/replicating?${params.toString()}`
+      } catch (error) {
+        const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
+        const code = responseData?.error
+        if (code === 'username_taken') {
+          toast.error(t`Email already in use`, {
+            description: t`Choose a different local email or log in instead.`,
+          })
+        } else if (code === 'already_replicated') {
+          toast.error(t`Account already on this server`, {
+            description: t`Your account is already replicated here. Log in instead.`,
+          })
+        } else if (code === 'source_unreachable') {
+          toast.error(t`Could not reach the source server`, {
+            description: t`Check the address after @ and try again.`,
+          })
+        } else if (code === 'source_user_not_found') {
+          toast.error(t`No matching account on the source server`, {
+            description: t`Check the username before @ and try again.`,
+          })
+        } else if (code === 'signup_disabled') {
+          toast.error(t`Registration disabled`, {
+            description: getErrorMessage(error, t`New user signup is disabled.`),
+          })
+        } else {
+          toast.error(t`Replication signup failed`, {
+            description: getErrorMessage(error, t`Please try again or contact support.`),
+          })
+        }
+      } finally {
+        setIsLoading(false)
+      }
+      return
+    }
 
     try {
       const result = await beginLogin(data.email)
@@ -464,6 +522,42 @@ export function UserAuthForm({
           <Trans>Next</Trans>
           {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight className="rtl:rotate-180" />}
         </Button>
+
+        <div className='mt-1'>
+          <button
+            type='button'
+            className='text-muted-foreground/70 hover:text-muted-foreground inline-flex items-center gap-1 text-xs underline-offset-4 hover:underline'
+            onClick={() => setAdvancedOpen((v) => !v)}
+            aria-expanded={advancedOpen}
+          >
+            <ChevronRight className={cn('h-3 w-3 transition-transform', advancedOpen && 'rotate-90')} />
+            <Trans>Advanced</Trans>
+          </button>
+
+          {advancedOpen && (
+            <FormField
+              control={emailForm.control}
+              name='replicateFrom'
+              render={({ field }) => (
+                <FormItem className='mt-3'>
+                  <label className='text-muted-foreground mb-1 block text-xs'>
+                    <Trans>Replicate an existing account from another server</Trans>
+                  </label>
+                  <FormControl>
+                    <Input
+                      placeholder='alice@a.mochi-os.org'
+                      autoComplete='off'
+                      spellCheck={false}
+                      disabled={disabled || isLoading}
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          )}
+        </div>
       </form>
     </Form>
   )

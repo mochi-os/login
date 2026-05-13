@@ -24,9 +24,15 @@ export const Route = createFileRoute('/identity')({
     // Verify session with the server (in-memory store doesn't survive page reloads)
     try {
       const data = await requestHelpers.get<{
-        user?: { email?: string; name?: string }
+        user?: { email?: string; name?: string; status?: string }
         identity?: { name?: string; privacy?: 'public' | 'private' }
       }>('/_/identity')
+
+      // Pending-replication placeholders wait for the source to
+      // approve. Identity is replicated in, not entered here.
+      if (data.user?.status === 'pending-replication') {
+        throw redirect({ to: '/replicating' })
+      }
 
       const nextUser = {
         ...(store.user || {}),

@@ -37,13 +37,17 @@ msgstr "سطح دسترسی"
 msgid "Account added"
 msgstr "حساب افزوده شد"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:134
+msgid "Account already on this server"
+msgstr "حساب کاربری از قبل در این سرور وجود دارد"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:224
 msgid "Account removed"
 msgstr "حساب حذف شد"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:343
 msgid "Account suspended"
 msgstr "حساب تعلیق شد"
 
@@ -72,7 +76,7 @@ msgstr "افزودن حساب"
 msgid "Add an account to receive notifications and use services."
 msgstr "برای دریافت اعلان‌ها و استفاده از سرویس‌ها یک حساب اضافه کنید."
 
-#: src/features/landing/landing-page.tsx:136
+#: src/features/landing/landing-page.tsx:106
 msgid "Add friends, join communities. Data syncs directly between nodes — peer-to-peer, end-to-end."
 msgstr "دوست اضافه کنید و به اجتماعات بپیوندید. داده‌ها مستقیماً بین گره‌ها همگام می‌شوند — peer-to-peer و سرتاسر."
 
@@ -100,6 +104,10 @@ msgstr "افزودن نما"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "ظاهر و چیدمان را مطابق سلیقهٔ خود تنظیم کنید."
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:534
+msgid "Advanced"
+msgstr "پیشرفته"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:38
 msgid "AI"
 msgstr "هوش مصنوعی"
@@ -113,17 +121,13 @@ msgstr "همه"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "حسابی با این ایمیل از قبل وجود دارد. ابتدا وارد شوید، سپس {0} را از تنظیمات احراز هویت خود متصل کنید."
 
-#: src/features/landing/landing-page.tsx:149
+#: src/features/landing/landing-page.tsx:119
 msgid "App business logic"
 msgstr "منطق کسب‌وکار برنامه"
 
-#: src/features/landing/landing-page.tsx:150
+#: src/features/landing/landing-page.tsx:120
 msgid "App user interfaces"
 msgstr "رابط کاربری برنامه‌ها"
-
-#: src/features/landing/landing-page.tsx:295
-msgid "Apps"
-msgstr "برنامه‌ها"
 
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:24
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
@@ -138,7 +142,7 @@ msgid "authenticator code"
 msgstr "کد authenticator"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:377
+#: src/features/auth/sign-in/components/user-auth-form.tsx:435
 msgid "Authenticator code"
 msgstr "کد احراز هویت"
 
@@ -156,15 +160,15 @@ msgstr "بازگشت به خانه"
 msgid "Boost interest"
 msgstr "تقویت علاقه"
 
-#: src/features/landing/landing-page.tsx:113
+#: src/features/landing/landing-page.tsx:83
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "یک پایگاه دانش مشارکتی و تکثیرشده برای اجتماع خود بسازید. داده‌های شما همیشه از آن خودتان است."
 
-#: src/features/landing/landing-page.tsx:410
+#: src/features/landing/landing-page.tsx:347
 msgid "Built on solid foundations"
 msgstr "ساخته‌شده بر پایه‌های مستحکم"
 
-#: src/features/landing/landing-page.tsx:350
+#: src/features/landing/landing-page.tsx:287
 msgid "Built-in apps"
 msgstr "برنامه‌های داخلی"
 
@@ -179,6 +183,7 @@ msgstr "با ساخت حساب، با <0>قوانین سرور</0>، <1>شرای
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
+#: src/routes/replicating.tsx:116
 msgid "Cancel"
 msgstr "لغو"
 
@@ -190,13 +195,29 @@ msgstr "دستهٔ این اعلان"
 msgid "Change notification category"
 msgstr "تغییر دستهٔ اعلان"
 
-#: src/features/landing/landing-page.tsx:116
+#: src/features/landing/landing-page.tsx:86
 msgid "Chat"
 msgstr "گفت‌وگو"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Check the address after @ and try again."
+msgstr "نشانی پس از @ را بررسی کرده و دوباره تلاش کنید."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Check the username before @ and try again."
+msgstr "نام کاربری پیش از @ را بررسی کرده و دوباره تلاش کنید."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Check your email."
 msgstr "ایمیل خود را بررسی کنید."
+
+#: src/routes/replicating.tsx:97
+msgid "Checking every few seconds…"
+msgstr "بررسی هر چند ثانیه یک‌بار…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+msgid "Choose a different local email or log in instead."
+msgstr "ایمیل محلی دیگری انتخاب کنید یا به‌جای آن وارد شوید."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:315
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -214,7 +235,7 @@ msgstr "بین جهت چپ‌به‌راست یا راست‌به‌چپ سای�
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "بین ترجیح سیستم، حالت روشن یا حالت تیره انتخاب کنید"
 
-#: ../../../lib/web/src/components/language-picker.tsx:167
+#: ../../../lib/web/src/components/language-picker.tsx:174
 msgid "Choose language"
 msgstr "انتخاب زبان"
 
@@ -257,11 +278,11 @@ msgstr "بستن پنل"
 msgid "Close search"
 msgstr "بستن جست‌وجو"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Code copied"
 msgstr "کد کپی شد"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:127
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
 msgid "Code sent."
 msgstr "کد ارسال شد."
 
@@ -269,11 +290,16 @@ msgstr "کد ارسال شد."
 msgid "Collapse sidebar"
 msgstr "جمع کردن نوار کناری"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:93
+msgid "Comfortable"
+msgstr "راحت"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:9
 msgid "Coming Soon!"
 msgstr "به‌زودی!"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:302
+#: ../../../lib/web/src/lib/preference-utils.ts:92
 msgid "Compact"
 msgstr "فشرده"
 
@@ -286,7 +312,7 @@ msgstr "برای ادامه، تأیید را تکمیل کنید"
 msgid "Confirm"
 msgstr "تأیید"
 
-#: src/features/landing/landing-page.tsx:135
+#: src/features/landing/landing-page.tsx:105
 msgid "Connect with others"
 msgstr "ارتباط با دیگران"
 
@@ -308,30 +334,36 @@ msgid "Copy"
 msgstr "کپی"
 
 #: src/features/auth/identity-form.tsx:157
+#: src/routes/replicating.tsx:111
 msgid "Could not cancel"
 msgstr "لغو ممکن نشد"
 
+#: ../../../lib/web/src/features/document/document-page.tsx:81
 #: src/features/document/document-page.tsx:60
 msgid "Could not load this document. Please try again later."
 msgstr "بارگذاری این سند ممکن نشد. لطفاً بعداً دوباره تلاش کنید."
 
-#: src/features/landing/landing-page.tsx:217
+#: src/features/auth/sign-in/components/user-auth-form.tsx:138
+msgid "Could not reach the source server"
+msgstr "نمی‌توان به سرور مبدأ دسترسی پیدا کرد"
+
+#: src/features/landing/landing-page.tsx:187
 msgid "Could not start sign-in"
 msgstr "شروع ورود ممکن نشد"
 
-#: src/features/landing/landing-page.tsx:448
+#: src/features/landing/landing-page.tsx:385
 msgid "Create an account"
 msgstr "ساخت حساب"
 
-#: src/features/landing/landing-page.tsx:127
+#: src/features/landing/landing-page.tsx:97
 msgid "Create your node"
 msgstr "گرهٔ خود را بسازید"
 
-#: src/features/landing/landing-page.tsx:98
+#: src/features/landing/landing-page.tsx:68
 msgid "Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what's important to you."
 msgstr "انجمن‌های گفت‌وگوی خود را بسازید یا به انجمن‌های دیگر بپیوندید. از برچسب‌گذاری و مرتب‌سازی اختیاری با هوش مصنوعی برای دیدن آنچه برایتان مهم است استفاده کنید."
 
-#: src/features/landing/landing-page.tsx:106
+#: src/features/landing/landing-page.tsx:76
 msgid "CRM"
 msgstr "CRM"
 
@@ -364,7 +396,7 @@ msgstr "نزولی"
 msgid "Details Panel"
 msgstr "پنل جزئیات"
 
-#: ../../../lib/web/src/components/language-picker.tsx:145
+#: ../../../lib/web/src/components/language-picker.tsx:152
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
 #: ../../../lib/web/src/lib/preference-utils.ts:25
@@ -383,7 +415,7 @@ msgstr "جهت"
 msgid "Displays the mobile sidebar."
 msgstr "نوار کناری موبایل را نمایش می‌دهد."
 
-#: src/features/landing/landing-page.tsx:382
+#: src/features/landing/landing-page.tsx:319
 msgid "Distributed by design"
 msgstr "توزیع‌شده از پایه"
 
@@ -391,16 +423,24 @@ msgstr "توزیع‌شده از پایه"
 msgid "Download"
 msgstr "دانلود"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:451
+#: ../../../lib/web/src/lib/preference-utils.ts:134
+msgid "Dyslexia-friendly"
+msgstr "مناسب برای دیسلکسی"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:509
 msgid "Email"
 msgstr "ایمیل"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+msgid "Email already in use"
+msgstr "ایمیل از قبل در حال استفاده است"
 
 #: src/features/auth/mfa/index.tsx:183
 msgid "email code"
 msgstr "کد ایمیل"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:350
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Email code"
 msgstr "کد ایمیل"
 
@@ -408,7 +448,7 @@ msgstr "کد ایمیل"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "برای ورود، یک کد بازیابی برای «{userEmail}» وارد کنید"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:331
+#: src/features/auth/sign-in/components/user-auth-form.tsx:389
 msgid "Enter the code from your authenticator app"
 msgstr "کد را از اپ احراز هویت خود وارد کنید"
 
@@ -421,11 +461,11 @@ msgstr "{0} خود را وارد کنید"
 msgid "Enter your {initial} and {last}"
 msgstr "{initial} و {last} خود را وارد کنید"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:379
 msgid "Enter your email code and authenticator code"
 msgstr "کد ایمیل و کد احراز هویت خود را وارد کنید"
 
-#: src/features/landing/landing-page.tsx:353
+#: src/features/landing/landing-page.tsx:290
 msgid "Everything you need, nothing you don't control"
 msgstr "هرچه نیاز دارید، بدون چیزی که در کنترلتان نباشد"
 
@@ -433,15 +473,19 @@ msgstr "هرچه نیاز دارید، بدون چیزی که در کنترلت�
 msgid "Expand sidebar"
 msgstr "گسترش نوار کناری"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:124
+msgid "Extra large"
+msgstr "خیلی بزرگ"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "افزودن حساب ناموفق بود"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:224
 msgid "Failed to continue"
 msgstr "ادامه ناموفق بود"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:142
+#: src/features/auth/sign-in/components/user-auth-form.tsx:200
 msgid "Failed to copy code"
 msgstr "کپی کد ناموفق بود"
 
@@ -461,15 +505,15 @@ msgstr "ارسال کد تأیید ناموفق بود"
 msgid "Failed to update category"
 msgstr "به‌روزرسانی دسته ناموفق بود"
 
-#: src/features/landing/landing-page.tsx:91
+#: src/features/landing/landing-page.tsx:61
 msgid "Feeds"
 msgstr "فیدها"
 
-#: src/features/landing/landing-page.tsx:132
+#: src/features/landing/landing-page.tsx:102
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "فیدها، انجمن‌ها، پروژه‌ها، CRM، ویکی‌ها — همه از پیش ساخته شده‌اند. یا اپ‌های خود را با Starlark بنویسید."
 
-#: src/routes/identity.tsx:80
+#: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "راه‌اندازی حساب خود را به پایان برسانید"
 
@@ -477,7 +521,7 @@ msgstr "راه‌اندازی حساب خود را به پایان برسانی�
 msgid "Floating"
 msgstr "شناور"
 
-#: src/features/landing/landing-page.tsx:96
+#: src/features/landing/landing-page.tsx:66
 msgid "Forums"
 msgstr "انجمن‌ها"
 
@@ -488,6 +532,14 @@ msgstr "جمعه"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "از"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:91
+#: ../../../lib/web/src/lib/preference-utils.ts:101
+#: ../../../lib/web/src/lib/preference-utils.ts:112
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
+msgid "From theme"
+msgstr "از تم"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:307
 msgid "Full layout"
@@ -534,8 +586,7 @@ msgstr "خانه"
 msgid "Hot"
 msgstr "داغ"
 
-#: src/features/landing/landing-page.tsx:301
-#: src/features/landing/landing-page.tsx:379
+#: src/features/landing/landing-page.tsx:316
 msgid "How it works"
 msgstr "نحوه کار"
 
@@ -555,7 +606,7 @@ msgstr "تورفته"
 msgid "Interests"
 msgstr "علاقه‌مندی‌ها"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:198
+#: src/features/auth/sign-in/components/user-auth-form.tsx:256
 msgid "Invalid authenticator code"
 msgstr "کد احراز هویت نامعتبر"
 
@@ -564,11 +615,11 @@ msgstr "کد احراز هویت نامعتبر"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:224
-#: src/features/auth/sign-in/components/user-auth-form.tsx:253
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
+#: src/features/auth/sign-in/components/user-auth-form.tsx:282
+#: src/features/auth/sign-in/components/user-auth-form.tsx:311
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
+#: src/features/auth/sign-in/components/user-auth-form.tsx:351
 msgid "Invalid code"
 msgstr "کد نامعتبر"
 
@@ -578,13 +629,18 @@ msgid "Invalid recovery code"
 msgstr "کد بازیابی نامعتبر"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:334
 msgid "Invalid verification code"
 msgstr "کد تأیید نامعتبر"
 
-#: src/features/landing/landing-page.tsx:108
+#: src/features/landing/landing-page.tsx:78
 msgid "Keep track of contacts, relationships, and interactions with a highly adaptable CRM."
 msgstr "مخاطبین، روابط و تعاملات را با یک CRM بسیار انعطاف‌پذیر پیگیری کنید."
+
+#: ../../../lib/web/src/lib/preference-utils.ts:105
+#: ../../../lib/web/src/lib/preference-utils.ts:123
+msgid "Large"
+msgstr "بزرگ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
@@ -608,21 +664,22 @@ msgid "Load more"
 msgstr "بارگذاری بیشتر"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
+#: ../../../lib/web/src/features/document/document-page.tsx:87
 #: src/features/document/document-page.tsx:66
 msgid "Loading…"
 msgstr "در حال بارگذاری…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:405
+#: src/features/auth/sign-in/components/user-auth-form.tsx:463
 msgid "Log in"
 msgstr "ورود"
 
-#: src/features/landing/landing-page.tsx:487
+#: src/features/landing/landing-page.tsx:424
 msgid "Log in to Mochi"
 msgstr "ورود به Mochi"
 
-#: src/features/landing/landing-page.tsx:537
+#: src/features/landing/landing-page.tsx:474
 msgid "Log in with {label}"
 msgstr "ورود با {label}"
 
@@ -646,7 +703,7 @@ msgstr "خروج"
 
 #: src/features/auth/recovery/index.tsx:39
 #: src/features/auth/sign-in/index.tsx:35
-#: src/features/landing/landing-page.tsx:240
+#: src/features/landing/landing-page.tsx:210
 msgid "Logged in"
 msgstr "وارد شد"
 
@@ -667,11 +724,11 @@ msgid "Login session expired, please try again"
 msgstr "جلسه ورود منقضی شده است، لطفاً دوباره تلاش کنید"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:427
+#: src/features/auth/sign-in/components/user-auth-form.tsx:485
 msgid "Lost access? Use a recovery code"
 msgstr "دسترسی را از دست داده‌اید؟ از یک کد بازیابی استفاده کنید"
 
-#: src/features/landing/landing-page.tsx:103
+#: src/features/landing/landing-page.tsx:73
 msgid "Manage tickets and tasks in a friendly and highly flexible Kanban-style interface."
 msgstr "Tickets و وظایف را با یک رابط Kanban-style دوستانه و بسیار انعطاف‌پذیر مدیریت کنید."
 
@@ -680,11 +737,15 @@ msgstr "Tickets و وظایف را با یک رابط Kanban-style دوستان�
 msgid "Mark all as read"
 msgstr "علامت‌گذاری همه به‌عنوان خوانده‌شده"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:104
+msgid "Medium"
+msgstr "متوسط"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
 msgstr "منو"
 
-#: src/features/landing/landing-page.tsx:118
+#: src/features/landing/landing-page.tsx:88
 msgid "Message your friends, individually or in groups, peer-to-peer and encrypted."
 msgstr "به دوستان خود به‌صورت فردی یا گروهی، peer-to-peer و رمزنگاری‌شده پیام دهید."
 
@@ -692,23 +753,19 @@ msgstr "به دوستان خود به‌صورت فردی یا گروهی، peer
 msgid "Metric"
 msgstr "متریک"
 
-#: src/features/landing/landing-page.tsx:287
-msgid "Mochi"
-msgstr "Mochi"
-
-#: src/features/landing/landing-page.tsx:356
+#: src/features/landing/landing-page.tsx:293
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi از پیش با بیش از ۲۰ اپ ارائه می‌شود و اپ‌های بیشتری به‌طور مرتب اضافه می‌شود. اپ‌های اصلی شامل:"
 
-#: src/features/landing/landing-page.tsx:338
+#: src/features/landing/landing-page.tsx:275
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi یک پلتفرم federated و چندکاربره برای اپ‌های توزیع‌شده است. هر کسی می‌تواند سرور خود را اجرا کند و به هر کاربر دیگری در شبکه Mochi متصل شود. هر کسی می‌تواند اپ بسازد و منتشر کند."
 
-#: src/features/landing/landing-page.tsx:413
+#: src/features/landing/landing-page.tsx:350
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi با استفاده از فناوری‌های زیر ساخته شده است:"
 
-#: src/features/landing/landing-page.tsx:341
+#: src/features/landing/landing-page.tsx:278
 msgid "Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes."
 msgstr "Mochi در حال حاضر در نسخه ۰٫۳ قرار دارد. اگر دانش فنی متوسط دارید و با bugها تحمل‌پذیرید، برای استفاده روزمره آماده است. اگر توسعه‌دهنده‌اید، تا زمانی که تعدادی تغییر API برایتان مشکلی نباشد، برای ساخت اپ نیز آماده است."
 
@@ -716,7 +773,7 @@ msgstr "Mochi در حال حاضر در نسخه ۰٫۳ قرار دارد. اگ�
 msgid "Monday"
 msgstr "دوشنبه"
 
-#: src/features/landing/landing-page.tsx:147
+#: src/features/landing/landing-page.tsx:117
 msgid "Networking"
 msgstr "شبکه"
 
@@ -728,12 +785,13 @@ msgstr "جدید"
 msgid "New accounts are disabled on this server"
 msgstr "ساخت حساب جدید در این سرور غیرفعال است"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
-#: src/features/auth/sign-in/components/user-auth-form.tsx:290
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:221
+#: src/features/auth/sign-in/components/user-auth-form.tsx:348
 msgid "New user signup is disabled."
 msgstr "ثبت‌نام کاربران جدید غیرفعال است."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:464
+#: src/features/auth/sign-in/components/user-auth-form.tsx:522
 msgid "Next"
 msgstr "بعدی"
 
@@ -745,7 +803,7 @@ msgstr "تصویر بعدی"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "هیچ قاعده دسترسی پیکربندی نشده است. برای کنترل دسترسی به این منبع، قاعده اضافه کنید."
 
-#: src/features/landing/landing-page.tsx:385
+#: src/features/landing/landing-page.tsx:322
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "هیچ سرور مرکزی‌ای داده‌های شما را نگه نمی‌دارد. هر گره Mochi یک همتای کامل در شبکه است که از طریق libp2p مستقیماً با دیگران ارتباط برقرار می‌کند."
 
@@ -757,9 +815,9 @@ msgstr "هیچ حساب متصلی وجود ندارد"
 msgid "No groups available"
 msgstr "هیچ گروهی در دسترس نیست"
 
-#: ../../../lib/web/src/components/language-picker.tsx:177
-msgid "No matches."
-msgstr "تطبیقی وجود ندارد."
+#: src/features/auth/sign-in/components/user-auth-form.tsx:142
+msgid "No matching account on the source server"
+msgstr "حساب کاربری منطبقی در سرور مبدأ وجود ندارد"
 
 #: ../../../lib/web/src/components/place-picker.tsx:129
 msgid "No places found"
@@ -787,8 +845,14 @@ msgid "No users found"
 msgstr "کاربری یافت نشد"
 
 #: ../../../lib/web/src/components/person-picker.tsx:349
+#: ../../../lib/web/src/lib/preference-utils.ts:102
+#: ../../../lib/web/src/lib/preference-utils.ts:113
 msgid "None"
 msgstr "هیچ‌کدام"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:122
+msgid "Normal"
+msgstr "معمولی"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -822,7 +886,7 @@ msgstr "باز کردن تنظیمات تم"
 msgid "Or"
 msgstr "یا"
 
-#: src/features/landing/landing-page.tsx:510
+#: src/features/landing/landing-page.tsx:447
 msgid "Or log in with"
 msgstr "یا وارد شوید با"
 
@@ -843,21 +907,21 @@ msgid "passkey"
 msgstr "passkey"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:526
+#: src/features/landing/landing-page.tsx:463
 msgid "Passkey"
 msgstr "پسکی"
 
 #: src/features/auth/sign-in/index.tsx:50
-#: src/features/landing/landing-page.tsx:258
+#: src/features/landing/landing-page.tsx:228
 msgid "Passkey login cancelled"
 msgstr "ورود با پسکی لغو شد"
 
 #: src/features/auth/sign-in/index.tsx:48
-#: src/features/landing/landing-page.tsx:256
+#: src/features/landing/landing-page.tsx:226
 msgid "Passkey login failed"
 msgstr "ورود با پسکی ناموفق بود"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:112
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Passkey login required"
 msgstr "ورود با پسکی الزامی است"
 
@@ -865,34 +929,34 @@ msgstr "ورود با پسکی الزامی است"
 msgid "Passkey MFA not yet implemented"
 msgstr "MFA پسکی هنوز پیاده‌سازی نشده است"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:326
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Paste the login code you received by email"
 msgstr "کد ورودی که از طریق ایمیل دریافت کرده‌اید را جای‌گذاری کنید"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+#: src/features/auth/sign-in/components/user-auth-form.tsx:257
 msgid "Please check your authenticator app and try again."
 msgstr "لطفاً برنامه احراز هویت خود را بررسی کنید و دوباره تلاش کنید."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:217
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+#: src/features/auth/sign-in/components/user-auth-form.tsx:275
+#: src/features/auth/sign-in/components/user-auth-form.tsx:283
 msgid "Please check your authenticator code and try again."
 msgstr "لطفاً کد احراز هویت خود را بررسی کنید و دوباره تلاش کنید."
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:294
+#: src/features/auth/sign-in/components/user-auth-form.tsx:352
 msgid "Please check your code and try again."
 msgstr "لطفاً کد خود را بررسی کنید و دوباره تلاش کنید."
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:254
-#: src/features/auth/sign-in/components/user-auth-form.tsx:262
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Please check your codes and try again."
 msgstr "لطفاً کدهای خود را بررسی کنید و دوباره تلاش کنید."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:335
 msgid "Please check your email and try again."
 msgstr "لطفاً ایمیل خود را بررسی کنید و دوباره تلاش کنید."
 
@@ -901,15 +965,15 @@ msgstr "لطفاً ایمیل خود را بررسی کنید و دوباره ت
 msgid "Please check your recovery code and try again."
 msgstr "لطفاً کد بازیابی خود را بررسی کنید و دوباره تلاش کنید."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Please copy manually: {devCode}"
 msgstr "لطفاً به صورت دستی کپی کنید: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:48
+#: src/features/auth/sign-in/components/user-auth-form.tsx:49
 msgid "Please enter a valid email"
 msgstr "لطفاً یک ایمیل معتبر وارد کنید"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:183
+#: src/features/auth/sign-in/components/user-auth-form.tsx:241
 msgid "Please enter your authenticator code"
 msgstr "لطفاً کد احراز هویت خود را وارد کنید"
 
@@ -921,8 +985,9 @@ msgstr "لطفاً نام خود را وارد کنید"
 msgid "Please enter your recovery code"
 msgstr "لطفاً کد بازیابی خود را وارد کنید"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
-#: src/features/auth/sign-in/components/user-auth-form.tsx:298
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+#: src/features/auth/sign-in/components/user-auth-form.tsx:356
 msgid "Please try again or contact support."
 msgstr "لطفاً دوباره تلاش کنید یا با پشتیبانی تماس بگیرید."
 
@@ -930,7 +995,7 @@ msgstr "لطفاً دوباره تلاش کنید یا با پشتیبانی ت�
 msgid "Please use another verification method."
 msgstr "لطفاً از روش تأیید دیگری استفاده کنید."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:113
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "لطفاً از دکمه «ورود با پسکی» استفاده کنید."
 
@@ -938,9 +1003,11 @@ msgstr "لطفاً از دکمه «ورود با پسکی» استفاده کن�
 msgid "Previous image"
 msgstr "تصویر قبلی"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:24
+#: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:475
-#: src/features/landing/landing-page.tsx:561
+#: src/features/landing/landing-page.tsx:412
+#: src/features/landing/landing-page.tsx:498
 msgid "Privacy"
 msgstr "حریم خصوصی"
 
@@ -953,7 +1020,7 @@ msgstr "خصوصی"
 msgid "Profile"
 msgstr "پروفایل"
 
-#: src/features/landing/landing-page.tsx:101
+#: src/features/landing/landing-page.tsx:71
 msgid "Projects"
 msgstr "پروژه‌ها"
 
@@ -961,11 +1028,11 @@ msgstr "پروژه‌ها"
 msgid "Public"
 msgstr "عمومی"
 
-#: src/features/landing/landing-page.tsx:93
+#: src/features/landing/landing-page.tsx:63
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "فیدهای شبکه‌های اجتماعی خود را منتشر کنید، دیگران را دنبال کنید، یا فیدهای دیگر را با برچسب‌گذاری و مرتب‌سازی اختیاری AI تجمیع کنید. آنچه مهم است را دنبال کنید، نویز را فیلتر کنید."
 
-#: src/features/landing/landing-page.tsx:438
+#: src/features/landing/landing-page.tsx:375
 msgid "Ready to try Mochi?"
 msgstr "آماده‌اید Mochi را امتحان کنید؟"
 
@@ -990,8 +1057,9 @@ msgstr "در حال تغییر مسیر شما به داشبورد…"
 msgid "Reduce interest"
 msgstr "کاهش علاقه"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
-#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:146
+#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Registration disabled"
 msgstr "ثبت‌نام غیرفعال است"
 
@@ -1020,6 +1088,14 @@ msgstr "حذف دسترسی؟"
 #: ../../../lib/web/src/components/post-tags.tsx:190
 msgid "Remove interest"
 msgstr "حذف علاقه"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+msgid "Replicate an existing account from another server"
+msgstr "تکثیر یک حساب موجود از سرور دیگر"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+msgid "Replication signup failed"
+msgstr "ثبت‌نام از طریق تکثیر ناموفق بود"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 msgid "Reset"
@@ -1065,10 +1141,6 @@ msgstr "جست‌وجوی کاربران"
 msgid "Search..."
 msgstr "جست‌وجو..."
 
-#: ../../../lib/web/src/components/language-picker.tsx:175
-msgid "Search…"
-msgstr "جست‌وجو…"
-
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
 #: ../../../lib/web/src/components/search-entity-page.tsx:149
 #: ../../../lib/web/src/features/access/access-dialog.tsx:199
@@ -1107,12 +1179,18 @@ msgstr "انتخاب جهت سایت"
 msgid "Select theme preference"
 msgstr "انتخاب ترجیح تم"
 
-#: src/features/landing/landing-page.tsx:146
+#: ../../../lib/web/src/lib/preference-utils.ts:133
+msgid "Serif"
+msgstr "سریف"
+
+#: src/features/landing/landing-page.tsx:116
 msgid "Server"
 msgstr "سرور"
 
-#: src/features/landing/landing-page.tsx:467
-#: src/features/landing/landing-page.tsx:553
+#: ../../../lib/web/src/components/server-documents-footer.tsx:16
+#: ../../../lib/web/src/features/document/document-page.tsx:37
+#: src/features/landing/landing-page.tsx:404
+#: src/features/landing/landing-page.tsx:490
 msgid "Server rules"
 msgstr "قوانین سرور"
 
@@ -1140,11 +1218,11 @@ msgstr "نمایش {totalShown} از {total}"
 msgid "Sidebar"
 msgstr "نوار کناری"
 
-#: src/features/landing/landing-page.tsx:128
+#: src/features/landing/landing-page.tsx:98
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "ثبت‌نام کنید و گره Mochi خودتان ساخته می‌شود. داده‌های شما آنجا قرار می‌گیرد — نه روی سرور کس دیگری."
 
-#: src/features/landing/landing-page.tsx:316
+#: src/features/landing/landing-page.tsx:256
 msgid "Sign up or log in"
 msgstr "ثبت‌نام یا ورود"
 
@@ -1164,9 +1242,18 @@ msgstr "در حال خروج..."
 msgid "Skip to Main"
 msgstr "پرش به محتوای اصلی"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:103
+#: ../../../lib/web/src/lib/preference-utils.ts:121
+msgid "Small"
+msgstr "کوچک"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:94
+msgid "Spacious"
+msgstr "گسترده"
+
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:415
+#: src/features/auth/sign-in/components/user-auth-form.tsx:473
 msgid "Start again"
 msgstr "شروع دوباره"
 
@@ -1178,7 +1265,7 @@ msgstr "از جست‌وجوهای فهرست پنهان بمانید."
 msgid "Stay tuned though!"
 msgstr "اما با ما همراه بمانید!"
 
-#: src/features/landing/landing-page.tsx:148
+#: src/features/landing/landing-page.tsx:118
 msgid "Storage"
 msgstr "ذخیره‌سازی"
 
@@ -1196,6 +1283,7 @@ msgstr "یکشنبه"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
 #: ../../../lib/web/src/lib/preference-utils.ts:18
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "سیستم"
 
@@ -1207,12 +1295,10 @@ msgstr "برچسب"
 msgid "Teams/Apps"
 msgstr "تیم‌ها/اپ‌ها"
 
-#: src/features/landing/landing-page.tsx:307
-msgid "Technology"
-msgstr "فناوری"
-
-#: src/features/landing/landing-page.tsx:471
-#: src/features/landing/landing-page.tsx:557
+#: ../../../lib/web/src/components/server-documents-footer.tsx:20
+#: ../../../lib/web/src/features/document/document-page.tsx:39
+#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:494
 msgid "Terms and conditions"
 msgstr "شرایط و ضوابط"
 
@@ -1307,7 +1393,7 @@ msgstr "بدون اختصاص"
 msgid "Unauthorized Access"
 msgstr "دسترسی غیرمجاز"
 
-#: src/features/landing/landing-page.tsx:407
+#: src/features/landing/landing-page.tsx:344
 msgid "Under the hood"
 msgstr "پشت صحنه"
 
@@ -1323,9 +1409,13 @@ msgstr "تأیید نشده"
 msgid "Use a different account"
 msgstr "از حساب دیگری استفاده کنید"
 
-#: src/features/landing/landing-page.tsx:131
+#: src/features/landing/landing-page.tsx:101
 msgid "Use the apps"
 msgstr "استفاده از اپ‌ها"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:55
+msgid "Use the form alice@a.mochi-os.org"
+msgstr "از قالب alice@a.mochi-os.org استفاده کنید"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1340,7 +1430,7 @@ msgid "Verification code sent"
 msgstr "کد تأیید ارسال شد"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:297
+#: src/features/auth/sign-in/components/user-auth-form.tsx:355
 msgid "Verification failed"
 msgstr "تأیید ناموفق بود"
 
@@ -1368,17 +1458,29 @@ msgstr "نمایش همه"
 msgid "View all notifications"
 msgstr "نمایش همه اعلان‌ها"
 
-#: src/features/landing/landing-page.tsx:456
+#: src/features/landing/landing-page.tsx:393
 msgid "View source code"
 msgstr "نمایش کد منبع"
+
+#: src/routes/replicating.tsx:80
+msgid "Waiting for approval"
+msgstr "در انتظار تأیید"
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:12
 msgid "We'll be back online shortly."
 msgstr "به‌زودی دوباره آنلاین خواهیم بود."
 
-#: src/features/landing/landing-page.tsx:441
+#: src/features/landing/landing-page.tsx:378
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "ما به دنبال کاربران اولیه‌ای هستیم که حاضرند Mochi را امتحان کنند و بازخورد صادقانه بدهند. این نسخه 0.3 است و چند bug دارد، اما برای استفاده روزمره آماده است."
+
+#: src/routes/replicating.tsx:84
+msgid "We've sent a replication request to <0>{sourceLabel}</0>. Approve it on the source server's settings page to complete sign-up."
+msgstr "ما درخواست تکثیر را به <0>{sourceLabel}</0> ارسال کردیم. برای تکمیل ثبت‌نام آن را در صفحهٔ تنظیمات سرور مبدأ تأیید کنید."
+
+#: src/routes/replicating.tsx:88
+msgid "We've sent a replication request to the source server. Approve it on its settings page to complete sign-up."
+msgstr "ما درخواست تکثیر را به سرور مبدأ ارسال کردیم. برای تکمیل ثبت‌نام آن را در صفحهٔ تنظیمات آن تأیید کنید."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:9
 msgid "Website is under maintenance!"
@@ -1388,7 +1490,7 @@ msgstr "وب‌سایت در حال نگهداری است!"
 msgid "Wednesday"
 msgstr "چهارشنبه"
 
-#: src/features/landing/landing-page.tsx:111
+#: src/features/landing/landing-page.tsx:81
 msgid "Wikis"
 msgstr "ویکی‌ها"
 
@@ -1403,19 +1505,23 @@ msgstr "حساب شما تعلیق شده است"
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:286
+#: src/features/auth/sign-in/components/user-auth-form.tsx:344
 msgid "Your account has been suspended."
 msgstr "حساب شما تعلیق شده است."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:135
+msgid "Your account is already replicated here. Log in instead."
+msgstr "حساب شما از قبل در اینجا تکثیر شده است. به‌جای آن وارد شوید."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "حساب شما برای ورود به passkey نیاز دارد"
 
-#: src/features/landing/landing-page.tsx:335
+#: src/features/landing/landing-page.tsx:272
 msgid "Your apps, your platform, your network"
 msgstr "اپ‌های شما، پلتفرم شما، شبکه شما"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:188
 msgid "Your code is: {devCode}"
 msgstr "کد شما: {devCode}"
 

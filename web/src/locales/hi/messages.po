@@ -37,13 +37,17 @@ msgstr "एक्सेस स्तर"
 msgid "Account added"
 msgstr "अकाउंट जोड़ा गया"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:134
+msgid "Account already on this server"
+msgstr "खाता पहले से ही इस सर्वर पर है"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:224
 msgid "Account removed"
 msgstr "अकाउंट हटाया गया"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:343
 msgid "Account suspended"
 msgstr "अकाउंट निलंबित"
 
@@ -72,7 +76,7 @@ msgstr "अकाउंट जोड़ें"
 msgid "Add an account to receive notifications and use services."
 msgstr "नोटिफ़िकेशन प्राप्त करने और सेवाएँ उपयोग करने के लिए एक अकाउंट जोड़ें।"
 
-#: src/features/landing/landing-page.tsx:136
+#: src/features/landing/landing-page.tsx:106
 msgid "Add friends, join communities. Data syncs directly between nodes — peer-to-peer, end-to-end."
 msgstr "मित्र जोड़ें, समुदायों से जुड़ें। डेटा सीधे नोड्स के बीच सिंक होता है — पीयर-टू-पीयर, एंड-टू-एंड।"
 
@@ -100,6 +104,10 @@ msgstr "व्यू जोड़ें"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "अपनी प्राथमिकताओं के अनुसार दिखावट और लेआउट समायोजित करें।"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:534
+msgid "Advanced"
+msgstr "उन्नत"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:38
 msgid "AI"
 msgstr "AI"
@@ -113,17 +121,13 @@ msgstr "सभी"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "उस ईमेल वाला खाता पहले से मौजूद है। पहले साइन इन करें, फिर अपनी ऑथ सेटिंग्स से {0} लिंक करें।"
 
-#: src/features/landing/landing-page.tsx:149
+#: src/features/landing/landing-page.tsx:119
 msgid "App business logic"
 msgstr "ऐप बिज़नेस लॉजिक"
 
-#: src/features/landing/landing-page.tsx:150
+#: src/features/landing/landing-page.tsx:120
 msgid "App user interfaces"
 msgstr "ऐप यूज़र इंटरफ़ेस"
-
-#: src/features/landing/landing-page.tsx:295
-msgid "Apps"
-msgstr "ऐप्स"
 
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:24
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
@@ -138,7 +142,7 @@ msgid "authenticator code"
 msgstr "ऑथेंटिकेटर कोड"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:377
+#: src/features/auth/sign-in/components/user-auth-form.tsx:435
 msgid "Authenticator code"
 msgstr "ऑथेंटिकेटर कोड"
 
@@ -156,15 +160,15 @@ msgstr "होम पर वापस"
 msgid "Boost interest"
 msgstr "रुचि बढ़ाएँ"
 
-#: src/features/landing/landing-page.tsx:113
+#: src/features/landing/landing-page.tsx:83
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "अपने समुदाय के लिए एक सहयोगी, प्रतिकृत ज्ञान आधार बनाएँ। आपका डेटा हमेशा आपका रहता है।"
 
-#: src/features/landing/landing-page.tsx:410
+#: src/features/landing/landing-page.tsx:347
 msgid "Built on solid foundations"
 msgstr "मज़बूत नींव पर निर्मित"
 
-#: src/features/landing/landing-page.tsx:350
+#: src/features/landing/landing-page.tsx:287
 msgid "Built-in apps"
 msgstr "बिल्ट-इन ऐप्स"
 
@@ -179,6 +183,7 @@ msgstr "अपना अकाउंट बनाकर, आप <0>सर्व�
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
+#: src/routes/replicating.tsx:116
 msgid "Cancel"
 msgstr "रद्द करें"
 
@@ -190,13 +195,29 @@ msgstr "इस नोटिफ़िकेशन की श्रेणी"
 msgid "Change notification category"
 msgstr "नोटिफ़िकेशन श्रेणी बदलें"
 
-#: src/features/landing/landing-page.tsx:116
+#: src/features/landing/landing-page.tsx:86
 msgid "Chat"
 msgstr "चैट"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Check the address after @ and try again."
+msgstr "@ के बाद का पता जाँचें और पुनः प्रयास करें।"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Check the username before @ and try again."
+msgstr "@ से पहले का उपयोगकर्ता नाम जाँचें और पुनः प्रयास करें।"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Check your email."
 msgstr "अपना ईमेल जाँचें।"
+
+#: src/routes/replicating.tsx:97
+msgid "Checking every few seconds…"
+msgstr "हर कुछ सेकंड में जाँच की जा रही है…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+msgid "Choose a different local email or log in instead."
+msgstr "कोई दूसरा स्थानीय ईमेल चुनें या इसके बजाय लॉग इन करें।"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:315
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -214,7 +235,7 @@ msgstr "बाएँ-से-दाएँ या दाएँ-से-बाएँ
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "सिस्टम प्राथमिकता, लाइट मोड, या डार्क मोड में से चुनें"
 
-#: ../../../lib/web/src/components/language-picker.tsx:167
+#: ../../../lib/web/src/components/language-picker.tsx:174
 msgid "Choose language"
 msgstr "भाषा चुनें"
 
@@ -257,11 +278,11 @@ msgstr "पैनल बंद करें"
 msgid "Close search"
 msgstr "खोज बंद करें"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Code copied"
 msgstr "कोड कॉपी किया गया"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:127
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
 msgid "Code sent."
 msgstr "कोड भेजा गया।"
 
@@ -269,11 +290,16 @@ msgstr "कोड भेजा गया।"
 msgid "Collapse sidebar"
 msgstr "साइडबार समेटें"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:93
+msgid "Comfortable"
+msgstr "आरामदायक"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:9
 msgid "Coming Soon!"
 msgstr "जल्द आ रहा है!"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:302
+#: ../../../lib/web/src/lib/preference-utils.ts:92
 msgid "Compact"
 msgstr "कॉम्पैक्ट"
 
@@ -286,7 +312,7 @@ msgstr "जारी रखने के लिए सत्यापन पू�
 msgid "Confirm"
 msgstr "पुष्टि करें"
 
-#: src/features/landing/landing-page.tsx:135
+#: src/features/landing/landing-page.tsx:105
 msgid "Connect with others"
 msgstr "दूसरों से जुड़ें"
 
@@ -308,30 +334,36 @@ msgid "Copy"
 msgstr "कॉपी करें"
 
 #: src/features/auth/identity-form.tsx:157
+#: src/routes/replicating.tsx:111
 msgid "Could not cancel"
 msgstr "रद्द नहीं किया जा सका"
 
+#: ../../../lib/web/src/features/document/document-page.tsx:81
 #: src/features/document/document-page.tsx:60
 msgid "Could not load this document. Please try again later."
 msgstr "यह दस्तावेज़ लोड नहीं किया जा सका। कृपया बाद में पुनः प्रयास करें।"
 
-#: src/features/landing/landing-page.tsx:217
+#: src/features/auth/sign-in/components/user-auth-form.tsx:138
+msgid "Could not reach the source server"
+msgstr "स्रोत सर्वर तक नहीं पहुँचा जा सका"
+
+#: src/features/landing/landing-page.tsx:187
 msgid "Could not start sign-in"
 msgstr "साइन-इन शुरू नहीं किया जा सका"
 
-#: src/features/landing/landing-page.tsx:448
+#: src/features/landing/landing-page.tsx:385
 msgid "Create an account"
 msgstr "एक अकाउंट बनाएँ"
 
-#: src/features/landing/landing-page.tsx:127
+#: src/features/landing/landing-page.tsx:97
 msgid "Create your node"
 msgstr "अपना नोड बनाएँ"
 
-#: src/features/landing/landing-page.tsx:98
+#: src/features/landing/landing-page.tsx:68
 msgid "Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what's important to you."
 msgstr "अपने स्वयं के चर्चा फ़ोरम बनाएँ, या दूसरों से जुड़ें। आपके लिए जो महत्वपूर्ण है वह देखने के लिए वैकल्पिक AI टैगिंग और सॉर्टिंग का उपयोग करें।"
 
-#: src/features/landing/landing-page.tsx:106
+#: src/features/landing/landing-page.tsx:76
 msgid "CRM"
 msgstr "CRM"
 
@@ -364,7 +396,7 @@ msgstr "अवरोही"
 msgid "Details Panel"
 msgstr "विवरण पैनल"
 
-#: ../../../lib/web/src/components/language-picker.tsx:145
+#: ../../../lib/web/src/components/language-picker.tsx:152
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
 #: ../../../lib/web/src/lib/preference-utils.ts:25
@@ -383,7 +415,7 @@ msgstr "दिशा"
 msgid "Displays the mobile sidebar."
 msgstr "मोबाइल साइडबार प्रदर्शित करता है।"
 
-#: src/features/landing/landing-page.tsx:382
+#: src/features/landing/landing-page.tsx:319
 msgid "Distributed by design"
 msgstr "डिज़ाइन द्वारा वितरित"
 
@@ -391,16 +423,24 @@ msgstr "डिज़ाइन द्वारा वितरित"
 msgid "Download"
 msgstr "डाउनलोड"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:451
+#: ../../../lib/web/src/lib/preference-utils.ts:134
+msgid "Dyslexia-friendly"
+msgstr "डिस्लेक्सिया-अनुकूल"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:509
 msgid "Email"
 msgstr "ईमेल"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+msgid "Email already in use"
+msgstr "ईमेल पहले से उपयोग में है"
 
 #: src/features/auth/mfa/index.tsx:183
 msgid "email code"
 msgstr "ईमेल कोड"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:350
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Email code"
 msgstr "ईमेल कोड"
 
@@ -408,7 +448,7 @@ msgstr "ईमेल कोड"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "साइन इन करने के लिए \"{userEmail}\" के लिए रिकवरी कोड दर्ज करें"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:331
+#: src/features/auth/sign-in/components/user-auth-form.tsx:389
 msgid "Enter the code from your authenticator app"
 msgstr "अपने ऑथेंटिकेटर ऐप से कोड दर्ज करें"
 
@@ -421,11 +461,11 @@ msgstr "अपना {0} दर्ज करें"
 msgid "Enter your {initial} and {last}"
 msgstr "अपना {initial} और {last} दर्ज करें"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:379
 msgid "Enter your email code and authenticator code"
 msgstr "अपना ईमेल कोड और ऑथेंटिकेटर कोड दर्ज करें"
 
-#: src/features/landing/landing-page.tsx:353
+#: src/features/landing/landing-page.tsx:290
 msgid "Everything you need, nothing you don't control"
 msgstr "जो कुछ आपको चाहिए, उसमें से कुछ भी ऐसा नहीं जिसे आप नियंत्रित न करें"
 
@@ -433,15 +473,19 @@ msgstr "जो कुछ आपको चाहिए, उसमें से �
 msgid "Expand sidebar"
 msgstr "साइडबार विस्तृत करें"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:124
+msgid "Extra large"
+msgstr "अतिरिक्त बड़ा"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "खाता जोड़ने में विफल"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:224
 msgid "Failed to continue"
 msgstr "जारी रखने में विफल"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:142
+#: src/features/auth/sign-in/components/user-auth-form.tsx:200
 msgid "Failed to copy code"
 msgstr "कोड कॉपी करने में विफल"
 
@@ -461,15 +505,15 @@ msgstr "सत्यापन कोड भेजने में विफल"
 msgid "Failed to update category"
 msgstr "श्रेणी अपडेट करने में विफल"
 
-#: src/features/landing/landing-page.tsx:91
+#: src/features/landing/landing-page.tsx:61
 msgid "Feeds"
 msgstr "फीड"
 
-#: src/features/landing/landing-page.tsx:132
+#: src/features/landing/landing-page.tsx:102
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "फीड, फ़ोरम, प्रोजेक्ट, CRM, विकी — सभी अंतर्निहित। या Starlark में अपने स्वयं के ऐप्स लिखें।"
 
-#: src/routes/identity.tsx:80
+#: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "अपने खाते का सेटअप पूरा करें"
 
@@ -477,7 +521,7 @@ msgstr "अपने खाते का सेटअप पूरा करे�
 msgid "Floating"
 msgstr "फ़्लोटिंग"
 
-#: src/features/landing/landing-page.tsx:96
+#: src/features/landing/landing-page.tsx:66
 msgid "Forums"
 msgstr "फ़ोरम"
 
@@ -488,6 +532,14 @@ msgstr "शुक्रवार"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "से"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:91
+#: ../../../lib/web/src/lib/preference-utils.ts:101
+#: ../../../lib/web/src/lib/preference-utils.ts:112
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
+msgid "From theme"
+msgstr "थीम से"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:307
 msgid "Full layout"
@@ -534,8 +586,7 @@ msgstr "होम"
 msgid "Hot"
 msgstr "हॉट"
 
-#: src/features/landing/landing-page.tsx:301
-#: src/features/landing/landing-page.tsx:379
+#: src/features/landing/landing-page.tsx:316
 msgid "How it works"
 msgstr "यह कैसे काम करता है"
 
@@ -555,7 +606,7 @@ msgstr "इनसेट"
 msgid "Interests"
 msgstr "रुचियाँ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:198
+#: src/features/auth/sign-in/components/user-auth-form.tsx:256
 msgid "Invalid authenticator code"
 msgstr "अमान्य ऑथेंटिकेटर कोड"
 
@@ -564,11 +615,11 @@ msgstr "अमान्य ऑथेंटिकेटर कोड"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:224
-#: src/features/auth/sign-in/components/user-auth-form.tsx:253
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
+#: src/features/auth/sign-in/components/user-auth-form.tsx:282
+#: src/features/auth/sign-in/components/user-auth-form.tsx:311
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
+#: src/features/auth/sign-in/components/user-auth-form.tsx:351
 msgid "Invalid code"
 msgstr "अमान्य कोड"
 
@@ -578,13 +629,18 @@ msgid "Invalid recovery code"
 msgstr "अमान्य रिकवरी कोड"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:334
 msgid "Invalid verification code"
 msgstr "अमान्य सत्यापन कोड"
 
-#: src/features/landing/landing-page.tsx:108
+#: src/features/landing/landing-page.tsx:78
 msgid "Keep track of contacts, relationships, and interactions with a highly adaptable CRM."
 msgstr "अत्यधिक अनुकूलनीय CRM के साथ संपर्कों, संबंधों और इंटरैक्शन का ट्रैक रखें।"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:105
+#: ../../../lib/web/src/lib/preference-utils.ts:123
+msgid "Large"
+msgstr "बड़ा"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
@@ -608,21 +664,22 @@ msgid "Load more"
 msgstr "और लोड करें"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
+#: ../../../lib/web/src/features/document/document-page.tsx:87
 #: src/features/document/document-page.tsx:66
 msgid "Loading…"
 msgstr "लोड हो रहा है…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:405
+#: src/features/auth/sign-in/components/user-auth-form.tsx:463
 msgid "Log in"
 msgstr "लॉग इन"
 
-#: src/features/landing/landing-page.tsx:487
+#: src/features/landing/landing-page.tsx:424
 msgid "Log in to Mochi"
 msgstr "Mochi में लॉग इन करें"
 
-#: src/features/landing/landing-page.tsx:537
+#: src/features/landing/landing-page.tsx:474
 msgid "Log in with {label}"
 msgstr "{label} से लॉग इन करें"
 
@@ -646,7 +703,7 @@ msgstr "लॉग आउट"
 
 #: src/features/auth/recovery/index.tsx:39
 #: src/features/auth/sign-in/index.tsx:35
-#: src/features/landing/landing-page.tsx:240
+#: src/features/landing/landing-page.tsx:210
 msgid "Logged in"
 msgstr "लॉग इन हो गए"
 
@@ -667,11 +724,11 @@ msgid "Login session expired, please try again"
 msgstr "लॉगिन सत्र समाप्त हो गया, कृपया फिर से प्रयास करें"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:427
+#: src/features/auth/sign-in/components/user-auth-form.tsx:485
 msgid "Lost access? Use a recovery code"
 msgstr "एक्सेस खो गया? रिकवरी कोड का उपयोग करें"
 
-#: src/features/landing/landing-page.tsx:103
+#: src/features/landing/landing-page.tsx:73
 msgid "Manage tickets and tasks in a friendly and highly flexible Kanban-style interface."
 msgstr "एक मित्रवत और अत्यधिक लचीले कानबन-स्टाइल इंटरफ़ेस में टिकट और टास्क प्रबंधित करें।"
 
@@ -680,11 +737,15 @@ msgstr "एक मित्रवत और अत्यधिक लचील�
 msgid "Mark all as read"
 msgstr "सभी को पढ़ा हुआ मार्क करें"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:104
+msgid "Medium"
+msgstr "मध्यम"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
 msgstr "मेन्यू"
 
-#: src/features/landing/landing-page.tsx:118
+#: src/features/landing/landing-page.tsx:88
 msgid "Message your friends, individually or in groups, peer-to-peer and encrypted."
 msgstr "अपने मित्रों को व्यक्तिगत रूप से या ग्रुप में, पीयर-टू-पीयर और एन्क्रिप्टेड संदेश भेजें।"
 
@@ -692,23 +753,19 @@ msgstr "अपने मित्रों को व्यक्तिगत �
 msgid "Metric"
 msgstr "मीट्रिक"
 
-#: src/features/landing/landing-page.tsx:287
-msgid "Mochi"
-msgstr "Mochi"
-
-#: src/features/landing/landing-page.tsx:356
+#: src/features/landing/landing-page.tsx:293
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi पहले से ही 20 से अधिक ऐप्स के साथ आता है, और अधिक जोड़े जा रहे हैं। मुख्य ऐप्स में शामिल हैं:"
 
-#: src/features/landing/landing-page.tsx:338
+#: src/features/landing/landing-page.tsx:275
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi डिस्ट्रिब्यूटेड ऐप्स के लिए एक फ़ेडरेटेड, मल्टी-यूज़र प्लेटफ़ॉर्म है। कोई भी अपना सर्वर चला सकता है और Mochi नेटवर्क के किसी भी अन्य यूज़र से कनेक्ट हो सकता है। कोई भी ऐप्स बना और पब्लिश कर सकता है।"
 
-#: src/features/landing/landing-page.tsx:413
+#: src/features/landing/landing-page.tsx:350
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi निम्नलिखित तकनीकों का उपयोग करके बनाया गया है:"
 
-#: src/features/landing/landing-page.tsx:341
+#: src/features/landing/landing-page.tsx:278
 msgid "Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes."
 msgstr "Mochi वर्तमान में वर्शन 0.3 पर है। यदि आप मध्यम रूप से तकनीकी हैं और बग्स के प्रति सहनशील हैं, तो यह दैनिक उपयोग के लिए तैयार है। यदि आप एक डेवलपर हैं, तो यह आपके लिए ऐप्स बनाने के लिए भी तैयार है, बशर्ते आपको कुछ API परिवर्तनों से कोई आपत्ति न हो।"
 
@@ -716,7 +773,7 @@ msgstr "Mochi वर्तमान में वर्शन 0.3 पर है�
 msgid "Monday"
 msgstr "सोमवार"
 
-#: src/features/landing/landing-page.tsx:147
+#: src/features/landing/landing-page.tsx:117
 msgid "Networking"
 msgstr "नेटवर्किंग"
 
@@ -728,12 +785,13 @@ msgstr "नया"
 msgid "New accounts are disabled on this server"
 msgstr "इस सर्वर पर नए खाते अक्षम हैं"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
-#: src/features/auth/sign-in/components/user-auth-form.tsx:290
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:221
+#: src/features/auth/sign-in/components/user-auth-form.tsx:348
 msgid "New user signup is disabled."
 msgstr "नए यूज़र साइनअप अक्षम है।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:464
+#: src/features/auth/sign-in/components/user-auth-form.tsx:522
 msgid "Next"
 msgstr "अगला"
 
@@ -745,7 +803,7 @@ msgstr "अगली इमेज"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "कोई एक्सेस नियम कॉन्फ़िगर नहीं किए गए। इस रिसोर्स को कौन एक्सेस कर सकता है, इसे नियंत्रित करने के लिए नियम जोड़ें।"
 
-#: src/features/landing/landing-page.tsx:385
+#: src/features/landing/landing-page.tsx:322
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "कोई केंद्रीय सर्वर आपका डेटा नहीं रखता। प्रत्येक Mochi नोड नेटवर्क में एक पूर्ण पीयर है, जो libp2p के माध्यम से सीधे दूसरों के साथ संवाद करता है।"
 
@@ -757,9 +815,9 @@ msgstr "कोई कनेक्टेड अकाउंट नहीं"
 msgid "No groups available"
 msgstr "कोई ग्रुप उपलब्ध नहीं"
 
-#: ../../../lib/web/src/components/language-picker.tsx:177
-msgid "No matches."
-msgstr "कोई मिलान नहीं।"
+#: src/features/auth/sign-in/components/user-auth-form.tsx:142
+msgid "No matching account on the source server"
+msgstr "स्रोत सर्वर पर कोई मिलता-जुलता खाता नहीं है"
 
 #: ../../../lib/web/src/components/place-picker.tsx:129
 msgid "No places found"
@@ -787,8 +845,14 @@ msgid "No users found"
 msgstr "कोई यूज़र नहीं मिले"
 
 #: ../../../lib/web/src/components/person-picker.tsx:349
+#: ../../../lib/web/src/lib/preference-utils.ts:102
+#: ../../../lib/web/src/lib/preference-utils.ts:113
 msgid "None"
 msgstr "कोई नहीं"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:122
+msgid "Normal"
+msgstr "सामान्य"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -822,7 +886,7 @@ msgstr "थीम सेटिंग्स खोलें"
 msgid "Or"
 msgstr "या"
 
-#: src/features/landing/landing-page.tsx:510
+#: src/features/landing/landing-page.tsx:447
 msgid "Or log in with"
 msgstr "या इसके साथ लॉग इन करें"
 
@@ -843,21 +907,21 @@ msgid "passkey"
 msgstr "पासकी"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:526
+#: src/features/landing/landing-page.tsx:463
 msgid "Passkey"
 msgstr "पासकी"
 
 #: src/features/auth/sign-in/index.tsx:50
-#: src/features/landing/landing-page.tsx:258
+#: src/features/landing/landing-page.tsx:228
 msgid "Passkey login cancelled"
 msgstr "पासकी लॉगिन रद्द किया गया"
 
 #: src/features/auth/sign-in/index.tsx:48
-#: src/features/landing/landing-page.tsx:256
+#: src/features/landing/landing-page.tsx:226
 msgid "Passkey login failed"
 msgstr "पासकी लॉगिन विफल"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:112
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Passkey login required"
 msgstr "पासकी लॉगिन आवश्यक"
 
@@ -865,34 +929,34 @@ msgstr "पासकी लॉगिन आवश्यक"
 msgid "Passkey MFA not yet implemented"
 msgstr "पासकी MFA अभी तक लागू नहीं किया गया"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:326
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Paste the login code you received by email"
 msgstr "ईमेल द्वारा प्राप्त लॉगिन कोड पेस्ट करें"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+#: src/features/auth/sign-in/components/user-auth-form.tsx:257
 msgid "Please check your authenticator app and try again."
 msgstr "कृपया अपना ऑथेंटिकेटर ऐप जांचें और फिर से प्रयास करें।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:217
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+#: src/features/auth/sign-in/components/user-auth-form.tsx:275
+#: src/features/auth/sign-in/components/user-auth-form.tsx:283
 msgid "Please check your authenticator code and try again."
 msgstr "कृपया अपना ऑथेंटिकेटर कोड जांचें और फिर से प्रयास करें।"
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:294
+#: src/features/auth/sign-in/components/user-auth-form.tsx:352
 msgid "Please check your code and try again."
 msgstr "कृपया अपना कोड जांचें और फिर से प्रयास करें।"
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:254
-#: src/features/auth/sign-in/components/user-auth-form.tsx:262
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Please check your codes and try again."
 msgstr "कृपया अपने कोड जांचें और फिर से प्रयास करें।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:335
 msgid "Please check your email and try again."
 msgstr "कृपया अपना ईमेल जांचें और फिर से प्रयास करें।"
 
@@ -901,15 +965,15 @@ msgstr "कृपया अपना ईमेल जांचें और फ�
 msgid "Please check your recovery code and try again."
 msgstr "कृपया अपना रिकवरी कोड जाँचें और फिर से प्रयास करें।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Please copy manually: {devCode}"
 msgstr "कृपया मैन्युअल रूप से कॉपी करें: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:48
+#: src/features/auth/sign-in/components/user-auth-form.tsx:49
 msgid "Please enter a valid email"
 msgstr "कृपया वैध ईमेल दर्ज करें"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:183
+#: src/features/auth/sign-in/components/user-auth-form.tsx:241
 msgid "Please enter your authenticator code"
 msgstr "कृपया अपना ऑथेंटिकेटर कोड दर्ज करें"
 
@@ -921,8 +985,9 @@ msgstr "कृपया अपना नाम दर्ज करें"
 msgid "Please enter your recovery code"
 msgstr "कृपया अपना रिकवरी कोड दर्ज करें"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
-#: src/features/auth/sign-in/components/user-auth-form.tsx:298
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+#: src/features/auth/sign-in/components/user-auth-form.tsx:356
 msgid "Please try again or contact support."
 msgstr "कृपया फिर से प्रयास करें या सपोर्ट से संपर्क करें।"
 
@@ -930,7 +995,7 @@ msgstr "कृपया फिर से प्रयास करें या 
 msgid "Please use another verification method."
 msgstr "कृपया अन्य सत्यापन विधि का उपयोग करें।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:113
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "कृपया \"पासकी से लॉग इन\" बटन का उपयोग करें।"
 
@@ -938,9 +1003,11 @@ msgstr "कृपया \"पासकी से लॉग इन\" बटन �
 msgid "Previous image"
 msgstr "पिछली इमेज"
 
+#: ../../../lib/web/src/components/server-documents-footer.tsx:24
+#: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:475
-#: src/features/landing/landing-page.tsx:561
+#: src/features/landing/landing-page.tsx:412
+#: src/features/landing/landing-page.tsx:498
 msgid "Privacy"
 msgstr "गोपनीयता"
 
@@ -953,7 +1020,7 @@ msgstr "निजी"
 msgid "Profile"
 msgstr "प्रोफ़ाइल"
 
-#: src/features/landing/landing-page.tsx:101
+#: src/features/landing/landing-page.tsx:71
 msgid "Projects"
 msgstr "प्रोजेक्ट्स"
 
@@ -961,11 +1028,11 @@ msgstr "प्रोजेक्ट्स"
 msgid "Public"
 msgstr "सार्वजनिक"
 
-#: src/features/landing/landing-page.tsx:93
+#: src/features/landing/landing-page.tsx:63
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "अपनी सोशल मीडिया फ़ीड पब्लिश करें, दूसरों को फ़ॉलो करें, या वैकल्पिक AI टैगिंग और सॉर्टिंग के साथ अन्य फ़ीड्स को एकत्रित करें। जो मायने रखता है उसे फ़ॉलो करें, शोर को फ़िल्टर करें।"
 
-#: src/features/landing/landing-page.tsx:438
+#: src/features/landing/landing-page.tsx:375
 msgid "Ready to try Mochi?"
 msgstr "Mochi आज़माने के लिए तैयार हैं?"
 
@@ -990,8 +1057,9 @@ msgstr "आपको डैशबोर्ड पर रीडायरेक्
 msgid "Reduce interest"
 msgstr "रुचि कम करें"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
-#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:146
+#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Registration disabled"
 msgstr "रजिस्ट्रेशन अक्षम"
 
@@ -1020,6 +1088,14 @@ msgstr "एक्सेस हटाएँ?"
 #: ../../../lib/web/src/components/post-tags.tsx:190
 msgid "Remove interest"
 msgstr "रुचि हटाएँ"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+msgid "Replicate an existing account from another server"
+msgstr "किसी अन्य सर्वर से मौजूदा खाते की प्रतिकृति बनाएँ"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+msgid "Replication signup failed"
+msgstr "प्रतिकृति साइन-अप विफल रहा"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 msgid "Reset"
@@ -1065,10 +1141,6 @@ msgstr "यूज़र खोजें"
 msgid "Search..."
 msgstr "खोजें..."
 
-#: ../../../lib/web/src/components/language-picker.tsx:175
-msgid "Search…"
-msgstr "खोजें…"
-
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
 #: ../../../lib/web/src/components/search-entity-page.tsx:149
 #: ../../../lib/web/src/features/access/access-dialog.tsx:199
@@ -1107,12 +1179,18 @@ msgstr "साइट दिशा चुनें"
 msgid "Select theme preference"
 msgstr "थीम प्राथमिकता चुनें"
 
-#: src/features/landing/landing-page.tsx:146
+#: ../../../lib/web/src/lib/preference-utils.ts:133
+msgid "Serif"
+msgstr "सेरिफ़"
+
+#: src/features/landing/landing-page.tsx:116
 msgid "Server"
 msgstr "सर्वर"
 
-#: src/features/landing/landing-page.tsx:467
-#: src/features/landing/landing-page.tsx:553
+#: ../../../lib/web/src/components/server-documents-footer.tsx:16
+#: ../../../lib/web/src/features/document/document-page.tsx:37
+#: src/features/landing/landing-page.tsx:404
+#: src/features/landing/landing-page.tsx:490
 msgid "Server rules"
 msgstr "सर्वर के नियम"
 
@@ -1140,11 +1218,11 @@ msgstr "{total} में से {totalShown} दिखाए जा रहे �
 msgid "Sidebar"
 msgstr "साइडबार"
 
-#: src/features/landing/landing-page.tsx:128
+#: src/features/landing/landing-page.tsx:98
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "साइन अप करें और आपका अपना Mochi नोड बन जाएगा। आपका डेटा वहीं रहता है — किसी और के सर्वर पर नहीं।"
 
-#: src/features/landing/landing-page.tsx:316
+#: src/features/landing/landing-page.tsx:256
 msgid "Sign up or log in"
 msgstr "साइन अप या लॉग इन करें"
 
@@ -1164,9 +1242,18 @@ msgstr "साइन आउट किया जा रहा है..."
 msgid "Skip to Main"
 msgstr "मेन पर जाएँ"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:103
+#: ../../../lib/web/src/lib/preference-utils.ts:121
+msgid "Small"
+msgstr "छोटा"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:94
+msgid "Spacious"
+msgstr "विशाल"
+
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:415
+#: src/features/auth/sign-in/components/user-auth-form.tsx:473
 msgid "Start again"
 msgstr "फिर से शुरू करें"
 
@@ -1178,7 +1265,7 @@ msgstr "डायरेक्टरी खोज से छुपे रहे�
 msgid "Stay tuned though!"
 msgstr "जुड़े रहिए!"
 
-#: src/features/landing/landing-page.tsx:148
+#: src/features/landing/landing-page.tsx:118
 msgid "Storage"
 msgstr "स्टोरेज"
 
@@ -1196,6 +1283,7 @@ msgstr "रविवार"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
 #: ../../../lib/web/src/lib/preference-utils.ts:18
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "सिस्टम"
 
@@ -1207,12 +1295,10 @@ msgstr "टैग"
 msgid "Teams/Apps"
 msgstr "टीम/ऐप"
 
-#: src/features/landing/landing-page.tsx:307
-msgid "Technology"
-msgstr "तकनीक"
-
-#: src/features/landing/landing-page.tsx:471
-#: src/features/landing/landing-page.tsx:557
+#: ../../../lib/web/src/components/server-documents-footer.tsx:20
+#: ../../../lib/web/src/features/document/document-page.tsx:39
+#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:494
 msgid "Terms and conditions"
 msgstr "नियम और शर्तें"
 
@@ -1307,7 +1393,7 @@ msgstr "असाइन नहीं किया गया"
 msgid "Unauthorized Access"
 msgstr "अनधिकृत एक्सेस"
 
-#: src/features/landing/landing-page.tsx:407
+#: src/features/landing/landing-page.tsx:344
 msgid "Under the hood"
 msgstr "अंदर की बात"
 
@@ -1323,9 +1409,13 @@ msgstr "अनवेरिफ़ाइड"
 msgid "Use a different account"
 msgstr "दूसरा अकाउंट इस्तेमाल करें"
 
-#: src/features/landing/landing-page.tsx:131
+#: src/features/landing/landing-page.tsx:101
 msgid "Use the apps"
 msgstr "ऐप्स इस्तेमाल करें"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:55
+msgid "Use the form alice@a.mochi-os.org"
+msgstr "alice@a.mochi-os.org रूप का उपयोग करें"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1340,7 +1430,7 @@ msgid "Verification code sent"
 msgstr "वेरिफ़िकेशन कोड भेजा गया"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:297
+#: src/features/auth/sign-in/components/user-auth-form.tsx:355
 msgid "Verification failed"
 msgstr "वेरिफ़िकेशन विफल"
 
@@ -1368,17 +1458,29 @@ msgstr "सभी देखें"
 msgid "View all notifications"
 msgstr "सभी नोटिफ़िकेशन देखें"
 
-#: src/features/landing/landing-page.tsx:456
+#: src/features/landing/landing-page.tsx:393
 msgid "View source code"
 msgstr "सोर्स कोड देखें"
+
+#: src/routes/replicating.tsx:80
+msgid "Waiting for approval"
+msgstr "अनुमोदन की प्रतीक्षा है"
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:12
 msgid "We'll be back online shortly."
 msgstr "हम जल्द ही वापस ऑनलाइन आ जाएँगे।"
 
-#: src/features/landing/landing-page.tsx:441
+#: src/features/landing/landing-page.tsx:378
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "हम ऐसे शुरुआती यूज़र की तलाश में हैं जो Mochi को आज़माने और ईमानदार फ़ीडबैक देने को तैयार हों। यह वर्शन 0.3 है इसलिए इसमें कुछ बग हैं, लेकिन रोज़मर्रा के इस्तेमाल के लिए तैयार है।"
+
+#: src/routes/replicating.tsx:84
+msgid "We've sent a replication request to <0>{sourceLabel}</0>. Approve it on the source server's settings page to complete sign-up."
+msgstr "हमने <0>{sourceLabel}</0> को प्रतिकृति का अनुरोध भेजा है। साइन-अप पूरा करने के लिए स्रोत सर्वर के सेटिंग्स पेज पर इसे अनुमोदित करें।"
+
+#: src/routes/replicating.tsx:88
+msgid "We've sent a replication request to the source server. Approve it on its settings page to complete sign-up."
+msgstr "हमने स्रोत सर्वर को प्रतिकृति का अनुरोध भेजा है। साइन-अप पूरा करने के लिए उसके सेटिंग्स पेज पर इसे अनुमोदित करें।"
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:9
 msgid "Website is under maintenance!"
@@ -1388,7 +1490,7 @@ msgstr "वेबसाइट मेंटेनेंस के अंतर्
 msgid "Wednesday"
 msgstr "बुधवार"
 
-#: src/features/landing/landing-page.tsx:111
+#: src/features/landing/landing-page.tsx:81
 msgid "Wikis"
 msgstr "विकि"
 
@@ -1403,19 +1505,23 @@ msgstr "आपका खाता निलंबित कर दिया ग�
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:286
+#: src/features/auth/sign-in/components/user-auth-form.tsx:344
 msgid "Your account has been suspended."
 msgstr "आपका अकाउंट सस्पेंड कर दिया गया है।"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:135
+msgid "Your account is already replicated here. Log in instead."
+msgstr "आपका खाता पहले से ही यहाँ प्रतिकृत है। इसके बजाय लॉग इन करें।"
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "साइन इन करने के लिए आपके खाते को पासकी की आवश्यकता है"
 
-#: src/features/landing/landing-page.tsx:335
+#: src/features/landing/landing-page.tsx:272
 msgid "Your apps, your platform, your network"
 msgstr "आपके ऐप, आपका प्लैटफ़ॉर्म, आपका नेटवर्क"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:188
 msgid "Your code is: {devCode}"
 msgstr "आपका कोड है: {devCode}"
 
