@@ -202,6 +202,7 @@ export function UserAuthForm({
                       })
                     }
                   }}
+                  aria-label={t`Copy code`}
                 >
                   <Copy className='h-3 w-3' />
                 </Button>
