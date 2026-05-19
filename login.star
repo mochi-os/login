@@ -37,8 +37,11 @@ def action_methods_set(a):
 
 def action_methods_reset(a):
     """Admin: reset user to email only"""
-    user = int(a.input("user", "0"))
-    mochi.user.methods.reset(user)
+    uid = a.input("user", "")
+    if not uid:
+        a.error.label(400, "errors.missing_user_id")
+        return
+    mochi.user.methods.reset(uid)
     a.json({"ok": True})
 
 def action_passkey_list(a):
