@@ -471,8 +471,8 @@ export function UserAuthForm({
                 onClick={goBackToEmail}
                 className='w-full'
               >
-                <Trans>Start again</Trans>
                 <ArrowLeft className="rtl:rotate-180" />
+                <Trans>Back</Trans>
               </Button>
 
             </div>
@@ -481,7 +481,7 @@ export function UserAuthForm({
               <Link
                 to='/recovery'
                 search={redirectTo && redirectTo !== '/' ? { redirect: redirectTo } : {}}
-                className='text-muted-foreground/70 hover:text-muted-foreground text-xs underline-offset-4 hover:underline'
+                className='text-muted-foreground hover:text-foreground text-xs underline-offset-4 hover:underline'
               >
                 <Trans>Lost access? Use a recovery code</Trans>
               </Link>

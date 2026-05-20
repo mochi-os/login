@@ -17,7 +17,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
           <img
             src='/login/images/logo-header.png'
             alt='Mochi'
-            className='h-40 w-40'
+            className='h-24 w-24 sm:h-32 sm:w-32'
           />
           <span className='text-3xl font-light tracking-[0.2em] text-foreground/80'>
             mochi
