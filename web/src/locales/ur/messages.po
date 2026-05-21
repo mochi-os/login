@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "{remaining} اشیاء باقی"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, one {# ڈیٹا بیس دوبارہ کوشش ہو رہی ہے} other {# ڈیٹا بیسز دوبارہ کوشش ہو رہی ہے}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, one {# فائل دوبارہ کوشش ہو رہی ہے} other {# فائلیں دوبارہ کوشش ہو رہی ہیں}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, one {# ڈیٹا بیس باقی ہے} other {# ڈیٹا بیسز باقی ہیں}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, one {# فائل باقی ہے} other {# فائلیں باقی ہیں}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Authenticator کوڈ"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "واپس"
 
@@ -191,7 +204,7 @@ msgstr "اپنا اکاؤنٹ بنا کر، آپ <0>سرور قواعد</0>، <1
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "منسوخ کریں"
 
@@ -219,7 +232,7 @@ msgstr "@ سے پہلے صارف نام چیک کریں اور دوبارہ کو
 msgid "Check your email."
 msgstr "اپنا ای میل چیک کریں۔"
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "ہر چند سیکنڈ بعد چیک ہو رہا ہے…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "کوڈ کاپی کریں"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "منسوخ نہیں ہو سکا"
 
@@ -392,7 +405,7 @@ msgstr "Dark"
 msgid "Dark mode"
 msgstr "Dark موڈ"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "ڈیٹا بیسز"
 
@@ -435,7 +448,7 @@ msgstr "موبائل سائڈبار دکھاتا ہے۔"
 msgid "Distributed by design"
 msgstr "بنیادی طور پر تقسیم شدہ"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "مکمل"
 
@@ -533,7 +546,7 @@ msgstr "فیڈز"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "فیڈز، فورمز، پروجیکٹس، CRM، وکیز — سب پہلے سے موجود ہیں۔ یا Starlark میں اپنی ایپس لکھیں۔"
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "فائلیں"
 
@@ -1129,6 +1142,14 @@ msgstr "کسی اور سرور سے موجودہ اکاؤنٹ کی نقل بنا
 msgid "Replication request denied"
 msgstr "نقل کی درخواست مسترد کر دی گئی"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "نقل کی درخواست <0>{source_user}</0> کو بھیج دی گئی۔ نقل مکمل کرنے کے لیے اسے ماخذ سرور کے ترتیبات صفحے پر منظور کریں۔"
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "نقل کی درخواست ماخذ سرور کو بھیج دی گئی۔ نقل مکمل کرنے کے لیے اسے ماخذ سرور کے ترتیبات صفحے پر منظور کریں۔"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "نقل کے ذریعے سائن اپ ناکام ہوا"
@@ -1141,10 +1162,6 @@ msgstr "reset کریں"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "تمام سیٹنگز کو ڈیفالٹ ویلیوز پر reset کریں"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "{failed} اشیاء دوبارہ کوشش کر رہا ہے"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "مین پر جائیں"
 msgid "Small"
 msgstr "چھوٹا"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "کچھ منتقلیاں پہلی کوشش میں مکمل نہیں ہوئیں۔ انہیں خودکار طور پر دوبارہ کوشش کی جائے گی۔"
 
@@ -1306,11 +1323,10 @@ msgstr "کشادہ"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "دوبارہ شروع کریں"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "شروع ہو رہا ہے…"
 
@@ -1338,7 +1354,7 @@ msgstr "ریکوری کوڈ سے کامیابی کے ساتھ سائن ان ہو
 msgid "Sunday"
 msgstr "اتوار"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "آپ کا ڈیٹا ہم وقت ساز ہو رہا ہے"
 
@@ -1535,7 +1551,7 @@ msgstr "تمام نوٹیفکیشنز دیکھیں"
 msgid "View source code"
 msgstr "سورس کوڈ دیکھیں"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "منظوری کا انتظار"
 
@@ -1546,14 +1562,6 @@ msgstr "ہم جلد ہی واپس آن لائن ہوں گے۔"
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "ہم ابتدائی استعمال کنندگان کی تلاش میں ہیں جو Mochi کو آزمانے اور ایماندارانہ فیڈبیک دینے کے لیے تیار ہوں۔ یہ ورژن 0.3 ہے لہذا اس میں کچھ بگز ہیں، لیکن روزمرہ استعمال کے لیے تیار ہے۔"
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "ہم نے <0>{source_user}</0> کے لیے نقل کی درخواست بھیجی ہے۔ سائن اپ مکمل کرنے کے لیے اسے ماخذ سرور کے ترتیبات کے صفحے پر منظور کریں۔"
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "ہم نے ماخذ سرور کو نقل کی درخواست بھیجی ہے۔ سائن اپ مکمل کرنے کے لیے اسے ماخذ سرور کے ترتیبات کے صفحے پر منظور کریں۔"
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "آپ کا اکاؤنٹ معطل کر دیا گیا ہے۔"
 msgid "Your account is already replicated here. Log in instead."
 msgstr "آپ کا اکاؤنٹ پہلے ہی یہاں نقل کیا جا چکا ہے۔ اس کے بجائے لاگ ان کریں۔"
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "آپ کا اکاؤنٹ ماخذ سرور سے کاپی کیا جا رہا ہے۔ ہر چیز پہنچنے کے بعد ہم آپ کو ڈیش بورڈ پر لے جائیں گے — اس ٹیب کو بند نہ کریں۔"
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "آپ کا اکاؤنٹ ماخذ سرور سے کاپی کیا جا رہا ہے۔ یہ ونڈو بند نہ کریں۔"
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

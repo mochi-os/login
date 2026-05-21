@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "Zostáva {remaining} položiek"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, one {Opakovanie pokusu pre # databázu} few {Opakovanie pokusu pre # databázy} many {Opakovanie pokusu pre # databázy} other {Opakovanie pokusu pre # databáz}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, one {Opakovanie pokusu pre # súbor} few {Opakovanie pokusu pre # súbory} many {Opakovanie pokusu pre # súboru} other {Opakovanie pokusu pre # súborov}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, one {Zostáva # databáza} few {Zostávajú # databázy} many {Zostáva # databázy} other {Zostáva # databáz}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, one {Zostáva # súbor} few {Zostávajú # súbory} many {Zostáva # súboru} other {Zostáva # súborov}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Autentifikačný kód"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Späť"
 
@@ -191,7 +204,7 @@ msgstr "Vytvorením účtu súhlasíte s <0>pravidlami servera</0>, <1>obchodný
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "Zrušiť"
 
@@ -219,7 +232,7 @@ msgstr "Skontrolujte používateľské meno pred @ a skúste znova."
 msgid "Check your email."
 msgstr "Skontrolujte si e-mail."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Kontroluje sa každých pár sekúnd…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "Kopírovať kód"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "Nepodarilo sa zrušiť"
 
@@ -392,7 +405,7 @@ msgstr "Tmavé"
 msgid "Dark mode"
 msgstr "Tmavý režim"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Databázy"
 
@@ -435,7 +448,7 @@ msgstr "Zobrazí mobilný bočný panel."
 msgid "Distributed by design"
 msgstr "Distribuované od základu"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "Hotovo"
 
@@ -533,7 +546,7 @@ msgstr "Kanály"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Kanály, fóra, projekty, CRM, wiki — všetko zabudované. Alebo si napíšte vlastné aplikácie v Starlarku."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "Súbory"
 
@@ -1129,6 +1142,14 @@ msgstr "Replikovať existujúci účet z iného servera"
 msgid "Replication request denied"
 msgstr "Žiadosť o replikáciu zamietnutá"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "Žiadosť o replikáciu bola odoslaná používateľovi <0>{source_user}</0>. Schvalte ju na stránke nastavení zdrojového servera na dokončenie replikácie."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "Žiadosť o replikáciu bola odoslaná zdrojovému serveru. Schvalte ju na stránke nastavení zdrojového servera na dokončenie replikácie."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Registrácia replikáciou zlyhala"
@@ -1141,10 +1162,6 @@ msgstr "Obnoviť"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Obnoviť všetky nastavenia na predvolené hodnoty"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "Opakovanie {failed} položiek"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Preskočiť na hlavný obsah"
 msgid "Small"
 msgstr "Malé"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Niektoré prenosy sa pri prvom pokuse nedokončili. Budú automaticky opakované."
 
@@ -1306,11 +1323,10 @@ msgstr "Priestranné"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Začať odznova"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Spúšťa sa…"
 
@@ -1338,7 +1354,7 @@ msgstr "Úspešne prihlásený obnovovacím kódom"
 msgid "Sunday"
 msgstr "Nedeľa"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Synchronizujeme vaše údaje"
 
@@ -1535,7 +1551,7 @@ msgstr "Zobraziť všetky oznámenia"
 msgid "View source code"
 msgstr "Zobraziť zdrojový kód"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "Čaká sa na schválenie"
 
@@ -1546,14 +1562,6 @@ msgstr "Čoskoro sa vrátime online."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Hľadáme prvých používateľov, ktorí sú ochotní vyskúšať Mochi a poskytnúť úprimnú spätnú väzbu. Je to verzia 0.3, takže má niektoré bugy, ale je pripravená na každodenné používanie."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "Odoslali sme žiadosť o replikáciu pre <0>{source_user}</0>. Schváľte ju na stránke nastavení zdrojového servera, aby ste dokončili registráciu."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Odoslali sme žiadosť o replikáciu na zdrojový server. Schváľte ju na stránke nastavení zdrojového servera, aby ste dokončili registráciu."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "Váš účet bol pozastavený."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Váš účet je už tu replikovaný. Namiesto toho sa prihláste."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Váš účet sa kopíruje zo zdrojového servera. Po príchode všetkého vás presmerujeme na dashboard — nezatvárajte túto kartu."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "Váš účet sa kopíruje zo zdrojového servera. Nezatvárajte toto okno."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

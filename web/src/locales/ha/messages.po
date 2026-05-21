@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "{remaining} abu sun rage"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, one {Sake gwadawa # bayanan bayanai} other {Sake gwadawa # bayanan bayanai}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, one {Sake gwadawa # fayil} other {Sake gwadawa # fayiloli}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, one {# bayanan bayanai da ya rage} other {# bayanan bayanai da suka rage}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, one {# fayil da ya rage} other {# fayiloli da suka rage}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Code na authenticator"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Komawa"
 
@@ -191,7 +204,7 @@ msgstr "Ta hanyar ƙirƙirar account ɗinka, kana yarda da <0>Ƙa'idojin sabar</
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "Soke"
 
@@ -219,7 +232,7 @@ msgstr "Duba sunan mai amfani gabanin @ kuma sake gwadawa."
 msgid "Check your email."
 msgstr "Duba imel ɗinka."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Ana dubawa kowane ‘yan dakiku…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "Kwafe code"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "Ba a iya soke ba"
 
@@ -392,7 +405,7 @@ msgstr "Duhu"
 msgid "Dark mode"
 msgstr "Dark mode"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Bayanan tushe"
 
@@ -435,7 +448,7 @@ msgstr "Yana nuna sidebar na wayar hannu."
 msgid "Distributed by design"
 msgstr "Rarrabuwa daga zane"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "An gama"
 
@@ -533,7 +546,7 @@ msgstr "Jerukan labarai"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Feeds, forums, projects, CRM, wikis — duk an gina su a ciki. Ko rubuta apps ɗinka a Starlark."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "Fayiloli"
 
@@ -1129,6 +1142,14 @@ msgstr "Kwafi asusun da yake akwai daga wani uwar garken"
 msgid "Replication request denied"
 msgstr "An ƙi buƙatar yin kwafi"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "An aika buƙatar kwafi zuwa <0>{source_user}</0>. Amince da shi a shafin saitunan uwar garken tushe don kammala kwafin."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "An aika buƙatar kwafi zuwa uwar garken tushe. Amince da shi a shafin saitunan uwar garken tushe don kammala kwafin."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Yin rajistan kwafi ya gaza"
@@ -1141,10 +1162,6 @@ msgstr "Saiti"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Mayar da duk saituna zuwa ƙimar asali"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "Ana sake gwada {failed} abu"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Tsallake zuwa Babba"
 msgid "Small"
 msgstr "Karami"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Wasu canja wurin ba su kammala a kokarin farko ba. Za a sake gwada su ta atomatik."
 
@@ -1306,11 +1323,10 @@ msgstr "Faffaka"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Sake farawa"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Ana farawa…"
 
@@ -1338,7 +1354,7 @@ msgstr "An shiga cikin nasara da lambar dawowa"
 msgid "Sunday"
 msgstr "Lahadi"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Ana daidaita bayananku"
 
@@ -1535,7 +1551,7 @@ msgstr "Kalli duk sanarwa"
 msgid "View source code"
 msgstr "Kalli source code"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "Ana jiran amincewa"
 
@@ -1546,14 +1562,6 @@ msgstr "Za mu dawo online ba da daɗewa ba."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Muna neman waɗanda za su zama farko don gwada Mochi kuma su ba da amsa ta gaskiya. Wannan sigar 0.3 ce don haka tana da wasu bugs, amma tana shirye don amfani na yau da kullum."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "Mun aika buƙatar yin kwafi don <0>{source_user}</0>. Amince da shi a shafin saituna na sabar tushe don kammala rajista."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Mun aika buƙatar yin kwafi zuwa sabar tushe. Amince da shi a shafin saituna na sabar tushe don kammala rajista."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "An dakatar da account ɗinku."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "An riga an kwafi asusunka anan. Shiga maimakon haka."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Ana kwafe asusunku daga uwar garken tushe. Za mu kai ku zuwa allon kayan aiki da zarar komai ya iso — kar ku rufe wannan shafin."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "Ana kwafi asusunka daga sabar tushe. Kada ka rufe wannan taga."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

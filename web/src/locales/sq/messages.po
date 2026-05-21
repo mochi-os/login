@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "{remaining} artikull(j) mbetur"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, one {Duke riprovuar # bazë të dhënash} other {Duke riprovuar # baza të dhënash}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, one {Duke riprovuar # skedar} other {Duke riprovuar # skedarë}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, one {# bazë të dhënash e mbetur} other {# baza të dhënash të mbetura}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, one {# skedar i mbetur} other {# skedarë të mbetur}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Kodi i autentikuesit"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Mbrapa"
 
@@ -191,7 +204,7 @@ msgstr "Duke krijuar llogarinë tënde, ti pranon <0>Rregullat e serverit</0>, <
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "Anulo"
 
@@ -219,7 +232,7 @@ msgstr "Kontrolloni emrin e përdoruesit para @ dhe provoni përsëri."
 msgid "Check your email."
 msgstr "Kontrollo email-in tënd."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Po kontrollohet çdo pak sekonda…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "Kopjo kodin"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "Nuk mund të anulohej"
 
@@ -392,7 +405,7 @@ msgstr "I errët"
 msgid "Dark mode"
 msgstr "Modë e errët"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Bazat e të dhënave"
 
@@ -435,7 +448,7 @@ msgstr "Shfaq anën mobile."
 msgid "Distributed by design"
 msgstr "I shpërndarë nga dizajni"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "Përfunduar"
 
@@ -533,7 +546,7 @@ msgstr "Feeds"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Feeds, forume, projekte, CRM, wiki — të gjitha të integruara. Ose shkruani aplikacionet tuaja në Starlark."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "Skedarët"
 
@@ -1129,6 +1142,14 @@ msgstr "Replikoni një llogari ekzistuese nga një server tjetër"
 msgid "Replication request denied"
 msgstr "Kërkesa për replikim u refuzua"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "Kërkesa e replikimit u dërgua te <0>{source_user}</0>. Miratoje në faqen e cilësimeve të serverit burim për të përfunduar replikimin."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "Kërkesa e replikimit u dërgua te serveri burim. Miratoje në faqen e cilësimeve të serverit burim për të përfunduar replikimin."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Regjistrimi nëpërmjet replikimit dështoi"
@@ -1141,10 +1162,6 @@ msgstr "Rivendos"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Rivendos të gjitha cilësimet në vlerat parazgjedhura"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "Po riprovohet {failed} artikull(j)"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Kapërce te kryesorja"
 msgid "Small"
 msgstr "I vogël"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Disa transferime nuk u kompletuan në përpjekjen e parë. Do të riprovohen automatikisht."
 
@@ -1306,11 +1323,10 @@ msgstr "I hapësirshëm"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Fillo përsëri"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Po fillon…"
 
@@ -1338,7 +1354,7 @@ msgstr "Hyrje e suksesshme me kodin e rikuperimit"
 msgid "Sunday"
 msgstr "E diel"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Po sinkronizohen të dhënat tuaja"
 
@@ -1535,7 +1551,7 @@ msgstr "Shiko të gjitha njoftimet"
 msgid "View source code"
 msgstr "Shiko kodin burim"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "Në pritje të miratimit"
 
@@ -1546,14 +1562,6 @@ msgstr "Do të kthehemi online së shpejti."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Po kërkojmë adoptues të hershëm që janë të gatshëm t'i japin Mochi-t një provë dhe të japin reagime të sinqerta. Është versioni 0.3 kështu që ka disa bug-e, por është gati për përdorim ditor."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "Kemi dërguar një kërkesë replikimi për <0>{source_user}</0>. Miratoje në faqen e cilësimeve të serverit burimor për të përfunduar regjistrimin."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Kemi dërguar një kërkesë replikimi te serveri burimor. Miratoje në faqen e cilësimeve të serverit burimor për të përfunduar regjistrimin."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "Llogaria jote është pezulluar."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Llogaria juaj është tashmë e replikuar këtu. Hyni në vend."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Llogaria juaj po kopjohet nga serveri burim. Do t'ju çojmë në panel sapo gjithçka të ketë mbërritur — mos e mbyllni këtë skedë."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "Llogaria juaj po kopjohet nga serveri burimor. Mos e mbyllni këtë dritare."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

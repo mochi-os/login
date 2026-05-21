@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "{remaining} wantoonni hafan"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, one {Kudeebisuu # deetabaasii} other {Kudeebisuu # deetabaasota}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, one {Kudeebisuu # faayilii} other {Kudeebisuu # faayiloota}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, one {# deetabaasii hafee} other {# deetabaasota hafan}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, one {# faayilii hafee} other {# faayiloota hafan}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Koodii mirkaneessaa"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Duuba"
 
@@ -191,7 +204,7 @@ msgstr "Akkaawuntii kee uumun, <0>Seera serveera</0>, <1>Haalotaaf seerota</1>, 
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "Haquu"
 
@@ -219,7 +232,7 @@ msgstr "Maqaa fayyadamtoota @ dura jiru sakatta'iitii ammas yaali."
 msgid "Check your email."
 msgstr "Imeelii kee ilaali."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Sekondoota muraasa muraasaan sakatta'aa jira…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "Koodii waraabuu"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "Haquu hin dandeenye"
 
@@ -392,7 +405,7 @@ msgstr "Dukkanaa"
 msgid "Dark mode"
 msgstr "Akkaataa dukkanaa"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Kuusaalee daataa"
 
@@ -435,7 +448,7 @@ msgstr "Cinaa moobaayilaa mul'isa."
 msgid "Distributed by design"
 msgstr "Karoora qabaachuun raabsame"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "Xumurame"
 
@@ -533,7 +546,7 @@ msgstr "Feed-iiwwan"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Feed-iiwwan, foramiiwwan, pirojektota, CRM, wikis — hundi keessatti hojjetamanii dhufu. Yookiin appiikee Starlark keessatti barreeffadhu."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "Faayilota"
 
@@ -1129,6 +1142,14 @@ msgstr "Akkaawuntii jiru sarvarii biraa irraa baayyisi"
 msgid "Replication request denied"
 msgstr "Gaaffiin garagalcha gadi dhiifameera"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "Gaaffiin baayʼessuu gara <0>{source_user}</0> ergameera. Baayʼessuu xumuruuf fuula qindaaʼina kaadhimaa irratti mirkaneessi."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "Gaaffiin baayʼessuu gara kaadhimaa ergameera. Baayʼessuu xumuruuf fuula qindaaʼina kaadhimaa irratti mirkaneessi."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Galmeen baayyisaa hin milkoofne"
@@ -1141,10 +1162,6 @@ msgstr "Haaromsi"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Qindaa'inoota hunda gara durtiitti deebisi"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "{failed} wantoonni irra deebi'amee yaalamaa jira"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Gara isa Guddaatti darbi"
 msgid "Small"
 msgstr "Xiqqaa"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Dabarsi tokko tokko yaaliii jalqabaa irratti hin xumuramne. Si'a lammataa ofumaan ni yaalamu."
 
@@ -1306,11 +1323,10 @@ msgstr "Bal'aa"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Irra deebi'i jalqabi"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Eegalaa jira…"
 
@@ -1338,7 +1354,7 @@ msgstr "Koodii deebii ittiin galaa'eera"
 msgid "Sunday"
 msgstr "Dilbata"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Daataa keessan wal-simsiisaa jira"
 
@@ -1535,7 +1551,7 @@ msgstr "Beeksisa hunda daawwadhu"
 msgid "View source code"
 msgstr "Koodii madda daawwadhu"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "Mirkanaa'uu eegaa jirra"
 
@@ -1546,14 +1562,6 @@ msgstr "Yeroo dhihootti deebina onlaayinii."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Fudhattoota duraa kan Mochi yaaluu fi yaada qajeelaa kennuuf qophaa'an barbaadaa jirra. Fooyya'iinsa 0.3 ta'uun bug muraasa qaba, garuu fayyadamuuf qophaa'eera."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "Nuti gaaffii garagalchaa <0>{source_user}</0>f erginee jirra. Galmaa'uu xumuruuf isa fuula qindaa'inaa seervera madda irratti mirkaneessi."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Nuti gaaffii garagalchaa gara seervera madda erginee jirra. Galmaa'uu xumuruuf isa fuula qindaa'inaa seervera madda irratti mirkaneessi."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "Akkaawuntiin keessan hidhameera."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Akkaawuntiin keessan duraan iyyuu asitti baayyifameera. Qooda isaa seeni."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Akkaawuntiin keessan tajaajilaa madda irraa garagaltoo godhama jira. Wanti hundi yeroo geessanitti gara daashboordiitti isin geessina — caqasa kana hin cufiina."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "Herrega kee tajaajilaa madda irraa garagalfamaa jira. Foddaa kana hin cufin."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

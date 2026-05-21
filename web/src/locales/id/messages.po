@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "{remaining} item tersisa"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, other {Mencoba lagi # basis data}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, other {Mencoba lagi # berkas}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, other {# basis data tersisa}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, other {# berkas tersisa}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Kode authenticator"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Kembali"
 
@@ -191,7 +204,7 @@ msgstr "Dengan membuat akun, Anda menyetujui <0>Aturan server</0>, <1>Syarat dan
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "Batal"
 
@@ -219,7 +232,7 @@ msgstr "Periksa nama pengguna sebelum @ dan coba lagi."
 msgid "Check your email."
 msgstr "Periksa email Anda."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Memeriksa setiap beberapa detik…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "Salin kode"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "Tidak dapat membatalkan"
 
@@ -392,7 +405,7 @@ msgstr "Gelap"
 msgid "Dark mode"
 msgstr "Mode gelap"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Basis data"
 
@@ -435,7 +448,7 @@ msgstr "Menampilkan sidebar seluler."
 msgid "Distributed by design"
 msgstr "Terdistribusi sejak awal"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "Selesai"
 
@@ -533,7 +546,7 @@ msgstr "Feed"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Feed, forum, proyek, CRM, wiki — semuanya bawaan. Atau tulis aplikasi Anda sendiri dalam Starlark."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "Berkas"
 
@@ -1129,6 +1142,14 @@ msgstr "Replikasi akun yang ada dari server lain"
 msgid "Replication request denied"
 msgstr "Permintaan replikasi ditolak"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "Permintaan replikasi dikirim ke <0>{source_user}</0>. Setujui di halaman pengaturan server sumber untuk menyelesaikan replikasi."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "Permintaan replikasi dikirim ke server sumber. Setujui di halaman pengaturan server sumber untuk menyelesaikan replikasi."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Pendaftaran replikasi gagal"
@@ -1141,10 +1162,6 @@ msgstr "Reset"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Reset semua pengaturan ke nilai default"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "Mencoba lagi {failed} item"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Lewati ke Utama"
 msgid "Small"
 msgstr "Kecil"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Beberapa transfer tidak selesai pada percobaan pertama. Akan dicoba ulang secara otomatis."
 
@@ -1306,11 +1323,10 @@ msgstr "Luas"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Mulai ulang"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Memulai…"
 
@@ -1338,7 +1354,7 @@ msgstr "Berhasil masuk dengan kode pemulihan"
 msgid "Sunday"
 msgstr "Minggu"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Menyinkronkan data Anda"
 
@@ -1535,7 +1551,7 @@ msgstr "Lihat semua notifikasi"
 msgid "View source code"
 msgstr "Lihat kode sumber"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "Menunggu persetujuan"
 
@@ -1546,14 +1562,6 @@ msgstr "Kami akan kembali online sebentar lagi."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Kami mencari pengguna awal yang bersedia mencoba Mochi dan memberikan umpan balik yang jujur. Ini adalah versi 0.3 jadi memiliki beberapa bug, tetapi siap untuk penggunaan sehari-hari."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "Kami telah mengirim permintaan replikasi untuk <0>{source_user}</0>. Setujui di halaman pengaturan server sumber untuk menyelesaikan pendaftaran."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Kami telah mengirim permintaan replikasi ke server sumber. Setujui di halaman pengaturan server sumber untuk menyelesaikan pendaftaran."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "Akun Anda telah ditangguhkan."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Akun Anda sudah direplikasi di sini. Masuk saja."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Akun Anda sedang disalin dari server sumber. Kami akan membawa Anda ke dasbor setelah semuanya sampai — jangan tutup tab ini."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "Akun Anda sedang disalin dari server sumber. Jangan tutup jendela ini."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

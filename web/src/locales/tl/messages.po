@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "{remaining} item ang natitira"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, one {Sinusubukang muli ang # database} other {Sinusubukang muli ang # mga database}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, one {Sinusubukang muli ang # file} other {Sinusubukang muli ang # mga file}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, one {# database na natitira} other {# mga database na natitira}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, one {# file na natitira} other {# mga file na natitira}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Authenticator code"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Bumalik"
 
@@ -191,7 +204,7 @@ msgstr "Sa paggawa ng iyong account, sumasang-ayon ka sa <0>Mga patakaran ng ser
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "Kanselahin"
 
@@ -219,7 +232,7 @@ msgstr "Suriin ang username bago ang @ at subukang muli."
 msgid "Check your email."
 msgstr "Tingnan ang iyong email."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Sinusuri tuwing ilang segundo…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "Kopyahin ang code"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "Hindi nakansela"
 
@@ -392,7 +405,7 @@ msgstr "Madilim"
 msgid "Dark mode"
 msgstr "Dark mode"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Mga database"
 
@@ -435,7 +448,7 @@ msgstr "Ipinapakita ang mobile sidebar."
 msgid "Distributed by design"
 msgstr "Distributed by design"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "Tapos na"
 
@@ -533,7 +546,7 @@ msgstr "Mga feed"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Mga feed, forum, project, CRM, wiki — lahat built in. O sumulat ng sarili mong mga app sa Starlark."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "Mga file"
 
@@ -1129,6 +1142,14 @@ msgstr "Kopyahin ang umiiral na account mula sa ibang server"
 msgid "Replication request denied"
 msgstr "Tinanggihan ang hiling sa replikasyon"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "Naipadala ang kahilingan sa replikasyon kay <0>{source_user}</0>. Aprubahan ito sa pahina ng mga setting ng pinagmulang server upang makumpleto ang replikasyon."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "Naipadala ang kahilingan sa replikasyon sa pinagmulang server. Aprubahan ito sa pahina ng mga setting ng pinagmulang server upang makumpleto ang replikasyon."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Nabigo ang pag-sign-up sa pamamagitan ng replikasyon"
@@ -1141,10 +1162,6 @@ msgstr "I-reset"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "I-reset ang lahat ng setting sa mga default na halaga"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "Sinusubukan ulit ang {failed} item"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Laktawan papunta sa Pangunahing Bahagi"
 msgid "Small"
 msgstr "Maliit"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Hindi natapos ang ilang transfer sa unang pagsubok. Awtomatiko silang susubukan muli."
 
@@ -1306,11 +1323,10 @@ msgstr "Maluwag"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Magsimulang muli"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Nagsisimula…"
 
@@ -1338,7 +1354,7 @@ msgstr "Matagumpay na nag-sign in gamit ang recovery code"
 msgid "Sunday"
 msgstr "Linggo"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Sini-sync ang iyong data"
 
@@ -1535,7 +1551,7 @@ msgstr "Tingnan lahat ng notification"
 msgid "View source code"
 msgstr "Tingnan ang source code"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "Naghihintay ng pag-apruba"
 
@@ -1546,14 +1562,6 @@ msgstr "Babalik kami online sa lalong madaling panahon."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Naghahanap kami ng mga early adopter na handang subukan ang Mochi at magbigay ng honest na feedback. Bersyon 0.3 ito kaya may ilang bug, ngunit handa na para sa pang-araw-araw na paggamit."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "Nagpadala kami ng hiling sa replikasyon para sa <0>{source_user}</0>. Aprubahan ito sa pahina ng mga setting ng pinagmulang server upang kumpletuhin ang pagpapatala."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Nagpadala kami ng hiling sa replikasyon sa pinagmulang server. Aprubahan ito sa pahina ng mga setting ng pinagmulang server upang kumpletuhin ang pagpapatala."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "Naka-suspend ang iyong account."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Naikopya na rito ang account mo. Mag-log in na lang."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Kinokopya ang iyong account mula sa pinanggalingang server. Dadalhin ka namin sa dashboard kapag dumating na ang lahat — huwag isara ang tab na ito."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "Kinokopya ang iyong account mula sa pinagmulang server. Huwag isara ang window na ito."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

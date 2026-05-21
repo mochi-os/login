@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "Liko {remaining} elementas(-ai)"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, one {Kartojama # duomenų bazė} few {Kartojamos # duomenų bazės} many {Kartojama # duomenų bazės} other {Kartojama # duomenų bazių}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, one {Kartojamas # failas} few {Kartojami # failai} many {Kartojama # failo} other {Kartojama # failų}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, one {Liko # duomenų bazė} few {Liko # duomenų bazės} many {Liko # duomenų bazės} other {Liko # duomenų bazių}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, one {Liko # failas} few {Liko # failai} many {Liko # failo} other {Liko # failų}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Autentifikatoriaus kodas"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Atgal"
 
@@ -191,7 +204,7 @@ msgstr "Sukurdami paskyrą sutinkate su <0>Serverio taisyklėmis</0>, <1>Sąlygo
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "Atšaukti"
 
@@ -219,7 +232,7 @@ msgstr "Patikrinkite naudotojo vardą prieš @ ir bandykite dar kartą."
 msgid "Check your email."
 msgstr "Patikrinkite el. paštą."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Tikrinama kas kelias sekundes…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "Kopijuoti kodą"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "Nepavyko atšaukti"
 
@@ -392,7 +405,7 @@ msgstr "Tamsus"
 msgid "Dark mode"
 msgstr "Tamsus režimas"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Duomenų bazės"
 
@@ -435,7 +448,7 @@ msgstr "Rodo mobiliąją šoninę juostą."
 msgid "Distributed by design"
 msgstr "Paskirstytas iš prigimties"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "Atlikta"
 
@@ -533,7 +546,7 @@ msgstr "Srautai"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Srautai, forumai, projektai, CRM, wiki — visa tai integruota. Arba parašykite savo programėles Starlark kalba."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "Failai"
 
@@ -1129,6 +1142,14 @@ msgstr "Replikuoti esamą paskyrą iš kito serverio"
 msgid "Replication request denied"
 msgstr "Replikacijos užklausa atmesta"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "Replikacijos užklausa išsiųsta vartotojui <0>{source_user}</0>. Patvirtinkite ją šaltinio serverio nustatymų puslapyje, kad užbaigtumėte replikaciją."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "Replikacijos užklausa išsiųsta šaltinio serveriui. Patvirtinkite ją šaltinio serverio nustatymų puslapyje, kad užbaigtumėte replikaciją."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Registracija per replikaciją nepavyko"
@@ -1141,10 +1162,6 @@ msgstr "Atstatyti"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Atstatyti visus nustatymus į numatytąsias reikšmes"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "Bandoma iš naujo {failed} elementas(-ai)"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Pereiti prie pagrindinio"
 msgid "Small"
 msgstr "Mažas"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Kai kurie perdavimai nebuvo užbaigti pirmo bandymo metu. Jie bus bandomi iš naujo automatiškai."
 
@@ -1306,11 +1323,10 @@ msgstr "Erdvus"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Pradėti iš naujo"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Paleidžiama…"
 
@@ -1338,7 +1354,7 @@ msgstr "Sėkmingai prisijungta naudojant atkūrimo kodą"
 msgid "Sunday"
 msgstr "Sekmadienis"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Sinchronizuojami jūsų duomenys"
 
@@ -1535,7 +1551,7 @@ msgstr "Peržiūrėti visus pranešimus"
 msgid "View source code"
 msgstr "Peržiūrėti šaltinio kodą"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "Laukiama patvirtinimo"
 
@@ -1546,14 +1562,6 @@ msgstr "Netrukus vėl būsime prisijungę."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Ieškome ankstyvųjų vartotojų, kurie nori išbandyti Mochi ir pateikti sąžiningą atsiliepimą. Tai versija 0.3, todėl turi keletą klaidų, bet yra paruošta kasdieniam naudojimui."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "Išsiuntėme replikacijos užklausą dėl <0>{source_user}</0>. Patvirtinkite ją šaltinio serverio nustatymų puslapyje, kad užbaigtumėte registraciją."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Išsiuntėme replikacijos užklausą šaltinio serveriui. Patvirtinkite ją šaltinio serverio nustatymų puslapyje, kad užbaigtumėte registraciją."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "Jūsų paskyra buvo sustabdyta."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Jūsų paskyra jau replikuota čia. Prisijunkite vietoj to."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Jūsų paskyra kopijuojama iš šaltinio serverio. Nukreipsime jus į prietaisų skydelį, kai viskas atvyks — neuždarykite šios kortelės."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "Jūsų paskyra kopijuojama iš pirminio serverio. Neuždarykite šio lango."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

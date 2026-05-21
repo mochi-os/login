@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "Kuseleyo {remaining} izinto"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, one {Iphinda izama # idatabase} other {Iphinda izama # iidatabase}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, one {Iphinda izama # ifayile} other {Iphinda izama # iifayile}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, one {# idatabase eseleyo} other {# iidatabase eziseleyo}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, one {# ifayile eseleyo} other {# iifayile eziseleyo}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Ikhowudi yokuqinisekisa"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Buyela"
 
@@ -191,7 +204,7 @@ msgstr "Ngokudala iakhawunti yakho, uvuma <0>Imithetho yeseva</0>, <1>Imigaqo ne
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "Rhoxisa"
 
@@ -219,7 +232,7 @@ msgstr "Khangela igama lomsebenzisi phambi komqondiso ka @ uze uphinde uzame."
 msgid "Check your email."
 msgstr "Jonga i-imeyile yakho."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Ihlolwa rhoqo kwimizuzwana embalwa…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "Khuphela ikhowudi"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "Ayikwazanga ukurhoxiswa"
 
@@ -392,7 +405,7 @@ msgstr "Mnyama"
 msgid "Dark mode"
 msgstr "Imodi emnyama"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Iidatabhesi"
 
@@ -435,7 +448,7 @@ msgstr "Ibonisa ibara lecala leselula."
 msgid "Distributed by design"
 msgstr "Isasazwa ngokuyilwa"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "Kwenziwe"
 
@@ -533,7 +546,7 @@ msgstr "Iifidi"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Iifidi, iiforamu, iiprojekthi, i-CRM, iiwiki — zonke zakhelwe ngaphakathi. Okanye bhala iiapp zakho ngeStarlark."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "Iifayile"
 
@@ -1129,6 +1142,14 @@ msgstr "Phinda i-akhawunti ekhoyo ukusuka kwenye iseva"
 msgid "Replication request denied"
 msgstr "Isicelo sokuphinda-phinda saliwe"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "Isicelo sokuphinda-phinda sithunyelwe ku-<0>{source_user}</0>. Sivumele kwiphepha lezicwangciso zeseva yomthombo ukuze ugqibe ukuphinda-phinda."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "Isicelo sokuphinda-phinda sithunyelwe kwiseva yomthombo. Sivumele kwiphepha lezicwangciso zeseva yomthombo ukuze ugqibe ukuphinda-phinda."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Ukubhalisa kwephindaphindo akuphumelelanga"
@@ -1141,10 +1162,6 @@ msgstr "Buyisela"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Buyisela zonke iisetingi kumaxabiso amiselweyo"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "Iphinda izama {failed} izinto"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Tsiba uye kweyona"
 msgid "Small"
 msgstr "Encinci"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Iimpepha ezithile azigqibanga ngomzamo wokuqala. Ziya kuphindwa zizame ngokuzenzekelayo."
 
@@ -1306,11 +1323,10 @@ msgstr "Banzi"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Qalisa kwakhona"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Iyaqalisa…"
 
@@ -1338,7 +1354,7 @@ msgstr "Ungene ngempumelelo ngekhowudi yokubuyisela"
 msgid "Sunday"
 msgstr "Icawa"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Ivumelanisa idatha yakho"
 
@@ -1535,7 +1551,7 @@ msgstr "Bonisa zonke izaziso"
 msgid "View source code"
 msgstr "Bonisa ikhowudi yomthombo"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "Ulindela imvume"
 
@@ -1546,14 +1562,6 @@ msgstr "Sizakubuyela kungekudala."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Sikhangela abantu abafuna ukuzama iMochi kwangoko kwaye banike impendulo enyanisekileyo. Yinguqulelo 0.3 ngoko inezinto ezimbalwa ezinengxaki, kodwa isilungele ukusetyenziswa imihla ngemihla."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "Sithumele isicelo sokuphinda-phinda ku-<0>{source_user}</0>. Sivumeleke kwiphepha leesetingi yeseva yomthombo ukuze ugqibezele ukubhalisa."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Sithumele isicelo sokuphinda-phinda kwiseva yomthombo. Sivumeleke kwiphepha leesetingi yeseva yomthombo ukuze ugqibezele ukubhalisa."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "I-akhawunti yakho imisiwe okwexeshana."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "I-akhawunti yakho sele iphindaphindiwe apha. Ngena endaweni yokoko."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Iakhawunti yakho iyakhutshelwa kwiseva yomthombo. Sizakukusa kwidashibhodi xa konke kufikile — musa ukuvala le thebhu."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "I-akhawunti yakho ikhutshelwa kwiseva yomthombo. Musa ukuvala le festile."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

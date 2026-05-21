@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "{remaining} eitem yn weddill"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, zero {Ailgeisio # cronfa ddata} one {Ailgeisio # gronfa ddata} two {Ailgeisio # gronfa ddata} few {Ailgeisio # chronfa ddata} many {Ailgeisio # chronfa ddata} other {Ailgeisio # cronfa ddata}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, zero {Ailgeisio # ffeil} one {Ailgeisio # ffeil} two {Ailgeisio # ffeil} few {Ailgeisio # ffeil} many {Ailgeisio # ffeil} other {Ailgeisio # ffeil}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, zero {# cronfa ddata ar ôl} one {# gronfa ddata ar ôl} two {# gronfa ddata ar ôl} few {# chronfa ddata ar ôl} many {# chronfa ddata ar ôl} other {# cronfa ddata ar ôl}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, zero {# ffeil ar ôl} one {# ffeil ar ôl} two {# ffeil ar ôl} few {# ffeil ar ôl} many {# ffeil ar ôl} other {# ffeil ar ôl}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Cod dilyswr"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Yn ôl"
 
@@ -191,7 +204,7 @@ msgstr "Drwy greu eich cyfrif, rydych yn cytuno â'r <0>Rheolau gweinydd</0>, <1
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "Canslo"
 
@@ -219,7 +232,7 @@ msgstr "Gwiriwch yr enw defnyddiwr cyn @ a rhowch gynnig arall arni."
 msgid "Check your email."
 msgstr "Gwiriwch eich e-bost."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Yn gwirio bob ychydig eiliadau…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "Copïo’r cod"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "Methwyd canslo"
 
@@ -392,7 +405,7 @@ msgstr "Tywyll"
 msgid "Dark mode"
 msgstr "Modd tywyll"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Cronfeydd data"
 
@@ -435,7 +448,7 @@ msgstr "Yn dangos y bar ochr symudol."
 msgid "Distributed by design"
 msgstr "Wedi'i ddosbarthu trwy ddyluniad"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "Wedi gorffen"
 
@@ -533,7 +546,7 @@ msgstr "Ffrydiau"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Ffrydiau, fforymau, prosiectau, CRM, wicis — y cyfan wedi'u hadeiladu. Neu ysgrifennwch eich apiau eich hun yn Starlark."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "Ffeiliau"
 
@@ -1129,6 +1142,14 @@ msgstr "Atgynhyrchu cyfrif sy'n bodoli o weinydd arall"
 msgid "Replication request denied"
 msgstr "Cais dyblygu wedi'i wrthod"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "Anfonwyd cais dyblygu at <0>{source_user}</0>. Cymeradwywch ef ar dudalen gosodiadau'r gweinydd ffynhonnell i gwblhau'r dyblygu."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "Anfonwyd cais dyblygu at y gweinydd ffynhonnell. Cymeradwywch ef ar dudalen gosodiadau'r gweinydd ffynhonnell i gwblhau'r dyblygu."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Methodd y cofrestriad atgynhyrchu"
@@ -1141,10 +1162,6 @@ msgstr "Ailosod"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Ailosod yr holl osodiadau i'r gwerthoedd diofyn"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "Ailgeisio {failed} eitem"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Sgipio i'r Prif"
 msgid "Small"
 msgstr "Bach"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Ni chwblhaodd rhai trosglwyddiadau ar y cynnig cyntaf. Byddant yn cael eu hailgeisio'n awtomatig."
 
@@ -1306,11 +1323,10 @@ msgstr "Helaeth"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Cychwyn eto"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Yn dechrau…"
 
@@ -1338,7 +1354,7 @@ msgstr "Mewngofnodwyd yn llwyddiannus gyda chod adfer"
 msgid "Sunday"
 msgstr "Dydd Sul"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Yn cysoni eich data"
 
@@ -1535,7 +1551,7 @@ msgstr "Gweld pob hysbysiad"
 msgid "View source code"
 msgstr "Gweld y cod ffynhonnell"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "Yn aros am gymeradwyaeth"
 
@@ -1546,14 +1562,6 @@ msgstr "Byddwn yn ôl ar-lein yn fuan."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Rydym yn chwilio am bobl gynnar sy'n barod i roi cynnig ar Mochi a rhoi adborth gonest. Mae'n fersiwn 0.3 felly mae ganddo rai bygiau, ond mae'n barod i'w ddefnyddio o ddydd i ddydd."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "Rydym wedi anfon cais dyblygu am <0>{source_user}</0>. Cymeradwywch ef ar dudalen gosodiadau'r gweinydd ffynhonnell i gwblhau'r cofrestru."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Rydym wedi anfon cais dyblygu i'r gweinydd ffynhonnell. Cymeradwywch ef ar dudalen gosodiadau'r gweinydd ffynhonnell i gwblhau'r cofrestru."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "Mae eich cyfrif wedi'i atal."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Mae eich cyfrif eisoes wedi'i atgynhyrchu yma. Mewngofnodwch yn lle hynny."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Mae eich cyfrif yn cael ei gopïo o'r gweinydd ffynhonnell. Byddwn yn mynd â chi i'r dangosfwrdd unwaith y bydd popeth wedi cyrraedd — peidiwch â chau'r tab hwn."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "Mae eich cyfrif yn cael ei gopïo o'r gweinydd ffynhonnell. Peidiwch â chau'r ffenestr hon."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

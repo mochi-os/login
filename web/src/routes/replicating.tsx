@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
+import { plural } from '@lingui/core/macro'
 import { z } from 'zod'
 import { createFileRoute, redirect } from '@tanstack/react-router'
 import { Button, getErrorMessage, requestHelpers, toast } from '@mochi/web'
@@ -123,15 +124,15 @@ function ReplicatingRouteComponent() {
           <p className='text-muted-foreground text-sm break-words'>
             {syncing ? (
               <Trans>
-                Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab.
+                Your account is being copied from the source server. Do not close this window.
               </Trans>
             ) : source_user ? (
               <Trans>
-                We've sent a replication request for <span className='text-foreground font-medium break-all'>{source_user}</span>. Approve it on the source server's settings page to complete sign-up.
+                Replication request sent to <span className='text-foreground font-medium break-all'>{source_user}</span>. Approve it on the source server's settings page to complete replication.
               </Trans>
             ) : (
               <Trans>
-                We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up.
+                Replication request sent to the source server. Approve it on the source server's settings page to complete replication.
               </Trans>
             )}
           </p>
@@ -139,20 +140,22 @@ function ReplicatingRouteComponent() {
 
         {syncing && (
           <div className='text-muted-foreground space-y-1 text-sm'>
-            {filesScope && (
-              <ScopeRow
-                label={t`Files`}
-                state={filesScope.state}
-                remaining={filesScope.remaining}
-                failed={filesScope.failed}
-              />
-            )}
             {dbsScope && (
               <ScopeRow
                 label={t`Databases`}
+                kind='userdbs'
                 state={dbsScope.state}
                 remaining={dbsScope.remaining}
                 failed={dbsScope.failed}
+              />
+            )}
+            {filesScope && (
+              <ScopeRow
+                label={t`Files`}
+                kind='files'
+                state={filesScope.state}
+                remaining={filesScope.remaining}
+                failed={filesScope.failed}
               />
             )}
             {anyFailed && (
@@ -170,32 +173,39 @@ function ReplicatingRouteComponent() {
           <span><Trans>Checking every few seconds…</Trans></span>
         </div>
 
-        <Button
-          type='button'
-          variant='ghost'
-          className='w-full'
-          disabled={canceling || syncing}
-          onClick={async () => {
-            setCanceling(true)
-            try {
-              await abandonSignup()
-              window.location.href = '/login/'
-            } catch (error) {
-              // 401 = the placeholder is already gone (deny propagated
-              // first, or session expired): the cancel goal is already
-              // achieved, so just go to the login page like the success
-              // path.
-              if (requestHelpers.isAuthError(error)) {
+        {/* Cancel is only meaningful while still waiting for approval.
+            Once syncing has started the bulk transfer is underway and
+            the placeholder is on its way to active — abandoning here
+            would just orphan a half-copied account, so the button is
+            dropped entirely rather than shown disabled. */}
+        {!syncing && (
+          <Button
+            type='button'
+            variant='ghost'
+            className='w-full'
+            disabled={canceling}
+            onClick={async () => {
+              setCanceling(true)
+              try {
+                await abandonSignup()
                 window.location.href = '/login/'
-                return
+              } catch (error) {
+                // 401 = the placeholder is already gone (deny propagated
+                // first, or session expired): the cancel goal is already
+                // achieved, so just go to the login page like the success
+                // path.
+                if (requestHelpers.isAuthError(error)) {
+                  window.location.href = '/login/'
+                  return
+                }
+                toast.error(getErrorMessage(error, t`Could not cancel`))
+                setCanceling(false)
               }
-              toast.error(getErrorMessage(error, t`Could not cancel`))
-              setCanceling(false)
-            }
-          }}
-        >
-          <Trans>Cancel</Trans>
-        </Button>
+            }}
+          >
+            <Trans>Cancel</Trans>
+          </Button>
+        )}
       </div>
     </AuthLayout>
   )
@@ -203,11 +213,13 @@ function ReplicatingRouteComponent() {
 
 function ScopeRow({
   label,
+  kind,
   state,
   remaining,
   failed,
 }: {
   label: string
+  kind: 'userdbs' | 'files'
   state: string
   remaining: number
   failed: number
@@ -216,9 +228,15 @@ function ScopeRow({
   if (state === 'done' && failed === 0) {
     statusText = <Trans>Done</Trans>
   } else if (state === 'incomplete') {
-    statusText = <Trans>Retrying {failed} item(s)</Trans>
+    statusText =
+      kind === 'userdbs'
+        ? plural(failed, { one: 'Retrying # database', other: 'Retrying # databases' })
+        : plural(failed, { one: 'Retrying # file', other: 'Retrying # files' })
   } else if (remaining > 0) {
-    statusText = <Trans>{remaining} item(s) remaining</Trans>
+    statusText =
+      kind === 'userdbs'
+        ? plural(remaining, { one: '# database remaining', other: '# databases remaining' })
+        : plural(remaining, { one: '# file remaining', other: '# files remaining' })
   } else {
     statusText = <Trans>Starting…</Trans>
   }

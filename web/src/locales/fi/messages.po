@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "{remaining} kohde(tta) jäljellä"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, one {Yritetään # tietokantaa uudelleen} other {Yritetään # tietokantaa uudelleen}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, one {Yritetään # tiedostoa uudelleen} other {Yritetään # tiedostoa uudelleen}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, one {# tietokanta jäljellä} other {# tietokantaa jäljellä}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, one {# tiedosto jäljellä} other {# tiedostoa jäljellä}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Todennuskoodi"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Takaisin"
 
@@ -191,7 +204,7 @@ msgstr "Luomalla tilin hyväksyt <0>Palvelimen säännöt</0>, <1>Käyttöehdot<
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "Peruuta"
 
@@ -219,7 +232,7 @@ msgstr "Tarkista @-merkkiä edeltävä käyttäjänimi ja yritä uudelleen."
 msgid "Check your email."
 msgstr "Tarkista sähköpostisi."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Tarkistetaan muutaman sekunnin välein…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "Kopioi koodi"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "Ei voitu peruuttaa"
 
@@ -392,7 +405,7 @@ msgstr "Tumma"
 msgid "Dark mode"
 msgstr "Tumma tila"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Tietokannat"
 
@@ -435,7 +448,7 @@ msgstr "Näyttää mobiilisivupalkin."
 msgid "Distributed by design"
 msgstr "Hajautettu suunnittelultaan"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "Valmis"
 
@@ -533,7 +546,7 @@ msgstr "Syötteet"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Syötteet, foorumit, projektit, CRM, wikit — kaikki sisäänrakennettuja. Tai kirjoita omia sovelluksia Starlarkilla."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "Tiedostot"
 
@@ -1129,6 +1142,14 @@ msgstr "Replikoi olemassa oleva tili toiselta palvelimelta"
 msgid "Replication request denied"
 msgstr "Replikointipyyntö hylätty"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "Replikointipyyntö lähetetty käyttäjälle <0>{source_user}</0>. Hyväksy se lähdepalvelimen asetussivulla viimeistelläksesi replikoinnin."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "Replikointipyyntö lähetetty lähdepalvelimelle. Hyväksy se lähdepalvelimen asetussivulla viimeistelläksesi replikoinnin."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Replikoinnin rekisteröinti epäonnistui"
@@ -1141,10 +1162,6 @@ msgstr "Nollaa"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Palauta kaikki asetukset oletusarvoihin"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "Yritetään uudelleen {failed} kohde(tta)"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Siirry pääsisältöön"
 msgid "Small"
 msgstr "Pieni"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Jotkin siirrot eivät valmistuneet ensimmäisellä yrittämällä. Niitä yritetään automaattisesti uudelleen."
 
@@ -1306,11 +1323,10 @@ msgstr "Tilava"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Aloita alusta"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Aloitetaan…"
 
@@ -1338,7 +1354,7 @@ msgstr "Kirjautuminen palautuskoodilla onnistui"
 msgid "Sunday"
 msgstr "Sunnuntai"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Tietojasi synkronoidaan"
 
@@ -1535,7 +1551,7 @@ msgstr "Näytä kaikki ilmoitukset"
 msgid "View source code"
 msgstr "Näytä lähdekoodi"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "Odotetaan hyväksyntää"
 
@@ -1546,14 +1562,6 @@ msgstr "Palaamme pian verkkoon."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Etsimme varhaisia käyttäjiä, jotka ovat valmiita kokeilemaan Mochia ja antamaan rehellistä palautetta. Tämä on versio 0.3, joten siinä on joitakin vikoja, mutta se on valmis päivittäiseen käyttöön."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "Lähetimme replikointipyynnön käyttäjälle <0>{source_user}</0>. Hyväksy se lähdepalvelimen asetussivulla viimeistelläksesi rekisteröitymisen."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Lähetimme replikointipyynnön lähdepalvelimelle. Hyväksy se lähdepalvelimen asetussivulla viimeistelläksesi rekisteröitymisen."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "Tilisi on keskeytetty."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Tilisi on jo replikoitu tänne. Kirjaudu sisään sen sijaan."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Tiliäsi kopioidaan lähdepalvelimelta. Viemme sinut hallintapaneeliin, kun kaikki on saapunut — älä sulje tätä välilehteä."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "Tiliäsi kopioidaan lähdepalvelimelta. Älä sulje tätä ikkunaa."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

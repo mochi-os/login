@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "{remaining} elemento(i) rimanente(i)"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, one {Nuovo tentativo per # database} other {Nuovo tentativo per # database}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, one {Nuovo tentativo per # file} other {Nuovo tentativo per # file}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, one {# database rimanente} other {# database rimanenti}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, one {# file rimanente} other {# file rimanenti}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Codice dell'autenticatore"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Indietro"
 
@@ -191,7 +204,7 @@ msgstr "Creando il tuo account, accetti le <0>Regole del server</0>, i <1>Termin
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "Annulla"
 
@@ -219,7 +232,7 @@ msgstr "Controlla il nome utente prima di @ e riprova."
 msgid "Check your email."
 msgstr "Controlla la tua email."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Verifica ogni pochi secondi…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "Copia codice"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "Impossibile annullare"
 
@@ -392,7 +405,7 @@ msgstr "Scuro"
 msgid "Dark mode"
 msgstr "Modalità scura"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Database"
 
@@ -435,7 +448,7 @@ msgstr "Mostra la barra laterale mobile."
 msgid "Distributed by design"
 msgstr "Distribuito per progettazione"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "Fatto"
 
@@ -533,7 +546,7 @@ msgstr "Feed"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Feed, forum, progetti, CRM, wiki — tutto integrato. Oppure scrivi le tue app in Starlark."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "File"
 
@@ -1129,6 +1142,14 @@ msgstr "Replica un account esistente da un altro server"
 msgid "Replication request denied"
 msgstr "Richiesta di replica negata"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "Richiesta di replica inviata a <0>{source_user}</0>. Approvala nella pagina delle impostazioni del server di origine per completare la replica."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "Richiesta di replica inviata al server di origine. Approvala nella pagina delle impostazioni del server di origine per completare la replica."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Registrazione tramite replica non riuscita"
@@ -1141,10 +1162,6 @@ msgstr "Reimposta"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Reimposta tutte le impostazioni ai valori predefiniti"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "Nuovo tentativo per {failed} elemento(i)"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Vai al contenuto principale"
 msgid "Small"
 msgstr "Piccolo"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Alcuni trasferimenti non sono stati completati al primo tentativo. Verranno riprovati automaticamente."
 
@@ -1306,11 +1323,10 @@ msgstr "Spazioso"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Ricomincia"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Avvio in corso…"
 
@@ -1338,7 +1354,7 @@ msgstr "Accesso effettuato con codice di recupero"
 msgid "Sunday"
 msgstr "Domenica"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Sincronizzazione dei tuoi dati"
 
@@ -1535,7 +1551,7 @@ msgstr "Visualizza tutte le notifiche"
 msgid "View source code"
 msgstr "Visualizza codice sorgente"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "In attesa di approvazione"
 
@@ -1546,14 +1562,6 @@ msgstr "Torneremo online a breve."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Cerchiamo early adopter disposti a provare Mochi e a dare un feedback sincero. È la versione 0.3 e ha qualche bug, ma è pronta per l'uso quotidiano."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "Abbiamo inviato una richiesta di replica per <0>{source_user}</0>. Approvala nella pagina delle impostazioni del server di origine per completare la registrazione."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Abbiamo inviato una richiesta di replica al server di origine. Approvala nella pagina delle impostazioni del server di origine per completare la registrazione."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "Il tuo account è stato sospeso."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Il tuo account è già replicato qui. Accedi invece."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Il tuo account è in corso di copia dal server di origine. Ti porteremo alla dashboard non appena tutto sarà arrivato — non chiudere questa scheda."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "Il tuo account è in fase di copia dal server di origine. Non chiudere questa finestra."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

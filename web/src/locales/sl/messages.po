@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "Preostalo {remaining} element(ov)"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, one {Ponavljanje # podatkovne baze} two {Ponavljanje # podatkovnih baz} few {Ponavljanje # podatkovnih baz} other {Ponavljanje # podatkovnih baz}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, one {Ponavljanje # datoteke} two {Ponavljanje # datotek} few {Ponavljanje # datotek} other {Ponavljanje # datotek}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, one {# podatkovna baza preostala} two {# podatkovni bazi preostali} few {# podatkovne baze preostale} other {# podatkovnih baz preostalih}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, one {# datoteka preostala} two {# datoteki preostali} few {# datoteke preostale} other {# datotek preostalih}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Koda avtentikacije"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Nazaj"
 
@@ -191,7 +204,7 @@ msgstr "Z ustvarjanjem računa se strinjate s <0>Pravili strežnika</0>, <1>Pogo
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "Prekliči"
 
@@ -219,7 +232,7 @@ msgstr "Preverite uporabniško ime pred @ in poskusite znova."
 msgid "Check your email."
 msgstr "Preverite e-pošto."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Preverjanje vsakih nekaj sekund…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "Kopiraj kodo"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "Ni bilo mogoče preklicati"
 
@@ -392,7 +405,7 @@ msgstr "Temno"
 msgid "Dark mode"
 msgstr "Temni način"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Podatkovne baze"
 
@@ -435,7 +448,7 @@ msgstr "Prikaže mobilno stransko vrstico."
 msgid "Distributed by design"
 msgstr "Razpršeno po zasnovi"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "Končano"
 
@@ -533,7 +546,7 @@ msgstr "Viri"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Viri, forumi, projekti, CRM, wikiji — vse vgrajeno. Ali napišite svoje aplikacije v Starlarku."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "Datoteke"
 
@@ -1129,6 +1142,14 @@ msgstr "Replikacija obstoječega računa z drugega strežnika"
 msgid "Replication request denied"
 msgstr "Zahteva za replikacijo zavrnjena"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "Zahteva za replikacijo je bila poslana uporabniku <0>{source_user}</0>. Odobrite jo na strani z nastavitvami izvornega strežnika, da dokončate replikacijo."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "Zahteva za replikacijo je bila poslana izvornemu strežniku. Odobrite jo na strani z nastavitvami izvornega strežnika, da dokončate replikacijo."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Registracija prek replikacije ni uspela"
@@ -1141,10 +1162,6 @@ msgstr "Ponastavi"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Ponastavi vse nastavitve na privzete vrednosti"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "Ponovni poskus za {failed} element(ov)"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Preskoči na glavno"
 msgid "Small"
 msgstr "Majhno"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Nekateri prenosi se v prvem poskusu niso zaključili. Samodejno bodo ponovljeni."
 
@@ -1306,11 +1323,10 @@ msgstr "Prostorno"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Začni znova"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Zaganja se…"
 
@@ -1338,7 +1354,7 @@ msgstr "Uspešna prijava z obnovitveno kodo"
 msgid "Sunday"
 msgstr "Nedelja"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Sinhroniziranje vaših podatkov"
 
@@ -1535,7 +1551,7 @@ msgstr "Prikaži vsa obvestila"
 msgid "View source code"
 msgstr "Prikaži izvorno kodo"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "Čakanje na odobritev"
 
@@ -1546,14 +1562,6 @@ msgstr "Kmalu bomo spet na voljo."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Iščemo zgodnje uporabnike, ki so pripravljeni preizkusiti Mochi in dati iskreno povratno informacijo. To je različica 0.3, zato ima nekaj napak, vendar je pripravljena za vsakodnevno uporabo."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "Poslali smo zahtevo za replikacijo za <0>{source_user}</0>. Odobrite jo na strani z nastavitvami izvornega strežnika, da dokončate registracijo."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Poslali smo zahtevo za replikacijo izvornemu strežniku. Odobrite jo na strani z nastavitvami izvornega strežnika, da dokončate registracijo."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "Tvoj račun je bil začasno ustavljen."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Vaš račun je tukaj že repliciran. Namesto tega se prijavite."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Vaš račun se kopira z izvornega strežnika. Ko bo vse prispelo, vas bomo preusmerili na nadzorno ploščo — ne zapirajte tega zavihka."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "Vaš račun se kopira z izvornega strežnika. Ne zapirajte tega okna."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

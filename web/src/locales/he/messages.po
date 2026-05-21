@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "נותרו {remaining} פריט(ים)"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, one {מנסה שנית # מסד נתונים} two {מנסה שנית # מסדי נתונים} many {מנסה שנית # מסדי נתונים} other {מנסה שנית # מסדי נתונים}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, one {מנסה שנית # קובץ} two {מנסה שנית # קבצים} many {מנסה שנית # קבצים} other {מנסה שנית # קבצים}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, one {נותר # מסד נתונים} two {נותרו # מסדי נתונים} many {נותרו # מסדי נתונים} other {נותרו # מסדי נתונים}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, one {נותר # קובץ} two {נותרו # קבצים} many {נותרו # קבצים} other {נותרו # קבצים}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "קוד אימות"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "חזור"
 
@@ -191,7 +204,7 @@ msgstr "ביצירת החשבון שלך אתה מסכים ל<0>כללי השר�
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "ביטול"
 
@@ -219,7 +232,7 @@ msgstr "בדוק את שם המשתמש לפני @ ונסה שוב."
 msgid "Check your email."
 msgstr "בדוק את הדוא\"ל שלך."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "בודק כל מספר שניות…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "העתק קוד"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "לא ניתן היה לבטל"
 
@@ -392,7 +405,7 @@ msgstr "כהה"
 msgid "Dark mode"
 msgstr "מצב כהה"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "מאגרי מידע"
 
@@ -435,7 +448,7 @@ msgstr "מציג את סרגל הצד למובייל."
 msgid "Distributed by design"
 msgstr "מבוזר מתוקף תכנונו"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "בוצע"
 
@@ -533,7 +546,7 @@ msgstr "פידים"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "פידים, פורומים, פרויקטים, CRM, ויקיים — הכול מובנה. או כתוב אפליקציות משלך ב-Starlark."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "קבצים"
 
@@ -1129,6 +1142,14 @@ msgstr "שכפל חשבון קיים משרת אחר"
 msgid "Replication request denied"
 msgstr "בקשת השכפול נדחתה"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "בקשת שכפול נשלחה אל <0>{source_user}</0>. אשרו אותה בדף ההגדרות של שרת המקור כדי להשלים את השכפול."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "בקשת שכפול נשלחה אל שרת המקור. אשרו אותה בדף ההגדרות של שרת המקור כדי להשלים את השכפול."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "ההרשמה באמצעות שכפול נכשלה"
@@ -1141,10 +1162,6 @@ msgstr "אפס"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "אפס את כל ההגדרות לערכי ברירת המחדל"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "מנסה שוב {failed} פריט(ים)"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "דלג לראשי"
 msgid "Small"
 msgstr "קטן"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "חלק מההעברות לא הושלמו בניסיון הראשון. ניסיון נוסף יבוצע אוטומטית."
 
@@ -1306,11 +1323,10 @@ msgstr "מרווח"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "התחל מחדש"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "מתחיל…"
 
@@ -1338,7 +1354,7 @@ msgstr "התחברת בהצלחה עם קוד שחזור"
 msgid "Sunday"
 msgstr "יום ראשון"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "הנתונים שלך מסונכרנים"
 
@@ -1535,7 +1551,7 @@ msgstr "הצג את כל ההתראות"
 msgid "View source code"
 msgstr "הצג קוד מקור"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "ממתין לאישור"
 
@@ -1546,14 +1562,6 @@ msgstr "נחזור להיות מקוונים בקרוב."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "אנחנו מחפשים מאמצים מוקדמים שמוכנים לנסות את Mochi ולתת משוב כן. זו גרסה 0.3 ולכן יש בה כמה באגים, אבל היא מוכנה לשימוש יומיומי."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "שלחנו בקשת שכפול עבור <0>{source_user}</0>. אשר אותה בדף ההגדרות של שרת המקור כדי להשלים את ההרשמה."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "שלחנו בקשת שכפול לשרת המקור. אשר אותה בדף ההגדרות של שרת המקור כדי להשלים את ההרשמה."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "החשבון שלך הושעה."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "החשבון שלך כבר משוכפל כאן. היכנס במקום זאת."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "החשבון שלך מועתק משרת המקור. נביא אותך ללוח הבקרה ברגע שהכל יגיע — אל תסגור את הלשונית הזו."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "החשבון שלך מועתק משרת המקור. אל תסגור חלון זה."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

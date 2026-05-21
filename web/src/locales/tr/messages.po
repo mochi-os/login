@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "{remaining} öğe kaldı"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, one {# veritabanı yeniden deneniyor} other {# veritabanı yeniden deneniyor}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, one {# dosya yeniden deneniyor} other {# dosya yeniden deneniyor}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, one {# veritabanı kaldı} other {# veritabanı kaldı}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, one {# dosya kaldı} other {# dosya kaldı}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Authenticator kodu"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Geri"
 
@@ -191,7 +204,7 @@ msgstr "Hesabınızı oluşturarak <0>Sunucu kurallarını</0>, <1>Şartlar ve k
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "İptal"
 
@@ -219,7 +232,7 @@ msgstr "@ işaretinden önceki kullanıcı adını kontrol edip tekrar deneyin."
 msgid "Check your email."
 msgstr "E-postanızı kontrol edin."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Birkaç saniyede bir kontrol ediliyor…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "Kodu kopyala"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "İptal edilemedi"
 
@@ -392,7 +405,7 @@ msgstr "Koyu"
 msgid "Dark mode"
 msgstr "Koyu mod"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Veritabanları"
 
@@ -435,7 +448,7 @@ msgstr "Mobil kenar çubuğunu görüntüler."
 msgid "Distributed by design"
 msgstr "Tasarım gereği dağıtık"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "Tamamlandı"
 
@@ -533,7 +546,7 @@ msgstr "Akışlar"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Akışlar, forumlar, projeler, CRM, wiki'ler — hepsi yerleşik. Veya kendi uygulamalarınızı Starlark ile yazın."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "Dosyalar"
 
@@ -1129,6 +1142,14 @@ msgstr "Başka bir sunucudan mevcut hesabı çoğaltın"
 msgid "Replication request denied"
 msgstr "Çoğaltma isteği reddedildi"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "Çoğaltma isteği <0>{source_user}</0> kullanıcısına gönderildi. Çoğaltmayı tamamlamak için kaynak sunucunun ayarlar sayfasında onaylayın."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "Çoğaltma isteği kaynak sunucuya gönderildi. Çoğaltmayı tamamlamak için kaynak sunucunun ayarlar sayfasında onaylayın."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Çoğaltma yoluyla kayıt başarısız oldu"
@@ -1141,10 +1162,6 @@ msgstr "Sıfırla"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Tüm ayarları varsayılan değerlere sıfırla"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "{failed} öğe yeniden deneniyor"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Ana içeriğe atla"
 msgid "Small"
 msgstr "Küçük"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Bazı aktarımlar ilk denemede tamamlanmadı. Otomatik olarak yeniden denenecek."
 
@@ -1306,11 +1323,10 @@ msgstr "Geniş"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Yeniden başla"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Başlatılıyor…"
 
@@ -1338,7 +1354,7 @@ msgstr "Kurtarma kodu ile başarıyla giriş yapıldı"
 msgid "Sunday"
 msgstr "Pazar"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Verileriniz senkronize ediliyor"
 
@@ -1535,7 +1551,7 @@ msgstr "Tüm bildirimleri görüntüle"
 msgid "View source code"
 msgstr "Kaynak kodu görüntüle"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "Onay bekleniyor"
 
@@ -1546,14 +1562,6 @@ msgstr "Kısa süre içinde tekrar çevrimiçi olacağız."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Mochi'yi deneyip dürüst geri bildirim vermeye istekli erken benimseyenler arıyoruz. Sürüm 0.3 olduğu için bazı bug'lar var, ancak günlük kullanıma hazır."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "<0>{source_user}</0> için bir çoğaltma isteği gönderdik. Kaydı tamamlamak için isteği kaynak sunucunun ayarlar sayfasında onaylayın."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Kaynak sunucuya bir çoğaltma isteği gönderdik. Kaydı tamamlamak için isteği kaynak sunucunun ayarlar sayfasında onaylayın."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "Hesabın askıya alındı."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Hesabınız zaten buraya çoğaltılmış. Onun yerine giriş yapın."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Hesabınız kaynak sunucudan kopyalanıyor. Her şey ulaştığında sizi panele götüreceğiz — bu sekmeyi kapatmayın."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "Hesabınız kaynak sunucudan kopyalanıyor. Bu pencereyi kapatmayın."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "{remaining} element(e) rămas(e)"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, one {Se reîncearcă # bază de date} few {Se reîncearcă # baze de date} other {Se reîncearcă # de baze de date}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, one {Se reîncearcă # fișier} few {Se reîncearcă # fișiere} other {Se reîncearcă # de fișiere}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, one {# bază de date rămasă} few {# baze de date rămase} other {# de baze de date rămase}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, one {# fișier rămas} few {# fișiere rămase} other {# de fișiere rămase}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Cod de autentificare"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Înapoi"
 
@@ -191,7 +204,7 @@ msgstr "Prin crearea contului, ești de acord cu <0>Regulile serverului</0>, <1>
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "Anulează"
 
@@ -219,7 +232,7 @@ msgstr "Verificați numele de utilizator înainte de @ și încercați din nou."
 msgid "Check your email."
 msgstr "Verifică-ți emailul."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Se verifică la fiecare câteva secunde…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "Copiază codul"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "Nu s-a putut anula"
 
@@ -392,7 +405,7 @@ msgstr "Întunecat"
 msgid "Dark mode"
 msgstr "Mod întunecat"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Baze de date"
 
@@ -435,7 +448,7 @@ msgstr "Afișează bara laterală mobilă."
 msgid "Distributed by design"
 msgstr "Distribuit prin design"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "Terminat"
 
@@ -533,7 +546,7 @@ msgstr "Fluxuri"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Fluxuri, forumuri, proiecte, CRM, wiki-uri — toate incluse. Sau scrie-ți propriile aplicații în Starlark."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "Fișiere"
 
@@ -1129,6 +1142,14 @@ msgstr "Replicați un cont existent de pe alt server"
 msgid "Replication request denied"
 msgstr "Cerere de replicare refuzată"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "Cererea de replicare a fost trimisă către <0>{source_user}</0>. Aprob-o pe pagina de setări a serverului sursă pentru a finaliza replicarea."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "Cererea de replicare a fost trimisă către serverul sursă. Aprob-o pe pagina de setări a serverului sursă pentru a finaliza replicarea."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Înregistrarea prin replicare a eșuat"
@@ -1141,10 +1162,6 @@ msgstr "Resetează"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Resetează toate setările la valorile implicite"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "Se reîncearcă {failed} element(e)"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Sari la conținutul principal"
 msgid "Small"
 msgstr "Mic"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Unele transferuri nu s-au finalizat din prima încercare. Vor fi reîncercate automat."
 
@@ -1306,11 +1323,10 @@ msgstr "Spațios"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Începe din nou"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Se inițiază…"
 
@@ -1338,7 +1354,7 @@ msgstr "Conectare reușită cu codul de recuperare"
 msgid "Sunday"
 msgstr "Duminică"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Se sincronizează datele tale"
 
@@ -1535,7 +1551,7 @@ msgstr "Vizualizează toate notificările"
 msgid "View source code"
 msgstr "Vizualizează codul sursă"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "Se așteaptă aprobarea"
 
@@ -1546,14 +1562,6 @@ msgstr "Vom reveni online în curând."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Căutăm utilizatori timpurii dispuși să încerce Mochi și să ofere feedback sincer. Este versiunea 0.3, deci are câteva bug-uri, dar este gata pentru uz zilnic."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "Am trimis o cerere de replicare pentru <0>{source_user}</0>. Aprob-o pe pagina de setări a serverului sursă pentru a finaliza înregistrarea."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Am trimis o cerere de replicare la serverul sursă. Aprob-o pe pagina de setări a serverului sursă pentru a finaliza înregistrarea."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "Contul tău a fost suspendat."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Contul dvs. este deja replicat aici. Autentificați-vă în loc."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Contul tău este copiat de pe serverul sursă. Te vom duce la panou de îndată ce totul a sosit — nu închide această filă."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "Contul tău este copiat de pe serverul sursă. Nu închide această fereastră."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

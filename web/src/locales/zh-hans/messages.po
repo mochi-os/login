@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "剩余 {remaining} 项"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr "{failed, plural, other {正在重试 # 个数据库}}"
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr "{failed, plural, other {正在重试 # 个文件}}"
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr "{remaining, plural, other {剩余 # 个数据库}}"
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr "{remaining, plural, other {剩余 # 个文件}}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "身份验证码"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "返回"
 
@@ -191,7 +204,7 @@ msgstr "创建账户即表示您同意<0>服务器规则</0>、<1>服务条款</
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "取消"
 
@@ -219,7 +232,7 @@ msgstr "请检查 @ 之前的用户名,然后重试。"
 msgid "Check your email."
 msgstr "请查看你的邮箱。"
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "每隔几秒检查一次…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr "复制代码"
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "无法取消"
 
@@ -392,7 +405,7 @@ msgstr "深色"
 msgid "Dark mode"
 msgstr "深色模式"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "数据库"
 
@@ -435,7 +448,7 @@ msgstr "显示移动端侧边栏。"
 msgid "Distributed by design"
 msgstr "原生分布式设计"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr "完成"
 
@@ -533,7 +546,7 @@ msgstr "信息流"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "信息流、论坛、项目、CRM、wiki — 全部内置。或使用 Starlark 编写你自己的应用。"
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr "文件"
 
@@ -1129,6 +1142,14 @@ msgstr "从其他服务器复制现有账户"
 msgid "Replication request denied"
 msgstr "复制请求被拒绝"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "复制请求已发送给 <0>{source_user}</0>。请在源服务器的设置页面批准它以完成复制。"
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "复制请求已发送至源服务器。请在源服务器的设置页面批准它以完成复制。"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "复制注册失败"
@@ -1141,10 +1162,6 @@ msgstr "重置"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "将所有设置重置为默认值"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "正在重试 {failed} 项"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "跳至主内容"
 msgid "Small"
 msgstr "小"
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "部分传输在首次尝试中未完成。系统将自动重试。"
 
@@ -1306,11 +1323,10 @@ msgstr "宽松"
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "重新开始"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "正在启动…"
 
@@ -1338,7 +1354,7 @@ msgstr "已使用恢复代码成功登录"
 msgid "Sunday"
 msgstr "星期日"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "正在同步您的数据"
 
@@ -1535,7 +1551,7 @@ msgstr "查看所有通知"
 msgid "View source code"
 msgstr "查看源代码"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "等待批准"
 
@@ -1546,14 +1562,6 @@ msgstr "我们将很快恢复在线。"
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "我们正在寻找愿意试用 Mochi 并提供真实反馈的早期使用者。当前版本为 0.3,因此存在一些 bug,但已可用于日常使用。"
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "我们已为 <0>{source_user}</0> 发送了复制请求。请在源服务器的设置页面批准以完成注册。"
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "我们已向源服务器发送了复制请求。请在源服务器的设置页面批准以完成注册。"
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "您的账户已被暂停。"
 msgid "Your account is already replicated here. Log in instead."
 msgstr "您的账户已复制到此处。请改为登录。"
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "正在从源服务器复制您的账户。一切就绪后我们将带您前往仪表盘 — 请勿关闭此标签页。"
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "正在从源服务器复制您的账户。请勿关闭此窗口。"
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"

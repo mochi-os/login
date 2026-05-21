@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:221
-msgid "{remaining} item(s) remaining"
-msgstr "{remaining} element gjenstår"
+#: src/routes/replicating.tsx:233
+msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
+msgstr ""
+
+#: src/routes/replicating.tsx:234
+msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
+msgstr ""
+
+#: src/routes/replicating.tsx:238
+msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
+msgstr ""
+
+#: src/routes/replicating.tsx:239
+msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
@@ -155,6 +167,7 @@ msgid "Authenticator code"
 msgstr "Autentiseringskode"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:484
 msgid "Back"
 msgstr "Tilbake"
 
@@ -191,7 +204,7 @@ msgstr "Når du opprettar kontoen din, godtek du <0>tenarreglane</0>, <1>vilkår
 #: ../../../lib/web/src/features/access/access-list.tsx:255
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
-#: src/routes/replicating.tsx:197
+#: src/routes/replicating.tsx:206
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -219,7 +232,7 @@ msgstr "Sjekk brukarnamnet før @ og prøv på nytt."
 msgid "Check your email."
 msgstr "Sjekk e-posten din."
 
-#: src/routes/replicating.tsx:170
+#: src/routes/replicating.tsx:173
 msgid "Checking every few seconds…"
 msgstr "Sjekkar kvart par sekund…"
 
@@ -346,7 +359,7 @@ msgid "Copy code"
 msgstr ""
 
 #: src/features/auth/identity-form.tsx:157
-#: src/routes/replicating.tsx:192
+#: src/routes/replicating.tsx:201
 msgid "Could not cancel"
 msgstr "Kunne ikkje avbryte"
 
@@ -392,7 +405,7 @@ msgstr "Mørk"
 msgid "Dark mode"
 msgstr "Mørk modus"
 
-#: src/routes/replicating.tsx:152
+#: src/routes/replicating.tsx:145
 msgid "Databases"
 msgstr "Databasar"
 
@@ -435,7 +448,7 @@ msgstr "Viser mobil sidestolpe."
 msgid "Distributed by design"
 msgstr "Distribuert i utgangspunktet"
 
-#: src/routes/replicating.tsx:217
+#: src/routes/replicating.tsx:229
 msgid "Done"
 msgstr ""
 
@@ -533,7 +546,7 @@ msgstr "Straumar"
 msgid "Feeds, forums, projects, CRM, wikis — all built in. Or write your own apps in Starlark."
 msgstr "Straumar, forum, prosjekt, CRM, wiki — alt innebygd. Eller skriv dine eigne appar i Starlark."
 
-#: src/routes/replicating.tsx:144
+#: src/routes/replicating.tsx:154
 msgid "Files"
 msgstr ""
 
@@ -1129,6 +1142,14 @@ msgstr "Replikér ein eksisterande konto frå ein annan tenar"
 msgid "Replication request denied"
 msgstr "Replikeringsførespurnad avvist"
 
+#: src/routes/replicating.tsx:130
+msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
+msgstr "Replikeringsførespurnad sendt til <0>{source_user}</0>. Godkjenn han på innstillingssida til kjeldeserveren for å fullføre replikeringa."
+
+#: src/routes/replicating.tsx:134
+msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
+msgstr "Replikeringsførespurnad sendt til kjeldeserveren. Godkjenn han på innstillingssida til kjeldeserveren for å fullføre replikeringa."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Replication signup failed"
 msgstr "Registrering via replikering mislukkast"
@@ -1141,10 +1162,6 @@ msgstr "Tilbakestill"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Tilbakestill alle innstillingar til standardverdiar"
-
-#: src/routes/replicating.tsx:219
-msgid "Retrying {failed} item(s)"
-msgstr "Prøver på nytt {failed} element"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1292,7 +1309,7 @@ msgstr "Hopp til hovudinnhald"
 msgid "Small"
 msgstr ""
 
-#: src/routes/replicating.tsx:160
+#: src/routes/replicating.tsx:163
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Nokre overføringar vart ikkje fullførte ved første forsøk. Dei vil automatisk verte prøvde på nytt."
 
@@ -1306,11 +1323,10 @@ msgstr ""
 
 #: src/features/auth/mfa/index.tsx:304
 #: src/features/auth/recovery/index.tsx:138
-#: src/features/auth/sign-in/components/user-auth-form.tsx:483
 msgid "Start again"
 msgstr "Start på nytt"
 
-#: src/routes/replicating.tsx:223
+#: src/routes/replicating.tsx:241
 msgid "Starting…"
 msgstr "Startar…"
 
@@ -1338,7 +1354,7 @@ msgstr "Logga inn med gjenopprettingskode"
 msgid "Sunday"
 msgstr "Sundag"
 
-#: src/routes/replicating.tsx:118
+#: src/routes/replicating.tsx:119
 msgid "Syncing your data"
 msgstr "Synkroniserer dine data"
 
@@ -1535,7 +1551,7 @@ msgstr "Vis alle varsel"
 msgid "View source code"
 msgstr "Vis kjeldekode"
 
-#: src/routes/replicating.tsx:120
+#: src/routes/replicating.tsx:121
 msgid "Waiting for approval"
 msgstr "Ventar på godkjenning"
 
@@ -1546,14 +1562,6 @@ msgstr "Me er snart tilbake."
 #: src/features/landing/landing-page.tsx:399
 msgid "We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use."
 msgstr "Me leitar etter tidlege brukarar som er villige til å prøve Mochi og gje ærleg tilbakemelding. Det er versjon 0.3 og har nokre feil, men er klar for dagleg bruk."
-
-#: src/routes/replicating.tsx:129
-msgid "We've sent a replication request for <0>{source_user}</0>. Approve it on the source server's settings page to complete sign-up."
-msgstr "Vi har sendt ein replikeringsførespurnad for <0>{source_user}</0>. Godkjenn han på innstillingssida til kjeldetenaren for å fullføra registreringa."
-
-#: src/routes/replicating.tsx:133
-msgid "We've sent a replication request to the source server. Approve it on the source server's settings page to complete sign-up."
-msgstr "Vi har sendt ein replikeringsførespurnad til kjeldetenaren. Godkjenn han på innstillingssida til kjeldetenaren for å fullføra registreringa."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:10
 msgid "Website is under maintenance!"
@@ -1586,9 +1594,9 @@ msgstr "Kontoen din er suspendert."
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Kontoen din er allereie replikert hit. Logg inn i staden."
 
-#: src/routes/replicating.tsx:125
-msgid "Your account is being copied from the source server. We'll bring you to the dashboard once everything has arrived — don't close this tab."
-msgstr "Kontoen din vert kopiert frå kjeldeserveren. Vi tek deg til dashbordet når alt er komme — ikkje lukk denne fana."
+#: src/routes/replicating.tsx:126
+msgid "Your account is being copied from the source server. Do not close this window."
+msgstr "Kontoen din vert kopiert frå kjeldetenaren. Ikkje lukk dette vindauget."
 
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
