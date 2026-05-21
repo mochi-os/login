@@ -13,6 +13,7 @@ import {
   getErrorMessage,
 } from '@mochi/web'
 import { UserAuthForm } from '@/features/auth/sign-in/components/user-auth-form'
+import { ReplicateAdvanced } from '@/features/auth/sign-in/components/replicate-advanced'
 import {
   FacebookIcon,
   GoogleIcon,
@@ -138,6 +139,8 @@ export function LandingPage() {
   const [oauthLoading, setOauthLoading] = useState<OAuthProvider | null>(null)
   const [isPasskeyLoading, setIsPasskeyLoading] = useState(false)
   const [oauthError, setOauthError] = useState<string | null>(null)
+  const [replicateSourceUsername, setReplicateSourceUsername] = useState('')
+  const [replicateSourcePeer, setReplicateSourcePeer] = useState('')
 
   useEffect(() => {
     if (redirect || reauth) setDialogOpen(true)
@@ -162,6 +165,24 @@ export function LandingPage() {
     window.history.replaceState({}, '', next + window.location.hash)
     setDialogOpen(true)
   }, [])
+
+  // Surface the per-user replicate-signup denial / expiry bounce
+  // from /login/replicating: the page detected a 401 on /_/identity
+  // (placeholder deleted) and redirected here with ?replicate=denied.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    if (params.get('replicate') !== 'denied') return
+    toast.error(t`Replication request denied`, {
+      description: t`The source server did not approve the request, or it expired. Try again or sign up locally.`,
+    })
+    params.delete('replicate')
+    const qs = params.toString()
+    const next = qs
+      ? `${window.location.pathname}?${qs}`
+      : window.location.pathname
+    window.history.replaceState({}, '', next + window.location.hash)
+    setDialogOpen(true)
+  }, [t])
 
   useEffect(() => {
     authApi.getMethods().then((methods) => {
@@ -435,6 +456,8 @@ export function LandingPage() {
             setStep={setStep}
             onPasskeyLogin={handlePasskeyLogin}
             disabled={oauthLoading !== null || isPasskeyLoading}
+            replicateSourceUsername={replicateSourceUsername}
+            replicateSourcePeer={replicateSourcePeer}
           />
           {(passkeyEnabled || enabledOauth.size > 0) && step === 'email' && (
             <>
@@ -484,6 +507,15 @@ export function LandingPage() {
                   </Button>
                 ))}
             </>
+          )}
+          {step === 'email' && (
+            <ReplicateAdvanced
+              username={replicateSourceUsername}
+              onUsernameChange={setReplicateSourceUsername}
+              peer={replicateSourcePeer}
+              onPeerChange={setReplicateSourcePeer}
+              disabled={oauthLoading !== null || isPasskeyLoading}
+            />
           )}
           <p className="text-center text-xs text-muted-foreground space-x-2 pt-2">
             <a href="/login/rules" className="hover:text-foreground transition-colors">

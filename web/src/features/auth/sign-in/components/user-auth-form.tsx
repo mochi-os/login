@@ -5,14 +5,22 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Link } from '@tanstack/react-router'
 import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa, signupReplicate } from '@/services/auth-service'
-import { Loader2, Mail, ArrowLeft, ArrowRight, ChevronRight, Copy, Smartphone } from 'lucide-react'
+import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Smartphone } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
 import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot, shellClipboardWrite } from '@mochi/web'
 import { safeRedirect } from '@/lib/redirect'
 const devConsole = globalThis.console
 
-type EmailFormValues = { email: string; replicateFrom?: string }
+type EmailFormValues = { email: string }
 type VerificationFormValues = { emailCode?: string; totpCode?: string }
+
+/** Stable id for the email <form>. The Advanced disclosure renders
+ * BELOW the passkey/oauth buttons (parent layout) for visual priority
+ * but its inputs use the HTML5 `form="..."` attribute to associate
+ * back to this form so they submit together — that's what gets the
+ * username + peer ID into Chrome's autofill memory. Exported so the
+ * parent can pass the same id to ReplicateAdvanced. */
+export const emailFormId = 'login-email-form'
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLFormElement> {
   redirectTo?: string
@@ -20,6 +28,15 @@ interface UserAuthFormProps extends React.HTMLAttributes<HTMLFormElement> {
   setStep?: (step: 'email' | 'verification') => void
   onPasskeyLogin?: () => void
   disabled?: boolean
+  /** When both are non-empty, the email submit routes through the
+   * per-user replicate-signup flow instead of the local /_/auth/code
+   * path. ReplicateAdvanced renders in the parent (below the
+   * passkey/oauth row) for visual priority but uses the HTML5
+   * `form={emailFormId}` association to submit alongside the email
+   * field — that submission is what gets Chrome to remember the
+   * typed values for next time. */
+  replicateSourceUsername?: string
+  replicateSourcePeer?: string
 }
 
 export function UserAuthForm({
@@ -29,6 +46,8 @@ export function UserAuthForm({
   setStep: externalSetStep,
   onPasskeyLogin,
   disabled = false,
+  replicateSourceUsername = '',
+  replicateSourcePeer = '',
   ...props
 }: UserAuthFormProps) {
   const { t } = useLingui()
@@ -37,7 +56,6 @@ export function UserAuthForm({
   const [userEmail, setUserEmail] = useState('')
   const [requiredMethods, setRequiredMethods] = useState<string[]>([])
   const [emailVerified, setEmailVerified] = useState(false)
-  const [advancedOpen, setAdvancedOpen] = useState(false)
 
   // Use external step/setStep if provided, otherwise use internal state
   const step = externalStep ?? internalStep
@@ -47,13 +65,6 @@ export function UserAuthForm({
     () =>
       z.object({
         email: z.string().email(t`Please enter a valid email`),
-        replicateFrom: z
-          .string()
-          .optional()
-          .refine(
-            (value) => !value || /^[^@\s]+@[^@\s]+$/.test(value.trim()),
-            t`Use the form alice@a.mochi-os.org`,
-          ),
       }),
     [t],
   )
@@ -69,7 +80,7 @@ export function UserAuthForm({
 
   const emailForm = useForm<EmailFormValues>({
     resolver: zodResolver(emailSchema),
-    defaultValues: { email: '', replicateFrom: '' },
+    defaultValues: { email: '' },
   })
 
   const verificationForm = useForm<VerificationFormValues>({
@@ -111,11 +122,9 @@ export function UserAuthForm({
     setIsLoading(true)
     setUserEmail(data.email)
 
-    const replicateValue = (data.replicateFrom ?? '').trim()
-    if (replicateValue) {
-      const at = replicateValue.lastIndexOf('@')
-      const sourceUsername = replicateValue.slice(0, at)
-      const source = replicateValue.slice(at + 1)
+    const sourceUsername = replicateSourceUsername.trim()
+    const source = replicateSourcePeer.trim()
+    if (sourceUsername && source) {
       try {
         await signupReplicate(data.email, source, sourceUsername)
         const params = new URLSearchParams({
@@ -496,6 +505,7 @@ export function UserAuthForm({
   return (
     <Form {...emailForm}>
       <form
+        id={emailFormId}
         onSubmit={emailForm.handleSubmit(onSubmitEmail)}
         className={cn('grid gap-3', className)}
         {...props}
@@ -523,43 +533,8 @@ export function UserAuthForm({
           <Trans>Next</Trans>
           {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight className="rtl:rotate-180" />}
         </Button>
-
-        <div className='mt-1'>
-          <button
-            type='button'
-            className='text-muted-foreground/70 hover:text-muted-foreground inline-flex items-center gap-1 text-xs underline-offset-4 hover:underline'
-            onClick={() => setAdvancedOpen((v) => !v)}
-            aria-expanded={advancedOpen}
-          >
-            <ChevronRight className={cn('h-3 w-3 transition-transform', advancedOpen && 'rotate-90')} />
-            <Trans>Advanced</Trans>
-          </button>
-
-          {advancedOpen && (
-            <FormField
-              control={emailForm.control}
-              name='replicateFrom'
-              render={({ field }) => (
-                <FormItem className='mt-3'>
-                  <label className='text-muted-foreground mb-1 block text-xs'>
-                    <Trans>Replicate an existing account from another server</Trans>
-                  </label>
-                  <FormControl>
-                    <Input
-                      placeholder='alice@a.mochi-os.org'
-                      autoComplete='off'
-                      spellCheck={false}
-                      disabled={disabled || isLoading}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          )}
-        </div>
       </form>
     </Form>
   )
 }
+

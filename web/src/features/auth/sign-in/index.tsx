@@ -5,6 +5,7 @@ import { Key, Loader2 } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, toast, getErrorMessage, Button } from '@mochi/web'
 import { AuthLayout } from '../auth-layout'
 import { UserAuthForm } from './components/user-auth-form'
+import { ReplicateAdvanced } from './components/replicate-advanced'
 import { passkeyLogin } from '@/services/auth-service'
 import { safeRedirect } from '@/lib/redirect'
 import { authApi } from '@/api/auth'
@@ -16,6 +17,8 @@ export function SignIn() {
   const [step, setStep] = useState<'email' | 'verification'>('email')
   const [passkeyEnabled, setPasskeyEnabled] = useState(false)
   const [isPasskeyLoading, setIsPasskeyLoading] = useState(false)
+  const [replicateSourceUsername, setReplicateSourceUsername] = useState('')
+  const [replicateSourcePeer, setReplicateSourcePeer] = useState('')
 
   useEffect(() => {
     authApi.getMethods().then((methods) => {
@@ -72,6 +75,8 @@ export function SignIn() {
             step={step}
             setStep={setStep}
             onPasskeyLogin={handlePasskeyLogin}
+            replicateSourceUsername={replicateSourceUsername}
+            replicateSourcePeer={replicateSourcePeer}
           />
           {passkeyEnabled && step === 'email' && (
             <>
@@ -99,6 +104,15 @@ export function SignIn() {
                 )}
               </Button>
             </>
+          )}
+          {step === 'email' && (
+            <ReplicateAdvanced
+              username={replicateSourceUsername}
+              onUsernameChange={setReplicateSourceUsername}
+              peer={replicateSourcePeer}
+              onPeerChange={setReplicateSourcePeer}
+              disabled={isPasskeyLoading}
+            />
           )}
         </CardContent>
       </Card>
