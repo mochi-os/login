@@ -295,9 +295,6 @@ export function LandingPage() {
           <p className="text-lg text-[#6B6B80] dark:text-muted-foreground max-w-[560px] mx-auto mb-4 leading-relaxed">
             <Trans>Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps.</Trans>
           </p>
-          <p className="text-lg text-[#6B6B80] dark:text-muted-foreground max-w-[560px] mx-auto mb-4 leading-relaxed">
-            <Trans>Mochi is currently version 0.3. It's ready for day-to-day use if you're moderately technical, and tolerant of bugs. If you're a developer, it's also ready for you to create apps as long as you don't mind a few API changes.</Trans>
-          </p>
         </div>
       </section>
 
@@ -395,10 +392,7 @@ export function LandingPage() {
             <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold mb-3 relative">
               <Trans>Ready to try Mochi?</Trans>
             </h2>
-            <p className="opacity-90 text-[1.05rem] max-w-[500px] mx-auto mb-8 leading-relaxed relative">
-              <Trans>We're looking for early adopters who are willing to give Mochi a try and give honest feedback. It's version 0.3 so has some bugs, but is ready for day-to-day use.</Trans>
-            </p>
-            <div className="flex gap-4 justify-center flex-wrap relative">
+            <div className="flex gap-4 justify-center flex-wrap relative mt-8">
               <button
                 onClick={openDialog}
                 className="inline-flex items-center px-6 py-2.5 rounded-[20px] bg-white text-[#6C5CE7] font-bold text-[0.95rem] hover:bg-white/90 transition-all cursor-pointer border-none"
