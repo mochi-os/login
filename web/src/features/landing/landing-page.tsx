@@ -13,7 +13,7 @@ import {
   getErrorMessage,
 } from '@mochi/web'
 import { UserAuthForm } from '@/features/auth/sign-in/components/user-auth-form'
-import { ReplicateAdvanced } from '@/features/auth/sign-in/components/replicate-advanced'
+import { AccountSourceAdvanced, type AccountSource } from '@/features/auth/sign-in/components/account-source-advanced'
 import {
   FacebookIcon,
   GoogleIcon,
@@ -139,8 +139,11 @@ export function LandingPage() {
   const [oauthLoading, setOauthLoading] = useState<OAuthProvider | null>(null)
   const [isPasskeyLoading, setIsPasskeyLoading] = useState(false)
   const [oauthError, setOauthError] = useState<string | null>(null)
+  const [accountSource, setAccountSource] = useState<AccountSource>('none')
   const [replicateSourceUsername, setReplicateSourceUsername] = useState('')
   const [replicateSourcePeer, setReplicateSourcePeer] = useState('')
+  const [restoreBundle, setRestoreBundle] = useState<File | null>(null)
+  const [restorePassphrase, setRestorePassphrase] = useState('')
 
   useEffect(() => {
     if (redirect || reauth) setDialogOpen(true)
@@ -214,6 +217,9 @@ export function LandingPage() {
     if (!open) {
       setStep('email')
       setOauthError(null)
+      setAccountSource('none')
+      setRestoreBundle(null)
+      setRestorePassphrase('')
     }
   }
 
@@ -450,8 +456,10 @@ export function LandingPage() {
             setStep={setStep}
             onPasskeyLogin={handlePasskeyLogin}
             disabled={oauthLoading !== null || isPasskeyLoading}
-            replicateSourceUsername={replicateSourceUsername}
-            replicateSourcePeer={replicateSourcePeer}
+            replicateSourceUsername={accountSource === 'replicate' ? replicateSourceUsername : ''}
+            replicateSourcePeer={accountSource === 'replicate' ? replicateSourcePeer : ''}
+            restoreBundle={accountSource === 'restore' ? restoreBundle : null}
+            restorePassphrase={accountSource === 'restore' ? restorePassphrase : ''}
           />
           {(passkeyEnabled || enabledOauth.size > 0) && step === 'email' && (
             <>
@@ -503,11 +511,17 @@ export function LandingPage() {
             </>
           )}
           {step === 'email' && (
-            <ReplicateAdvanced
-              username={replicateSourceUsername}
-              onUsernameChange={setReplicateSourceUsername}
-              peer={replicateSourcePeer}
-              onPeerChange={setReplicateSourcePeer}
+            <AccountSourceAdvanced
+              source={accountSource}
+              onSourceChange={setAccountSource}
+              replicateUsername={replicateSourceUsername}
+              onReplicateUsernameChange={setReplicateSourceUsername}
+              replicatePeer={replicateSourcePeer}
+              onReplicatePeerChange={setReplicateSourcePeer}
+              restoreBundle={restoreBundle}
+              onRestoreBundleChange={setRestoreBundle}
+              restorePassphrase={restorePassphrase}
+              onRestorePassphraseChange={setRestorePassphrase}
               disabled={oauthLoading !== null || isPasskeyLoading}
             />
           )}

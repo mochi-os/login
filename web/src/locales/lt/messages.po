@@ -53,7 +53,8 @@ msgstr "Prieigos lygis"
 msgid "Account added"
 msgstr "Paskyra pridėta"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Paskyra jau yra šiame serveryje"
 
@@ -63,7 +64,7 @@ msgstr "Paskyra pašalinta"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
+#: src/features/auth/sign-in/components/user-auth-form.tsx:407
 msgid "Account suspended"
 msgstr "Paskyra sustabdyta"
 
@@ -124,7 +125,7 @@ msgstr "Pridėti rodinį"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Koreguokite išvaizdą ir išdėstymą pagal savo pageidavimus."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:74
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:79
 msgid "Advanced"
 msgstr "Išplėstinės"
 
@@ -140,6 +141,10 @@ msgstr "Visi"
 #: src/lib/oauth-errors.ts:36
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Paskyra su tuo el. pašto adresu jau egzistuoja. Pirma prisijunkite, tada susiekite {0} iš autentifikavimo nustatymų."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+msgid "An account with this identity already exists here."
+msgstr "Čia jau egzistuoja paskyra su šia tapatybe."
 
 #: src/features/landing/landing-page.tsx:120
 msgid "App business logic"
@@ -162,12 +167,12 @@ msgid "authenticator code"
 msgstr "autentifikatoriaus kodas"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:445
+#: src/features/auth/sign-in/components/user-auth-form.tsx:499
 msgid "Authenticator code"
 msgstr "Autentifikatoriaus kodas"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:484
+#: src/features/auth/sign-in/components/user-auth-form.tsx:538
 msgid "Back"
 msgstr "Atgal"
 
@@ -177,19 +182,39 @@ msgstr "Atgal"
 msgid "Back to home"
 msgstr "Atgal į pradžią"
 
+#: src/routes/restoring.tsx:118
+msgid "Back to sign up"
+msgstr "Atgal į registraciją"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+msgid "Backup file"
+msgstr "Atsarginės kopijos failas"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+msgid "Backup file is corrupted"
+msgstr "Atsarginės kopijos failas sugadintas"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+msgid "Backup is too new"
+msgstr "Atsarginė kopija per nauja"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Padidinti susidomėjimą"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:85
+msgid "Bring an existing account onto this server:"
+msgstr "Perkelkite esamą paskyrą į šį serverį:"
 
 #: src/features/landing/landing-page.tsx:84
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Sukurkite bendradarbiavimu pagrįstą, replikuotą žinių bazę savo bendruomenei. Jūsų duomenys visada priklauso jums."
 
-#: src/features/landing/landing-page.tsx:365
+#: src/features/landing/landing-page.tsx:371
 msgid "Built on solid foundations"
 msgstr "Sukurta ant tvirtų pamatų"
 
-#: src/features/landing/landing-page.tsx:305
+#: src/features/landing/landing-page.tsx:311
 msgid "Built-in apps"
 msgstr "Įmontuotos programėlės"
 
@@ -220,15 +245,15 @@ msgstr "Pakeisti pranešimo kategoriją"
 msgid "Chat"
 msgstr "Pokalbis"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "Check the address after @ and try again."
 msgstr "Patikrinkite adresą po @ ir bandykite dar kartą."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Check the username before @ and try again."
 msgstr "Patikrinkite naudotojo vardą prieš @ ir bandykite dar kartą."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
 msgid "Check your email."
 msgstr "Patikrinkite el. paštą."
 
@@ -236,7 +261,12 @@ msgstr "Patikrinkite el. paštą."
 msgid "Checking every few seconds…"
 msgstr "Tikrinama kas kelias sekundes…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/routes/restoring.tsx:163
+msgid "Checking…"
+msgstr "Tikrinama…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "Choose a different local email or log in instead."
 msgstr "Pasirinkite kitą vietinį el. paštą arba prisijunkite vietoj to."
 
@@ -299,11 +329,11 @@ msgstr "Uždaryti skydelį"
 msgid "Close search"
 msgstr "Uždaryti paiešką"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Code copied"
 msgstr "Kodas nukopijuotas"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:194
+#: src/features/auth/sign-in/components/user-auth-form.tsx:248
 msgid "Code sent."
 msgstr "Kodas išsiųstas."
 
@@ -354,7 +384,7 @@ msgstr "Tęsti"
 msgid "Copy"
 msgstr "Kopijuoti"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:268
 msgid "Copy code"
 msgstr "Kopijuoti kodą"
 
@@ -368,15 +398,15 @@ msgstr "Nepavyko atšaukti"
 msgid "Could not load this document. Please try again later."
 msgstr "Nepavyko įkelti šio dokumento. Pabandykite dar kartą vėliau."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Could not reach the source server"
 msgstr "Nepavyko prisijungti prie šaltinio serverio"
 
-#: src/features/landing/landing-page.tsx:208
+#: src/features/landing/landing-page.tsx:211
 msgid "Could not start sign-in"
 msgstr "Nepavyko pradėti prisijungimo"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:406
 msgid "Create an account"
 msgstr "Sukurti paskyrą"
 
@@ -444,11 +474,12 @@ msgstr "Kryptis"
 msgid "Displays the mobile sidebar."
 msgstr "Rodo mobiliąją šoninę juostą."
 
-#: src/features/landing/landing-page.tsx:337
+#: src/features/landing/landing-page.tsx:343
 msgid "Distributed by design"
 msgstr "Paskirstytas iš prigimties"
 
 #: src/routes/replicating.tsx:229
+#: src/routes/restoring.tsx:54
 msgid "Done"
 msgstr "Atlikta"
 
@@ -460,11 +491,12 @@ msgstr "Atsisiųsti"
 msgid "Dyslexia-friendly"
 msgstr "Tinkama disleksijai"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:520
+#: src/features/auth/sign-in/components/user-auth-form.tsx:574
 msgid "Email"
 msgstr "El. paštas"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Email already in use"
 msgstr "El. paštas jau naudojamas"
 
@@ -473,7 +505,7 @@ msgid "email code"
 msgstr "el. pašto kodas"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:472
 msgid "Email code"
 msgstr "El. pašto kodas"
 
@@ -481,7 +513,7 @@ msgstr "El. pašto kodas"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Įveskite atkūrimo kodą, kad prisijungtumėte kaip „{userEmail}“"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:399
+#: src/features/auth/sign-in/components/user-auth-form.tsx:453
 msgid "Enter the code from your authenticator app"
 msgstr "Įveskite kodą iš autentifikatoriaus programėlės"
 
@@ -494,11 +526,11 @@ msgstr "Įveskite savo {0}"
 msgid "Enter your {initial} and {last}"
 msgstr "Įveskite savo {initial} ir {last}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:389
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Enter your email code and authenticator code"
 msgstr "Įveskite el. pašto kodą ir autentifikatoriaus kodą"
 
-#: src/features/landing/landing-page.tsx:308
+#: src/features/landing/landing-page.tsx:314
 msgid "Everything you need, nothing you don't control"
 msgstr "Viskas, ko jums reikia, niekas, ko nekontroliuojate"
 
@@ -510,15 +542,19 @@ msgstr "Išskleisti šoninę juostą"
 msgid "Extra large"
 msgstr "Labai didelis"
 
+#: src/routes/restoring.tsx:55
+msgid "Failed"
+msgstr "Nepavyko"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "Nepavyko pridėti paskyros"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:288
 msgid "Failed to continue"
 msgstr "Nepavyko tęsti"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:263
 msgid "Failed to copy code"
 msgstr "Nepavyko nukopijuoti kodo"
 
@@ -554,6 +590,10 @@ msgstr "Failai"
 msgid "Finish setting up your account"
 msgstr "Užbaikite paskyros nustatymą"
 
+#: src/routes/restoring.tsx:53
+msgid "Finishing up"
+msgstr "Baigiama"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
 msgstr "Plaukiojantis"
@@ -569,6 +609,14 @@ msgstr "Penktadienis"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Nuo"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "From a backup file (restore)"
+msgstr "Iš atsarginės kopijos failo (atkūrimas)"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "From another running server (replicate)"
+msgstr "Iš kito veikiančio serverio (replikacija)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -627,7 +675,7 @@ msgstr "Pradžia"
 msgid "Hot"
 msgstr "Karšta"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:340
 msgid "How it works"
 msgstr "Kaip tai veikia"
 
@@ -647,7 +695,7 @@ msgstr "Įterptas"
 msgid "Interests"
 msgstr "Pomėgiai"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Invalid authenticator code"
 msgstr "Netinkamas autentifikatoriaus kodas"
 
@@ -656,11 +704,11 @@ msgstr "Netinkamas autentifikatoriaus kodas"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
-#: src/features/auth/sign-in/components/user-auth-form.tsx:361
+#: src/features/auth/sign-in/components/user-auth-form.tsx:338
+#: src/features/auth/sign-in/components/user-auth-form.tsx:346
+#: src/features/auth/sign-in/components/user-auth-form.tsx:375
+#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Invalid code"
 msgstr "Netinkamas kodas"
 
@@ -670,7 +718,7 @@ msgid "Invalid recovery code"
 msgstr "Netinkamas atkūrimo kodas"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:344
+#: src/features/auth/sign-in/components/user-auth-form.tsx:398
 msgid "Invalid verification code"
 msgstr "Netinkamas patvirtinimo kodas"
 
@@ -700,6 +748,10 @@ msgstr "Iš kairės į dešinę"
 msgid "Light"
 msgstr "Šviesi"
 
+#: src/routes/restoring.tsx:52
+msgid "Linking your identity"
+msgstr "Susiejama jūsų tapatybė"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
 msgid "Load more"
 msgstr "Įkelti daugiau"
@@ -712,23 +764,23 @@ msgstr "Įkeliama…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:473
+#: src/features/auth/sign-in/components/user-auth-form.tsx:527
 msgid "Log in"
 msgstr "Prisijungti"
 
-#: src/features/landing/landing-page.tsx:439
+#: src/features/landing/landing-page.tsx:445
 msgid "Log in to Mochi"
 msgstr "Prisijungti prie Mochi"
 
-#: src/features/landing/landing-page.tsx:491
+#: src/features/landing/landing-page.tsx:499
 msgid "Log in with {label}"
 msgstr "Prisijungti naudojant {label}"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:104
 msgid "Log in with passkey"
 msgstr "Prisijungti slapatrakčiu"
 
-#: src/features/auth/sign-in/index.tsx:68
+#: src/features/auth/sign-in/index.tsx:71
 msgid "Log in with your email address"
 msgstr "Prisijungti el. pašto adresu"
 
@@ -743,8 +795,8 @@ msgid "Log out"
 msgstr "Atsijungti"
 
 #: src/features/auth/recovery/index.tsx:39
-#: src/features/auth/sign-in/index.tsx:38
-#: src/features/landing/landing-page.tsx:231
+#: src/features/auth/sign-in/index.tsx:41
+#: src/features/landing/landing-page.tsx:237
 msgid "Logged in"
 msgstr "Prisijungta"
 
@@ -765,7 +817,7 @@ msgid "Login session expired, please try again"
 msgstr "Prisijungimo seansas baigėsi, bandykite dar kartą"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:495
+#: src/features/auth/sign-in/components/user-auth-form.tsx:549
 msgid "Lost access? Use a recovery code"
 msgstr "Praradote prieigą? Naudokite atkūrimo kodą"
 
@@ -794,15 +846,15 @@ msgstr "Bendraukite su draugais individualiai arba grupėse, tarpusavyje ir už�
 msgid "Metric"
 msgstr "Metrinė"
 
-#: src/features/landing/landing-page.tsx:311
+#: src/features/landing/landing-page.tsx:317
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi jau yra daugiau nei 20 programėlių, ir nuolat pridedamos naujos. Pagrindinės programėlės:"
 
-#: src/features/landing/landing-page.tsx:296
+#: src/features/landing/landing-page.tsx:302
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi yra federacinė, daugelio naudotojų platforma paskirstytoms programėlėms. Bet kas gali paleisti savo serverį ir prisijungti prie bet kurio kito naudotojo Mochi tinkle. Bet kas gali kurti ir publikuoti programėles."
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:374
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi sukurta naudojant šias technologijas:"
 
@@ -822,13 +874,14 @@ msgstr "Naujas"
 msgid "New accounts are disabled on this server"
 msgstr "Naujos paskyros šiame serveryje yra išjungtos"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:231
-#: src/features/auth/sign-in/components/user-auth-form.tsx:358
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "New user signup is disabled."
 msgstr "Naujų vartotojų registracija išjungta."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:533
+#: src/features/auth/sign-in/components/user-auth-form.tsx:587
 msgid "Next"
 msgstr "Toliau"
 
@@ -840,7 +893,11 @@ msgstr "Kitas paveikslėlis"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Prieigos taisyklių nesukonfigūruota. Pridėkite taisykles, kad valdytumėte, kas gali pasiekti šį išteklių."
 
-#: src/features/landing/landing-page.tsx:340
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+msgid "No backup file selected"
+msgstr "Nepasirinktas atsarginės kopijos failas"
+
+#: src/features/landing/landing-page.tsx:346
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Joks centrinis serveris nelaiko jūsų duomenų. Kiekvienas Mochi mazgas yra visavertis tinklo dalyvis, tiesiogiai bendraujantis su kitais per libp2p."
 
@@ -852,7 +909,7 @@ msgstr "Nėra prijungtų paskyrų"
 msgid "No groups available"
 msgstr "Grupių nėra"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "No matching account on the source server"
 msgstr "Šaltinio serveryje nėra atitinkančios paskyros"
 
@@ -887,9 +944,17 @@ msgstr "Vartotojų nerasta"
 msgid "None"
 msgstr "Nėra"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:100
+msgid "None — create a fresh account"
+msgstr "Nė viena — sukurti naują paskyrą"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "Normalus"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Not a migration bundle"
+msgstr "Tai ne migracijos paketas"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -919,11 +984,11 @@ msgstr "Atidaryti naršymo meniu"
 msgid "Open theme settings"
 msgstr "Atidaryti temos nustatymus"
 
-#: src/features/auth/sign-in/index.tsx:89
+#: src/features/auth/sign-in/index.tsx:94
 msgid "Or"
 msgstr "Arba"
 
-#: src/features/landing/landing-page.tsx:464
+#: src/features/landing/landing-page.tsx:472
 msgid "Or log in with"
 msgstr "Arba prisijunkite su"
 
@@ -944,21 +1009,21 @@ msgid "passkey"
 msgstr "prieigos raktas"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:480
+#: src/features/landing/landing-page.tsx:488
 msgid "Passkey"
 msgstr "Slaptaraktis"
 
-#: src/features/auth/sign-in/index.tsx:53
-#: src/features/landing/landing-page.tsx:249
+#: src/features/auth/sign-in/index.tsx:56
+#: src/features/landing/landing-page.tsx:255
 msgid "Passkey login cancelled"
 msgstr "Prisijungimas slaptarakčiu atšauktas"
 
-#: src/features/auth/sign-in/index.tsx:51
-#: src/features/landing/landing-page.tsx:247
+#: src/features/auth/sign-in/index.tsx:54
+#: src/features/landing/landing-page.tsx:253
 msgid "Passkey login failed"
 msgstr "Nepavyko prisijungti slaptarakčiu"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:179
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Passkey login required"
 msgstr "Reikalingas prisijungimas slaptarakčiu"
 
@@ -966,38 +1031,42 @@ msgstr "Reikalingas prisijungimas slaptarakčiu"
 msgid "Passkey MFA not yet implemented"
 msgstr "Slaptarakčio MFA dar neįgyvendinta"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:394
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+msgid "Passphrase"
+msgstr "Slaptafrazė"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:448
 msgid "Paste the login code you received by email"
 msgstr "Įklijuokite el. paštu gautą prisijungimo kodą"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:60
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:65
 msgid "Peer IDs start with 12D3KooW and are 52 characters long"
 msgstr "Peer ID prasideda 12D3KooW ir yra 52 simbolių ilgio"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:267
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Please check your authenticator app and try again."
 msgstr "Patikrinkite savo autentifikatoriaus programą ir bandykite dar kartą."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:339
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Please check your authenticator code and try again."
 msgstr "Patikrinkite savo autentifikatoriaus kodą ir bandykite dar kartą."
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:362
+#: src/features/auth/sign-in/components/user-auth-form.tsx:416
 msgid "Please check your code and try again."
 msgstr "Patikrinkite savo kodą ir bandykite dar kartą."
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
-#: src/features/auth/sign-in/components/user-auth-form.tsx:330
+#: src/features/auth/sign-in/components/user-auth-form.tsx:376
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Please check your codes and try again."
 msgstr "Patikrinkite savo kodus ir bandykite dar kartą."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:345
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Please check your email and try again."
 msgstr "Patikrinkite savo el. paštą ir bandykite dar kartą."
 
@@ -1006,15 +1075,15 @@ msgstr "Patikrinkite savo el. paštą ir bandykite dar kartą."
 msgid "Please check your recovery code and try again."
 msgstr "Patikrinkite savo atkūrimo kodą ir bandykite dar kartą."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Please copy manually: {devCode}"
 msgstr "Nukopijuokite rankiniu būdu: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:67
+#: src/features/auth/sign-in/components/user-auth-form.tsx:72
 msgid "Please enter a valid email"
 msgstr "Įveskite galiojantį el. pašto adresą"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:251
+#: src/features/auth/sign-in/components/user-auth-form.tsx:305
 msgid "Please enter your authenticator code"
 msgstr "Įveskite savo autentifikatoriaus kodą"
 
@@ -1026,9 +1095,10 @@ msgstr "Įveskite savo vardą"
 msgid "Please enter your recovery code"
 msgstr "Įveskite savo atkūrimo kodą"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
-#: src/features/auth/sign-in/components/user-auth-form.tsx:235
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:420
 msgid "Please try again or contact support."
 msgstr "Bandykite dar kartą arba susisiekite su pagalba."
 
@@ -1036,7 +1106,7 @@ msgstr "Bandykite dar kartą arba susisiekite su pagalba."
 msgid "Please use another verification method."
 msgstr "Naudokite kitą patvirtinimo metodą."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Naudokite mygtuką „Prisijungti slaptarakčiu“."
 
@@ -1047,8 +1117,8 @@ msgstr "Ankstesnis paveikslėlis"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:24
 #: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:427
-#: src/features/landing/landing-page.tsx:524
+#: src/features/landing/landing-page.tsx:433
+#: src/features/landing/landing-page.tsx:538
 msgid "Privacy"
 msgstr "Privatumas"
 
@@ -1073,7 +1143,7 @@ msgstr "Viešas"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Skelbkite savo socialinių tinklų srautus, sekite kitus arba agreguokite kitus srautus su pasirenkamu DI žymėjimu ir rūšiavimu. Sekite, kas svarbu, filtruokite triukšmą."
 
-#: src/features/landing/landing-page.tsx:393
+#: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Pasiruošę išbandyti Mochi?"
 
@@ -1098,9 +1168,10 @@ msgstr "Peradresuojama į skydelį…"
 msgid "Reduce interest"
 msgstr "Sumažinti susidomėjimą"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:357
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:411
 msgid "Registration disabled"
 msgstr "Registracija išjungta"
 
@@ -1130,11 +1201,7 @@ msgstr "Šalinti prieigą?"
 msgid "Remove interest"
 msgstr "Šalinti susidomėjimą"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:80
-msgid "Replicate an existing account from another server"
-msgstr "Replikuoti esamą paskyrą iš kito serverio"
-
-#: src/features/landing/landing-page.tsx:175
+#: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Replikacijos užklausa atmesta"
 
@@ -1146,9 +1213,13 @@ msgstr "Replikacijos užklausa išsiųsta vartotojui <0>{source_user}</0>. Patvi
 msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
 msgstr "Replikacijos užklausa išsiųsta šaltinio serveriui. Patvirtinkite ją šaltinio serverio nustatymų puslapyje, kad užbaigtumėte replikaciją."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:213
 msgid "Replication signup failed"
 msgstr "Registracija per replikaciją nepavyko"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
+msgid "Required only if your backup includes private keys."
+msgstr "Reikalinga tik tada, jei atsarginėje kopijoje yra privačiųjų raktų."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1158,6 +1229,15 @@ msgstr "Atstatyti"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Atstatyti visus nustatymus į numatytąsias reikšmes"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:169
+#: src/routes/restoring.tsx:106
+msgid "Restore failed"
+msgstr "Atkūrimas nepavyko"
+
+#: src/routes/restoring.tsx:130
+msgid "Restoring your account"
+msgstr "Atkuriama jūsų paskyra"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1247,8 +1327,8 @@ msgstr "Serveris"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
-#: src/features/landing/landing-page.tsx:419
-#: src/features/landing/landing-page.tsx:516
+#: src/features/landing/landing-page.tsx:425
+#: src/features/landing/landing-page.tsx:530
 msgid "Server rules"
 msgstr "Serverio taisyklės"
 
@@ -1280,7 +1360,7 @@ msgstr "Šoninė juosta"
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Užsiregistruokite ir bus sukurtas jūsų pačių Mochi mazgas. Jūsų duomenys saugomi ten, o ne kažkieno serveryje."
 
-#: src/features/landing/landing-page.tsx:277
+#: src/features/landing/landing-page.tsx:283
 msgid "Sign up or log in"
 msgstr "Užsiregistruokite arba prisijunkite"
 
@@ -1309,7 +1389,7 @@ msgstr "Mažas"
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Kai kurie perdavimai nebuvo užbaigti pirmo bandymo metu. Jie bus bandomi iš naujo automatiškai."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:101
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:151
 msgid "Source server peer ID"
 msgstr "Šaltinio serverio peer ID"
 
@@ -1370,8 +1450,8 @@ msgstr "Komandos / programėlės"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:20
 #: ../../../lib/web/src/features/document/document-page.tsx:39
-#: src/features/landing/landing-page.tsx:423
-#: src/features/landing/landing-page.tsx:520
+#: src/features/landing/landing-page.tsx:429
+#: src/features/landing/landing-page.tsx:534
 msgid "Terms and conditions"
 msgstr "Sąlygos ir nuostatos"
 
@@ -1384,11 +1464,23 @@ msgstr "Ši {0} paskyra jau susieta su kitu vartotoju"
 msgid "That sign-in provider is not available"
 msgstr "Šis prisijungimo teikėjas neprieinamas"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+msgid "The file may be damaged or have been modified."
+msgstr "Failas gali būti sugadintas arba pakeistas."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+msgid "The passphrase you entered does not match the backup."
+msgstr "Įvesta slaptafrazė nesutampa su atsargine kopija."
+
 #: src/lib/oauth-errors.ts:11
 msgid "the provider"
 msgstr "teikėjas"
 
-#: src/features/landing/landing-page.tsx:176
+#: src/routes/restoring.tsx:109
+msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
+msgstr "Atkūrimas nebuvo baigtas. Atsarginės kopijos failas gali būti sugadintas, slaptafrazė gali būti neteisinga arba serveris susidūrė su klaida."
+
+#: src/features/landing/landing-page.tsx:179
 msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
 msgstr "Šaltinio serveris nepatvirtino užklausos arba ji pasibaigė. Bandykite dar kartą arba užsiregistruokite vietoje."
 
@@ -1399,6 +1491,10 @@ msgstr "Tema"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "Temos nustatymai"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+msgid "This backup was created by a newer version of Mochi. Update this server first."
+msgstr "Ši atsarginė kopija buvo sukurta naujesnės Mochi versijos. Pirmiausia atnaujinkite šį serverį."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
@@ -1473,7 +1569,7 @@ msgstr "Nepriskirta"
 msgid "Unauthorized Access"
 msgstr "Neautorizuota prieiga"
 
-#: src/features/landing/landing-page.tsx:362
+#: src/features/landing/landing-page.tsx:368
 msgid "Under the hood"
 msgstr "Po gaubtu"
 
@@ -1481,9 +1577,21 @@ msgstr "Po gaubtu"
 msgid "United States"
 msgstr "Jungtinės Valstijos"
 
+#: src/routes/restoring.tsx:51
+msgid "Unpacking your data"
+msgstr "Išpakuojami jūsų duomenys"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Nepatvirtinta"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+msgid "Upload a .zip file exported from Mochi's data export."
+msgstr "Įkelkite .zip failą, eksportuotą iš Mochi duomenų eksporto."
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
+msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
+msgstr "Įkelkite migracijos paketą (.zip), eksportuotą iš kito Mochi serverio. Serveris atkuria jūsų duomenis vietoje — joks kitas serveris neturi būti prisijungęs."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1493,7 +1601,7 @@ msgstr "Naudoti kitą paskyrą"
 msgid "Use the apps"
 msgstr "Naudoti programėles"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:50
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:55
 msgid "Use the form alice@example.com"
 msgstr "Naudokite formatą alice@example.com"
 
@@ -1501,9 +1609,13 @@ msgstr "Naudokite formatą alice@example.com"
 msgid "User"
 msgstr "Vartotojas"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:130
 msgid "Username on source server"
 msgstr "Vartotojo vardas šaltinio serveryje"
+
+#: src/routes/restoring.tsx:49
+msgid "Validating backup"
+msgstr "Atsarginė kopija tikrinama"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1514,7 +1626,7 @@ msgid "Verification code sent"
 msgstr "Patvirtinimo kodas išsiųstas"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
+#: src/features/auth/sign-in/components/user-auth-form.tsx:419
 msgid "Verification failed"
 msgstr "Patvirtinimas nepavyko"
 
@@ -1530,6 +1642,10 @@ msgstr "Patvirtinti el. pašto adresą"
 #: src/features/auth/mfa/index.tsx:284
 msgid "Verify with passkey"
 msgstr "Patvirtinti su prieigos raktu"
+
+#: src/routes/restoring.tsx:50
+msgid "Verifying backup"
+msgstr "Atsarginė kopija patikrinama"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx:63
 msgid "Video thumbnail"
@@ -1547,7 +1663,7 @@ msgstr "Peržiūrėti viską"
 msgid "View all notifications"
 msgstr "Peržiūrėti visus pranešimus"
 
-#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:414
 msgid "View source code"
 msgstr "Peržiūrėti šaltinio kodą"
 
@@ -1571,6 +1687,10 @@ msgstr "Trečiadienis"
 msgid "Wikis"
 msgstr "Wiki"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Wrong passphrase"
+msgstr "Neteisinga slaptafrazė"
+
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:38
 msgid "Your {0} email is not verified"
@@ -1582,11 +1702,11 @@ msgstr "Jūsų paskyra buvo sustabdyta"
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Your account has been suspended."
 msgstr "Jūsų paskyra buvo sustabdyta."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Jūsų paskyra jau replikuota čia. Prisijunkite vietoj to."
 
@@ -1594,17 +1714,25 @@ msgstr "Jūsų paskyra jau replikuota čia. Prisijunkite vietoj to."
 msgid "Your account is being copied from the source server. Do not close this window."
 msgstr "Jūsų paskyra kopijuojama iš pirminio serverio. Neuždarykite šio lango."
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:123
+msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
+msgstr "Jūsų paskyra nukopijuojama tiesioginiu ryšiu iš serverio, prie kurio jau turite prieigą. Šaltinio serveris turi patvirtinti prašymą prieš prasidedant perkėlimui."
+
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "Jūsų paskyrai prisijungimui reikalingas prieigos raktas"
 
-#: src/features/landing/landing-page.tsx:293
+#: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Jūsų programėlės, jūsų platforma, jūsų tinklas"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:197
+#: src/features/auth/sign-in/components/user-auth-form.tsx:251
 msgid "Your code is: {devCode}"
 msgstr "Jūsų kodas: {devCode}"
+
+#: src/routes/restoring.tsx:133
+msgid "Your data is being restored from the backup. Do not close this window."
+msgstr "Jūsų duomenys atkuriami iš atsarginės kopijos. Neuždarykite šio lango."
 
 #: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"

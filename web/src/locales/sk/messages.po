@@ -53,7 +53,8 @@ msgstr "Úroveň prístupu"
 msgid "Account added"
 msgstr "Účet pridaný"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Účet už na tomto serveri existuje"
 
@@ -63,7 +64,7 @@ msgstr "Účet odstránený"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
+#: src/features/auth/sign-in/components/user-auth-form.tsx:407
 msgid "Account suspended"
 msgstr "Účet pozastavený"
 
@@ -124,7 +125,7 @@ msgstr "Pridať zobrazenie"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Prispôsobte vzhľad a rozloženie podľa svojich preferencií."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:74
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:79
 msgid "Advanced"
 msgstr "Pokročilé"
 
@@ -140,6 +141,10 @@ msgstr "Všetko"
 #: src/lib/oauth-errors.ts:36
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Účet s týmto e-mailom už existuje. Najprv sa prihláste a potom prepojte {0} z nastavení autentifikácie."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+msgid "An account with this identity already exists here."
+msgstr "Účet s touto identitou tu už existuje."
 
 #: src/features/landing/landing-page.tsx:120
 msgid "App business logic"
@@ -162,12 +167,12 @@ msgid "authenticator code"
 msgstr "kód autentifikátora"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:445
+#: src/features/auth/sign-in/components/user-auth-form.tsx:499
 msgid "Authenticator code"
 msgstr "Autentifikačný kód"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:484
+#: src/features/auth/sign-in/components/user-auth-form.tsx:538
 msgid "Back"
 msgstr "Späť"
 
@@ -177,19 +182,39 @@ msgstr "Späť"
 msgid "Back to home"
 msgstr "Späť na úvod"
 
+#: src/routes/restoring.tsx:118
+msgid "Back to sign up"
+msgstr "Späť na registráciu"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+msgid "Backup file"
+msgstr "Súbor zálohy"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+msgid "Backup file is corrupted"
+msgstr "Súbor zálohy je poškodený"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+msgid "Backup is too new"
+msgstr "Záloha je príliš nová"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Zvýšiť záujem"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:85
+msgid "Bring an existing account onto this server:"
+msgstr "Preneste existujúci účet na tento server:"
 
 #: src/features/landing/landing-page.tsx:84
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Vybudujte spoločnú, replikovanú vedomostnú bázu pre svoju komunitu. Vaše dáta sú vždy vaše."
 
-#: src/features/landing/landing-page.tsx:365
+#: src/features/landing/landing-page.tsx:371
 msgid "Built on solid foundations"
 msgstr "Postavené na pevných základoch"
 
-#: src/features/landing/landing-page.tsx:305
+#: src/features/landing/landing-page.tsx:311
 msgid "Built-in apps"
 msgstr "Zabudované aplikácie"
 
@@ -220,15 +245,15 @@ msgstr "Zmeniť kategóriu notifikácie"
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "Check the address after @ and try again."
 msgstr "Skontrolujte adresu za @ a skúste znova."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Check the username before @ and try again."
 msgstr "Skontrolujte používateľské meno pred @ a skúste znova."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
 msgid "Check your email."
 msgstr "Skontrolujte si e-mail."
 
@@ -236,7 +261,12 @@ msgstr "Skontrolujte si e-mail."
 msgid "Checking every few seconds…"
 msgstr "Kontroluje sa každých pár sekúnd…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/routes/restoring.tsx:163
+msgid "Checking…"
+msgstr "Prebieha kontrola…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "Choose a different local email or log in instead."
 msgstr "Vyberte iný lokálny e-mail alebo sa namiesto toho prihláste."
 
@@ -299,11 +329,11 @@ msgstr "Zavrieť panel"
 msgid "Close search"
 msgstr "Zavrieť vyhľadávanie"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Code copied"
 msgstr "Kód skopírovaný"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:194
+#: src/features/auth/sign-in/components/user-auth-form.tsx:248
 msgid "Code sent."
 msgstr "Kód odoslaný."
 
@@ -354,7 +384,7 @@ msgstr "Pokračovať"
 msgid "Copy"
 msgstr "Kopírovať"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:268
 msgid "Copy code"
 msgstr "Kopírovať kód"
 
@@ -368,15 +398,15 @@ msgstr "Nepodarilo sa zrušiť"
 msgid "Could not load this document. Please try again later."
 msgstr "Tento dokument sa nepodarilo načítať. Skúste to neskôr."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Could not reach the source server"
 msgstr "Nepodarilo sa pripojiť k zdrojovému serveru"
 
-#: src/features/landing/landing-page.tsx:208
+#: src/features/landing/landing-page.tsx:211
 msgid "Could not start sign-in"
 msgstr "Nepodarilo sa spustiť prihlásenie"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:406
 msgid "Create an account"
 msgstr "Vytvoriť účet"
 
@@ -444,11 +474,12 @@ msgstr "Smer"
 msgid "Displays the mobile sidebar."
 msgstr "Zobrazí mobilný bočný panel."
 
-#: src/features/landing/landing-page.tsx:337
+#: src/features/landing/landing-page.tsx:343
 msgid "Distributed by design"
 msgstr "Distribuované od základu"
 
 #: src/routes/replicating.tsx:229
+#: src/routes/restoring.tsx:54
 msgid "Done"
 msgstr "Hotovo"
 
@@ -460,11 +491,12 @@ msgstr "Stiahnuť"
 msgid "Dyslexia-friendly"
 msgstr "Vhodné pre dyslexiu"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:520
+#: src/features/auth/sign-in/components/user-auth-form.tsx:574
 msgid "Email"
 msgstr "E-mail"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Email already in use"
 msgstr "E-mail sa už používa"
 
@@ -473,7 +505,7 @@ msgid "email code"
 msgstr "e-mailový kód"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:472
 msgid "Email code"
 msgstr "E-mailový kód"
 
@@ -481,7 +513,7 @@ msgstr "E-mailový kód"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Pre prihlásenie zadajte obnovovací kód pre „{userEmail}“"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:399
+#: src/features/auth/sign-in/components/user-auth-form.tsx:453
 msgid "Enter the code from your authenticator app"
 msgstr "Zadajte kód z vašej autentifikačnej aplikácie"
 
@@ -494,11 +526,11 @@ msgstr "Zadajte vaše {0}"
 msgid "Enter your {initial} and {last}"
 msgstr "Zadajte vaše {initial} a {last}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:389
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Enter your email code and authenticator code"
 msgstr "Zadajte e-mailový a autentifikačný kód"
 
-#: src/features/landing/landing-page.tsx:308
+#: src/features/landing/landing-page.tsx:314
 msgid "Everything you need, nothing you don't control"
 msgstr "Všetko, čo potrebujete, nič, čo neovládate"
 
@@ -510,15 +542,19 @@ msgstr "Rozbaliť bočný panel"
 msgid "Extra large"
 msgstr "Veľmi veľké"
 
+#: src/routes/restoring.tsx:55
+msgid "Failed"
+msgstr "Zlyhalo"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "Nepodarilo sa pridať účet"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:288
 msgid "Failed to continue"
 msgstr "Nepodarilo sa pokračovať"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:263
 msgid "Failed to copy code"
 msgstr "Nepodarilo sa skopírovať kód"
 
@@ -554,6 +590,10 @@ msgstr "Súbory"
 msgid "Finish setting up your account"
 msgstr "Dokončite nastavenie vášho účtu"
 
+#: src/routes/restoring.tsx:53
+msgid "Finishing up"
+msgstr "Dokončovanie"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
 msgstr "Plávajúce"
@@ -569,6 +609,14 @@ msgstr "Piatok"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Od"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "From a backup file (restore)"
+msgstr "Zo súboru zálohy (obnovenie)"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "From another running server (replicate)"
+msgstr "Z iného bežiaceho servera (replikácia)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -627,7 +675,7 @@ msgstr "Domov"
 msgid "Hot"
 msgstr "Populárne"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:340
 msgid "How it works"
 msgstr "Ako to funguje"
 
@@ -647,7 +695,7 @@ msgstr "Vsadené"
 msgid "Interests"
 msgstr "Záujmy"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Invalid authenticator code"
 msgstr "Neplatný autentifikačný kód"
 
@@ -656,11 +704,11 @@ msgstr "Neplatný autentifikačný kód"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
-#: src/features/auth/sign-in/components/user-auth-form.tsx:361
+#: src/features/auth/sign-in/components/user-auth-form.tsx:338
+#: src/features/auth/sign-in/components/user-auth-form.tsx:346
+#: src/features/auth/sign-in/components/user-auth-form.tsx:375
+#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Invalid code"
 msgstr "Neplatný kód"
 
@@ -670,7 +718,7 @@ msgid "Invalid recovery code"
 msgstr "Neplatný obnovovací kód"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:344
+#: src/features/auth/sign-in/components/user-auth-form.tsx:398
 msgid "Invalid verification code"
 msgstr "Neplatný overovací kód"
 
@@ -700,6 +748,10 @@ msgstr "Zľava doprava"
 msgid "Light"
 msgstr "Svetlý"
 
+#: src/routes/restoring.tsx:52
+msgid "Linking your identity"
+msgstr "Prepájanie vašej identity"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
 msgid "Load more"
 msgstr "Načítať viac"
@@ -712,23 +764,23 @@ msgstr "Načítava sa…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:473
+#: src/features/auth/sign-in/components/user-auth-form.tsx:527
 msgid "Log in"
 msgstr "Prihlásiť sa"
 
-#: src/features/landing/landing-page.tsx:439
+#: src/features/landing/landing-page.tsx:445
 msgid "Log in to Mochi"
 msgstr "Prihláste sa do Mochi"
 
-#: src/features/landing/landing-page.tsx:491
+#: src/features/landing/landing-page.tsx:499
 msgid "Log in with {label}"
 msgstr "Prihlásiť sa pomocou {label}"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:104
 msgid "Log in with passkey"
 msgstr "Prihlásiť sa pomocou prístupového kľúča"
 
-#: src/features/auth/sign-in/index.tsx:68
+#: src/features/auth/sign-in/index.tsx:71
 msgid "Log in with your email address"
 msgstr "Prihláste sa pomocou e-mailovej adresy"
 
@@ -743,8 +795,8 @@ msgid "Log out"
 msgstr "Odhlásiť sa"
 
 #: src/features/auth/recovery/index.tsx:39
-#: src/features/auth/sign-in/index.tsx:38
-#: src/features/landing/landing-page.tsx:231
+#: src/features/auth/sign-in/index.tsx:41
+#: src/features/landing/landing-page.tsx:237
 msgid "Logged in"
 msgstr "Prihlásené"
 
@@ -765,7 +817,7 @@ msgid "Login session expired, please try again"
 msgstr "Platnosť prihlasovacej relácie vypršala, skúste to znova"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:495
+#: src/features/auth/sign-in/components/user-auth-form.tsx:549
 msgid "Lost access? Use a recovery code"
 msgstr "Stratili ste prístup? Použite obnovovací kód"
 
@@ -794,15 +846,15 @@ msgstr "Píšte priateľom, jednotlivo alebo v skupinách, peer-to-peer a šifro
 msgid "Metric"
 msgstr "Metrické"
 
-#: src/features/landing/landing-page.tsx:311
+#: src/features/landing/landing-page.tsx:317
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi už obsahuje viac ako 20 aplikácií, pričom sa pravidelne pridávajú ďalšie. Medzi hlavné aplikácie patria:"
 
-#: src/features/landing/landing-page.tsx:296
+#: src/features/landing/landing-page.tsx:302
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi je federovaná, viacpoužívateľská platforma pre distribuované aplikácie. Ktokoľvek si môže prevádzkovať vlastný server a pripojiť sa k inému používateľovi v sieti Mochi. Ktokoľvek môže vytvárať a publikovať aplikácie."
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:374
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi je postavené na týchto technológiách:"
 
@@ -822,13 +874,14 @@ msgstr "Nový"
 msgid "New accounts are disabled on this server"
 msgstr "Nové účty sú na tomto serveri zakázané"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:231
-#: src/features/auth/sign-in/components/user-auth-form.tsx:358
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "New user signup is disabled."
 msgstr "Registrácia nových používateľov je zakázaná."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:533
+#: src/features/auth/sign-in/components/user-auth-form.tsx:587
 msgid "Next"
 msgstr "Ďalej"
 
@@ -840,7 +893,11 @@ msgstr "Ďalší obrázok"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Nie sú nakonfigurované žiadne pravidlá prístupu. Pridajte pravidlá na riadenie prístupu k tomuto zdroju."
 
-#: src/features/landing/landing-page.tsx:340
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+msgid "No backup file selected"
+msgstr "Nie je vybraný žiadny súbor zálohy"
+
+#: src/features/landing/landing-page.tsx:346
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Žiadny centrálny server neuchováva vaše dáta. Každý uzol Mochi je plnohodnotný peer v sieti, ktorý komunikuje priamo s ostatnými cez libp2p."
 
@@ -852,7 +909,7 @@ msgstr "Žiadne prepojené účty"
 msgid "No groups available"
 msgstr "Nie sú dostupné žiadne skupiny"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "No matching account on the source server"
 msgstr "Na zdrojovom serveri nie je zodpovedajúci účet"
 
@@ -887,9 +944,17 @@ msgstr "Nenašli sa žiadni používatelia"
 msgid "None"
 msgstr "Žiadne"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:100
+msgid "None — create a fresh account"
+msgstr "Žiadny — vytvoriť nový účet"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "Normálne"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Not a migration bundle"
+msgstr "Nie je migračný balík"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -919,11 +984,11 @@ msgstr "Otvoriť navigačné menu"
 msgid "Open theme settings"
 msgstr "Otvoriť nastavenia témy"
 
-#: src/features/auth/sign-in/index.tsx:89
+#: src/features/auth/sign-in/index.tsx:94
 msgid "Or"
 msgstr "Alebo"
 
-#: src/features/landing/landing-page.tsx:464
+#: src/features/landing/landing-page.tsx:472
 msgid "Or log in with"
 msgstr "Alebo sa prihláste pomocou"
 
@@ -944,21 +1009,21 @@ msgid "passkey"
 msgstr "passkey"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:480
+#: src/features/landing/landing-page.tsx:488
 msgid "Passkey"
 msgstr "Prístupový kľúč"
 
-#: src/features/auth/sign-in/index.tsx:53
-#: src/features/landing/landing-page.tsx:249
+#: src/features/auth/sign-in/index.tsx:56
+#: src/features/landing/landing-page.tsx:255
 msgid "Passkey login cancelled"
 msgstr "Prihlásenie prístupovým kľúčom zrušené"
 
-#: src/features/auth/sign-in/index.tsx:51
-#: src/features/landing/landing-page.tsx:247
+#: src/features/auth/sign-in/index.tsx:54
+#: src/features/landing/landing-page.tsx:253
 msgid "Passkey login failed"
 msgstr "Prihlásenie prístupovým kľúčom zlyhalo"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:179
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Passkey login required"
 msgstr "Vyžaduje sa prihlásenie prístupovým kľúčom"
 
@@ -966,38 +1031,42 @@ msgstr "Vyžaduje sa prihlásenie prístupovým kľúčom"
 msgid "Passkey MFA not yet implemented"
 msgstr "MFA cez prístupový kľúč ešte nie je implementované"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:394
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+msgid "Passphrase"
+msgstr "Heslová fráza"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:448
 msgid "Paste the login code you received by email"
 msgstr "Vložte prihlasovací kód, ktorý ste dostali e-mailom"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:60
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:65
 msgid "Peer IDs start with 12D3KooW and are 52 characters long"
 msgstr "Peer ID začínajú reťazcom 12D3KooW a majú dĺžku 52 znakov"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:267
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Please check your authenticator app and try again."
 msgstr "Skontrolujte svoju aplikáciu autentifikátora a skúste to znova."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:339
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Please check your authenticator code and try again."
 msgstr "Skontrolujte svoj kód autentifikátora a skúste to znova."
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:362
+#: src/features/auth/sign-in/components/user-auth-form.tsx:416
 msgid "Please check your code and try again."
 msgstr "Skontrolujte svoj kód a skúste to znova."
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
-#: src/features/auth/sign-in/components/user-auth-form.tsx:330
+#: src/features/auth/sign-in/components/user-auth-form.tsx:376
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Please check your codes and try again."
 msgstr "Skontrolujte svoje kódy a skúste to znova."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:345
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Please check your email and try again."
 msgstr "Skontrolujte svoj e-mail a skúste to znova."
 
@@ -1006,15 +1075,15 @@ msgstr "Skontrolujte svoj e-mail a skúste to znova."
 msgid "Please check your recovery code and try again."
 msgstr "Skontrolujte svoj kód na obnovenie a skúste to znova."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Please copy manually: {devCode}"
 msgstr "Skopírujte ručne: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:67
+#: src/features/auth/sign-in/components/user-auth-form.tsx:72
 msgid "Please enter a valid email"
 msgstr "Zadajte platný e-mail"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:251
+#: src/features/auth/sign-in/components/user-auth-form.tsx:305
 msgid "Please enter your authenticator code"
 msgstr "Zadajte svoj kód autentifikátora"
 
@@ -1026,9 +1095,10 @@ msgstr "Zadajte svoje meno"
 msgid "Please enter your recovery code"
 msgstr "Zadajte svoj kód na obnovenie"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
-#: src/features/auth/sign-in/components/user-auth-form.tsx:235
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:420
 msgid "Please try again or contact support."
 msgstr "Skúste to znova alebo kontaktujte podporu."
 
@@ -1036,7 +1106,7 @@ msgstr "Skúste to znova alebo kontaktujte podporu."
 msgid "Please use another verification method."
 msgstr "Použite inú metódu overenia."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Použite tlačidlo „Prihlásiť sa prístupovým kľúčom“."
 
@@ -1047,8 +1117,8 @@ msgstr "Predchádzajúci obrázok"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:24
 #: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:427
-#: src/features/landing/landing-page.tsx:524
+#: src/features/landing/landing-page.tsx:433
+#: src/features/landing/landing-page.tsx:538
 msgid "Privacy"
 msgstr "Súkromie"
 
@@ -1073,7 +1143,7 @@ msgstr "Verejné"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Publikujte vlastné kanály sociálnych médií, sledujte iných alebo agregujte iné kanály s voliteľným AI značkovaním a triedením. Sledujte, čo je dôležité, filtrujte šum."
 
-#: src/features/landing/landing-page.tsx:393
+#: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Pripravení vyskúšať Mochi?"
 
@@ -1098,9 +1168,10 @@ msgstr "Presmerovávam vás na nástenku…"
 msgid "Reduce interest"
 msgstr "Znížiť záujem"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:357
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:411
 msgid "Registration disabled"
 msgstr "Registrácia zakázaná"
 
@@ -1130,11 +1201,7 @@ msgstr "Odstrániť prístup?"
 msgid "Remove interest"
 msgstr "Odstrániť záujem"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:80
-msgid "Replicate an existing account from another server"
-msgstr "Replikovať existujúci účet z iného servera"
-
-#: src/features/landing/landing-page.tsx:175
+#: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Žiadosť o replikáciu zamietnutá"
 
@@ -1146,9 +1213,13 @@ msgstr "Žiadosť o replikáciu bola odoslaná používateľovi <0>{source_user}
 msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
 msgstr "Žiadosť o replikáciu bola odoslaná zdrojovému serveru. Schvalte ju na stránke nastavení zdrojového servera na dokončenie replikácie."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:213
 msgid "Replication signup failed"
 msgstr "Registrácia replikáciou zlyhala"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
+msgid "Required only if your backup includes private keys."
+msgstr "Vyžaduje sa len ak záloha obsahuje súkromné kľúče."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1158,6 +1229,15 @@ msgstr "Obnoviť"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Obnoviť všetky nastavenia na predvolené hodnoty"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:169
+#: src/routes/restoring.tsx:106
+msgid "Restore failed"
+msgstr "Obnovenie zlyhalo"
+
+#: src/routes/restoring.tsx:130
+msgid "Restoring your account"
+msgstr "Obnova vášho účtu"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1247,8 +1327,8 @@ msgstr "Server"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
-#: src/features/landing/landing-page.tsx:419
-#: src/features/landing/landing-page.tsx:516
+#: src/features/landing/landing-page.tsx:425
+#: src/features/landing/landing-page.tsx:530
 msgid "Server rules"
 msgstr "Pravidlá servera"
 
@@ -1280,7 +1360,7 @@ msgstr "Bočný panel"
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Zaregistrujte sa a vytvorí sa váš vlastný uzol Mochi. Vaše údaje žijú tam — nie na cudzom serveri."
 
-#: src/features/landing/landing-page.tsx:277
+#: src/features/landing/landing-page.tsx:283
 msgid "Sign up or log in"
 msgstr "Registrácia alebo prihlásenie"
 
@@ -1309,7 +1389,7 @@ msgstr "Malé"
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Niektoré prenosy sa pri prvom pokuse nedokončili. Budú automaticky opakované."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:101
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:151
 msgid "Source server peer ID"
 msgstr "Peer ID zdrojového servera"
 
@@ -1370,8 +1450,8 @@ msgstr "Tímy/Aplikácie"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:20
 #: ../../../lib/web/src/features/document/document-page.tsx:39
-#: src/features/landing/landing-page.tsx:423
-#: src/features/landing/landing-page.tsx:520
+#: src/features/landing/landing-page.tsx:429
+#: src/features/landing/landing-page.tsx:534
 msgid "Terms and conditions"
 msgstr "Podmienky používania"
 
@@ -1384,11 +1464,23 @@ msgstr "Tento účet {0} je už prepojený s iným používateľom"
 msgid "That sign-in provider is not available"
 msgstr "Tento poskytovateľ prihlásenia nie je dostupný"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+msgid "The file may be damaged or have been modified."
+msgstr "Súbor môže byť poškodený alebo upravený."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+msgid "The passphrase you entered does not match the backup."
+msgstr "Zadaná heslová fráza nezodpovedá zálohe."
+
 #: src/lib/oauth-errors.ts:11
 msgid "the provider"
 msgstr "poskytovateľ"
 
-#: src/features/landing/landing-page.tsx:176
+#: src/routes/restoring.tsx:109
+msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
+msgstr "Obnovenie sa nedokončilo. Súbor zálohy môže byť poškodený, heslová fráza môže byť nesprávna alebo server narazil na chybu."
+
+#: src/features/landing/landing-page.tsx:179
 msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
 msgstr "Zdrojový server žiadosť neschválil alebo vypršala. Skúste to znova alebo sa zaregistrujte lokálne."
 
@@ -1399,6 +1491,10 @@ msgstr "Motív"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "Nastavenia motívu"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+msgid "This backup was created by a newer version of Mochi. Update this server first."
+msgstr "Táto záloha bola vytvorená novšou verziou Mochi. Najprv aktualizujte tento server."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
@@ -1473,7 +1569,7 @@ msgstr "Nepriradené"
 msgid "Unauthorized Access"
 msgstr "Neoprávnený prístup"
 
-#: src/features/landing/landing-page.tsx:362
+#: src/features/landing/landing-page.tsx:368
 msgid "Under the hood"
 msgstr "Pod kapotou"
 
@@ -1481,9 +1577,21 @@ msgstr "Pod kapotou"
 msgid "United States"
 msgstr "Spojené štáty"
 
+#: src/routes/restoring.tsx:51
+msgid "Unpacking your data"
+msgstr "Rozbaľovanie vašich dát"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Neoverené"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+msgid "Upload a .zip file exported from Mochi's data export."
+msgstr "Nahrajte súbor .zip exportovaný z exportu dát Mochi."
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
+msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
+msgstr "Nahrajte migračný balík (.zip) exportovaný z iného servera Mochi. Server obnoví vaše dáta lokálne — žiadny iný server nemusí byť online."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1493,7 +1601,7 @@ msgstr "Použiť iný účet"
 msgid "Use the apps"
 msgstr "Použiť aplikácie"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:50
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:55
 msgid "Use the form alice@example.com"
 msgstr "Použite formát alice@example.com"
 
@@ -1501,9 +1609,13 @@ msgstr "Použite formát alice@example.com"
 msgid "User"
 msgstr "Používateľ"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:130
 msgid "Username on source server"
 msgstr "Používateľské meno na zdrojovom serveri"
+
+#: src/routes/restoring.tsx:49
+msgid "Validating backup"
+msgstr "Overovanie zálohy"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1514,7 +1626,7 @@ msgid "Verification code sent"
 msgstr "Overovací kód odoslaný"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
+#: src/features/auth/sign-in/components/user-auth-form.tsx:419
 msgid "Verification failed"
 msgstr "Overenie zlyhalo"
 
@@ -1530,6 +1642,10 @@ msgstr "Overiť e-mailovú adresu"
 #: src/features/auth/mfa/index.tsx:284
 msgid "Verify with passkey"
 msgstr "Overiť pomocou passkey"
+
+#: src/routes/restoring.tsx:50
+msgid "Verifying backup"
+msgstr "Kontrola zálohy"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx:63
 msgid "Video thumbnail"
@@ -1547,7 +1663,7 @@ msgstr "Zobraziť všetko"
 msgid "View all notifications"
 msgstr "Zobraziť všetky oznámenia"
 
-#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:414
 msgid "View source code"
 msgstr "Zobraziť zdrojový kód"
 
@@ -1571,6 +1687,10 @@ msgstr "Streda"
 msgid "Wikis"
 msgstr "Wikis"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Wrong passphrase"
+msgstr "Nesprávna heslová fráza"
+
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:38
 msgid "Your {0} email is not verified"
@@ -1582,11 +1702,11 @@ msgstr "Váš účet bol pozastavený"
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Your account has been suspended."
 msgstr "Váš účet bol pozastavený."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Váš účet je už tu replikovaný. Namiesto toho sa prihláste."
 
@@ -1594,17 +1714,25 @@ msgstr "Váš účet je už tu replikovaný. Namiesto toho sa prihláste."
 msgid "Your account is being copied from the source server. Do not close this window."
 msgstr "Váš účet sa kopíruje zo zdrojového servera. Nezatvárajte toto okno."
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:123
+msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
+msgstr "Váš účet je živý kopírovaný zo servera, ku ktorému už máte prístup. Zdrojový server musí schváliť požiadavku, kým sa začne prenos."
+
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "Váš účet vyžaduje passkey na prihlásenie"
 
-#: src/features/landing/landing-page.tsx:293
+#: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Vaše aplikácie, vaša platforma, vaša sieť"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:197
+#: src/features/auth/sign-in/components/user-auth-form.tsx:251
 msgid "Your code is: {devCode}"
 msgstr "Váš kód je: {devCode}"
+
+#: src/routes/restoring.tsx:133
+msgid "Your data is being restored from the backup. Do not close this window."
+msgstr "Vaše dáta sa obnovujú zo zálohy. Nezatvárajte toto okno."
 
 #: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"

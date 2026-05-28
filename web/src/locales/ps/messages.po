@@ -53,7 +53,8 @@ msgstr "د لاسرسي کچه"
 msgid "Account added"
 msgstr "حساب اضافه شو"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "حساب لا دمخه پر دې سرور موجود دی"
 
@@ -63,7 +64,7 @@ msgstr "حساب لرې شو"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
+#: src/features/auth/sign-in/components/user-auth-form.tsx:407
 msgid "Account suspended"
 msgstr "حساب وځنډول شو"
 
@@ -124,7 +125,7 @@ msgstr "لید اضافه کړئ"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "د خپلو غوره توبونو سره سم بڼه او ترتیب تنظیم کړئ."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:74
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:79
 msgid "Advanced"
 msgstr "پرمختللی"
 
@@ -140,6 +141,10 @@ msgstr "ټول"
 #: src/lib/oauth-errors.ts:36
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "د دې بریښنالیک سره حساب دمخه شتون لري. لومړی ننوځئ، بیا د خپلو پیژندنې ترتیباتو څخه {0} لینک کړئ."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+msgid "An account with this identity already exists here."
+msgstr "د دې هویت سره یو حساب دلته دمخه شتون لري."
 
 #: src/features/landing/landing-page.tsx:120
 msgid "App business logic"
@@ -162,12 +167,12 @@ msgid "authenticator code"
 msgstr "د authenticator کوډ"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:445
+#: src/features/auth/sign-in/components/user-auth-form.tsx:499
 msgid "Authenticator code"
 msgstr "د Authenticator کوډ"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:484
+#: src/features/auth/sign-in/components/user-auth-form.tsx:538
 msgid "Back"
 msgstr "شاته"
 
@@ -177,19 +182,39 @@ msgstr "شاته"
 msgid "Back to home"
 msgstr "کور ته بېرته"
 
+#: src/routes/restoring.tsx:118
+msgid "Back to sign up"
+msgstr "د ثبت نام ته بیرته لاړ شئ"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+msgid "Backup file"
+msgstr "د بیک اپ فایل"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+msgid "Backup file is corrupted"
+msgstr "د بیک اپ فایل خراب دی"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+msgid "Backup is too new"
+msgstr "بیک اپ خورا نوی دی"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "دلچسپي ډیره کړه"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:85
+msgid "Bring an existing account onto this server:"
+msgstr "موجوده حساب دې سرور ته راوړئ:"
 
 #: src/features/landing/landing-page.tsx:84
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "د خپلې ټولنې لپاره یو ګډ، نقل شوي پوهې اساس جوړ کړئ. ستاسو ډاټا تل ستاسو ده."
 
-#: src/features/landing/landing-page.tsx:365
+#: src/features/landing/landing-page.tsx:371
 msgid "Built on solid foundations"
 msgstr "په کلکو بنسټونو جوړ شوی"
 
-#: src/features/landing/landing-page.tsx:305
+#: src/features/landing/landing-page.tsx:311
 msgid "Built-in apps"
 msgstr "جوړ شوي اپلیکیشنونه"
 
@@ -220,15 +245,15 @@ msgstr "د خبرتیا کټګورۍ بدله کړه"
 msgid "Chat"
 msgstr "چټ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "Check the address after @ and try again."
 msgstr "د @ نه وروسته پته وڅیړئ او بیا یې هڅه وکړئ."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Check the username before @ and try again."
 msgstr "د @ نه مخکې د کارن نوم وڅیړئ او بیا یې هڅه وکړئ."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
 msgid "Check your email."
 msgstr "خپل بریښنالیک وګورئ."
 
@@ -236,7 +261,12 @@ msgstr "خپل بریښنالیک وګورئ."
 msgid "Checking every few seconds…"
 msgstr "هر څو ثانیې وڅیړل کیږي…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/routes/restoring.tsx:163
+msgid "Checking…"
+msgstr "چک کول…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "Choose a different local email or log in instead."
 msgstr "بل سیمه‌ییز برېښلیک وټاکئ یا یې پر ځای ننوځئ."
 
@@ -299,11 +329,11 @@ msgstr "پټۍ بنده کړئ"
 msgid "Close search"
 msgstr "لټون وتړئ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Code copied"
 msgstr "کوډ کاپي شو"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:194
+#: src/features/auth/sign-in/components/user-auth-form.tsx:248
 msgid "Code sent."
 msgstr "کوډ ولیږل شو."
 
@@ -354,7 +384,7 @@ msgstr "دوام ورکړئ"
 msgid "Copy"
 msgstr "کاپي کړئ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:268
 msgid "Copy code"
 msgstr "کوډ کاپي کړئ"
 
@@ -368,15 +398,15 @@ msgstr "نشي لغوه کیدلی"
 msgid "Could not load this document. Please try again later."
 msgstr "دا سند نشي پورته کیدلی. مهرباني وکړئ وروسته بیا هڅه وکړئ."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Could not reach the source server"
 msgstr "د سرچینې سرور ته نه شو ورسیدای"
 
-#: src/features/landing/landing-page.tsx:208
+#: src/features/landing/landing-page.tsx:211
 msgid "Could not start sign-in"
 msgstr "ننوتل نشي پیل کیدلی"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:406
 msgid "Create an account"
 msgstr "حساب جوړ کړئ"
 
@@ -444,11 +474,12 @@ msgstr "لوری"
 msgid "Displays the mobile sidebar."
 msgstr "موبایل څنګې پټۍ ښیي."
 
-#: src/features/landing/landing-page.tsx:337
+#: src/features/landing/landing-page.tsx:343
 msgid "Distributed by design"
 msgstr "په ډیزاین ویشل شوی"
 
 #: src/routes/replicating.tsx:229
+#: src/routes/restoring.tsx:54
 msgid "Done"
 msgstr "ترسره شو"
 
@@ -460,11 +491,12 @@ msgstr "ډاونلوډ"
 msgid "Dyslexia-friendly"
 msgstr "د لوستلو ستونزې سره مطابقت لري"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:520
+#: src/features/auth/sign-in/components/user-auth-form.tsx:574
 msgid "Email"
 msgstr "بریښنالیک"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Email already in use"
 msgstr "برېښلیک لا دمخه په کارېدو کې دی"
 
@@ -473,7 +505,7 @@ msgid "email code"
 msgstr "د ایمیل کوډ"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:472
 msgid "Email code"
 msgstr "د بریښنالیک کوډ"
 
@@ -481,7 +513,7 @@ msgstr "د بریښنالیک کوډ"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "د \"{userEmail}\" لپاره د ننوتلو لپاره د بیرته راګرځولو کوډ دننه کړئ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:399
+#: src/features/auth/sign-in/components/user-auth-form.tsx:453
 msgid "Enter the code from your authenticator app"
 msgstr "د خپل تصدیق کوونکي اپ څخه کوډ دننه کړئ"
 
@@ -494,11 +526,11 @@ msgstr "خپل {0} دننه کړئ"
 msgid "Enter your {initial} and {last}"
 msgstr "خپل {initial} او {last} دننه کړئ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:389
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Enter your email code and authenticator code"
 msgstr "د خپل بریښنالیک کوډ او د تصدیق کوونکي کوډ دننه کړئ"
 
-#: src/features/landing/landing-page.tsx:308
+#: src/features/landing/landing-page.tsx:314
 msgid "Everything you need, nothing you don't control"
 msgstr "هر څه چې تاسو ورته اړتیا لرئ، هیڅ هغه څه نه چې تاسو یې کنټرول نه کوئ"
 
@@ -510,15 +542,19 @@ msgstr "څنګلوري لیست خلاص کړئ"
 msgid "Extra large"
 msgstr "ډېر لوی"
 
+#: src/routes/restoring.tsx:55
+msgid "Failed"
+msgstr "ناکام"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "د حساب اضافه کولو پاتې راغلل"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:288
 msgid "Failed to continue"
 msgstr "د دوام پاتې راغلل"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:263
 msgid "Failed to copy code"
 msgstr "د کوډ کاپي کولو پاتې راغلل"
 
@@ -554,6 +590,10 @@ msgstr "فایلونه"
 msgid "Finish setting up your account"
 msgstr "د خپل حساب جوړونه بشپړه کړئ"
 
+#: src/routes/restoring.tsx:53
+msgid "Finishing up"
+msgstr "پای ته رسیدل"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
 msgstr "ځړیدلی"
@@ -569,6 +609,14 @@ msgstr "جمعه"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "له"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "From a backup file (restore)"
+msgstr "د بیک اپ فایل نه (بیرته راوړل)"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "From another running server (replicate)"
+msgstr "د بل چلیدونکي سرور نه (نقل کول)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -627,7 +675,7 @@ msgstr "کور"
 msgid "Hot"
 msgstr "ګرم"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:340
 msgid "How it works"
 msgstr "دا څنګه کار کوي"
 
@@ -647,7 +695,7 @@ msgstr "Inset"
 msgid "Interests"
 msgstr "علاقې"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Invalid authenticator code"
 msgstr "د تصدیق کوونکي ناسم کوډ"
 
@@ -656,11 +704,11 @@ msgstr "د تصدیق کوونکي ناسم کوډ"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
-#: src/features/auth/sign-in/components/user-auth-form.tsx:361
+#: src/features/auth/sign-in/components/user-auth-form.tsx:338
+#: src/features/auth/sign-in/components/user-auth-form.tsx:346
+#: src/features/auth/sign-in/components/user-auth-form.tsx:375
+#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Invalid code"
 msgstr "ناسم کوډ"
 
@@ -670,7 +718,7 @@ msgid "Invalid recovery code"
 msgstr "د بیرته راګرځولو ناسم کوډ"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:344
+#: src/features/auth/sign-in/components/user-auth-form.tsx:398
 msgid "Invalid verification code"
 msgstr "د تصدیق ناسم کوډ"
 
@@ -700,6 +748,10 @@ msgstr "له کیڼ څخه ښي"
 msgid "Light"
 msgstr "روښانه"
 
+#: src/routes/restoring.tsx:52
+msgid "Linking your identity"
+msgstr "ستاسو هویت تړل کیږي"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
 msgid "Load more"
 msgstr "نور بار کړئ"
@@ -712,23 +764,23 @@ msgstr "بار کیږي…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:473
+#: src/features/auth/sign-in/components/user-auth-form.tsx:527
 msgid "Log in"
 msgstr "لاګ ان"
 
-#: src/features/landing/landing-page.tsx:439
+#: src/features/landing/landing-page.tsx:445
 msgid "Log in to Mochi"
 msgstr "Mochi ته لاګ ان شئ"
 
-#: src/features/landing/landing-page.tsx:491
+#: src/features/landing/landing-page.tsx:499
 msgid "Log in with {label}"
 msgstr "د {label} سره لاګ ان شئ"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:104
 msgid "Log in with passkey"
 msgstr "د passkey سره لاګ ان شئ"
 
-#: src/features/auth/sign-in/index.tsx:68
+#: src/features/auth/sign-in/index.tsx:71
 msgid "Log in with your email address"
 msgstr "د خپل بریښنالیک پته سره لاګ ان شئ"
 
@@ -743,8 +795,8 @@ msgid "Log out"
 msgstr "لاګ آوټ"
 
 #: src/features/auth/recovery/index.tsx:39
-#: src/features/auth/sign-in/index.tsx:38
-#: src/features/landing/landing-page.tsx:231
+#: src/features/auth/sign-in/index.tsx:41
+#: src/features/landing/landing-page.tsx:237
 msgid "Logged in"
 msgstr "لاګ ان شو"
 
@@ -765,7 +817,7 @@ msgid "Login session expired, please try again"
 msgstr "د لاګ ان سیشن ختم شو، مهرباني وکړئ بیا هڅه وکړئ"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:495
+#: src/features/auth/sign-in/components/user-auth-form.tsx:549
 msgid "Lost access? Use a recovery code"
 msgstr "لاسرسی له لاسه ورکړئ؟ د بیرته راګرځولو کوډ وکاروئ"
 
@@ -794,15 +846,15 @@ msgstr "خپل ملګرو ته پیغامونه ولیږئ، په انفرادي
 msgid "Metric"
 msgstr "میټریک"
 
-#: src/features/landing/landing-page.tsx:311
+#: src/features/landing/landing-page.tsx:317
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi دمخه د ۲۰ څخه ډیر اپلیکیشنونو سره وړاندې کیږي، چې نور یې په منظم ډول اضافه کیږي. لوی اپلیکیشنونه شامل دي:"
 
-#: src/features/landing/landing-page.tsx:296
+#: src/features/landing/landing-page.tsx:302
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi یو فدرالي، څو کاروونکي پلیټفارم دی د توزیع شوي اپلیکیشنونو لپاره. هرڅوک کولی شي خپل سرور پرمخ یوسي، او د Mochi شبکې په هر بل کاروونکي سره وصل شي. هرڅوک کولی شي اپلیکیشنونه جوړ او خپاره کړي."
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:374
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi د لاندې ټیکنالوژیو په کارولو سره جوړ شوی:"
 
@@ -822,13 +874,14 @@ msgstr "نوی"
 msgid "New accounts are disabled on this server"
 msgstr "په دې سرور کې نوي حسابونه غیر فعال دي"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:231
-#: src/features/auth/sign-in/components/user-auth-form.tsx:358
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "New user signup is disabled."
 msgstr "د نوي کارن لاسلیک غیر فعال دی."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:533
+#: src/features/auth/sign-in/components/user-auth-form.tsx:587
 msgid "Next"
 msgstr "بل"
 
@@ -840,7 +893,11 @@ msgstr "بله انځور"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "د لاسرسي قاعدې نه دي تنظیم شوې. د دې سرچینې لاسرسي د کنترول لپاره قاعدې اضافه کړئ."
 
-#: src/features/landing/landing-page.tsx:340
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+msgid "No backup file selected"
+msgstr "د بیک اپ هیڅ فایل نه دی غوره شوی"
+
+#: src/features/landing/landing-page.tsx:346
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "هیڅ مرکزي سرور ستاسو ډاټا نه ساتي. هر Mochi نوډ په شبکه کې بشپړ همتا دی، چې د libp2p له لارې مستقیماً د نورو سره اړیکه نیسي."
 
@@ -852,7 +909,7 @@ msgstr "هیڅ نښلول شوي حسابونه نشته"
 msgid "No groups available"
 msgstr "هیڅ ډلې شتون نلري"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "No matching account on the source server"
 msgstr "د سرچینې سرور پر هیڅ ګډون موجود نه دی"
 
@@ -887,9 +944,17 @@ msgstr "هیڅ کاروونکي ونه موندل شول"
 msgid "None"
 msgstr "هیڅوک"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:100
+msgid "None — create a fresh account"
+msgstr "هیڅ نه — یو نوی حساب جوړ کړئ"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "عادي"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Not a migration bundle"
+msgstr "د لیږد بنډل نه دی"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -919,11 +984,11 @@ msgstr "د نیویګیشن مینو خلاص کړئ"
 msgid "Open theme settings"
 msgstr "د ت موضوع تنظیمات خلاص کړئ"
 
-#: src/features/auth/sign-in/index.tsx:89
+#: src/features/auth/sign-in/index.tsx:94
 msgid "Or"
 msgstr "یا"
 
-#: src/features/landing/landing-page.tsx:464
+#: src/features/landing/landing-page.tsx:472
 msgid "Or log in with"
 msgstr "یا ورسره ننوزئ"
 
@@ -944,21 +1009,21 @@ msgid "passkey"
 msgstr "passkey"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:480
+#: src/features/landing/landing-page.tsx:488
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/index.tsx:53
-#: src/features/landing/landing-page.tsx:249
+#: src/features/auth/sign-in/index.tsx:56
+#: src/features/landing/landing-page.tsx:255
 msgid "Passkey login cancelled"
 msgstr "د Passkey ننوتنه لغوه شوه"
 
-#: src/features/auth/sign-in/index.tsx:51
-#: src/features/landing/landing-page.tsx:247
+#: src/features/auth/sign-in/index.tsx:54
+#: src/features/landing/landing-page.tsx:253
 msgid "Passkey login failed"
 msgstr "د Passkey ننوتنه ناکامه شوه"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:179
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Passkey login required"
 msgstr "د Passkey ننوتنه اړینه ده"
 
@@ -966,38 +1031,42 @@ msgstr "د Passkey ننوتنه اړینه ده"
 msgid "Passkey MFA not yet implemented"
 msgstr "Passkey MFA لاهم نه دی پلی شوی"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:394
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+msgid "Passphrase"
+msgstr "پاسفریز"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:448
 msgid "Paste the login code you received by email"
 msgstr "د ننوتنې هغه کوډ پیسټ کړئ چې تاسو په ایمیل ترلاسه کړی"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:60
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:65
 msgid "Peer IDs start with 12D3KooW and are 52 characters long"
 msgstr "د Peer ID د 12D3KooW څخه پیل کیږي او 52 توري اوږد دي"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:267
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Please check your authenticator app and try again."
 msgstr "مهرباني وکړئ خپل تصدیق ایپ وګورئ او بیا هڅه وکړئ."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:339
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Please check your authenticator code and try again."
 msgstr "مهرباني وکړئ خپل د تصدیق کوډ وګورئ او بیا هڅه وکړئ."
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:362
+#: src/features/auth/sign-in/components/user-auth-form.tsx:416
 msgid "Please check your code and try again."
 msgstr "مهرباني وکړئ خپل کوډ وګورئ او بیا هڅه وکړئ."
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
-#: src/features/auth/sign-in/components/user-auth-form.tsx:330
+#: src/features/auth/sign-in/components/user-auth-form.tsx:376
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Please check your codes and try again."
 msgstr "مهرباني وکړئ خپل کوډونه وګورئ او بیا هڅه وکړئ."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:345
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Please check your email and try again."
 msgstr "مهرباني وکړئ خپل ایمیل وګورئ او بیا هڅه وکړئ."
 
@@ -1006,15 +1075,15 @@ msgstr "مهرباني وکړئ خپل ایمیل وګورئ او بیا هڅه 
 msgid "Please check your recovery code and try again."
 msgstr "مهرباني وکړئ خپل د بیرته راګرځولو کوډ وګورئ او بیا هڅه وکړئ."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Please copy manually: {devCode}"
 msgstr "مهرباني وکړئ په لاسي ډول کاپي کړئ: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:67
+#: src/features/auth/sign-in/components/user-auth-form.tsx:72
 msgid "Please enter a valid email"
 msgstr "مهرباني وکړئ معتبر ایمیل دننه کړئ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:251
+#: src/features/auth/sign-in/components/user-auth-form.tsx:305
 msgid "Please enter your authenticator code"
 msgstr "مهرباني وکړئ خپل د تصدیق کوډ دننه کړئ"
 
@@ -1026,9 +1095,10 @@ msgstr "مهرباني وکړئ خپل نوم دننه کړئ"
 msgid "Please enter your recovery code"
 msgstr "مهرباني وکړئ خپل د بیرته راګرځولو کوډ دننه کړئ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
-#: src/features/auth/sign-in/components/user-auth-form.tsx:235
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:420
 msgid "Please try again or contact support."
 msgstr "مهرباني وکړئ بیا هڅه وکړئ یا د ملاتړ سره اړیکه ونیسئ."
 
@@ -1036,7 +1106,7 @@ msgstr "مهرباني وکړئ بیا هڅه وکړئ یا د ملاتړ سره
 msgid "Please use another verification method."
 msgstr "مهرباني وکړئ د تایید بله طریقه وکاروئ."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "مهرباني وکړئ د \"Log in with passkey\" تڼۍ وکاروئ."
 
@@ -1047,8 +1117,8 @@ msgstr "تېر انځور"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:24
 #: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:427
-#: src/features/landing/landing-page.tsx:524
+#: src/features/landing/landing-page.tsx:433
+#: src/features/landing/landing-page.tsx:538
 msgid "Privacy"
 msgstr "محرمیت"
 
@@ -1073,7 +1143,7 @@ msgstr "عامه"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "د خپلو ټولنیزو رسنیو فیډونه خپاره کړئ، نور تعقیب کړئ، یا د اختیاري AI ټاګ کولو او ترتیب کولو سره نور فیډونه راټول کړئ. هغه څه تعقیب کړئ چې مهم دي، شور فلټر کړئ."
 
-#: src/features/landing/landing-page.tsx:393
+#: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "آیا د Mochi هڅه کولو لپاره چمتو یاست؟"
 
@@ -1098,9 +1168,10 @@ msgstr "تاسو ډشبورډ ته بیرته لارښود کیږي…"
 msgid "Reduce interest"
 msgstr "د سود کمول"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:357
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:411
 msgid "Registration disabled"
 msgstr "راجستر غیر فعال دی"
 
@@ -1130,11 +1201,7 @@ msgstr "لاسرسی لرې کړو؟"
 msgid "Remove interest"
 msgstr "علاقه لرې کړئ"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:80
-msgid "Replicate an existing account from another server"
-msgstr "د بل سرور څخه موجود حساب کاپي کړئ"
-
-#: src/features/landing/landing-page.tsx:175
+#: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "د بیاجوړونې غوښتنه رد شوه"
 
@@ -1146,9 +1213,13 @@ msgstr "د همغږۍ غوښتنه <0>{source_user}</0> ته واستول شوه
 msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
 msgstr "د همغږۍ غوښتنه سرچینې پرتلیز ته واستول شوه. د همغږۍ بشپړولو لپاره یې د سرچینې پرتلیز د امستنو پاڼه کې تایید کړئ."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:213
 msgid "Replication signup failed"
 msgstr "د کاپي کېدو لاسلیک ناکام شو"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
+msgid "Required only if your backup includes private keys."
+msgstr "یوازې اړین دی که ستاسو بیک اپ خصوصي کیلي لري."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1158,6 +1229,15 @@ msgstr "بیا تنظیم"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "ټول تنظیمات د ډیفالټ ارزښتونو ته بیرته تنظیم کړئ"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:169
+#: src/routes/restoring.tsx:106
+msgid "Restore failed"
+msgstr "بیرته راوړل ناکام شول"
+
+#: src/routes/restoring.tsx:130
+msgid "Restoring your account"
+msgstr "ستاسو حساب بیرته راوړل کیږي"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1247,8 +1327,8 @@ msgstr "Server"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
-#: src/features/landing/landing-page.tsx:419
-#: src/features/landing/landing-page.tsx:516
+#: src/features/landing/landing-page.tsx:425
+#: src/features/landing/landing-page.tsx:530
 msgid "Server rules"
 msgstr "د Server قواعد"
 
@@ -1280,7 +1360,7 @@ msgstr "سایډبار"
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "نوم لیکنه وکړئ او ستاسو خپل د Mochi نوډ جوړیږي. ستاسو معلومات هلته وي — د بل چا په Server کې نه."
 
-#: src/features/landing/landing-page.tsx:277
+#: src/features/landing/landing-page.tsx:283
 msgid "Sign up or log in"
 msgstr "نوم لیکنه یا ننوتل"
 
@@ -1309,7 +1389,7 @@ msgstr "کوچنی"
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "ځینې لیږدونې په لومړۍ هڅه کې ندي بشپړ شوي. هغوی به په اوتومات ډول بیا هڅه شي."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:101
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:151
 msgid "Source server peer ID"
 msgstr "د سرچینې سرور peer ID"
 
@@ -1370,8 +1450,8 @@ msgstr "ټیمونه/اپلیکیشنونه"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:20
 #: ../../../lib/web/src/features/document/document-page.tsx:39
-#: src/features/landing/landing-page.tsx:423
-#: src/features/landing/landing-page.tsx:520
+#: src/features/landing/landing-page.tsx:429
+#: src/features/landing/landing-page.tsx:534
 msgid "Terms and conditions"
 msgstr "شرایط او مقررات"
 
@@ -1384,11 +1464,23 @@ msgstr "هغه {0} حساب دمخه له بل کاروونکي سره وصل د
 msgid "That sign-in provider is not available"
 msgstr "د ننوتلو هغه چمتو کوونکی شتون نه لري"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+msgid "The file may be damaged or have been modified."
+msgstr "فایل ممکن خراب شوی یا بدل شوی وي."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+msgid "The passphrase you entered does not match the backup."
+msgstr "هغه پاسفریز چې تاسو دننه کړ د بیک اپ سره سمون نه خوري."
+
 #: src/lib/oauth-errors.ts:11
 msgid "the provider"
 msgstr "چمتو کوونکی"
 
-#: src/features/landing/landing-page.tsx:176
+#: src/routes/restoring.tsx:109
+msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
+msgstr "بیرته راوړل بشپړ نه شول. د بیک اپ فایل ممکن خراب وي، پاسفریز ممکن غلط وي، یا سرور سره تیروتنه رامینځته شوه."
+
+#: src/features/landing/landing-page.tsx:179
 msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
 msgstr "د سرچینې سرور غوښتنه ونه منله، یا یې وخت تېر شو. بیا هڅه وکړئ یا په محلي توګه نوم لیکنه وکړئ."
 
@@ -1399,6 +1491,10 @@ msgstr "ښکارندوی"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "د ښکارندوی ترتیبات"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+msgid "This backup was created by a newer version of Mochi. Update this server first."
+msgstr "دا بیک اپ د Mochi د نوي نسخه لخوا جوړ شوی دی. لومړی دا سرور تازه کړئ."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
@@ -1473,7 +1569,7 @@ msgstr "نه ګمارل شوی"
 msgid "Unauthorized Access"
 msgstr "غیر مجاز لاسرسی"
 
-#: src/features/landing/landing-page.tsx:362
+#: src/features/landing/landing-page.tsx:368
 msgid "Under the hood"
 msgstr "په پرده کې"
 
@@ -1481,9 +1577,21 @@ msgstr "په پرده کې"
 msgid "United States"
 msgstr "متحده ایالات"
 
+#: src/routes/restoring.tsx:51
+msgid "Unpacking your data"
+msgstr "ستاسو معلومات خلاصیږي"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "تصدیق نه شوی"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+msgid "Upload a .zip file exported from Mochi's data export."
+msgstr "د Mochi د معلوماتو صادرولو نه صادر شوی .zip فایل اپلوډ کړئ."
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
+msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
+msgstr "د بل Mochi سرور نه صادر شوی د لیږد بنډل (.zip) اپلوډ کړئ. سرور ستاسو معلومات محلي توګه بیرته راوړي — نور سرورونو ته آنلاین اړتیا نشته."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1493,7 +1601,7 @@ msgstr "بل حساب وکاروئ"
 msgid "Use the apps"
 msgstr "اپلیکیشنونه وکاروئ"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:50
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:55
 msgid "Use the form alice@example.com"
 msgstr "د alice@example.com بڼه وکاروئ"
 
@@ -1501,9 +1609,13 @@ msgstr "د alice@example.com بڼه وکاروئ"
 msgid "User"
 msgstr "کاروونکی"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:130
 msgid "Username on source server"
 msgstr "د سرچینې سرور کې کارن نوم"
+
+#: src/routes/restoring.tsx:49
+msgid "Validating backup"
+msgstr "بیک اپ تصدیق کیږي"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1514,7 +1626,7 @@ msgid "Verification code sent"
 msgstr "د تصدیق کوډ ولېږل شو"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
+#: src/features/auth/sign-in/components/user-auth-form.tsx:419
 msgid "Verification failed"
 msgstr "تصدیق ناکام شو"
 
@@ -1530,6 +1642,10 @@ msgstr "د ایمیل پته تصدیق کړئ"
 #: src/features/auth/mfa/index.tsx:284
 msgid "Verify with passkey"
 msgstr "د passkey سره تصدیق کړئ"
+
+#: src/routes/restoring.tsx:50
+msgid "Verifying backup"
+msgstr "بیک اپ تایید کیږي"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx:63
 msgid "Video thumbnail"
@@ -1547,7 +1663,7 @@ msgstr "ټول وګورئ"
 msgid "View all notifications"
 msgstr "ټولې خبرتیاوې وګورئ"
 
-#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:414
 msgid "View source code"
 msgstr "د سرچینې کوډ وګورئ"
 
@@ -1571,6 +1687,10 @@ msgstr "چهارشنبه"
 msgid "Wikis"
 msgstr "Wikiګان"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Wrong passphrase"
+msgstr "غلط پاسفریز"
+
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:38
 msgid "Your {0} email is not verified"
@@ -1582,11 +1702,11 @@ msgstr "ستاسو حساب ودرول شو"
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Your account has been suspended."
 msgstr "ستاسو حساب ودرول شو."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Your account is already replicated here. Log in instead."
 msgstr "ستاسو حساب لا دمخه دلته کاپي شوی دی. پر ځای یې ننوځئ."
 
@@ -1594,17 +1714,25 @@ msgstr "ستاسو حساب لا دمخه دلته کاپي شوی دی. پر ځ
 msgid "Your account is being copied from the source server. Do not close this window."
 msgstr "ستاسو ګڼون د سرچینې سرور څخه کاپي کیږي. دا کړکۍ مه تړئ."
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:123
+msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
+msgstr "ستاسو حساب هغه سرور نه چې تاسو یې لا دمخه ورته لاسرسی لرئ ژوندی کاپي کیږي. د لیږد شروع کیدو دمخه د سرچینې سرور باید غوښتنه تایید کړي."
+
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "ستاسو حساب د ننوتلو لپاره passkey ته اړتیا لري"
 
-#: src/features/landing/landing-page.tsx:293
+#: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "ستاسو اپلیکیشنونه، ستاسو پلیټفارم، ستاسو شبکه"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:197
+#: src/features/auth/sign-in/components/user-auth-form.tsx:251
 msgid "Your code is: {devCode}"
 msgstr "ستاسو کوډ دا دی: {devCode}"
+
+#: src/routes/restoring.tsx:133
+msgid "Your data is being restored from the backup. Do not close this window."
+msgstr "ستاسو معلومات له بیک اپ نه بیرته راوړل کیږي. دا کړکۍ مه تړئ."
 
 #: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"

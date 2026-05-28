@@ -53,7 +53,8 @@ msgstr "Lefel mynediad"
 msgid "Account added"
 msgstr "Cyfrif wedi'i ychwanegu"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Mae'r cyfrif eisoes ar y gweinydd hwn"
 
@@ -63,7 +64,7 @@ msgstr "Cyfrif wedi'i dynnu"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
+#: src/features/auth/sign-in/components/user-auth-form.tsx:407
 msgid "Account suspended"
 msgstr "Cyfrif wedi'i atal"
 
@@ -124,7 +125,7 @@ msgstr "Ychwanegu golwg"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Addaswch yr ymddangosiad a'r cynllun i siwtio'ch dewisiadau."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:74
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:79
 msgid "Advanced"
 msgstr "Uwch"
 
@@ -140,6 +141,10 @@ msgstr "Pob un"
 #: src/lib/oauth-errors.ts:36
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Mae cyfrif gyda'r e-bost hwnnw eisoes yn bodoli. Mewngofnodwch gyntaf, yna cysylltwch {0} o'ch gosodiadau dilysu."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+msgid "An account with this identity already exists here."
+msgstr "Mae cyfrif gyda'r hunaniaeth hon eisoes yn bodoli yma."
 
 #: src/features/landing/landing-page.tsx:120
 msgid "App business logic"
@@ -162,12 +167,12 @@ msgid "authenticator code"
 msgstr "cod dilysydd"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:445
+#: src/features/auth/sign-in/components/user-auth-form.tsx:499
 msgid "Authenticator code"
 msgstr "Cod dilyswr"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:484
+#: src/features/auth/sign-in/components/user-auth-form.tsx:538
 msgid "Back"
 msgstr "Yn ôl"
 
@@ -177,19 +182,39 @@ msgstr "Yn ôl"
 msgid "Back to home"
 msgstr "Yn ôl i’r cartref"
 
+#: src/routes/restoring.tsx:118
+msgid "Back to sign up"
+msgstr "Yn ôl i gofrestru"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+msgid "Backup file"
+msgstr "Ffeil wrth gefn"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+msgid "Backup file is corrupted"
+msgstr "Mae'r ffeil wrth gefn wedi'i difrodi"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+msgid "Backup is too new"
+msgstr "Mae'r copi wrth gefn yn rhy newydd"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Hybu diddordeb"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:85
+msgid "Bring an existing account onto this server:"
+msgstr "Dewch â chyfrif presennol i'r gweinydd hwn:"
 
 #: src/features/landing/landing-page.tsx:84
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Adeiladwch sylfaen wybodaeth gydweithredol, wedi'i hatgynhyrchu ar gyfer eich cymuned. Eich data chi yw eich data bob amser."
 
-#: src/features/landing/landing-page.tsx:365
+#: src/features/landing/landing-page.tsx:371
 msgid "Built on solid foundations"
 msgstr "Wedi'i adeiladu ar sylfeini cadarn"
 
-#: src/features/landing/landing-page.tsx:305
+#: src/features/landing/landing-page.tsx:311
 msgid "Built-in apps"
 msgstr "Apiau adeiledig"
 
@@ -220,15 +245,15 @@ msgstr "Newid categori hysbysiad"
 msgid "Chat"
 msgstr "Sgwrs"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "Check the address after @ and try again."
 msgstr "Gwiriwch y cyfeiriad ar ôl @ a rhowch gynnig arall arni."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Check the username before @ and try again."
 msgstr "Gwiriwch yr enw defnyddiwr cyn @ a rhowch gynnig arall arni."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
 msgid "Check your email."
 msgstr "Gwiriwch eich e-bost."
 
@@ -236,7 +261,12 @@ msgstr "Gwiriwch eich e-bost."
 msgid "Checking every few seconds…"
 msgstr "Yn gwirio bob ychydig eiliadau…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/routes/restoring.tsx:163
+msgid "Checking…"
+msgstr "Yn gwirio…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "Choose a different local email or log in instead."
 msgstr "Dewiswch e-bost lleol gwahanol neu mewngofnodwch yn lle hynny."
 
@@ -299,11 +329,11 @@ msgstr "Cau’r panel"
 msgid "Close search"
 msgstr "Cau chwiliad"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Code copied"
 msgstr "Cod wedi'i gopïo"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:194
+#: src/features/auth/sign-in/components/user-auth-form.tsx:248
 msgid "Code sent."
 msgstr "Cod wedi'i anfon."
 
@@ -354,7 +384,7 @@ msgstr "Parhau"
 msgid "Copy"
 msgstr "Copïo"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:268
 msgid "Copy code"
 msgstr "Copïo’r cod"
 
@@ -368,15 +398,15 @@ msgstr "Methwyd canslo"
 msgid "Could not load this document. Please try again later."
 msgstr "Methwyd llwytho'r ddogfen hon. Rhowch gynnig arni eto yn nes ymlaen."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Could not reach the source server"
 msgstr "Methu cyrraedd y gweinydd ffynhonnell"
 
-#: src/features/landing/landing-page.tsx:208
+#: src/features/landing/landing-page.tsx:211
 msgid "Could not start sign-in"
 msgstr "Methwyd cychwyn mewngofnodi"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:406
 msgid "Create an account"
 msgstr "Creu cyfrif"
 
@@ -444,11 +474,12 @@ msgstr "Cyfeiriad"
 msgid "Displays the mobile sidebar."
 msgstr "Yn dangos y bar ochr symudol."
 
-#: src/features/landing/landing-page.tsx:337
+#: src/features/landing/landing-page.tsx:343
 msgid "Distributed by design"
 msgstr "Wedi'i ddosbarthu trwy ddyluniad"
 
 #: src/routes/replicating.tsx:229
+#: src/routes/restoring.tsx:54
 msgid "Done"
 msgstr "Wedi gorffen"
 
@@ -460,11 +491,12 @@ msgstr "Lawrlwytho"
 msgid "Dyslexia-friendly"
 msgstr "Cyfeillgar i ddyslecsia"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:520
+#: src/features/auth/sign-in/components/user-auth-form.tsx:574
 msgid "Email"
 msgstr "E-bost"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Email already in use"
 msgstr "Mae'r e-bost yn cael ei ddefnyddio'n barod"
 
@@ -473,7 +505,7 @@ msgid "email code"
 msgstr "cod e-bost"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:472
 msgid "Email code"
 msgstr "Cod e-bost"
 
@@ -481,7 +513,7 @@ msgstr "Cod e-bost"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Rhowch god adfer ar gyfer \"{userEmail}\" i fewngofnodi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:399
+#: src/features/auth/sign-in/components/user-auth-form.tsx:453
 msgid "Enter the code from your authenticator app"
 msgstr "Rhowch y cod o'ch ap dilysu"
 
@@ -494,11 +526,11 @@ msgstr "Rhowch eich {0}"
 msgid "Enter your {initial} and {last}"
 msgstr "Rhowch eich {initial} a {last}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:389
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Enter your email code and authenticator code"
 msgstr "Rhowch eich cod e-bost a chod dilysu"
 
-#: src/features/landing/landing-page.tsx:308
+#: src/features/landing/landing-page.tsx:314
 msgid "Everything you need, nothing you don't control"
 msgstr "Popeth sydd ei angen arnoch, dim byd nad ydych yn ei reoli"
 
@@ -510,15 +542,19 @@ msgstr "Ehangu'r bar ochr"
 msgid "Extra large"
 msgstr "Ychwanegol o fawr"
 
+#: src/routes/restoring.tsx:55
+msgid "Failed"
+msgstr "Wedi methu"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "Methwyd ychwanegu cyfrif"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:288
 msgid "Failed to continue"
 msgstr "Methwyd parhau"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:263
 msgid "Failed to copy code"
 msgstr "Methwyd copïo'r cod"
 
@@ -554,6 +590,10 @@ msgstr "Ffeiliau"
 msgid "Finish setting up your account"
 msgstr "Gorffennwch sefydlu eich cyfrif"
 
+#: src/routes/restoring.tsx:53
+msgid "Finishing up"
+msgstr "Gorffen"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
 msgstr "Arnofiol"
@@ -569,6 +609,14 @@ msgstr "Dydd Gwener"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "O"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "From a backup file (restore)"
+msgstr "O ffeil wrth gefn (adfer)"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "From another running server (replicate)"
+msgstr "O weinydd arall sy'n rhedeg (atgynhyrchu)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -627,7 +675,7 @@ msgstr "Cartref"
 msgid "Hot"
 msgstr "Poeth"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:340
 msgid "How it works"
 msgstr "Sut mae'n gweithio"
 
@@ -647,7 +695,7 @@ msgstr "Mewnol"
 msgid "Interests"
 msgstr "Diddordebau"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Invalid authenticator code"
 msgstr "Cod dilysydd annilys"
 
@@ -656,11 +704,11 @@ msgstr "Cod dilysydd annilys"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
-#: src/features/auth/sign-in/components/user-auth-form.tsx:361
+#: src/features/auth/sign-in/components/user-auth-form.tsx:338
+#: src/features/auth/sign-in/components/user-auth-form.tsx:346
+#: src/features/auth/sign-in/components/user-auth-form.tsx:375
+#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Invalid code"
 msgstr "Cod annilys"
 
@@ -670,7 +718,7 @@ msgid "Invalid recovery code"
 msgstr "Cod adfer annilys"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:344
+#: src/features/auth/sign-in/components/user-auth-form.tsx:398
 msgid "Invalid verification code"
 msgstr "Cod dilysu annilys"
 
@@ -700,6 +748,10 @@ msgstr "Chwith i'r Dde"
 msgid "Light"
 msgstr "Golau"
 
+#: src/routes/restoring.tsx:52
+msgid "Linking your identity"
+msgstr "Cysylltu eich hunaniaeth"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
 msgid "Load more"
 msgstr "Llwytho mwy"
@@ -712,23 +764,23 @@ msgstr "Yn llwytho…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:473
+#: src/features/auth/sign-in/components/user-auth-form.tsx:527
 msgid "Log in"
 msgstr "Mewngofnodi"
 
-#: src/features/landing/landing-page.tsx:439
+#: src/features/landing/landing-page.tsx:445
 msgid "Log in to Mochi"
 msgstr "Mewngofnodi i Mochi"
 
-#: src/features/landing/landing-page.tsx:491
+#: src/features/landing/landing-page.tsx:499
 msgid "Log in with {label}"
 msgstr "Mewngofnodi gyda {label}"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:104
 msgid "Log in with passkey"
 msgstr "Mewngofnodi gydag allwedd mynediad"
 
-#: src/features/auth/sign-in/index.tsx:68
+#: src/features/auth/sign-in/index.tsx:71
 msgid "Log in with your email address"
 msgstr "Mewngofnodi gyda'ch cyfeiriad e-bost"
 
@@ -743,8 +795,8 @@ msgid "Log out"
 msgstr "Allgofnodi"
 
 #: src/features/auth/recovery/index.tsx:39
-#: src/features/auth/sign-in/index.tsx:38
-#: src/features/landing/landing-page.tsx:231
+#: src/features/auth/sign-in/index.tsx:41
+#: src/features/landing/landing-page.tsx:237
 msgid "Logged in"
 msgstr "Wedi mewngofnodi"
 
@@ -765,7 +817,7 @@ msgid "Login session expired, please try again"
 msgstr "Mae'r sesiwn mewngofnodi wedi dod i ben, rhowch gynnig arall arni"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:495
+#: src/features/auth/sign-in/components/user-auth-form.tsx:549
 msgid "Lost access? Use a recovery code"
 msgstr "Wedi colli mynediad? Defnyddiwch god adfer"
 
@@ -794,15 +846,15 @@ msgstr "Anfonwch neges at eich ffrindiau, yn unigol neu mewn grwpiau, cymheiriai
 msgid "Metric"
 msgstr "Metrig"
 
-#: src/features/landing/landing-page.tsx:311
+#: src/features/landing/landing-page.tsx:317
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mae Mochi eisoes yn cynnwys dros 20 o apiau, gyda mwy yn cael eu hychwanegu'n aml. Mae apiau pwysig yn cynnwys:"
 
-#: src/features/landing/landing-page.tsx:296
+#: src/features/landing/landing-page.tsx:302
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mae Mochi yn blatfform ffederasiwn, aml-ddefnyddiwr ar gyfer apiau dosbarthedig. Gall unrhyw un redeg ei weinydd ei hun, a chysylltu ag unrhyw ddefnyddiwr arall ar y rhwydwaith Mochi. Gall unrhyw un greu a chyhoeddi apiau."
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:374
 msgid "Mochi is built using the following technologies:"
 msgstr "Mae Mochi wedi'i adeiladu gan ddefnyddio'r technolegau canlynol:"
 
@@ -822,13 +874,14 @@ msgstr "Newydd"
 msgid "New accounts are disabled on this server"
 msgstr "Mae cyfrifon newydd wedi'u hanalluogi ar y gweinydd hwn"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:231
-#: src/features/auth/sign-in/components/user-auth-form.tsx:358
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "New user signup is disabled."
 msgstr "Mae cofrestru defnyddwyr newydd wedi'i analluogi."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:533
+#: src/features/auth/sign-in/components/user-auth-form.tsx:587
 msgid "Next"
 msgstr "Nesaf"
 
@@ -840,7 +893,11 @@ msgstr "Delwedd nesaf"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Dim rheolau mynediad wedi'u ffurfweddu. Ychwanegwch reolau i reoli pwy sy'n gallu cyrchu'r adnodd hwn."
 
-#: src/features/landing/landing-page.tsx:340
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+msgid "No backup file selected"
+msgstr "Dim ffeil wrth gefn wedi'i dewis"
+
+#: src/features/landing/landing-page.tsx:346
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Nid oes gweinydd canolog yn dal eich data. Mae pob nod Mochi yn gymar llawn yn y rhwydwaith, gan gyfathrebu'n uniongyrchol ag eraill drwy libp2p."
 
@@ -852,7 +909,7 @@ msgstr "Dim cyfrifon wedi'u cysylltu"
 msgid "No groups available"
 msgstr "Dim grwpiau ar gael"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "No matching account on the source server"
 msgstr "Dim cyfrif sy'n cyfateb ar y gweinydd ffynhonnell"
 
@@ -887,9 +944,17 @@ msgstr "Heb ddod o hyd i ddefnyddwyr"
 msgid "None"
 msgstr "Dim"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:100
+msgid "None — create a fresh account"
+msgstr "Dim — creu cyfrif newydd"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "Arferol"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Not a migration bundle"
+msgstr "Nid yw hwn yn becyn mudo"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -919,11 +984,11 @@ msgstr "Agor dewislen llywio"
 msgid "Open theme settings"
 msgstr "Agor gosodiadau thema"
 
-#: src/features/auth/sign-in/index.tsx:89
+#: src/features/auth/sign-in/index.tsx:94
 msgid "Or"
 msgstr "Neu"
 
-#: src/features/landing/landing-page.tsx:464
+#: src/features/landing/landing-page.tsx:472
 msgid "Or log in with"
 msgstr "Neu mewngofnodwch gyda"
 
@@ -944,21 +1009,21 @@ msgid "passkey"
 msgstr "passkey"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:480
+#: src/features/landing/landing-page.tsx:488
 msgid "Passkey"
 msgstr "Pasallwedd"
 
-#: src/features/auth/sign-in/index.tsx:53
-#: src/features/landing/landing-page.tsx:249
+#: src/features/auth/sign-in/index.tsx:56
+#: src/features/landing/landing-page.tsx:255
 msgid "Passkey login cancelled"
 msgstr "Mewngofnodi pasallwedd wedi'i ganslo"
 
-#: src/features/auth/sign-in/index.tsx:51
-#: src/features/landing/landing-page.tsx:247
+#: src/features/auth/sign-in/index.tsx:54
+#: src/features/landing/landing-page.tsx:253
 msgid "Passkey login failed"
 msgstr "Methodd mewngofnodi pasallwedd"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:179
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Passkey login required"
 msgstr "Mae angen mewngofnodi pasallwedd"
 
@@ -966,38 +1031,42 @@ msgstr "Mae angen mewngofnodi pasallwedd"
 msgid "Passkey MFA not yet implemented"
 msgstr "Nid yw MFA pasallwedd wedi'i weithredu eto"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:394
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+msgid "Passphrase"
+msgstr "Ymadrodd cyfrinachol"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:448
 msgid "Paste the login code you received by email"
 msgstr "Gludwch y cod mewngofnodi a gawsoch trwy e-bost"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:60
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:65
 msgid "Peer IDs start with 12D3KooW and are 52 characters long"
 msgstr "Mae Peer IDs yn dechrau gyda 12D3KooW ac yn 52 nod o hyd"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:267
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Please check your authenticator app and try again."
 msgstr "Gwiriwch eich ap dilysu a rhowch gynnig arall arni."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:339
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Please check your authenticator code and try again."
 msgstr "Gwiriwch eich cod dilysu a rhowch gynnig arall arni."
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:362
+#: src/features/auth/sign-in/components/user-auth-form.tsx:416
 msgid "Please check your code and try again."
 msgstr "Gwiriwch eich cod a rhowch gynnig arall arni."
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
-#: src/features/auth/sign-in/components/user-auth-form.tsx:330
+#: src/features/auth/sign-in/components/user-auth-form.tsx:376
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Please check your codes and try again."
 msgstr "Gwiriwch eich codau a rhowch gynnig arall arni."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:345
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Please check your email and try again."
 msgstr "Gwiriwch eich e-bost a rhowch gynnig arall arni."
 
@@ -1006,15 +1075,15 @@ msgstr "Gwiriwch eich e-bost a rhowch gynnig arall arni."
 msgid "Please check your recovery code and try again."
 msgstr "Gwiriwch eich cod adfer a rhowch gynnig arall arni."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Please copy manually: {devCode}"
 msgstr "Copïwch â llaw: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:67
+#: src/features/auth/sign-in/components/user-auth-form.tsx:72
 msgid "Please enter a valid email"
 msgstr "Rhowch e-bost dilys"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:251
+#: src/features/auth/sign-in/components/user-auth-form.tsx:305
 msgid "Please enter your authenticator code"
 msgstr "Rhowch eich cod dilysu"
 
@@ -1026,9 +1095,10 @@ msgstr "Rhowch eich enw"
 msgid "Please enter your recovery code"
 msgstr "Rhowch eich cod adfer"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
-#: src/features/auth/sign-in/components/user-auth-form.tsx:235
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:420
 msgid "Please try again or contact support."
 msgstr "Rhowch gynnig arall arni neu cysylltwch â chymorth."
 
@@ -1036,7 +1106,7 @@ msgstr "Rhowch gynnig arall arni neu cysylltwch â chymorth."
 msgid "Please use another verification method."
 msgstr "Defnyddiwch ddull dilysu arall."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Defnyddiwch y botwm \"Mewngofnodi gyda phasallwedd\"."
 
@@ -1047,8 +1117,8 @@ msgstr "Delwedd flaenorol"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:24
 #: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:427
-#: src/features/landing/landing-page.tsx:524
+#: src/features/landing/landing-page.tsx:433
+#: src/features/landing/landing-page.tsx:538
 msgid "Privacy"
 msgstr "Preifatrwydd"
 
@@ -1073,7 +1143,7 @@ msgstr "Cyhoeddus"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Cyhoeddwch eich porthwyr cyfryngau cymdeithasol eich hun, dilynwch eraill, neu agreg porthwyr eraill gyda thagio AI a didoli ddewisol. Dilynwch yr hyn sy'n bwysig, hidlwch y sŵn."
 
-#: src/features/landing/landing-page.tsx:393
+#: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Yn barod i roi cynnig ar Mochi?"
 
@@ -1098,9 +1168,10 @@ msgstr "Yn eich ailgyfeirio i'r dangosfwrdd…"
 msgid "Reduce interest"
 msgstr "Lleihau diddordeb"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:357
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:411
 msgid "Registration disabled"
 msgstr "Cofrestru wedi'i analluogi"
 
@@ -1130,11 +1201,7 @@ msgstr "Tynnu mynediad?"
 msgid "Remove interest"
 msgstr "Tynnu diddordeb"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:80
-msgid "Replicate an existing account from another server"
-msgstr "Atgynhyrchu cyfrif sy'n bodoli o weinydd arall"
-
-#: src/features/landing/landing-page.tsx:175
+#: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Cais dyblygu wedi'i wrthod"
 
@@ -1146,9 +1213,13 @@ msgstr "Anfonwyd cais dyblygu at <0>{source_user}</0>. Cymeradwywch ef ar dudale
 msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
 msgstr "Anfonwyd cais dyblygu at y gweinydd ffynhonnell. Cymeradwywch ef ar dudalen gosodiadau'r gweinydd ffynhonnell i gwblhau'r dyblygu."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:213
 msgid "Replication signup failed"
 msgstr "Methodd y cofrestriad atgynhyrchu"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
+msgid "Required only if your backup includes private keys."
+msgstr "Dim ond os yw eich copi wrth gefn yn cynnwys allweddi preifat."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1158,6 +1229,15 @@ msgstr "Ailosod"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Ailosod yr holl osodiadau i'r gwerthoedd diofyn"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:169
+#: src/routes/restoring.tsx:106
+msgid "Restore failed"
+msgstr "Adfer wedi methu"
+
+#: src/routes/restoring.tsx:130
+msgid "Restoring your account"
+msgstr "Adfer eich cyfrif"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1247,8 +1327,8 @@ msgstr "Gweinydd"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
-#: src/features/landing/landing-page.tsx:419
-#: src/features/landing/landing-page.tsx:516
+#: src/features/landing/landing-page.tsx:425
+#: src/features/landing/landing-page.tsx:530
 msgid "Server rules"
 msgstr "Rheolau'r gweinydd"
 
@@ -1280,7 +1360,7 @@ msgstr "Bar ochr"
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Cofrestrwch a chreir eich nod Mochi eich hun. Mae eich data yn byw yno — nid ar weinydd rhywun arall."
 
-#: src/features/landing/landing-page.tsx:277
+#: src/features/landing/landing-page.tsx:283
 msgid "Sign up or log in"
 msgstr "Cofrestru neu fewngofnodi"
 
@@ -1309,7 +1389,7 @@ msgstr "Bach"
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Ni chwblhaodd rhai trosglwyddiadau ar y cynnig cyntaf. Byddant yn cael eu hailgeisio'n awtomatig."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:101
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:151
 msgid "Source server peer ID"
 msgstr "Peer ID y gweinydd ffynhonnell"
 
@@ -1370,8 +1450,8 @@ msgstr "Timau/Apiau"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:20
 #: ../../../lib/web/src/features/document/document-page.tsx:39
-#: src/features/landing/landing-page.tsx:423
-#: src/features/landing/landing-page.tsx:520
+#: src/features/landing/landing-page.tsx:429
+#: src/features/landing/landing-page.tsx:534
 msgid "Terms and conditions"
 msgstr "Telerau ac amodau"
 
@@ -1384,11 +1464,23 @@ msgstr "Mae'r cyfrif {0} hwnnw eisoes wedi'i gysylltu â defnyddiwr arall"
 msgid "That sign-in provider is not available"
 msgstr "Nid yw'r darparwr mewngofnodi hwnnw ar gael"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+msgid "The file may be damaged or have been modified."
+msgstr "Efallai fod y ffeil wedi'i difrodi neu ei newid."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+msgid "The passphrase you entered does not match the backup."
+msgstr "Nid yw'r ymadrodd cyfrinachol a roddoch yn cyfateb i'r copi wrth gefn."
+
 #: src/lib/oauth-errors.ts:11
 msgid "the provider"
 msgstr "y darparwr"
 
-#: src/features/landing/landing-page.tsx:176
+#: src/routes/restoring.tsx:109
+msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
+msgstr "Ni chwblhaodd yr adferiad. Efallai fod y ffeil wrth gefn wedi'i difrodi, yr ymadrodd cyfrinachol yn anghywir, neu fod y gweinydd wedi dod ar draws gwall."
+
+#: src/features/landing/landing-page.tsx:179
 msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
 msgstr "Wnaeth y gweinydd ffynhonnell ddim cymeradwyo'r cais, neu mae wedi dod i ben. Ceisiwch eto neu gofrestrwch yn lleol."
 
@@ -1399,6 +1491,10 @@ msgstr "Thema"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "Gosodiadau Thema"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+msgid "This backup was created by a newer version of Mochi. Update this server first."
+msgstr "Crëwyd y copi wrth gefn hwn gan fersiwn newydd o Mochi. Diweddarwch y gweinydd hwn yn gyntaf."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
@@ -1473,7 +1569,7 @@ msgstr "Heb ei neilltuo"
 msgid "Unauthorized Access"
 msgstr "Mynediad Heb Awdurdod"
 
-#: src/features/landing/landing-page.tsx:362
+#: src/features/landing/landing-page.tsx:368
 msgid "Under the hood"
 msgstr "O dan y caead"
 
@@ -1481,9 +1577,21 @@ msgstr "O dan y caead"
 msgid "United States"
 msgstr "Yr Unol Daleithiau"
 
+#: src/routes/restoring.tsx:51
+msgid "Unpacking your data"
+msgstr "Dadbacio eich data"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Heb ei ddilysu"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+msgid "Upload a .zip file exported from Mochi's data export."
+msgstr "Llwythwch ffeil .zip a allforigwyd o allforiad data Mochi."
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
+msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
+msgstr "Llwythwch becyn mudo (.zip) a allforigwyd o weinydd Mochi arall. Mae'r gweinydd yn adfer eich data yn lleol — nid oes angen i unrhyw weinydd arall fod ar-lein."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1493,7 +1601,7 @@ msgstr "Defnyddio cyfrif gwahanol"
 msgid "Use the apps"
 msgstr "Defnyddio'r apiau"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:50
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:55
 msgid "Use the form alice@example.com"
 msgstr "Defnyddiwch y ffurf alice@example.com"
 
@@ -1501,9 +1609,13 @@ msgstr "Defnyddiwch y ffurf alice@example.com"
 msgid "User"
 msgstr "Defnyddiwr"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:130
 msgid "Username on source server"
 msgstr "Enw defnyddiwr ar y gweinydd ffynhonnell"
+
+#: src/routes/restoring.tsx:49
+msgid "Validating backup"
+msgstr "Dilysu'r copi wrth gefn"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1514,7 +1626,7 @@ msgid "Verification code sent"
 msgstr "Cod dilysu wedi'i anfon"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
+#: src/features/auth/sign-in/components/user-auth-form.tsx:419
 msgid "Verification failed"
 msgstr "Dilysiad wedi methu"
 
@@ -1530,6 +1642,10 @@ msgstr "Dilysu cyfeiriad e-bost"
 #: src/features/auth/mfa/index.tsx:284
 msgid "Verify with passkey"
 msgstr "Dilysu â passkey"
+
+#: src/routes/restoring.tsx:50
+msgid "Verifying backup"
+msgstr "Gwirio'r copi wrth gefn"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx:63
 msgid "Video thumbnail"
@@ -1547,7 +1663,7 @@ msgstr "Gweld pob un"
 msgid "View all notifications"
 msgstr "Gweld pob hysbysiad"
 
-#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:414
 msgid "View source code"
 msgstr "Gweld y cod ffynhonnell"
 
@@ -1571,6 +1687,10 @@ msgstr "Dydd Mercher"
 msgid "Wikis"
 msgstr "Wicis"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Wrong passphrase"
+msgstr "Ymadrodd cyfrinachol anghywir"
+
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:38
 msgid "Your {0} email is not verified"
@@ -1582,11 +1702,11 @@ msgstr "Mae eich cyfrif wedi'i atal"
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Your account has been suspended."
 msgstr "Mae eich cyfrif wedi'i atal."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Mae eich cyfrif eisoes wedi'i atgynhyrchu yma. Mewngofnodwch yn lle hynny."
 
@@ -1594,17 +1714,25 @@ msgstr "Mae eich cyfrif eisoes wedi'i atgynhyrchu yma. Mewngofnodwch yn lle hynn
 msgid "Your account is being copied from the source server. Do not close this window."
 msgstr "Mae eich cyfrif yn cael ei gopïo o'r gweinydd ffynhonnell. Peidiwch â chau'r ffenestr hon."
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:123
+msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
+msgstr "Mae eich cyfrif yn cael ei gopïo'n fyw o weinydd sydd gennych fynediad ato eisoes. Mae'n rhaid i'r gweinydd ffynhonnell gymeradwyo'r cais cyn i'r trosglwyddiad ddechrau."
+
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "Mae angen passkey ar eich cyfrif i fewngofnodi"
 
-#: src/features/landing/landing-page.tsx:293
+#: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Eich apiau, eich llwyfan, eich rhwydwaith"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:197
+#: src/features/auth/sign-in/components/user-auth-form.tsx:251
 msgid "Your code is: {devCode}"
 msgstr "Eich cod yw: {devCode}"
+
+#: src/routes/restoring.tsx:133
+msgid "Your data is being restored from the backup. Do not close this window."
+msgstr "Mae eich data yn cael ei adfer o'r copi wrth gefn. Peidiwch â chau'r ffenestr hon."
 
 #: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"

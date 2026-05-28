@@ -53,7 +53,8 @@ msgstr "Juurdepääsu tase"
 msgid "Account added"
 msgstr "Konto lisatud"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Konto on juba selles serveris"
 
@@ -63,7 +64,7 @@ msgstr "Konto eemaldatud"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
+#: src/features/auth/sign-in/components/user-auth-form.tsx:407
 msgid "Account suspended"
 msgstr "Konto peatatud"
 
@@ -124,7 +125,7 @@ msgstr "Lisa vaade"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Kohanda välimust ja paigutust oma eelistuste järgi."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:74
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:79
 msgid "Advanced"
 msgstr "Täpsemalt"
 
@@ -140,6 +141,10 @@ msgstr "Kõik"
 #: src/lib/oauth-errors.ts:36
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Selle e-posti aadressiga konto on juba olemas. Logi esmalt sisse, seejärel seo {0} oma autentimisseadetes."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+msgid "An account with this identity already exists here."
+msgstr "Selle identiteediga konto on siin juba olemas."
 
 #: src/features/landing/landing-page.tsx:120
 msgid "App business logic"
@@ -162,12 +167,12 @@ msgid "authenticator code"
 msgstr "autentija kood"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:445
+#: src/features/auth/sign-in/components/user-auth-form.tsx:499
 msgid "Authenticator code"
 msgstr "Autentija kood"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:484
+#: src/features/auth/sign-in/components/user-auth-form.tsx:538
 msgid "Back"
 msgstr "Tagasi"
 
@@ -177,19 +182,39 @@ msgstr "Tagasi"
 msgid "Back to home"
 msgstr "Tagasi avalehele"
 
+#: src/routes/restoring.tsx:118
+msgid "Back to sign up"
+msgstr "Tagasi registreerumisele"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+msgid "Backup file"
+msgstr "Varundusfail"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+msgid "Backup file is corrupted"
+msgstr "Varundusfail on rikutud"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+msgid "Backup is too new"
+msgstr "Varukoopia on liiga uus"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Tõsta huvi"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:85
+msgid "Bring an existing account onto this server:"
+msgstr "Too olemasolev konto sellele serverile:"
 
 #: src/features/landing/landing-page.tsx:84
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Loo oma kogukonnale ühine, replitseeritud teadmistebaas. Sinu andmed jäävad alati sinu omaks."
 
-#: src/features/landing/landing-page.tsx:365
+#: src/features/landing/landing-page.tsx:371
 msgid "Built on solid foundations"
 msgstr "Ehitatud kindlatele alustele"
 
-#: src/features/landing/landing-page.tsx:305
+#: src/features/landing/landing-page.tsx:311
 msgid "Built-in apps"
 msgstr "Sisseehitatud rakendused"
 
@@ -220,15 +245,15 @@ msgstr "Muuda teavituse kategooriat"
 msgid "Chat"
 msgstr "Vestlus"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "Check the address after @ and try again."
 msgstr "Kontrollige aadressi pärast @-märki ja proovige uuesti."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Check the username before @ and try again."
 msgstr "Kontrollige kasutajanime enne @-märki ja proovige uuesti."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
 msgid "Check your email."
 msgstr "Kontrolli oma e-posti."
 
@@ -236,7 +261,12 @@ msgstr "Kontrolli oma e-posti."
 msgid "Checking every few seconds…"
 msgstr "Kontrollin iga paari sekundi tagant…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/routes/restoring.tsx:163
+msgid "Checking…"
+msgstr "Kontrollimine…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "Choose a different local email or log in instead."
 msgstr "Valige teine kohalik e-post või logige hoopis sisse."
 
@@ -299,11 +329,11 @@ msgstr "Sulge paneel"
 msgid "Close search"
 msgstr "Sulge otsing"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Code copied"
 msgstr "Kood kopeeritud"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:194
+#: src/features/auth/sign-in/components/user-auth-form.tsx:248
 msgid "Code sent."
 msgstr "Kood saadetud."
 
@@ -354,7 +384,7 @@ msgstr "Jätka"
 msgid "Copy"
 msgstr "Kopeeri"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:268
 msgid "Copy code"
 msgstr "Kopeeri kood"
 
@@ -368,15 +398,15 @@ msgstr "Tühistamine ebaõnnestus"
 msgid "Could not load this document. Please try again later."
 msgstr "Selle dokumendi laadimine ebaõnnestus. Palun proovi hiljem uuesti."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Could not reach the source server"
 msgstr "Lähteserverit ei õnnestunud kätte saada"
 
-#: src/features/landing/landing-page.tsx:208
+#: src/features/landing/landing-page.tsx:211
 msgid "Could not start sign-in"
 msgstr "Sisselogimise alustamine ebaõnnestus"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:406
 msgid "Create an account"
 msgstr "Loo konto"
 
@@ -444,11 +474,12 @@ msgstr "Suund"
 msgid "Displays the mobile sidebar."
 msgstr "Kuvab mobiilse külgriba."
 
-#: src/features/landing/landing-page.tsx:337
+#: src/features/landing/landing-page.tsx:343
 msgid "Distributed by design"
 msgstr "Disainilt hajus"
 
 #: src/routes/replicating.tsx:229
+#: src/routes/restoring.tsx:54
 msgid "Done"
 msgstr "Tehtud"
 
@@ -460,11 +491,12 @@ msgstr "Laadi alla"
 msgid "Dyslexia-friendly"
 msgstr "Düsleksiasõbralik"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:520
+#: src/features/auth/sign-in/components/user-auth-form.tsx:574
 msgid "Email"
 msgstr "E-post"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Email already in use"
 msgstr "E-post on juba kasutusel"
 
@@ -473,7 +505,7 @@ msgid "email code"
 msgstr "e-posti kood"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:472
 msgid "Email code"
 msgstr "E-posti kood"
 
@@ -481,7 +513,7 @@ msgstr "E-posti kood"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Sisesta kasutaja „{userEmail}“ taastekood sisselogimiseks"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:399
+#: src/features/auth/sign-in/components/user-auth-form.tsx:453
 msgid "Enter the code from your authenticator app"
 msgstr "Sisesta autentimisrakenduse kood"
 
@@ -494,11 +526,11 @@ msgstr "Sisesta {0}"
 msgid "Enter your {initial} and {last}"
 msgstr "Sisesta {initial} ja {last}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:389
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Enter your email code and authenticator code"
 msgstr "Sisesta e-posti kood ja autentija kood"
 
-#: src/features/landing/landing-page.tsx:308
+#: src/features/landing/landing-page.tsx:314
 msgid "Everything you need, nothing you don't control"
 msgstr "Kõik vajalik, mitte midagi sellist, mille üle sul kontrolli pole"
 
@@ -510,15 +542,19 @@ msgstr "Laienda külgriba"
 msgid "Extra large"
 msgstr "Eriti suur"
 
+#: src/routes/restoring.tsx:55
+msgid "Failed"
+msgstr "Ebaõnnestus"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "Konto lisamine ebaõnnestus"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:288
 msgid "Failed to continue"
 msgstr "Jätkamine ebaõnnestus"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:263
 msgid "Failed to copy code"
 msgstr "Koodi kopeerimine ebaõnnestus"
 
@@ -554,6 +590,10 @@ msgstr "Failid"
 msgid "Finish setting up your account"
 msgstr "Lõpeta konto seadistamine"
 
+#: src/routes/restoring.tsx:53
+msgid "Finishing up"
+msgstr "Lõpetamine"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
 msgstr "Hõljuv"
@@ -569,6 +609,14 @@ msgstr "Reede"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Saatja"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "From a backup file (restore)"
+msgstr "Varundusfailist (taastamine)"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "From another running server (replicate)"
+msgstr "Teiselt töötavalt serverilt (replikatsioon)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -627,7 +675,7 @@ msgstr "Avaleht"
 msgid "Hot"
 msgstr "Kuum"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:340
 msgid "How it works"
 msgstr "Kuidas see töötab"
 
@@ -647,7 +695,7 @@ msgstr "Sissevajutatud"
 msgid "Interests"
 msgstr "Huvid"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Invalid authenticator code"
 msgstr "Vigane autentija kood"
 
@@ -656,11 +704,11 @@ msgstr "Vigane autentija kood"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
-#: src/features/auth/sign-in/components/user-auth-form.tsx:361
+#: src/features/auth/sign-in/components/user-auth-form.tsx:338
+#: src/features/auth/sign-in/components/user-auth-form.tsx:346
+#: src/features/auth/sign-in/components/user-auth-form.tsx:375
+#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Invalid code"
 msgstr "Vigane kood"
 
@@ -670,7 +718,7 @@ msgid "Invalid recovery code"
 msgstr "Vigane taastekood"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:344
+#: src/features/auth/sign-in/components/user-auth-form.tsx:398
 msgid "Invalid verification code"
 msgstr "Vigane kinnituskood"
 
@@ -700,6 +748,10 @@ msgstr "Vasakult paremale"
 msgid "Light"
 msgstr "Hele"
 
+#: src/routes/restoring.tsx:52
+msgid "Linking your identity"
+msgstr "Identiteedi sidumine"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
 msgid "Load more"
 msgstr "Lae rohkem"
@@ -712,23 +764,23 @@ msgstr "Laadimine…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:473
+#: src/features/auth/sign-in/components/user-auth-form.tsx:527
 msgid "Log in"
 msgstr "Logi sisse"
 
-#: src/features/landing/landing-page.tsx:439
+#: src/features/landing/landing-page.tsx:445
 msgid "Log in to Mochi"
 msgstr "Logi Mochisse sisse"
 
-#: src/features/landing/landing-page.tsx:491
+#: src/features/landing/landing-page.tsx:499
 msgid "Log in with {label}"
 msgstr "Logi sisse: {label}"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:104
 msgid "Log in with passkey"
 msgstr "Logi sisse pääsuvõtmega"
 
-#: src/features/auth/sign-in/index.tsx:68
+#: src/features/auth/sign-in/index.tsx:71
 msgid "Log in with your email address"
 msgstr "Logi sisse oma e-posti aadressiga"
 
@@ -743,8 +795,8 @@ msgid "Log out"
 msgstr "Logi välja"
 
 #: src/features/auth/recovery/index.tsx:39
-#: src/features/auth/sign-in/index.tsx:38
-#: src/features/landing/landing-page.tsx:231
+#: src/features/auth/sign-in/index.tsx:41
+#: src/features/landing/landing-page.tsx:237
 msgid "Logged in"
 msgstr "Sisse logitud"
 
@@ -765,7 +817,7 @@ msgid "Login session expired, please try again"
 msgstr "Sisselogimissessioon aegus, palun proovi uuesti"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:495
+#: src/features/auth/sign-in/components/user-auth-form.tsx:549
 msgid "Lost access? Use a recovery code"
 msgstr "Kaotasid pääsu? Kasuta taastekoodi"
 
@@ -794,15 +846,15 @@ msgstr "Vahenda sõnumeid sõpradele individuaalselt või gruppides — peer-to-
 msgid "Metric"
 msgstr "Meetermõõdustik"
 
-#: src/features/landing/landing-page.tsx:311
+#: src/features/landing/landing-page.tsx:317
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi tarnitakse juba enam kui 20 rakendusega ja uusi lisandub regulaarselt. Suuremad rakendused on:"
 
-#: src/features/landing/landing-page.tsx:296
+#: src/features/landing/landing-page.tsx:302
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi on föderatiivne mitme kasutajaga platvorm hajutatud rakendustele. Igaüks saab oma serveri käivitada ja ühenduda Mochi võrgu mis tahes teise kasutajaga. Igaüks saab rakendusi luua ja avaldada."
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:374
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi on ehitatud järgmiste tehnoloogiatega:"
 
@@ -822,13 +874,14 @@ msgstr "Uus"
 msgid "New accounts are disabled on this server"
 msgstr "Uute kontode loomine on selles serveris keelatud"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:231
-#: src/features/auth/sign-in/components/user-auth-form.tsx:358
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "New user signup is disabled."
 msgstr "Uute kasutajate registreerimine on keelatud."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:533
+#: src/features/auth/sign-in/components/user-auth-form.tsx:587
 msgid "Next"
 msgstr "Edasi"
 
@@ -840,7 +893,11 @@ msgstr "Järgmine pilt"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Juurdepääsureegleid pole seadistatud. Lisa reeglid, et määrata, kes pääseb sellele ressursile ligi."
 
-#: src/features/landing/landing-page.tsx:340
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+msgid "No backup file selected"
+msgstr "Varundusfaili pole valitud"
+
+#: src/features/landing/landing-page.tsx:346
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Sinu andmeid ei hoia ükski keskserver. Iga Mochi sõlm on võrgus täisväärtuslik partner, suheldes teistega otse libp2p kaudu."
 
@@ -852,7 +909,7 @@ msgstr "Seotud kontosid pole"
 msgid "No groups available"
 msgstr "Saadaolevaid gruppe pole"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "No matching account on the source server"
 msgstr "Lähteserveris pole vastavat kontot"
 
@@ -887,9 +944,17 @@ msgstr "Kasutajaid ei leitud"
 msgid "None"
 msgstr "Puudub"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:100
+msgid "None — create a fresh account"
+msgstr "Mitte midagi — loo uus konto"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "Tavaline"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Not a migration bundle"
+msgstr "Pole migratsioonipakk"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -919,11 +984,11 @@ msgstr "Ava navigatsioonimenüü"
 msgid "Open theme settings"
 msgstr "Ava teema seaded"
 
-#: src/features/auth/sign-in/index.tsx:89
+#: src/features/auth/sign-in/index.tsx:94
 msgid "Or"
 msgstr "Või"
 
-#: src/features/landing/landing-page.tsx:464
+#: src/features/landing/landing-page.tsx:472
 msgid "Or log in with"
 msgstr "Või logi sisse rakendusega"
 
@@ -944,21 +1009,21 @@ msgid "passkey"
 msgstr "pääsuvõti"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:480
+#: src/features/landing/landing-page.tsx:488
 msgid "Passkey"
 msgstr "Pääsuvõti"
 
-#: src/features/auth/sign-in/index.tsx:53
-#: src/features/landing/landing-page.tsx:249
+#: src/features/auth/sign-in/index.tsx:56
+#: src/features/landing/landing-page.tsx:255
 msgid "Passkey login cancelled"
 msgstr "Pääsuvõtmega sisselogimine tühistatud"
 
-#: src/features/auth/sign-in/index.tsx:51
-#: src/features/landing/landing-page.tsx:247
+#: src/features/auth/sign-in/index.tsx:54
+#: src/features/landing/landing-page.tsx:253
 msgid "Passkey login failed"
 msgstr "Pääsuvõtmega sisselogimine ebaõnnestus"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:179
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Passkey login required"
 msgstr "Pääsuvõtmega sisselogimine on nõutav"
 
@@ -966,38 +1031,42 @@ msgstr "Pääsuvõtmega sisselogimine on nõutav"
 msgid "Passkey MFA not yet implemented"
 msgstr "Pääsuvõtme MFA pole veel teostatud"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:394
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+msgid "Passphrase"
+msgstr "Paroolifraas"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:448
 msgid "Paste the login code you received by email"
 msgstr "Kleebi e-postiga saadud sisselogimiskood"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:60
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:65
 msgid "Peer IDs start with 12D3KooW and are 52 characters long"
 msgstr "Peer ID-d algavad 12D3KooW-ga ja on 52 tähemärki pikad"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:267
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Please check your authenticator app and try again."
 msgstr "Kontrolli oma autentimisrakendust ja proovi uuesti."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:339
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Please check your authenticator code and try again."
 msgstr "Kontrolli oma autentimiskoodi ja proovi uuesti."
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:362
+#: src/features/auth/sign-in/components/user-auth-form.tsx:416
 msgid "Please check your code and try again."
 msgstr "Kontrolli oma koodi ja proovi uuesti."
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
-#: src/features/auth/sign-in/components/user-auth-form.tsx:330
+#: src/features/auth/sign-in/components/user-auth-form.tsx:376
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Please check your codes and try again."
 msgstr "Kontrolli oma koode ja proovi uuesti."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:345
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Please check your email and try again."
 msgstr "Kontrolli oma e-posti ja proovi uuesti."
 
@@ -1006,15 +1075,15 @@ msgstr "Kontrolli oma e-posti ja proovi uuesti."
 msgid "Please check your recovery code and try again."
 msgstr "Kontrolli oma taastekoodi ja proovi uuesti."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Please copy manually: {devCode}"
 msgstr "Palun kopeeri käsitsi: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:67
+#: src/features/auth/sign-in/components/user-auth-form.tsx:72
 msgid "Please enter a valid email"
 msgstr "Palun sisesta kehtiv e-post"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:251
+#: src/features/auth/sign-in/components/user-auth-form.tsx:305
 msgid "Please enter your authenticator code"
 msgstr "Palun sisesta oma autentimiskood"
 
@@ -1026,9 +1095,10 @@ msgstr "Palun sisesta oma nimi"
 msgid "Please enter your recovery code"
 msgstr "Palun sisesta oma taastekood"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
-#: src/features/auth/sign-in/components/user-auth-form.tsx:235
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:420
 msgid "Please try again or contact support."
 msgstr "Palun proovi uuesti või võta ühendust toega."
 
@@ -1036,7 +1106,7 @@ msgstr "Palun proovi uuesti või võta ühendust toega."
 msgid "Please use another verification method."
 msgstr "Palun kasuta muud kinnitusmeetodit."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Palun kasuta nuppu \"Logi sisse pääsuvõtmega\"."
 
@@ -1047,8 +1117,8 @@ msgstr "Eelmine pilt"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:24
 #: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:427
-#: src/features/landing/landing-page.tsx:524
+#: src/features/landing/landing-page.tsx:433
+#: src/features/landing/landing-page.tsx:538
 msgid "Privacy"
 msgstr "Privaatsus"
 
@@ -1073,7 +1143,7 @@ msgstr "Avalik"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Avalda omi sotsiaalmeedia vooge, jälgi teisi või koonda teiste vooge koos valikulise AI-sildistamise ja sortimisega. Jälgi olulist, filtreeri müra."
 
-#: src/features/landing/landing-page.tsx:393
+#: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Valmis Mochit proovima?"
 
@@ -1098,9 +1168,10 @@ msgstr "Ümbersuunamine töölauale…"
 msgid "Reduce interest"
 msgstr "Vähenda huvi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:357
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:411
 msgid "Registration disabled"
 msgstr "Registreerimine keelatud"
 
@@ -1130,11 +1201,7 @@ msgstr "Kas eemaldada juurdepääs?"
 msgid "Remove interest"
 msgstr "Eemalda huvi"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:80
-msgid "Replicate an existing account from another server"
-msgstr "Replikeeri olemasolev konto teisest serverist"
-
-#: src/features/landing/landing-page.tsx:175
+#: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Replikatsioonitaotlus tagasi lükatud"
 
@@ -1146,9 +1213,13 @@ msgstr "Replikatsioonipäring saadeti kasutajale <0>{source_user}</0>. Kinnitage
 msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
 msgstr "Replikatsioonipäring saadeti lähteserverile. Kinnitage see lähteserveri seadete lehel, et replikatsioon lõpule viia."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:213
 msgid "Replication signup failed"
 msgstr "Replikatsiooni teel registreerimine ebaõnnestus"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
+msgid "Required only if your backup includes private keys."
+msgstr "Nõutud ainult siis, kui varukoopia sisaldab privaatvõtmeid."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1158,6 +1229,15 @@ msgstr "Lähtesta"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Lähtesta kõik seaded vaikeväärtustele"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:169
+#: src/routes/restoring.tsx:106
+msgid "Restore failed"
+msgstr "Taastamine ebaõnnestus"
+
+#: src/routes/restoring.tsx:130
+msgid "Restoring your account"
+msgstr "Konto taastamine"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1247,8 +1327,8 @@ msgstr "Server"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
-#: src/features/landing/landing-page.tsx:419
-#: src/features/landing/landing-page.tsx:516
+#: src/features/landing/landing-page.tsx:425
+#: src/features/landing/landing-page.tsx:530
 msgid "Server rules"
 msgstr "Serveri reeglid"
 
@@ -1280,7 +1360,7 @@ msgstr "Külgriba"
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Registreeru ja sinu enda Mochi sõlm luuakse. Sinu andmed elavad seal — mitte kellegi teise serveris."
 
-#: src/features/landing/landing-page.tsx:277
+#: src/features/landing/landing-page.tsx:283
 msgid "Sign up or log in"
 msgstr "Registreeru või logi sisse"
 
@@ -1309,7 +1389,7 @@ msgstr "Väike"
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Mõned ülekanded ei lõpetatud esimesel katsel. Neid proovitakse automaatselt uuesti."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:101
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:151
 msgid "Source server peer ID"
 msgstr "Lähteserveri Peer ID"
 
@@ -1370,8 +1450,8 @@ msgstr "Tiimid/Rakendused"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:20
 #: ../../../lib/web/src/features/document/document-page.tsx:39
-#: src/features/landing/landing-page.tsx:423
-#: src/features/landing/landing-page.tsx:520
+#: src/features/landing/landing-page.tsx:429
+#: src/features/landing/landing-page.tsx:534
 msgid "Terms and conditions"
 msgstr "Tingimused"
 
@@ -1384,11 +1464,23 @@ msgstr "See {0} konto on juba lingitud teise kasutajaga"
 msgid "That sign-in provider is not available"
 msgstr "See sisselogimispakkuja pole saadaval"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+msgid "The file may be damaged or have been modified."
+msgstr "Fail võib olla kahjustatud või muudetud."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+msgid "The passphrase you entered does not match the backup."
+msgstr "Sisestatud paroolifraas ei ühti varukoopia omaga."
+
 #: src/lib/oauth-errors.ts:11
 msgid "the provider"
 msgstr "teenusepakkuja"
 
-#: src/features/landing/landing-page.tsx:176
+#: src/routes/restoring.tsx:109
+msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
+msgstr "Taastamine ei lõppenud. Varundusfail võib olla kahjustatud, paroolifraas võib olla vale või server sai vea."
+
+#: src/features/landing/landing-page.tsx:179
 msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
 msgstr "Lähteserver ei kiitnud taotlust heaks või see aegus. Proovi uuesti või registreeru kohapeal."
 
@@ -1399,6 +1491,10 @@ msgstr "Teema"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "Teema seaded"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+msgid "This backup was created by a newer version of Mochi. Update this server first."
+msgstr "See varukoopia loodi Mochi uuema versiooniga. Uuenda esmalt seda serverit."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
@@ -1473,7 +1569,7 @@ msgstr "Määramata"
 msgid "Unauthorized Access"
 msgstr "Volitamata juurdepääs"
 
-#: src/features/landing/landing-page.tsx:362
+#: src/features/landing/landing-page.tsx:368
 msgid "Under the hood"
 msgstr "Kapoti all"
 
@@ -1481,9 +1577,21 @@ msgstr "Kapoti all"
 msgid "United States"
 msgstr "Ameerika Ühendriigid"
 
+#: src/routes/restoring.tsx:51
+msgid "Unpacking your data"
+msgstr "Andmete lahtipakkimine"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Kontrollimata"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+msgid "Upload a .zip file exported from Mochi's data export."
+msgstr "Lae üles .zip-fail, mis on eksporditud Mochi andmeekspordist."
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
+msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
+msgstr "Lae üles migratsioonipakk (.zip), mis on eksporditud teisest Mochi serverist. Server taastab andmed lokaalselt — ükski teine server ei pea olema võrgus."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1493,7 +1601,7 @@ msgstr "Kasuta teist kontot"
 msgid "Use the apps"
 msgstr "Kasuta rakendusi"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:50
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:55
 msgid "Use the form alice@example.com"
 msgstr "Kasuta vormingut alice@example.com"
 
@@ -1501,9 +1609,13 @@ msgstr "Kasuta vormingut alice@example.com"
 msgid "User"
 msgstr "Kasutaja"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:130
 msgid "Username on source server"
 msgstr "Kasutajanimi lähteserveris"
+
+#: src/routes/restoring.tsx:49
+msgid "Validating backup"
+msgstr "Varukoopia valideerimine"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1514,7 +1626,7 @@ msgid "Verification code sent"
 msgstr "Kontrollkood saadetud"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
+#: src/features/auth/sign-in/components/user-auth-form.tsx:419
 msgid "Verification failed"
 msgstr "Kontrollimine ebaõnnestus"
 
@@ -1530,6 +1642,10 @@ msgstr "Kontrolli e-posti aadressi"
 #: src/features/auth/mfa/index.tsx:284
 msgid "Verify with passkey"
 msgstr "Kontrolli pääsuvõtmega"
+
+#: src/routes/restoring.tsx:50
+msgid "Verifying backup"
+msgstr "Varukoopia kontrollimine"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx:63
 msgid "Video thumbnail"
@@ -1547,7 +1663,7 @@ msgstr "Vaata kõiki"
 msgid "View all notifications"
 msgstr "Vaata kõiki teateid"
 
-#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:414
 msgid "View source code"
 msgstr "Vaata lähtekoodi"
 
@@ -1571,6 +1687,10 @@ msgstr "Kolmapäev"
 msgid "Wikis"
 msgstr "Wikid"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Wrong passphrase"
+msgstr "Vale paroolifraas"
+
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:38
 msgid "Your {0} email is not verified"
@@ -1582,11 +1702,11 @@ msgstr "Sinu konto on peatatud"
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Your account has been suspended."
 msgstr "Sinu konto on peatatud."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Teie konto on siin juba replikeeritud. Logige hoopis sisse."
 
@@ -1594,17 +1714,25 @@ msgstr "Teie konto on siin juba replikeeritud. Logige hoopis sisse."
 msgid "Your account is being copied from the source server. Do not close this window."
 msgstr "Teie kontot kopeeritakse lähteserverist. Ärge sulgege seda akent."
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:123
+msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
+msgstr "Sinu konto kopeeritakse reaalajas serverilt, millele sul on juba juurdepääs. Lähteserver peab päringu kinnitama enne ülekande algust."
+
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "Sinu konto vajab sisselogimiseks pääsuvõtit"
 
-#: src/features/landing/landing-page.tsx:293
+#: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Sinu rakendused, sinu platvorm, sinu võrk"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:197
+#: src/features/auth/sign-in/components/user-auth-form.tsx:251
 msgid "Your code is: {devCode}"
 msgstr "Sinu kood on: {devCode}"
+
+#: src/routes/restoring.tsx:133
+msgid "Your data is being restored from the backup. Do not close this window."
+msgstr "Sinu andmeid taastatakse varukoopias. Ära sulge seda akent."
 
 #: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"

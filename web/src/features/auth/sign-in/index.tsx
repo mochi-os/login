@@ -5,7 +5,7 @@ import { Key, Loader2 } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, toast, getErrorMessage, Button } from '@mochi/web'
 import { AuthLayout } from '../auth-layout'
 import { UserAuthForm } from './components/user-auth-form'
-import { ReplicateAdvanced } from './components/replicate-advanced'
+import { AccountSourceAdvanced, type AccountSource } from './components/account-source-advanced'
 import { passkeyLogin } from '@/services/auth-service'
 import { safeRedirect } from '@/lib/redirect'
 import { authApi } from '@/api/auth'
@@ -17,8 +17,11 @@ export function SignIn() {
   const [step, setStep] = useState<'email' | 'verification'>('email')
   const [passkeyEnabled, setPasskeyEnabled] = useState(false)
   const [isPasskeyLoading, setIsPasskeyLoading] = useState(false)
+  const [accountSource, setAccountSource] = useState<AccountSource>('none')
   const [replicateSourceUsername, setReplicateSourceUsername] = useState('')
   const [replicateSourcePeer, setReplicateSourcePeer] = useState('')
+  const [restoreBundle, setRestoreBundle] = useState<File | null>(null)
+  const [restorePassphrase, setRestorePassphrase] = useState('')
 
   useEffect(() => {
     authApi.getMethods().then((methods) => {
@@ -75,8 +78,10 @@ export function SignIn() {
             step={step}
             setStep={setStep}
             onPasskeyLogin={handlePasskeyLogin}
-            replicateSourceUsername={replicateSourceUsername}
-            replicateSourcePeer={replicateSourcePeer}
+            replicateSourceUsername={accountSource === 'replicate' ? replicateSourceUsername : ''}
+            replicateSourcePeer={accountSource === 'replicate' ? replicateSourcePeer : ''}
+            restoreBundle={accountSource === 'restore' ? restoreBundle : null}
+            restorePassphrase={accountSource === 'restore' ? restorePassphrase : ''}
           />
           {passkeyEnabled && step === 'email' && (
             <>
@@ -106,11 +111,17 @@ export function SignIn() {
             </>
           )}
           {step === 'email' && (
-            <ReplicateAdvanced
-              username={replicateSourceUsername}
-              onUsernameChange={setReplicateSourceUsername}
-              peer={replicateSourcePeer}
-              onPeerChange={setReplicateSourcePeer}
+            <AccountSourceAdvanced
+              source={accountSource}
+              onSourceChange={setAccountSource}
+              replicateUsername={replicateSourceUsername}
+              onReplicateUsernameChange={setReplicateSourceUsername}
+              replicatePeer={replicateSourcePeer}
+              onReplicatePeerChange={setReplicateSourcePeer}
+              restoreBundle={restoreBundle}
+              onRestoreBundleChange={setRestoreBundle}
+              restorePassphrase={restorePassphrase}
+              onRestorePassphraseChange={setRestorePassphrase}
               disabled={isPasskeyLoading}
             />
           )}

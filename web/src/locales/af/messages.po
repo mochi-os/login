@@ -53,7 +53,8 @@ msgstr "Toegangsvlak"
 msgid "Account added"
 msgstr "Rekening bygevoeg"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Rekening reeds op hierdie bediener"
 
@@ -63,7 +64,7 @@ msgstr "Rekening verwyder"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
+#: src/features/auth/sign-in/components/user-auth-form.tsx:407
 msgid "Account suspended"
 msgstr "Rekening opgeskort"
 
@@ -124,7 +125,7 @@ msgstr "Voeg aansig by"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Pas die voorkoms en uitleg aan om by jou voorkeure te pas."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:74
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:79
 msgid "Advanced"
 msgstr "Gevorderd"
 
@@ -140,6 +141,10 @@ msgstr "Alle"
 #: src/lib/oauth-errors.ts:36
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "'n Rekening met daardie e-pos bestaan reeds. Meld eers aan, koppel dan {0} vanuit jou stawingsinstellings."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+msgid "An account with this identity already exists here."
+msgstr "'n Rekening met hierdie identiteit bestaan reeds hier."
 
 #: src/features/landing/landing-page.tsx:120
 msgid "App business logic"
@@ -162,12 +167,12 @@ msgid "authenticator code"
 msgstr "stawerkode"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:445
+#: src/features/auth/sign-in/components/user-auth-form.tsx:499
 msgid "Authenticator code"
 msgstr "Verifikasiekode"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:484
+#: src/features/auth/sign-in/components/user-auth-form.tsx:538
 msgid "Back"
 msgstr "Terug"
 
@@ -177,19 +182,39 @@ msgstr "Terug"
 msgid "Back to home"
 msgstr "Terug na tuis"
 
+#: src/routes/restoring.tsx:118
+msgid "Back to sign up"
+msgstr "Terug na registrasie"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+msgid "Backup file"
+msgstr "Rugsteunlêer"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+msgid "Backup file is corrupted"
+msgstr "Rugsteunlêer is beskadig"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+msgid "Backup is too new"
+msgstr "Rugsteun is te nuut"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Versterk belangstelling"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:85
+msgid "Bring an existing account onto this server:"
+msgstr "'n Bestaande rekening na hierdie bediener bring:"
 
 #: src/features/landing/landing-page.tsx:84
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Bou 'n samewerkende, gerepliseerde kennisbasis vir jou gemeenskap. Jou data is altyd joune."
 
-#: src/features/landing/landing-page.tsx:365
+#: src/features/landing/landing-page.tsx:371
 msgid "Built on solid foundations"
 msgstr "Gebou op stewige fondamente"
 
-#: src/features/landing/landing-page.tsx:305
+#: src/features/landing/landing-page.tsx:311
 msgid "Built-in apps"
 msgstr "Ingeboude apps"
 
@@ -220,15 +245,15 @@ msgstr "Verander kennisgewingkategorie"
 msgid "Chat"
 msgstr "Klets"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "Check the address after @ and try again."
 msgstr "Kontroleer die adres na @ en probeer weer."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Check the username before @ and try again."
 msgstr "Kontroleer die gebruikersnaam voor @ en probeer weer."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
 msgid "Check your email."
 msgstr "Kontroleer jou e-pos."
 
@@ -236,7 +261,12 @@ msgstr "Kontroleer jou e-pos."
 msgid "Checking every few seconds…"
 msgstr "Kontroleer elke paar sekondes…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/routes/restoring.tsx:163
+msgid "Checking…"
+msgstr "Besig om te kontroleer…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "Choose a different local email or log in instead."
 msgstr "Kies 'n ander plaaslike e-pos of meld eerder aan."
 
@@ -299,11 +329,11 @@ msgstr "Sluit paneel"
 msgid "Close search"
 msgstr "Sluit soektog"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Code copied"
 msgstr "Kode gekopieer"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:194
+#: src/features/auth/sign-in/components/user-auth-form.tsx:248
 msgid "Code sent."
 msgstr "Kode gestuur."
 
@@ -354,7 +384,7 @@ msgstr "Gaan voort"
 msgid "Copy"
 msgstr "Kopieer"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:268
 msgid "Copy code"
 msgstr "Kopieer kode"
 
@@ -368,15 +398,15 @@ msgstr "Kon nie kanselleer nie"
 msgid "Could not load this document. Please try again later."
 msgstr "Kon nie hierdie dokument laai nie. Probeer asseblief later weer."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Could not reach the source server"
 msgstr "Kon nie die bronbediener bereik nie"
 
-#: src/features/landing/landing-page.tsx:208
+#: src/features/landing/landing-page.tsx:211
 msgid "Could not start sign-in"
 msgstr "Kon nie aanmelding begin nie"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:406
 msgid "Create an account"
 msgstr "Skep 'n rekening"
 
@@ -444,11 +474,12 @@ msgstr "Rigting"
 msgid "Displays the mobile sidebar."
 msgstr "Vertoon die mobiele sybalk."
 
-#: src/features/landing/landing-page.tsx:337
+#: src/features/landing/landing-page.tsx:343
 msgid "Distributed by design"
 msgstr "Verspreid van ontwerp af"
 
 #: src/routes/replicating.tsx:229
+#: src/routes/restoring.tsx:54
 msgid "Done"
 msgstr "Klaar"
 
@@ -460,11 +491,12 @@ msgstr "Laai af"
 msgid "Dyslexia-friendly"
 msgstr "Diksleksie-vriendelik"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:520
+#: src/features/auth/sign-in/components/user-auth-form.tsx:574
 msgid "Email"
 msgstr "E-pos"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Email already in use"
 msgstr "E-pos word reeds gebruik"
 
@@ -473,7 +505,7 @@ msgid "email code"
 msgstr "e-poskode"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:472
 msgid "Email code"
 msgstr "E-poskode"
 
@@ -481,7 +513,7 @@ msgstr "E-poskode"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Voer 'n herstelkode in vir \"{userEmail}\" om aan te meld"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:399
+#: src/features/auth/sign-in/components/user-auth-form.tsx:453
 msgid "Enter the code from your authenticator app"
 msgstr "Tik die kode van jou verifiëerder-toepassing in"
 
@@ -494,11 +526,11 @@ msgstr "Voer jou {0} in"
 msgid "Enter your {initial} and {last}"
 msgstr "Voer jou {initial} en {last} in"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:389
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Enter your email code and authenticator code"
 msgstr "Tik jou e-poskode en verifiëerderkode in"
 
-#: src/features/landing/landing-page.tsx:308
+#: src/features/landing/landing-page.tsx:314
 msgid "Everything you need, nothing you don't control"
 msgstr "Alles wat jy nodig het, niks wat jy nie beheer nie"
 
@@ -510,15 +542,19 @@ msgstr "Brei sybalk uit"
 msgid "Extra large"
 msgstr "Ekstra groot"
 
+#: src/routes/restoring.tsx:55
+msgid "Failed"
+msgstr "Misluk"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "Kon nie rekening byvoeg nie"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:288
 msgid "Failed to continue"
 msgstr "Kon nie voortgaan nie"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:263
 msgid "Failed to copy code"
 msgstr "Kon nie kode kopieer nie"
 
@@ -554,6 +590,10 @@ msgstr "Lêers"
 msgid "Finish setting up your account"
 msgstr "Voltooi die opstel van jou rekening"
 
+#: src/routes/restoring.tsx:53
+msgid "Finishing up"
+msgstr "Besig om af te handel"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
 msgstr "Drywend"
@@ -569,6 +609,14 @@ msgstr "Vrydag"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Van"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "From a backup file (restore)"
+msgstr "Uit 'n rugsteunlêer (herste)"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "From another running server (replicate)"
+msgstr "Van 'n ander aktiewe bediener (repliseer)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -627,7 +675,7 @@ msgstr "Tuis"
 msgid "Hot"
 msgstr "Warm"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:340
 msgid "How it works"
 msgstr "Hoe dit werk"
 
@@ -647,7 +695,7 @@ msgstr "Ingebed"
 msgid "Interests"
 msgstr "Belange"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Invalid authenticator code"
 msgstr "Ongeldige verifiëerderkode"
 
@@ -656,11 +704,11 @@ msgstr "Ongeldige verifiëerderkode"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
-#: src/features/auth/sign-in/components/user-auth-form.tsx:361
+#: src/features/auth/sign-in/components/user-auth-form.tsx:338
+#: src/features/auth/sign-in/components/user-auth-form.tsx:346
+#: src/features/auth/sign-in/components/user-auth-form.tsx:375
+#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Invalid code"
 msgstr "Ongeldige kode"
 
@@ -670,7 +718,7 @@ msgid "Invalid recovery code"
 msgstr "Ongeldige herstelkode"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:344
+#: src/features/auth/sign-in/components/user-auth-form.tsx:398
 msgid "Invalid verification code"
 msgstr "Ongeldige verifikasiekode"
 
@@ -700,6 +748,10 @@ msgstr "Links na regs"
 msgid "Light"
 msgstr "Lig"
 
+#: src/routes/restoring.tsx:52
+msgid "Linking your identity"
+msgstr "Besig om jou identiteit te koppel"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
 msgid "Load more"
 msgstr "Laai meer"
@@ -712,23 +764,23 @@ msgstr "Laai…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:473
+#: src/features/auth/sign-in/components/user-auth-form.tsx:527
 msgid "Log in"
 msgstr "Meld aan"
 
-#: src/features/landing/landing-page.tsx:439
+#: src/features/landing/landing-page.tsx:445
 msgid "Log in to Mochi"
 msgstr "Meld aan by Mochi"
 
-#: src/features/landing/landing-page.tsx:491
+#: src/features/landing/landing-page.tsx:499
 msgid "Log in with {label}"
 msgstr "Meld aan met {label}"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:104
 msgid "Log in with passkey"
 msgstr "Meld aan met wagwoordsleutel"
 
-#: src/features/auth/sign-in/index.tsx:68
+#: src/features/auth/sign-in/index.tsx:71
 msgid "Log in with your email address"
 msgstr "Meld aan met jou e-posadres"
 
@@ -743,8 +795,8 @@ msgid "Log out"
 msgstr "Meld af"
 
 #: src/features/auth/recovery/index.tsx:39
-#: src/features/auth/sign-in/index.tsx:38
-#: src/features/landing/landing-page.tsx:231
+#: src/features/auth/sign-in/index.tsx:41
+#: src/features/landing/landing-page.tsx:237
 msgid "Logged in"
 msgstr "Aangemeld"
 
@@ -765,7 +817,7 @@ msgid "Login session expired, please try again"
 msgstr "Aanmeldsessie het verstryk, probeer asseblief weer"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:495
+#: src/features/auth/sign-in/components/user-auth-form.tsx:549
 msgid "Lost access? Use a recovery code"
 msgstr "Toegang verloor? Gebruik 'n herstelkode"
 
@@ -794,15 +846,15 @@ msgstr "Stuur boodskappe aan jou vriende, individueel of in groepe, peer-to-peer
 msgid "Metric"
 msgstr "Metriek"
 
-#: src/features/landing/landing-page.tsx:311
+#: src/features/landing/landing-page.tsx:317
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi word reeds met meer as 20 programme uitgereik, en meer word gereeld bygevoeg. Hoofprogramme sluit in:"
 
-#: src/features/landing/landing-page.tsx:296
+#: src/features/landing/landing-page.tsx:302
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi is 'n gefedereerde, multi-gebruiker platform vir verspreide programme. Enigiemand kan hul eie bediener bedryf en aan enige ander gebruiker op die Mochi-netwerk koppel. Enigiemand kan programme skep en publiseer."
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:374
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi is gebou met die volgende tegnologieë:"
 
@@ -822,13 +874,14 @@ msgstr "Nuut"
 msgid "New accounts are disabled on this server"
 msgstr "Nuwe rekeninge is gedeaktiveer op hierdie bediener"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:231
-#: src/features/auth/sign-in/components/user-auth-form.tsx:358
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "New user signup is disabled."
 msgstr "Nuwe gebruikerregistrasie is gedeaktiveer."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:533
+#: src/features/auth/sign-in/components/user-auth-form.tsx:587
 msgid "Next"
 msgstr "Volgende"
 
@@ -840,7 +893,11 @@ msgstr "Volgende prent"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Geen toegangsreëls gekonfigureer nie. Voeg reëls by om te beheer wie toegang tot hierdie hulpbron het."
 
-#: src/features/landing/landing-page.tsx:340
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+msgid "No backup file selected"
+msgstr "Geen rugsteunlêer gekies nie"
+
+#: src/features/landing/landing-page.tsx:346
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Geen sentrale bediener hou jou data nie. Elke Mochi-knoop is 'n volwaardige eweknie in die netwerk en kommunikeer direk met ander via libp2p."
 
@@ -852,7 +909,7 @@ msgstr "Geen gekoppelde rekeninge nie"
 msgid "No groups available"
 msgstr "Geen groepe beskikbaar nie"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "No matching account on the source server"
 msgstr "Geen ooreenstemmende rekening op die bronbediener nie"
 
@@ -887,9 +944,17 @@ msgstr "Geen gebruikers gevind nie"
 msgid "None"
 msgstr "Geen"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:100
+msgid "None — create a fresh account"
+msgstr "Geen — skep 'n nuwe rekening"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "Normaal"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Not a migration bundle"
+msgstr "Nie 'n migrasiepakket nie"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -919,11 +984,11 @@ msgstr "Maak navigasie-kieslys oop"
 msgid "Open theme settings"
 msgstr "Maak tema-instellings oop"
 
-#: src/features/auth/sign-in/index.tsx:89
+#: src/features/auth/sign-in/index.tsx:94
 msgid "Or"
 msgstr "Of"
 
-#: src/features/landing/landing-page.tsx:464
+#: src/features/landing/landing-page.tsx:472
 msgid "Or log in with"
 msgstr "Of meld aan met"
 
@@ -944,21 +1009,21 @@ msgid "passkey"
 msgstr "wagsleutel"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:480
+#: src/features/landing/landing-page.tsx:488
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/index.tsx:53
-#: src/features/landing/landing-page.tsx:249
+#: src/features/auth/sign-in/index.tsx:56
+#: src/features/landing/landing-page.tsx:255
 msgid "Passkey login cancelled"
 msgstr "Passkey-aanmelding gekanselleer"
 
-#: src/features/auth/sign-in/index.tsx:51
-#: src/features/landing/landing-page.tsx:247
+#: src/features/auth/sign-in/index.tsx:54
+#: src/features/landing/landing-page.tsx:253
 msgid "Passkey login failed"
 msgstr "Passkey-aanmelding het misluk"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:179
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Passkey login required"
 msgstr "Passkey-aanmelding word vereis"
 
@@ -966,38 +1031,42 @@ msgstr "Passkey-aanmelding word vereis"
 msgid "Passkey MFA not yet implemented"
 msgstr "Passkey MFA nog nie geïmplementeer nie"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:394
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+msgid "Passphrase"
+msgstr "Wagfrase"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:448
 msgid "Paste the login code you received by email"
 msgstr "Plak die aanmeldkode wat jy per e-pos ontvang het"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:60
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:65
 msgid "Peer IDs start with 12D3KooW and are 52 characters long"
 msgstr "Peer-ID's begin met 12D3KooW en is 52 karakters lank"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:267
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Please check your authenticator app and try again."
 msgstr "Kontroleer jou stawerprogram en probeer weer."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:339
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Please check your authenticator code and try again."
 msgstr "Kontroleer jou stawerkode en probeer weer."
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:362
+#: src/features/auth/sign-in/components/user-auth-form.tsx:416
 msgid "Please check your code and try again."
 msgstr "Kontroleer jou kode en probeer weer."
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
-#: src/features/auth/sign-in/components/user-auth-form.tsx:330
+#: src/features/auth/sign-in/components/user-auth-form.tsx:376
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Please check your codes and try again."
 msgstr "Kontroleer jou kodes en probeer weer."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:345
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Please check your email and try again."
 msgstr "Kontroleer jou e-pos en probeer weer."
 
@@ -1006,15 +1075,15 @@ msgstr "Kontroleer jou e-pos en probeer weer."
 msgid "Please check your recovery code and try again."
 msgstr "Kontroleer asseblief jou herstelkode en probeer weer."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Please copy manually: {devCode}"
 msgstr "Kopieer asseblief handmatig: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:67
+#: src/features/auth/sign-in/components/user-auth-form.tsx:72
 msgid "Please enter a valid email"
 msgstr "Voer asseblief 'n geldige e-pos in"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:251
+#: src/features/auth/sign-in/components/user-auth-form.tsx:305
 msgid "Please enter your authenticator code"
 msgstr "Voer asseblief jou verifikasiekode in"
 
@@ -1026,9 +1095,10 @@ msgstr "Voer asseblief jou naam in"
 msgid "Please enter your recovery code"
 msgstr "Voer asseblief jou herstelkode in"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
-#: src/features/auth/sign-in/components/user-auth-form.tsx:235
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:420
 msgid "Please try again or contact support."
 msgstr "Probeer asseblief weer of kontak ondersteuning."
 
@@ -1036,7 +1106,7 @@ msgstr "Probeer asseblief weer of kontak ondersteuning."
 msgid "Please use another verification method."
 msgstr "Gebruik asseblief 'n ander verifikasiemetode."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Gebruik asseblief die \"Meld aan met passkey\"-knoppie."
 
@@ -1047,8 +1117,8 @@ msgstr "Vorige prent"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:24
 #: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:427
-#: src/features/landing/landing-page.tsx:524
+#: src/features/landing/landing-page.tsx:433
+#: src/features/landing/landing-page.tsx:538
 msgid "Privacy"
 msgstr "Privaatheid"
 
@@ -1073,7 +1143,7 @@ msgstr "Publiek"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Publiseer jou eie sosialemedia-feeds, volg ander, of versamel ander feeds met opsionele KI-etikettering en sortering. Volg wat saak maak, filter die geraas."
 
-#: src/features/landing/landing-page.tsx:393
+#: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Gereed om Mochi te probeer?"
 
@@ -1098,9 +1168,10 @@ msgstr "Stuur jou na die dashbord…"
 msgid "Reduce interest"
 msgstr "Verminder belangstelling"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:357
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:411
 msgid "Registration disabled"
 msgstr "Registrasie gedeaktiveer"
 
@@ -1130,11 +1201,7 @@ msgstr "Verwyder toegang?"
 msgid "Remove interest"
 msgstr "Verwyder belangstelling"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:80
-msgid "Replicate an existing account from another server"
-msgstr "Repliseer 'n bestaande rekening vanaf 'n ander bediener"
-
-#: src/features/landing/landing-page.tsx:175
+#: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Replikasieversoek geweier"
 
@@ -1146,9 +1213,13 @@ msgstr "Replikasieversoek gestuur na <0>{source_user}</0>. Keur dit goed op die 
 msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
 msgstr "Replikasieversoek gestuur na die bronbediener. Keur dit goed op die bronbediener se instellingsbladsy om replikasie te voltooi."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:213
 msgid "Replication signup failed"
 msgstr "Replikasie-aanmelding het misluk"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
+msgid "Required only if your backup includes private keys."
+msgstr "Slegs nodig as jou rugsteun privaat sleutels insluit."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1158,6 +1229,15 @@ msgstr "Stel terug"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Stel alle instellings terug na verstekwaardes"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:169
+#: src/routes/restoring.tsx:106
+msgid "Restore failed"
+msgstr "Herstel misluk"
+
+#: src/routes/restoring.tsx:130
+msgid "Restoring your account"
+msgstr "Besig om jou rekening te herstel"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1247,8 +1327,8 @@ msgstr "Bediener"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
-#: src/features/landing/landing-page.tsx:419
-#: src/features/landing/landing-page.tsx:516
+#: src/features/landing/landing-page.tsx:425
+#: src/features/landing/landing-page.tsx:530
 msgid "Server rules"
 msgstr "Bediener-reëls"
 
@@ -1280,7 +1360,7 @@ msgstr "Sybalk"
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Registreer en jou eie Mochi-knooppunt word geskep. Jou data leef daar — nie op iemand anders se bediener nie."
 
-#: src/features/landing/landing-page.tsx:277
+#: src/features/landing/landing-page.tsx:283
 msgid "Sign up or log in"
 msgstr "Registreer of meld aan"
 
@@ -1309,7 +1389,7 @@ msgstr "Klein"
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Sommige oordragte het nie met die eerste poging voltooi nie. Hulle sal outomaties hervat word."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:101
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:151
 msgid "Source server peer ID"
 msgstr "Bron-bediener-peer-ID"
 
@@ -1370,8 +1450,8 @@ msgstr "Spanne/Programme"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:20
 #: ../../../lib/web/src/features/document/document-page.tsx:39
-#: src/features/landing/landing-page.tsx:423
-#: src/features/landing/landing-page.tsx:520
+#: src/features/landing/landing-page.tsx:429
+#: src/features/landing/landing-page.tsx:534
 msgid "Terms and conditions"
 msgstr "Bepalings en voorwaardes"
 
@@ -1384,11 +1464,23 @@ msgstr "Daardie {0}-rekening is reeds aan 'n ander gebruiker gekoppel"
 msgid "That sign-in provider is not available"
 msgstr "Daardie aanmeldingverskaffer is nie beskikbaar nie"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+msgid "The file may be damaged or have been modified."
+msgstr "Die lêer is moontlik beskadig of gewysig."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+msgid "The passphrase you entered does not match the backup."
+msgstr "Die wagfrase wat jy ingevoer het, stem nie ooreen met die rugsteun nie."
+
 #: src/lib/oauth-errors.ts:11
 msgid "the provider"
 msgstr "die verskaffer"
 
-#: src/features/landing/landing-page.tsx:176
+#: src/routes/restoring.tsx:109
+msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
+msgstr "Die herstel het nie voltooi nie. Die rugsteunlêer is moontlik beskadig, die wagfrase is moontlik verkeerd, of die bediener het 'n fout teëgekom."
+
+#: src/features/landing/landing-page.tsx:179
 msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
 msgstr "Die bron-bediener het die versoek nie goedgekeur nie, of dit het verstryk. Probeer weer of teken plaaslik aan."
 
@@ -1399,6 +1491,10 @@ msgstr "Tema"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "Tema-instellings"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+msgid "This backup was created by a newer version of Mochi. Update this server first."
+msgstr "Hierdie rugsteun is geskep deur 'n nuwer weergawe van Mochi. Dateer eers hierdie bediener op."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
@@ -1473,7 +1569,7 @@ msgstr "Nie toegewys nie"
 msgid "Unauthorized Access"
 msgstr "Nie-toegelate toegang"
 
-#: src/features/landing/landing-page.tsx:362
+#: src/features/landing/landing-page.tsx:368
 msgid "Under the hood"
 msgstr "Onder die enjinkap"
 
@@ -1481,9 +1577,21 @@ msgstr "Onder die enjinkap"
 msgid "United States"
 msgstr "Verenigde State"
 
+#: src/routes/restoring.tsx:51
+msgid "Unpacking your data"
+msgstr "Besig om jou data uit te pak"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Ongeverifieer"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+msgid "Upload a .zip file exported from Mochi's data export."
+msgstr "Laai 'n .zip-lêer op wat uit Mochi se data-uitvoer gestuur is."
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
+msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
+msgstr "Laai 'n migrasiepakket (.zip) op wat van 'n ander Mochi-bediener gestuur is. Die bediener herstel jou data plaaslik — geen ander bediener hoef aanlyn te wees nie."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1493,7 +1601,7 @@ msgstr "Gebruik 'n ander rekening"
 msgid "Use the apps"
 msgstr "Gebruik die programme"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:50
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:55
 msgid "Use the form alice@example.com"
 msgstr "Gebruik die vorm alice@example.com"
 
@@ -1501,9 +1609,13 @@ msgstr "Gebruik die vorm alice@example.com"
 msgid "User"
 msgstr "Gebruiker"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:130
 msgid "Username on source server"
 msgstr "Gebruikernaam op bron-bediener"
+
+#: src/routes/restoring.tsx:49
+msgid "Validating backup"
+msgstr "Besig om rugsteun te valideer"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1514,7 +1626,7 @@ msgid "Verification code sent"
 msgstr "Verifikasiekode gestuur"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
+#: src/features/auth/sign-in/components/user-auth-form.tsx:419
 msgid "Verification failed"
 msgstr "Verifikasie het misluk"
 
@@ -1530,6 +1642,10 @@ msgstr "Verifieer e-posadres"
 #: src/features/auth/mfa/index.tsx:284
 msgid "Verify with passkey"
 msgstr "Verifieer met wagsleutel"
+
+#: src/routes/restoring.tsx:50
+msgid "Verifying backup"
+msgstr "Besig om rugsteun te verifieer"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx:63
 msgid "Video thumbnail"
@@ -1547,7 +1663,7 @@ msgstr "Bekyk alles"
 msgid "View all notifications"
 msgstr "Bekyk alle kennisgewings"
 
-#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:414
 msgid "View source code"
 msgstr "Bekyk bronkode"
 
@@ -1571,6 +1687,10 @@ msgstr "Woensdag"
 msgid "Wikis"
 msgstr "Wiki's"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Wrong passphrase"
+msgstr "Verkeerde wagfrase"
+
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:38
 msgid "Your {0} email is not verified"
@@ -1582,11 +1702,11 @@ msgstr "Jou rekening is opgeskort"
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Your account has been suspended."
 msgstr "Jou rekening is opgeskort."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Jou rekening word reeds hier gerepliseer. Meld eerder aan."
 
@@ -1594,17 +1714,25 @@ msgstr "Jou rekening word reeds hier gerepliseer. Meld eerder aan."
 msgid "Your account is being copied from the source server. Do not close this window."
 msgstr "Jou rekening word vanaf die bronbediener gekopieer. Moenie hierdie venster toemaak nie."
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:123
+msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
+msgstr "Jou rekening word lewendig gekopieer van 'n bediener waartoe jy reeds toegang het. Die bronbediener moet die versoek goedkeur voordat die oordrag begin."
+
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "Jou rekening vereis 'n wagsleutel om aan te meld"
 
-#: src/features/landing/landing-page.tsx:293
+#: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Jou programme, jou platform, jou netwerk"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:197
+#: src/features/auth/sign-in/components/user-auth-form.tsx:251
 msgid "Your code is: {devCode}"
 msgstr "Jou kode is: {devCode}"
+
+#: src/routes/restoring.tsx:133
+msgid "Your data is being restored from the backup. Do not close this window."
+msgstr "Jou data word uit die rugsteun herstel. Moenie hierdie venster toemaak nie."
 
 #: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"

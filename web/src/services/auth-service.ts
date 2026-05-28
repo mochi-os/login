@@ -112,6 +112,30 @@ export const signupReplicate = async (
   return response
 }
 
+export const signupRestore = async (
+  email: string,
+  passphrase: string,
+  bundle: File,
+): Promise<{ status: string; uid: string }> => {
+  const form = new FormData()
+  form.append('email', email)
+  form.append('passphrase', passphrase)
+  form.append('bundle', bundle)
+  const response = await fetch(endpoints.auth.restore, {
+    method: 'POST',
+    body: form,
+    credentials: 'same-origin',
+  })
+  if (!response.ok) {
+    const data = await response.json().catch(() => ({}))
+    const err: { response: { data: unknown } } = { response: { data } }
+    throw err
+  }
+  const data = await response.json()
+  useAuthStore.getState().setUser({ email })
+  return data
+}
+
 export const verifyCode = async (
   code: string
 ): Promise<VerifyCodeResponse & { success: boolean }> => {

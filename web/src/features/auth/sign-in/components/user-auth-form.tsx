@@ -4,7 +4,7 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Link } from '@tanstack/react-router'
-import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa, signupReplicate } from '@/services/auth-service'
+import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa, signupReplicate, signupRestore } from '@/services/auth-service'
 import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Smartphone } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
 import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot, shellClipboardWrite } from '@mochi/web'
@@ -19,7 +19,7 @@ type VerificationFormValues = { emailCode?: string; totpCode?: string }
  * but its inputs use the HTML5 `form="..."` attribute to associate
  * back to this form so they submit together — that's what gets the
  * username + peer ID into Chrome's autofill memory. Exported so the
- * parent can pass the same id to ReplicateAdvanced. */
+ * parent can pass the same id to AccountSourceAdvanced. */
 export const emailFormId = 'login-email-form'
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLFormElement> {
@@ -30,13 +30,16 @@ interface UserAuthFormProps extends React.HTMLAttributes<HTMLFormElement> {
   disabled?: boolean
   /** When both are non-empty, the email submit routes through the
    * per-user replicate-signup flow instead of the local /_/auth/code
-   * path. ReplicateAdvanced renders in the parent (below the
+   * path. AccountSourceAdvanced renders in the parent (below the
    * passkey/oauth row) for visual priority but uses the HTML5
    * `form={emailFormId}` association to submit alongside the email
    * field — that submission is what gets Chrome to remember the
    * typed values for next time. */
   replicateSourceUsername?: string
   replicateSourcePeer?: string
+  /** When set, the submit routes through POST /_/auth/restore (multipart). */
+  restoreBundle?: File | null
+  restorePassphrase?: string
 }
 
 export function UserAuthForm({
@@ -48,6 +51,8 @@ export function UserAuthForm({
   disabled = false,
   replicateSourceUsername = '',
   replicateSourcePeer = '',
+  restoreBundle = null,
+  restorePassphrase = '',
   ...props
 }: UserAuthFormProps) {
   const { t } = useLingui()
@@ -121,6 +126,55 @@ export function UserAuthForm({
   async function onSubmitEmail(data: EmailFormValues) {
     setIsLoading(true)
     setUserEmail(data.email)
+
+    // Restore from backup bundle
+    if (restoreBundle) {
+      try {
+        await signupRestore(data.email, restorePassphrase, restoreBundle)
+        window.location.href = '/login/restoring'
+      } catch (error) {
+        const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
+        const code = (responseData as { error?: string } | undefined)?.error
+        if (code === 'wrong_passphrase') {
+          toast.error(t`Wrong passphrase`, {
+            description: t`The passphrase you entered does not match the backup.`,
+          })
+        } else if (code === 'bundle_not_migration') {
+          toast.error(t`Not a migration bundle`, {
+            description: t`Upload a .zip file exported from Mochi's data export.`,
+          })
+        } else if (code === 'bundle_version' || code === 'bundle_schema_newer') {
+          toast.error(t`Backup is too new`, {
+            description: t`This backup was created by a newer version of Mochi. Update this server first.`,
+          })
+        } else if (code === 'entity_collision') {
+          toast.error(t`Account already on this server`, {
+            description: t`An account with this identity already exists here.`,
+          })
+        } else if (code === 'bundle_tampered') {
+          toast.error(t`Backup file is corrupted`, {
+            description: t`The file may be damaged or have been modified.`,
+          })
+        } else if (code === 'username_taken') {
+          toast.error(t`Email already in use`, {
+            description: t`Choose a different local email or log in instead.`,
+          })
+        } else if (code === 'bundle_required') {
+          toast.error(t`No backup file selected`)
+        } else if (code === 'signup_disabled') {
+          toast.error(t`Registration disabled`, {
+            description: getErrorMessage(error, t`New user signup is disabled.`),
+          })
+        } else {
+          toast.error(t`Restore failed`, {
+            description: getErrorMessage(error, t`Please try again or contact support.`),
+          })
+        }
+      } finally {
+        setIsLoading(false)
+      }
+      return
+    }
 
     const sourceUsername = replicateSourceUsername.trim()
     const source = replicateSourcePeer.trim()

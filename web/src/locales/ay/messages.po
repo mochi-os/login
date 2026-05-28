@@ -53,7 +53,8 @@ msgstr "Mantañ tama"
 msgid "Account added"
 msgstr "Cuenta yapxatata"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Kunti aka servidoran utjasarakiwa"
 
@@ -63,7 +64,7 @@ msgstr "Cuenta apaqata"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
+#: src/features/auth/sign-in/components/user-auth-form.tsx:407
 msgid "Account suspended"
 msgstr "Cuenta jark'ata"
 
@@ -124,7 +125,7 @@ msgstr "Uñacht'awi yapxataña"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Uñnaqa ukat layout askichaña juma munawinakaman."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:74
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:79
 msgid "Advanced"
 msgstr "Nayrar"
 
@@ -140,6 +141,10 @@ msgstr "Taqpach"
 #: src/lib/oauth-errors.ts:36
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Mä cuenta uka emailampix utjxiwa. Nayraqat mantaña, ukat {0} chinjañ auth wakichawimanxata."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+msgid "An account with this identity already exists here."
+msgstr "Kay identidad ukanakanx jichhaxa cuenta utjxi."
 
 #: src/features/landing/landing-page.tsx:120
 msgid "App business logic"
@@ -162,12 +167,12 @@ msgid "authenticator code"
 msgstr "banata"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:445
+#: src/features/auth/sign-in/components/user-auth-form.tsx:499
 msgid "Authenticator code"
 msgstr "Authenticator código"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:484
+#: src/features/auth/sign-in/components/user-auth-form.tsx:538
 msgid "Back"
 msgstr "Kutta"
 
@@ -177,19 +182,39 @@ msgstr "Kutta"
 msgid "Back to home"
 msgstr "Utar kutiña"
 
+#: src/routes/restoring.tsx:118
+msgid "Back to sign up"
+msgstr "Registro nayraqatax kutjaña"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+msgid "Backup file"
+msgstr "Respaldo qamaña"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+msgid "Backup file is corrupted"
+msgstr "Respaldo qamaña phaxsi"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+msgid "Backup is too new"
+msgstr "Respaldo jach'a ñiqipa"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Munawi jiltayaña"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:85
+msgid "Bring an existing account onto this server:"
+msgstr "Jichha servidor ukaru cuenta utjxataraki uñtaña:"
 
 #: src/features/landing/landing-page.tsx:84
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Mä yanapasiri, replicata yatiñ base lurañ comunidadamataki. Datonakamax wiñay jumankiwa."
 
-#: src/features/landing/landing-page.tsx:365
+#: src/features/landing/landing-page.tsx:371
 msgid "Built on solid foundations"
 msgstr "Wali qalstir thakhinakanwa lurata"
 
-#: src/features/landing/landing-page.tsx:305
+#: src/features/landing/landing-page.tsx:311
 msgid "Built-in apps"
 msgstr "Built-in apps"
 
@@ -220,15 +245,15 @@ msgstr "Yatiyäw kasta mayjt'ayaña"
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "Check the address after @ and try again."
 msgstr "@ jichha qhipara dirección uñakipt'aña ukatxa wasitat yant'aña."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Check the username before @ and try again."
 msgstr "@ janir purtkti nombre de usuario uñakipt'aña ukatxa wasitat yant'aña."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
 msgid "Check your email."
 msgstr "Email-mar uñakipaña."
 
@@ -236,7 +261,12 @@ msgstr "Email-mar uñakipaña."
 msgid "Checking every few seconds…"
 msgstr "Sapa pisi segundona uñakipasa…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/routes/restoring.tsx:163
+msgid "Checking…"
+msgstr "Jikiñani..."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "Choose a different local email or log in instead."
 msgstr "Yaqha local correo electrónico ajllt'aña jan ukasti ingresaña."
 
@@ -299,11 +329,11 @@ msgstr "Panel jistantaña"
 msgid "Close search"
 msgstr "Thaqaña jist'antaña"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Code copied"
 msgstr "Código copiata"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:194
+#: src/features/auth/sign-in/components/user-auth-form.tsx:248
 msgid "Code sent."
 msgstr "Código apayata."
 
@@ -354,7 +384,7 @@ msgstr "Sarantaña"
 msgid "Copy"
 msgstr "Copiaña"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:268
 msgid "Copy code"
 msgstr "Codigo qillqsuña"
 
@@ -368,15 +398,15 @@ msgstr "Janiw jaytañ atkiti"
 msgid "Could not load this document. Please try again later."
 msgstr "Janiw aka documento apañ atkiti. Mira qhipata wasitat yant'aña."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Could not reach the source server"
 msgstr "Servidor de fuente puriñataki janiwa atkti"
 
-#: src/features/landing/landing-page.tsx:208
+#: src/features/landing/landing-page.tsx:211
 msgid "Could not start sign-in"
 msgstr "Janiw mantawi qalltañ atkiti"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:406
 msgid "Create an account"
 msgstr "Mä cuenta luraña"
 
@@ -444,11 +474,12 @@ msgstr "Dirección"
 msgid "Displays the mobile sidebar."
 msgstr "Móvil sidebar uñacht'ayi."
 
-#: src/features/landing/landing-page.tsx:337
+#: src/features/landing/landing-page.tsx:343
 msgid "Distributed by design"
 msgstr "Diseño taypit distribuita"
 
 #: src/routes/replicating.tsx:229
+#: src/routes/restoring.tsx:54
 msgid "Done"
 msgstr "Tukuyata"
 
@@ -460,11 +491,12 @@ msgstr "Apaqaña"
 msgid "Dyslexia-friendly"
 msgstr "Dislexia jaqinakataki"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:520
+#: src/features/auth/sign-in/components/user-auth-form.tsx:574
 msgid "Email"
 msgstr "Email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Email already in use"
 msgstr "Correo electrónico kunti apnaqatakiwa"
 
@@ -473,7 +505,7 @@ msgid "email code"
 msgstr "example.com jan ukax *.example.com"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:472
 msgid "Email code"
 msgstr "Email código"
 
@@ -481,7 +513,7 @@ msgstr "Email código"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "\"{userEmail}\" jaqi mantañataki recuperación código apsuma"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:399
+#: src/features/auth/sign-in/components/user-auth-form.tsx:453
 msgid "Enter the code from your authenticator app"
 msgstr "Authenticator app ukan código apsuma"
 
@@ -494,11 +526,11 @@ msgstr "{0} apsuma"
 msgid "Enter your {initial} and {last}"
 msgstr "{initial} ukat {last} apsuma"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:389
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Enter your email code and authenticator code"
 msgstr "Email código ukat authenticator código apsuma"
 
-#: src/features/landing/landing-page.tsx:308
+#: src/features/landing/landing-page.tsx:314
 msgid "Everything you need, nothing you don't control"
 msgstr "Taqi munkasta ukax utji, jan apnaqkasta uka janiwa"
 
@@ -510,15 +542,19 @@ msgstr "Sidebar jach'achaña"
 msgid "Extra large"
 msgstr "Sinti jach'a"
 
+#: src/routes/restoring.tsx:55
+msgid "Failed"
+msgstr "Phaxsi"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "Janiw cuenta yapxataña atinkti"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:288
 msgid "Failed to continue"
 msgstr "Janiw sarayaña atinkti"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:263
 msgid "Failed to copy code"
 msgstr "Janiw código copia luraña atinkti"
 
@@ -554,6 +590,10 @@ msgstr "Archivonaka"
 msgid "Finish setting up your account"
 msgstr "Cuenta wakichañ tukuyaña"
 
+#: src/routes/restoring.tsx:53
+msgid "Finishing up"
+msgstr "Tukuyasiñani"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
 msgstr "Tuyuri"
@@ -569,6 +609,14 @@ msgstr "Viernes"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Ukatx"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "From a backup file (restore)"
+msgstr "Respaldo qamanxa (restaurar)"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "From another running server (replicate)"
+msgstr "Juk'amp servidor jan tuqita (replicar)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -627,7 +675,7 @@ msgstr "Uta"
 msgid "Hot"
 msgstr "Junt'u"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:340
 msgid "How it works"
 msgstr "Kunjam apnaqasi"
 
@@ -647,7 +695,7 @@ msgstr "Manqaru"
 msgid "Interests"
 msgstr "Interesanaka"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Invalid authenticator code"
 msgstr "Jan wakisir authenticator código"
 
@@ -656,11 +704,11 @@ msgstr "Jan wakisir authenticator código"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
-#: src/features/auth/sign-in/components/user-auth-form.tsx:361
+#: src/features/auth/sign-in/components/user-auth-form.tsx:338
+#: src/features/auth/sign-in/components/user-auth-form.tsx:346
+#: src/features/auth/sign-in/components/user-auth-form.tsx:375
+#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Invalid code"
 msgstr "Jan wakisir código"
 
@@ -670,7 +718,7 @@ msgid "Invalid recovery code"
 msgstr "Jan wakisir recuperación código"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:344
+#: src/features/auth/sign-in/components/user-auth-form.tsx:398
 msgid "Invalid verification code"
 msgstr "Jan wakisir verificación código"
 
@@ -700,6 +748,10 @@ msgstr "Ch'iqat Kupïru"
 msgid "Light"
 msgstr "Qhana"
 
+#: src/routes/restoring.tsx:52
+msgid "Linking your identity"
+msgstr "Nayra identidad ukanakaxa t'iqtayaña"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
 msgid "Load more"
 msgstr "Jukamp apaqaña"
@@ -712,23 +764,23 @@ msgstr "Apaqaskiwa…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:473
+#: src/features/auth/sign-in/components/user-auth-form.tsx:527
 msgid "Log in"
 msgstr "Mantaña"
 
-#: src/features/landing/landing-page.tsx:439
+#: src/features/landing/landing-page.tsx:445
 msgid "Log in to Mochi"
 msgstr "Mochiru mantaña"
 
-#: src/features/landing/landing-page.tsx:491
+#: src/features/landing/landing-page.tsx:499
 msgid "Log in with {label}"
 msgstr "{label} ukamp mantaña"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:104
 msgid "Log in with passkey"
 msgstr "Passkey ukamp mantaña"
 
-#: src/features/auth/sign-in/index.tsx:68
+#: src/features/auth/sign-in/index.tsx:71
 msgid "Log in with your email address"
 msgstr "Email dirección ukamp mantaña"
 
@@ -743,8 +795,8 @@ msgid "Log out"
 msgstr "Mistuña"
 
 #: src/features/auth/recovery/index.tsx:39
-#: src/features/auth/sign-in/index.tsx:38
-#: src/features/landing/landing-page.tsx:231
+#: src/features/auth/sign-in/index.tsx:41
+#: src/features/landing/landing-page.tsx:237
 msgid "Logged in"
 msgstr "Mantatawa"
 
@@ -765,7 +817,7 @@ msgid "Login session expired, please try again"
 msgstr "Mantaña sesión tukusxata, mayampi yant'am"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:495
+#: src/features/auth/sign-in/components/user-auth-form.tsx:549
 msgid "Lost access? Use a recovery code"
 msgstr "¿Acceso chhaqtayatati? Mä recuperación código apnaqaña"
 
@@ -794,15 +846,15 @@ msgstr "Masinakar mensaje apayaña, mayni mayni jan ukax grupon, peer-to-peer uk
 msgid "Metric"
 msgstr "Métrico"
 
-#: src/features/landing/landing-page.tsx:311
+#: src/features/landing/landing-page.tsx:317
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochix 20 jila appnakampi nayrat puriski, jila kutix machaqanak yapxatapxi. Jach'a appnakax akampiwa:"
 
-#: src/features/landing/landing-page.tsx:296
+#: src/features/landing/landing-page.tsx:302
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochix mä federada, multi-apnaqir plataforma distribuida appnakatakiwa. Khitis kikpa servidorap apnaqi atinki, ukat Mochi red ukan kuna apnaqirimps conectasi atinki. Khitis appnak luri ukat publica atinki."
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:374
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochix akham tecnologianakamp lurataw:"
 
@@ -822,13 +874,14 @@ msgstr "Machaqa"
 msgid "New accounts are disabled on this server"
 msgstr "Aka servidor uka machaqa cuentanak jaytata"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:231
-#: src/features/auth/sign-in/components/user-auth-form.tsx:358
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "New user signup is disabled."
 msgstr "Machaqa usuario signup jaytata."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:533
+#: src/features/auth/sign-in/components/user-auth-form.tsx:587
 msgid "Next"
 msgstr "Arkiri"
 
@@ -840,7 +893,11 @@ msgstr "Arkiri imagen"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Jan mantañ kamachi configuratati. Kamachi yapxatma khiti aka recurso mantki uka uñjañataki."
 
-#: src/features/landing/landing-page.tsx:340
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+msgid "No backup file selected"
+msgstr "Respaldo qamaña jan ajllit"
+
+#: src/features/landing/landing-page.tsx:346
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Jan central server datunakam apnaqkiti. Sapa Mochi node phuqha peer kasiana, libp2p ukamp mayninakamp parlasi."
 
@@ -852,7 +909,7 @@ msgstr "Jan cuenta connectatati"
 msgid "No groups available"
 msgstr "Jan tamanak utjki"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "No matching account on the source server"
 msgstr "Servidor de fuenten jiltir kunti janiwa utjkiti"
 
@@ -887,9 +944,17 @@ msgstr "Usuarionak jan jikxatasiti"
 msgid "None"
 msgstr "Janiwa"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:100
+msgid "None — create a fresh account"
+msgstr "Nin — cuenta musuq uñjataña"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "Walja"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Not a migration bundle"
+msgstr "Ukax migración paquete janiwa"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -919,11 +984,11 @@ msgstr "Navegación menú jist'arma"
 msgid "Open theme settings"
 msgstr "Tema configuracionanak jist'arma"
 
-#: src/features/auth/sign-in/index.tsx:89
+#: src/features/auth/sign-in/index.tsx:94
 msgid "Or"
 msgstr "Jan ukax"
 
-#: src/features/landing/landing-page.tsx:464
+#: src/features/landing/landing-page.tsx:472
 msgid "Or log in with"
 msgstr "Jan ukax mantma kawkimps"
 
@@ -944,21 +1009,21 @@ msgid "passkey"
 msgstr "peón"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:480
+#: src/features/landing/landing-page.tsx:488
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/index.tsx:53
-#: src/features/landing/landing-page.tsx:249
+#: src/features/auth/sign-in/index.tsx:56
+#: src/features/landing/landing-page.tsx:255
 msgid "Passkey login cancelled"
 msgstr "Passkey login jaytata"
 
-#: src/features/auth/sign-in/index.tsx:51
-#: src/features/landing/landing-page.tsx:247
+#: src/features/auth/sign-in/index.tsx:54
+#: src/features/landing/landing-page.tsx:253
 msgid "Passkey login failed"
 msgstr "Passkey login pantjasi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:179
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Passkey login required"
 msgstr "Passkey login munaski"
 
@@ -966,38 +1031,42 @@ msgstr "Passkey login munaski"
 msgid "Passkey MFA not yet implemented"
 msgstr "Passkey MFA janira implementata"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:394
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+msgid "Passphrase"
+msgstr "Contraseña parlana"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:448
 msgid "Paste the login code you received by email"
 msgstr "Login código email taypi katuqkta uka uchma"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:60
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:65
 msgid "Peer IDs start with 12D3KooW and are 52 characters long"
 msgstr "Peer ID-naka 12D3KooW-mpi qalltasi ukatx 52 jach'a qillqanakax utji"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:267
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Please check your authenticator app and try again."
 msgstr "Authenticator app uñjma sumat'asma."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:339
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Please check your authenticator code and try again."
 msgstr "Authenticator código uñjma sumat'asma."
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:362
+#: src/features/auth/sign-in/components/user-auth-form.tsx:416
 msgid "Please check your code and try again."
 msgstr "Códigoma uñjma sumat'asma."
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
-#: src/features/auth/sign-in/components/user-auth-form.tsx:330
+#: src/features/auth/sign-in/components/user-auth-form.tsx:376
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Please check your codes and try again."
 msgstr "Códigonakam uñjma sumat'asma."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:345
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Please check your email and try again."
 msgstr "Email uñjma sumat'asma."
 
@@ -1006,15 +1075,15 @@ msgstr "Email uñjma sumat'asma."
 msgid "Please check your recovery code and try again."
 msgstr "Recovery código uñjma sumat'asma."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Please copy manually: {devCode}"
 msgstr "Manual ukamp copima: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:67
+#: src/features/auth/sign-in/components/user-auth-form.tsx:72
 msgid "Please enter a valid email"
 msgstr "Sumäki email mantayama"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:251
+#: src/features/auth/sign-in/components/user-auth-form.tsx:305
 msgid "Please enter your authenticator code"
 msgstr "Authenticator código mantayama"
 
@@ -1026,9 +1095,10 @@ msgstr "Sutim mantayama"
 msgid "Please enter your recovery code"
 msgstr "Recovery código mantayama"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
-#: src/features/auth/sign-in/components/user-auth-form.tsx:235
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:420
 msgid "Please try again or contact support."
 msgstr "Sumat'asma jan ukax soporte parlama."
 
@@ -1036,7 +1106,7 @@ msgstr "Sumat'asma jan ukax soporte parlama."
 msgid "Please use another verification method."
 msgstr "Yaqha verificación método apnaqama."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "\"Log in with passkey\" botón apnaqama."
 
@@ -1047,8 +1117,8 @@ msgstr "Nayrïri imagen"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:24
 #: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:427
-#: src/features/landing/landing-page.tsx:524
+#: src/features/landing/landing-page.tsx:433
+#: src/features/landing/landing-page.tsx:538
 msgid "Privacy"
 msgstr "Imantawi"
 
@@ -1073,7 +1143,7 @@ msgstr "Public"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Pachpa social media feedanak publicama, mayninakar arkma, jan ukax yaqha feedanakar yapxatma opcional AI tagging sortingampi. Wakichawinakar arkma, ch'aqhi phichthapma."
 
-#: src/features/landing/landing-page.tsx:393
+#: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "¿Mochi yant'añ listoxti?"
 
@@ -1098,9 +1168,10 @@ msgstr "Dashboard uksaru redirecting…"
 msgid "Reduce interest"
 msgstr "Interés pisi tukuyma"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:357
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:411
 msgid "Registration disabled"
 msgstr "Qillqantaña jaytata"
 
@@ -1130,11 +1201,7 @@ msgstr "¿Mantañ aparma?"
 msgid "Remove interest"
 msgstr "Interés aparma"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:80
-msgid "Replicate an existing account from another server"
-msgstr "Yaqha servidoratxa utjir kunti yatxapayaña"
-
-#: src/features/landing/landing-page.tsx:175
+#: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Yatiyäwi mayisita janiw uñacht'kiti"
 
@@ -1146,9 +1213,13 @@ msgstr "Replicación mayiwi <0>{source_user}</0> taypir apayatawa. Replicación 
 msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
 msgstr "Replicación mayiwi vertiente servidor taypir apayatawa. Replicación tukuyañataki, vertiente servidor uñakipañ chimpunakapana iyaw saña."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:213
 msgid "Replication signup failed"
 msgstr "Yatxapayañ inscripción janiwa walikiti"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
+msgid "Required only if your backup includes private keys."
+msgstr "Respaldo ukax llaki qillqatanaka uñtasipkthi ukaxa askisipxtwa."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1158,6 +1229,15 @@ msgstr "Kutintayama"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Taqi configuracionanak default valoranakar kutintayama"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:169
+#: src/routes/restoring.tsx:106
+msgid "Restore failed"
+msgstr "Restauración phaxsi"
+
+#: src/routes/restoring.tsx:130
+msgid "Restoring your account"
+msgstr "Nayra cuenta restaurasiñani"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1247,8 +1327,8 @@ msgstr "Servidor"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
-#: src/features/landing/landing-page.tsx:419
-#: src/features/landing/landing-page.tsx:516
+#: src/features/landing/landing-page.tsx:425
+#: src/features/landing/landing-page.tsx:530
 msgid "Server rules"
 msgstr "Servidor reglas"
 
@@ -1280,7 +1360,7 @@ msgstr "Sidebar"
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Inscribiña ukatx jumankir Mochi nodox lurasi. Datosamax ukan utji — janiw mayni servidoran utjkiti."
 
-#: src/features/landing/landing-page.tsx:277
+#: src/features/landing/landing-page.tsx:283
 msgid "Sign up or log in"
 msgstr "Inscribiña jan ukax mantaña"
 
@@ -1309,7 +1389,7 @@ msgstr "Jisk'a"
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Yaqha apjañanakax janiw nayraqat phuqhasiti. Pachpat wasitat yant'asini."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:101
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:151
 msgid "Source server peer ID"
 msgstr "Jutirix servidor peer ID"
 
@@ -1370,8 +1450,8 @@ msgstr "Equipos/Apps"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:20
 #: ../../../lib/web/src/features/document/document-page.tsx:39
-#: src/features/landing/landing-page.tsx:423
-#: src/features/landing/landing-page.tsx:520
+#: src/features/landing/landing-page.tsx:429
+#: src/features/landing/landing-page.tsx:534
 msgid "Terms and conditions"
 msgstr "Términos ukat condicionanaka"
 
@@ -1384,11 +1464,23 @@ msgstr "Uka {0} cuentax mä mayni apnaqirimp juntayatawa"
 msgid "That sign-in provider is not available"
 msgstr "Uka mantañ proveedorx janiw utjkiti"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+msgid "The file may be damaged or have been modified."
+msgstr "Qamaña jan wallp utjxataynaw utjkiwa phaxsiw utjkiwa."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+msgid "The passphrase you entered does not match the backup."
+msgstr "Contraseña parlana qillqataytaw ukax respaldo janiti uñtasiñampi."
+
 #: src/lib/oauth-errors.ts:11
 msgid "the provider"
 msgstr "aka chat"
 
-#: src/features/landing/landing-page.tsx:176
+#: src/routes/restoring.tsx:109
+msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
+msgstr "Restauración jan tukuyataynawa. Respaldo qamaña phaxsiw utjkiwa, contraseña parlana jan walikitiw utjkiwa, utjkiwa servidor janit tukuyataynawa."
+
+#: src/features/landing/landing-page.tsx:179
 msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
 msgstr "Jutirix servidoraxa janiw mayisitar uñacht'kiti, jan ukax tukusiwa. Wasitat yant'aña jan ukax akan qillqantasiñani."
 
@@ -1399,6 +1491,10 @@ msgstr "Tema Configuración"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "Tema machaqachata"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+msgid "This backup was created by a newer version of Mochi. Update this server first."
+msgstr "Kay respaldo Mochi version juch'u ukanakanpinwa uñjataski. Nayraqatax servidor wali uñstayaña."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
@@ -1473,7 +1569,7 @@ msgstr "Janiw permitidakit"
 msgid "Unauthorized Access"
 msgstr "Janiw utjkiti"
 
-#: src/features/landing/landing-page.tsx:362
+#: src/features/landing/landing-page.tsx:368
 msgid "Under the hood"
 msgstr "Mayachata"
 
@@ -1481,9 +1577,21 @@ msgstr "Mayachata"
 msgid "United States"
 msgstr "Unidades"
 
+#: src/routes/restoring.tsx:51
+msgid "Unpacking your data"
+msgstr "Nayra datos wayxatasiñani"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Machaqachaña"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+msgid "Upload a .zip file exported from Mochi's data export."
+msgstr "Mochi ñiqipa qillqataña ukhama .zip qamaña uñtaña."
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
+msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
+msgstr "Juk'amp Mochi servidor uñjataña migración paquete (.zip) uñtaña. Servidor ukax nayra datos ukanakaxa jichha ukana restauranipxi — juk'amp servidor jan utxañarakiwa."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1493,7 +1601,7 @@ msgstr "Registrata passkey apnaqam mantañataki"
 msgid "Use the apps"
 msgstr "Aka feed jichha yatiyawi suscripcionanakatakix apnaqam"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:50
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:55
 msgid "Use the form alice@example.com"
 msgstr "Forma alice@example.com apnaqaña"
 
@@ -1501,9 +1609,13 @@ msgstr "Forma alice@example.com apnaqaña"
 msgid "User"
 msgstr "Apnaqiri banata"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:130
 msgid "Username on source server"
 msgstr "Jutirix servidor ukan apnaqirin sutipa"
+
+#: src/routes/restoring.tsx:49
+msgid "Validating backup"
+msgstr "Respaldo verificasiñani"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1514,7 +1626,7 @@ msgid "Verification code sent"
 msgstr "Verificación jan walt'awi"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
+#: src/features/auth/sign-in/components/user-auth-form.tsx:419
 msgid "Verification failed"
 msgstr "Verificata"
 
@@ -1530,6 +1642,10 @@ msgstr "Passkey ukamp verificaña"
 #: src/features/auth/mfa/index.tsx:284
 msgid "Verify with passkey"
 msgstr "Versión"
+
+#: src/routes/restoring.tsx:50
+msgid "Verifying backup"
+msgstr "Respaldo verificasiñani"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx:63
 msgid "Video thumbnail"
@@ -1547,7 +1663,7 @@ msgstr "Taqi yatiyawinaka uñjaña"
 msgid "View all notifications"
 msgstr "Taqi posts uñjaña"
 
-#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:414
 msgid "View source code"
 msgstr "Pidumam uñjaña"
 
@@ -1571,6 +1687,10 @@ msgstr "Semanax aka uru qalltani"
 msgid "Wikis"
 msgstr "Ventanan duración"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Wrong passphrase"
+msgstr "Contraseña parlana jan walikitiw"
+
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:38
 msgid "Your {0} email is not verified"
@@ -1582,11 +1702,11 @@ msgstr "Cuentamax inakacht'atawa."
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Your account has been suspended."
 msgstr "Cuentamax mä passkey munaski mantañataki"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Kunti akanwa yatxapayata. Jan ukasti ingresaña."
 
@@ -1594,17 +1714,25 @@ msgstr "Kunti akanwa yatxapayata. Jan ukasti ingresaña."
 msgid "Your account is being copied from the source server. Do not close this window."
 msgstr "Cuentamax fuente servidor ukata copyasiskiwa. Aka ventana janiw jistʼantañamäkiti."
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:123
+msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
+msgstr "Nayra cuenta jichha servidor ukana kopianaski. Nayra servidor ukax solicitud ukax aruñ ukana apnaqañataki uñakipañawa."
+
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "Activa sesionamax akan uñstayatani."
 
-#: src/features/landing/landing-page.tsx:293
+#: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Bancomax aka pidoñ chargeback churawayi. Stripex disputa apnaqaski aljirimpi; resolución akan uñstayatani amtatak."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:197
+#: src/features/auth/sign-in/components/user-auth-form.tsx:251
 msgid "Your code is: {devCode}"
 msgstr "Detallenakam"
+
+#: src/routes/restoring.tsx:133
+msgid "Your data is being restored from the backup. Do not close this window."
+msgstr "Nayra datos ukanakaxa respaldo ukana restauranaski. Jan aka ventana wali phuchuyaña."
 
 #: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"

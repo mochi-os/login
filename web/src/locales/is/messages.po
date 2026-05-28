@@ -53,7 +53,8 @@ msgstr "Aðgangsstig"
 msgid "Account added"
 msgstr "Reikningi bætt við"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Reikningurinn er nú þegar á þessum þjóni"
 
@@ -63,7 +64,7 @@ msgstr "Reikningur fjarlægður"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
+#: src/features/auth/sign-in/components/user-auth-form.tsx:407
 msgid "Account suspended"
 msgstr "Reikningur frystur"
 
@@ -124,7 +125,7 @@ msgstr "Bæta við sýn"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Stilltu útlit og uppsetningu eftir þínum smekk."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:74
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:79
 msgid "Advanced"
 msgstr "Ítarlegt"
 
@@ -140,6 +141,10 @@ msgstr "Allt"
 #: src/lib/oauth-errors.ts:36
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Það er þegar reikningur með þessu netfangi. Skráðu þig fyrst inn og tengdu síðan {0} úr auðkenningarstillingunum þínum."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+msgid "An account with this identity already exists here."
+msgstr "Aðgangur með þessa auðkenni er þegar til hér."
 
 #: src/features/landing/landing-page.tsx:120
 msgid "App business logic"
@@ -162,12 +167,12 @@ msgid "authenticator code"
 msgstr "auðkennarakóði"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:445
+#: src/features/auth/sign-in/components/user-auth-form.tsx:499
 msgid "Authenticator code"
 msgstr "Auðkennisnúmer"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:484
+#: src/features/auth/sign-in/components/user-auth-form.tsx:538
 msgid "Back"
 msgstr "Til baka"
 
@@ -177,19 +182,39 @@ msgstr "Til baka"
 msgid "Back to home"
 msgstr "Til baka á forsíðu"
 
+#: src/routes/restoring.tsx:118
+msgid "Back to sign up"
+msgstr "Til baka á skráningarsíðu"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+msgid "Backup file"
+msgstr "Öryggisafritsskrá"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+msgid "Backup file is corrupted"
+msgstr "Öryggisafritsskrá er skemmd"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+msgid "Backup is too new"
+msgstr "Öryggisafrit er of nýtt"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Auka áhuga"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:85
+msgid "Bring an existing account onto this server:"
+msgstr "Færa núverandi aðgang á þennan þjón:"
 
 #: src/features/landing/landing-page.tsx:84
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Byggðu samvirkan, afritaðan þekkingargrunn fyrir samfélagið þitt. Gögnin þín eru alltaf þín."
 
-#: src/features/landing/landing-page.tsx:365
+#: src/features/landing/landing-page.tsx:371
 msgid "Built on solid foundations"
 msgstr "Byggt á traustum grunni"
 
-#: src/features/landing/landing-page.tsx:305
+#: src/features/landing/landing-page.tsx:311
 msgid "Built-in apps"
 msgstr "Innbyggð forrit"
 
@@ -220,15 +245,15 @@ msgstr "Breyta flokki tilkynningar"
 msgid "Chat"
 msgstr "Spjall"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "Check the address after @ and try again."
 msgstr "Athugaðu vistfangið eftir @ og reyndu aftur."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Check the username before @ and try again."
 msgstr "Athugaðu notandanafnið á undan @ og reyndu aftur."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
 msgid "Check your email."
 msgstr "Athugaðu tölvupóstinn þinn."
 
@@ -236,7 +261,12 @@ msgstr "Athugaðu tölvupóstinn þinn."
 msgid "Checking every few seconds…"
 msgstr "Athugar á nokkurra sekúndna fresti…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/routes/restoring.tsx:163
+msgid "Checking…"
+msgstr "Athugar…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "Choose a different local email or log in instead."
 msgstr "Veldu annan staðbundinn tölvupóst eða skráðu þig frekar inn."
 
@@ -299,11 +329,11 @@ msgstr "Loka spjaldi"
 msgid "Close search"
 msgstr "Loka leit"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Code copied"
 msgstr "Kóði afritaður"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:194
+#: src/features/auth/sign-in/components/user-auth-form.tsx:248
 msgid "Code sent."
 msgstr "Kóði sendur."
 
@@ -354,7 +384,7 @@ msgstr "Halda áfram"
 msgid "Copy"
 msgstr "Afrita"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:268
 msgid "Copy code"
 msgstr "Afrita kóða"
 
@@ -368,15 +398,15 @@ msgstr "Tókst ekki að hætta við"
 msgid "Could not load this document. Please try again later."
 msgstr "Ekki tókst að hlaða þessu skjali. Reyndu aftur síðar."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Could not reach the source server"
 msgstr "Tókst ekki að ná í uppruna­þjóninn"
 
-#: src/features/landing/landing-page.tsx:208
+#: src/features/landing/landing-page.tsx:211
 msgid "Could not start sign-in"
 msgstr "Tókst ekki að hefja innskráningu"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:406
 msgid "Create an account"
 msgstr "Búa til reikning"
 
@@ -444,11 +474,12 @@ msgstr "Stefna"
 msgid "Displays the mobile sidebar."
 msgstr "Sýnir hliðarstiku farsíma."
 
-#: src/features/landing/landing-page.tsx:337
+#: src/features/landing/landing-page.tsx:343
 msgid "Distributed by design"
 msgstr "Dreift að hönnun"
 
 #: src/routes/replicating.tsx:229
+#: src/routes/restoring.tsx:54
 msgid "Done"
 msgstr "Lokið"
 
@@ -460,11 +491,12 @@ msgstr "Hlaða niður"
 msgid "Dyslexia-friendly"
 msgstr "Lesblinduvænt"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:520
+#: src/features/auth/sign-in/components/user-auth-form.tsx:574
 msgid "Email"
 msgstr "Tölvupóstur"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Email already in use"
 msgstr "Tölvupósturinn er þegar í notkun"
 
@@ -473,7 +505,7 @@ msgid "email code"
 msgstr "tölvupóstkóði"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:472
 msgid "Email code"
 msgstr "Tölvupóstkóði"
 
@@ -481,7 +513,7 @@ msgstr "Tölvupóstkóði"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Sláðu inn endurheimtarkóða fyrir \"{userEmail}\" til að skrá þig inn"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:399
+#: src/features/auth/sign-in/components/user-auth-form.tsx:453
 msgid "Enter the code from your authenticator app"
 msgstr "Sláðu inn kóðann úr auðkennisforritinu"
 
@@ -494,11 +526,11 @@ msgstr "Sláðu inn {0}"
 msgid "Enter your {initial} and {last}"
 msgstr "Sláðu inn {initial} og {last}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:389
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Enter your email code and authenticator code"
 msgstr "Sláðu inn tölvupóstkóðann og auðkenniskóðann"
 
-#: src/features/landing/landing-page.tsx:308
+#: src/features/landing/landing-page.tsx:314
 msgid "Everything you need, nothing you don't control"
 msgstr "Allt sem þú þarft, ekkert sem þú stýrir ekki"
 
@@ -510,15 +542,19 @@ msgstr "Útvíkka hliðarstiku"
 msgid "Extra large"
 msgstr "Mjög stórt"
 
+#: src/routes/restoring.tsx:55
+msgid "Failed"
+msgstr "Mistókst"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "Tókst ekki að bæta við reikningi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:288
 msgid "Failed to continue"
 msgstr "Tókst ekki að halda áfram"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:263
 msgid "Failed to copy code"
 msgstr "Tókst ekki að afrita kóða"
 
@@ -554,6 +590,10 @@ msgstr "Skrár"
 msgid "Finish setting up your account"
 msgstr "Klára uppsetningu reiknings"
 
+#: src/routes/restoring.tsx:53
+msgid "Finishing up"
+msgstr "Lýkur við"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
 msgstr "Fljótandi"
@@ -569,6 +609,14 @@ msgstr "Föstudagur"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Frá"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "From a backup file (restore)"
+msgstr "Úr öryggisafritsskrá (endurheimta)"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "From another running server (replicate)"
+msgstr "Af öðrum keyrandi þjóni (afrita)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -627,7 +675,7 @@ msgstr "Heim"
 msgid "Hot"
 msgstr "Heitt"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:340
 msgid "How it works"
 msgstr "Hvernig það virkar"
 
@@ -647,7 +695,7 @@ msgstr "Innfellt"
 msgid "Interests"
 msgstr "Áhugaefni"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Invalid authenticator code"
 msgstr "Ógildur auðkenniskóði"
 
@@ -656,11 +704,11 @@ msgstr "Ógildur auðkenniskóði"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
-#: src/features/auth/sign-in/components/user-auth-form.tsx:361
+#: src/features/auth/sign-in/components/user-auth-form.tsx:338
+#: src/features/auth/sign-in/components/user-auth-form.tsx:346
+#: src/features/auth/sign-in/components/user-auth-form.tsx:375
+#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Invalid code"
 msgstr "Ógildur kóði"
 
@@ -670,7 +718,7 @@ msgid "Invalid recovery code"
 msgstr "Ógildur endurheimtarkóði"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:344
+#: src/features/auth/sign-in/components/user-auth-form.tsx:398
 msgid "Invalid verification code"
 msgstr "Ógildur staðfestingarkóði"
 
@@ -700,6 +748,10 @@ msgstr "Vinstri til hægri"
 msgid "Light"
 msgstr "Ljóst"
 
+#: src/routes/restoring.tsx:52
+msgid "Linking your identity"
+msgstr "Tengir auðkenni þitt"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
 msgid "Load more"
 msgstr "Hlaða meiru"
@@ -712,23 +764,23 @@ msgstr "Hleð…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:473
+#: src/features/auth/sign-in/components/user-auth-form.tsx:527
 msgid "Log in"
 msgstr "Skrá inn"
 
-#: src/features/landing/landing-page.tsx:439
+#: src/features/landing/landing-page.tsx:445
 msgid "Log in to Mochi"
 msgstr "Skrá inn í Mochi"
 
-#: src/features/landing/landing-page.tsx:491
+#: src/features/landing/landing-page.tsx:499
 msgid "Log in with {label}"
 msgstr "Skrá inn með {label}"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:104
 msgid "Log in with passkey"
 msgstr "Skrá inn með aðgangslykli"
 
-#: src/features/auth/sign-in/index.tsx:68
+#: src/features/auth/sign-in/index.tsx:71
 msgid "Log in with your email address"
 msgstr "Skrá inn með tölvupóstfangi"
 
@@ -743,8 +795,8 @@ msgid "Log out"
 msgstr "Skrá út"
 
 #: src/features/auth/recovery/index.tsx:39
-#: src/features/auth/sign-in/index.tsx:38
-#: src/features/landing/landing-page.tsx:231
+#: src/features/auth/sign-in/index.tsx:41
+#: src/features/landing/landing-page.tsx:237
 msgid "Logged in"
 msgstr "Innskráð(ur)"
 
@@ -765,7 +817,7 @@ msgid "Login session expired, please try again"
 msgstr "Innskráningarlotan rann út, reyndu aftur"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:495
+#: src/features/auth/sign-in/components/user-auth-form.tsx:549
 msgid "Lost access? Use a recovery code"
 msgstr "Misstir aðgang? Notaðu endurheimtarkóða"
 
@@ -794,15 +846,15 @@ msgstr "Sendu skilaboð til vina þinna, einum eða í hópum, jafningi-til-jafn
 msgid "Metric"
 msgstr "Mæling"
 
-#: src/features/landing/landing-page.tsx:311
+#: src/features/landing/landing-page.tsx:317
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi kemur þegar með yfir 20 forrit og fleirum er bætt við reglulega. Helstu forrit eru:"
 
-#: src/features/landing/landing-page.tsx:296
+#: src/features/landing/landing-page.tsx:302
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi er sambandsbundinn fjölnotendavettvangur fyrir dreifð forrit. Hver sem er getur keyrt sinn eigin þjón og tengst öðrum notendum á Mochi-netinu. Hver sem er getur búið til og gefið út forrit."
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:374
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi er byggt á eftirfarandi tækni:"
 
@@ -822,13 +874,14 @@ msgstr "Nýtt"
 msgid "New accounts are disabled on this server"
 msgstr "Nýir reikningar eru óvirkir á þessum þjóni"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:231
-#: src/features/auth/sign-in/components/user-auth-form.tsx:358
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "New user signup is disabled."
 msgstr "Nýskráning notenda er óvirk."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:533
+#: src/features/auth/sign-in/components/user-auth-form.tsx:587
 msgid "Next"
 msgstr "Næst"
 
@@ -840,7 +893,11 @@ msgstr "Næsta mynd"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Engar aðgangsreglur stilltar. Bættu við reglum til að stjórna því hver getur fengið aðgang að þessari auðlind."
 
-#: src/features/landing/landing-page.tsx:340
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+msgid "No backup file selected"
+msgstr "Engin öryggisafritsskrá valin"
+
+#: src/features/landing/landing-page.tsx:346
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Enginn miðlægur þjónn geymir gögnin þín. Hver Mochi-hnútur er fullgildur jafningi í netinu og hefur bein samskipti við aðra um libp2p."
 
@@ -852,7 +909,7 @@ msgstr "Engir tengdir reikningar"
 msgid "No groups available"
 msgstr "Engir hópar tiltækir"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "No matching account on the source server"
 msgstr "Enginn samsvarandi reikningur á uppruna­þjóninum"
 
@@ -887,9 +944,17 @@ msgstr "Engir notendur fundust"
 msgid "None"
 msgstr "Ekkert"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:100
+msgid "None — create a fresh account"
+msgstr "Ekkert — búa til nýjan aðgang"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "Venjulegt"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Not a migration bundle"
+msgstr "Þetta er ekki flutningspakki"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -919,11 +984,11 @@ msgstr "Opna leiðsögnarvalmynd"
 msgid "Open theme settings"
 msgstr "Opna þemastillingar"
 
-#: src/features/auth/sign-in/index.tsx:89
+#: src/features/auth/sign-in/index.tsx:94
 msgid "Or"
 msgstr "Eða"
 
-#: src/features/landing/landing-page.tsx:464
+#: src/features/landing/landing-page.tsx:472
 msgid "Or log in with"
 msgstr "Eða skráðu þig inn með"
 
@@ -944,21 +1009,21 @@ msgid "passkey"
 msgstr "passkey"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:480
+#: src/features/landing/landing-page.tsx:488
 msgid "Passkey"
 msgstr "Aðgangslykill"
 
-#: src/features/auth/sign-in/index.tsx:53
-#: src/features/landing/landing-page.tsx:249
+#: src/features/auth/sign-in/index.tsx:56
+#: src/features/landing/landing-page.tsx:255
 msgid "Passkey login cancelled"
 msgstr "Innskráning með aðgangslykli aflýst"
 
-#: src/features/auth/sign-in/index.tsx:51
-#: src/features/landing/landing-page.tsx:247
+#: src/features/auth/sign-in/index.tsx:54
+#: src/features/landing/landing-page.tsx:253
 msgid "Passkey login failed"
 msgstr "Innskráning með aðgangslykli mistókst"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:179
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Passkey login required"
 msgstr "Innskráning með aðgangslykli krafist"
 
@@ -966,38 +1031,42 @@ msgstr "Innskráning með aðgangslykli krafist"
 msgid "Passkey MFA not yet implemented"
 msgstr "MFA aðgangslykils ekki enn útfært"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:394
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+msgid "Passphrase"
+msgstr "Lykilsetning"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:448
 msgid "Paste the login code you received by email"
 msgstr "Límdu innskráningarkóðann sem þú fékkst í tölvupósti"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:60
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:65
 msgid "Peer IDs start with 12D3KooW and are 52 characters long"
 msgstr "Peer-auðkenni byrja á 12D3KooW og eru 52 stafir á lengd"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:267
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Please check your authenticator app and try again."
 msgstr "Athugaðu auðkenningarforritið og reyndu aftur."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:339
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Please check your authenticator code and try again."
 msgstr "Athugaðu auðkennarakóðann og reyndu aftur."
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:362
+#: src/features/auth/sign-in/components/user-auth-form.tsx:416
 msgid "Please check your code and try again."
 msgstr "Athugaðu kóðann og reyndu aftur."
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
-#: src/features/auth/sign-in/components/user-auth-form.tsx:330
+#: src/features/auth/sign-in/components/user-auth-form.tsx:376
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Please check your codes and try again."
 msgstr "Athugaðu kóðana og reyndu aftur."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:345
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Please check your email and try again."
 msgstr "Athugaðu tölvupóstinn og reyndu aftur."
 
@@ -1006,15 +1075,15 @@ msgstr "Athugaðu tölvupóstinn og reyndu aftur."
 msgid "Please check your recovery code and try again."
 msgstr "Athugaðu endurheimtarkóðann þinn og reyndu aftur."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Please copy manually: {devCode}"
 msgstr "Afritaðu handvirkt: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:67
+#: src/features/auth/sign-in/components/user-auth-form.tsx:72
 msgid "Please enter a valid email"
 msgstr "Sláðu inn gilt tölvupóstfang"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:251
+#: src/features/auth/sign-in/components/user-auth-form.tsx:305
 msgid "Please enter your authenticator code"
 msgstr "Sláðu inn auðkenniskóðann þinn"
 
@@ -1026,9 +1095,10 @@ msgstr "Sláðu inn nafnið þitt"
 msgid "Please enter your recovery code"
 msgstr "Sláðu inn endurheimtarkóðann"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
-#: src/features/auth/sign-in/components/user-auth-form.tsx:235
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:420
 msgid "Please try again or contact support."
 msgstr "Reyndu aftur eða hafðu samband við þjónustuver."
 
@@ -1036,7 +1106,7 @@ msgstr "Reyndu aftur eða hafðu samband við þjónustuver."
 msgid "Please use another verification method."
 msgstr "Notaðu aðra staðfestingaraðferð."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Notaðu hnappinn „Skrá inn með aðgangslykli“."
 
@@ -1047,8 +1117,8 @@ msgstr "Fyrri mynd"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:24
 #: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:427
-#: src/features/landing/landing-page.tsx:524
+#: src/features/landing/landing-page.tsx:433
+#: src/features/landing/landing-page.tsx:538
 msgid "Privacy"
 msgstr "Friðhelgi"
 
@@ -1073,7 +1143,7 @@ msgstr "Opinbert"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Birtu þína eigin samfélagsmiðlastrauma, fylgdu öðrum eða safnaðu saman öðrum straumum með valfrjálsum AI-merkingum og röðun. Fylgdu því sem skiptir máli, síaðu hávaðann."
 
-#: src/features/landing/landing-page.tsx:393
+#: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Tilbúin(n) að prófa Mochi?"
 
@@ -1098,9 +1168,10 @@ msgstr "Áframsendi þig á stjórnborðið…"
 msgid "Reduce interest"
 msgstr "Minnka áhuga"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:357
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:411
 msgid "Registration disabled"
 msgstr "Skráning óvirk"
 
@@ -1130,11 +1201,7 @@ msgstr "Fjarlægja aðgang?"
 msgid "Remove interest"
 msgstr "Fjarlægja áhuga"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:80
-msgid "Replicate an existing account from another server"
-msgstr "Afrita núverandi reikning frá öðrum þjóni"
-
-#: src/features/landing/landing-page.tsx:175
+#: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Eftirmyndabeiðni hafnað"
 
@@ -1146,9 +1213,13 @@ msgstr "Afritunarbeiðni send til <0>{source_user}</0>. Samþykktu hana á still
 msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
 msgstr "Afritunarbeiðni send til upprunaþjónsins. Samþykktu hana á stillingasíðu upprunaþjónsins til að ljúka afritun."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:213
 msgid "Replication signup failed"
 msgstr "Skráning með afritun mistókst"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
+msgid "Required only if your backup includes private keys."
+msgstr "Krafist aðeins ef öryggisafritið inniheldur einkalykla."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1158,6 +1229,15 @@ msgstr "Endurstilla"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Endurstilla allar stillingar á sjálfgefin gildi"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:169
+#: src/routes/restoring.tsx:106
+msgid "Restore failed"
+msgstr "Endurheimta mistókst"
+
+#: src/routes/restoring.tsx:130
+msgid "Restoring your account"
+msgstr "Endurheimtir aðgang þinn"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1247,8 +1327,8 @@ msgstr "Þjónn"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
-#: src/features/landing/landing-page.tsx:419
-#: src/features/landing/landing-page.tsx:516
+#: src/features/landing/landing-page.tsx:425
+#: src/features/landing/landing-page.tsx:530
 msgid "Server rules"
 msgstr "Reglur þjónsins"
 
@@ -1280,7 +1360,7 @@ msgstr "Hliðarstika"
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Skráðu þig og þinn eigin Mochi-hnútur er búinn til. Gögnin þín búa þar — ekki á þjóni einhvers annars."
 
-#: src/features/landing/landing-page.tsx:277
+#: src/features/landing/landing-page.tsx:283
 msgid "Sign up or log in"
 msgstr "Skráðu þig eða skráðu þig inn"
 
@@ -1309,7 +1389,7 @@ msgstr "Lítið"
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Sumum tilfærslum lauk ekki í fyrstu tilraun. Þær verða endurnýjaðar sjálfkrafa."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:101
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:151
 msgid "Source server peer ID"
 msgstr "Peer-auðkenni uppruna-vefþjóns"
 
@@ -1370,8 +1450,8 @@ msgstr "Teymi/Forrit"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:20
 #: ../../../lib/web/src/features/document/document-page.tsx:39
-#: src/features/landing/landing-page.tsx:423
-#: src/features/landing/landing-page.tsx:520
+#: src/features/landing/landing-page.tsx:429
+#: src/features/landing/landing-page.tsx:534
 msgid "Terms and conditions"
 msgstr "Skilmálar og skilyrði"
 
@@ -1384,11 +1464,23 @@ msgstr "Sá {0}-reikningur er þegar tengdur öðrum notanda"
 msgid "That sign-in provider is not available"
 msgstr "Sá innskráningarþjónustuveitandi er ekki í boði"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+msgid "The file may be damaged or have been modified."
+msgstr "Skráin gæti verið skemmd eða breytt."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+msgid "The passphrase you entered does not match the backup."
+msgstr "Lykilsetningin sem þú slóst inn stemmir ekki við öryggisafritið."
+
 #: src/lib/oauth-errors.ts:11
 msgid "the provider"
 msgstr "þjónustuveitandinn"
 
-#: src/features/landing/landing-page.tsx:176
+#: src/routes/restoring.tsx:109
+msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
+msgstr "Endurheimtan lauk ekki. Öryggisafritsskráin gæti verið skemmd, lykilsetningin gæti verið röng, eða þjónninn lenti í villu."
+
+#: src/features/landing/landing-page.tsx:179
 msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
 msgstr "Uppruna-vefþjónninn samþykkti ekki beiðnina, eða hún rann út. Reyndu aftur eða skráðu þig staðbundið."
 
@@ -1399,6 +1491,10 @@ msgstr "Þema"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "Þemastillingar"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+msgid "This backup was created by a newer version of Mochi. Update this server first."
+msgstr "Þetta öryggisafrit var búið til af nýrri útgáfu af Mochi. Uppfærðu þennan þjón fyrst."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
@@ -1473,7 +1569,7 @@ msgstr "Ekki úthlutað"
 msgid "Unauthorized Access"
 msgstr "Óheimill aðgangur"
 
-#: src/features/landing/landing-page.tsx:362
+#: src/features/landing/landing-page.tsx:368
 msgid "Under the hood"
 msgstr "Undir vélarhlífinni"
 
@@ -1481,9 +1577,21 @@ msgstr "Undir vélarhlífinni"
 msgid "United States"
 msgstr "Bandaríkin"
 
+#: src/routes/restoring.tsx:51
+msgid "Unpacking your data"
+msgstr "Pakkar upp gögn þín"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Óstaðfest"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+msgid "Upload a .zip file exported from Mochi's data export."
+msgstr "Hladdu upp .zip skrá sem er flutt út úr Mochi gagnaflutningstóli."
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
+msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
+msgstr "Hladdu upp flutningspakka (.zip) sem er fluttur út frá öðrum Mochi þjóni. Þjónninn endurheimtir gögn þín staðbundið — enginn annar þjónn þarf að vera á netinu."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1493,7 +1601,7 @@ msgstr "Nota annan reikning"
 msgid "Use the apps"
 msgstr "Nota forritin"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:50
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:55
 msgid "Use the form alice@example.com"
 msgstr "Notaðu sniðið alice@example.com"
 
@@ -1501,9 +1609,13 @@ msgstr "Notaðu sniðið alice@example.com"
 msgid "User"
 msgstr "Notandi"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:130
 msgid "Username on source server"
 msgstr "Notandanafn á uppruna-vefþjóni"
+
+#: src/routes/restoring.tsx:49
+msgid "Validating backup"
+msgstr "Staðfestir öryggisafrit"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1514,7 +1626,7 @@ msgid "Verification code sent"
 msgstr "Sannprófunarkóði sendur"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
+#: src/features/auth/sign-in/components/user-auth-form.tsx:419
 msgid "Verification failed"
 msgstr "Sannprófun mistókst"
 
@@ -1530,6 +1642,10 @@ msgstr "Sannprófa netfang"
 #: src/features/auth/mfa/index.tsx:284
 msgid "Verify with passkey"
 msgstr "Staðfesta með passkey"
+
+#: src/routes/restoring.tsx:50
+msgid "Verifying backup"
+msgstr "Sannreynir öryggisafrit"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx:63
 msgid "Video thumbnail"
@@ -1547,7 +1663,7 @@ msgstr "Skoða allt"
 msgid "View all notifications"
 msgstr "Skoða allar tilkynningar"
 
-#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:414
 msgid "View source code"
 msgstr "Skoða frumkóða"
 
@@ -1571,6 +1687,10 @@ msgstr "Miðvikudagur"
 msgid "Wikis"
 msgstr "Wiki"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Wrong passphrase"
+msgstr "Röng lykilsetning"
+
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:38
 msgid "Your {0} email is not verified"
@@ -1582,11 +1702,11 @@ msgstr "Reikningurinn þinn hefur verið settur í bið"
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Your account has been suspended."
 msgstr "Reikningnum þínum hefur verið frestað."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Reikningurinn þinn hefur þegar verið afritaður hingað. Skráðu þig frekar inn."
 
@@ -1594,17 +1714,25 @@ msgstr "Reikningurinn þinn hefur þegar verið afritaður hingað. Skráðu þi
 msgid "Your account is being copied from the source server. Do not close this window."
 msgstr "Verið er að afrita reikninginn þinn af upprunaþjóninum. Ekki loka þessum glugga."
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:123
+msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
+msgstr "Aðgangurinn þinn er afritaður beint af þjóni sem þú hefur þegar aðgang að. Upprunalegi þjónninn verður að samþykkja beiðnina áður en flutningurinn hefst."
+
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "Reikningurinn þinn þarf passkey til að skrá sig inn"
 
-#: src/features/landing/landing-page.tsx:293
+#: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Þín forrit, þinn vettvangur, þitt netkerfi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:197
+#: src/features/auth/sign-in/components/user-auth-form.tsx:251
 msgid "Your code is: {devCode}"
 msgstr "Kóðinn þinn er: {devCode}"
+
+#: src/routes/restoring.tsx:133
+msgid "Your data is being restored from the backup. Do not close this window."
+msgstr "Gögn þín eru að vera endurheimtur úr öryggisafritinu. Ekki loka þessum glugga."
 
 #: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"

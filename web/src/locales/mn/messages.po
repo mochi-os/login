@@ -53,7 +53,8 @@ msgstr "Хандалтын түвшин"
 msgid "Account added"
 msgstr "Бүртгэл нэмэгдсэн"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Энэ серверт бүртгэл аль хэдийн байна"
 
@@ -63,7 +64,7 @@ msgstr "Бүртгэл хасагдсан"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
+#: src/features/auth/sign-in/components/user-auth-form.tsx:407
 msgid "Account suspended"
 msgstr "Бүртгэлийг түр зогсоосон"
 
@@ -124,7 +125,7 @@ msgstr "Харагдац нэмэх"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Тохиргоог өөрийнхөөрөө тохируулна."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:74
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:79
 msgid "Advanced"
 msgstr "Дэлгэрэнгүй"
 
@@ -140,6 +141,10 @@ msgstr "Бүгд"
 #: src/lib/oauth-errors.ts:36
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Энэ имэйлтэй бүртгэл аль хэдийн байна. Эхлээд нэвтэрч, дараа нь auth тохиргооноос {0}-г холбоно уу."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+msgid "An account with this identity already exists here."
+msgstr "Энэ таниулбар бүхий бүртгэл энд аль хэдийн байна."
 
 #: src/features/landing/landing-page.tsx:120
 msgid "App business logic"
@@ -162,12 +167,12 @@ msgid "authenticator code"
 msgstr "баталгаажуулагч код"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:445
+#: src/features/auth/sign-in/components/user-auth-form.tsx:499
 msgid "Authenticator code"
 msgstr "Authenticator код"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:484
+#: src/features/auth/sign-in/components/user-auth-form.tsx:538
 msgid "Back"
 msgstr "Буцах"
 
@@ -177,19 +182,39 @@ msgstr "Буцах"
 msgid "Back to home"
 msgstr "Нүүр хуудас руу буцах"
 
+#: src/routes/restoring.tsx:118
+msgid "Back to sign up"
+msgstr "Бүртгүүлэх хуудас руу буцах"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+msgid "Backup file"
+msgstr "Нөөцлөлтийн файл"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+msgid "Backup file is corrupted"
+msgstr "Нөөцлөлтийн файл гэмтсэн"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+msgid "Backup is too new"
+msgstr "Нөөцлөлт хэт шинэ байна"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Сонирхлыг идэвхжүүлэх"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:85
+msgid "Bring an existing account onto this server:"
+msgstr "Одоо байгаа бүртгэлийг энэ сервер дээр авчрах:"
 
 #: src/features/landing/landing-page.tsx:84
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Нийгэмлэгтээ хуваалцсан, олшруулсан мэдлэгийн сан байгуулах. Таны өгөгдөл үргэлж танийх байна."
 
-#: src/features/landing/landing-page.tsx:365
+#: src/features/landing/landing-page.tsx:371
 msgid "Built on solid foundations"
 msgstr "Бат бөх суурин дээр бүтсэн"
 
-#: src/features/landing/landing-page.tsx:305
+#: src/features/landing/landing-page.tsx:311
 msgid "Built-in apps"
 msgstr "Дотооддоо суулгасан аппууд"
 
@@ -220,15 +245,15 @@ msgstr "Мэдэгдлийн ангиллыг солих"
 msgid "Chat"
 msgstr "Чат"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "Check the address after @ and try again."
 msgstr "@ -ийн ард байгаа хаягийг шалгаад дахин оролдоно уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Check the username before @ and try again."
 msgstr "@ -ийн өмнөх хэрэглэгчийн нэрийг шалгаад дахин оролдоно уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
 msgid "Check your email."
 msgstr "Имэйлээ шалгана уу."
 
@@ -236,7 +261,12 @@ msgstr "Имэйлээ шалгана уу."
 msgid "Checking every few seconds…"
 msgstr "Хэдхэн секунд тутамд шалгаж байна…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/routes/restoring.tsx:163
+msgid "Checking…"
+msgstr "Шалгаж байна…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "Choose a different local email or log in instead."
 msgstr "Өөр локал имэйл сонгох эсвэл оронд нь нэвтэрнэ үү."
 
@@ -299,11 +329,11 @@ msgstr "Самбарыг хаах"
 msgid "Close search"
 msgstr "Хайлтыг хаах"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Code copied"
 msgstr "Код хуулбарласан"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:194
+#: src/features/auth/sign-in/components/user-auth-form.tsx:248
 msgid "Code sent."
 msgstr "Код илгээсэн."
 
@@ -354,7 +384,7 @@ msgstr "Үргэлжлүүлэх"
 msgid "Copy"
 msgstr "Хуулах"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:268
 msgid "Copy code"
 msgstr "Кодыг хуулах"
 
@@ -368,15 +398,15 @@ msgstr "Цуцлах боломжгүй"
 msgid "Could not load this document. Please try again later."
 msgstr "Энэ баримт бичгийг ачаалж чадсангүй. Дараа дахин оролдоно уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Could not reach the source server"
 msgstr "Эх сервер рүү холбогдож чадсангүй"
 
-#: src/features/landing/landing-page.tsx:208
+#: src/features/landing/landing-page.tsx:211
 msgid "Could not start sign-in"
 msgstr "Нэвтрэлт эхлүүлж чадсангүй"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:406
 msgid "Create an account"
 msgstr "Бүртгэл үүсгэх"
 
@@ -444,11 +474,12 @@ msgstr "Чиглэл"
 msgid "Displays the mobile sidebar."
 msgstr "Гар утасны хажуугийн самбарыг харуулна."
 
-#: src/features/landing/landing-page.tsx:337
+#: src/features/landing/landing-page.tsx:343
 msgid "Distributed by design"
 msgstr "Дизайнаар тархсан"
 
 #: src/routes/replicating.tsx:229
+#: src/routes/restoring.tsx:54
 msgid "Done"
 msgstr "Дууссан"
 
@@ -460,11 +491,12 @@ msgstr "Татах"
 msgid "Dyslexia-friendly"
 msgstr "Дислексид зориулсан"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:520
+#: src/features/auth/sign-in/components/user-auth-form.tsx:574
 msgid "Email"
 msgstr "Имэйл"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Email already in use"
 msgstr "Имэйл аль хэдийн ашиглагдаж байна"
 
@@ -473,7 +505,7 @@ msgid "email code"
 msgstr "имэйл код"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:472
 msgid "Email code"
 msgstr "Имэйл код"
 
@@ -481,7 +513,7 @@ msgstr "Имэйл код"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Нэвтрэхийн тулд \"{userEmail}\"-н сэргээх кодыг оруулна уу"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:399
+#: src/features/auth/sign-in/components/user-auth-form.tsx:453
 msgid "Enter the code from your authenticator app"
 msgstr "Authenticator апп-аасаа кодоо оруулна уу"
 
@@ -494,11 +526,11 @@ msgstr "{0} оруулна уу"
 msgid "Enter your {initial} and {last}"
 msgstr "{initial} болон {last} оруулна уу"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:389
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Enter your email code and authenticator code"
 msgstr "Имэйл код болон authenticator кодоо оруулна уу"
 
-#: src/features/landing/landing-page.tsx:308
+#: src/features/landing/landing-page.tsx:314
 msgid "Everything you need, nothing you don't control"
 msgstr "Хэрэгтэй бүх зүйл, та өөрөө удирдана"
 
@@ -510,15 +542,19 @@ msgstr "Хажуугийн самбарыг тэлэх"
 msgid "Extra large"
 msgstr "Маш том"
 
+#: src/routes/restoring.tsx:55
+msgid "Failed"
+msgstr "Амжилтгүй болсон"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "Бүртгэл нэмж чадсангүй"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:288
 msgid "Failed to continue"
 msgstr "Үргэлжлүүлж чадсангүй"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:263
 msgid "Failed to copy code"
 msgstr "Код хуулж чадсангүй"
 
@@ -554,6 +590,10 @@ msgstr "Файлууд"
 msgid "Finish setting up your account"
 msgstr "Бүртгэлээ тохируулж дуусгана уу"
 
+#: src/routes/restoring.tsx:53
+msgid "Finishing up"
+msgstr "Дуусгаж байна"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
 msgstr "Хөвөгч"
@@ -569,6 +609,14 @@ msgstr "Баасан"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Эхлэх"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "From a backup file (restore)"
+msgstr "Нөөцлөлтийн файлаас (сэргээх)"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "From another running server (replicate)"
+msgstr "Ажиллаж байгаа өөр серверээс (хуулах)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -627,7 +675,7 @@ msgstr "Нүүр"
 msgid "Hot"
 msgstr "Хот"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:340
 msgid "How it works"
 msgstr "Хэрхэн ажилладаг тухай"
 
@@ -647,7 +695,7 @@ msgstr "Дотогшоо"
 msgid "Interests"
 msgstr "Сонирхлууд"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Invalid authenticator code"
 msgstr "Authenticator код хүчингүй"
 
@@ -656,11 +704,11 @@ msgstr "Authenticator код хүчингүй"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
-#: src/features/auth/sign-in/components/user-auth-form.tsx:361
+#: src/features/auth/sign-in/components/user-auth-form.tsx:338
+#: src/features/auth/sign-in/components/user-auth-form.tsx:346
+#: src/features/auth/sign-in/components/user-auth-form.tsx:375
+#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Invalid code"
 msgstr "Код хүчингүй"
 
@@ -670,7 +718,7 @@ msgid "Invalid recovery code"
 msgstr "Сэргээх код хүчингүй"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:344
+#: src/features/auth/sign-in/components/user-auth-form.tsx:398
 msgid "Invalid verification code"
 msgstr "Баталгаажуулах код хүчингүй"
 
@@ -700,6 +748,10 @@ msgstr "Зүүнээс баруун"
 msgid "Light"
 msgstr "Цайвар"
 
+#: src/routes/restoring.tsx:52
+msgid "Linking your identity"
+msgstr "Таниулбарыг холбож байна"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
 msgid "Load more"
 msgstr "Илүү ачаалах"
@@ -712,23 +764,23 @@ msgstr "Ачаалж байна…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:473
+#: src/features/auth/sign-in/components/user-auth-form.tsx:527
 msgid "Log in"
 msgstr "Нэвтрэх"
 
-#: src/features/landing/landing-page.tsx:439
+#: src/features/landing/landing-page.tsx:445
 msgid "Log in to Mochi"
 msgstr "Mochi-д нэвтрэх"
 
-#: src/features/landing/landing-page.tsx:491
+#: src/features/landing/landing-page.tsx:499
 msgid "Log in with {label}"
 msgstr "{label}-р нэвтрэх"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:104
 msgid "Log in with passkey"
 msgstr "Passkey-р нэвтрэх"
 
-#: src/features/auth/sign-in/index.tsx:68
+#: src/features/auth/sign-in/index.tsx:71
 msgid "Log in with your email address"
 msgstr "Имэйл хаягаараа нэвтрэх"
 
@@ -743,8 +795,8 @@ msgid "Log out"
 msgstr "Гарах"
 
 #: src/features/auth/recovery/index.tsx:39
-#: src/features/auth/sign-in/index.tsx:38
-#: src/features/landing/landing-page.tsx:231
+#: src/features/auth/sign-in/index.tsx:41
+#: src/features/landing/landing-page.tsx:237
 msgid "Logged in"
 msgstr "Нэвтэрсэн"
 
@@ -765,7 +817,7 @@ msgid "Login session expired, please try again"
 msgstr "Нэвтрэх сешн дууссан, дахин оролдоно уу"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:495
+#: src/features/auth/sign-in/components/user-auth-form.tsx:549
 msgid "Lost access? Use a recovery code"
 msgstr "Хандалт алдсан уу? Сэргээх код ашиглана уу"
 
@@ -794,15 +846,15 @@ msgstr "Найзуудтайгаа дангаар эсвэл бүлгээр ши
 msgid "Metric"
 msgstr "Метрик"
 
-#: src/features/landing/landing-page.tsx:311
+#: src/features/landing/landing-page.tsx:317
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi одоо 20 гаруй апп-тай ирдэг бөгөөд илүү олныг тогтмол нэмж байна. Гол апп-уудад дараахи багтана:"
 
-#: src/features/landing/landing-page.tsx:296
+#: src/features/landing/landing-page.tsx:302
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi бол түгээгдсэн апп-уудын федерат, олон хэрэглэгчтэй платформ. Хэн ч өөрийн серверээ ажиллуулж, Mochi сүлжээний бусад хэрэглэгчтэй холбогдох боломжтой. Хэн ч апп үүсгэж нийтэлж болно."
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:374
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi нь дараахи технологиудыг ашиглан бүтээгдсэн:"
 
@@ -822,13 +874,14 @@ msgstr "Шинэ"
 msgid "New accounts are disabled on this server"
 msgstr "Энэ серверт шинэ бүртгэл идэвхгүй байна"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:231
-#: src/features/auth/sign-in/components/user-auth-form.tsx:358
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "New user signup is disabled."
 msgstr "Шинэ хэрэглэгчийн бүртгэл идэвхгүй байна."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:533
+#: src/features/auth/sign-in/components/user-auth-form.tsx:587
 msgid "Next"
 msgstr "Дараах"
 
@@ -840,7 +893,11 @@ msgstr "Дараагийн зураг"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Хандалтын дүрэм тохируулагдаагүй байна. Энэ нөөцөд хэн хандах эрхтэй байхыг тохируулахын тулд дүрэм нэмнэ үү."
 
-#: src/features/landing/landing-page.tsx:340
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+msgid "No backup file selected"
+msgstr "Нөөцлөлтийн файл сонгогдоогүй"
+
+#: src/features/landing/landing-page.tsx:346
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Таны өгөгдөл хадгалдаг төв сервер байхгүй. Mochi-ийн нэг бүр зангилаа сүлжээний бүрэн эрхт оролцогч бөгөөд бусадтай libp2p-ээр шууд харьцдаг."
 
@@ -852,7 +909,7 @@ msgstr "Холбогдсон бүртгэл байхгүй"
 msgid "No groups available"
 msgstr "Боломжит групп байхгүй"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "No matching account on the source server"
 msgstr "Эх сервер дээр тохирох бүртгэл алга"
 
@@ -887,9 +944,17 @@ msgstr "Хэрэглэгч олдсонгүй"
 msgid "None"
 msgstr "Алга"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:100
+msgid "None — create a fresh account"
+msgstr "Алга — шинэ бүртгэл үүсгэх"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "Энгийн"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Not a migration bundle"
+msgstr "Шилжүүлгийн багц биш"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -919,11 +984,11 @@ msgstr "Навигацийн цэс нээх"
 msgid "Open theme settings"
 msgstr "Сэдвийн тохиргоо нээх"
 
-#: src/features/auth/sign-in/index.tsx:89
+#: src/features/auth/sign-in/index.tsx:94
 msgid "Or"
 msgstr "Эсвэл"
 
-#: src/features/landing/landing-page.tsx:464
+#: src/features/landing/landing-page.tsx:472
 msgid "Or log in with"
 msgstr "Эсвэл-ээр нэвтрэх"
 
@@ -944,21 +1009,21 @@ msgid "passkey"
 msgstr "passkey"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:480
+#: src/features/landing/landing-page.tsx:488
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/index.tsx:53
-#: src/features/landing/landing-page.tsx:249
+#: src/features/auth/sign-in/index.tsx:56
+#: src/features/landing/landing-page.tsx:255
 msgid "Passkey login cancelled"
 msgstr "Passkey-ээр нэвтрэх цуцлагдсан"
 
-#: src/features/auth/sign-in/index.tsx:51
-#: src/features/landing/landing-page.tsx:247
+#: src/features/auth/sign-in/index.tsx:54
+#: src/features/landing/landing-page.tsx:253
 msgid "Passkey login failed"
 msgstr "Passkey-ээр нэвтрэх амжилтгүй"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:179
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Passkey login required"
 msgstr "Passkey-ээр нэвтрэх шаардлагатай"
 
@@ -966,38 +1031,42 @@ msgstr "Passkey-ээр нэвтрэх шаардлагатай"
 msgid "Passkey MFA not yet implemented"
 msgstr "Passkey MFA хараахан хэрэгжээгүй"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:394
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+msgid "Passphrase"
+msgstr "Нууц үг"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:448
 msgid "Paste the login code you received by email"
 msgstr "Имэйлээр хүлээн авсан нэвтрэх кодоо буулгана уу"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:60
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:65
 msgid "Peer IDs start with 12D3KooW and are 52 characters long"
 msgstr "Peer ID нь 12D3KooW-ээр эхэлдэг бөгөөд 52 тэмдэгтийн урттай"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:267
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Please check your authenticator app and try again."
 msgstr "Authenticator апп-аа шалгаад дахин оролдоно уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:339
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Please check your authenticator code and try again."
 msgstr "Authenticator-ийн кодоо шалгаад дахин оролдоно уу."
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:362
+#: src/features/auth/sign-in/components/user-auth-form.tsx:416
 msgid "Please check your code and try again."
 msgstr "Кодоо шалгаад дахин оролдоно уу."
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
-#: src/features/auth/sign-in/components/user-auth-form.tsx:330
+#: src/features/auth/sign-in/components/user-auth-form.tsx:376
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Please check your codes and try again."
 msgstr "Кодуудаа шалгаад дахин оролдоно уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:345
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Please check your email and try again."
 msgstr "Имэйлээ шалгаад дахин оролдоно уу."
 
@@ -1006,15 +1075,15 @@ msgstr "Имэйлээ шалгаад дахин оролдоно уу."
 msgid "Please check your recovery code and try again."
 msgstr "Сэргээх кодоо шалгаад дахин оролдоно уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Please copy manually: {devCode}"
 msgstr "Гараар хуулна уу: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:67
+#: src/features/auth/sign-in/components/user-auth-form.tsx:72
 msgid "Please enter a valid email"
 msgstr "Зөв имэйл оруулна уу"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:251
+#: src/features/auth/sign-in/components/user-auth-form.tsx:305
 msgid "Please enter your authenticator code"
 msgstr "Authenticator-ийн кодоо оруулна уу"
 
@@ -1026,9 +1095,10 @@ msgstr "Нэрээ оруулна уу"
 msgid "Please enter your recovery code"
 msgstr "Сэргээх кодоо оруулна уу"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
-#: src/features/auth/sign-in/components/user-auth-form.tsx:235
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:420
 msgid "Please try again or contact support."
 msgstr "Дахин оролдох эсвэл дэмжлэг авна уу."
 
@@ -1036,7 +1106,7 @@ msgstr "Дахин оролдох эсвэл дэмжлэг авна уу."
 msgid "Please use another verification method."
 msgstr "Өөр баталгаажуулах арга ашиглана уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "\"Passkey-ээр нэвтрэх\" товчийг ашиглана уу."
 
@@ -1047,8 +1117,8 @@ msgstr "Өмнөх зураг"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:24
 #: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:427
-#: src/features/landing/landing-page.tsx:524
+#: src/features/landing/landing-page.tsx:433
+#: src/features/landing/landing-page.tsx:538
 msgid "Privacy"
 msgstr "Нууцлал"
 
@@ -1073,7 +1143,7 @@ msgstr "Нийтийн"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Нийгмийн сүлжээний өөрийн фид нийтлэх, бусдыг дагах, эсвэл AI tag болон ангилалтайгаар бусад фидийг нэгтгэх. Чухал зүйлээ дагаж, шуугианыг шүүх."
 
-#: src/features/landing/landing-page.tsx:393
+#: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Mochi-г туршихад бэлэн үү?"
 
@@ -1098,9 +1168,10 @@ msgstr "Dashboard руу шилжүүлж байна…"
 msgid "Reduce interest"
 msgstr "Хүүг бууруулах"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:357
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:411
 msgid "Registration disabled"
 msgstr "Бүртгэл идэвхгүй"
 
@@ -1130,11 +1201,7 @@ msgstr "Хандалтыг хасах уу?"
 msgid "Remove interest"
 msgstr "Сонирхол хасах"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:80
-msgid "Replicate an existing account from another server"
-msgstr "Өөр серверээс одоо байгаа бүртгэлийг хуулах"
-
-#: src/features/landing/landing-page.tsx:175
+#: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Хувилах хүсэлтийг татгалзлаа"
 
@@ -1146,9 +1213,13 @@ msgstr "Хуулбарлах хүсэлтийг <0>{source_user}</0> руу ил
 msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
 msgstr "Хуулбарлах хүсэлтийг эх сервер рүү илгээлээ. Хуулбарлалтыг дуусгахын тулд эх серверийн тохиргооны хуудсан дээр үүнийг зөвшөөрнө үү."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:213
 msgid "Replication signup failed"
 msgstr "Хуулбарлах бүртгэл амжилтгүй боллоо"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
+msgid "Required only if your backup includes private keys."
+msgstr "Зөвхөн нөөцлөлт нь хувийн түлхүүрүүдийг агуулж байгаа тохиолдолд шаардлагатай."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1158,6 +1229,15 @@ msgstr "Шинэчлэх"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Бүх тохиргоог анхдагч утгад нь сэргээх"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:169
+#: src/routes/restoring.tsx:106
+msgid "Restore failed"
+msgstr "Сэргээх амжилтгүй болсон"
+
+#: src/routes/restoring.tsx:130
+msgid "Restoring your account"
+msgstr "Таны бүртгэлийг сэргээж байна"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1247,8 +1327,8 @@ msgstr "Сервер"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
-#: src/features/landing/landing-page.tsx:419
-#: src/features/landing/landing-page.tsx:516
+#: src/features/landing/landing-page.tsx:425
+#: src/features/landing/landing-page.tsx:530
 msgid "Server rules"
 msgstr "Серверийн дүрэм"
 
@@ -1280,7 +1360,7 @@ msgstr "Хажуугийн самбар"
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Бүртгүүлэхэд таны өөрийн Mochi нод үүснэ. Таны мэдээлэл тэнд байх ба хэн нэгний серверт бус."
 
-#: src/features/landing/landing-page.tsx:277
+#: src/features/landing/landing-page.tsx:283
 msgid "Sign up or log in"
 msgstr "Бүртгүүлэх эсвэл нэвтрэх"
 
@@ -1309,7 +1389,7 @@ msgstr "Жижиг"
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Зарим шилжүүлэг эхний оролдлогоор дуусаагүй. Тэдгээрийг автоматаар дахин оролдоно."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:101
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:151
 msgid "Source server peer ID"
 msgstr "Эх сервер peer ID"
 
@@ -1370,8 +1450,8 @@ msgstr "Баг/Программууд"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:20
 #: ../../../lib/web/src/features/document/document-page.tsx:39
-#: src/features/landing/landing-page.tsx:423
-#: src/features/landing/landing-page.tsx:520
+#: src/features/landing/landing-page.tsx:429
+#: src/features/landing/landing-page.tsx:534
 msgid "Terms and conditions"
 msgstr "Нөхцөл"
 
@@ -1384,11 +1464,23 @@ msgstr "Тэр {0} данс өөр хэрэглэгчтэй холбогдсон
 msgid "That sign-in provider is not available"
 msgstr "Тэр нэвтрэх үйлчилгээ боломжгүй байна"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+msgid "The file may be damaged or have been modified."
+msgstr "Файл гэмтсэн эсвэл өөрчлөгдсөн байж магадгүй."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+msgid "The passphrase you entered does not match the backup."
+msgstr "Таны оруулсан нууц үг нөөцлөлттэй тохирохгүй байна."
+
 #: src/lib/oauth-errors.ts:11
 msgid "the provider"
 msgstr "үйлчилгээ үзүүлэгч"
 
-#: src/features/landing/landing-page.tsx:176
+#: src/routes/restoring.tsx:109
+msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
+msgstr "Сэргээлт дуусаагүй. Нөөцлөлтийн файл гэмтсэн, нууц үг буруу, эсвэл сервер алдаа гаргасан байж магадгүй."
+
+#: src/features/landing/landing-page.tsx:179
 msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
 msgstr "Эх сервер хүсэлтийг зөвшөөрөөгүй эсвэл хугацаа нь дууссан. Дахин оролдоно уу эсвэл орон нутагт бүртгүүлнэ үү."
 
@@ -1399,6 +1491,10 @@ msgstr "Загвар"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "Загварын тохиргоо"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+msgid "This backup was created by a newer version of Mochi. Update this server first."
+msgstr "Энэ нөөцлөлтийг Mochi-ийн шинэ хувилбараар үүсгэсэн. Эхлээд энэ серверийг шинэчилнэ үү."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
@@ -1473,7 +1569,7 @@ msgstr "Хариуцсан хүн оноогоогүй"
 msgid "Unauthorized Access"
 msgstr "Зөвшөөрөлгүй хандалт"
 
-#: src/features/landing/landing-page.tsx:362
+#: src/features/landing/landing-page.tsx:368
 msgid "Under the hood"
 msgstr "Үндсэн ажиллагаа"
 
@@ -1481,9 +1577,21 @@ msgstr "Үндсэн ажиллагаа"
 msgid "United States"
 msgstr "АНУ"
 
+#: src/routes/restoring.tsx:51
+msgid "Unpacking your data"
+msgstr "Таны өгөгдлийг задалж байна"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Баталгаажаагүй"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+msgid "Upload a .zip file exported from Mochi's data export."
+msgstr "Mochi-ийн өгөгдлийн экспортоос экспортолсон .zip файлыг байршуулна уу."
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
+msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
+msgstr "Өөр Mochi серверээс экспортолсон шилжүүлгийн багц (.zip) байршуулна уу. Сервер нь таны өгөгдлийг орон нутагт сэргээнэ — өөр сервер онлайн байх шаардлагагүй."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1493,7 +1601,7 @@ msgstr "Өөр данс ашиглах"
 msgid "Use the apps"
 msgstr "Программуудыг ашиглах"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:50
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:55
 msgid "Use the form alice@example.com"
 msgstr "alice@example.com форматыг ашиглана уу"
 
@@ -1501,9 +1609,13 @@ msgstr "alice@example.com форматыг ашиглана уу"
 msgid "User"
 msgstr "Хэрэглэгч"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:130
 msgid "Username on source server"
 msgstr "Эх сервер дээрх хэрэглэгчийн нэр"
+
+#: src/routes/restoring.tsx:49
+msgid "Validating backup"
+msgstr "Нөөцлөлтийг баталгаажуулж байна"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1514,7 +1626,7 @@ msgid "Verification code sent"
 msgstr "Баталгаажуулах код илгээгдсэн"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
+#: src/features/auth/sign-in/components/user-auth-form.tsx:419
 msgid "Verification failed"
 msgstr "Баталгаажуулалт амжилтгүй"
 
@@ -1530,6 +1642,10 @@ msgstr "Имэйл хаягийг баталгаажуулах"
 #: src/features/auth/mfa/index.tsx:284
 msgid "Verify with passkey"
 msgstr "Passkey-аар баталгаажуулах"
+
+#: src/routes/restoring.tsx:50
+msgid "Verifying backup"
+msgstr "Нөөцлөлтийг шалгаж байна"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx:63
 msgid "Video thumbnail"
@@ -1547,7 +1663,7 @@ msgstr "Бүгдийг үзэх"
 msgid "View all notifications"
 msgstr "Бүх мэдэгдлүүдийг үзэх"
 
-#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:414
 msgid "View source code"
 msgstr "Эх кодыг үзэх"
 
@@ -1571,6 +1687,10 @@ msgstr "Лхагва гараг"
 msgid "Wikis"
 msgstr "Wiki-нууд"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Wrong passphrase"
+msgstr "Нууц үг буруу"
+
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:38
 msgid "Your {0} email is not verified"
@@ -1582,11 +1702,11 @@ msgstr "Таны данс түр зогсоосон"
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Your account has been suspended."
 msgstr "Таны данс түр зогсоосон."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Таны бүртгэл аль хэдийн энд хуулагдсан байна. Оронд нь нэвтэрнэ үү."
 
@@ -1594,17 +1714,25 @@ msgstr "Таны бүртгэл аль хэдийн энд хуулагдсан 
 msgid "Your account is being copied from the source server. Do not close this window."
 msgstr "Таны бүртгэлийг эх серверээс хуулж байна. Энэ цонхыг бү хаа."
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:123
+msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
+msgstr "Таны бүртгэл та нэвтрэх боломжтой серверээс шууд хуулагдана. Шилжүүлэлт эхлэхийн өмнө эх сервер хүсэлтийг зөвшөөрөх ёстой."
+
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "Таны данс нэвтрэхэд passkey шаардаж байна"
 
-#: src/features/landing/landing-page.tsx:293
+#: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Таны программууд, таны платформ, таны сүлжээ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:197
+#: src/features/auth/sign-in/components/user-auth-form.tsx:251
 msgid "Your code is: {devCode}"
 msgstr "Таны код: {devCode}"
+
+#: src/routes/restoring.tsx:133
+msgid "Your data is being restored from the backup. Do not close this window."
+msgstr "Таны өгөгдлийг нөөцлөлтөөс сэргээж байна. Энэ цонхыг бү хаа."
 
 #: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"

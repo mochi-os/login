@@ -53,7 +53,8 @@ msgstr "Sadarkaa seensaa"
 msgid "Account added"
 msgstr "Akkaawuntiin dabalame"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Akkaawuntichi duraan iyyuu sarvarii kana irra jira"
 
@@ -63,7 +64,7 @@ msgstr "Akkaawuntiin haqame"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
+#: src/features/auth/sign-in/components/user-auth-form.tsx:407
 msgid "Account suspended"
 msgstr "Akkaawuntiin yeroof dhaabbate"
 
@@ -124,7 +125,7 @@ msgstr "Mul'ata dabali"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Mul'ataa fi caasaa fedhii kee waliin haa wal simu sirreessi."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:74
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:79
 msgid "Advanced"
 msgstr "Sadarkaa olaanaa"
 
@@ -140,6 +141,10 @@ msgstr "Hunda"
 #: src/lib/oauth-errors.ts:36
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Akkaawuntiin imeelii kana waliin duraan jira. Duraan seenii, ergasii qindaa'ina seensaa keessaa {0} hidhi."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+msgid "An account with this identity already exists here."
+msgstr "Akkaawuntiin eenyummaa kana waliin asitti duraan jira."
 
 #: src/features/landing/landing-page.tsx:120
 msgid "App business logic"
@@ -162,12 +167,12 @@ msgid "authenticator code"
 msgstr "koodii mirkaneessaa"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:445
+#: src/features/auth/sign-in/components/user-auth-form.tsx:499
 msgid "Authenticator code"
 msgstr "Koodii mirkaneessaa"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:484
+#: src/features/auth/sign-in/components/user-auth-form.tsx:538
 msgid "Back"
 msgstr "Duuba"
 
@@ -177,19 +182,39 @@ msgstr "Duuba"
 msgid "Back to home"
 msgstr "Gara mana deebi’uu"
 
+#: src/routes/restoring.tsx:118
+msgid "Back to sign up"
+msgstr "Gara galmaahuu deebi'i"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+msgid "Backup file"
+msgstr "Faayilii kuusaa"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+msgid "Backup file is corrupted"
+msgstr "Faayiliin kuusaa miidhame"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+msgid "Backup is too new"
+msgstr "Kuusaan haaraa baay'ee"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Fedhii cimsi"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:85
+msgid "Bring an existing account onto this server:"
+msgstr "Akkaawuntii jiru kana sarvarii kana irratti fidi:"
 
 #: src/features/landing/landing-page.tsx:84
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Hawaasa keetiif waliin hojjechuu fi mana beekumsaa duraa-duub uumi. Daataan kee yeroo hunda kan kee dha."
 
-#: src/features/landing/landing-page.tsx:365
+#: src/features/landing/landing-page.tsx:371
 msgid "Built on solid foundations"
 msgstr "Bu'uuraalee jajjaboo irratti ijaarame"
 
-#: src/features/landing/landing-page.tsx:305
+#: src/features/landing/landing-page.tsx:311
 msgid "Built-in apps"
 msgstr "Appiilee keessa-jiran"
 
@@ -220,15 +245,15 @@ msgstr "Ramaddii beeksisaa jijjiiri"
 msgid "Chat"
 msgstr "Chaattii"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "Check the address after @ and try again."
 msgstr "Teessoo @ booda jiru sakatta'iitii ammas yaali."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Check the username before @ and try again."
 msgstr "Maqaa fayyadamtoota @ dura jiru sakatta'iitii ammas yaali."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
 msgid "Check your email."
 msgstr "Imeelii kee ilaali."
 
@@ -236,7 +261,12 @@ msgstr "Imeelii kee ilaali."
 msgid "Checking every few seconds…"
 msgstr "Sekondoota muraasa muraasaan sakatta'aa jira…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/routes/restoring.tsx:163
+msgid "Checking…"
+msgstr "Sakatta'aa jira…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "Choose a different local email or log in instead."
 msgstr "Imeelii naannoo biraa filadhu ykn qooda isaa seeni."
 
@@ -299,11 +329,11 @@ msgstr "Panela cufuu"
 msgid "Close search"
 msgstr "Barbaadii cufi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Code copied"
 msgstr "Koodiin garagalfame"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:194
+#: src/features/auth/sign-in/components/user-auth-form.tsx:248
 msgid "Code sent."
 msgstr "Koodiin ergame."
 
@@ -354,7 +384,7 @@ msgstr "Itti fufi"
 msgid "Copy"
 msgstr "Garagalchi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:268
 msgid "Copy code"
 msgstr "Koodii waraabuu"
 
@@ -368,15 +398,15 @@ msgstr "Haquu hin dandeenye"
 msgid "Could not load this document. Please try again later."
 msgstr "Galmee kana fe'uu hin dandeenye. Booda yaali."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Could not reach the source server"
 msgstr "Sarvarii madda gahuun hin danda'amne"
 
-#: src/features/landing/landing-page.tsx:208
+#: src/features/landing/landing-page.tsx:211
 msgid "Could not start sign-in"
 msgstr "Seensa eegaluu hin dandeenye"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:406
 msgid "Create an account"
 msgstr "Akkaawuntii uumi"
 
@@ -444,11 +474,12 @@ msgstr "Kallatti"
 msgid "Displays the mobile sidebar."
 msgstr "Cinaa moobaayilaa mul'isa."
 
-#: src/features/landing/landing-page.tsx:337
+#: src/features/landing/landing-page.tsx:343
 msgid "Distributed by design"
 msgstr "Karoora qabaachuun raabsame"
 
 #: src/routes/replicating.tsx:229
+#: src/routes/restoring.tsx:54
 msgid "Done"
 msgstr "Xumurame"
 
@@ -460,11 +491,12 @@ msgstr "Buufadhu"
 msgid "Dyslexia-friendly"
 msgstr "Dyslexiyaa Walitti Dhufu"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:520
+#: src/features/auth/sign-in/components/user-auth-form.tsx:574
 msgid "Email"
 msgstr "Imeelii"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Email already in use"
 msgstr "Imeeliin duraan iyyuu fayyadamuu irra jira"
 
@@ -473,7 +505,7 @@ msgid "email code"
 msgstr "koodii iimeelii"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:472
 msgid "Email code"
 msgstr "Koodii imeelii"
 
@@ -481,7 +513,7 @@ msgstr "Koodii imeelii"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "\"{userEmail}\" galuuf koodii deebisaa galchi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:399
+#: src/features/auth/sign-in/components/user-auth-form.tsx:453
 msgid "Enter the code from your authenticator app"
 msgstr "Koodii appii eegumsa keessanii irraa galchi"
 
@@ -494,11 +526,11 @@ msgstr "{0} keessan galchi"
 msgid "Enter your {initial} and {last}"
 msgstr "{initial} fi {last} keessan galchi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:389
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Enter your email code and authenticator code"
 msgstr "Koodii imeelii fi koodii eegumsa keessanii galchi"
 
-#: src/features/landing/landing-page.tsx:308
+#: src/features/landing/landing-page.tsx:314
 msgid "Everything you need, nothing you don't control"
 msgstr "Wantoota hunda barbaaddu, kan ati hin to'anne homaa"
 
@@ -510,15 +542,19 @@ msgstr "Sidebar baldhisi"
 msgid "Extra large"
 msgstr "Guddaa Akkaan"
 
+#: src/routes/restoring.tsx:55
+msgid "Failed"
+msgstr "Hin milkoofne"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "Akkaawuntii dabaluu hin dandeenye"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:288
 msgid "Failed to continue"
 msgstr "Itti fufuu hin dandeenye"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:263
 msgid "Failed to copy code"
 msgstr "Koodii garagalchuu hin dandeenye"
 
@@ -554,6 +590,10 @@ msgstr "Faayilota"
 msgid "Finish setting up your account"
 msgstr "Akkaawuntii kee xumursuu fixadhu"
 
+#: src/routes/restoring.tsx:53
+msgid "Finishing up"
+msgstr "Xumuraa jira"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
 msgstr "Bilisa"
@@ -569,6 +609,14 @@ msgstr "Jimaata"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Irraa"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "From a backup file (restore)"
+msgstr "Faayilii kuusaa irraa (deebisuun)"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "From another running server (replicate)"
+msgstr "Sarvarii biraa socho'aa irraa (garagalchi)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -627,7 +675,7 @@ msgstr "Mana"
 msgid "Hot"
 msgstr "Ho'aa"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:340
 msgid "How it works"
 msgstr "Akka itti hojjetu"
 
@@ -647,7 +695,7 @@ msgstr "Inset"
 msgid "Interests"
 msgstr "Fedhota"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Invalid authenticator code"
 msgstr "Koodii authenticator sirrii hin taane"
 
@@ -656,11 +704,11 @@ msgstr "Koodii authenticator sirrii hin taane"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
-#: src/features/auth/sign-in/components/user-auth-form.tsx:361
+#: src/features/auth/sign-in/components/user-auth-form.tsx:338
+#: src/features/auth/sign-in/components/user-auth-form.tsx:346
+#: src/features/auth/sign-in/components/user-auth-form.tsx:375
+#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Invalid code"
 msgstr "Koodii sirrii hin taane"
 
@@ -670,7 +718,7 @@ msgid "Invalid recovery code"
 msgstr "Koodii deebisaa sirrii hin taane"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:344
+#: src/features/auth/sign-in/components/user-auth-form.tsx:398
 msgid "Invalid verification code"
 msgstr "Koodii mirkanaa sirrii hin taane"
 
@@ -700,6 +748,10 @@ msgstr "Bitaa Mirgatti"
 msgid "Light"
 msgstr "Ifaa"
 
+#: src/routes/restoring.tsx:52
+msgid "Linking your identity"
+msgstr "Eenyummaa kee hidaa jira"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
 msgid "Load more"
 msgstr "Caalaa fe'i"
@@ -712,23 +764,23 @@ msgstr "Fe'aa jiraa…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:473
+#: src/features/auth/sign-in/components/user-auth-form.tsx:527
 msgid "Log in"
 msgstr "Seeni"
 
-#: src/features/landing/landing-page.tsx:439
+#: src/features/landing/landing-page.tsx:445
 msgid "Log in to Mochi"
 msgstr "Mochi seeni"
 
-#: src/features/landing/landing-page.tsx:491
+#: src/features/landing/landing-page.tsx:499
 msgid "Log in with {label}"
 msgstr "{label} fayyadamuun seeni"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:104
 msgid "Log in with passkey"
 msgstr "Passkey-iin seeni"
 
-#: src/features/auth/sign-in/index.tsx:68
+#: src/features/auth/sign-in/index.tsx:71
 msgid "Log in with your email address"
 msgstr "Teessoo imeelii kee fayyadamuun seeni"
 
@@ -743,8 +795,8 @@ msgid "Log out"
 msgstr "Ba'i"
 
 #: src/features/auth/recovery/index.tsx:39
-#: src/features/auth/sign-in/index.tsx:38
-#: src/features/landing/landing-page.tsx:231
+#: src/features/auth/sign-in/index.tsx:41
+#: src/features/landing/landing-page.tsx:237
 msgid "Logged in"
 msgstr "Galame"
 
@@ -765,7 +817,7 @@ msgid "Login session expired, please try again"
 msgstr "Sessen galmaa'uu yeroon dhumate, maaloo deebi'ii yaali"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:495
+#: src/features/auth/sign-in/components/user-auth-form.tsx:549
 msgid "Lost access? Use a recovery code"
 msgstr "Carraa hin qabuu? Koodii deebisaa fayyadami"
 
@@ -794,15 +846,15 @@ msgstr "Hiriyoota keetiif, dhuunfaa yookiin garee, peer-to-peer fi iccitiidhaan 
 msgid "Metric"
 msgstr "Metric"
 
-#: src/features/landing/landing-page.tsx:311
+#: src/features/landing/landing-page.tsx:317
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi yeroo amma appii 20 ol qaba, kanneen biroo yeroo dhihootti dabalamaa jiru. Appiiwwan ijoo dabalata:"
 
-#: src/features/landing/landing-page.tsx:296
+#: src/features/landing/landing-page.tsx:302
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi platformii hidhata, fayyadamtoota baayyee qabu, appii faca'aniif. Eenyu iyyuu sarvarii ofii isaa hojjeechisuu fi fayyadamtoota Mochi network kamiif iyyuu walqabsiisuu danda'a. Eenyu iyyuu appii uumee maxxansuu danda'a."
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:374
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi teeknolojiilee armaan gadii fayyadamuun ijaarame:"
 
@@ -822,13 +874,14 @@ msgstr "Haaraa"
 msgid "New accounts are disabled on this server"
 msgstr "Akkaawuntii haaraan sarvarii kana irratti dhaamfameera"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:231
-#: src/features/auth/sign-in/components/user-auth-form.tsx:358
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "New user signup is disabled."
 msgstr "Galmee fayyadamtuu haaraa dhaamfameera."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:533
+#: src/features/auth/sign-in/components/user-auth-form.tsx:587
 msgid "Next"
 msgstr "Itti aanu"
 
@@ -840,7 +893,11 @@ msgstr "Suuraa itti aanu"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Seerri itti seenumsaa hin qindaa'amne. Eenyu qabeenya kana itti seenuu danda'u to'achuuf seerota dabali."
 
-#: src/features/landing/landing-page.tsx:340
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+msgid "No backup file selected"
+msgstr "Faayiliin kuusaa hin filatamne"
+
+#: src/features/landing/landing-page.tsx:346
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Sarvariin handhuura ta'e daataa kee hin qabatu. Toora Mochi tokkoon tokkoon networkii keessatti hiriyaa guutuu yoo ta'an, libp2p tiin kallattii waliin qunnamu."
 
@@ -852,7 +909,7 @@ msgstr "Akkaawuntiiwwan walqabsiifaman hin jiran"
 msgid "No groups available"
 msgstr "Garreen hin jiran"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "No matching account on the source server"
 msgstr "Sarvarii madda irra akkaawuntiin wal fakkaatu hin jiru"
 
@@ -887,9 +944,17 @@ msgstr "Fayyadamtoonni hin argamne"
 msgid "None"
 msgstr "Tokko illee"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:100
+msgid "None — create a fresh account"
+msgstr "Tokko illee — akkaawuntii haaraa uumi"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "Idilee"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Not a migration bundle"
+msgstr "Kutaa godaansaa miti"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -919,11 +984,11 @@ msgstr "Menyuu naviigeeshinii bani"
 msgid "Open theme settings"
 msgstr "Qindaa'inoota mata duree bani"
 
-#: src/features/auth/sign-in/index.tsx:89
+#: src/features/auth/sign-in/index.tsx:94
 msgid "Or"
 msgstr "Ykn"
 
-#: src/features/landing/landing-page.tsx:464
+#: src/features/landing/landing-page.tsx:472
 msgid "Or log in with"
 msgstr "Ykn galaa kanaan"
 
@@ -944,21 +1009,21 @@ msgid "passkey"
 msgstr "passkey"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:480
+#: src/features/landing/landing-page.tsx:488
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/index.tsx:53
-#: src/features/landing/landing-page.tsx:249
+#: src/features/auth/sign-in/index.tsx:56
+#: src/features/landing/landing-page.tsx:255
 msgid "Passkey login cancelled"
 msgstr "Galmee passkey haqame"
 
-#: src/features/auth/sign-in/index.tsx:51
-#: src/features/landing/landing-page.tsx:247
+#: src/features/auth/sign-in/index.tsx:54
+#: src/features/landing/landing-page.tsx:253
 msgid "Passkey login failed"
 msgstr "Galmee passkey kufe"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:179
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Passkey login required"
 msgstr "Galmee passkey barbaachisaa dha"
 
@@ -966,38 +1031,42 @@ msgstr "Galmee passkey barbaachisaa dha"
 msgid "Passkey MFA not yet implemented"
 msgstr "Passkey MFA hanga ammaatti hin hojjetamne"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:394
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+msgid "Passphrase"
+msgstr "Jecha darbii"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:448
 msgid "Paste the login code you received by email"
 msgstr "Koodii galmee imeelidhaan argatte maxxansi"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:60
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:65
 msgid "Peer IDs start with 12D3KooW and are 52 characters long"
 msgstr "Peer ID 12D3KooW jalqaba qaba akkasumas qubee 52 dheerina qaba"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:267
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Please check your authenticator app and try again."
 msgstr "Maaloo aappii mirkaneessaa kee mirkaneessitee deebi'ii yaali."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:339
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Please check your authenticator code and try again."
 msgstr "Maaloo koodii mirkaneessaa kee mirkaneessitee deebi'ii yaali."
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:362
+#: src/features/auth/sign-in/components/user-auth-form.tsx:416
 msgid "Please check your code and try again."
 msgstr "Maaloo koodii kee mirkaneessitee deebi'ii yaali."
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
-#: src/features/auth/sign-in/components/user-auth-form.tsx:330
+#: src/features/auth/sign-in/components/user-auth-form.tsx:376
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Please check your codes and try again."
 msgstr "Maaloo koodiwwan kee mirkaneessitee deebi'ii yaali."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:345
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Please check your email and try again."
 msgstr "Maaloo imeelii kee mirkaneessitee deebi'ii yaali."
 
@@ -1006,15 +1075,15 @@ msgstr "Maaloo imeelii kee mirkaneessitee deebi'ii yaali."
 msgid "Please check your recovery code and try again."
 msgstr "Maaloo koodii deebii kee mirkaneessitee deebi'ii yaali."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Please copy manually: {devCode}"
 msgstr "Maaloo harkaan garagalchi: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:67
+#: src/features/auth/sign-in/components/user-auth-form.tsx:72
 msgid "Please enter a valid email"
 msgstr "Maaloo imeelii sirrii galchi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:251
+#: src/features/auth/sign-in/components/user-auth-form.tsx:305
 msgid "Please enter your authenticator code"
 msgstr "Maaloo koodii mirkaneessaa kee galchi"
 
@@ -1026,9 +1095,10 @@ msgstr "Maaloo maqaa kee galchi"
 msgid "Please enter your recovery code"
 msgstr "Maaloo koodii deebii kee galchi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
-#: src/features/auth/sign-in/components/user-auth-form.tsx:235
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:420
 msgid "Please try again or contact support."
 msgstr "Maaloo deebi'ii yaali ykn deeggarsa qunnami."
 
@@ -1036,7 +1106,7 @@ msgstr "Maaloo deebi'ii yaali ykn deeggarsa qunnami."
 msgid "Please use another verification method."
 msgstr "Maaloo mala mirkaneeffannaa biroo fayyadami."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Maaloo qabduu \"Passkey'n gali\" jedhu fayyadami."
 
@@ -1047,8 +1117,8 @@ msgstr "Suuraa duraa"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:24
 #: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:427
-#: src/features/landing/landing-page.tsx:524
+#: src/features/landing/landing-page.tsx:433
+#: src/features/landing/landing-page.tsx:538
 msgid "Privacy"
 msgstr "Iccitii"
 
@@ -1073,7 +1143,7 @@ msgstr "Ifa"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Feed miidiyaa hawaasaa kee mataa keetii maxxansi, kanneen biroo hordofi, ykn taagging fi tartiibessuu AI filannoo wajjin feed kanneen biroo walitti qabi. Wanta barbaachisu hordofi, sagalee qulqulleessi."
 
-#: src/features/landing/landing-page.tsx:393
+#: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Mochi yaaluuf qophiidhaa?"
 
@@ -1098,9 +1168,10 @@ msgstr "Gara daashboordiitti si deebisaa jira…"
 msgid "Reduce interest"
 msgstr "Dantaa hir'isi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:357
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:411
 msgid "Registration disabled"
 msgstr "Galmeen dhaamfameera"
 
@@ -1130,11 +1201,7 @@ msgstr "Itti seenumsa haquuf?"
 msgid "Remove interest"
 msgstr "Dantaa haqi"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:80
-msgid "Replicate an existing account from another server"
-msgstr "Akkaawuntii jiru sarvarii biraa irraa baayyisi"
-
-#: src/features/landing/landing-page.tsx:175
+#: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Gaaffiin garagalcha gadi dhiifameera"
 
@@ -1146,9 +1213,13 @@ msgstr "Gaaffiin baayʼessuu gara <0>{source_user}</0> ergameera. Baayʼessuu xu
 msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
 msgstr "Gaaffiin baayʼessuu gara kaadhimaa ergameera. Baayʼessuu xumuruuf fuula qindaaʼina kaadhimaa irratti mirkaneessi."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:213
 msgid "Replication signup failed"
 msgstr "Galmeen baayyisaa hin milkoofne"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
+msgid "Required only if your backup includes private keys."
+msgstr "Kuusaan kee furtuuwwan dhuunfaa hammatu yoo tahe qofa barbaachisa."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1158,6 +1229,15 @@ msgstr "Haaromsi"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Qindaa'inoota hunda gara durtiitti deebisi"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:169
+#: src/routes/restoring.tsx:106
+msgid "Restore failed"
+msgstr "Deebisuun hin milkoofne"
+
+#: src/routes/restoring.tsx:130
+msgid "Restoring your account"
+msgstr "Akkaawuntii kee deebisuun"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1247,8 +1327,8 @@ msgstr "Server"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
-#: src/features/landing/landing-page.tsx:419
-#: src/features/landing/landing-page.tsx:516
+#: src/features/landing/landing-page.tsx:425
+#: src/features/landing/landing-page.tsx:530
 msgid "Server rules"
 msgstr "Seerota server"
 
@@ -1280,7 +1360,7 @@ msgstr "Cinaa"
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Galmaa'i, achumaan node Mochi keessanii uumama. Ragaan keessan achi jiraata — server nama biraa irra miti."
 
-#: src/features/landing/landing-page.tsx:277
+#: src/features/landing/landing-page.tsx:283
 msgid "Sign up or log in"
 msgstr "Galmaa'aa ykn galaa'aa"
 
@@ -1309,7 +1389,7 @@ msgstr "Xiqqaa"
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Dabarsi tokko tokko yaaliii jalqabaa irratti hin xumuramne. Si'a lammataa ofumaan ni yaalamu."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:101
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:151
 msgid "Source server peer ID"
 msgstr "Peer ID seervera madda"
 
@@ -1370,8 +1450,8 @@ msgstr "Gareewwan/Apps"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:20
 #: ../../../lib/web/src/features/document/document-page.tsx:39
-#: src/features/landing/landing-page.tsx:423
-#: src/features/landing/landing-page.tsx:520
+#: src/features/landing/landing-page.tsx:429
+#: src/features/landing/landing-page.tsx:534
 msgid "Terms and conditions"
 msgstr "Haalota fi tarsiimoolee"
 
@@ -1384,11 +1464,23 @@ msgstr "Akkaawuntiin {0} sun fayyadamaa biraatti hidhameera"
 msgid "That sign-in provider is not available"
 msgstr "Kennaan galaa'iinsa sun hin jiru"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+msgid "The file may be damaged or have been modified."
+msgstr "Faayilichi miidhame ykn jijjiiramee ta'uu danda'a."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+msgid "The passphrase you entered does not match the backup."
+msgstr "Jecha darbii galchite kuusaa waliin wal hin simne."
+
 #: src/lib/oauth-errors.ts:11
 msgid "the provider"
 msgstr "kennaa"
 
-#: src/features/landing/landing-page.tsx:176
+#: src/routes/restoring.tsx:109
+msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
+msgstr "Deebisuun hin xumuuramne. Faayiliin kuusaa miidhame ta'uu, jecha darbiin dogoggoraa ta'uu, ykn sarvarichi dogongora mudate ta'uu danda'a."
+
+#: src/features/landing/landing-page.tsx:179
 msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
 msgstr "Seerveraan madda gaaffii sana hin mirkaneessine, yookin yeroon isaa darbe. Irra deebi'ii yaali yookin naannootti galmaa'i."
 
@@ -1399,6 +1491,10 @@ msgstr "Akeeka"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "Qindaa'inoota Akeeka"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+msgid "This backup was created by a newer version of Mochi. Update this server first."
+msgstr "Kuusaan kun versiyon haaraa Mochi tiin uumame. Sarvarii kana dursa haaromsi."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
@@ -1473,7 +1569,7 @@ msgstr "Hin ramadamne"
 msgid "Unauthorized Access"
 msgstr "Galmee Hin hayyamamne"
 
-#: src/features/landing/landing-page.tsx:362
+#: src/features/landing/landing-page.tsx:368
 msgid "Under the hood"
 msgstr "Bantii jala"
 
@@ -1481,9 +1577,21 @@ msgstr "Bantii jala"
 msgid "United States"
 msgstr "Yunaaytid Isteeths"
 
+#: src/routes/restoring.tsx:51
+msgid "Unpacking your data"
+msgstr "Daataa kee banuun"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Hin mirkanaa'amne"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+msgid "Upload a .zip file exported from Mochi's data export."
+msgstr "Faayilii .zip ergii alatti baafame Mochi irraa ol kaa'i."
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
+msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
+msgstr "Kutaa godaansaa (.zip) sarvarii Mochi biraa irraa ergii alatti baafame ol kaa'i. Sarvarichi daataa kee naannootti deebisa — sarvarii biraa onlaayinii ta'u kan barbaachisu hin jiru."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1493,7 +1601,7 @@ msgstr "Akkaawuntii biraa fayyadami"
 msgid "Use the apps"
 msgstr "Apps fayyadami"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:50
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:55
 msgid "Use the form alice@example.com"
 msgstr "Bifa alice@example.com fayyadami"
 
@@ -1501,9 +1609,13 @@ msgstr "Bifa alice@example.com fayyadami"
 msgid "User"
 msgstr "Fayyadamaa"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:130
 msgid "Username on source server"
 msgstr "Maqaa fayyadamtuu seervera madda irratti"
+
+#: src/routes/restoring.tsx:49
+msgid "Validating backup"
+msgstr "Kuusaa mirkaneessuun"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1514,7 +1626,7 @@ msgid "Verification code sent"
 msgstr "Koodiin mirkaneessaa ergameera"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
+#: src/features/auth/sign-in/components/user-auth-form.tsx:419
 msgid "Verification failed"
 msgstr "Mirkaneessuun hin milkoofne"
 
@@ -1530,6 +1642,10 @@ msgstr "Teessoo iimeelii mirkaneessi"
 #: src/features/auth/mfa/index.tsx:284
 msgid "Verify with passkey"
 msgstr "Passkey waliin mirkaneessi"
+
+#: src/routes/restoring.tsx:50
+msgid "Verifying backup"
+msgstr "Kuusaa sakatta'uun"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx:63
 msgid "Video thumbnail"
@@ -1547,7 +1663,7 @@ msgstr "Hunda daawwadhu"
 msgid "View all notifications"
 msgstr "Beeksisa hunda daawwadhu"
 
-#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:414
 msgid "View source code"
 msgstr "Koodii madda daawwadhu"
 
@@ -1571,6 +1687,10 @@ msgstr "Roobii"
 msgid "Wikis"
 msgstr "Wikis"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Wrong passphrase"
+msgstr "Jecha darbii dogoggoraa"
+
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:38
 msgid "Your {0} email is not verified"
@@ -1582,11 +1702,11 @@ msgstr "Akkaawuntiin keessan hidhameera"
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Your account has been suspended."
 msgstr "Akkaawuntiin keessan hidhameera."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Your account is already replicated here. Log in instead."
 msgstr "Akkaawuntiin keessan duraan iyyuu asitti baayyifameera. Qooda isaa seeni."
 
@@ -1594,17 +1714,25 @@ msgstr "Akkaawuntiin keessan duraan iyyuu asitti baayyifameera. Qooda isaa seeni
 msgid "Your account is being copied from the source server. Do not close this window."
 msgstr "Herrega kee tajaajilaa madda irraa garagalfamaa jira. Foddaa kana hin cufin."
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:123
+msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
+msgstr "Akkaawuntiin kee sarvarii itti seenuu dandeessu irraa kallattiin garagalfama. Jijjiirri dura sarvariin madda gaaffii ni mirkaneessuu qaba."
+
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "Akkaawuntiin keessan galaa'uuf passkey barbaada"
 
-#: src/features/landing/landing-page.tsx:293
+#: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Apps keessan, akeeka keessan, neetwarkii keessan"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:197
+#: src/features/auth/sign-in/components/user-auth-form.tsx:251
 msgid "Your code is: {devCode}"
 msgstr "Koodiin keessan: {devCode}"
+
+#: src/routes/restoring.tsx:133
+msgid "Your data is being restored from the backup. Do not close this window."
+msgstr "Daataan kee kuusaa irraa deebifamaa jira. Foddaa kana hin cufin."
 
 #: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"

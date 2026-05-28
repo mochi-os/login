@@ -8,6 +8,7 @@ const endpoints = {
     identity: '/_/identity',
     abandon: '/_/abandon',
     replicate: '/_/auth/replicate',
+    restore: '/_/auth/restore',
     passkey: {
       loginBegin: '/_/auth/passkey/begin',
       loginFinish: '/_/auth/passkey/finish',

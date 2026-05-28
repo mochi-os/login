@@ -53,7 +53,8 @@ msgstr "एक्सेस स्तर"
 msgid "Account added"
 msgstr "अकाउंट जोड़ा गया"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "खाता पहले से ही इस सर्वर पर है"
 
@@ -63,7 +64,7 @@ msgstr "अकाउंट हटाया गया"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
+#: src/features/auth/sign-in/components/user-auth-form.tsx:407
 msgid "Account suspended"
 msgstr "अकाउंट निलंबित"
 
@@ -124,7 +125,7 @@ msgstr "व्यू जोड़ें"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "अपनी प्राथमिकताओं के अनुसार दिखावट और लेआउट समायोजित करें।"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:74
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:79
 msgid "Advanced"
 msgstr "उन्नत"
 
@@ -140,6 +141,10 @@ msgstr "सभी"
 #: src/lib/oauth-errors.ts:36
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "उस ईमेल वाला खाता पहले से मौजूद है। पहले साइन इन करें, फिर अपनी ऑथ सेटिंग्स से {0} लिंक करें।"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+msgid "An account with this identity already exists here."
+msgstr "इस पहचान वाला एक खाता यहाँ पहले से मौजूद है।"
 
 #: src/features/landing/landing-page.tsx:120
 msgid "App business logic"
@@ -162,12 +167,12 @@ msgid "authenticator code"
 msgstr "ऑथेंटिकेटर कोड"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:445
+#: src/features/auth/sign-in/components/user-auth-form.tsx:499
 msgid "Authenticator code"
 msgstr "ऑथेंटिकेटर कोड"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:484
+#: src/features/auth/sign-in/components/user-auth-form.tsx:538
 msgid "Back"
 msgstr "वापस"
 
@@ -177,19 +182,39 @@ msgstr "वापस"
 msgid "Back to home"
 msgstr "होम पर वापस जाएँ"
 
+#: src/routes/restoring.tsx:118
+msgid "Back to sign up"
+msgstr "साइन अप पर वापस जाएं"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+msgid "Backup file"
+msgstr "बैकअप फ़ाइल"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+msgid "Backup file is corrupted"
+msgstr "बैकअप फ़ाइल दूषित है"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+msgid "Backup is too new"
+msgstr "बैकअप बहुत नया है"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "रुचि बढ़ाएँ"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:85
+msgid "Bring an existing account onto this server:"
+msgstr "किसी मौजूदा खाते को इस सर्वर पर लाएं:"
 
 #: src/features/landing/landing-page.tsx:84
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "अपने समुदाय के लिए एक सहयोगी, प्रतिकृत ज्ञान आधार बनाएँ। आपका डेटा हमेशा आपका रहता है।"
 
-#: src/features/landing/landing-page.tsx:365
+#: src/features/landing/landing-page.tsx:371
 msgid "Built on solid foundations"
 msgstr "मज़बूत नींव पर निर्मित"
 
-#: src/features/landing/landing-page.tsx:305
+#: src/features/landing/landing-page.tsx:311
 msgid "Built-in apps"
 msgstr "बिल्ट-इन ऐप्स"
 
@@ -220,15 +245,15 @@ msgstr "नोटिफ़िकेशन श्रेणी बदलें"
 msgid "Chat"
 msgstr "चैट"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "Check the address after @ and try again."
 msgstr "@ के बाद का पता जाँचें और पुनः प्रयास करें।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Check the username before @ and try again."
 msgstr "@ से पहले का उपयोगकर्ता नाम जाँचें और पुनः प्रयास करें।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
 msgid "Check your email."
 msgstr "अपना ईमेल जाँचें।"
 
@@ -236,7 +261,12 @@ msgstr "अपना ईमेल जाँचें।"
 msgid "Checking every few seconds…"
 msgstr "हर कुछ सेकंड में जाँच की जा रही है…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/routes/restoring.tsx:163
+msgid "Checking…"
+msgstr "जाँच हो रही है…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "Choose a different local email or log in instead."
 msgstr "कोई दूसरा स्थानीय ईमेल चुनें या इसके बजाय लॉग इन करें।"
 
@@ -299,11 +329,11 @@ msgstr "पैनल बंद करें"
 msgid "Close search"
 msgstr "खोज बंद करें"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Code copied"
 msgstr "कोड कॉपी किया गया"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:194
+#: src/features/auth/sign-in/components/user-auth-form.tsx:248
 msgid "Code sent."
 msgstr "कोड भेजा गया।"
 
@@ -354,7 +384,7 @@ msgstr "जारी रखें"
 msgid "Copy"
 msgstr "कॉपी करें"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:268
 msgid "Copy code"
 msgstr "कोड कॉपी करें"
 
@@ -368,15 +398,15 @@ msgstr "रद्द नहीं किया जा सका"
 msgid "Could not load this document. Please try again later."
 msgstr "यह दस्तावेज़ लोड नहीं किया जा सका। कृपया बाद में पुनः प्रयास करें।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Could not reach the source server"
 msgstr "स्रोत सर्वर तक नहीं पहुँचा जा सका"
 
-#: src/features/landing/landing-page.tsx:208
+#: src/features/landing/landing-page.tsx:211
 msgid "Could not start sign-in"
 msgstr "साइन-इन शुरू नहीं किया जा सका"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:406
 msgid "Create an account"
 msgstr "एक अकाउंट बनाएँ"
 
@@ -444,11 +474,12 @@ msgstr "दिशा"
 msgid "Displays the mobile sidebar."
 msgstr "मोबाइल साइडबार प्रदर्शित करता है।"
 
-#: src/features/landing/landing-page.tsx:337
+#: src/features/landing/landing-page.tsx:343
 msgid "Distributed by design"
 msgstr "डिज़ाइन द्वारा वितरित"
 
 #: src/routes/replicating.tsx:229
+#: src/routes/restoring.tsx:54
 msgid "Done"
 msgstr "पूर्ण"
 
@@ -460,11 +491,12 @@ msgstr "डाउनलोड"
 msgid "Dyslexia-friendly"
 msgstr "डिस्लेक्सिया-अनुकूल"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:520
+#: src/features/auth/sign-in/components/user-auth-form.tsx:574
 msgid "Email"
 msgstr "ईमेल"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Email already in use"
 msgstr "ईमेल पहले से उपयोग में है"
 
@@ -473,7 +505,7 @@ msgid "email code"
 msgstr "ईमेल कोड"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:472
 msgid "Email code"
 msgstr "ईमेल कोड"
 
@@ -481,7 +513,7 @@ msgstr "ईमेल कोड"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "साइन इन करने के लिए \"{userEmail}\" के लिए रिकवरी कोड दर्ज करें"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:399
+#: src/features/auth/sign-in/components/user-auth-form.tsx:453
 msgid "Enter the code from your authenticator app"
 msgstr "अपने ऑथेंटिकेटर ऐप से कोड दर्ज करें"
 
@@ -494,11 +526,11 @@ msgstr "अपना {0} दर्ज करें"
 msgid "Enter your {initial} and {last}"
 msgstr "अपना {initial} और {last} दर्ज करें"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:389
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Enter your email code and authenticator code"
 msgstr "अपना ईमेल कोड और ऑथेंटिकेटर कोड दर्ज करें"
 
-#: src/features/landing/landing-page.tsx:308
+#: src/features/landing/landing-page.tsx:314
 msgid "Everything you need, nothing you don't control"
 msgstr "जो कुछ आपको चाहिए, उसमें से कुछ भी ऐसा नहीं जिसे आप नियंत्रित न करें"
 
@@ -510,15 +542,19 @@ msgstr "साइडबार विस्तृत करें"
 msgid "Extra large"
 msgstr "अतिरिक्त बड़ा"
 
+#: src/routes/restoring.tsx:55
+msgid "Failed"
+msgstr "विफल"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "खाता जोड़ने में विफल"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:288
 msgid "Failed to continue"
 msgstr "जारी रखने में विफल"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:263
 msgid "Failed to copy code"
 msgstr "कोड कॉपी करने में विफल"
 
@@ -554,6 +590,10 @@ msgstr "फ़ाइलें"
 msgid "Finish setting up your account"
 msgstr "अपने खाते का सेटअप पूरा करें"
 
+#: src/routes/restoring.tsx:53
+msgid "Finishing up"
+msgstr "समाप्त हो रहा है"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
 msgstr "फ़्लोटिंग"
@@ -569,6 +609,14 @@ msgstr "शुक्रवार"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "से"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "From a backup file (restore)"
+msgstr "बैकअप फ़ाइल से (पुनर्स्थापित करें)"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "From another running server (replicate)"
+msgstr "किसी अन्य चल रहे सर्वर से (प्रतिकृति)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -627,7 +675,7 @@ msgstr "होम"
 msgid "Hot"
 msgstr "हॉट"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:340
 msgid "How it works"
 msgstr "यह कैसे काम करता है"
 
@@ -647,7 +695,7 @@ msgstr "इनसेट"
 msgid "Interests"
 msgstr "रुचियाँ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Invalid authenticator code"
 msgstr "अमान्य ऑथेंटिकेटर कोड"
 
@@ -656,11 +704,11 @@ msgstr "अमान्य ऑथेंटिकेटर कोड"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
-#: src/features/auth/sign-in/components/user-auth-form.tsx:361
+#: src/features/auth/sign-in/components/user-auth-form.tsx:338
+#: src/features/auth/sign-in/components/user-auth-form.tsx:346
+#: src/features/auth/sign-in/components/user-auth-form.tsx:375
+#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Invalid code"
 msgstr "अमान्य कोड"
 
@@ -670,7 +718,7 @@ msgid "Invalid recovery code"
 msgstr "अमान्य रिकवरी कोड"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:344
+#: src/features/auth/sign-in/components/user-auth-form.tsx:398
 msgid "Invalid verification code"
 msgstr "अमान्य सत्यापन कोड"
 
@@ -700,6 +748,10 @@ msgstr "बाएँ से दाएँ"
 msgid "Light"
 msgstr "लाइट"
 
+#: src/routes/restoring.tsx:52
+msgid "Linking your identity"
+msgstr "आपकी पहचान लिंक की जा रही है"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
 msgid "Load more"
 msgstr "और लोड करें"
@@ -712,23 +764,23 @@ msgstr "लोड हो रहा है…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:473
+#: src/features/auth/sign-in/components/user-auth-form.tsx:527
 msgid "Log in"
 msgstr "लॉग इन"
 
-#: src/features/landing/landing-page.tsx:439
+#: src/features/landing/landing-page.tsx:445
 msgid "Log in to Mochi"
 msgstr "Mochi में लॉग इन करें"
 
-#: src/features/landing/landing-page.tsx:491
+#: src/features/landing/landing-page.tsx:499
 msgid "Log in with {label}"
 msgstr "{label} से लॉग इन करें"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:104
 msgid "Log in with passkey"
 msgstr "पासकी से लॉग इन करें"
 
-#: src/features/auth/sign-in/index.tsx:68
+#: src/features/auth/sign-in/index.tsx:71
 msgid "Log in with your email address"
 msgstr "अपने ईमेल पते से लॉग इन करें"
 
@@ -743,8 +795,8 @@ msgid "Log out"
 msgstr "लॉग आउट"
 
 #: src/features/auth/recovery/index.tsx:39
-#: src/features/auth/sign-in/index.tsx:38
-#: src/features/landing/landing-page.tsx:231
+#: src/features/auth/sign-in/index.tsx:41
+#: src/features/landing/landing-page.tsx:237
 msgid "Logged in"
 msgstr "लॉग इन हो गए"
 
@@ -765,7 +817,7 @@ msgid "Login session expired, please try again"
 msgstr "लॉगिन सत्र समाप्त हो गया, कृपया फिर से प्रयास करें"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:495
+#: src/features/auth/sign-in/components/user-auth-form.tsx:549
 msgid "Lost access? Use a recovery code"
 msgstr "एक्सेस खो गया? रिकवरी कोड का उपयोग करें"
 
@@ -794,15 +846,15 @@ msgstr "अपने मित्रों को व्यक्तिगत �
 msgid "Metric"
 msgstr "मीट्रिक"
 
-#: src/features/landing/landing-page.tsx:311
+#: src/features/landing/landing-page.tsx:317
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi पहले से ही 20 से अधिक ऐप्स के साथ आता है, और अधिक जोड़े जा रहे हैं। मुख्य ऐप्स में शामिल हैं:"
 
-#: src/features/landing/landing-page.tsx:296
+#: src/features/landing/landing-page.tsx:302
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi डिस्ट्रिब्यूटेड ऐप्स के लिए एक फ़ेडरेटेड, मल्टी-यूज़र प्लेटफ़ॉर्म है। कोई भी अपना सर्वर चला सकता है और Mochi नेटवर्क के किसी भी अन्य यूज़र से कनेक्ट हो सकता है। कोई भी ऐप्स बना और पब्लिश कर सकता है।"
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:374
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi निम्नलिखित तकनीकों का उपयोग करके बनाया गया है:"
 
@@ -822,13 +874,14 @@ msgstr "नया"
 msgid "New accounts are disabled on this server"
 msgstr "इस सर्वर पर नए खाते अक्षम हैं"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:231
-#: src/features/auth/sign-in/components/user-auth-form.tsx:358
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "New user signup is disabled."
 msgstr "नए यूज़र साइनअप अक्षम है।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:533
+#: src/features/auth/sign-in/components/user-auth-form.tsx:587
 msgid "Next"
 msgstr "अगला"
 
@@ -840,7 +893,11 @@ msgstr "अगली इमेज"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "कोई एक्सेस नियम कॉन्फ़िगर नहीं किए गए। इस रिसोर्स को कौन एक्सेस कर सकता है, इसे नियंत्रित करने के लिए नियम जोड़ें।"
 
-#: src/features/landing/landing-page.tsx:340
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+msgid "No backup file selected"
+msgstr "कोई बैकअप फ़ाइल नहीं चुनी गई"
+
+#: src/features/landing/landing-page.tsx:346
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "कोई केंद्रीय सर्वर आपका डेटा नहीं रखता। प्रत्येक Mochi नोड नेटवर्क में एक पूर्ण पीयर है, जो libp2p के माध्यम से सीधे दूसरों के साथ संवाद करता है।"
 
@@ -852,7 +909,7 @@ msgstr "कोई कनेक्टेड अकाउंट नहीं"
 msgid "No groups available"
 msgstr "कोई ग्रुप उपलब्ध नहीं"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "No matching account on the source server"
 msgstr "स्रोत सर्वर पर कोई मिलता-जुलता खाता नहीं है"
 
@@ -887,9 +944,17 @@ msgstr "कोई यूज़र नहीं मिले"
 msgid "None"
 msgstr "कोई नहीं"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:100
+msgid "None — create a fresh account"
+msgstr "कोई नहीं — एक नया खाता बनाएं"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "सामान्य"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Not a migration bundle"
+msgstr "यह माइग्रेशन बंडल नहीं है"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -919,11 +984,11 @@ msgstr "नेविगेशन मेन्यू खोलें"
 msgid "Open theme settings"
 msgstr "थीम सेटिंग्स खोलें"
 
-#: src/features/auth/sign-in/index.tsx:89
+#: src/features/auth/sign-in/index.tsx:94
 msgid "Or"
 msgstr "या"
 
-#: src/features/landing/landing-page.tsx:464
+#: src/features/landing/landing-page.tsx:472
 msgid "Or log in with"
 msgstr "या इसके साथ लॉग इन करें"
 
@@ -944,21 +1009,21 @@ msgid "passkey"
 msgstr "पासकी"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:480
+#: src/features/landing/landing-page.tsx:488
 msgid "Passkey"
 msgstr "पासकी"
 
-#: src/features/auth/sign-in/index.tsx:53
-#: src/features/landing/landing-page.tsx:249
+#: src/features/auth/sign-in/index.tsx:56
+#: src/features/landing/landing-page.tsx:255
 msgid "Passkey login cancelled"
 msgstr "पासकी लॉगिन रद्द किया गया"
 
-#: src/features/auth/sign-in/index.tsx:51
-#: src/features/landing/landing-page.tsx:247
+#: src/features/auth/sign-in/index.tsx:54
+#: src/features/landing/landing-page.tsx:253
 msgid "Passkey login failed"
 msgstr "पासकी लॉगिन विफल"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:179
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Passkey login required"
 msgstr "पासकी लॉगिन आवश्यक"
 
@@ -966,38 +1031,42 @@ msgstr "पासकी लॉगिन आवश्यक"
 msgid "Passkey MFA not yet implemented"
 msgstr "पासकी MFA अभी तक लागू नहीं किया गया"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:394
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+msgid "Passphrase"
+msgstr "पासफ़्रेज़"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:448
 msgid "Paste the login code you received by email"
 msgstr "ईमेल द्वारा प्राप्त लॉगिन कोड पेस्ट करें"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:60
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:65
 msgid "Peer IDs start with 12D3KooW and are 52 characters long"
 msgstr "Peer ID 12D3KooW से शुरू होते हैं और 52 अक्षर लंबे होते हैं"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:267
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Please check your authenticator app and try again."
 msgstr "कृपया अपना ऑथेंटिकेटर ऐप जांचें और फिर से प्रयास करें।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:339
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Please check your authenticator code and try again."
 msgstr "कृपया अपना ऑथेंटिकेटर कोड जांचें और फिर से प्रयास करें।"
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:362
+#: src/features/auth/sign-in/components/user-auth-form.tsx:416
 msgid "Please check your code and try again."
 msgstr "कृपया अपना कोड जांचें और फिर से प्रयास करें।"
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
-#: src/features/auth/sign-in/components/user-auth-form.tsx:330
+#: src/features/auth/sign-in/components/user-auth-form.tsx:376
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Please check your codes and try again."
 msgstr "कृपया अपने कोड जांचें और फिर से प्रयास करें।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:345
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Please check your email and try again."
 msgstr "कृपया अपना ईमेल जांचें और फिर से प्रयास करें।"
 
@@ -1006,15 +1075,15 @@ msgstr "कृपया अपना ईमेल जांचें और फ�
 msgid "Please check your recovery code and try again."
 msgstr "कृपया अपना रिकवरी कोड जाँचें और फिर से प्रयास करें।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Please copy manually: {devCode}"
 msgstr "कृपया मैन्युअल रूप से कॉपी करें: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:67
+#: src/features/auth/sign-in/components/user-auth-form.tsx:72
 msgid "Please enter a valid email"
 msgstr "कृपया वैध ईमेल दर्ज करें"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:251
+#: src/features/auth/sign-in/components/user-auth-form.tsx:305
 msgid "Please enter your authenticator code"
 msgstr "कृपया अपना ऑथेंटिकेटर कोड दर्ज करें"
 
@@ -1026,9 +1095,10 @@ msgstr "कृपया अपना नाम दर्ज करें"
 msgid "Please enter your recovery code"
 msgstr "कृपया अपना रिकवरी कोड दर्ज करें"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
-#: src/features/auth/sign-in/components/user-auth-form.tsx:235
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:420
 msgid "Please try again or contact support."
 msgstr "कृपया फिर से प्रयास करें या सपोर्ट से संपर्क करें।"
 
@@ -1036,7 +1106,7 @@ msgstr "कृपया फिर से प्रयास करें या 
 msgid "Please use another verification method."
 msgstr "कृपया अन्य सत्यापन विधि का उपयोग करें।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "कृपया \"पासकी से लॉग इन\" बटन का उपयोग करें।"
 
@@ -1047,8 +1117,8 @@ msgstr "पिछली इमेज"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:24
 #: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:427
-#: src/features/landing/landing-page.tsx:524
+#: src/features/landing/landing-page.tsx:433
+#: src/features/landing/landing-page.tsx:538
 msgid "Privacy"
 msgstr "गोपनीयता"
 
@@ -1073,7 +1143,7 @@ msgstr "सार्वजनिक"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "अपनी सोशल मीडिया फ़ीड पब्लिश करें, दूसरों को फ़ॉलो करें, या वैकल्पिक AI टैगिंग और सॉर्टिंग के साथ अन्य फ़ीड्स को एकत्रित करें। जो मायने रखता है उसे फ़ॉलो करें, शोर को फ़िल्टर करें।"
 
-#: src/features/landing/landing-page.tsx:393
+#: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Mochi आज़माने के लिए तैयार हैं?"
 
@@ -1098,9 +1168,10 @@ msgstr "आपको डैशबोर्ड पर रीडायरेक्
 msgid "Reduce interest"
 msgstr "रुचि कम करें"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:357
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:411
 msgid "Registration disabled"
 msgstr "रजिस्ट्रेशन अक्षम"
 
@@ -1130,11 +1201,7 @@ msgstr "एक्सेस हटाएँ?"
 msgid "Remove interest"
 msgstr "रुचि हटाएँ"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:80
-msgid "Replicate an existing account from another server"
-msgstr "किसी अन्य सर्वर से मौजूदा खाते की प्रतिकृति बनाएँ"
-
-#: src/features/landing/landing-page.tsx:175
+#: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "प्रतिकृति अनुरोध अस्वीकृत"
 
@@ -1146,9 +1213,13 @@ msgstr "<0>{source_user}</0> को प्रतिकृति अनुरो�
 msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
 msgstr "स्रोत सर्वर को प्रतिकृति अनुरोध भेजा गया। प्रतिकृति पूर्ण करने के लिए स्रोत सर्वर के सेटिंग्स पृष्ठ पर इसे स्वीकृत करें।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:213
 msgid "Replication signup failed"
 msgstr "प्रतिकृति साइन-अप विफल रहा"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
+msgid "Required only if your backup includes private keys."
+msgstr "केवल तब आवश्यक है यदि आपके बैकअप में निजी कुंजियाँ शामिल हैं।"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1158,6 +1229,15 @@ msgstr "रीसेट"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "सभी सेटिंग्स को डिफ़ॉल्ट मानों पर रीसेट करें"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:169
+#: src/routes/restoring.tsx:106
+msgid "Restore failed"
+msgstr "पुनर्स्थापना विफल हुई"
+
+#: src/routes/restoring.tsx:130
+msgid "Restoring your account"
+msgstr "आपके खाते को पुनर्स्थापित किया जा रहा है"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1247,8 +1327,8 @@ msgstr "सर्वर"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
-#: src/features/landing/landing-page.tsx:419
-#: src/features/landing/landing-page.tsx:516
+#: src/features/landing/landing-page.tsx:425
+#: src/features/landing/landing-page.tsx:530
 msgid "Server rules"
 msgstr "सर्वर के नियम"
 
@@ -1280,7 +1360,7 @@ msgstr "साइडबार"
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "साइन अप करें और आपका अपना Mochi नोड बन जाएगा। आपका डेटा वहीं रहता है — किसी और के सर्वर पर नहीं।"
 
-#: src/features/landing/landing-page.tsx:277
+#: src/features/landing/landing-page.tsx:283
 msgid "Sign up or log in"
 msgstr "साइन अप या लॉग इन करें"
 
@@ -1309,7 +1389,7 @@ msgstr "छोटा"
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "कुछ स्थानांतरण पहले प्रयास में पूरे नहीं हुए। वे स्वचालित रूप से पुनः प्रयास किए जाएंगे।"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:101
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:151
 msgid "Source server peer ID"
 msgstr "स्रोत सर्वर peer ID"
 
@@ -1370,8 +1450,8 @@ msgstr "टीम/ऐप"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:20
 #: ../../../lib/web/src/features/document/document-page.tsx:39
-#: src/features/landing/landing-page.tsx:423
-#: src/features/landing/landing-page.tsx:520
+#: src/features/landing/landing-page.tsx:429
+#: src/features/landing/landing-page.tsx:534
 msgid "Terms and conditions"
 msgstr "नियम और शर्तें"
 
@@ -1384,11 +1464,23 @@ msgstr "वह {0} खाता पहले से किसी अन्य �
 msgid "That sign-in provider is not available"
 msgstr "वह साइन-इन प्रदाता उपलब्ध नहीं है"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+msgid "The file may be damaged or have been modified."
+msgstr "फ़ाइल क्षतिग्रस्त हो सकती है या संशोधित की गई हो सकती है।"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+msgid "The passphrase you entered does not match the backup."
+msgstr "आपने जो पासफ़्रेज़ दर्ज किया वह बैकअप से मेल नहीं खाता।"
+
 #: src/lib/oauth-errors.ts:11
 msgid "the provider"
 msgstr "प्रदाता"
 
-#: src/features/landing/landing-page.tsx:176
+#: src/routes/restoring.tsx:109
+msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
+msgstr "पुनर्स्थापना पूरी नहीं हुई। बैकअप फ़ाइल क्षतिग्रस्त हो सकती है, पासफ़्रेज़ गलत हो सकता है, या सर्वर को कोई त्रुटि आई।"
+
+#: src/features/landing/landing-page.tsx:179
 msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
 msgstr "स्रोत सर्वर ने अनुरोध स्वीकार नहीं किया, या उसकी समय सीमा समाप्त हो गई। फिर से प्रयास करें या स्थानीय रूप से साइन अप करें।"
 
@@ -1399,6 +1491,10 @@ msgstr "थीम"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "थीम सेटिंग्स"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+msgid "This backup was created by a newer version of Mochi. Update this server first."
+msgstr "यह बैकअप Mochi के एक नए संस्करण द्वारा बनाया गया था। पहले इस सर्वर को अपडेट करें।"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
@@ -1473,7 +1569,7 @@ msgstr "असाइन नहीं किया गया"
 msgid "Unauthorized Access"
 msgstr "अनधिकृत एक्सेस"
 
-#: src/features/landing/landing-page.tsx:362
+#: src/features/landing/landing-page.tsx:368
 msgid "Under the hood"
 msgstr "अंदर की बात"
 
@@ -1481,9 +1577,21 @@ msgstr "अंदर की बात"
 msgid "United States"
 msgstr "संयुक्त राज्य अमेरिका"
 
+#: src/routes/restoring.tsx:51
+msgid "Unpacking your data"
+msgstr "आपका डेटा अनपैक हो रहा है"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "अनवेरिफ़ाइड"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+msgid "Upload a .zip file exported from Mochi's data export."
+msgstr "Mochi के डेटा निर्यात से निर्यात की गई .zip फ़ाइल अपलोड करें।"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
+msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
+msgstr "किसी अन्य Mochi सर्वर से निर्यात किए गए माइग्रेशन बंडल (.zip) को अपलोड करें। सर्वर आपका डेटा स्थानीय रूप से पुनर्स्थापित करता है — किसी अन्य सर्वर को ऑनलाइन होने की जरूरत नहीं।"
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1493,7 +1601,7 @@ msgstr "दूसरा अकाउंट इस्तेमाल करें
 msgid "Use the apps"
 msgstr "ऐप्स इस्तेमाल करें"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:50
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:55
 msgid "Use the form alice@example.com"
 msgstr "alice@example.com फ़ॉर्म का उपयोग करें"
 
@@ -1501,9 +1609,13 @@ msgstr "alice@example.com फ़ॉर्म का उपयोग करें
 msgid "User"
 msgstr "यूज़र"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:130
 msgid "Username on source server"
 msgstr "स्रोत सर्वर पर उपयोगकर्ता नाम"
+
+#: src/routes/restoring.tsx:49
+msgid "Validating backup"
+msgstr "बैकअप सत्यापित हो रहा है"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1514,7 +1626,7 @@ msgid "Verification code sent"
 msgstr "वेरिफ़िकेशन कोड भेजा गया"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
+#: src/features/auth/sign-in/components/user-auth-form.tsx:419
 msgid "Verification failed"
 msgstr "वेरिफ़िकेशन विफल"
 
@@ -1530,6 +1642,10 @@ msgstr "ईमेल पता वेरिफ़ाई करें"
 #: src/features/auth/mfa/index.tsx:284
 msgid "Verify with passkey"
 msgstr "पासकी से सत्यापित करें"
+
+#: src/routes/restoring.tsx:50
+msgid "Verifying backup"
+msgstr "बैकअप सत्यापित हो रहा है"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx:63
 msgid "Video thumbnail"
@@ -1547,7 +1663,7 @@ msgstr "सभी देखें"
 msgid "View all notifications"
 msgstr "सभी नोटिफ़िकेशन देखें"
 
-#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:414
 msgid "View source code"
 msgstr "सोर्स कोड देखें"
 
@@ -1571,6 +1687,10 @@ msgstr "बुधवार"
 msgid "Wikis"
 msgstr "विकि"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Wrong passphrase"
+msgstr "गलत पासफ़्रेज़"
+
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:38
 msgid "Your {0} email is not verified"
@@ -1582,11 +1702,11 @@ msgstr "आपका खाता निलंबित कर दिया ग�
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Your account has been suspended."
 msgstr "आपका अकाउंट सस्पेंड कर दिया गया है।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Your account is already replicated here. Log in instead."
 msgstr "आपका खाता पहले से ही यहाँ प्रतिकृत है। इसके बजाय लॉग इन करें।"
 
@@ -1594,17 +1714,25 @@ msgstr "आपका खाता पहले से ही यहाँ प्
 msgid "Your account is being copied from the source server. Do not close this window."
 msgstr "आपका खाता स्रोत सर्वर से कॉपी किया जा रहा है। यह विंडो बंद न करें।"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:123
+msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
+msgstr "आपका खाता उस सर्वर से लाइव कॉपी किया जाता है जिस तक आपकी पहुंच पहले से है। स्थानांतरण शुरू होने से पहले स्रोत सर्वर को अनुरोध को मंजूरी देनी होगी।"
+
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "साइन इन करने के लिए आपके खाते को पासकी की आवश्यकता है"
 
-#: src/features/landing/landing-page.tsx:293
+#: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "आपके ऐप, आपका प्लैटफ़ॉर्म, आपका नेटवर्क"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:197
+#: src/features/auth/sign-in/components/user-auth-form.tsx:251
 msgid "Your code is: {devCode}"
 msgstr "आपका कोड है: {devCode}"
+
+#: src/routes/restoring.tsx:133
+msgid "Your data is being restored from the backup. Do not close this window."
+msgstr "आपका डेटा बैकअप से पुनर्स्थापित हो रहा है। इस विंडो को बंद न करें।"
 
 #: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"

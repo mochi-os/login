@@ -53,7 +53,8 @@ msgstr "წვდომის დონე"
 msgid "Account added"
 msgstr "ანგარიში დაემატა"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "ანგარიში უკვე არსებობს ამ სერვერზე"
 
@@ -63,7 +64,7 @@ msgstr "ანგარიში წაშლილია"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
+#: src/features/auth/sign-in/components/user-auth-form.tsx:407
 msgid "Account suspended"
 msgstr "ანგარიში შეჩერებულია"
 
@@ -124,7 +125,7 @@ msgstr "ხედის დამატება"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "მოარგეთ გარემო და განლაგება თქვენს უპირატესობებს."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:74
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:79
 msgid "Advanced"
 msgstr "გაფართოებული"
 
@@ -140,6 +141,10 @@ msgstr "ყველა"
 #: src/lib/oauth-errors.ts:36
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "ანგარიში ამ ელფოსტით უკვე არსებობს. ჯერ შედით, შემდეგ დააკავშირეთ {0} თქვენი auth პარამეტრებიდან."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+msgid "An account with this identity already exists here."
+msgstr "ამ პირადობით ანგარიში უკვე არსებობს."
 
 #: src/features/landing/landing-page.tsx:120
 msgid "App business logic"
@@ -162,12 +167,12 @@ msgid "authenticator code"
 msgstr "{0}-ზე"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:445
+#: src/features/auth/sign-in/components/user-auth-form.tsx:499
 msgid "Authenticator code"
 msgstr "Authenticator-ის კოდი"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:484
+#: src/features/auth/sign-in/components/user-auth-form.tsx:538
 msgid "Back"
 msgstr "უკან"
 
@@ -177,19 +182,39 @@ msgstr "უკან"
 msgid "Back to home"
 msgstr "მთავარზე დაბრუნება"
 
+#: src/routes/restoring.tsx:118
+msgid "Back to sign up"
+msgstr "რეგისტრაციაზე დაბრუნება"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+msgid "Backup file"
+msgstr "სარეზერვო ფაილი"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+msgid "Backup file is corrupted"
+msgstr "სარეზერვო ფაილი დაზიანებულია"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+msgid "Backup is too new"
+msgstr "სარეზერვო ასლი ძალიან ახალია"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "ინტერესის გაძლიერება"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:85
+msgid "Bring an existing account onto this server:"
+msgstr "გადაიტანეთ არსებული ანგარიში ამ სერვერზე:"
 
 #: src/features/landing/landing-page.tsx:84
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "შექმენით თემისთვის ერთობლივი, გამეორებული ცოდნის ბაზა. თქვენი მონაცემები ყოველთვის თქვენია."
 
-#: src/features/landing/landing-page.tsx:365
+#: src/features/landing/landing-page.tsx:371
 msgid "Built on solid foundations"
 msgstr "მყარ საფუძვლებზე აშენებული"
 
-#: src/features/landing/landing-page.tsx:305
+#: src/features/landing/landing-page.tsx:311
 msgid "Built-in apps"
 msgstr "ჩაშენებული აპები"
 
@@ -220,15 +245,15 @@ msgstr "შეტყობინების კატეგორიის შ�
 msgid "Chat"
 msgstr "ჩატი"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "Check the address after @ and try again."
 msgstr "შეამოწმეთ @-ის შემდეგ მისამართი და სცადეთ თავიდან."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Check the username before @ and try again."
 msgstr "შეამოწმეთ @-ის წინ მომხმარებლის სახელი და სცადეთ თავიდან."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
 msgid "Check your email."
 msgstr "შეამოწმეთ თქვენი ელფოსტა."
 
@@ -236,7 +261,12 @@ msgstr "შეამოწმეთ თქვენი ელფოსტა."
 msgid "Checking every few seconds…"
 msgstr "მოწმდება ყოველ რამდენიმე წამში…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/routes/restoring.tsx:163
+msgid "Checking…"
+msgstr "შემოწმება…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "Choose a different local email or log in instead."
 msgstr "აირჩიეთ სხვა ლოკალური ელფოსტა ან მის ნაცვლად შედით."
 
@@ -299,11 +329,11 @@ msgstr "პანელის დახურვა"
 msgid "Close search"
 msgstr "ძიების დახურვა"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Code copied"
 msgstr "კოდი დაკოპირდა"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:194
+#: src/features/auth/sign-in/components/user-auth-form.tsx:248
 msgid "Code sent."
 msgstr "კოდი გაიგზავნა."
 
@@ -354,7 +384,7 @@ msgstr "გაგრძელება"
 msgid "Copy"
 msgstr "კოპირება"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:268
 msgid "Copy code"
 msgstr "კოდის კოპირება"
 
@@ -368,15 +398,15 @@ msgstr "ვერ გაუქმდა"
 msgid "Could not load this document. Please try again later."
 msgstr "ამ დოკუმენტის ჩატვირთვა ვერ მოხერხდა. სცადეთ მოგვიანებით."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Could not reach the source server"
 msgstr "ვერ მოხერხდა წყარო სერვერთან დაკავშირება"
 
-#: src/features/landing/landing-page.tsx:208
+#: src/features/landing/landing-page.tsx:211
 msgid "Could not start sign-in"
 msgstr "შესვლის დაწყება ვერ მოხერხდა"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:406
 msgid "Create an account"
 msgstr "ანგარიშის შექმნა"
 
@@ -444,11 +474,12 @@ msgstr "მიმართულება"
 msgid "Displays the mobile sidebar."
 msgstr "აჩვენებს მობილურის გვერდით პანელს."
 
-#: src/features/landing/landing-page.tsx:337
+#: src/features/landing/landing-page.tsx:343
 msgid "Distributed by design"
 msgstr "დიზაინით განაწილებული"
 
 #: src/routes/replicating.tsx:229
+#: src/routes/restoring.tsx:54
 msgid "Done"
 msgstr "მზადაა"
 
@@ -460,11 +491,12 @@ msgstr "ჩამოტვირთვა"
 msgid "Dyslexia-friendly"
 msgstr "დისლექსიის თავსებადი"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:520
+#: src/features/auth/sign-in/components/user-auth-form.tsx:574
 msgid "Email"
 msgstr "ელფოსტა"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Email already in use"
 msgstr "ელფოსტა უკვე გამოიყენება"
 
@@ -473,7 +505,7 @@ msgid "email code"
 msgstr "მაგ., სამუშაო ლეპტოპი"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:472
 msgid "Email code"
 msgstr "ელფოსტის კოდი"
 
@@ -481,7 +513,7 @@ msgstr "ელფოსტის კოდი"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "შეიყვანეთ აღდგენის კოდი „{userEmail}“-სთვის შესასვლელად"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:399
+#: src/features/auth/sign-in/components/user-auth-form.tsx:453
 msgid "Enter the code from your authenticator app"
 msgstr "შეიყვანეთ კოდი თქვენი ავთენტიფიკატორის აპლიკაციიდან"
 
@@ -494,11 +526,11 @@ msgstr "შეიყვანეთ თქვენი {0}"
 msgid "Enter your {initial} and {last}"
 msgstr "შეიყვანეთ თქვენი {initial} და {last}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:389
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Enter your email code and authenticator code"
 msgstr "შეიყვანეთ თქვენი ელფოსტის კოდი და ავთენტიფიკატორის კოდი"
 
-#: src/features/landing/landing-page.tsx:308
+#: src/features/landing/landing-page.tsx:314
 msgid "Everything you need, nothing you don't control"
 msgstr "ყველაფერი რაც გჭირდებათ, არაფერი რასაც თქვენ არ აკონტროლებთ"
 
@@ -510,15 +542,19 @@ msgstr "გვერდითი პანელის გაშლა"
 msgid "Extra large"
 msgstr "ძალიან დიდი"
 
+#: src/routes/restoring.tsx:55
+msgid "Failed"
+msgstr "ვერ მოხერხდა"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "ანგარიშის დამატება ვერ მოხერხდა"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:288
 msgid "Failed to continue"
 msgstr "გაგრძელება ვერ მოხერხდა"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:263
 msgid "Failed to copy code"
 msgstr "კოდის კოპირება ვერ მოხერხდა"
 
@@ -554,6 +590,10 @@ msgstr "ფაილები"
 msgid "Finish setting up your account"
 msgstr "დაასრულეთ ანგარიშის დაყენება"
 
+#: src/routes/restoring.tsx:53
+msgid "Finishing up"
+msgstr "დასრულება"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
 msgstr "მცურავი"
@@ -569,6 +609,14 @@ msgstr "პარასკევი"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "ვისგან"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "From a backup file (restore)"
+msgstr "სარეზერვო ფაილიდან (აღდგენა)"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "From another running server (replicate)"
+msgstr "სხვა მუშა სერვერიდან (რეპლიკაცია)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -627,7 +675,7 @@ msgstr "მთავარი"
 msgid "Hot"
 msgstr "ცხელი"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:340
 msgid "How it works"
 msgstr "როგორ მუშაობს"
 
@@ -647,7 +695,7 @@ msgstr "ჩაკიდებული"
 msgid "Interests"
 msgstr "ინტერესები"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Invalid authenticator code"
 msgstr "არასწორი ავთენტიფიკატორის კოდი"
 
@@ -656,11 +704,11 @@ msgstr "არასწორი ავთენტიფიკატორი�
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
-#: src/features/auth/sign-in/components/user-auth-form.tsx:361
+#: src/features/auth/sign-in/components/user-auth-form.tsx:338
+#: src/features/auth/sign-in/components/user-auth-form.tsx:346
+#: src/features/auth/sign-in/components/user-auth-form.tsx:375
+#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Invalid code"
 msgstr "არასწორი კოდი"
 
@@ -670,7 +718,7 @@ msgid "Invalid recovery code"
 msgstr "არასწორი აღდგენის კოდი"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:344
+#: src/features/auth/sign-in/components/user-auth-form.tsx:398
 msgid "Invalid verification code"
 msgstr "არასწორი დადასტურების კოდი"
 
@@ -700,6 +748,10 @@ msgstr "მარცხნიდან მარჯვნივ"
 msgid "Light"
 msgstr "ღია"
 
+#: src/routes/restoring.tsx:52
+msgid "Linking your identity"
+msgstr "თქვენი პირადობის დაკავშირება"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
 msgid "Load more"
 msgstr "მეტის ჩატვირთვა"
@@ -712,23 +764,23 @@ msgstr "იტვირთება…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:473
+#: src/features/auth/sign-in/components/user-auth-form.tsx:527
 msgid "Log in"
 msgstr "შესვლა"
 
-#: src/features/landing/landing-page.tsx:439
+#: src/features/landing/landing-page.tsx:445
 msgid "Log in to Mochi"
 msgstr "Mochi-ში შესვლა"
 
-#: src/features/landing/landing-page.tsx:491
+#: src/features/landing/landing-page.tsx:499
 msgid "Log in with {label}"
 msgstr "{label}-ით შესვლა"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:104
 msgid "Log in with passkey"
 msgstr "passkey-ით შესვლა"
 
-#: src/features/auth/sign-in/index.tsx:68
+#: src/features/auth/sign-in/index.tsx:71
 msgid "Log in with your email address"
 msgstr "თქვენი ელფოსტის მისამართით შესვლა"
 
@@ -743,8 +795,8 @@ msgid "Log out"
 msgstr "გასვლა"
 
 #: src/features/auth/recovery/index.tsx:39
-#: src/features/auth/sign-in/index.tsx:38
-#: src/features/landing/landing-page.tsx:231
+#: src/features/auth/sign-in/index.tsx:41
+#: src/features/landing/landing-page.tsx:237
 msgid "Logged in"
 msgstr "შესული"
 
@@ -765,7 +817,7 @@ msgid "Login session expired, please try again"
 msgstr "შესვლის სესიის ვადა გავიდა, გთხოვთ, სცადოთ ხელახლა"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:495
+#: src/features/auth/sign-in/components/user-auth-form.tsx:549
 msgid "Lost access? Use a recovery code"
 msgstr "დაკარგეთ წვდომა? გამოიყენეთ აღდგენის კოდი"
 
@@ -794,15 +846,15 @@ msgstr "მიწერეთ თქვენს მეგობრებს, �
 msgid "Metric"
 msgstr "მეტრიკული"
 
-#: src/features/landing/landing-page.tsx:311
+#: src/features/landing/landing-page.tsx:317
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi უკვე მოყვება 20-ზე მეტ აპლიკაციას, კიდევ ბევრი ემატება ხშირად. ძირითადი აპლიკაციები მოიცავს:"
 
-#: src/features/landing/landing-page.tsx:296
+#: src/features/landing/landing-page.tsx:302
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi არის ფედერირებული, მრავალმომხმარებლიანი პლატფორმა გავრცელებული აპლიკაციებისთვის. ნებისმიერს შეუძლია გაუშვას საკუთარი სერვერი და დაუკავშირდეს Mochi ქსელის ნებისმიერ სხვა მომხმარებელს. ნებისმიერს შეუძლია შექმნას და გამოაქვეყნოს აპლიკაციები."
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:374
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi აშენებულია შემდეგი ტექნოლოგიების გამოყენებით:"
 
@@ -822,13 +874,14 @@ msgstr "ახალი"
 msgid "New accounts are disabled on this server"
 msgstr "ახალი ანგარიშები გამორთულია ამ სერვერზე"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:231
-#: src/features/auth/sign-in/components/user-auth-form.tsx:358
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "New user signup is disabled."
 msgstr "ახალი მომხმარებლების რეგისტრაცია გამორთულია."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:533
+#: src/features/auth/sign-in/components/user-auth-form.tsx:587
 msgid "Next"
 msgstr "შემდეგი"
 
@@ -840,7 +893,11 @@ msgstr "შემდეგი სურათი"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "წვდომის წესები არ არის კონფიგურირებული. დაამატეთ წესები იმის მართვისთვის, თუ ვის აქვს წვდომა ამ რესურსზე."
 
-#: src/features/landing/landing-page.tsx:340
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+msgid "No backup file selected"
+msgstr "სარეზერვო ფაილი არ არის არჩეული"
+
+#: src/features/landing/landing-page.tsx:346
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "თქვენი მონაცემები არ ინახება ცენტრალურ სერვერზე. თითოეული Mochi კვანძი არის სრულუფლებიანი პირი ქსელში და უშუალოდ ურთიერთობს სხვებთან libp2p-ის მეშვეობით."
 
@@ -852,7 +909,7 @@ msgstr "დაკავშირებული ანგარიშები �
 msgid "No groups available"
 msgstr "ხელმისაწვდომი ჯგუფები არ არის"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "No matching account on the source server"
 msgstr "წყარო სერვერზე შესაბამისი ანგარიში არ მოიძებნა"
 
@@ -887,9 +944,17 @@ msgstr "მომხმარებლები ვერ მოიძებნ�
 msgid "None"
 msgstr "არცერთი"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:100
+msgid "None — create a fresh account"
+msgstr "არცერთი — შექმენით ახალი ანგარიში"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "ნორმალური"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Not a migration bundle"
+msgstr "არ არის მიგრაციის პაკეტი"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -919,11 +984,11 @@ msgstr "ნავიგაციის მენიუს გახსნა"
 msgid "Open theme settings"
 msgstr "თემის პარამეტრების გახსნა"
 
-#: src/features/auth/sign-in/index.tsx:89
+#: src/features/auth/sign-in/index.tsx:94
 msgid "Or"
 msgstr "ან"
 
-#: src/features/landing/landing-page.tsx:464
+#: src/features/landing/landing-page.tsx:472
 msgid "Or log in with"
 msgstr "ან შედით"
 
@@ -944,21 +1009,21 @@ msgid "passkey"
 msgstr "შეკვეთა #{0}"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:480
+#: src/features/landing/landing-page.tsx:488
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/index.tsx:53
-#: src/features/landing/landing-page.tsx:249
+#: src/features/auth/sign-in/index.tsx:56
+#: src/features/landing/landing-page.tsx:255
 msgid "Passkey login cancelled"
 msgstr "Passkey-ით შესვლა გაუქმდა"
 
-#: src/features/auth/sign-in/index.tsx:51
-#: src/features/landing/landing-page.tsx:247
+#: src/features/auth/sign-in/index.tsx:54
+#: src/features/landing/landing-page.tsx:253
 msgid "Passkey login failed"
 msgstr "Passkey-ით შესვლა ვერ მოხერხდა"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:179
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Passkey login required"
 msgstr "Passkey-ით შესვლა საჭიროა"
 
@@ -966,38 +1031,42 @@ msgstr "Passkey-ით შესვლა საჭიროა"
 msgid "Passkey MFA not yet implemented"
 msgstr "Passkey MFA ჯერ არ არის რეალიზებული"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:394
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+msgid "Passphrase"
+msgstr "პაროლის ფრაზა"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:448
 msgid "Paste the login code you received by email"
 msgstr "ჩასვით შესვლის კოდი, რომელიც მიიღეთ ელფოსტით"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:60
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:65
 msgid "Peer IDs start with 12D3KooW and are 52 characters long"
 msgstr "Peer ID-ები იწყება 12D3KooW-ით და შედგება 52 სიმბოლოსგან"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:267
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Please check your authenticator app and try again."
 msgstr "გთხოვთ, შეამოწმოთ თქვენი ავთენტიფიკატორის აპი და სცადოთ თავიდან."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:339
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Please check your authenticator code and try again."
 msgstr "გთხოვთ, შეამოწმოთ თქვენი ავთენტიფიკატორის კოდი და სცადოთ თავიდან."
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:362
+#: src/features/auth/sign-in/components/user-auth-form.tsx:416
 msgid "Please check your code and try again."
 msgstr "გთხოვთ, შეამოწმოთ თქვენი კოდი და სცადოთ თავიდან."
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
-#: src/features/auth/sign-in/components/user-auth-form.tsx:330
+#: src/features/auth/sign-in/components/user-auth-form.tsx:376
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Please check your codes and try again."
 msgstr "გთხოვთ, შეამოწმოთ თქვენი კოდები და სცადოთ თავიდან."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:345
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Please check your email and try again."
 msgstr "გთხოვთ, შეამოწმოთ თქვენი ელფოსტა და სცადოთ თავიდან."
 
@@ -1006,15 +1075,15 @@ msgstr "გთხოვთ, შეამოწმოთ თქვენი ე�
 msgid "Please check your recovery code and try again."
 msgstr "გთხოვთ, შეამოწმოთ თქვენი აღდგენის კოდი და სცადოთ თავიდან."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Please copy manually: {devCode}"
 msgstr "გთხოვთ, ხელით დააკოპიროთ: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:67
+#: src/features/auth/sign-in/components/user-auth-form.tsx:72
 msgid "Please enter a valid email"
 msgstr "გთხოვთ, შეიყვანოთ ვალიდური ელფოსტა"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:251
+#: src/features/auth/sign-in/components/user-auth-form.tsx:305
 msgid "Please enter your authenticator code"
 msgstr "გთხოვთ, შეიყვანოთ თქვენი ავთენტიფიკატორის კოდი"
 
@@ -1026,9 +1095,10 @@ msgstr "გთხოვთ, შეიყვანოთ თქვენი ს�
 msgid "Please enter your recovery code"
 msgstr "გთხოვთ, შეიყვანოთ თქვენი აღდგენის კოდი"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
-#: src/features/auth/sign-in/components/user-auth-form.tsx:235
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:420
 msgid "Please try again or contact support."
 msgstr "გთხოვთ, სცადოთ თავიდან ან დაუკავშირდეთ მხარდაჭერას."
 
@@ -1036,7 +1106,7 @@ msgstr "გთხოვთ, სცადოთ თავიდან ან დ�
 msgid "Please use another verification method."
 msgstr "გთხოვთ, გამოიყენოთ სხვა გადამოწმების მეთოდი."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "გთხოვთ, გამოიყენოთ ღილაკი \"Passkey-ით შესვლა\"."
 
@@ -1047,8 +1117,8 @@ msgstr "წინა სურათი"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:24
 #: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:427
-#: src/features/landing/landing-page.tsx:524
+#: src/features/landing/landing-page.tsx:433
+#: src/features/landing/landing-page.tsx:538
 msgid "Privacy"
 msgstr "კონფიდენციალურობა"
 
@@ -1073,7 +1143,7 @@ msgstr "საჯარო"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "გამოაქვეყნეთ თქვენი სოციალური მედიის ფიდები, მიჰყევით სხვებს ან გააერთიანეთ სხვა ფიდები არასავალდებულო AI ტეგირებითა და დახარისხებით. მიჰყევით იმას, რაც მნიშვნელოვანია, გაფილტრეთ ხმაური."
 
-#: src/features/landing/landing-page.tsx:393
+#: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "მზად ხართ სცადოთ Mochi?"
 
@@ -1098,9 +1168,10 @@ msgstr "თქვენი dashboard-ზე გადამისამართ
 msgid "Reduce interest"
 msgstr "ინტერესის შემცირება"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:357
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:411
 msgid "Registration disabled"
 msgstr "რეგისტრაცია გამორთულია"
 
@@ -1130,11 +1201,7 @@ msgstr "წვდომის წაშლა?"
 msgid "Remove interest"
 msgstr "ინტერესის წაშლა"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:80
-msgid "Replicate an existing account from another server"
-msgstr "სხვა სერვერიდან არსებული ანგარიშის რეპლიკაცია"
-
-#: src/features/landing/landing-page.tsx:175
+#: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "რეპლიკაციის მოთხოვნა უარყოფილია"
 
@@ -1146,9 +1213,13 @@ msgstr "რეპლიკაციის მოთხოვნა გაიგ�
 msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
 msgstr "რეპლიკაციის მოთხოვნა გაიგზავნა წყაროს სერვერისთვის. დაამტკიცეთ იგი წყაროს სერვერის პარამეტრების გვერდზე რეპლიკაციის დასასრულებლად."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:213
 msgid "Replication signup failed"
 msgstr "რეპლიკაციით რეგისტრაცია ვერ მოხერხდა"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
+msgid "Required only if your backup includes private keys."
+msgstr "საჭიროა მხოლოდ მაშინ, თუ თქვენი სარეზერვო ასლი შეიცავს პირად გასაღებებს."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1158,6 +1229,15 @@ msgstr "გადაყენება"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "ყველა პარამეტრის გადაყენება ნაგულისხმევ მნიშვნელობებზე"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:169
+#: src/routes/restoring.tsx:106
+msgid "Restore failed"
+msgstr "აღდგენა ვერ მოხერხდა"
+
+#: src/routes/restoring.tsx:130
+msgid "Restoring your account"
+msgstr "თქვენი ანგარიშის აღდგენა"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1247,8 +1327,8 @@ msgstr "სერვერი"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
-#: src/features/landing/landing-page.tsx:419
-#: src/features/landing/landing-page.tsx:516
+#: src/features/landing/landing-page.tsx:425
+#: src/features/landing/landing-page.tsx:530
 msgid "Server rules"
 msgstr "სერვერის წესები"
 
@@ -1280,7 +1360,7 @@ msgstr "გვერდითი პანელი"
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "დარეგისტრირდით და შეიქმნება თქვენი საკუთარი Mochi კვანძი. თქვენი მონაცემები იქ ცხოვრობს — არა ვიღაცის სხვის სერვერზე."
 
-#: src/features/landing/landing-page.tsx:277
+#: src/features/landing/landing-page.tsx:283
 msgid "Sign up or log in"
 msgstr "დარეგისტრირდით ან შედით"
 
@@ -1309,7 +1389,7 @@ msgstr "პატარა"
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "ზოგიერთი გადატანა პირველ მცდელობაში არ დასრულდა. ისინი ავტომატურად ხელახლა გადადგამენ."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:101
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:151
 msgid "Source server peer ID"
 msgstr "წყაროს სერვერის peer ID"
 
@@ -1370,8 +1450,8 @@ msgstr "გუნდები/აპები"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:20
 #: ../../../lib/web/src/features/document/document-page.tsx:39
-#: src/features/landing/landing-page.tsx:423
-#: src/features/landing/landing-page.tsx:520
+#: src/features/landing/landing-page.tsx:429
+#: src/features/landing/landing-page.tsx:534
 msgid "Terms and conditions"
 msgstr "წესები და პირობები"
 
@@ -1384,11 +1464,23 @@ msgstr "ეს {0} ანგარიში უკვე დაკავში�
 msgid "That sign-in provider is not available"
 msgstr "ეს შესვლის პროვაიდერი მიუწვდომელია"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+msgid "The file may be damaged or have been modified."
+msgstr "ფაილი შეიძლება დაზიანებული იყოს ან შეცვლილი."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+msgid "The passphrase you entered does not match the backup."
+msgstr "შეყვანილი პაროლის ფრაზა სარეზერვო ასლს არ ემთხვევა."
+
 #: src/lib/oauth-errors.ts:11
 msgid "the provider"
 msgstr "სისტემა"
 
-#: src/features/landing/landing-page.tsx:176
+#: src/routes/restoring.tsx:109
+msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
+msgstr "აღდგენა არ დასრულდა. სარეზერვო ფაილი შეიძლება დაზიანებული იყოს, პაროლის ფრაზა შეიძლება არასწორი იყოს, ან სერვერმა შეცდომა დაუშვა."
+
+#: src/features/landing/landing-page.tsx:179
 msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
 msgstr "წყაროს სერვერმა არ დაამტკიცა მოთხოვნა, ან მისი ვადა გავიდა. სცადეთ ხელახლა ან დარეგისტრირდით ლოკალურად."
 
@@ -1399,6 +1491,10 @@ msgstr "თემა"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "თემის პარამეტრები"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+msgid "This backup was created by a newer version of Mochi. Update this server first."
+msgstr "ეს სარეზერვო ასლი Mochi-ის უფრო ახალი ვერსიით შეიქმნა. ჯერ განაახლეთ ეს სერვერი."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
@@ -1473,7 +1569,7 @@ msgstr "ფიდების სერვისთან სინქრონ�
 msgid "Unauthorized Access"
 msgstr "უუფლებო"
 
-#: src/features/landing/landing-page.tsx:362
+#: src/features/landing/landing-page.tsx:368
 msgid "Under the hood"
 msgstr "ბანი მოხსნილია"
 
@@ -1481,9 +1577,21 @@ msgstr "ბანი მოხსნილია"
 msgid "United States"
 msgstr "ამ ვიკის უნიკალური იდენტიფიკატორები."
 
+#: src/routes/restoring.tsx:51
+msgid "Unpacking your data"
+msgstr "თქვენი მონაცემების გახსნა"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "უსათაურო ლისტინგი"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+msgid "Upload a .zip file exported from Mochi's data export."
+msgstr "ატვირთეთ .zip ფაილი Mochi-ს მონაცემების ექსპორტიდან."
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
+msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
+msgstr "ატვირთეთ მიგრაციის პაკეტი (.zip), რომელიც ექსპორტირებულია სხვა Mochi სერვერიდან. სერვერი ადგილობრივად აღადგენს თქვენს მონაცემებს — სხვა სერვერები არ სჭირდება ონლაინ."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1493,7 +1601,7 @@ msgstr "გამოიყენეთ *.domain.com wildcard დომენე�
 msgid "Use the apps"
 msgstr "სისტემის ნაგულისხმევის გამოყენება"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:50
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:55
 msgid "Use the form alice@example.com"
 msgstr "გამოიყენეთ ფორმატი alice@example.com"
 
@@ -1501,9 +1609,13 @@ msgstr "გამოიყენეთ ფორმატი alice@example.com"
 msgid "User"
 msgstr "გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:130
 msgid "Username on source server"
 msgstr "მომხმარებლის სახელი წყაროს სერვერზე"
+
+#: src/routes/restoring.tsx:49
+msgid "Validating backup"
+msgstr "სარეზერვო ასლის ვალიდაცია"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1514,7 +1626,7 @@ msgid "Verification code sent"
 msgstr "შემოწმების კოდი"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
+#: src/features/auth/sign-in/components/user-auth-form.tsx:419
 msgid "Verification failed"
 msgstr "შემოწმების კოდი გაიგზავნა"
 
@@ -1530,6 +1642,10 @@ msgstr "შემოწმება და ჩართვა"
 #: src/features/auth/mfa/index.tsx:284
 msgid "Verify with passkey"
 msgstr "ელფოსტის მისამართის შემოწმება"
+
+#: src/routes/restoring.tsx:50
+msgid "Verifying backup"
+msgstr "სარეზერვო ასლის შემოწმება"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx:63
 msgid "Video thumbnail"
@@ -1547,7 +1663,7 @@ msgstr "ნახვა"
 msgid "View all notifications"
 msgstr "ყველას ნახვა"
 
-#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:414
 msgid "View source code"
 msgstr "ფოტოს ნახვა {0}"
 
@@ -1571,6 +1687,10 @@ msgstr "ვებსაიტი ტექმომსახურებაშ�
 msgid "Wikis"
 msgstr "ვიკი სინქრონიზდა"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Wrong passphrase"
+msgstr "არასწორი პაროლის ფრაზა"
+
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:38
 msgid "Your {0} email is not verified"
@@ -1582,11 +1702,11 @@ msgstr "თქვენი ვერსია"
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Your account has been suspended."
 msgstr "თქვენი ანგარიში შეჩერდა"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Your account is already replicated here. Log in instead."
 msgstr "თქვენი ანგარიში უკვე გადმოწერილია აქ. მის ნაცვლად შედით."
 
@@ -1594,17 +1714,25 @@ msgstr "თქვენი ანგარიში უკვე გადმო
 msgid "Your account is being copied from the source server. Do not close this window."
 msgstr "თქვენი ანგარიში კოპირდება წყაროს სერვერიდან. ნუ დახურავთ ამ ფანჯარას."
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:123
+msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
+msgstr "თქვენი ანგარიში ცოცხლად კოპირდება სერვერიდან, რომელზეც უკვე გაქვთ წვდომა. გადაცემის დაწყებამდე წყარო სერვერმა უნდა დაამტკიცოს მოთხოვნა."
+
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "თქვენი ანგარიში შეჩერდა."
 
-#: src/features/landing/landing-page.tsx:293
+#: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "თქვენი აქტიური სესიები აქ გამოჩნდება."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:197
+#: src/features/auth/sign-in/components/user-auth-form.tsx:251
 msgid "Your code is: {devCode}"
 msgstr "თქვენი ფსონი:"
+
+#: src/routes/restoring.tsx:133
+msgid "Your data is being restored from the backup. Do not close this window."
+msgstr "თქვენი მონაცემები სარეზერვო ასლიდან აღდგება. ნუ დახურავთ ამ ფანჯარას."
 
 #: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"

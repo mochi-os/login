@@ -53,7 +53,8 @@ msgstr "Nivell d'accés"
 msgid "Account added"
 msgstr "Compte afegit"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "El compte ja és en aquest servidor"
 
@@ -63,7 +64,7 @@ msgstr "Compte eliminat"
 
 #: src/features/auth/mfa/index.tsx:167
 #: src/features/auth/recovery/index.tsx:83
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
+#: src/features/auth/sign-in/components/user-auth-form.tsx:407
 msgid "Account suspended"
 msgstr "Compte suspès"
 
@@ -124,7 +125,7 @@ msgstr "Afegeix una vista"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Ajusta l'aparença i la disposició a les teves preferències."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:74
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:79
 msgid "Advanced"
 msgstr "Avançat"
 
@@ -140,6 +141,10 @@ msgstr "Tot"
 #: src/lib/oauth-errors.ts:36
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Ja existeix un compte amb aquest correu. Inicia sessió primer i, després, vincula {0} des de la configuració d'autenticació."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+msgid "An account with this identity already exists here."
+msgstr "Ja existeix un compte amb aquesta identitat aquí."
 
 #: src/features/landing/landing-page.tsx:120
 msgid "App business logic"
@@ -162,12 +167,12 @@ msgid "authenticator code"
 msgstr "codi de l'autenticador"
 
 #: src/features/auth/mfa/index.tsx:243
-#: src/features/auth/sign-in/components/user-auth-form.tsx:445
+#: src/features/auth/sign-in/components/user-auth-form.tsx:499
 msgid "Authenticator code"
 msgstr "Codi de l'autenticador"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
-#: src/features/auth/sign-in/components/user-auth-form.tsx:484
+#: src/features/auth/sign-in/components/user-auth-form.tsx:538
 msgid "Back"
 msgstr "Enrere"
 
@@ -177,19 +182,39 @@ msgstr "Enrere"
 msgid "Back to home"
 msgstr "Torna a l’inici"
 
+#: src/routes/restoring.tsx:118
+msgid "Back to sign up"
+msgstr "Tornar al registre"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+msgid "Backup file"
+msgstr "Fitxer de còpia de seguretat"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+msgid "Backup file is corrupted"
+msgstr "El fitxer de còpia de seguretat està corromput"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+msgid "Backup is too new"
+msgstr "La còpia de seguretat és massa nova"
+
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
 msgstr "Augmenta l'interès"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:85
+msgid "Bring an existing account onto this server:"
+msgstr "Porta un compte existent a aquest servidor:"
 
 #: src/features/landing/landing-page.tsx:84
 msgid "Build a collaborative, replicated knowledge base for your community. Your data is always yours."
 msgstr "Construeix una base de coneixement col·laborativa i replicada per a la teva comunitat. Les teves dades sempre són teves."
 
-#: src/features/landing/landing-page.tsx:365
+#: src/features/landing/landing-page.tsx:371
 msgid "Built on solid foundations"
 msgstr "Construït sobre bases sòlides"
 
-#: src/features/landing/landing-page.tsx:305
+#: src/features/landing/landing-page.tsx:311
 msgid "Built-in apps"
 msgstr "Aplicacions integrades"
 
@@ -220,15 +245,15 @@ msgstr "Canvia la categoria de notificació"
 msgid "Chat"
 msgstr "Xat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "Check the address after @ and try again."
 msgstr "Comproveu l'adreça després de @ i torneu-ho a provar."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:152
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Check the username before @ and try again."
 msgstr "Comproveu el nom d'usuari abans de @ i torneu-ho a provar."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
 msgid "Check your email."
 msgstr "Revisa el teu correu."
 
@@ -236,7 +261,12 @@ msgstr "Revisa el teu correu."
 msgid "Checking every few seconds…"
 msgstr "Comprovació cada pocs segons…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+#: src/routes/restoring.tsx:163
+msgid "Checking…"
+msgstr "Comprovant…"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "Choose a different local email or log in instead."
 msgstr "Trieu un altre correu local o, en lloc d'això, inicieu la sessió."
 
@@ -299,11 +329,11 @@ msgstr "Tanca el panell"
 msgid "Close search"
 msgstr "Tanca la cerca"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Code copied"
 msgstr "Codi copiat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:194
+#: src/features/auth/sign-in/components/user-auth-form.tsx:248
 msgid "Code sent."
 msgstr "Codi enviat."
 
@@ -354,7 +384,7 @@ msgstr "Continua"
 msgid "Copy"
 msgstr "Copia"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:268
 msgid "Copy code"
 msgstr "Copia el codi"
 
@@ -368,15 +398,15 @@ msgstr "No s'ha pogut cancel·lar"
 msgid "Could not load this document. Please try again later."
 msgstr "No s'ha pogut carregar aquest document. Torna-ho a provar més tard."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:147
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Could not reach the source server"
 msgstr "No s'ha pogut connectar al servidor d'origen"
 
-#: src/features/landing/landing-page.tsx:208
+#: src/features/landing/landing-page.tsx:211
 msgid "Could not start sign-in"
 msgstr "No s'ha pogut iniciar l'inici de sessió"
 
-#: src/features/landing/landing-page.tsx:400
+#: src/features/landing/landing-page.tsx:406
 msgid "Create an account"
 msgstr "Crea un compte"
 
@@ -444,11 +474,12 @@ msgstr "Direcció"
 msgid "Displays the mobile sidebar."
 msgstr "Mostra la barra lateral mòbil."
 
-#: src/features/landing/landing-page.tsx:337
+#: src/features/landing/landing-page.tsx:343
 msgid "Distributed by design"
 msgstr "Distribuït per disseny"
 
 #: src/routes/replicating.tsx:229
+#: src/routes/restoring.tsx:54
 msgid "Done"
 msgstr "Fet"
 
@@ -460,11 +491,12 @@ msgstr "Descarrega"
 msgid "Dyslexia-friendly"
 msgstr "Apte per a la dislèxia"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:520
+#: src/features/auth/sign-in/components/user-auth-form.tsx:574
 msgid "Email"
 msgstr "Correu electrònic"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Email already in use"
 msgstr "El correu electrònic ja s'està utilitzant"
 
@@ -473,7 +505,7 @@ msgid "email code"
 msgstr "codi per correu"
 
 #: src/features/auth/mfa/index.tsx:216
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:472
 msgid "Email code"
 msgstr "Codi per correu"
 
@@ -481,7 +513,7 @@ msgstr "Codi per correu"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Introdueix un codi de recuperació per a \"{userEmail}\" per iniciar la sessió"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:399
+#: src/features/auth/sign-in/components/user-auth-form.tsx:453
 msgid "Enter the code from your authenticator app"
 msgstr "Introdueix el codi de la teva aplicació autenticadora"
 
@@ -494,11 +526,11 @@ msgstr "Introdueix el teu {0}"
 msgid "Enter your {initial} and {last}"
 msgstr "Introdueix el teu {initial} i {last}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:389
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Enter your email code and authenticator code"
 msgstr "Introdueix el codi del correu electrònic i el codi de l'autenticador"
 
-#: src/features/landing/landing-page.tsx:308
+#: src/features/landing/landing-page.tsx:314
 msgid "Everything you need, nothing you don't control"
 msgstr "Tot el que necessites, res que no controlis"
 
@@ -510,15 +542,19 @@ msgstr "Expandeix la barra lateral"
 msgid "Extra large"
 msgstr "Extra gran"
 
+#: src/routes/restoring.tsx:55
+msgid "Failed"
+msgstr "Ha fallat"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:217
 msgid "Failed to add account"
 msgstr "No s'ha pogut afegir el compte"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:288
 msgid "Failed to continue"
 msgstr "No s'ha pogut continuar"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:263
 msgid "Failed to copy code"
 msgstr "No s'ha pogut copiar el codi"
 
@@ -554,6 +590,10 @@ msgstr "Fitxers"
 msgid "Finish setting up your account"
 msgstr "Acaba la configuració del compte"
 
+#: src/routes/restoring.tsx:53
+msgid "Finishing up"
+msgstr "Finalitzant"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
 msgstr "Flotant"
@@ -569,6 +609,14 @@ msgstr "Divendres"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "De"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "From a backup file (restore)"
+msgstr "D'un fitxer de còpia de seguretat (restauració)"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "From another running server (replicate)"
+msgstr "D'un altre servidor en funcionament (replicació)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -627,7 +675,7 @@ msgstr "Inici"
 msgid "Hot"
 msgstr "Popular"
 
-#: src/features/landing/landing-page.tsx:334
+#: src/features/landing/landing-page.tsx:340
 msgid "How it works"
 msgstr "Com funciona"
 
@@ -647,7 +695,7 @@ msgstr "Inset"
 msgid "Interests"
 msgstr "Interessos"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
+#: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Invalid authenticator code"
 msgstr "Codi d'autenticador no vàlid"
 
@@ -656,11 +704,11 @@ msgstr "Codi d'autenticador no vàlid"
 #: src/features/auth/mfa/index.tsx:140
 #: src/features/auth/mfa/index.tsx:160
 #: src/features/auth/mfa/index.tsx:171
-#: src/features/auth/sign-in/components/user-auth-form.tsx:284
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
-#: src/features/auth/sign-in/components/user-auth-form.tsx:361
+#: src/features/auth/sign-in/components/user-auth-form.tsx:338
+#: src/features/auth/sign-in/components/user-auth-form.tsx:346
+#: src/features/auth/sign-in/components/user-auth-form.tsx:375
+#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:415
 msgid "Invalid code"
 msgstr "Codi no vàlid"
 
@@ -670,7 +718,7 @@ msgid "Invalid recovery code"
 msgstr "Codi de recuperació no vàlid"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:237
-#: src/features/auth/sign-in/components/user-auth-form.tsx:344
+#: src/features/auth/sign-in/components/user-auth-form.tsx:398
 msgid "Invalid verification code"
 msgstr "Codi de verificació no vàlid"
 
@@ -700,6 +748,10 @@ msgstr "D'esquerra a dreta"
 msgid "Light"
 msgstr "Clar"
 
+#: src/routes/restoring.tsx:52
+msgid "Linking your identity"
+msgstr "Vinculant la vostra identitat"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
 msgid "Load more"
 msgstr "Carrega'n més"
@@ -712,23 +764,23 @@ msgstr "S'està carregant…"
 
 #: src/features/auth/mfa/index.tsx:292
 #: src/features/auth/recovery/index.tsx:127
-#: src/features/auth/sign-in/components/user-auth-form.tsx:473
+#: src/features/auth/sign-in/components/user-auth-form.tsx:527
 msgid "Log in"
 msgstr "Inicia la sessió"
 
-#: src/features/landing/landing-page.tsx:439
+#: src/features/landing/landing-page.tsx:445
 msgid "Log in to Mochi"
 msgstr "Inicia la sessió a Mochi"
 
-#: src/features/landing/landing-page.tsx:491
+#: src/features/landing/landing-page.tsx:499
 msgid "Log in with {label}"
 msgstr "Inicia la sessió amb {label}"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:104
 msgid "Log in with passkey"
 msgstr "Inicia la sessió amb una clau d'accés"
 
-#: src/features/auth/sign-in/index.tsx:68
+#: src/features/auth/sign-in/index.tsx:71
 msgid "Log in with your email address"
 msgstr "Inicia la sessió amb la teva adreça de correu electrònic"
 
@@ -743,8 +795,8 @@ msgid "Log out"
 msgstr "Tanca la sessió"
 
 #: src/features/auth/recovery/index.tsx:39
-#: src/features/auth/sign-in/index.tsx:38
-#: src/features/landing/landing-page.tsx:231
+#: src/features/auth/sign-in/index.tsx:41
+#: src/features/landing/landing-page.tsx:237
 msgid "Logged in"
 msgstr "Sessió iniciada"
 
@@ -765,7 +817,7 @@ msgid "Login session expired, please try again"
 msgstr "La sessió ha caducat, torna-ho a provar"
 
 #: src/features/auth/mfa/index.tsx:316
-#: src/features/auth/sign-in/components/user-auth-form.tsx:495
+#: src/features/auth/sign-in/components/user-auth-form.tsx:549
 msgid "Lost access? Use a recovery code"
 msgstr "Has perdut l'accés? Fes servir un codi de recuperació"
 
@@ -794,15 +846,15 @@ msgstr "Envia missatges als teus amics, individualment o en grups, peer-to-peer 
 msgid "Metric"
 msgstr "Mètric"
 
-#: src/features/landing/landing-page.tsx:311
+#: src/features/landing/landing-page.tsx:317
 msgid "Mochi already ships with over 20 apps, with more being added frequently. Major apps include:"
 msgstr "Mochi ja inclou més de 20 aplicacions, i se n'afegeixen de noves freqüentment. Les aplicacions principals inclouen:"
 
-#: src/features/landing/landing-page.tsx:296
+#: src/features/landing/landing-page.tsx:302
 msgid "Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps."
 msgstr "Mochi és una plataforma federada i multiusuari per a aplicacions distribuïdes. Qualsevol persona pot executar el seu propi servidor i connectar-se amb qualsevol altre usuari de la xarxa Mochi. Qualsevol persona pot crear i publicar aplicacions."
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:374
 msgid "Mochi is built using the following technologies:"
 msgstr "Mochi està construït amb les tecnologies següents:"
 
@@ -822,13 +874,14 @@ msgstr "Nou"
 msgid "New accounts are disabled on this server"
 msgstr "Els comptes nous estan desactivats en aquest servidor"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:231
-#: src/features/auth/sign-in/components/user-auth-form.tsx:358
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:285
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "New user signup is disabled."
 msgstr "El registre de nous usuaris està desactivat."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:533
+#: src/features/auth/sign-in/components/user-auth-form.tsx:587
 msgid "Next"
 msgstr "Següent"
 
@@ -840,7 +893,11 @@ msgstr "Imatge següent"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "No s'han configurat regles d'accés. Afegeix regles per controlar qui pot accedir a aquest recurs."
 
-#: src/features/landing/landing-page.tsx:340
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+msgid "No backup file selected"
+msgstr "Cap fitxer de còpia de seguretat seleccionat"
+
+#: src/features/landing/landing-page.tsx:346
 msgid "No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p."
 msgstr "Cap servidor central conté les teves dades. Cada node Mochi és un node complet de la xarxa, comunicant-se directament amb d'altres mitjançant libp2p."
 
@@ -852,7 +909,7 @@ msgstr "Cap compte connectat"
 msgid "No groups available"
 msgstr "No hi ha cap grup disponible"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "No matching account on the source server"
 msgstr "No hi ha cap compte coincident al servidor d'origen"
 
@@ -887,9 +944,17 @@ msgstr "No s'ha trobat cap usuari"
 msgid "None"
 msgstr "Cap"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:100
+msgid "None — create a fresh account"
+msgstr "Cap — crea un compte nou"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
 msgstr "Normal"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:143
+msgid "Not a migration bundle"
+msgstr "No és un paquet de migració"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -919,11 +984,11 @@ msgstr "Obre el menú de navegació"
 msgid "Open theme settings"
 msgstr "Obre la configuració del tema"
 
-#: src/features/auth/sign-in/index.tsx:89
+#: src/features/auth/sign-in/index.tsx:94
 msgid "Or"
 msgstr "O"
 
-#: src/features/landing/landing-page.tsx:464
+#: src/features/landing/landing-page.tsx:472
 msgid "Or log in with"
 msgstr "O inicia sessió amb"
 
@@ -944,21 +1009,21 @@ msgid "passkey"
 msgstr "passkey"
 
 #: src/features/auth/mfa/index.tsx:274
-#: src/features/landing/landing-page.tsx:480
+#: src/features/landing/landing-page.tsx:488
 msgid "Passkey"
 msgstr "Clau d'accés"
 
-#: src/features/auth/sign-in/index.tsx:53
-#: src/features/landing/landing-page.tsx:249
+#: src/features/auth/sign-in/index.tsx:56
+#: src/features/landing/landing-page.tsx:255
 msgid "Passkey login cancelled"
 msgstr "Inici de sessió amb clau d'accés cancel·lat"
 
-#: src/features/auth/sign-in/index.tsx:51
-#: src/features/landing/landing-page.tsx:247
+#: src/features/auth/sign-in/index.tsx:54
+#: src/features/landing/landing-page.tsx:253
 msgid "Passkey login failed"
 msgstr "Ha fallat l'inici de sessió amb clau d'accés"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:179
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Passkey login required"
 msgstr "Cal inici de sessió amb clau d'accés"
 
@@ -966,38 +1031,42 @@ msgstr "Cal inici de sessió amb clau d'accés"
 msgid "Passkey MFA not yet implemented"
 msgstr "MFA amb clau d'accés encara no implementat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:394
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+msgid "Passphrase"
+msgstr "Contrasenya mestra"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:448
 msgid "Paste the login code you received by email"
 msgstr "Enganxa el codi d'inici de sessió que has rebut per correu"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:60
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:65
 msgid "Peer IDs start with 12D3KooW and are 52 characters long"
 msgstr "Els Peer ID comencen amb 12D3KooW i tenen 52 caràcters"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:267
+#: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Please check your authenticator app and try again."
 msgstr "Comprova l'aplicació d'autenticació i torna-ho a provar."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:285
-#: src/features/auth/sign-in/components/user-auth-form.tsx:293
+#: src/features/auth/sign-in/components/user-auth-form.tsx:339
+#: src/features/auth/sign-in/components/user-auth-form.tsx:347
 msgid "Please check your authenticator code and try again."
 msgstr "Comprova el codi d'autenticació i torna-ho a provar."
 
 #: src/features/auth/mfa/index.tsx:141
 #: src/features/auth/mfa/index.tsx:161
 #: src/features/auth/mfa/index.tsx:172
-#: src/features/auth/sign-in/components/user-auth-form.tsx:362
+#: src/features/auth/sign-in/components/user-auth-form.tsx:416
 msgid "Please check your code and try again."
 msgstr "Comprova el codi i torna-ho a provar."
 
 #: src/features/auth/mfa/index.tsx:99
 #: src/features/auth/mfa/index.tsx:121
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
-#: src/features/auth/sign-in/components/user-auth-form.tsx:330
+#: src/features/auth/sign-in/components/user-auth-form.tsx:376
+#: src/features/auth/sign-in/components/user-auth-form.tsx:384
 msgid "Please check your codes and try again."
 msgstr "Comprova els codis i torna-ho a provar."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:345
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Please check your email and try again."
 msgstr "Comprova el correu i torna-ho a provar."
 
@@ -1006,15 +1075,15 @@ msgstr "Comprova el correu i torna-ho a provar."
 msgid "Please check your recovery code and try again."
 msgstr "Comprova el codi de recuperació i torna-ho a provar."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Please copy manually: {devCode}"
 msgstr "Copia'l manualment: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:67
+#: src/features/auth/sign-in/components/user-auth-form.tsx:72
 msgid "Please enter a valid email"
 msgstr "Introdueix un correu vàlid"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:251
+#: src/features/auth/sign-in/components/user-auth-form.tsx:305
 msgid "Please enter your authenticator code"
 msgstr "Introdueix el codi d'autenticació"
 
@@ -1026,9 +1095,10 @@ msgstr "Introdueix el teu nom"
 msgid "Please enter your recovery code"
 msgstr "Introdueix el codi de recuperació"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
-#: src/features/auth/sign-in/components/user-auth-form.tsx:235
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:214
+#: src/features/auth/sign-in/components/user-auth-form.tsx:289
+#: src/features/auth/sign-in/components/user-auth-form.tsx:420
 msgid "Please try again or contact support."
 msgstr "Torna-ho a provar o contacta amb el suport."
 
@@ -1036,7 +1106,7 @@ msgstr "Torna-ho a provar o contacta amb el suport."
 msgid "Please use another verification method."
 msgstr "Fes servir un altre mètode de verificació."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Fes servir el botó «Inicia sessió amb clau d'accés»."
 
@@ -1047,8 +1117,8 @@ msgstr "Imatge anterior"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:24
 #: ../../../lib/web/src/features/document/document-page.tsx:41
 #: src/features/auth/identity-form.tsx:92
-#: src/features/landing/landing-page.tsx:427
-#: src/features/landing/landing-page.tsx:524
+#: src/features/landing/landing-page.tsx:433
+#: src/features/landing/landing-page.tsx:538
 msgid "Privacy"
 msgstr "Privadesa"
 
@@ -1073,7 +1143,7 @@ msgstr "Públic"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Publica els teus canals de xarxes socials, segueix d'altres o agrega altres canals amb etiquetatge i ordenació opcionals amb IA. Segueix el que importa, filtra el soroll."
 
-#: src/features/landing/landing-page.tsx:393
+#: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Tens ganes de provar Mochi?"
 
@@ -1098,9 +1168,10 @@ msgstr "Redirigint-te al tauler…"
 msgid "Reduce interest"
 msgstr "Redueix l'interès"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:357
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:284
+#: src/features/auth/sign-in/components/user-auth-form.tsx:411
 msgid "Registration disabled"
 msgstr "Registre desactivat"
 
@@ -1130,11 +1201,7 @@ msgstr "Vols eliminar l'accés?"
 msgid "Remove interest"
 msgstr "Elimina l'interès"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:80
-msgid "Replicate an existing account from another server"
-msgstr "Replica un compte existent d'un altre servidor"
-
-#: src/features/landing/landing-page.tsx:175
+#: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Sol·licitud de replicació denegada"
 
@@ -1146,9 +1213,13 @@ msgstr "S'ha enviat la sol·licitud de replicació a <0>{source_user}</0>. Aprov
 msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
 msgstr "S'ha enviat la sol·licitud de replicació al servidor d'origen. Aproveu-la a la pàgina de configuració del servidor d'origen per completar la replicació."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:213
 msgid "Replication signup failed"
 msgstr "Ha fallat el registre per replicació"
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
+msgid "Required only if your backup includes private keys."
+msgstr "Necessari només si la còpia de seguretat inclou claus privades."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
@@ -1158,6 +1229,15 @@ msgstr "Restableix"
 #: ../../../lib/web/src/components/config-drawer.tsx:75
 msgid "Reset all settings to default values"
 msgstr "Restableix tota la configuració als valors per defecte"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:169
+#: src/routes/restoring.tsx:106
+msgid "Restore failed"
+msgstr "La restauració ha fallat"
+
+#: src/routes/restoring.tsx:130
+msgid "Restoring your account"
+msgstr "Restaurant el vostre compte"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
@@ -1247,8 +1327,8 @@ msgstr "Servidor"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:16
 #: ../../../lib/web/src/features/document/document-page.tsx:37
-#: src/features/landing/landing-page.tsx:419
-#: src/features/landing/landing-page.tsx:516
+#: src/features/landing/landing-page.tsx:425
+#: src/features/landing/landing-page.tsx:530
 msgid "Server rules"
 msgstr "Regles del servidor"
 
@@ -1280,7 +1360,7 @@ msgstr "Barra lateral"
 msgid "Sign up and your own Mochi node is created. Your data lives there — not on someone else's server."
 msgstr "Registra't i es crearà el teu propi node Mochi. Les teves dades viuen allà, no al servidor d'algú altre."
 
-#: src/features/landing/landing-page.tsx:277
+#: src/features/landing/landing-page.tsx:283
 msgid "Sign up or log in"
 msgstr "Registra't o inicia sessió"
 
@@ -1309,7 +1389,7 @@ msgstr "Petit"
 msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
 msgstr "Algunes transferències no s'han completat al primer intent. Es reintentaran automàticament."
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:101
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:151
 msgid "Source server peer ID"
 msgstr "Peer ID del servidor d'origen"
 
@@ -1370,8 +1450,8 @@ msgstr "Equips/Aplicacions"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:20
 #: ../../../lib/web/src/features/document/document-page.tsx:39
-#: src/features/landing/landing-page.tsx:423
-#: src/features/landing/landing-page.tsx:520
+#: src/features/landing/landing-page.tsx:429
+#: src/features/landing/landing-page.tsx:534
 msgid "Terms and conditions"
 msgstr "Termes i condicions"
 
@@ -1384,11 +1464,23 @@ msgstr "Aquest compte de {0} ja està vinculat a un altre usuari"
 msgid "That sign-in provider is not available"
 msgstr "Aquest proveïdor d'inici de sessió no està disponible"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+msgid "The file may be damaged or have been modified."
+msgstr "El fitxer pot estar danyat o haver estat modificat."
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:140
+msgid "The passphrase you entered does not match the backup."
+msgstr "La contrasenya mestra que heu introduït no coincideix amb la còpia de seguretat."
+
 #: src/lib/oauth-errors.ts:11
 msgid "the provider"
 msgstr "el proveïdor"
 
-#: src/features/landing/landing-page.tsx:176
+#: src/routes/restoring.tsx:109
+msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
+msgstr "La restauració no ha completat. El fitxer de còpia de seguretat pot estar danyat, la contrasenya mestra pot ser incorrecta, o el servidor ha trobat un error."
+
+#: src/features/landing/landing-page.tsx:179
 msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
 msgstr "El servidor d'origen no ha aprovat la sol·licitud o ha caducat. Torna-ho a provar o registra't localment."
 
@@ -1399,6 +1491,10 @@ msgstr "Tema"
 #: ../../../lib/web/src/components/config-drawer.tsx:60
 msgid "Theme Settings"
 msgstr "Configuració del tema"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+msgid "This backup was created by a newer version of Mochi. Update this server first."
+msgstr "Aquesta còpia de seguretat ha estat creada per una versió més nova de Mochi. Actualitzeu primer aquest servidor."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
@@ -1473,7 +1569,7 @@ msgstr "Sense assignar"
 msgid "Unauthorized Access"
 msgstr "Accés no autoritzat"
 
-#: src/features/landing/landing-page.tsx:362
+#: src/features/landing/landing-page.tsx:368
 msgid "Under the hood"
 msgstr "Sota el capó"
 
@@ -1481,9 +1577,21 @@ msgstr "Sota el capó"
 msgid "United States"
 msgstr "Estats Units"
 
+#: src/routes/restoring.tsx:51
+msgid "Unpacking your data"
+msgstr "Desempaquetant les vostres dades"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "No verificat"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+msgid "Upload a .zip file exported from Mochi's data export."
+msgstr "Pengeu un fitxer .zip exportat des de l'exportació de dades de Mochi."
+
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
+msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
+msgstr "Pengeu un paquet de migració (.zip) exportat des dun altre servidor Mochi. El servidor restaura les vostres dades localment — cap altre servidor ha de ser en línia."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1493,7 +1601,7 @@ msgstr "Utilitza un compte diferent"
 msgid "Use the apps"
 msgstr "Utilitza les aplicacions"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:50
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:55
 msgid "Use the form alice@example.com"
 msgstr "Utilitza el format alice@example.com"
 
@@ -1501,9 +1609,13 @@ msgstr "Utilitza el format alice@example.com"
 msgid "User"
 msgstr "Usuari"
 
-#: src/features/auth/sign-in/components/replicate-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:130
 msgid "Username on source server"
 msgstr "Nom d'usuari al servidor d'origen"
+
+#: src/routes/restoring.tsx:49
+msgid "Validating backup"
+msgstr "Validant la còpia de seguretat"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:68
 msgid "Verification code"
@@ -1514,7 +1626,7 @@ msgid "Verification code sent"
 msgstr "Codi de verificació enviat"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:240
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
+#: src/features/auth/sign-in/components/user-auth-form.tsx:419
 msgid "Verification failed"
 msgstr "La verificació ha fallat"
 
@@ -1530,6 +1642,10 @@ msgstr "Verifica l'adreça de correu electrònic"
 #: src/features/auth/mfa/index.tsx:284
 msgid "Verify with passkey"
 msgstr "Verifica amb passkey"
+
+#: src/routes/restoring.tsx:50
+msgid "Verifying backup"
+msgstr "Verificant la còpia de seguretat"
 
 #: ../../../lib/web/src/components/attachment-gallery.tsx:63
 msgid "Video thumbnail"
@@ -1547,7 +1663,7 @@ msgstr "Mostra-ho tot"
 msgid "View all notifications"
 msgstr "Mostra totes les notificacions"
 
-#: src/features/landing/landing-page.tsx:408
+#: src/features/landing/landing-page.tsx:414
 msgid "View source code"
 msgstr "Visualitza el codi font"
 
@@ -1571,6 +1687,10 @@ msgstr "Dimecres"
 msgid "Wikis"
 msgstr "Wikis"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:139
+msgid "Wrong passphrase"
+msgstr "Contrasenya mestra incorrecta"
+
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:38
 msgid "Your {0} email is not verified"
@@ -1582,11 +1702,11 @@ msgstr "El teu compte ha estat suspès"
 
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/recovery/index.tsx:84
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:408
 msgid "Your account has been suspended."
 msgstr "El teu compte ha estat suspès."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:144
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "Your account is already replicated here. Log in instead."
 msgstr "El vostre compte ja està replicat aquí. En lloc d'això, inicieu la sessió."
 
@@ -1594,17 +1714,25 @@ msgstr "El vostre compte ja està replicat aquí. En lloc d'això, inicieu la se
 msgid "Your account is being copied from the source server. Do not close this window."
 msgstr "El vostre compte s'està copiant des del servidor d'origen. No tanqueu aquesta finestra."
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:123
+msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
+msgstr "El vostre compte es copia en viu des dun servidor al qual ja teniu accés. El servidor font ha d'aprovar la sol·licitud abans que comenci la transferència."
+
 #: src/lib/oauth-errors.ts:40
 msgid "Your account requires a passkey to sign in"
 msgstr "El teu compte requereix una passkey per iniciar sessió"
 
-#: src/features/landing/landing-page.tsx:293
+#: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Les teves aplicacions, la teva plataforma, la teva xarxa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:197
+#: src/features/auth/sign-in/components/user-auth-form.tsx:251
 msgid "Your code is: {devCode}"
 msgstr "El teu codi és: {devCode}"
+
+#: src/routes/restoring.tsx:133
+msgid "Your data is being restored from the backup. Do not close this window."
+msgstr "Les vostres dades s'estan restaurant des de la còpia de seguretat. No tanqueu aquesta finestra."
 
 #: src/features/auth/identity-form.tsx:70
 msgid "Your name, as you'd like others to see it"
