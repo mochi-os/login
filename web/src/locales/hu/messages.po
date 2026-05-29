@@ -182,11 +182,11 @@ msgstr "Vissza"
 msgid "Back to home"
 msgstr "Vissza a kezdőlapra"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Vissza a regisztrációhoz"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Biztonsági mentés fájl"
 
@@ -261,7 +261,7 @@ msgstr "Nézze meg az e-mailjeit."
 msgid "Checking every few seconds…"
 msgstr "Néhány másodpercenként ellenőrzés…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Ellenőrzés…"
 
@@ -447,6 +447,10 @@ msgstr "Alapértelmezett"
 msgid "Default AI account"
 msgstr "Alapértelmezett MI-fiók"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Törölje fiókját a régi szerveren"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Csökkenő"
@@ -470,6 +474,10 @@ msgstr "Felismerés a böngészőből"
 msgid "Direction"
 msgstr "Irány"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Elvetés"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Megjeleníti a mobil oldalsávot."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Tervezetten elosztott"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "Kész"
 
@@ -542,7 +550,7 @@ msgstr "Oldalsáv kibontása"
 msgid "Extra large"
 msgstr "Extra nagy"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Sikertelen"
 
@@ -586,11 +594,15 @@ msgstr "Hírcsatornák, fórumok, projektek, CRM, wikik — mind beépítve. Vag
 msgid "Files"
 msgstr "Fájlok"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Fejezze be a fiók áthelyezését"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Fiók beállításának befejezése"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Befejezés"
 
@@ -609,14 +621,6 @@ msgstr "Péntek"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Kezdete"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "Biztonsági mentés fájlból (visszaállítás)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "Egy másik futó szerverről (replikáció)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "Balról jobbra"
 msgid "Light"
 msgstr "Világos"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Az identitás összekapcsolása"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Nincs"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Egyik sem — hozzon létre új fiókot"
+msgid "None; create a fresh account"
+msgstr "Semmi; hozzon létre egy új fiókot"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Passkey-bejelentkezés szükséges"
 msgid "Passkey MFA not yet implemented"
 msgstr "A passkey MFA még nincs implementálva"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Jelmondat"
 
@@ -1143,6 +1147,10 @@ msgstr "Nyilvános"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Tegye közzé saját közösségi média hírfolyamát, kövessen másokat, vagy aggregáljon más hírfolyamokat opcionális AI-címkézéssel és rendezéssel. Kövesse a fontosat, szűrje a zajt."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Kapcsolja újra össze fiókjait ezen a szerveren"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Készen áll kipróbálni a Mochit?"
@@ -1201,6 +1209,10 @@ msgstr "Eltávolítja a hozzáférést?"
 msgid "Remove interest"
 msgstr "Érdeklődés eltávolítása"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Replikálás másik szerverről"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Replikációs kérés elutasítva"
@@ -1217,10 +1229,6 @@ msgstr "Replikációs kérés elküldve a forráskiszolgálónak. Hagyja jóvá 
 msgid "Replication signup failed"
 msgstr "A replikációs regisztráció sikertelen volt"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Csak akkor szükséges, ha a biztonsági mentés tartalmaz privát kulcsokat."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Visszaállítás"
 msgid "Reset all settings to default values"
 msgstr "Minden beállítás visszaállítása alapértelmezett értékekre"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Mentési fájl visszaállítása"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "A visszaállítás sikertelen"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Fiók visszaállítása"
 
@@ -1476,7 +1488,7 @@ msgstr "A megadott jelmondat nem egyezik a biztonsági mentéssel."
 msgid "the provider"
 msgstr "a szolgáltató"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "A visszaállítás nem fejeződött be. A biztonsági mentés fájl sérült lehet, a jelmondat helytelen lehet, vagy a szerver hibába ütközött."
 
@@ -1577,7 +1589,7 @@ msgstr "A motorháztető alatt"
 msgid "United States"
 msgstr "Egyesült Államok"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Adatok kicsomagolása"
 
@@ -1588,10 +1600,6 @@ msgstr "Nem ellenőrzött"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Töltsön fel egy .zip fájlt, amelyet a Mochi adatexportjából exportált."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Töltsön fel egy migrációs csomagot (.zip), amelyet egy másik Mochi szerverről exportált. A szerver helyileg állítja vissza adatait — más szervernek nem kell online lennie."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Felhasználó"
 msgid "Username on source server"
 msgstr "Felhasználónév a forrásszerveren"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Biztonsági mentés érvényesítése"
 
@@ -1643,7 +1651,7 @@ msgstr "E-mail-cím ellenőrzése"
 msgid "Verify with passkey"
 msgstr "Ellenőrzés hitelesítőkulccsal"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Biztonsági mentés ellenőrzése"
 
@@ -1722,6 +1730,10 @@ msgstr "Fiókja élőben másolódik egy olyan szerverről, amelyhez már hozzá
 msgid "Your account requires a passkey to sign in"
 msgstr "A bejelentkezéshez a fiók hitelesítőkulcsot igényel"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Fiókja ide lett áthelyezve innen: {source}. Amíg nem törli onnan, az üzenetek és értesítések mindkét szerverre eljuthatnak, tartalmának egy része továbbra is a régi szerverről lesz kiszolgálva, és a követőknek néhány percbe telhet, mire megtalálják Önt itt."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Az ön alkalmazásai, az ön platformja, az ön hálózata"
@@ -1730,7 +1742,7 @@ msgstr "Az ön alkalmazásai, az ön platformja, az ön hálózata"
 msgid "Your code is: {devCode}"
 msgstr "A kódja: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Adatai visszaállnak a biztonsági mentésből. Ne zárja be ezt az ablakot."
 

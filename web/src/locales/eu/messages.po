@@ -182,11 +182,11 @@ msgstr "Atzera"
 msgid "Back to home"
 msgstr "Itzuli hasierara"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Erregistrora itzuli"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Babeskopia fitxategia"
 
@@ -261,7 +261,7 @@ msgstr "Begiratu zure posta elektronikoa."
 msgid "Checking every few seconds…"
 msgstr "Segundo gutxiro egiaztatzen…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Egiaztatzen…"
 
@@ -447,6 +447,10 @@ msgstr "Lehenetsia"
 msgid "Default AI account"
 msgstr "Lehenetsitako AA kontua"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Ezabatu zure kontua zerbitzari zaharrean"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Beheranzkoa"
@@ -470,6 +474,10 @@ msgstr "Detektatu web nabigatzailetik"
 msgid "Direction"
 msgstr "Norabidea"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Baztertu"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Mugikorraren alboko barra erakusten du."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Banatua diseinuz"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "Eginda"
 
@@ -542,7 +550,7 @@ msgstr "Zabaldu alboko barra"
 msgid "Extra large"
 msgstr "Oso handia"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Huts egin du"
 
@@ -586,11 +594,15 @@ msgstr "Jarioak, foroak, proiektuak, CRMa, wikiak — denak barneratuta. Edo ida
 msgid "Files"
 msgstr "Fitxategiak"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Amaitu kontuaren mugiketa"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Amaitu zure kontuaren konfigurazioa"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Amaitzen"
 
@@ -609,14 +621,6 @@ msgstr "Ostirala"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Nondik"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "Babeskopia fitxategi batetik (berreskuratzea)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "Beste exekutatzen ari den zerbitzari batetik (erreplikatzea)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "Ezkerretik eskuinera"
 msgid "Light"
 msgstr "Argia"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Zure identitatea lotzen"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Bat ere ez"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Bat ere ez — sortu kontu berri bat"
+msgid "None; create a fresh account"
+msgstr "Ezer ez; sortu kontu berri bat"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Passkey-aren saio-hasiera beharrezkoa da"
 msgid "Passkey MFA not yet implemented"
 msgstr "Passkey MFA oraindik ez da inplementatu"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Pasahitz-esaldia"
 
@@ -1143,6 +1147,10 @@ msgstr "Publikoa"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Argitaratu zure gizarte-sareko jarioak, jarraitu beste batzuk, edo bildu beste jarioak AI bidezko aukerako etiketatze eta sailkapenarekin. Jarraitu garrantzitsua dena, iragazi zarata."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Berriro lotu zure kontuak zerbitzari honetan"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Mochi probatzeko prest?"
@@ -1201,6 +1209,10 @@ msgstr "Sarbidea kendu?"
 msgid "Remove interest"
 msgstr "Kendu interesa"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Beste zerbitzari batetik erreplikatu"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Erreplikazio eskaera ukatua"
@@ -1217,10 +1229,6 @@ msgstr "Erreplikazio-eskaera iturburu-zerbitzariari bidali zaio. Onartu ezazu it
 msgid "Replication signup failed"
 msgstr "Errepikapen bidezko izen-ematea huts egin du"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Beharrezkoa da soilik zure babeskopiak gako pribatuak baditu."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Berrezarri"
 msgid "Reset all settings to default values"
 msgstr "Berrezarri ezarpen guztiak balio lehenetsietara"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Leheneratu segurtasun kopiak"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "Berreskuratzeak huts egin du"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Zure kontua berreskuratzen"
 
@@ -1476,7 +1488,7 @@ msgstr "Sartu duzun pasahitz-esaldia ez dator bat babeskopiararekin."
 msgid "the provider"
 msgstr "hornitzailea"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Berreskuratzea ez da osatu. Babeskopia fitxategia hondatuta egon daiteke, pasahitz-esaldia okerra izan daiteke edo zerbitzariak akats bat aurkitu du."
 
@@ -1577,7 +1589,7 @@ msgstr "Barruan"
 msgid "United States"
 msgstr "Estatu Batuak"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Zure datuak deskonprimatzen"
 
@@ -1588,10 +1600,6 @@ msgstr "Egiaztatu gabe"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Igo Mochi-ren datu esportaziotik ateratako .zip fitxategi bat."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Igo beste Mochi zerbitzari batetik esportatutako migrazioaren paketea (.zip). Zerbitzariak zure datuak bertako berrezartzen ditu — ez da beste zerbitzaririk sarean egon behar."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Erabiltzailea"
 msgid "Username on source server"
 msgstr "Erabiltzaile-izena iturburu zerbitzarian"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Babeskopia baliozkotzen"
 
@@ -1643,7 +1651,7 @@ msgstr "Egiaztatu helbide elektronikoa"
 msgid "Verify with passkey"
 msgstr "Egiaztatu passkey-arekin"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Babeskopia egiaztatzen"
 
@@ -1722,6 +1730,10 @@ msgstr "Zure kontua zuzenean kopiatzen da dagoeneko sartzeko aukera duzun zerbit
 msgid "Your account requires a passkey to sign in"
 msgstr "Zure kontuak passkey bat eskatzen du saioa hasteko"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Zure kontua {source}-etik hona mugitu da. Han ezabatu arte, mezuak eta jakinarazpenak bi zerbitzarietara irits daitezke, zure edukiaren zati bat zerbitzari zaharretik ematen jarraitzen du, eta jarraitzaileek minutu batzuk behar izan ditzakete zu hemen aurkitzeko."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Zure aplikazioak, zure plataforma, zure sarea"
@@ -1730,7 +1742,7 @@ msgstr "Zure aplikazioak, zure plataforma, zure sarea"
 msgid "Your code is: {devCode}"
 msgstr "Zure kodea: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Zure datuak babeskopiatik berreskuratzen ari dira. Ez itxi leiho hau."
 

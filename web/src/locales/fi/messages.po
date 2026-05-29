@@ -182,11 +182,11 @@ msgstr "Takaisin"
 msgid "Back to home"
 msgstr "Takaisin etusivulle"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Takaisin rekisteröitymiseen"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Varmuuskopiointitiedosto"
 
@@ -261,7 +261,7 @@ msgstr "Tarkista sähköpostisi."
 msgid "Checking every few seconds…"
 msgstr "Tarkistetaan muutaman sekunnin välein…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Tarkistetaan…"
 
@@ -447,6 +447,10 @@ msgstr "Oletus"
 msgid "Default AI account"
 msgstr "Oletustekoälytili"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Poista tilisi vanhalta palvelimelta"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Laskeva"
@@ -470,6 +474,10 @@ msgstr "Tunnista selaimesta"
 msgid "Direction"
 msgstr "Suunta"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Hylkää"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Näyttää mobiilisivupalkin."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Hajautettu suunnittelultaan"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "Valmis"
 
@@ -542,7 +550,7 @@ msgstr "Laajenna sivupalkki"
 msgid "Extra large"
 msgstr "Erittäin suuri"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Epäonnistui"
 
@@ -586,11 +594,15 @@ msgstr "Syötteet, foorumit, projektit, CRM, wikit — kaikki sisäänrakennettu
 msgid "Files"
 msgstr "Tiedostot"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Viimeistele tilin siirto"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Viimeistele tilisi määritys"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Viimeistellään"
 
@@ -609,14 +621,6 @@ msgstr "Perjantai"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Lähettäjä"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "Varmuuskopiointitiedostosta (palauta)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "Toiselta käynnissä olevalta palvelimelta (replikoi)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "Vasemmalta oikealle"
 msgid "Light"
 msgstr "Vaalea"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Liitetään henkilöllisyytesi"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Ei mitään"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Ei mitään — luo uusi tili"
+msgid "None; create a fresh account"
+msgstr "Ei mitään; luo uusi tili"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Avainkoodikirjautuminen vaaditaan"
 msgid "Passkey MFA not yet implemented"
 msgstr "Avainkoodin MFA:ta ei ole vielä toteutettu"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Tunnuslause"
 
@@ -1143,6 +1147,10 @@ msgstr "Julkinen"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Julkaise omat sosiaalisen median syötteesi, seuraa muita tai kokoa muita syötteitä valinnaisella tekoälytunnisteella ja -lajittelulla. Seuraa olennaista, suodata kohina."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Yhdistä tilisi uudelleen tällä palvelimella"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Valmis kokeilemaan Mochia?"
@@ -1201,6 +1209,10 @@ msgstr "Poistetaanko käyttöoikeus?"
 msgid "Remove interest"
 msgstr "Poista kiinnostus"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Replikoi toiselta palvelimelta"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Replikointipyyntö hylätty"
@@ -1217,10 +1229,6 @@ msgstr "Replikointipyyntö lähetetty lähdepalvelimelle. Hyväksy se lähdepalv
 msgid "Replication signup failed"
 msgstr "Replikoinnin rekisteröinti epäonnistui"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Tarvitaan vain, jos varmuuskopiosi sisältää yksityisiä avaimia."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Nollaa"
 msgid "Reset all settings to default values"
 msgstr "Palauta kaikki asetukset oletusarvoihin"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Palauta varmuuskopiotiedosto"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "Palautus epäonnistui"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Palautetaan tiliäsi"
 
@@ -1476,7 +1488,7 @@ msgstr "Syöttämäsi tunnuslause ei vastaa varmuuskopiota."
 msgid "the provider"
 msgstr "tarjoaja"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Palautus ei valmistunut. Varmuuskopiointitiedosto saattaa olla vioittunut, tunnuslause voi olla väärä tai palvelin kohtasi virheen."
 
@@ -1577,7 +1589,7 @@ msgstr "Konepellin alla"
 msgid "United States"
 msgstr "Yhdysvallat"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Puretaan tietojasi"
 
@@ -1588,10 +1600,6 @@ msgstr "Vahvistamaton"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Lataa Mochin tietojen viennistä viety .zip-tiedosto."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Lataa siirtopaketti (.zip), joka on viety toiselta Mochi-palvelimelta. Palvelin palauttaa tietosi paikallisesti — muiden palvelimien ei tarvitse olla verkossa."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Käyttäjä"
 msgid "Username on source server"
 msgstr "Käyttäjänimi lähdepalvelimella"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Varmuuskopion validointi"
 
@@ -1643,7 +1651,7 @@ msgstr "Vahvista sähköpostiosoite"
 msgid "Verify with passkey"
 msgstr "Vahvista passkey'llä"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Varmuuskopion varmistaminen"
 
@@ -1722,6 +1730,10 @@ msgstr "Tilisi kopioidaan reaaliajassa palvelimelta, johon sinulla on jo pääsy
 msgid "Your account requires a passkey to sign in"
 msgstr "Tilisi vaatii passkey'n kirjautumiseen"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Tilisi siirrettiin tänne kohteesta {source}. Kunnes poistat sen sieltä, viestit ja ilmoitukset voivat tavoittaa molemmat palvelimet, osa sisällöstäsi toimitetaan edelleen vanhalta palvelimelta ja seuraajillasi voi kestää muutama minuutti löytää sinut täältä."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Sinun sovelluksesi, sinun alustasi, sinun verkostosi"
@@ -1730,7 +1742,7 @@ msgstr "Sinun sovelluksesi, sinun alustasi, sinun verkostosi"
 msgid "Your code is: {devCode}"
 msgstr "Koodisi on: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Tietosi palautetaan varmuuskopiosta. Älä sulje tätä ikkunaa."
 

@@ -182,11 +182,11 @@ msgstr "חזור"
 msgid "Back to home"
 msgstr "חזרה לבית"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "חזרה להרשמה"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "קובץ גיבוי"
 
@@ -261,7 +261,7 @@ msgstr "בדוק את הדוא\"ל שלך."
 msgid "Checking every few seconds…"
 msgstr "בודק כל מספר שניות…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "בודק…"
 
@@ -447,6 +447,10 @@ msgstr "ברירת מחדל"
 msgid "Default AI account"
 msgstr "חשבון AI ברירת מחדל"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "מחק את חשבונך בשרת הישן"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "יורד"
@@ -470,6 +474,10 @@ msgstr "זיהוי מהדפדפן"
 msgid "Direction"
 msgstr "כיוון"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "סגור"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "מציג את סרגל הצד למובייל."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "מבוזר מתוקף תכנונו"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "בוצע"
 
@@ -542,7 +550,7 @@ msgstr "הרחב סרגל צד"
 msgid "Extra large"
 msgstr "גדול במיוחד"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "נכשל"
 
@@ -586,11 +594,15 @@ msgstr "פידים, פורומים, פרויקטים, CRM, ויקיים — הכ
 msgid "Files"
 msgstr "קבצים"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "סיים את העברת החשבון"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "סיים את הגדרת החשבון שלך"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "מסיים"
 
@@ -609,14 +621,6 @@ msgstr "שישי"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "מאת"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "מקובץ גיבוי (שחזור)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "משרת פעיל אחר (שכפול)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "משמאל לימין"
 msgid "Light"
 msgstr "בהיר"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "מקשר את הזהות שלך"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "ללא"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "ללא — צור חשבון חדש"
+msgid "None; create a fresh account"
+msgstr "אין; צור חשבון חדש"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "נדרשת התחברות במפתח גישה"
 msgid "Passkey MFA not yet implemented"
 msgstr "MFA של מפתח גישה עדיין לא מיושם"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "ביטוי סיסמה"
 
@@ -1143,6 +1147,10 @@ msgstr "ציבורי"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "פרסם פידי מדיה חברתית משלך, עקוב אחר אחרים, או צבור פידים אחרים עם תיוג ומיון AI אופציונליים. עקוב אחר מה שחשוב, סנן את הרעש."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "קשר מחדש את חשבונותיך בשרת זה"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "מוכן לנסות את Mochi?"
@@ -1201,6 +1209,10 @@ msgstr "להסיר גישה?"
 msgid "Remove interest"
 msgstr "הסר עניין"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "שכפל משרת אחר"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "בקשת השכפול נדחתה"
@@ -1217,10 +1229,6 @@ msgstr "בקשת שכפול נשלחה אל שרת המקור. אשרו אותה
 msgid "Replication signup failed"
 msgstr "ההרשמה באמצעות שכפול נכשלה"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "נדרש רק אם הגיבוי שלך כולל מפתחות פרטיים."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "אפס"
 msgid "Reset all settings to default values"
 msgstr "אפס את כל ההגדרות לערכי ברירת המחדל"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "שחזר קובץ גיבוי"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "השחזור נכשל"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "משחזר את החשבון שלך"
 
@@ -1476,7 +1488,7 @@ msgstr "ביטוי הסיסמה שהזנת אינו תואם את הגיבוי."
 msgid "the provider"
 msgstr "הספק"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "השחזור לא הושלם. ייתכן שקובץ הגיבוי פגום, ביטוי הסיסמה עשוי להיות שגוי, או שהשרת נתקל בשגיאה."
 
@@ -1577,7 +1589,7 @@ msgstr "מאחורי הקלעים"
 msgid "United States"
 msgstr "ארצות הברית"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "פותח את הנתונים שלך"
 
@@ -1588,10 +1600,6 @@ msgstr "לא מאומת"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "העלה קובץ .zip שיוצא מייצוא הנתונים של Mochi."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "העלה חבילת הגירה (.zip) שיוצאה משרת Mochi אחר. השרת משחזר את הנתונים שלך מקומית — לא צריך שרת אחר להיות מחובר."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "משתמש"
 msgid "Username on source server"
 msgstr "שם משתמש בשרת המקור"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "מאמת את הגיבוי"
 
@@ -1643,7 +1651,7 @@ msgstr "אמת כתובת אימייל"
 msgid "Verify with passkey"
 msgstr "אמת באמצעות מפתח גישה"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "מוודא את הגיבוי"
 
@@ -1722,6 +1730,10 @@ msgstr "החשבון שלך מועתק בשידור חי מהשרת שיש לך 
 msgid "Your account requires a passkey to sign in"
 msgstr "החשבון שלך דורש מפתח גישה להתחברות"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "חשבונך הועבר לכאן מ-{source}. עד שתמחק אותו שם, הודעות והתראות עשויות להגיע לשני השרתים, חלק מהתוכן שלך ממשיך להיות מוגש מהשרת הישן, ועוקבים עשויים לקחת מספר דקות למצוא אותך כאן."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "האפליקציות שלך, הפלטפורמה שלך, הרשת שלך"
@@ -1730,7 +1742,7 @@ msgstr "האפליקציות שלך, הפלטפורמה שלך, הרשת שלך"
 msgid "Your code is: {devCode}"
 msgstr "הקוד שלך: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "הנתונים שלך משוחזרים מהגיבוי. אל תסגור חלון זה."
 

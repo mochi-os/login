@@ -182,11 +182,11 @@ msgstr "Natrag"
 msgid "Back to home"
 msgstr "Natrag na početnu"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Natrag na registraciju"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Sigurnosna kopija"
 
@@ -261,7 +261,7 @@ msgstr "Provjerite svoju e-poštu."
 msgid "Checking every few seconds…"
 msgstr "Provjera svakih nekoliko sekundi…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Provjera…"
 
@@ -447,6 +447,10 @@ msgstr "Zadano"
 msgid "Default AI account"
 msgstr "Zadani AI račun"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Izbrišite svoj račun na starom poslužitelju"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Sil."
@@ -470,6 +474,10 @@ msgstr "Otkrij iz web preglednika"
 msgid "Direction"
 msgstr "Smjer"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Odbaci"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Prikazuje mobilnu bočnu traku."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Distribuirano po dizajnu"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "Gotovo"
 
@@ -542,7 +550,7 @@ msgstr "Proširi bočnu traku"
 msgid "Extra large"
 msgstr "Ekstra veliko"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Neuspješno"
 
@@ -586,11 +594,15 @@ msgstr "Feedovi, forumi, projekti, CRM, wikiji — sve ugrađeno. Ili napišite 
 msgid "Files"
 msgstr "Datoteke"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Dovršite premještanje računa"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Završite postavljanje računa"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Završavanje"
 
@@ -609,14 +621,6 @@ msgstr "Petak"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Od"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "Iz datoteke sigurnosne kopije (vraćanje)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "S drugog aktivnog poslužitelja (repliciranje)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "Slijeva nadesno"
 msgid "Light"
 msgstr "Svijetlo"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Povezivanje vašeg identiteta"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Ništa"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Ništa — stvori novi račun"
+msgid "None; create a fresh account"
+msgstr "Ništa; stvorite novi račun"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Potrebna je prijava passkeyem"
 msgid "Passkey MFA not yet implemented"
 msgstr "Passkey MFA još nije implementiran"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Zaporna fraza"
 
@@ -1143,6 +1147,10 @@ msgstr "Javno"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Objavljujte vlastite feedove društvenih medija, pratite druge ili agregirajte druge feedove uz neobavezno AI označavanje i sortiranje. Pratite što je važno, filtrirajte buku."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Ponovno povežite svoje račune na ovom poslužitelju"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Spremni isprobati Mochi?"
@@ -1201,6 +1209,10 @@ msgstr "Ukloniti pristup?"
 msgid "Remove interest"
 msgstr "Ukloni interes"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Replicirajte s drugog poslužitelja"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Zahtjev za replikaciju odbijen"
@@ -1217,10 +1229,6 @@ msgstr "Zahtjev za replikaciju poslan je izvornom poslužitelju. Odobrite ga na 
 msgid "Replication signup failed"
 msgstr "Registracija replikacijom nije uspjela"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Potrebno samo ako vaša sigurnosna kopija uključuje privatne ključeve."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Resetiraj"
 msgid "Reset all settings to default values"
 msgstr "Resetiraj sve postavke na zadane vrijednosti"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Vratite sigurnosnu datoteku"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "Vraćanje nije uspjelo"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Vraćanje vašeg računa"
 
@@ -1476,7 +1488,7 @@ msgstr "Zaporna fraza koju ste unijeli ne odgovara sigurnosnoj kopiji."
 msgid "the provider"
 msgstr "pružatelj"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Vraćanje nije dovršeno. Datoteka sigurnosne kopije može biti oštećena, zaporna fraza može biti netočna, ili je poslužitelj naišao na pogrešku."
 
@@ -1577,7 +1589,7 @@ msgstr "Pod haubom"
 msgid "United States"
 msgstr "Sjedinjene Američke Države"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Raspakiravanje vaših podataka"
 
@@ -1588,10 +1600,6 @@ msgstr "Neprovjereno"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Prenesite .zip datoteku izvezenu iz Mochi izvoza podataka."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Prenesite paket za migraciju (.zip) izvezen s drugog Mochi poslužitelja. Poslužitelj lokalno vraća vaše podatke — nijedan drugi poslužitelj ne mora biti na mreži."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Korisnik"
 msgid "Username on source server"
 msgstr "Korisničko ime na izvornom poslužitelju"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Provjera valjanosti sigurnosne kopije"
 
@@ -1643,7 +1651,7 @@ msgstr "Provjeri adresu e-pošte"
 msgid "Verify with passkey"
 msgstr "Provjeri pomoću passkeya"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Verifikacija sigurnosne kopije"
 
@@ -1722,6 +1730,10 @@ msgstr "Vaš račun se kopira uživo s poslužitelja kojemu već imate pristup. 
 msgid "Your account requires a passkey to sign in"
 msgstr "Vaš račun zahtijeva passkey za prijavu"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Vaš račun je premješten ovdje s {source}. Dok ga tamo ne izbrišete, poruke i obavijesti mogu stizati na oba poslužitelja, dio vašeg sadržaja i dalje se poslužuje s starog poslužitelja, a pratiteljima može trebati nekoliko minuta da vas pronađu ovdje."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Vaše aplikacije, vaša platforma, vaša mreža"
@@ -1730,7 +1742,7 @@ msgstr "Vaše aplikacije, vaša platforma, vaša mreža"
 msgid "Your code is: {devCode}"
 msgstr "Vaš kod je: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Vaši podaci se vraćaju iz sigurnosne kopije. Ne zatvarajte ovaj prozor."
 

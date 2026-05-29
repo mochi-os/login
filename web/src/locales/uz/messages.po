@@ -182,11 +182,11 @@ msgstr "Orqaga"
 msgid "Back to home"
 msgstr "Bosh sahifaga qaytish"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Ro'yxatdan o'tishga qaytish"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Zaxira fayl"
 
@@ -261,7 +261,7 @@ msgstr "Emailingizni tekshiring."
 msgid "Checking every few seconds…"
 msgstr "Har bir necha soniyada tekshirilmoqda…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Tekshirilmoqda…"
 
@@ -447,6 +447,10 @@ msgstr "Standart"
 msgid "Default AI account"
 msgstr "Standart AI hisobi"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Eski serverdagi hisobingizni o'chiring"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Pasayuvchi"
@@ -470,6 +474,10 @@ msgstr "Veb-brauzerdan aniqlash"
 msgid "Direction"
 msgstr "Yoʻnalish"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Bekor qilish"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Mobil yon panelni koʻrsatadi."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Tabiatan taqsimlangan"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "Bajarildi"
 
@@ -542,7 +550,7 @@ msgstr "Yon panelni kengaytirish"
 msgid "Extra large"
 msgstr "Juda katta"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Muvaffaqiyatsiz"
 
@@ -586,11 +594,15 @@ msgstr "Tasmalar, forumlar, loyihalar, CRM, wiki — hammasi ichiga oʻrnatilgan
 msgid "Files"
 msgstr "Fayllar"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Hisobni ko'chirishni yakunlang"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Hisobingizni sozlashni yakunlang"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Yakunlanmoqda"
 
@@ -609,14 +621,6 @@ msgstr "Juma"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Kimdan"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "Zaxira fayldan (tiklash)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "Boshqa ishlaayotgan serverdan (takrorlash)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "Chapdan oʻngga"
 msgid "Light"
 msgstr "Yorugʻ"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Shaxsiyatingizni bog'lash"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Hech qanday"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Yo'q — yangi hisob yaratish"
+msgid "None; create a fresh account"
+msgstr "Hech narsa; yangi hisob yarating"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Passkey bilan kirish talab etiladi"
 msgid "Passkey MFA not yet implemented"
 msgstr "Passkey MFA hali amalga oshirilmagan"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Parol iborasi"
 
@@ -1143,6 +1147,10 @@ msgstr "Ommaviy"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Oʻzingizning ijtimoiy media lentalaringizni nashr eting, boshqalarga obuna boʻling yoki AI orqali tegrlash va saralash bilan boshqa lentalarni jamlang. Muhim narsalarni kuzating, shovqindan saqlaning."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Bu serverdagi hisoblaringizni qayta ulang"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Mochi’ni sinab koʻrishga tayyormisiz?"
@@ -1201,6 +1209,10 @@ msgstr "Kirishni olib tashlasinmi?"
 msgid "Remove interest"
 msgstr "Qiziqishni olib tashlash"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Boshqa serverdan replikatsiya qiling"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Replikatsiya so'rovi rad etildi"
@@ -1217,10 +1229,6 @@ msgstr "Replikatsiya soʻrovi manba serverga yuborildi. Replikatsiyani yakunlash
 msgid "Replication signup failed"
 msgstr "Nusxalash orqali roʻyxatdan oʻtish muvaffaqiyatsiz"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Faqat zaxira nusxangizda shaxsiy kalitlar bo'lsa kerak."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Tiklash"
 msgid "Reset all settings to default values"
 msgstr "Barcha sozlamalarni standart qiymatlarga qaytarish"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Zaxira faylini tiklang"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "Tiklash muvaffaqiyatsiz bo'ldi"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Hisobingiz tiklanmoqda"
 
@@ -1476,7 +1488,7 @@ msgstr "Kiritilgan parol iborasi zaxira nusxaga mos kelmaydi."
 msgid "the provider"
 msgstr "provayder"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Tiklash tugallanmadi. Zaxira fayl buzilgan bo'lishi mumkin, parol iborasi noto'g'ri bo'lishi mumkin yoki server xatoga duch keldi."
 
@@ -1577,7 +1589,7 @@ msgstr "Ichki tafsilotlar"
 msgid "United States"
 msgstr "Amerika Qoʻshma Shtatlari"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Ma'lumotlaringiz ochilmoqda"
 
@@ -1588,10 +1600,6 @@ msgstr "Tasdiqlanmagan"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Mochi ma'lumotlar eksportidan eksport qilingan .zip faylini yuklang."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Boshqa Mochi serveridan eksport qilingan ko'chirish to'plamini (.zip) yuklang. Server ma'lumotlaringizni mahalliy ravishda tiklaydi — boshqa server online bo'lishi shart emas."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Foydalanuvchi"
 msgid "Username on source server"
 msgstr "Manba serverdagi foydalanuvchi nomi"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Zaxira nusxani tekshirish"
 
@@ -1643,7 +1651,7 @@ msgstr "Email manzilini tasdiqlash"
 msgid "Verify with passkey"
 msgstr "Passkey bilan tasdiqlash"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Zaxira nusxani tekshirish"
 
@@ -1722,6 +1730,10 @@ msgstr "Hisobingiz siz allaqachon kirish huquqiga ega bo'lgan serverdan jonli ra
 msgid "Your account requires a passkey to sign in"
 msgstr "Hisobingiz kirish uchun passkey ni talab qiladi"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Hisobingiz {source} dan bu yerga ko'chirildi. U yerdan o'chirmaguncha, xabarlar va bildirishnomalar ikkala serverga ham yetishi mumkin, ba'zi kontentingiz eski serverdan erilib berilishda davom etadi va kuzatuvchilar sizni bu yerda topish uchun bir necha daqiqa vaqt ketishi mumkin."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Sizning ilovalaringiz, sizning platformangiz, sizning tarmogʻingiz"
@@ -1730,7 +1742,7 @@ msgstr "Sizning ilovalaringiz, sizning platformangiz, sizning tarmogʻingiz"
 msgid "Your code is: {devCode}"
 msgstr "Kodingiz: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Ma'lumotlaringiz zaxira nusxadan tiklanmoqda. Bu oynani yopmang."
 

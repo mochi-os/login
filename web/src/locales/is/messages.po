@@ -182,11 +182,11 @@ msgstr "Til baka"
 msgid "Back to home"
 msgstr "Til baka á forsíðu"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Til baka á skráningarsíðu"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Öryggisafritsskrá"
 
@@ -261,7 +261,7 @@ msgstr "Athugaðu tölvupóstinn þinn."
 msgid "Checking every few seconds…"
 msgstr "Athugar á nokkurra sekúndna fresti…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Athugar…"
 
@@ -447,6 +447,10 @@ msgstr "Sjálfgefið"
 msgid "Default AI account"
 msgstr "Sjálfgefinn gervigreindarreikningur"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Eyddu reikningnum þínum á gamla þjóninum"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Lækkandi"
@@ -470,6 +474,10 @@ msgstr "Greina út frá vafra"
 msgid "Direction"
 msgstr "Stefna"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Hafna"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Sýnir hliðarstiku farsíma."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Dreift að hönnun"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "Lokið"
 
@@ -542,7 +550,7 @@ msgstr "Útvíkka hliðarstiku"
 msgid "Extra large"
 msgstr "Mjög stórt"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Mistókst"
 
@@ -586,11 +594,15 @@ msgstr "Streymi, spjallborð, verkefni, CRM og wiki — allt innbyggt. Eða skri
 msgid "Files"
 msgstr "Skrár"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Kláraðu að færa reikninginn þinn"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Klára uppsetningu reiknings"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Lýkur við"
 
@@ -609,14 +621,6 @@ msgstr "Föstudagur"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Frá"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "Úr öryggisafritsskrá (endurheimta)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "Af öðrum keyrandi þjóni (afrita)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "Vinstri til hægri"
 msgid "Light"
 msgstr "Ljóst"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Tengir auðkenni þitt"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Ekkert"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Ekkert — búa til nýjan aðgang"
+msgid "None; create a fresh account"
+msgstr "Ekkert; búðu til nýjan reikning"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Innskráning með aðgangslykli krafist"
 msgid "Passkey MFA not yet implemented"
 msgstr "MFA aðgangslykils ekki enn útfært"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Lykilsetning"
 
@@ -1143,6 +1147,10 @@ msgstr "Opinbert"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Birtu þína eigin samfélagsmiðlastrauma, fylgdu öðrum eða safnaðu saman öðrum straumum með valfrjálsum AI-merkingum og röðun. Fylgdu því sem skiptir máli, síaðu hávaðann."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Tengdu reikninga þína aftur á þessum þjóni"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Tilbúin(n) að prófa Mochi?"
@@ -1201,6 +1209,10 @@ msgstr "Fjarlægja aðgang?"
 msgid "Remove interest"
 msgstr "Fjarlægja áhuga"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Afrita frá öðrum þjóni"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Eftirmyndabeiðni hafnað"
@@ -1217,10 +1229,6 @@ msgstr "Afritunarbeiðni send til upprunaþjónsins. Samþykktu hana á stilling
 msgid "Replication signup failed"
 msgstr "Skráning með afritun mistókst"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Krafist aðeins ef öryggisafritið inniheldur einkalykla."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Endurstilla"
 msgid "Reset all settings to default values"
 msgstr "Endurstilla allar stillingar á sjálfgefin gildi"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Endurheimta öryggisafritsskrá"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "Endurheimta mistókst"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Endurheimtir aðgang þinn"
 
@@ -1476,7 +1488,7 @@ msgstr "Lykilsetningin sem þú slóst inn stemmir ekki við öryggisafritið."
 msgid "the provider"
 msgstr "þjónustuveitandinn"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Endurheimtan lauk ekki. Öryggisafritsskráin gæti verið skemmd, lykilsetningin gæti verið röng, eða þjónninn lenti í villu."
 
@@ -1577,7 +1589,7 @@ msgstr "Undir vélarhlífinni"
 msgid "United States"
 msgstr "Bandaríkin"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Pakkar upp gögn þín"
 
@@ -1588,10 +1600,6 @@ msgstr "Óstaðfest"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Hladdu upp .zip skrá sem er flutt út úr Mochi gagnaflutningstóli."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Hladdu upp flutningspakka (.zip) sem er fluttur út frá öðrum Mochi þjóni. Þjónninn endurheimtir gögn þín staðbundið — enginn annar þjónn þarf að vera á netinu."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Notandi"
 msgid "Username on source server"
 msgstr "Notandanafn á uppruna-vefþjóni"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Staðfestir öryggisafrit"
 
@@ -1643,7 +1651,7 @@ msgstr "Sannprófa netfang"
 msgid "Verify with passkey"
 msgstr "Staðfesta með passkey"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Sannreynir öryggisafrit"
 
@@ -1722,6 +1730,10 @@ msgstr "Aðgangurinn þinn er afritaður beint af þjóni sem þú hefur þegar 
 msgid "Your account requires a passkey to sign in"
 msgstr "Reikningurinn þinn þarf passkey til að skrá sig inn"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Reikningurinn þinn var fluttur hingað frá {source}. Þar til þú eyðir honum þar, geta skilaboð og tilkynningar náð til beggja þjóna, hluti af efni þínu heldur áfram að vera þjónað af gamla þjóninum og fylgjendur gætu þurft nokkrar mínútur að finna þig hér."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Þín forrit, þinn vettvangur, þitt netkerfi"
@@ -1730,7 +1742,7 @@ msgstr "Þín forrit, þinn vettvangur, þitt netkerfi"
 msgid "Your code is: {devCode}"
 msgstr "Kóðinn þinn er: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Gögn þín eru að vera endurheimtur úr öryggisafritinu. Ekki loka þessum glugga."
 

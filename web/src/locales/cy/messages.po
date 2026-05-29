@@ -182,11 +182,11 @@ msgstr "Yn ôl"
 msgid "Back to home"
 msgstr "Yn ôl i’r cartref"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Yn ôl i gofrestru"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Ffeil wrth gefn"
 
@@ -261,7 +261,7 @@ msgstr "Gwiriwch eich e-bost."
 msgid "Checking every few seconds…"
 msgstr "Yn gwirio bob ychydig eiliadau…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Yn gwirio…"
 
@@ -447,6 +447,10 @@ msgstr "Diofyn"
 msgid "Default AI account"
 msgstr "Cyfrif AI diofyn"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Dilëwch eich cyfrif ar yr hen weinydd"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Disg"
@@ -470,6 +474,10 @@ msgstr "Adnabod o'r porwr gwe"
 msgid "Direction"
 msgstr "Cyfeiriad"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Diystyru"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Yn dangos y bar ochr symudol."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Wedi'i ddosbarthu trwy ddyluniad"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "Wedi gorffen"
 
@@ -542,7 +550,7 @@ msgstr "Ehangu'r bar ochr"
 msgid "Extra large"
 msgstr "Ychwanegol o fawr"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Wedi methu"
 
@@ -586,11 +594,15 @@ msgstr "Ffrydiau, fforymau, prosiectau, CRM, wicis — y cyfan wedi'u hadeiladu.
 msgid "Files"
 msgstr "Ffeiliau"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Gorffennwch symud eich cyfrif"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Gorffennwch sefydlu eich cyfrif"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Gorffen"
 
@@ -609,14 +621,6 @@ msgstr "Dydd Gwener"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "O"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "O ffeil wrth gefn (adfer)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "O weinydd arall sy'n rhedeg (atgynhyrchu)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "Chwith i'r Dde"
 msgid "Light"
 msgstr "Golau"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Cysylltu eich hunaniaeth"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Dim"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Dim — creu cyfrif newydd"
+msgid "None; create a fresh account"
+msgstr "Dim; creu cyfrif newydd"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Mae angen mewngofnodi pasallwedd"
 msgid "Passkey MFA not yet implemented"
 msgstr "Nid yw MFA pasallwedd wedi'i weithredu eto"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Ymadrodd cyfrinachol"
 
@@ -1143,6 +1147,10 @@ msgstr "Cyhoeddus"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Cyhoeddwch eich porthwyr cyfryngau cymdeithasol eich hun, dilynwch eraill, neu agreg porthwyr eraill gyda thagio AI a didoli ddewisol. Dilynwch yr hyn sy'n bwysig, hidlwch y sŵn."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Ail-gysylltwch eich cyfrifon ar y gweinydd hwn"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Yn barod i roi cynnig ar Mochi?"
@@ -1201,6 +1209,10 @@ msgstr "Tynnu mynediad?"
 msgid "Remove interest"
 msgstr "Tynnu diddordeb"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Atgynhyrchu o weinydd arall"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Cais dyblygu wedi'i wrthod"
@@ -1217,10 +1229,6 @@ msgstr "Anfonwyd cais dyblygu at y gweinydd ffynhonnell. Cymeradwywch ef ar duda
 msgid "Replication signup failed"
 msgstr "Methodd y cofrestriad atgynhyrchu"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Dim ond os yw eich copi wrth gefn yn cynnwys allweddi preifat."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Ailosod"
 msgid "Reset all settings to default values"
 msgstr "Ailosod yr holl osodiadau i'r gwerthoedd diofyn"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Adfer ffeil wrth gefn"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "Adfer wedi methu"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Adfer eich cyfrif"
 
@@ -1476,7 +1488,7 @@ msgstr "Nid yw'r ymadrodd cyfrinachol a roddoch yn cyfateb i'r copi wrth gefn."
 msgid "the provider"
 msgstr "y darparwr"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Ni chwblhaodd yr adferiad. Efallai fod y ffeil wrth gefn wedi'i difrodi, yr ymadrodd cyfrinachol yn anghywir, neu fod y gweinydd wedi dod ar draws gwall."
 
@@ -1577,7 +1589,7 @@ msgstr "O dan y caead"
 msgid "United States"
 msgstr "Yr Unol Daleithiau"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Dadbacio eich data"
 
@@ -1588,10 +1600,6 @@ msgstr "Heb ei ddilysu"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Llwythwch ffeil .zip a allforigwyd o allforiad data Mochi."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Llwythwch becyn mudo (.zip) a allforigwyd o weinydd Mochi arall. Mae'r gweinydd yn adfer eich data yn lleol — nid oes angen i unrhyw weinydd arall fod ar-lein."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Defnyddiwr"
 msgid "Username on source server"
 msgstr "Enw defnyddiwr ar y gweinydd ffynhonnell"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Dilysu'r copi wrth gefn"
 
@@ -1643,7 +1651,7 @@ msgstr "Dilysu cyfeiriad e-bost"
 msgid "Verify with passkey"
 msgstr "Dilysu â passkey"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Gwirio'r copi wrth gefn"
 
@@ -1722,6 +1730,10 @@ msgstr "Mae eich cyfrif yn cael ei gopïo'n fyw o weinydd sydd gennych fynediad 
 msgid "Your account requires a passkey to sign in"
 msgstr "Mae angen passkey ar eich cyfrif i fewngofnodi"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Symudwyd eich cyfrif yma o {source}. Hyd nes y byddwch yn ei ddileu yno, gall negeseuon a hysbysiadau gyrraedd y ddau weinydd, gall peth o'ch cynnwys barhau i gael ei weini o'r hen weinydd, a gall dilynwyr gymryd ychydig funudau i ddod o hyd i chi yma."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Eich apiau, eich llwyfan, eich rhwydwaith"
@@ -1730,7 +1742,7 @@ msgstr "Eich apiau, eich llwyfan, eich rhwydwaith"
 msgid "Your code is: {devCode}"
 msgstr "Eich cod yw: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Mae eich data yn cael ei adfer o'r copi wrth gefn. Peidiwch â chau'r ffenestr hon."
 

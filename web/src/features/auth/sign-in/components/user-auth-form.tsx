@@ -131,7 +131,7 @@ export function UserAuthForm({
     if (restoreBundle) {
       try {
         await signupRestore(data.email, restorePassphrase, restoreBundle)
-        window.location.href = '/login/restoring'
+        window.location.href = '/login/restore'
       } catch (error) {
         const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
         const code = (responseData as { error?: string } | undefined)?.error

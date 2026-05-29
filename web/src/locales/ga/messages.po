@@ -182,11 +182,11 @@ msgstr "Ar ais"
 msgid "Back to home"
 msgstr "Ar ais go baile"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Ar ais chuig clárú"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Comhad cúltaca"
 
@@ -261,7 +261,7 @@ msgstr "Seiceáil do ríomhphost."
 msgid "Checking every few seconds…"
 msgstr "Á sheiceáil gach cúpla soicind…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Ag seiceáil…"
 
@@ -447,6 +447,10 @@ msgstr "Réamhshocrú"
 msgid "Default AI account"
 msgstr "Cuntas AI réamhshocraithe"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Scrios do chuntas ar an sean-fhreastalaí"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Íslitheach"
@@ -470,6 +474,10 @@ msgstr "Brath ón mbrabhsálaí gréasáin"
 msgid "Direction"
 msgstr "Treo"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Dífhostaigh"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Taispeánann an barra taoibh móibíleach."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Dáilte de réir dearaidh"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "Críochnaithe"
 
@@ -542,7 +550,7 @@ msgstr "Leathnaigh barra taoibh"
 msgid "Extra large"
 msgstr "Breise mór"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Theip"
 
@@ -586,11 +594,15 @@ msgstr "Fothaí, fóraim, tionscadail, CRM, viceaí — tógtha isteach. Nó scr
 msgid "Files"
 msgstr "Comhaid"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Críochnaigh aistriú do chuntas"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Críochnaigh do chuntas a shocrú"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Ag críochnú"
 
@@ -609,14 +621,6 @@ msgstr "Dé hAoine"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Ó"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "Ó chomhad cúltaca (athchóiriú)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "Ó fhreastalaí eile atá ag rith (macasamhlú)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "Clé go Deas"
 msgid "Light"
 msgstr "Geal"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Ag nascadh do chéannachta"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Faic"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Dada — cruthaigh cuntas nua"
+msgid "None; create a fresh account"
+msgstr "Dada; cruthaigh cuntas nua"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Tá logáil isteach pasluiche riachtanach"
 msgid "Passkey MFA not yet implemented"
 msgstr "Níl MFA pasluiche curtha i bhfeidhm fós"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Frása faire"
 
@@ -1143,6 +1147,10 @@ msgstr "Poiblí"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Foilsigh d'fhothaí meán sóisialta féin, lean daoine eile, nó comhiomlánaigh fothaí eile le clibeáil agus sórtáil AI roghnach. Lean an méid is tábhachtaí, scag an torann."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Athnasc do chuntais ar an bhfreastalaí seo"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Réidh le triail a bhaint as Mochi?"
@@ -1201,6 +1209,10 @@ msgstr "Bain rochtain?"
 msgid "Remove interest"
 msgstr "Bain spéis"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Macasamhlú ó fhreastalaí eile"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Iarratas macasamhlaithe diúltaithe"
@@ -1217,10 +1229,6 @@ msgstr "Seoladh iarratas macasamhlaithe chuig an bhfreastalaí foinse. Ceadaigh 
 msgid "Replication signup failed"
 msgstr "Theip ar an gclárú trí mhacasamhlú"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Ní gá ach amháin má tá eochracha príobháideacha i do chúltaca."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Athshocraigh"
 msgid "Reset all settings to default values"
 msgstr "Athshocraigh gach socrú chuig na luachanna réamhshocraithe"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Athchóirigh comhad cúltaca"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "Theip ar an athchóiriú"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Ag athchóiriú do chuntais"
 
@@ -1476,7 +1488,7 @@ msgstr "Ní mheaitseálann an frása faire a d'iontráil tú leis an gcúltaca."
 msgid "the provider"
 msgstr "an soláthraí"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Níor críochnaíodh an athchóiriú. D'fhéadfadh an comhad cúltaca a bheith damáistithe, d'fhéadfadh an frása faire a bheith mícheart, nó chas an freastalaí ar earráid."
 
@@ -1577,7 +1589,7 @@ msgstr "Faoin gcochall"
 msgid "United States"
 msgstr "Stáit Aontaithe"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Ag díphacáil do chuid sonraí"
 
@@ -1588,10 +1600,6 @@ msgstr "Neamhfhíoraithe"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Uaslódáil comhad .zip a honnmhairíodh ó easpórtáil sonraí Mochi."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Uaslódáil beart imirce (.zip) a honnmhairíodh ó fhreastalaí Mochi eile. Athchóiríonn an freastalaí do shonraí go háitiúil — ní gá aon fhreastalaí eile a bheith ar líne."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Úsáideoir"
 msgid "Username on source server"
 msgstr "Ainm úsáideora ar an bhfreastalaí foinse"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Ag bailíochtú an chúltaca"
 
@@ -1643,7 +1651,7 @@ msgstr "Fíoraigh seoladh ríomhphoist"
 msgid "Verify with passkey"
 msgstr "Fíoraigh le heochair pas"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Ag fíorú an chúltaca"
 
@@ -1722,6 +1730,10 @@ msgstr "Cóipeáiltear do chuntas beo ó fhreastalaí a bhfuil rochtain agat air
 msgid "Your account requires a passkey to sign in"
 msgstr "Tá eochair pas de dhíth ar do chuntas chun síniú isteach"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Aistríodh do chuntas anseo ó {source}. Go dtí go scriosann tú é ansin, d'fhéadfadh teachtaireachtaí agus fógraí an dá fhreastalaí a bhaint amach, leanann roinnt de d'ábhar á sheirbheáil ón sean-fhreastalaí, agus d'fhéadfadh sé cúpla nóiméad a thógáil ar do lucht leanúna tú a aimsiú anseo."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "D'aipeanna, do bhardán, do líonra"
@@ -1730,7 +1742,7 @@ msgstr "D'aipeanna, do bhardán, do líonra"
 msgid "Your code is: {devCode}"
 msgstr "Is é do chód: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Tá do chuid sonraí á n-athchóiriú ón gcúltaca. Ná dún an fhuinneog seo."
 

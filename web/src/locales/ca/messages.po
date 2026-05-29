@@ -182,11 +182,11 @@ msgstr "Enrere"
 msgid "Back to home"
 msgstr "Torna a l’inici"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Tornar al registre"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Fitxer de còpia de seguretat"
 
@@ -261,7 +261,7 @@ msgstr "Revisa el teu correu."
 msgid "Checking every few seconds…"
 msgstr "Comprovació cada pocs segons…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Comprovant…"
 
@@ -447,6 +447,10 @@ msgstr "Per defecte"
 msgid "Default AI account"
 msgstr "Compte d'IA per defecte"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Suprimiu el compte a l'antic servidor"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Desc."
@@ -470,6 +474,10 @@ msgstr "Detecta des del navegador"
 msgid "Direction"
 msgstr "Direcció"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Descarta"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Mostra la barra lateral mòbil."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Distribuït per disseny"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "Fet"
 
@@ -542,7 +550,7 @@ msgstr "Expandeix la barra lateral"
 msgid "Extra large"
 msgstr "Extra gran"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Ha fallat"
 
@@ -586,11 +594,15 @@ msgstr "Fonts, fòrums, projectes, CRM, wikis — tot integrat. O escriu les tev
 msgid "Files"
 msgstr "Fitxers"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Acabeu de moure el compte"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Acaba la configuració del compte"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Finalitzant"
 
@@ -609,14 +621,6 @@ msgstr "Divendres"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "De"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "D'un fitxer de còpia de seguretat (restauració)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "D'un altre servidor en funcionament (replicació)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "D'esquerra a dreta"
 msgid "Light"
 msgstr "Clar"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Vinculant la vostra identitat"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Cap"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Cap — crea un compte nou"
+msgid "None; create a fresh account"
+msgstr "Cap; crea un compte nou"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Cal inici de sessió amb clau d'accés"
 msgid "Passkey MFA not yet implemented"
 msgstr "MFA amb clau d'accés encara no implementat"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Contrasenya mestra"
 
@@ -1143,6 +1147,10 @@ msgstr "Públic"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Publica els teus canals de xarxes socials, segueix d'altres o agrega altres canals amb etiquetatge i ordenació opcionals amb IA. Segueix el que importa, filtra el soroll."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Torneu a vincular els comptes en aquest servidor"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Tens ganes de provar Mochi?"
@@ -1201,6 +1209,10 @@ msgstr "Vols eliminar l'accés?"
 msgid "Remove interest"
 msgstr "Elimina l'interès"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Replica des d'un altre servidor"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Sol·licitud de replicació denegada"
@@ -1217,10 +1229,6 @@ msgstr "S'ha enviat la sol·licitud de replicació al servidor d'origen. Aproveu
 msgid "Replication signup failed"
 msgstr "Ha fallat el registre per replicació"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Necessari només si la còpia de seguretat inclou claus privades."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Restableix"
 msgid "Reset all settings to default values"
 msgstr "Restableix tota la configuració als valors per defecte"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Restaura un fitxer de còpia de seguretat"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "La restauració ha fallat"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Restaurant el vostre compte"
 
@@ -1476,7 +1488,7 @@ msgstr "La contrasenya mestra que heu introduït no coincideix amb la còpia de 
 msgid "the provider"
 msgstr "el proveïdor"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "La restauració no ha completat. El fitxer de còpia de seguretat pot estar danyat, la contrasenya mestra pot ser incorrecta, o el servidor ha trobat un error."
 
@@ -1577,7 +1589,7 @@ msgstr "Sota el capó"
 msgid "United States"
 msgstr "Estats Units"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Desempaquetant les vostres dades"
 
@@ -1588,10 +1600,6 @@ msgstr "No verificat"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Pengeu un fitxer .zip exportat des de l'exportació de dades de Mochi."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Pengeu un paquet de migració (.zip) exportat des dun altre servidor Mochi. El servidor restaura les vostres dades localment — cap altre servidor ha de ser en línia."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Usuari"
 msgid "Username on source server"
 msgstr "Nom d'usuari al servidor d'origen"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Validant la còpia de seguretat"
 
@@ -1643,7 +1651,7 @@ msgstr "Verifica l'adreça de correu electrònic"
 msgid "Verify with passkey"
 msgstr "Verifica amb passkey"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Verificant la còpia de seguretat"
 
@@ -1722,6 +1730,10 @@ msgstr "El vostre compte es copia en viu des dun servidor al qual ja teniu accé
 msgid "Your account requires a passkey to sign in"
 msgstr "El teu compte requereix una passkey per iniciar sessió"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "El vostre compte s'ha mogut aquí des de {source}. Fins que no l'elimineu d'allà, els missatges i les notificacions poden arribar als dos servidors, part del vostre contingut es continuarà servint des de l'antic servidor i els seguidors poden trigar uns minuts a trobar-vos aquí."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Les teves aplicacions, la teva plataforma, la teva xarxa"
@@ -1730,7 +1742,7 @@ msgstr "Les teves aplicacions, la teva plataforma, la teva xarxa"
 msgid "Your code is: {devCode}"
 msgstr "El teu codi és: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Les vostres dades s'estan restaurant des de la còpia de seguretat. No tanqueu aquesta finestra."
 

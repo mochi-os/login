@@ -182,11 +182,11 @@ msgstr "Späť"
 msgid "Back to home"
 msgstr "Späť na úvod"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Späť na registráciu"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Súbor zálohy"
 
@@ -261,7 +261,7 @@ msgstr "Skontrolujte si e-mail."
 msgid "Checking every few seconds…"
 msgstr "Kontroluje sa každých pár sekúnd…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Prebieha kontrola…"
 
@@ -447,6 +447,10 @@ msgstr "Predvolené"
 msgid "Default AI account"
 msgstr "Predvolený AI účet"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Odstráňte svoj účet na starom serveri"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Zostupne"
@@ -470,6 +474,10 @@ msgstr "Zistiť z webového prehliadača"
 msgid "Direction"
 msgstr "Smer"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Zatvoriť"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Zobrazí mobilný bočný panel."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Distribuované od základu"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "Hotovo"
 
@@ -542,7 +550,7 @@ msgstr "Rozbaliť bočný panel"
 msgid "Extra large"
 msgstr "Veľmi veľké"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Zlyhalo"
 
@@ -586,11 +594,15 @@ msgstr "Kanály, fóra, projekty, CRM, wiki — všetko zabudované. Alebo si na
 msgid "Files"
 msgstr "Súbory"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Dokončite presun účtu"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Dokončite nastavenie vášho účtu"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Dokončovanie"
 
@@ -609,14 +621,6 @@ msgstr "Piatok"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Od"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "Zo súboru zálohy (obnovenie)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "Z iného bežiaceho servera (replikácia)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "Zľava doprava"
 msgid "Light"
 msgstr "Svetlý"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Prepájanie vašej identity"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Žiadne"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Žiadny — vytvoriť nový účet"
+msgid "None; create a fresh account"
+msgstr "Nič; vytvoriť nový účet"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Vyžaduje sa prihlásenie prístupovým kľúčom"
 msgid "Passkey MFA not yet implemented"
 msgstr "MFA cez prístupový kľúč ešte nie je implementované"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Heslová fráza"
 
@@ -1143,6 +1147,10 @@ msgstr "Verejné"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Publikujte vlastné kanály sociálnych médií, sledujte iných alebo agregujte iné kanály s voliteľným AI značkovaním a triedením. Sledujte, čo je dôležité, filtrujte šum."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Znovu prepojte svoje účty na tomto serveri"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Pripravení vyskúšať Mochi?"
@@ -1201,6 +1209,10 @@ msgstr "Odstrániť prístup?"
 msgid "Remove interest"
 msgstr "Odstrániť záujem"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Replikovať z iného servera"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Žiadosť o replikáciu zamietnutá"
@@ -1217,10 +1229,6 @@ msgstr "Žiadosť o replikáciu bola odoslaná zdrojovému serveru. Schvalte ju 
 msgid "Replication signup failed"
 msgstr "Registrácia replikáciou zlyhala"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Vyžaduje sa len ak záloha obsahuje súkromné kľúče."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Obnoviť"
 msgid "Reset all settings to default values"
 msgstr "Obnoviť všetky nastavenia na predvolené hodnoty"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Obnoviť záložný súbor"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "Obnovenie zlyhalo"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Obnova vášho účtu"
 
@@ -1476,7 +1488,7 @@ msgstr "Zadaná heslová fráza nezodpovedá zálohe."
 msgid "the provider"
 msgstr "poskytovateľ"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Obnovenie sa nedokončilo. Súbor zálohy môže byť poškodený, heslová fráza môže byť nesprávna alebo server narazil na chybu."
 
@@ -1577,7 +1589,7 @@ msgstr "Pod kapotou"
 msgid "United States"
 msgstr "Spojené štáty"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Rozbaľovanie vašich dát"
 
@@ -1588,10 +1600,6 @@ msgstr "Neoverené"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Nahrajte súbor .zip exportovaný z exportu dát Mochi."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Nahrajte migračný balík (.zip) exportovaný z iného servera Mochi. Server obnoví vaše dáta lokálne — žiadny iný server nemusí byť online."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Používateľ"
 msgid "Username on source server"
 msgstr "Používateľské meno na zdrojovom serveri"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Overovanie zálohy"
 
@@ -1643,7 +1651,7 @@ msgstr "Overiť e-mailovú adresu"
 msgid "Verify with passkey"
 msgstr "Overiť pomocou passkey"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Kontrola zálohy"
 
@@ -1722,6 +1730,10 @@ msgstr "Váš účet je živý kopírovaný zo servera, ku ktorému už máte pr
 msgid "Your account requires a passkey to sign in"
 msgstr "Váš účet vyžaduje passkey na prihlásenie"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Váš účet bol presunutý sem z {source}. Kým ho tam neodstránite, správy a upozornenia môžu dosiahnuť oba servery, časť vášho obsahu naďalej pochádza zo starého servera a sledovateľom môže chvíľu trvať, kým vás tu nájdu."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Vaše aplikácie, vaša platforma, vaša sieť"
@@ -1730,7 +1742,7 @@ msgstr "Vaše aplikácie, vaša platforma, vaša sieť"
 msgid "Your code is: {devCode}"
 msgstr "Váš kód je: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Vaše dáta sa obnovujú zo zálohy. Nezatvárajte toto okno."
 

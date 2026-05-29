@@ -182,11 +182,11 @@ msgstr "Atgal"
 msgid "Back to home"
 msgstr "Atgal į pradžią"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Atgal į registraciją"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Atsarginės kopijos failas"
 
@@ -261,7 +261,7 @@ msgstr "Patikrinkite el. paštą."
 msgid "Checking every few seconds…"
 msgstr "Tikrinama kas kelias sekundes…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Tikrinama…"
 
@@ -447,6 +447,10 @@ msgstr "Numatytasis"
 msgid "Default AI account"
 msgstr "Numatytoji DI paskyra"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Ištrinkite paskyrą senajame serveryje"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Maž."
@@ -470,6 +474,10 @@ msgstr "Aptikti iš naršyklės"
 msgid "Direction"
 msgstr "Kryptis"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Atmesti"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Rodo mobiliąją šoninę juostą."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Paskirstytas iš prigimties"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "Atlikta"
 
@@ -542,7 +550,7 @@ msgstr "Išskleisti šoninę juostą"
 msgid "Extra large"
 msgstr "Labai didelis"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Nepavyko"
 
@@ -586,11 +594,15 @@ msgstr "Srautai, forumai, projektai, CRM, wiki — visa tai integruota. Arba par
 msgid "Files"
 msgstr "Failai"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Užbaikite paskyros perkėlimą"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Užbaikite paskyros nustatymą"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Baigiama"
 
@@ -609,14 +621,6 @@ msgstr "Penktadienis"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Nuo"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "Iš atsarginės kopijos failo (atkūrimas)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "Iš kito veikiančio serverio (replikacija)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "Iš kairės į dešinę"
 msgid "Light"
 msgstr "Šviesi"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Susiejama jūsų tapatybė"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Nėra"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Nė viena — sukurti naują paskyrą"
+msgid "None; create a fresh account"
+msgstr "Nieko; sukurkite naują paskyrą"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Reikalingas prisijungimas slaptarakčiu"
 msgid "Passkey MFA not yet implemented"
 msgstr "Slaptarakčio MFA dar neįgyvendinta"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Slaptafrazė"
 
@@ -1143,6 +1147,10 @@ msgstr "Viešas"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Skelbkite savo socialinių tinklų srautus, sekite kitus arba agreguokite kitus srautus su pasirenkamu DI žymėjimu ir rūšiavimu. Sekite, kas svarbu, filtruokite triukšmą."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Iš naujo susiekite paskyras šiame serveryje"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Pasiruošę išbandyti Mochi?"
@@ -1201,6 +1209,10 @@ msgstr "Šalinti prieigą?"
 msgid "Remove interest"
 msgstr "Šalinti susidomėjimą"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Replikuoti iš kito serverio"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Replikacijos užklausa atmesta"
@@ -1217,10 +1229,6 @@ msgstr "Replikacijos užklausa išsiųsta šaltinio serveriui. Patvirtinkite ją
 msgid "Replication signup failed"
 msgstr "Registracija per replikaciją nepavyko"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Reikalinga tik tada, jei atsarginėje kopijoje yra privačiųjų raktų."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Atstatyti"
 msgid "Reset all settings to default values"
 msgstr "Atstatyti visus nustatymus į numatytąsias reikšmes"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Atkurti atsarginės kopijos failą"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "Atkūrimas nepavyko"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Atkuriama jūsų paskyra"
 
@@ -1476,7 +1488,7 @@ msgstr "Įvesta slaptafrazė nesutampa su atsargine kopija."
 msgid "the provider"
 msgstr "teikėjas"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Atkūrimas nebuvo baigtas. Atsarginės kopijos failas gali būti sugadintas, slaptafrazė gali būti neteisinga arba serveris susidūrė su klaida."
 
@@ -1577,7 +1589,7 @@ msgstr "Po gaubtu"
 msgid "United States"
 msgstr "Jungtinės Valstijos"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Išpakuojami jūsų duomenys"
 
@@ -1588,10 +1600,6 @@ msgstr "Nepatvirtinta"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Įkelkite .zip failą, eksportuotą iš Mochi duomenų eksporto."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Įkelkite migracijos paketą (.zip), eksportuotą iš kito Mochi serverio. Serveris atkuria jūsų duomenis vietoje — joks kitas serveris neturi būti prisijungęs."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Vartotojas"
 msgid "Username on source server"
 msgstr "Vartotojo vardas šaltinio serveryje"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Atsarginė kopija tikrinama"
 
@@ -1643,7 +1651,7 @@ msgstr "Patvirtinti el. pašto adresą"
 msgid "Verify with passkey"
 msgstr "Patvirtinti su prieigos raktu"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Atsarginė kopija patikrinama"
 
@@ -1722,6 +1730,10 @@ msgstr "Jūsų paskyra nukopijuojama tiesioginiu ryšiu iš serverio, prie kurio
 msgid "Your account requires a passkey to sign in"
 msgstr "Jūsų paskyrai prisijungimui reikalingas prieigos raktas"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Jūsų paskyra buvo perkelta čia iš {source}. Kol jos ten neištrinate, žinutės ir pranešimai gali pasiekti abu serverius, dalis jūsų turinio toliau pateikiama iš senojo serverio, o pasekėjams gali prireikti kelių minučių jus rasti čia."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Jūsų programėlės, jūsų platforma, jūsų tinklas"
@@ -1730,7 +1742,7 @@ msgstr "Jūsų programėlės, jūsų platforma, jūsų tinklas"
 msgid "Your code is: {devCode}"
 msgstr "Jūsų kodas: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Jūsų duomenys atkuriami iš atsarginės kopijos. Neuždarykite šio lango."
 

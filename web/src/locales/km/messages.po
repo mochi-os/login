@@ -182,11 +182,11 @@ msgstr "ត្រឡប់"
 msgid "Back to home"
 msgstr "ត្រឡប់ទៅទំព័រដើម"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "ត្រឡប់ទៅការចុះឈ្មោះ"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "ឯកសារបម្រុងទុក"
 
@@ -261,7 +261,7 @@ msgstr "ពិនិត្យអ៊ីមែលរបស់អ្នក។"
 msgid "Checking every few seconds…"
 msgstr "កំពុងពិនិត្យរៀងរាល់ពីរបីវិនាទី…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "កំពុងពិនិត្យ…"
 
@@ -447,6 +447,10 @@ msgstr "លំនាំដើម"
 msgid "Default AI account"
 msgstr "គណនី AI លំនាំដើម"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "លុបគណនីរបស់អ្នកនៅម៉ាស៊ីនមេចាស់"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "ចុះ"
@@ -470,6 +474,10 @@ msgstr "រកឃើញពីកម្មវិធីរុករកគេហទ
 msgid "Direction"
 msgstr "ទិស"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "បិទ"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "បង្ហាញរបារចំហៀងទូរស័ព្ទ។"
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "ចែកចាយតាមការរចនា"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "រួចរាល់"
 
@@ -542,7 +550,7 @@ msgstr "ពង្រីករបារចំហៀង"
 msgid "Extra large"
 msgstr "ធំពិសេស"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "បរាជ័យ"
 
@@ -586,11 +594,15 @@ msgstr "ព័ត៌មានបង្ហាញ វេទិកា គម្រ�
 msgid "Files"
 msgstr "ឯកសារ"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "បញ្ចប់ការផ្លាស់ប្តូរគណនីរបស់អ្នក"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "បញ្ចប់ការរៀបចំគណនីរបស់អ្នក"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "កំពុងបញ្ចប់"
 
@@ -609,14 +621,6 @@ msgstr "ថ្ងៃសុក្រ"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "ពី"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "ពីឯកសារបម្រុងទុក (ស្តារ)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "ពីម៉ាស៊ីនបម្រើផ្សេងដែលកំពុងដំណើរការ (ចម្លង)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "ឆ្វេងទៅស្ដាំ"
 msgid "Light"
 msgstr "ភ្លឺ"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "កំពុងភ្ជាប់អត្តសញ្ញាណ"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "គ្មាន"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "គ្មាន — បង្កើតគណនីថ្មី"
+msgid "None; create a fresh account"
+msgstr "គ្មាន; បង្កើតគណនីថ្មី"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "តម្រូវឱ្យចូលដោយ passkey"
 msgid "Passkey MFA not yet implemented"
 msgstr "Passkey MFA មិនទាន់ត្រូវបានអនុវត្ត"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "ឃ្លាសម្ងាត់"
 
@@ -1143,6 +1147,10 @@ msgstr "សាធារណៈ"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "ផ្សព្វផ្សាយ feed បណ្តាញសង្គមផ្ទាល់ខ្លួន តាមដានអ្នកដទៃ ឬប្រមូលផ្តុំ feed ផ្សេងទៀតជាមួយការដាក់ស្លាក និងតម្រៀបដោយ AI ស្រេចចិត្ត។ តាមដានអ្វីដែលសំខាន់ ច្រោះសំឡេងរំខាន។"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "ភ្ជាប់គណនីរបស់អ្នកឡើងវិញនៅម៉ាស៊ីនមេនេះ"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "រួចរាល់ដើម្បីសាកល្បង Mochi?"
@@ -1201,6 +1209,10 @@ msgstr "យកសិទ្ធិចូលប្រើចេញ?"
 msgid "Remove interest"
 msgstr "យកចំណាប់អារម្មណ៍ចេញ"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "ចម្លងពីម៉ាស៊ីនផ្សេង"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "សំណើចម្លងត្រូវបានបដិសេធ"
@@ -1217,10 +1229,6 @@ msgstr "បានផ្ញើសំណើចម្លងទៅម៉ាស៊ី
 msgid "Replication signup failed"
 msgstr "ការចុះឈ្មោះតាមការចម្លងបានបរាជ័យ"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "ទាមទារតែប៉ុណ្ណោះប្រសិនបើការបម្រុងទុករបស់អ្នករួមបញ្ចូលសោឯកជន។"
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "កំណត់ឡើងវិញ"
 msgid "Reset all settings to default values"
 msgstr "កំណត់ការកំណត់ទាំងអស់ឡើងវិញទៅតម្លៃលំនាំដើម"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "ស្ដារឯកសារបម្រុងទុក"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "ការស្តារបានបរាជ័យ"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "កំពុងស្តារគណនីរបស់អ្នក"
 
@@ -1476,7 +1488,7 @@ msgstr "ឃ្លាសម្ងាត់ដែលអ្នកបានបញ្
 msgid "the provider"
 msgstr "អ្នកផ្តល់សេវា"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "ការស្តារមិនបានបញ្ចប់ទេ។ ឯកសារបម្រុងទុកអាចខូច ឃ្លាសម្ងាត់អាចខុស ឬម៉ាស៊ីនបម្រើបានជួបបញ្ហា។"
 
@@ -1577,7 +1589,7 @@ msgstr "នៅខាងក្នុង"
 msgid "United States"
 msgstr "សហរដ្ឋអាមេរិក"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "កំពុងពន្លា​ទិន្នន័យរបស់អ្នក"
 
@@ -1588,10 +1600,6 @@ msgstr "មិនបានផ្ទៀងផ្ទាត់"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "បង្ហោះឯកសារ .zip ដែលបញ្ចេញពីការបង្ហោះទិន្នន័យ Mochi។"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "បង្ហោះកញ្ចប់ការផ្លាស់ប្តូរ (.zip) ដែលបញ្ចេញពីម៉ាស៊ីនបម្រើ Mochi មួយទៀត។ ម៉ាស៊ីនបម្រើស្តារទិន្នន័យរបស់អ្នកក្នុងស្រុក — មិនត្រូវការម៉ាស៊ីនបម្រើផ្សេងទៀតទេ។"
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "អ្នកប្រើប្រាស់"
 msgid "Username on source server"
 msgstr "ឈ្មោះអ្នកប្រើនៅលើម៉ាស៊ីនមេប្រភព"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "កំពុងផ្ទៀងផ្ទាត់ការបម្រុងទុក"
 
@@ -1643,7 +1651,7 @@ msgstr "ផ្ទៀងផ្ទាត់អាសយដ្ឋានអ៊ីម
 msgid "Verify with passkey"
 msgstr "ផ្ទៀងផ្ទាត់ដោយ passkey"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "កំពុងផ្ទៀងផ្ទាត់ការបម្រុងទុក"
 
@@ -1722,6 +1730,10 @@ msgstr "គណនីរបស់អ្នកត្រូវបានចម្ល
 msgid "Your account requires a passkey to sign in"
 msgstr "គណនីរបស់អ្នកត្រូវការ passkey ដើម្បីចូល"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "គណនីរបស់អ្នកត្រូវបានផ្លាស់ប្តូរមកទីនេះពី {source}។ រហូតដល់អ្នកលុបវានៅទីនោះ សារ និងការជូនដំណឹងអាចទៅដល់ម៉ាស៊ីនមេទាំងពីរ មាតិកាមួយចំនួនរបស់អ្នកនៅតែត្រូវបានបម្រើពីម៉ាស៊ីនមេចាស់ ហើយអ្នកតាមដានអាចចំណាយពេលប៉ុន្មាននាទីដើម្បីរកអ្នកនៅទីនេះ។"
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "កម្មវិធីរបស់អ្នក វេទិការបស់អ្នក បណ្តាញរបស់អ្នក"
@@ -1730,7 +1742,7 @@ msgstr "កម្មវិធីរបស់អ្នក វេទិការ�
 msgid "Your code is: {devCode}"
 msgstr "កូដរបស់អ្នកគឺ៖ {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "ទិន្នន័យរបស់អ្នកកំពុងត្រូវបានស្តារពីការបម្រុងទុក។ កុំបិទបង្អួចនេះ។"
 

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
-import { createFileRoute, redirect } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
 import { requestHelpers } from '@mochi/web'
 import { Loader2 } from 'lucide-react'
 import { AuthLayout } from '@/features/auth/auth-layout'
@@ -23,18 +23,15 @@ type ProgressResponse = {
   detail: string
 }
 
-export const Route = createFileRoute('/restoring')({
-  beforeLoad: async () => {
-    try {
-      const data = await requestHelpers.get<IdentityResponse>('/_/identity')
-      if (data.user?.status !== 'pending-restore') {
-        throw redirect({ to: '/identity' })
-      }
-    } catch (error) {
-      if ((error as { isRedirect?: boolean })?.isRedirect) throw error
-      throw redirect({ to: '/' })
-    }
-  },
+export const Route = createFileRoute('/restore')({
+  // No beforeLoad guard: this is a waiting page reached right after the
+  // restore POST sets a pending-restore session, while the async swap is
+  // still running. A guard that fetched /_/identity here and redirected
+  // on any hiccup would bounce the user to the landing page on a single
+  // transient failure (which is exactly what happened). The component's
+  // poll below is resilient — it retries transient errors, treats 401 as
+  // a failed restore, and navigates to the dashboard once status flips
+  // to active — so it handles every case without losing the user.
   component: RestoringRouteComponent,
 })
 

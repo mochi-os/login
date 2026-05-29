@@ -182,11 +182,11 @@ msgstr "Komawa"
 msgid "Back to home"
 msgstr "Komawa gida"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Koma zuwa rajista"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Fayilin ajiya"
 
@@ -261,7 +261,7 @@ msgstr "Duba imel ɗinka."
 msgid "Checking every few seconds…"
 msgstr "Ana dubawa kowane ‘yan dakiku…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Ana duba…"
 
@@ -447,6 +447,10 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Default AI asusu"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Goge asusu ka akan tsohon uwar garken"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Desc"
@@ -470,6 +474,10 @@ msgstr "Gano daga web browser"
 msgid "Direction"
 msgstr "Hanya"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Kau da shi"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Yana nuna sidebar na wayar hannu."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Rarrabuwa daga zane"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "An gama"
 
@@ -542,7 +550,7 @@ msgstr "Faɗaɗa sidebar"
 msgid "Extra large"
 msgstr "Babba sosai"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Ya kasa"
 
@@ -586,11 +594,15 @@ msgstr "Feeds, forums, projects, CRM, wikis — duk an gina su a ciki. Ko rubuta
 msgid "Files"
 msgstr "Fayiloli"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Kammala ƙaurar asusunka"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Gama saitin account ɗinka"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Ana kammala"
 
@@ -609,14 +621,6 @@ msgstr "Jumma'a"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Daga"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "Daga fayilin ajiya (maido)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "Daga wata sabar da ke aiki (kwafa)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "Hagu zuwa Dama"
 msgid "Light"
 msgstr "Haske"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Ana haɗa sunan ku"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Babu"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Babu — ƙirƙiri sabon asusun"
+msgid "None; create a fresh account"
+msgstr "Babu; ƙirƙiri sabon lissafi"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Ana buƙatar shigar da passkey"
 msgid "Passkey MFA not yet implemented"
 msgstr "Ba a aiwatar da Passkey MFA tukuna ba"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Kalmar sirri"
 
@@ -1143,6 +1147,10 @@ msgstr "Na jama'a"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Buga feeds ɗin social media naka, biyo wasu, ko tara wasu feeds tare da AI tagging da sorting na zaɓi. Biyo abin da ke da muhimmanci, tace surutu."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Sake haɗa asusunka a wannan uwar garken"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Shirye ka gwada Mochi?"
@@ -1201,6 +1209,10 @@ msgstr "A cire damar shiga?"
 msgid "Remove interest"
 msgstr "Cire sha'awa"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Kwafawa daga wani uwar garke"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "An ƙi buƙatar yin kwafi"
@@ -1217,10 +1229,6 @@ msgstr "An aika buƙatar kwafi zuwa uwar garken tushe. Amince da shi a shafin sa
 msgid "Replication signup failed"
 msgstr "Yin rajistan kwafi ya gaza"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Ana buƙata ne kawai idan ajiyarku ta ƙunshi maɓallan sirri."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Saiti"
 msgid "Reset all settings to default values"
 msgstr "Mayar da duk saituna zuwa ƙimar asali"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Maido da fayil ɗin ajiya"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "Maimakon ya kasa"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Ana maido da asusunka"
 
@@ -1476,7 +1488,7 @@ msgstr "Kalmar sirri da kuka shigar ba ta dace da ajiyar ba."
 msgid "the provider"
 msgstr "mai bayarwa"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Maimakon bai kammala ba. Fayilin ajiya na iya lalacewa, kalmar sirri na iya zama ba daidai ba, ko sabar ta samu kuskure."
 
@@ -1577,7 +1589,7 @@ msgstr "A ƙarƙashin hular"
 msgid "United States"
 msgstr "Amurka"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Ana buɗe bayananku"
 
@@ -1588,10 +1600,6 @@ msgstr "Ba a tabbatar ba"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Loda fayil .zip da aka fitar daga fitar bayanai na Mochi."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Loda fakitin ƙaura (.zip) da aka fitar daga wata sabar Mochi. Sabar tana maido da bayananku a gida — ba sai wata sabar ta kasance a layi ba."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Mai amfani"
 msgid "Username on source server"
 msgstr "Sunan mai amfani a sabar tushe"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Ana tabbatar da ajiya"
 
@@ -1643,7 +1651,7 @@ msgstr "Tabbatar da adireshin imel"
 msgid "Verify with passkey"
 msgstr "Tantance da maɓallin shiga"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Ana tabbatarwa ajiya"
 
@@ -1722,6 +1730,10 @@ msgstr "Ana kwafa asusunka kai tsaye daga sabar da kake da damar shiga. Sabar tu
 msgid "Your account requires a passkey to sign in"
 msgstr "Asusunka yana buƙatar maɓallin shiga don shiga"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "An ƙauri asusunka zuwa nan daga {source}. Sai ka goge shi a can, saƙonni da sanarwa na iya kai ga uwar garken biyu, wasu abubuwan ka suna ci gaba da samarwa daga tsohon uwar garken, kuma mabiyanka na iya ɗaukar 'yan mintoci don su same ka nan."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Apps ɗinku, platform ɗinku, network ɗinku"
@@ -1730,7 +1742,7 @@ msgstr "Apps ɗinku, platform ɗinku, network ɗinku"
 msgid "Your code is: {devCode}"
 msgstr "Lambarka ita ce: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Ana maido da bayananku daga ajiyar. Kada ku rufe wannan taga."
 

@@ -97,7 +97,7 @@ export function AccountSourceAdvanced({
               className='accent-primary'
             />
             <span className='text-xs'>
-              <Trans>None — create a fresh account</Trans>
+              <Trans>None; create a fresh account</Trans>
             </span>
           </label>
 
@@ -113,7 +113,7 @@ export function AccountSourceAdvanced({
               className='accent-primary'
             />
             <span className='text-xs'>
-              <Trans>From another running server (replicate)</Trans>
+              <Trans>Replicate from another server</Trans>
             </span>
           </label>
 
@@ -182,18 +182,12 @@ export function AccountSourceAdvanced({
               className='accent-primary'
             />
             <span className='text-xs'>
-              <Trans>From a backup file (restore)</Trans>
+              <Trans>Restore a backup file</Trans>
             </span>
           </label>
 
           {source === 'restore' && (
             <div className='ms-5 space-y-2'>
-              <p className='text-muted-foreground text-xs'>
-                <Trans>
-                  Upload a migration bundle (.zip) exported from another Mochi server.
-                  The server restores your data locally — no other server needs to be online.
-                </Trans>
-              </p>
               <div>
                 <label className='text-muted-foreground mb-1 block text-xs'>
                   <Trans>Backup file</Trans>
@@ -227,9 +221,6 @@ export function AccountSourceAdvanced({
                     onRestorePassphraseChange(e.target.value)
                   }
                 />
-                <p className='text-muted-foreground mt-1 text-xs'>
-                  <Trans>Required only if your backup includes private keys.</Trans>
-                </p>
               </div>
             </div>
           )}

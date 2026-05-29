@@ -182,11 +182,11 @@ msgstr "Atpakaļ"
 msgid "Back to home"
 msgstr "Atpakaļ uz sākumu"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Atpakaļ uz reģistrāciju"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Dublējuma fails"
 
@@ -261,7 +261,7 @@ msgstr "Pārbaudi savu e-pastu."
 msgid "Checking every few seconds…"
 msgstr "Pārbauda ik pēc dažām sekundēm…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Pārbauda…"
 
@@ -447,6 +447,10 @@ msgstr "Noklusētais"
 msgid "Default AI account"
 msgstr "Noklusētais AI konts"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Dzēsiet savu kontu vecajā serverī"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Dilst."
@@ -470,6 +474,10 @@ msgstr "Noteikt no tīmekļa pārlūka"
 msgid "Direction"
 msgstr "Virziens"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Aizvērt"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Parāda mobilo sānu joslu."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Sadalīts pēc dizaina"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "Pabeigts"
 
@@ -542,7 +550,7 @@ msgstr "Izvērst sānjoslu"
 msgid "Extra large"
 msgstr "Ļoti liels"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Neizdevās"
 
@@ -586,11 +594,15 @@ msgstr "Plūsmas, forumi, projekti, CRM, wiki — viss iebūvēts. Vai rakstiet 
 msgid "Files"
 msgstr "Faili"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Pabeidziet konta pārvietošanu"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Pabeidziet konta iestatīšanu"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Pabeigšana"
 
@@ -609,14 +621,6 @@ msgstr "Piektdiena"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "No"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "No dublējuma faila (atjaunot)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "No cita darbojošā servera (replicēt)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "No kreisās uz labo"
 msgid "Light"
 msgstr "Gaišs"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Saista jūsu identitāti"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Nav"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Nav — izveidot jaunu kontu"
+msgid "None; create a fresh account"
+msgstr "Nekas; izveidot jaunu kontu"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Nepieciešama pieteikšanās ar piekļuves atslēgu"
 msgid "Passkey MFA not yet implemented"
 msgstr "Piekļuves atslēgas MFA vēl nav ieviesta"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Ieejas frāze"
 
@@ -1143,6 +1147,10 @@ msgstr "Publisks"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Publicējiet savas sociālo mediju plūsmas, sekojiet citiem vai apkopojiet citas plūsmas ar AI birku un kārtošanu pēc izvēles. Sekojiet tam, kas svarīgi, filtrējot troksni."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Atkārtoti saistiet savus kontus šajā serverī"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Gatavi izmēģināt Mochi?"
@@ -1201,6 +1209,10 @@ msgstr "Noņemt piekļuvi?"
 msgid "Remove interest"
 msgstr "Noņemt interesi"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Replicēt no cita servera"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Replikācijas pieprasījums noraidīts"
@@ -1217,10 +1229,6 @@ msgstr "Replikācijas pieprasījums nosūtīts avota serverim. Apstipriniet to a
 msgid "Replication signup failed"
 msgstr "Reģistrācija ar replikāciju neizdevās"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Nepieciešams tikai tad, ja jūsu dublējums ietver privātās atslēgas."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Atiestatīt"
 msgid "Reset all settings to default values"
 msgstr "Atiestatīt visus iestatījumus uz noklusējuma vērtībām"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Atjaunot dublējumfailu"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "Atjaunošana neizdevās"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Konta atjaunošana"
 
@@ -1476,7 +1488,7 @@ msgstr "Ievadītā ieejas frāze nesakrīt ar dublējumu."
 msgid "the provider"
 msgstr "pakalpojuma sniedzējs"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Atjaunošana netika pabeigta. Dublējuma fails var būt bojāts, ieejas frāze var būt nepareiza vai serveris radās kļūda."
 
@@ -1577,7 +1589,7 @@ msgstr "Zem motora pārsega"
 msgid "United States"
 msgstr "Amerikas Savienotās Valstis"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Datu atvēršana"
 
@@ -1588,10 +1600,6 @@ msgstr "Nav pārbaudīts"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Augšupielādējiet .zip failu, kas eksportēts no Mochi datu eksporta."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Augšupielādējiet migrācijas pakotni (.zip), kas eksportēta no cita Mochi servera. Serveris atjauno jūsu datus lokāli — citam serverim nav jābūt tiešsaistē."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Lietotājs"
 msgid "Username on source server"
 msgstr "Lietotājvārds avota serverī"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Dublējuma validācija"
 
@@ -1643,7 +1651,7 @@ msgstr "Verificēt e-pasta adresi"
 msgid "Verify with passkey"
 msgstr "Verificēt ar piekļuves atslēgu"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Dublējuma pārbaude"
 
@@ -1722,6 +1730,10 @@ msgstr "Jūsu konts tiek tiešraides kopēts no servera, kuram jums jau ir piek�
 msgid "Your account requires a passkey to sign in"
 msgstr "Jūsu kontam ir nepieciešama piekļuves atslēga, lai pierakstītos"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Jūsu konts tika pārvietots šeit no {source}. Kamēr to tur nedzēšat, ziņojumi un paziņojumi var sasniegt abus serverus, daļa jūsu satura joprojām tiek apkalpota no vecā servera un sekotājiem var paiet dažas minūtes, lai atrastu jūs šeit."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Jūsu lietotnes, jūsu platforma, jūsu tīkls"
@@ -1730,7 +1742,7 @@ msgstr "Jūsu lietotnes, jūsu platforma, jūsu tīkls"
 msgid "Your code is: {devCode}"
 msgstr "Jūsu kods ir: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Jūsu dati tiek atjaunoti no dublējuma. Neaizveriet šo logu."
 

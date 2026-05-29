@@ -182,11 +182,11 @@ msgstr "Voltar"
 msgid "Back to home"
 msgstr "Voltar para o início"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Voltar para o cadastro"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Arquivo de backup"
 
@@ -261,7 +261,7 @@ msgstr "Verifique seu e-mail."
 msgid "Checking every few seconds…"
 msgstr "Verificando a cada poucos segundos…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Verificando…"
 
@@ -447,6 +447,10 @@ msgstr "Padrão"
 msgid "Default AI account"
 msgstr "Conta de IA padrão"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Exclua sua conta no servidor antigo"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Decresc"
@@ -470,6 +474,10 @@ msgstr "Detectar do navegador"
 msgid "Direction"
 msgstr "Direção"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Dispensar"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Exibe a barra lateral móvel."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Distribuído por design"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "Pronto"
 
@@ -542,7 +550,7 @@ msgstr "Expandir barra lateral"
 msgid "Extra large"
 msgstr "Extra grande"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Falhou"
 
@@ -586,11 +594,15 @@ msgstr "Feeds, fóruns, projetos, CRM, wikis — tudo embutido. Ou escreva seus 
 msgid "Files"
 msgstr "Arquivos"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Conclua a migração da sua conta"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Conclua a configuração da sua conta"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Finalizando"
 
@@ -609,14 +621,6 @@ msgstr "Sexta-feira"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "De"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "De um arquivo de backup (restaurar)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "De outro servidor em execução (replicar)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "Da esquerda para a direita"
 msgid "Light"
 msgstr "Claro"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Vinculando sua identidade"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Nenhum"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Nenhum — criar uma nova conta"
+msgid "None; create a fresh account"
+msgstr "Nenhuma; criar uma nova conta"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Login com passkey obrigatório"
 msgid "Passkey MFA not yet implemented"
 msgstr "MFA com passkey ainda não implementado"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Frase secreta"
 
@@ -1143,6 +1147,10 @@ msgstr "Público"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Publique seus próprios feeds de redes sociais, siga outros ou agregue outros feeds com marcação e ordenação opcionais por IA. Acompanhe o que importa, filtre o ruído."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Reconecte suas contas neste servidor"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Pronto para experimentar o Mochi?"
@@ -1201,6 +1209,10 @@ msgstr "Remover acesso?"
 msgid "Remove interest"
 msgstr "Remover interesse"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Replicar de outro servidor"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Solicitação de replicação negada"
@@ -1217,10 +1229,6 @@ msgstr "Solicitação de replicação enviada para o servidor de origem. Aprove-
 msgid "Replication signup failed"
 msgstr "Falha no cadastro por replicação"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Necessário apenas se o seu backup incluir chaves privadas."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Redefinir"
 msgid "Reset all settings to default values"
 msgstr "Redefinir todas as configurações para os valores padrão"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Restaurar um arquivo de backup"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "Restauração falhou"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Restaurando sua conta"
 
@@ -1476,7 +1488,7 @@ msgstr "A frase secreta que você digitou não corresponde ao backup."
 msgid "the provider"
 msgstr "o provedor"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "A restauração não foi concluída. O arquivo de backup pode estar danificado, a frase secreta pode estar errada, ou o servidor encontrou um erro."
 
@@ -1577,7 +1589,7 @@ msgstr "Por baixo dos panos"
 msgid "United States"
 msgstr "Estados Unidos"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Descompactando seus dados"
 
@@ -1588,10 +1600,6 @@ msgstr "Não verificado"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Faça upload de um arquivo .zip exportado da exportação de dados do Mochi."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Faça upload de um pacote de migração (.zip) exportado de outro servidor Mochi. O servidor restaura seus dados localmente — nenhum outro servidor precisa estar online."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Usuário"
 msgid "Username on source server"
 msgstr "Nome de usuário no servidor de origem"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Validando backup"
 
@@ -1643,7 +1651,7 @@ msgstr "Verificar endereço de e-mail"
 msgid "Verify with passkey"
 msgstr "Verificar com passkey"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Verificando backup"
 
@@ -1722,6 +1730,10 @@ msgstr "Sua conta é copiada ao vivo de um servidor ao qual você já tem acesso
 msgid "Your account requires a passkey to sign in"
 msgstr "Sua conta requer uma passkey para fazer login"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Sua conta foi movida para cá de {source}. Enquanto não a excluir de lá, mensagens e notificações podem chegar a ambos os servidores, parte do seu conteúdo continua sendo servido pelo servidor antigo e seguidores podem levar alguns minutos para encontrar você aqui."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "Seus apps, sua plataforma, sua rede"
@@ -1730,7 +1742,7 @@ msgstr "Seus apps, sua plataforma, sua rede"
 msgid "Your code is: {devCode}"
 msgstr "Seu código é: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Seus dados estão sendo restaurados do backup. Não feche esta janela."
 

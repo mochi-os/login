@@ -182,11 +182,11 @@ msgstr "Tukang"
 msgid "Back to home"
 msgstr "Balik ka imah"
 
-#: src/routes/restoring.tsx:118
+#: src/routes/restore.tsx:115
 msgid "Back to sign up"
 msgstr "Balik ka daptar"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:199
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:193
 msgid "Backup file"
 msgstr "Berkas cadangan"
 
@@ -261,7 +261,7 @@ msgstr "Pariksa email anjeun."
 msgid "Checking every few seconds…"
 msgstr "Mariksa unggal sababaraha detik…"
 
-#: src/routes/restoring.tsx:163
+#: src/routes/restore.tsx:160
 msgid "Checking…"
 msgstr "Mariksa…"
 
@@ -447,6 +447,10 @@ msgstr "Standar"
 msgid "Default AI account"
 msgstr "Akun AI standar"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:81
+msgid "Delete your account on the old server"
+msgstr "Hapus akun anjeun dina server lami"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
 msgstr "Desc"
@@ -470,6 +474,10 @@ msgstr "Deteksi ti browser web"
 msgid "Direction"
 msgstr "Arah"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:64
+msgid "Dismiss"
+msgstr "Pasini"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Mintonkeun sidebar mobile."
@@ -479,7 +487,7 @@ msgid "Distributed by design"
 msgstr "Disebar dumasar désain"
 
 #: src/routes/replicating.tsx:229
-#: src/routes/restoring.tsx:54
+#: src/routes/restore.tsx:51
 msgid "Done"
 msgstr "Beres"
 
@@ -542,7 +550,7 @@ msgstr "Lugar sidebar"
 msgid "Extra large"
 msgstr "Gedé pisan"
 
-#: src/routes/restoring.tsx:55
+#: src/routes/restore.tsx:52
 msgid "Failed"
 msgstr "Gagal"
 
@@ -586,11 +594,15 @@ msgstr "Feed, forum, proyék, CRM, wiki — kabéh geus diasupkeun. Atawa nulis 
 msgid "Files"
 msgstr "Berkas"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:70
+msgid "Finish moving your account"
+msgstr "Réngsekeun mindahkeun akun"
+
 #: src/routes/identity.tsx:86
 msgid "Finish setting up your account"
 msgstr "Réngsékeun nyetél akun anjeun"
 
-#: src/routes/restoring.tsx:53
+#: src/routes/restore.tsx:50
 msgid "Finishing up"
 msgstr "Ngaréngsékeun"
 
@@ -609,14 +621,6 @@ msgstr "Jumaah"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "Ti"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
-msgid "From a backup file (restore)"
-msgstr "Tina berkas cadangan (mulihkeun)"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
-msgid "From another running server (replicate)"
-msgstr "Tina server séjén nu jalan (réplikasi)"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:91
 #: ../../../lib/web/src/lib/preference-utils.ts:101
@@ -748,7 +752,7 @@ msgstr "Kénca ka Katuhu"
 msgid "Light"
 msgstr "Caang"
 
-#: src/routes/restoring.tsx:52
+#: src/routes/restore.tsx:49
 msgid "Linking your identity"
 msgstr "Ngahubungkeun identitas anjeun"
 
@@ -945,8 +949,8 @@ msgid "None"
 msgstr "Euweuh"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:100
-msgid "None — create a fresh account"
-msgstr "Euweuh — jieun akun anyar"
+msgid "None; create a fresh account"
+msgstr "Teu aya; jieun akun anyar"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:122
 msgid "Normal"
@@ -1031,7 +1035,7 @@ msgstr "Login passkey diperlukeun"
 msgid "Passkey MFA not yet implemented"
 msgstr "Passkey MFA tacan diimplementasi"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:218
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:212
 msgid "Passphrase"
 msgstr "Frasa sandi"
 
@@ -1143,6 +1147,10 @@ msgstr "Publik"
 msgid "Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise."
 msgstr "Pasarkeun feed média sosial sorangan, tuturkeun nu séjén, atawa kumpulkeun feed séjén kalayan AI tagging jeung sorting opsional. Tuturkeun nu penting, saring noise."
 
+#: ../../../lib/web/src/components/restore-banner.tsx:89
+msgid "Re-link your accounts on this server"
+msgstr "Sambungkeun deui akun anjeun dina server ieu"
+
 #: src/features/landing/landing-page.tsx:399
 msgid "Ready to try Mochi?"
 msgstr "Siap nyobaan Mochi?"
@@ -1201,6 +1209,10 @@ msgstr "Cabut aksés?"
 msgid "Remove interest"
 msgstr "Cabut minat"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:116
+msgid "Replicate from another server"
+msgstr "Replikasi ti server séjén"
+
 #: src/features/landing/landing-page.tsx:178
 msgid "Replication request denied"
 msgstr "Panyuhunan replikasi ditolak"
@@ -1217,10 +1229,6 @@ msgstr "Pamundut réplikasi dikirim ka server sumber. Setujuan dina kaca setéla
 msgid "Replication signup failed"
 msgstr "Pendaptaran replika gagal"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:231
-msgid "Required only if your backup includes private keys."
-msgstr "Dibutuhkeun ngan mun cadangan anjeun ngawengku konci pribadi."
-
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -1230,12 +1238,16 @@ msgstr "Reset"
 msgid "Reset all settings to default values"
 msgstr "Setel ulang sakabéh setélan ka nilai baku"
 
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:185
+msgid "Restore a backup file"
+msgstr "Pulihkeun file cadangan"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
-#: src/routes/restoring.tsx:106
+#: src/routes/restore.tsx:103
 msgid "Restore failed"
 msgstr "Mulihkeun gagal"
 
-#: src/routes/restoring.tsx:130
+#: src/routes/restore.tsx:127
 msgid "Restoring your account"
 msgstr "Mulihkeun akun anjeun"
 
@@ -1476,7 +1488,7 @@ msgstr "Frasa sandi nu diasupkeun teu cocog jeung cadangan."
 msgid "the provider"
 msgstr "panyadia"
 
-#: src/routes/restoring.tsx:109
+#: src/routes/restore.tsx:106
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Mulihkeun teu bérés. Berkas cadangan bisa jadi ruksak, frasa sandi bisa jadi salah, atawa server ngalaman kasalahan."
 
@@ -1577,7 +1589,7 @@ msgstr "Di handapeun kap mesin"
 msgid "United States"
 msgstr "Amérika Serikat"
 
-#: src/routes/restoring.tsx:51
+#: src/routes/restore.tsx:48
 msgid "Unpacking your data"
 msgstr "Muka data anjeun"
 
@@ -1588,10 +1600,6 @@ msgstr "Tacan diverifikasi"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:144
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Unggah berkas .zip nu diékspor tina ékspor data Mochi."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:192
-msgid "Upload a migration bundle (.zip) exported from another Mochi server. The server restores your data locally — no other server needs to be online."
-msgstr "Unggah bundel migrasi (.zip) nu diékspor tina server Mochi séjén. Server mulihkeun data anjeun sacara lokal — server séjén teu kudu online."
 
 #: src/features/auth/identity-form.tsx:161
 msgid "Use a different account"
@@ -1613,7 +1621,7 @@ msgstr "Pamaké"
 msgid "Username on source server"
 msgstr "Ngaran pamaké dina server sumber"
 
-#: src/routes/restoring.tsx:49
+#: src/routes/restore.tsx:46
 msgid "Validating backup"
 msgstr "Ngavalidasi cadangan"
 
@@ -1643,7 +1651,7 @@ msgstr "Verifikasi alamat email"
 msgid "Verify with passkey"
 msgstr "Verifikasi ku passkey"
 
-#: src/routes/restoring.tsx:50
+#: src/routes/restore.tsx:47
 msgid "Verifying backup"
 msgstr "Ngaverifikasi cadangan"
 
@@ -1722,6 +1730,10 @@ msgstr "Akun anjeun disalin sacara langsung tina server nu tos bisa diaksés ku 
 msgid "Your account requires a passkey to sign in"
 msgstr "Akun anjeun peryogi passkey pikeun asup"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Akun anjeun dipindahkeun ka dieu ti {source}. Dugi ka anjeun mupus éta di ditu, pesen jeung béwara tiasa dugi ka dua server, sababaraha konten anjeun tetep disajikan ti server lami, sareng pangéntép tiasa butuh sababaraha menit pikeun mendakan anjeun di dieu."
+
 #: src/features/landing/landing-page.tsx:299
 msgid "Your apps, your platform, your network"
 msgstr "App anjeun, platform anjeun, jaringan anjeun"
@@ -1730,7 +1742,7 @@ msgstr "App anjeun, platform anjeun, jaringan anjeun"
 msgid "Your code is: {devCode}"
 msgstr "Kode anjeun nyaéta: {devCode}"
 
-#: src/routes/restoring.tsx:133
+#: src/routes/restore.tsx:130
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Data anjeun keur dipulihkeun tina cadangan. Ulah nutup jandela ieu."
 
