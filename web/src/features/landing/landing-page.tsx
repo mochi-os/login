@@ -473,41 +473,43 @@ export function LandingPage() {
                   </span>
                 </div>
               </div>
-              {passkeyEnabled && (
-                <Button
-                  variant="outline"
-                  className="w-full justify-start"
-                  onClick={handlePasskeyLogin}
-                  disabled={isPasskeyLoading || oauthLoading !== null}
-                >
-                  {isPasskeyLoading ? (
-                    <Loader2 className="me-2 h-5 w-5 animate-spin" />
-                  ) : (
-                    <Key className="me-2 h-5 w-5" />
-                  )}
-                  <Trans>Passkey</Trans>
-                </Button>
-              )}
-              {oauthProviders
-                .filter((p) => enabledOauth.has(p.key))
-                .map(({ key, label, Icon }) => (
+              <div className="space-y-2">
+                {passkeyEnabled && (
                   <Button
-                    key={key}
-                    type="button"
                     variant="outline"
                     className="w-full justify-start"
-                    aria-label={t`Log in with ${label}`}
-                    onClick={() => handleOauthLogin(key)}
-                    disabled={oauthLoading !== null || isPasskeyLoading}
+                    onClick={handlePasskeyLogin}
+                    disabled={isPasskeyLoading || oauthLoading !== null}
                   >
-                    {oauthLoading === key ? (
+                    {isPasskeyLoading ? (
                       <Loader2 className="me-2 h-5 w-5 animate-spin" />
                     ) : (
-                      <Icon className="me-2 h-5 w-5" />
+                      <Key className="me-2 h-5 w-5" />
                     )}
-                    {label}
+                    <Trans>Passkey</Trans>
                   </Button>
-                ))}
+                )}
+                {oauthProviders
+                  .filter((p) => enabledOauth.has(p.key))
+                  .map(({ key, label, Icon }) => (
+                    <Button
+                      key={key}
+                      type="button"
+                      variant="outline"
+                      className="w-full justify-start"
+                      aria-label={t`Log in with ${label}`}
+                      onClick={() => handleOauthLogin(key)}
+                      disabled={oauthLoading !== null || isPasskeyLoading}
+                    >
+                      {oauthLoading === key ? (
+                        <Loader2 className="me-2 h-5 w-5 animate-spin" />
+                      ) : (
+                        <Icon className="me-2 h-5 w-5" />
+                      )}
+                      {label}
+                    </Button>
+                  ))}
+              </div>
             </>
           )}
           {step === 'email' && (
