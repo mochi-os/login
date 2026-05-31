@@ -79,6 +79,18 @@ const getMethods = () =>
 const completeMfa = (payload: MfaRequest) =>
   requestHelpers.post<MfaResponse>(endpoints.auth.methods, payload)
 
+// Pending login partial — lets /codes resume after a full-page navigation or
+// refresh (the client store has no MFA state then). The server reads its
+// login_partial cookie, set by every MFA-continuation flow; partial is "" when
+// none is live.
+interface PartialResponse {
+  partial: string
+  remaining: string[]
+}
+
+const getPartial = () =>
+  requestHelpers.get<PartialResponse>(endpoints.auth.partial)
+
 // Passkey login (unauthenticated)
 const passkeyLoginBegin = () =>
   requestHelpers.post<PasskeyLoginBeginResponse>(
@@ -193,6 +205,7 @@ export const authApi = {
   getMethods,
   // MFA
   completeMfa,
+  getPartial,
   // Passkey
   passkeyLoginBegin,
   passkeyLoginFinish,

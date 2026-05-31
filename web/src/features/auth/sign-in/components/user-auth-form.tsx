@@ -290,11 +290,12 @@ export function UserAuthForm({
         return
       }
 
-      // Auto-send the email code when email is required or is the only way in.
-      // When several factors are offered, wait for the user to choose so we
-      // don't send an unwanted email.
+      // Auto-send the email code only when email is the single way in. When any
+      // other factor is offered (or also required), wait for the user to pick
+      // email ("Email me a code") - otherwise we send a code they may not use,
+      // and if they pick a non-email factor its continuation sends a second one.
       const emailSole = allowed.length === 1 && allowed[0] === 'email'
-      if (allowed.includes('email') && (required.includes('email') || emailSole)) {
+      if (emailSole) {
         await sendCode(data.email)
       }
 
@@ -382,7 +383,7 @@ export function UserAuthForm({
           handleMfaRequired()
           return
         }
-        if (result.login) {
+        if (result.success) {
           await handleLoginSuccess()
         } else {
           toast.error(t`Invalid authenticator code`, {

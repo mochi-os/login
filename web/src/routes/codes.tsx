@@ -3,13 +3,14 @@ import { createFileRoute, redirect } from '@tanstack/react-router'
 import { useAuthStore } from '@/stores/auth-store'
 import { Mfa } from '@/features/auth/mfa'
 import { safeRedirect } from '@/lib/redirect'
+import { authApi } from '@/api/auth'
 
 const searchSchema = z.object({
   redirect: z.string().optional(),
 })
 
 export const Route = createFileRoute('/codes')({
-  beforeLoad: ({ search }) => {
+  beforeLoad: async ({ search }) => {
     const store = useAuthStore.getState()
 
     // Sync from cookies if not initialized
@@ -33,8 +34,20 @@ export const Route = createFileRoute('/codes')({
       return new Promise(() => {})
     }
 
-    // If no MFA in progress, redirect to login
+    // No client MFA state. A full-page navigation, refresh, or OAuth redirect
+    // lands here that way (the store is rebuilt from cookies and never carried
+    // the partial), so recover the pending partial from the server's
+    // login_partial cookie before giving up.
     if (!store.mfa.required) {
+      try {
+        const { partial, remaining } = await authApi.getPartial()
+        if (partial && remaining.length) {
+          store.setMfa(partial, remaining)
+          return
+        }
+      } catch {
+        // No live partial — fall through to the login redirect.
+      }
       throw redirect({
         to: '/',
         search: { redirect: search.redirect },

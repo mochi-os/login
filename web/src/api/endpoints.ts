@@ -5,6 +5,7 @@ const endpoints = {
     verify: '/_/auth/verify',
     totpLogin: '/_/auth/totp',
     methods: '/_/auth/methods',
+    partial: '/_/auth/partial',
     identity: '/_/identity',
     abandon: '/_/abandon',
     replicate: '/_/auth/replicate',
