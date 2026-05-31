@@ -1,7 +1,22 @@
-import { useState, useEffect } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { useSearch } from '@tanstack/react-router'
 import { Trans, useLingui } from '@lingui/react/macro'
-import { AlertCircle, ArrowRight, Github, Key, Loader2 } from 'lucide-react'
+import {
+  AlertCircle,
+  ArrowRight,
+  BookOpen,
+  Contact,
+  Crown,
+  GitBranch,
+  Github,
+  Key,
+  Loader2,
+  MessageSquare,
+  MessagesSquare,
+  Rss,
+  SquareKanban,
+  Store,
+} from 'lucide-react'
 import {
   Button,
   LanguagePicker,
@@ -55,79 +70,8 @@ function MochiLogo({ size = 32 }: { size?: number }) {
   )
 }
 
-function useLandingApps() {
-  const { t } = useLingui()
-  return [
-    {
-      name: t`Feeds`,
-      icon: '\u{1F4E1}',
-      desc: t`Publish your own social media feeds, follow others, or aggregate other feeds with optional AI tagging and sorting. Follow what matters, filter the noise.`,
-    },
-    {
-      name: t`Forums`,
-      icon: '\u{1F4AC}',
-      desc: t`Create your own discussion forums, or join others. Use optional AI tagging and sorting to see what's important to you.`,
-    },
-    {
-      name: t`Projects`,
-      icon: '\u{1F4CB}',
-      desc: t`Manage tickets and tasks in a friendly and highly flexible Kanban-style interface.`,
-    },
-    {
-      name: t`CRM`,
-      icon: '\u{1F91D}',
-      desc: t`Keep track of contacts, relationships, and interactions with a highly adaptable CRM.`,
-    },
-    {
-      name: t`Wikis`,
-      icon: '\u{1F4D6}',
-      desc: t`Build a collaborative, replicated knowledge base for your community. Your data is always yours.`,
-    },
-    {
-      name: t`Chat`,
-      icon: '\u{1F4E8}',
-      desc: t`Message your friends, individually or in groups, peer-to-peer and encrypted.`,
-    },
-  ]
-}
-
-function useLandingSteps() {
-  const { t } = useLingui()
-  return [
-    {
-      title: t`Create your node`,
-      desc: t`Sign up and your own Mochi node is created. Your data lives there \u2014 not on someone else's server.`,
-    },
-    {
-      title: t`Use the apps`,
-      desc: t`Feeds, forums, projects, CRM, wikis \u2014 all built in. Or write your own apps in Starlark.`,
-    },
-    {
-      title: t`Connect with others`,
-      desc: t`Add friends, join communities. Data syncs directly between nodes \u2014 peer-to-peer, end-to-end.`,
-    },
-  ]
-}
-
-function useLandingTech() {
-  const { t } = useLingui()
-  // Tech stack names — never translated.
-  /* eslint-disable lingui/no-unlocalized-strings */
-  return [
-    { name: 'Go', role: t`Server` },
-    { name: 'libp2p', role: t`Networking` },
-    { name: 'SQLite', role: t`Storage` },
-    { name: 'Starlark', role: t`App business logic` },
-    { name: 'React', role: t`App user interfaces` },
-  ]
-  /* eslint-enable lingui/no-unlocalized-strings */
-}
-
 export function LandingPage() {
   const { t } = useLingui()
-  const apps = useLandingApps()
-  const steps = useLandingSteps()
-  const tech = useLandingTech()
   const search = useSearch({ from: '/' }) as Record<string, string | undefined>
   const { redirect, reauth } = search
   const [dialogOpen, setDialogOpen] = useState(false)
@@ -263,8 +207,20 @@ export function LandingPage() {
 
   const openDialog = () => setDialogOpen(true)
 
+  const apps = [
+    { label: t`Chat`, Icon: MessageSquare },
+    { label: t`CRM`, Icon: Contact },
+    { label: t`Feeds`, Icon: Rss },
+    { label: t`Forums`, Icon: MessagesSquare },
+    { label: t`Games`, Icon: Crown },
+    { label: t`Git repositories`, Icon: GitBranch },
+    { label: t`Market`, Icon: Store },
+    { label: t`Projects`, Icon: SquareKanban },
+    { label: t`Wikis`, Icon: BookOpen },
+  ]
+
   return (
-    <div className="min-h-svh bg-[#FAF9F6] dark:bg-background text-[#2D2D3A] dark:text-foreground">
+    <div className="min-h-svh text-[#2D2D3A] dark:text-foreground">
       {/* eslint-disable-next-line lingui/no-unlocalized-strings */}
       <style>{`
         @keyframes landing-float {
@@ -274,7 +230,7 @@ export function LandingPage() {
       `}</style>
 
       {/* Top actions — scroll with page */}
-      <div className="max-w-[1100px] mx-auto px-8 pt-4 flex items-center justify-end gap-2">
+      <div className="px-8 pt-4 flex items-center justify-end gap-2">
         <LanguagePicker />
         <button
           onClick={openDialog}
@@ -288,159 +244,39 @@ export function LandingPage() {
       {/* Hero */}
       <section className="pt-8 pb-12 px-8 text-center relative overflow-hidden">
         <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(ellipse,rgba(108,92,231,0.06)_0%,transparent_70%)] pointer-events-none" />
-        <div className="max-w-[1100px] mx-auto relative">
+        <div className="relative">
           <div
             className="inline-block mb-8"
             style={{ animation: 'landing-float 4s ease-in-out infinite' }}
           >
             <MochiLogo size={120} />
           </div>
-          <h1 className="text-[clamp(2.2rem,5vw,3.5rem)] font-bold leading-[1.15] tracking-tight max-w-[700px] mx-auto mb-5">
+          <h1 className="text-[clamp(2.2rem,5vw,3.5rem)] font-bold leading-[1.15] tracking-tight max-w-[820px] mx-auto mb-5">
             <Trans>Your apps, your platform, your network</Trans>
           </h1>
-          <p className="text-lg text-[#6B6B80] dark:text-muted-foreground max-w-[560px] mx-auto mb-4 leading-relaxed">
-            <Trans>Mochi is a federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps.</Trans>
+          <p className="text-lg text-[#6B6B80] dark:text-muted-foreground max-w-[820px] mx-auto mb-4 leading-relaxed">
+            <Trans>Mochi is an <a href="https://git.mochi-os.org/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#6C5CE7] transition-colors">open source</a>, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:</Trans>
           </p>
-        </div>
-      </section>
-
-      {/* Apps */}
-      <section id="apps" className="py-12 px-8">
-        <div className="max-w-[1100px] mx-auto">
-          <p className="font-bold text-xs uppercase tracking-widest text-[#6C5CE7] mb-3">
-            <Trans>Built-in apps</Trans>
-          </p>
-          <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold leading-tight tracking-tight mb-4">
-            <Trans>Everything you need, nothing you don't control</Trans>
-          </h2>
-          <p className="text-[#6B6B80] dark:text-muted-foreground text-[1.05rem] max-w-[540px] leading-relaxed mb-8">
-            <Trans>Mochi already ships with over 20 apps, with more being added frequently. Major apps include:</Trans>
-          </p>
-          <ul className="space-y-4 max-w-[600px]">
-            {apps.map((app) => (
-              <li key={app.name} className="flex items-start gap-3">
-                <span className="text-xl mt-0.5">{app.icon}</span>
-                <div>
-                  <span className="font-bold">{app.name}</span>
-                  <span className="text-[#6B6B80] dark:text-muted-foreground"> &mdash; {app.desc}</span>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* How it works */}
-      <section
-        id="how"
-        className="py-12 px-8 bg-white dark:bg-card border-t border-b border-[#E8E6F0] dark:border-border"
-      >
-        <div className="max-w-[1100px] mx-auto">
-          <p className="font-bold text-xs uppercase tracking-widest text-[#6C5CE7] mb-3">
-            <Trans>How it works</Trans>
-          </p>
-          <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold leading-tight tracking-tight mb-4">
-            <Trans>Distributed by design</Trans>
-          </h2>
-          <p className="text-[#6B6B80] dark:text-muted-foreground text-[1.05rem] max-w-[540px] leading-relaxed mb-8">
-            <Trans>No central server holds your data. Each Mochi node is a full peer in the network, communicating directly with others via libp2p.</Trans>
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
-            {steps.map((s, i) => (
-              <div key={i} className="text-center">
-                <div className="w-12 h-12 rounded-full bg-[#F4F2FF] dark:bg-primary/10 text-[#6C5CE7] font-bold text-lg flex items-center justify-center mx-auto mb-4">
-                  {i + 1}
-                </div>
-                <h3 className="text-base font-bold mb-2">{s.title}</h3>
-                <p className="text-sm text-[#6B6B80] dark:text-muted-foreground leading-relaxed">
-                  {s.desc}
-                </p>
-              </div>
+          <div className="flex flex-wrap justify-center items-center gap-x-2 gap-y-2 max-w-[960px] mx-auto text-lg text-[#6B6B80] dark:text-muted-foreground leading-relaxed">
+            {apps.map(({ label, Icon }, i) => (
+              <Fragment key={label}>
+                {i > 0 && <span aria-hidden="true">·</span>}
+                <span className="inline-flex items-center gap-1.5">
+                  <Icon className="size-5" />
+                  {label}
+                </span>
+              </Fragment>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Tech */}
-      <section id="tech" className="py-12 px-8">
-        <div className="max-w-[1100px] mx-auto">
-          <p className="font-bold text-xs uppercase tracking-widest text-[#6C5CE7] mb-3">
-            <Trans>Under the hood</Trans>
-          </p>
-          <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold leading-tight tracking-tight mb-4">
-            <Trans>Built on solid foundations</Trans>
-          </h2>
-          <p className="text-[#6B6B80] dark:text-muted-foreground text-[1.05rem] max-w-[540px] leading-relaxed mb-8">
-            <Trans>Mochi is built using the following technologies:</Trans>
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            {tech.map((item) => (
-              <div
-                key={item.name}
-                className="bg-white dark:bg-card border border-[#E8E6F0] dark:border-border rounded-xl p-5 text-center hover:border-[#A29BFE] transition-colors"
-              >
-                <div className="font-bold text-[0.95rem] mb-1">{item.name}</div>
-                <div className="text-xs text-[#6B6B80] dark:text-muted-foreground">
-                  {item.role}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Early access */}
-      <section className="py-12 px-8">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="bg-gradient-to-br from-[#6C5CE7] to-[#7C6CF0] text-white rounded-[20px] p-14 max-sm:p-10 text-center relative overflow-hidden">
-            <div className="absolute -top-20 -right-20 w-[250px] h-[250px] bg-white/[0.06] rounded-full" />
-            <div className="absolute -bottom-[60px] -left-[60px] w-[180px] h-[180px] bg-white/[0.04] rounded-full" />
-            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold mb-3 relative">
-              <Trans>Ready to try Mochi?</Trans>
-            </h2>
-            <div className="flex gap-4 justify-center flex-wrap relative mt-8">
-              <button
-                onClick={openDialog}
-                className="inline-flex items-center px-6 py-2.5 rounded-[20px] bg-white text-[#6C5CE7] font-bold text-[0.95rem] hover:bg-white/90 transition-all cursor-pointer border-none"
-              >
-                <Trans>Create an account</Trans>
-              </button>
-              <a
-                href="https://git.mochi-os.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-2.5 rounded-[20px] bg-white/15 text-white font-semibold text-[0.95rem] border-[1.5px] border-white/30 hover:bg-white/25 transition-all no-underline"
-              >
-                <Trans>View source code</Trans>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-6 px-8 text-center text-[#6B6B80] dark:text-muted-foreground text-sm space-y-2">
-        <p className="space-x-2">
-          <a href="/login/rules" className="hover:text-[#6C5CE7] transition-colors">
-            <Trans>Server rules</Trans>
-          </a>
-          <span aria-hidden="true">·</span>
-          <a href="/login/terms" className="hover:text-[#6C5CE7] transition-colors">
-            <Trans>Terms and conditions</Trans>
-          </a>
-          <span aria-hidden="true">·</span>
-          <a href="/login/privacy" className="hover:text-[#6C5CE7] transition-colors">
-            <Trans>Privacy</Trans>
-          </a>
-        </p>
-        {/* Copyright line — Mochi is a brand name, year is numeric. */}
-        {/* eslint-disable-next-line lingui/no-unlocalized-strings */}
-        <p>&copy; 2026 Mochi.</p>
-      </footer>
 
       {/* Login dialog */}
       <ResponsiveDialog open={dialogOpen} onOpenChange={handleOpenChange}>
-        <ResponsiveDialogContent className="sm:max-w-[420px]">
+        <ResponsiveDialogContent
+          className="sm:max-w-[420px]"
+          onOpenAutoFocus={(e) => e.preventDefault()}
+        >
           <ResponsiveDialogHeader>
             <ResponsiveDialogTitle><Trans>Log in to Mochi</Trans></ResponsiveDialogTitle>
           </ResponsiveDialogHeader>

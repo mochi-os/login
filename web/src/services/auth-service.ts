@@ -27,8 +27,12 @@ const completeAuth = (response: {
 }
 
 interface BeginLoginResponse {
+  // The factors AND-ed at login (empty = any one allowed factor suffices).
   methods: string[]
-  hasPasskey?: boolean
+  // The factors the user may use as a sign-in proof after entering their
+  // email — email code, passkey, authenticator — with disabled ones removed.
+  allowed?: string[]
+  has_passkey?: boolean
   new?: boolean
 }
 

@@ -5,11 +5,10 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Link } from '@tanstack/react-router'
 import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa, signupReplicate, signupRestore } from '@/services/auth-service'
-import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Smartphone } from 'lucide-react'
+import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Smartphone, Key } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
 import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot, shellClipboardWrite } from '@mochi/web'
 import { safeRedirect } from '@/lib/redirect'
-const devConsole = globalThis.console
 
 type EmailFormValues = { email: string }
 type VerificationFormValues = { emailCode?: string; totpCode?: string }
@@ -60,7 +59,8 @@ export function UserAuthForm({
   const [internalStep, setInternalStep] = useState<'email' | 'verification'>('email')
   const [userEmail, setUserEmail] = useState('')
   const [requiredMethods, setRequiredMethods] = useState<string[]>([])
-  const [emailVerified, setEmailVerified] = useState(false)
+  const [allowedMethods, setAllowedMethods] = useState<string[]>([])
+  const [codeSent, setCodeSent] = useState(false)
 
   // Use external step/setStep if provided, otherwise use internal state
   const step = externalStep ?? internalStep
@@ -95,6 +95,14 @@ export function UserAuthForm({
 
   const needsEmail = requiredMethods.includes('email')
   const needsTotp = requiredMethods.includes('totp')
+  // When nothing is required, any one allowed factor signs the user in, so we
+  // offer each as a choice. Required factors are always a subset of allowed.
+  const offerEmail = allowedMethods.includes('email')
+  const offerTotp = allowedMethods.includes('totp')
+  const offerPasskey = allowedMethods.includes('passkey')
+  const optional = requiredMethods.length === 0
+  const offerCount =
+    (offerEmail ? 1 : 0) + (offerTotp ? 1 : 0) + (offerPasskey ? 1 : 0)
 
   // Handle successful login completion
   async function handleLoginSuccess() {
@@ -116,6 +124,47 @@ export function UserAuthForm({
   function handleMfaRequired() {
     const codesParams = redirectTo && redirectTo !== '/' ? `?redirect=${encodeURIComponent(redirectTo)}` : ''
     window.location.replace(`/login/codes${codesParams}`)
+  }
+
+  // Send (or resend) the emailed login code, surfacing the dev-mode code when
+  // the server returns one. Marks codeSent so the verification step shows the
+  // code input rather than the "Email me a code" button.
+  async function sendCode(email: string) {
+    const codeResult = await requestCode(email)
+    const devCode = codeResult.data?.code
+    const requestSucceeded =
+      codeResult?.status?.toLowerCase() === 'ok' || Boolean(devCode)
+    if (!requestSucceeded) return
+    setCodeSent(true)
+    toast.success(t`Code sent.`, {
+      description: devCode ? (
+        <div className='flex items-center gap-2'>
+          <span><Trans>Your code is: {devCode}</Trans></span>
+          <Button
+            variant='ghost'
+            size='sm'
+            className='h-6 w-6 p-0'
+            onClick={async (e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              const ok = await shellClipboardWrite(devCode!)
+              if (ok) {
+                toast.success(t`Code copied`)
+              } else {
+                toast.error(t`Failed to copy code`, {
+                  description: t`Please copy manually: ${devCode}`,
+                })
+              }
+            }}
+            aria-label={t`Copy code`}
+          >
+            <Copy className='h-3 w-3' />
+          </Button>
+        </div>
+      ) : (
+        t`Check your email.`
+      ),
+    })
   }
 
   // Step 1: Submit email to get required methods. If the Advanced
@@ -222,10 +271,14 @@ export function UserAuthForm({
 
     try {
       const result = await beginLogin(data.email)
-      setRequiredMethods(result.methods)
+      const required = result.methods
+      const allowed = result.allowed ?? result.methods
+      setRequiredMethods(required)
+      setAllowedMethods(allowed)
+      setCodeSent(false)
 
-      // If passkey is required (alone or with other methods), trigger passkey login first
-      if (result.methods.includes('passkey')) {
+      // If passkey is required, the only way forward is the passkey ceremony.
+      if (required.includes('passkey')) {
         setIsLoading(false)
         if (onPasskeyLogin) {
           onPasskeyLogin()
@@ -237,44 +290,12 @@ export function UserAuthForm({
         return
       }
 
-      // If email is required, send the code now
-      if (result.methods.includes('email')) {
-        const codeResult = await requestCode(data.email)
-        const devCode = codeResult.data?.code
-        const requestSucceeded =
-          codeResult?.status?.toLowerCase() === 'ok' || Boolean(devCode)
-
-        if (requestSucceeded) {
-          toast.success(t`Code sent.`, {
-            description: devCode ? (
-              <div className='flex items-center gap-2'>
-                <span><Trans>Your code is: {devCode}</Trans></span>
-                <Button
-                  variant='ghost'
-                  size='sm'
-                  className='h-6 w-6 p-0'
-                  onClick={async (e) => {
-                    e.preventDefault()
-                    e.stopPropagation()
-                    const ok = await shellClipboardWrite(devCode!)
-                    if (ok) {
-                      toast.success(t`Code copied`)
-                    } else {
-                      toast.error(t`Failed to copy code`, {
-                        description: t`Please copy manually: ${devCode}`,
-                      })
-                    }
-                  }}
-                  aria-label={t`Copy code`}
-                >
-                  <Copy className='h-3 w-3' />
-                </Button>
-              </div>
-            ) : (
-              t`Check your email.`
-            ),
-          })
-        }
+      // Auto-send the email code when email is required or is the only way in.
+      // When several factors are offered, wait for the user to choose so we
+      // don't send an unwanted email.
+      const emailSole = allowed.length === 1 && allowed[0] === 'email'
+      if (allowed.includes('email') && (required.includes('email') || emailSole)) {
+        await sendCode(data.email)
       }
 
       setStep('verification')
@@ -294,26 +315,73 @@ export function UserAuthForm({
     }
   }
 
-  // Step 2: Submit verification (email code and/or TOTP)
+  // Step 2: Submit whichever factor(s) the user provided. With nothing
+  // strictly required, any one entered code completes the login; with both
+  // email and authenticator required, entering both finishes 2FA in one go.
   async function onSubmitVerification(data: VerificationFormValues) {
+    const emailCode = data.emailCode?.trim()
+    const totpCode = data.totpCode?.trim()
     setIsLoading(true)
 
     try {
-      // If only TOTP is required (no email), use the TOTP login endpoint
-      if (needsTotp && !needsEmail) {
-        if (!data.totpCode || data.totpCode.length !== 6) {
-          toast.error(t`Please enter your authenticator code`)
-          setIsLoading(false)
+      // Email + authenticator both required and both entered: validate them
+      // together so a single submit completes 2FA without the codes page.
+      if (needsEmail && needsTotp && emailCode && totpCode) {
+        const result = await verifyCode(emailCode)
+        if (result.mfa && result.partial && result.remaining) {
+          useAuthStore.getState().setMfa(result.partial, result.remaining)
+          if (result.remaining.includes('totp')) {
+            const totpResult = await completeMfa('totp', totpCode)
+            if (totpResult.mfa && totpResult.remaining) {
+              handleMfaRequired()
+            } else if (totpResult.success) {
+              await handleLoginSuccess()
+            } else {
+              toast.error(t`Invalid code`, {
+                description: t`Please check your codes and try again.`,
+              })
+            }
+            return
+          }
+          handleMfaRequired()
           return
         }
+        if (result.success) {
+          await handleLoginSuccess()
+        } else {
+          toast.error(t`Invalid verification code`, {
+            description: result.message || t`Please check your email and try again.`,
+          })
+        }
+        return
+      }
 
-        const result = await totpLogin(userEmail, data.totpCode)
+      // An email code was entered: verify it. If another factor is still
+      // required the server returns mfa and we continue on the codes page.
+      if (emailCode) {
+        const result = await verifyCode(emailCode)
+        if (result.mfa && result.partial && result.remaining) {
+          useAuthStore.getState().setMfa(result.partial, result.remaining)
+          handleMfaRequired()
+          return
+        }
+        if (result.success) {
+          await handleLoginSuccess()
+        } else {
+          toast.error(t`Invalid verification code`, {
+            description: result.message || t`Please check your email and try again.`,
+          })
+        }
+        return
+      }
 
+      // An authenticator code was entered as a sole or first factor.
+      if (totpCode) {
+        const result = await totpLogin(userEmail, totpCode)
         if (result.mfa && result.partial && result.remaining) {
           handleMfaRequired()
           return
         }
-
         if (result.login) {
           await handleLoginSuccess()
         } else {
@@ -324,82 +392,7 @@ export function UserAuthForm({
         return
       }
 
-      // If email was already verified (retry after TOTP failure), just verify TOTP
-      if (emailVerified && needsTotp && data.totpCode) {
-        try {
-          const totpResult = await completeMfa('totp', data.totpCode)
-          if (totpResult.mfa && totpResult.remaining) {
-            handleMfaRequired()
-            return
-          } else if (totpResult.success) {
-            await handleLoginSuccess()
-            return
-          } else {
-            toast.error(t`Invalid code`, {
-              description: t`Please check your authenticator code and try again.`,
-            })
-            return
-          }
-        } catch (err) {
-          // eslint-disable-next-line lingui/no-unlocalized-strings
-          devConsole.error('TOTP retry error:', err)
-          toast.error(t`Invalid code`, {
-            description: t`Please check your authenticator code and try again.`,
-          })
-          return
-        }
-      }
-
-      // If email code is required, verify it first
-      if (needsEmail && data.emailCode) {
-        const result = await verifyCode(data.emailCode)
-
-        // Check for MFA requirement (which would include TOTP if both are required)
-        if (result.mfa && result.partial && result.remaining) {
-          // Email verified successfully - mark it so retries skip email verification
-          setEmailVerified(true)
-          useAuthStore.getState().setMfa(result.partial, result.remaining)
-
-          // If TOTP was also entered and is in remaining, complete it immediately
-          if (data.totpCode && result.remaining.includes('totp')) {
-            try {
-              const totpResult = await completeMfa('totp', data.totpCode)
-              if (totpResult.mfa && totpResult.remaining) {
-                // Still more methods required
-                handleMfaRequired()
-                return
-              } else if (totpResult.success) {
-                await handleLoginSuccess()
-                return
-              } else {
-                toast.error(t`Invalid code`, {
-                  description: t`Please check your codes and try again.`,
-                })
-                return
-              }
-            } catch (err) {
-              // eslint-disable-next-line lingui/no-unlocalized-strings
-              devConsole.error('TOTP error:', err)
-              toast.error(t`Invalid code`, {
-                description: t`Please check your codes and try again.`,
-              })
-              return
-            }
-          }
-
-          // TOTP not entered or not required, redirect to MFA page
-          handleMfaRequired()
-          return
-        }
-
-        if (result.success) {
-          await handleLoginSuccess()
-        } else {
-          toast.error(t`Invalid verification code`, {
-            description: result.message || t`Please check your email and try again.`,
-          })
-        }
-      }
+      toast.error(t`Enter a code to continue`)
     } catch (error) {
       const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
       const errorCode = responseData?.error
@@ -428,7 +421,8 @@ export function UserAuthForm({
   function goBackToEmail() {
     setStep('email')
     setRequiredMethods([])
-    setEmailVerified(false)
+    setAllowedMethods([])
+    setCodeSent(false)
     verificationForm.reset()
   }
 
@@ -438,21 +432,23 @@ export function UserAuthForm({
       <div className={cn('grid gap-4', className)}>
         <div className='space-y-2 text-center'>
           <p className='text-sm font-medium'>{userEmail}</p>
-          {needsEmail && needsTotp && (
+          {needsEmail && needsTotp ? (
             <p className='text-muted-foreground text-sm'>
               <Trans>Enter your email code and authenticator code</Trans>
             </p>
-          )}
-          {needsEmail && !needsTotp && (
+          ) : optional && offerCount > 1 ? (
+            <p className='text-muted-foreground text-sm'>
+              <Trans>Choose how to finish signing in</Trans>
+            </p>
+          ) : offerEmail && offerCount === 1 ? (
             <p className='text-muted-foreground text-sm'>
               <Trans>Paste the login code you received by email</Trans>
             </p>
-          )}
-          {needsTotp && !needsEmail && (
+          ) : offerTotp && offerCount === 1 ? (
             <p className='text-muted-foreground text-sm'>
               <Trans>Enter the code from your authenticator app</Trans>
             </p>
-          )}
+          ) : null}
         </div>
 
         <Form {...verificationForm}>
@@ -460,40 +456,52 @@ export function UserAuthForm({
             onSubmit={verificationForm.handleSubmit(onSubmitVerification)}
             className='grid gap-4'
           >
-            {needsEmail && (
-              <FormField
-                control={verificationForm.control}
-                name='emailCode'
-                render={({ field }) => (
-                  <FormItem>
-                    {needsTotp && (
-                      <div className='flex items-center gap-2 text-sm font-medium mb-2'>
-                        <Mail className='h-4 w-4' />
-                        <span><Trans>Email code</Trans></span>
-                      </div>
-                    )}
-                    <FormControl>
-                      <Input
-                        className='text-center font-mono tracking-wider'
-                        autoComplete='one-time-code'
-                        autoCorrect='off'
-                        spellCheck={false}
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            )}
+            {offerEmail &&
+              (codeSent ? (
+                <FormField
+                  control={verificationForm.control}
+                  name='emailCode'
+                  render={({ field }) => (
+                    <FormItem>
+                      {offerCount > 1 && (
+                        <div className='flex items-center gap-2 text-sm font-medium mb-2'>
+                          <Mail className='h-4 w-4' />
+                          <span><Trans>Email code</Trans></span>
+                        </div>
+                      )}
+                      <FormControl>
+                        <Input
+                          className='text-center font-mono tracking-wider'
+                          autoComplete='one-time-code'
+                          autoCorrect='off'
+                          spellCheck={false}
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              ) : (
+                <Button
+                  type='button'
+                  variant='outline'
+                  className='w-full'
+                  onClick={() => sendCode(userEmail)}
+                  disabled={isLoading}
+                >
+                  <Mail className='h-4 w-4' />
+                  <Trans>Email me a code</Trans>
+                </Button>
+              ))}
 
-            {needsTotp && (
+            {offerTotp && (
               <FormField
                 control={verificationForm.control}
                 name='totpCode'
                 render={({ field }) => (
                   <FormItem className='flex flex-col items-center'>
-                    {needsEmail && (
+                    {offerCount > 1 && (
                       <div className='flex items-center gap-2 text-sm font-medium mb-2 self-start'>
                         <Smartphone className='h-4 w-4' />
                         <span><Trans>Authenticator code</Trans></span>
@@ -522,11 +530,26 @@ export function UserAuthForm({
               />
             )}
 
-            <div className='space-y-2'>
-              <Button type='submit' className='w-full' disabled={isLoading}>
-                <Trans>Log in</Trans>
-                {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight className="rtl:rotate-180" />}
+            {offerPasskey && (
+              <Button
+                type='button'
+                variant='outline'
+                className='w-full'
+                onClick={() => onPasskeyLogin?.()}
+                disabled={isLoading}
+              >
+                <Key className='h-4 w-4' />
+                <Trans>Use a passkey</Trans>
               </Button>
+            )}
+
+            <div className='space-y-2'>
+              {(offerEmail || offerTotp) && (
+                <Button type='submit' className='w-full' disabled={isLoading}>
+                  <Trans>Log in</Trans>
+                  {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight className="rtl:rotate-180" />}
+                </Button>
+              )}
 
               <Button
                 type='button'
