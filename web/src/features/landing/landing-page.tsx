@@ -222,14 +222,6 @@ export function LandingPage() {
 
   return (
     <div className="min-h-svh text-[#2D2D3A] dark:text-foreground">
-      {/* eslint-disable-next-line lingui/no-unlocalized-strings */}
-      <style>{`
-        @keyframes landing-float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
-        }
-      `}</style>
-
       {/* Top actions — scroll with page */}
       <div className="px-8 pt-4 flex items-center justify-end gap-2">
         <LanguagePicker />
@@ -246,10 +238,7 @@ export function LandingPage() {
       <section className="pt-8 pb-12 px-8 text-center relative overflow-hidden">
         <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(ellipse,rgba(108,92,231,0.06)_0%,transparent_70%)] pointer-events-none" />
         <div className="relative">
-          <div
-            className="inline-block mb-8"
-            style={{ animation: 'landing-float 4s ease-in-out infinite' }}
-          >
+          <div className="inline-block mb-8">
             <MochiLogo size={120} />
           </div>
           <h1 className="text-[clamp(2.2rem,5vw,3.5rem)] font-bold leading-[1.15] tracking-tight max-w-[820px] mx-auto mb-5">
