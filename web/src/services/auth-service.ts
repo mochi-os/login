@@ -33,6 +33,9 @@ interface BeginLoginResponse {
   // email — email code, passkey, authenticator — with disabled ones removed.
   allowed?: string[]
   has_passkey?: boolean
+  // Offer "Continue with <provider>" in the verification step: OAuth can verify
+  // this identified account (usable, and required or nothing-else-required).
+  oauth?: boolean
   new?: boolean
 }
 

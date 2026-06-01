@@ -88,6 +88,7 @@ export function LandingPage() {
   const [replicateSourcePeer, setReplicateSourcePeer] = useState('')
   const [restoreBundle, setRestoreBundle] = useState<File | null>(null)
   const [restorePassphrase, setRestorePassphrase] = useState('')
+  const userEmail = useAuthStore((s) => s.user?.email)
 
   useEffect(() => {
     if (redirect || reauth) setDialogOpen(true)
@@ -278,7 +279,13 @@ export function LandingPage() {
           onOpenAutoFocus={(e) => e.preventDefault()}
         >
           <ResponsiveDialogHeader>
-            <ResponsiveDialogTitle><Trans>Log in to Mochi</Trans></ResponsiveDialogTitle>
+            <ResponsiveDialogTitle>
+              {step === 'verification' && userEmail ? (
+                userEmail
+              ) : (
+                <Trans>Log in to Mochi</Trans>
+              )}
+            </ResponsiveDialogTitle>
           </ResponsiveDialogHeader>
           {oauthError && (
             <div className="flex items-start gap-2 rounded-md border border-destructive/50 bg-destructive/10 p-3 text-sm text-destructive">
@@ -363,19 +370,21 @@ export function LandingPage() {
               disabled={oauthLoading !== null || isPasskeyLoading}
             />
           )}
-          <p className="text-center text-xs text-muted-foreground space-x-2 pt-2">
-            <a href="/login/rules" className="hover:text-foreground transition-colors">
-              <Trans>Server rules</Trans>
-            </a>
-            <span aria-hidden="true">·</span>
-            <a href="/login/terms" className="hover:text-foreground transition-colors">
-              <Trans>Terms and conditions</Trans>
-            </a>
-            <span aria-hidden="true">·</span>
-            <a href="/login/privacy" className="hover:text-foreground transition-colors">
-              <Trans>Privacy</Trans>
-            </a>
-          </p>
+          {step === 'email' && (
+            <p className="text-center text-xs text-muted-foreground space-x-2 pt-2">
+              <a href="/login/rules" className="hover:text-foreground transition-colors">
+                <Trans>Server rules</Trans>
+              </a>
+              <span aria-hidden="true">·</span>
+              <a href="/login/terms" className="hover:text-foreground transition-colors">
+                <Trans>Terms and conditions</Trans>
+              </a>
+              <span aria-hidden="true">·</span>
+              <a href="/login/privacy" className="hover:text-foreground transition-colors">
+                <Trans>Privacy</Trans>
+              </a>
+            </p>
+          )}
         </ResponsiveDialogContent>
       </ResponsiveDialog>
     </div>

@@ -5,7 +5,8 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Link } from '@tanstack/react-router'
 import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa, signupReplicate, signupRestore } from '@/services/auth-service'
-import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Smartphone, Key } from 'lucide-react'
+import { OauthButtons } from '@/features/auth/components/oauth-buttons'
+import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Key } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
 import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot, shellClipboardWrite } from '@mochi/web'
 import { safeRedirect } from '@/lib/redirect'
@@ -60,6 +61,7 @@ export function UserAuthForm({
   const [userEmail, setUserEmail] = useState('')
   const [requiredMethods, setRequiredMethods] = useState<string[]>([])
   const [allowedMethods, setAllowedMethods] = useState<string[]>([])
+  const [offerOauth, setOfferOauth] = useState(false)
   const [codeSent, setCodeSent] = useState(false)
 
   // Use external step/setStep if provided, otherwise use internal state
@@ -100,7 +102,6 @@ export function UserAuthForm({
   const offerEmail = allowedMethods.includes('email')
   const offerTotp = allowedMethods.includes('totp')
   const offerPasskey = allowedMethods.includes('passkey')
-  const optional = requiredMethods.length === 0
   const offerCount =
     (offerEmail ? 1 : 0) + (offerTotp ? 1 : 0) + (offerPasskey ? 1 : 0)
 
@@ -275,6 +276,7 @@ export function UserAuthForm({
       const allowed = result.allowed ?? result.methods
       setRequiredMethods(required)
       setAllowedMethods(allowed)
+      setOfferOauth(result.oauth === true)
       setCodeSent(false)
 
       // If passkey is required, the only way forward is the passkey ceremony.
@@ -423,6 +425,7 @@ export function UserAuthForm({
     setStep('email')
     setRequiredMethods([])
     setAllowedMethods([])
+    setOfferOauth(false)
     setCodeSent(false)
     verificationForm.reset()
   }
@@ -431,26 +434,19 @@ export function UserAuthForm({
   if (step === 'verification') {
     return (
       <div className={cn('grid gap-4', className)}>
-        <div className='space-y-2 text-center'>
-          <p className='text-sm font-medium'>{userEmail}</p>
-          {needsEmail && needsTotp ? (
-            <p className='text-muted-foreground text-sm'>
-              <Trans>Enter your email code and authenticator code</Trans>
-            </p>
-          ) : optional && offerCount > 1 ? (
-            <p className='text-muted-foreground text-sm'>
-              <Trans>Choose how to finish signing in</Trans>
-            </p>
-          ) : offerEmail && offerCount === 1 ? (
-            <p className='text-muted-foreground text-sm'>
-              <Trans>Paste the login code you received by email</Trans>
-            </p>
-          ) : offerTotp && offerCount === 1 ? (
-            <p className='text-muted-foreground text-sm'>
-              <Trans>Enter the code from your authenticator app</Trans>
-            </p>
-          ) : null}
-        </div>
+        {needsEmail && needsTotp ? (
+          <p className='text-muted-foreground text-sm text-center'>
+            <Trans>Enter your email code and authenticator code</Trans>
+          </p>
+        ) : offerEmail && offerCount === 1 ? (
+          <p className='text-muted-foreground text-sm text-center'>
+            <Trans>Paste the login code you received by email</Trans>
+          </p>
+        ) : offerTotp && offerCount === 1 ? (
+          <p className='text-muted-foreground text-sm text-center'>
+            <Trans>Enter the code from your authenticator app</Trans>
+          </p>
+        ) : null}
 
         <Form {...verificationForm}>
           <form
@@ -503,9 +499,15 @@ export function UserAuthForm({
                 render={({ field }) => (
                   <FormItem className='flex flex-col items-center'>
                     {offerCount > 1 && (
-                      <div className='flex items-center gap-2 text-sm font-medium mb-2 self-start'>
-                        <Smartphone className='h-4 w-4' />
-                        <span><Trans>Authenticator code</Trans></span>
+                      <div className='relative w-full mb-2'>
+                        <div className='absolute inset-0 flex items-center'>
+                          <span className='w-full border-t' />
+                        </div>
+                        <div className='relative flex justify-center text-xs uppercase'>
+                          <span className='bg-card text-muted-foreground px-2'>
+                            <Trans>Or enter authenticator code</Trans>
+                          </span>
+                        </div>
                       </div>
                     )}
                     <FormControl>
@@ -531,6 +533,26 @@ export function UserAuthForm({
               />
             )}
 
+            {(offerEmail || offerTotp) && (
+              <Button type='submit' className='w-full' disabled={isLoading}>
+                <Trans>Log in</Trans>
+                {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight className="rtl:rotate-180" />}
+              </Button>
+            )}
+
+            {(offerPasskey || offerOauth) && (
+              <div className='relative'>
+                <div className='absolute inset-0 flex items-center'>
+                  <span className='w-full border-t' />
+                </div>
+                <div className='relative flex justify-center text-xs uppercase'>
+                  <span className='bg-card text-muted-foreground px-2'>
+                    <Trans>Or log in with</Trans>
+                  </span>
+                </div>
+              </div>
+            )}
+
             {offerPasskey && (
               <Button
                 type='button'
@@ -544,25 +566,19 @@ export function UserAuthForm({
               </Button>
             )}
 
-            <div className='space-y-2'>
-              {(offerEmail || offerTotp) && (
-                <Button type='submit' className='w-full' disabled={isLoading}>
-                  <Trans>Log in</Trans>
-                  {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight className="rtl:rotate-180" />}
-                </Button>
-              )}
+            {offerOauth && (
+              <OauthButtons email={userEmail} redirect={redirectTo} />
+            )}
 
-              <Button
-                type='button'
-                variant='ghost'
-                onClick={goBackToEmail}
-                className='w-full'
-              >
-                <ArrowLeft className="rtl:rotate-180" />
-                <Trans>Back</Trans>
-              </Button>
-
-            </div>
+            <Button
+              type='button'
+              variant='ghost'
+              onClick={goBackToEmail}
+              className='w-full'
+            >
+              <ArrowLeft className="rtl:rotate-180" />
+              <Trans>Back</Trans>
+            </Button>
 
             <div className='pt-4 text-center'>
               <Link

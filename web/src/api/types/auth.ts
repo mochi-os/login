@@ -64,6 +64,9 @@ export interface AuthMethodsResponse {
 export interface OAuthBeginRequest {
   target?: string
   link?: boolean
+  // Set on the email-login verification step: binds the OAuth sign-in to the
+  // typed account so the callback rejects a different one.
+  email?: string
 }
 
 export interface OAuthBeginResponse {
