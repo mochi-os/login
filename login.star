@@ -10,9 +10,8 @@ def action_document_get(a):
     if name not in ("rules", "terms", "privacy"):
         a.error.label(404, "errors.unknown_document")
         return
-    body = mochi.document.get(name)
-    html = mochi.text.markdown(body)
-    a.json({"name": name, "body": body, "html": html})
+    html = mochi.text.markdown(mochi.document.get(name))
+    a.json({"name": name, "html": html})
 
 def action_identity_create(a):
     """Create user identity"""
