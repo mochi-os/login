@@ -188,6 +188,13 @@ export function AccountSourceAdvanced({
 
           {source === 'restore' && (
             <div className='ms-5 space-y-2'>
+              <p className='text-muted-foreground text-xs'>
+                <Trans>
+                  The email you enter above becomes the new account's name on this server.
+                  The backup's identity must not already be active here — restore onto a
+                  different server, or delete the existing account first.
+                </Trans>
+              </p>
               <div>
                 <label className='text-muted-foreground mb-1 block text-xs'>
                   <Trans>Backup file</Trans>
