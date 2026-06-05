@@ -199,7 +199,7 @@ export function UserAuthForm({
           })
         } else if (code === 'entity_collision') {
           toast.error(t`Account already on this server`, {
-            description: t`An account with this identity already exists here.`,
+            description: getErrorMessage(error, t`An account with this identity already exists here.`),
           })
         } else if (code === 'bundle_tampered') {
           toast.error(t`Backup file is corrupted`, {
