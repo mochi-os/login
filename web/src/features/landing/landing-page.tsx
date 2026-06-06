@@ -281,14 +281,10 @@ export function LandingPage() {
       <header className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between md:justify-end gap-2 px-4 pt-4 sm:gap-3 sm:px-6 sm:pt-5 lg:px-8">
         <LanguagePicker />
 
-        <button
-          type="button"
-          onClick={openDialog}
-          className="inline-flex min-h-10 cursor-pointer items-center justify-center gap-1.5 whitespace-nowrap rounded-full border-none bg-[#6C5CE7] px-4 py-2 text-sm font-semibold text-white shadow-[0_2px_12px_rgba(108,92,231,0.25)] transition-all hover:-translate-y-px hover:bg-[#5041C1] hover:shadow-[0_4px_20px_rgba(108,92,231,0.35)] sm:min-h-11 sm:gap-2 sm:px-5"
-        >
+        <Button type="button" variant="outline" onClick={openDialog} className="h-9">
           <Trans>Sign up or log in</Trans>
           <ArrowRight className="size-4 shrink-0 rtl:rotate-180" />
-        </button>
+        </Button>
       </header>
 
       {/* Hero */}
@@ -307,20 +303,11 @@ export function LandingPage() {
 
           <p className="mx-auto mb-7 max-w-[820px] text-pretty text-base leading-7 text-[#6B6B80] dark:text-muted-foreground sm:text-lg sm:leading-8">
             <Trans>
-              Mochi is an{' '}
-              <a
-                href="https://git.mochi-os.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 transition-colors hover:text-[#6C5CE7]"
-              >
-                open source
-              </a>
-              , federated, multi-user platform for distributed apps. Anyone can
-              run their own server, and connect to any other user on the Mochi
-              network. Anyone can create and publish apps. Every app is
-              replaceable, even system ones. The server comes with over 20 apps,
-              including:
+              Mochi is an open, federated, multi-user platform for distributed
+              apps. Anyone can run their own server, and connect to any other
+              user on the Mochi network. Anyone can create and publish apps.
+              Every app is replaceable, even system ones. The server comes with
+              over 20 apps, including:
             </Trans>
           </p>
 
