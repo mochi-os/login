@@ -288,7 +288,7 @@ export function LandingPage() {
       </header>
 
       {/* Hero */}
-      <main className="relative z-10 flex flex-1 items-start justify-center px-4 pb-10 pt-10 sm:items-center sm:px-6 sm:pb-16 sm:pt-12 lg:px-8">
+      <main className="relative z-10 flex flex-1 items-start justify-center px-4 pb-10 pt-2 sm:px-6 sm:pb-16 sm:pt-4 lg:px-8">
         <section className="mx-auto w-full max-w-5xl text-center">
           <div className="mb-6 flex justify-center sm:mb-8">
             <MochiLogo
@@ -297,8 +297,8 @@ export function LandingPage() {
             />
           </div>
 
-          <h1 className="mx-auto mb-5 max-w-[850px] text-balance text-[2.25rem] font-bold leading-[1.08] tracking-tight sm:mb-6 sm:text-5xl lg:text-[3.5rem]">
-            <Trans>Your apps, your platform, your network</Trans>
+          <h1 className="mx-auto mb-5 max-w-[850px] bg-gradient-to-br from-foreground to-muted-foreground/30 bg-clip-text text-balance text-[2.25rem] font-light leading-[1.08] tracking-[3px] text-transparent sm:mb-6 sm:text-5xl lg:text-[3.5rem]">
+            mochi
           </h1>
 
           <p className="mx-auto mb-7 max-w-[820px] text-pretty text-base leading-7 text-[#6B6B80] dark:text-muted-foreground sm:text-lg sm:leading-8">
@@ -331,6 +331,38 @@ export function LandingPage() {
               </Fragment>
             ))}
           </div>
+
+          <p className="mx-auto mt-7 max-w-[820px] text-pretty text-base leading-7 text-[#6B6B80] dark:text-muted-foreground sm:mt-8 sm:text-lg sm:leading-8">
+            <Trans>
+              Create a{' '}
+              <button
+                type="button"
+                onClick={openDialog}
+                className="cursor-pointer underline underline-offset-4 transition-colors hover:text-[#6C5CE7]"
+              >
+                free account
+              </button>
+              , run{' '}
+              <a
+                href="https://docs.mochi-os.org/install"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 transition-colors hover:text-[#6C5CE7]"
+              >
+                your own server
+              </a>
+              , or explore the{' '}
+              <a
+                href="https://git.mochi-os.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 transition-colors hover:text-[#6C5CE7]"
+              >
+                source code
+              </a>
+              .
+            </Trans>
+          </p>
         </section>
       </main>
 
