@@ -31,9 +31,16 @@ export const Route = createFileRoute('/')({
       try {
         // Verify token and refresh identity state from server truth
         const data = await requestHelpers.get<{
-          user?: { email?: string; name?: string }
+          user?: { email?: string; name?: string; status?: string }
           identity?: { name?: string; privacy?: 'public' | 'private' }
         }>('/_/identity')
+
+        // Account pending closure: route to the reactivation interstitial
+        // rather than into the app.
+        if (data.user?.status === 'closing') {
+          window.location.replace('/login/closing')
+          return new Promise(() => {})
+        }
 
         const nextUser = {
           ...(store.user || {}),

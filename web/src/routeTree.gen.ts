@@ -17,6 +17,7 @@ import { Route as RecoveryRouteImport } from './routes/recovery'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as IdentityRouteImport } from './routes/identity'
 import { Route as CodesRouteImport } from './routes/codes'
+import { Route as ClosingRouteImport } from './routes/closing'
 import { Route as IndexRouteImport } from './routes/index'
 
 const TermsRoute = TermsRouteImport.update({
@@ -59,6 +60,11 @@ const CodesRoute = CodesRouteImport.update({
   path: '/codes',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ClosingRoute = ClosingRouteImport.update({
+  id: '/closing',
+  path: '/closing',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -67,6 +73,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/closing': typeof ClosingRoute
   '/codes': typeof CodesRoute
   '/identity': typeof IdentityRoute
   '/privacy': typeof PrivacyRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/closing': typeof ClosingRoute
   '/codes': typeof CodesRoute
   '/identity': typeof IdentityRoute
   '/privacy': typeof PrivacyRoute
@@ -90,6 +98,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/closing': typeof ClosingRoute
   '/codes': typeof CodesRoute
   '/identity': typeof IdentityRoute
   '/privacy': typeof PrivacyRoute
@@ -103,6 +112,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/closing'
     | '/codes'
     | '/identity'
     | '/privacy'
@@ -114,6 +124,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/closing'
     | '/codes'
     | '/identity'
     | '/privacy'
@@ -125,6 +136,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/closing'
     | '/codes'
     | '/identity'
     | '/privacy'
@@ -137,6 +149,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ClosingRoute: typeof ClosingRoute
   CodesRoute: typeof CodesRoute
   IdentityRoute: typeof IdentityRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -205,6 +218,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CodesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/closing': {
+      id: '/closing'
+      path: '/closing'
+      fullPath: '/closing'
+      preLoaderRoute: typeof ClosingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -217,6 +237,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ClosingRoute: ClosingRoute,
   CodesRoute: CodesRoute,
   IdentityRoute: IdentityRoute,
   PrivacyRoute: PrivacyRoute,

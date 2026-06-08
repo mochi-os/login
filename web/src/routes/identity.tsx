@@ -34,6 +34,11 @@ export const Route = createFileRoute('/identity')({
         throw redirect({ to: '/replicating' })
       }
 
+      // Account pending closure: route to the reactivation interstitial.
+      if (data.user?.status === 'closing') {
+        throw redirect({ to: '/closing' })
+      }
+
       const nextUser = {
         ...(store.user || {}),
         ...(data.user?.email ? { email: data.user.email } : {}),
