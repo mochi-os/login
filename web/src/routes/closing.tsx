@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
-import { createFileRoute, redirect } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
 import { Button, getErrorMessage, requestHelpers, toast, useFormat } from '@mochi/web'
 import { AuthLayout } from '@/features/auth/auth-layout'
 
@@ -15,33 +15,42 @@ type IdentityResponse = {
 }
 
 export const Route = createFileRoute('/closing')({
-  beforeLoad: async () => {
-    try {
-      const data = await requestHelpers.get<IdentityResponse>('/_/identity')
-      // Only a closing account belongs here. Anyone else goes to the
-      // normal post-login destination.
-      if (data.user?.status !== 'closing') {
-        throw redirect({ to: '/' })
-      }
-    } catch (error) {
-      if ((error as { isRedirect?: boolean })?.isRedirect) throw error
-      throw redirect({ to: '/' })
-    }
-  },
+  // No beforeLoad guard (mirrors /restore and /replicating): this page is
+  // reached right after a redirect, and a guard that fetched /_/identity and
+  // redirected on the result races the just-confirmed session — a transient
+  // hiccup bounces the user to the landing. Resolve status in the component
+  // instead: only a closing account stays here; anyone else leaves.
   component: ClosingRouteComponent,
 })
 
 function ClosingRouteComponent() {
   const { t } = useLingui()
-  const { formatTimestamp } = useFormat()
+  const { formatDate } = useFormat()
   const [purge, setPurge] = useState<number | null>(null)
+  const [ready, setReady] = useState(false)
   const [working, setWorking] = useState(false)
 
   useEffect(() => {
+    let cancelled = false
     requestHelpers
       .get<IdentityResponse>('/_/identity')
-      .then((data) => setPurge(data.user?.purge ?? null))
-      .catch(() => {})
+      .then((data) => {
+        if (cancelled) return
+        if (data.user?.status !== 'closing') {
+          // Not (or no longer) closing — go to the normal destination.
+          window.location.href = '/'
+          return
+        }
+        setPurge(data.user?.purge ?? null)
+        setReady(true)
+      })
+      .catch(() => {
+        // No valid session — back to login.
+        if (!cancelled) window.location.href = '/login/'
+      })
+    return () => {
+      cancelled = true
+    }
   }, [])
 
   const reactivate = async () => {
@@ -66,6 +75,12 @@ function ClosingRouteComponent() {
     window.location.href = '/login/'
   }
 
+  // Resolving status (or redirecting away) — render nothing rather than flash
+  // the interstitial to a non-closing user.
+  if (!ready) return null
+
+  const purgeDate = purge !== null ? formatDate(new Date(purge * 1000)) : ''
+
   return (
     <AuthLayout>
       <div className='space-y-6'>
@@ -75,14 +90,9 @@ function ClosingRouteComponent() {
           </h1>
           <p className='text-muted-foreground text-sm break-words'>
             {purge ? (
-              <Trans>
-                Your account and all its data will be permanently deleted on{' '}
-                <span className='text-foreground font-medium'>{formatTimestamp(purge)}</span>. You can cancel and restore full access now.
-              </Trans>
+              <Trans>Your account and all its data will be permanently deleted on {purgeDate}.</Trans>
             ) : (
-              <Trans>
-                Your account is scheduled for deletion. You can cancel and restore full access now.
-              </Trans>
+              <Trans>Your account is scheduled for deletion.</Trans>
             )}
           </p>
         </div>
