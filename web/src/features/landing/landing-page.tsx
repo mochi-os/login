@@ -102,9 +102,21 @@ export function LandingPage() {
 
   const userEmail = useAuthStore((s) => s.user?.email)
 
+  // reauth is a one-shot signal (server bounce or auth-manager logout); strip
+  // it once consumed so reloads don't re-clear auth and the router's JSON
+  // search serialization doesn't rewrite it as ?reauth=%221%22.
   useEffect(() => {
     if (redirect || reauth) {
       setDialogOpen(true)
+    }
+    if (reauth) {
+      const params = new URLSearchParams(window.location.search)
+      params.delete('reauth')
+      const qs = params.toString()
+      const next = qs
+        ? `${window.location.pathname}?${qs}`
+        : window.location.pathname
+      window.history.replaceState({}, '', next + window.location.hash)
     }
   }, [redirect, reauth])
 
@@ -303,7 +315,8 @@ export function LandingPage() {
 
           <p className="mx-auto mb-7 max-w-[820px] text-pretty text-base leading-7 text-[#6B6B80] dark:text-muted-foreground sm:text-lg sm:leading-8">
             <Trans>
-              Mochi is an open, federated, multi-user platform for distributed
+              Mochi is an open source, federated, multi-user platform for
+              distributed
               apps. Anyone can run their own server, and connect to any other
               user on the Mochi network. Anyone can create and publish apps.
               Every app is replaceable, even system ones. The server comes with
