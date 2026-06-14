@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { createFileRoute } from '@tanstack/react-router'
+import { RotateCcw } from 'lucide-react'
 import { Button, getErrorMessage, requestHelpers, toast, useFormat } from '@mochi/web'
 import { AuthLayout } from '@/features/auth/auth-layout'
 
@@ -104,6 +105,7 @@ function ClosingRouteComponent() {
             disabled={working}
             onClick={reactivate}
           >
+            <RotateCcw className='size-4' />
             <Trans>Reactivate my account</Trans>
           </Button>
           <Button
