@@ -21,6 +21,14 @@ def action_identity_create(a):
         a.error.label(400, "errors.name_required")
         return
     entity = mochi.entity.create("person", name, privacy)
+    # Persist the language chosen on the landing page as the user's language
+    # preference, so the UI, the Settings page, and layout direction stay in
+    # sync from signup onward (without this, the UI renders in the chosen
+    # language via Accept-Language but Settings shows the unset default).
+    # Only set it when unset, so this never clobbers a later explicit choice.
+    language = a.input("language", "")
+    if a.user and language and not a.user.preference.get("language"):
+        a.user.preference.set("language", str(language).strip().lower())
     a.json({"status": "ok", "entity": entity})
 
 def action_methods_get(a):
