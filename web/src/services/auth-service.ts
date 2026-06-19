@@ -5,7 +5,7 @@ import { authApi,
   type VerifyCodeResponse,
 } from '@/api/auth'
 import endpoints from '@/api/endpoints'
-import { requestHelpers } from '@mochi/web'
+import { requestHelpers, LANGUAGE_STORAGE_KEY } from '@mochi/web'
 import { useAuthStore } from '@/stores/auth-store'
 
 // Helper to complete authentication (shared by email verify, MFA, passkey, recovery).
@@ -278,11 +278,26 @@ type IdentityPayload = {
   privacy: 'public' | 'private'
 }
 
+const pickedLanguage = (): string => {
+  try {
+    const stored = localStorage.getItem(LANGUAGE_STORAGE_KEY)
+    if (stored && stored.toLowerCase() !== 'auto') return stored
+  } catch {
+    /* sandboxed / no storage — nothing to send */
+  }
+  return ''
+}
+
 export const submitIdentity = async ({
   name,
   privacy,
 }: IdentityPayload): Promise<void> => {
-  await requestHelpers.post(endpoints.auth.identity, { name, privacy })
+  const language = pickedLanguage()
+  await requestHelpers.post(endpoints.auth.identity, {
+    name,
+    privacy,
+    ...(language ? { language } : {}),
+  })
   useAuthStore.getState().setIdentity(name, privacy)
 }
 
