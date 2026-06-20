@@ -282,11 +282,12 @@ export function LandingPage() {
   ]
 
   return (
-    <div className="relative flex min-h-svh flex-col overflow-hidden bg-background text-[#2D2D3A] dark:text-foreground">
+    <div className="relative flex min-h-svh flex-col overflow-hidden bg-background text-foreground">
       {/* Decorative background */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(ellipse_at_top,rgba(108,92,231,0.12),transparent_70%)] sm:h-[560px]"
+        className="pointer-events-none absolute inset-x-0 top-0 h-[420px] sm:h-[560px]"
+        style={{ background: 'radial-gradient(ellipse at top, oklch(var(--primary-l) var(--hue-chroma) var(--hue) / 0.10), transparent 70%)' }}
       />
 
       {/* Top actions */}
@@ -313,7 +314,7 @@ export function LandingPage() {
             mochi
           </h1>
 
-          <p className="mx-auto mb-7 max-w-[820px] text-pretty text-base leading-7 text-[#6B6B80] dark:text-muted-foreground sm:text-lg sm:leading-8">
+          <p className="mx-auto mb-7 max-w-[820px] text-pretty text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
             <Trans>
               Mochi is an open source, federated, multi-user platform for
               distributed
@@ -325,7 +326,7 @@ export function LandingPage() {
           </p>
 
           {/* Mobile: readable app cards. Desktop: compact inline list. */}
-          <div className="mx-auto grid max-w-md grid-cols-2 gap-2 text-sm text-[#6B6B80] dark:text-muted-foreground sm:max-w-3xl sm:grid-cols-3 sm:text-base md:flex md:max-w-5xl md:flex-wrap md:items-center md:justify-center md:gap-x-2 md:gap-y-3">
+          <div className="mx-auto grid max-w-md grid-cols-2 gap-2 text-sm text-muted-foreground sm:max-w-3xl sm:grid-cols-3 sm:text-base md:flex md:max-w-5xl md:flex-wrap md:items-center md:justify-center md:gap-x-2 md:gap-y-3">
             {apps.map(({ label, Icon }, i) => (
               <Fragment key={label}>
                 {i > 0 && (
@@ -345,13 +346,13 @@ export function LandingPage() {
             ))}
           </div>
 
-          <p className="mx-auto mt-7 max-w-[820px] text-pretty text-base leading-7 text-[#6B6B80] dark:text-muted-foreground sm:mt-8 sm:text-lg sm:leading-8">
+          <p className="mx-auto mt-7 max-w-[820px] text-pretty text-base leading-7 text-muted-foreground sm:mt-8 sm:text-lg sm:leading-8">
             <Trans>
               Create a{' '}
               <button
                 type="button"
                 onClick={openDialog}
-                className="cursor-pointer underline underline-offset-4 transition-colors hover:text-[#6C5CE7]"
+                className="cursor-pointer underline underline-offset-4 transition-colors hover:text-primary"
               >
                 free account
               </button>
@@ -360,7 +361,7 @@ export function LandingPage() {
                 href="https://docs.mochi-os.org/install"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-4 transition-colors hover:text-[#6C5CE7]"
+                className="underline underline-offset-4 transition-colors hover:text-primary"
               >
                 your own server
               </a>
@@ -369,7 +370,7 @@ export function LandingPage() {
                 href="https://git.mochi-os.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-4 transition-colors hover:text-[#6C5CE7]"
+                className="underline underline-offset-4 transition-colors hover:text-primary"
               >
                 source code
               </a>
