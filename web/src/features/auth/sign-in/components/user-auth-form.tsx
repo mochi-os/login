@@ -13,7 +13,7 @@ import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa, signupRepl
 import { OauthButtons } from '@/features/auth/components/oauth-buttons'
 import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Key } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
-import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot, shellClipboardWrite } from '@mochi/web'
+import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot, shellClipboardWrite, Tooltip, TooltipTrigger, TooltipContent } from '@mochi/web'
 import { safeRedirect } from '@/lib/redirect'
 
 type EmailFormValues = { email: string }
@@ -146,26 +146,31 @@ export function UserAuthForm({
       description: devCode ? (
         <div className='flex items-center gap-2'>
           <span><Trans>Your code is: {devCode}</Trans></span>
-          <Button
-            variant='ghost'
-            size='sm'
-            className='h-6 w-6 p-0'
-            onClick={async (e) => {
-              e.preventDefault()
-              e.stopPropagation()
-              const ok = await shellClipboardWrite(devCode!)
-              if (ok) {
-                toast.success(t`Code copied`)
-              } else {
-                toast.error(t`Failed to copy code`, {
-                  description: t`Please copy manually: ${devCode}`,
-                })
-              }
-            }}
-            aria-label={t`Copy code`}
-          >
-            <Copy className='h-3 w-3' />
-          </Button>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                variant='ghost'
+                size='sm'
+                className='h-6 w-6 p-0'
+                onClick={async (e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  const ok = await shellClipboardWrite(devCode!)
+                  if (ok) {
+                    toast.success(t`Code copied`)
+                  } else {
+                    toast.error(t`Failed to copy code`, {
+                      description: t`Please copy manually: ${devCode}`,
+                    })
+                  }
+                }}
+                aria-label={t`Copy code`}
+              >
+                <Copy className='h-3 w-3' />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>{t`Copy code`}</TooltipContent>
+          </Tooltip>
         </div>
       ) : (
         t`Check your email.`
