@@ -8,7 +8,7 @@ import { Trans, useLingui } from '@lingui/react/macro'
 import { plural } from '@lingui/core/macro'
 import { z } from 'zod'
 import { createFileRoute, redirect } from '@tanstack/react-router'
-import { Button, getErrorMessage, requestHelpers, toast } from '@mochi/web'
+import { Button, getErrorMessage, requestHelpers, toast, toastAction } from '@mochi/web'
 import { Loader2 } from 'lucide-react'
 import { AuthLayout } from '@/features/auth/auth-layout'
 import { abandonSignup } from '@/services/auth-service'
@@ -59,6 +59,16 @@ type ProgressResponse = {
   user?: { status?: string }
   approved?: boolean
   scopes?: ScopeProgress[]
+}
+
+async function cancelReplication(): Promise<'ok' | 'gone'> {
+  try {
+    await abandonSignup()
+    return 'ok'
+  } catch (error) {
+    if (requestHelpers.isAuthError(error)) return 'gone'
+    throw error
+  }
 }
 
 function ReplicatingRouteComponent() {
@@ -192,18 +202,17 @@ function ReplicatingRouteComponent() {
             onClick={async () => {
               setCanceling(true)
               try {
-                await abandonSignup()
-                window.location.href = '/login/'
-              } catch (error) {
-                // 401 = the placeholder is already gone (deny propagated
-                // first, or session expired): the cancel goal is already
-                // achieved, so just go to the login page like the success
-                // path.
-                if (requestHelpers.isAuthError(error)) {
-                  window.location.href = '/login/'
-                  return
+                const result = await toastAction(cancelReplication(), {
+                  loading: t`Canceling replication...`,
+                  success: false,
+                  error: (error) => getErrorMessage(error, t`Could not cancel`),
+                })
+                if (result === 'ok') {
+                  toast.success(t`Replication canceled`)
                 }
-                toast.error(getErrorMessage(error, t`Could not cancel`))
+                window.location.href = '/login/'
+              } catch {
+                // toastAction already showed error
                 setCanceling(false)
               }
             }}

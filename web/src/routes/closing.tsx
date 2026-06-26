@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { createFileRoute } from '@tanstack/react-router'
 import { RotateCcw } from 'lucide-react'
-import { Button, getErrorMessage, requestHelpers, toast, useFormat } from '@mochi/web'
+import { Button, requestHelpers, toastAction, useFormat } from '@mochi/web'
 import { AuthLayout } from '@/features/auth/auth-layout'
 
 // The reactivation interstitial. A user whose account is pending closure
@@ -62,11 +62,14 @@ function ClosingRouteComponent() {
   const reactivate = async () => {
     setWorking(true)
     try {
-      await requestHelpers.post('/_/auth/close/cancel', {})
-      toast.success(t`Your account has been reactivated`)
+      await toastAction(requestHelpers.post('/_/auth/close/cancel', {}), {
+        loading: t`Reactivating your account...`,
+        success: t`Your account has been reactivated`,
+        error: t`Could not reactivate your account`,
+      })
       window.location.href = '/'
-    } catch (error) {
-      toast.error(getErrorMessage(error, t`Could not reactivate your account`))
+    } catch {
+      // toastAction already showed error
       setWorking(false)
     }
   }
