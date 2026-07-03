@@ -101,7 +101,7 @@ msgstr "Tambah akun pikeun narima béwara jeung maké layanan."
 msgid "Add new account"
 msgstr "Tambah akun anyar"
 
-#: ../../../lib/web/src/components/post-tags.tsx:129
+#: ../../../lib/web/src/components/post-tags.tsx:133
 msgid "Add tag..."
 msgstr "Tambah tag..."
 
@@ -143,11 +143,11 @@ msgstr "Akun jeung email éta geus aya. Asup heula, terus hubungkeun {0} ti set�
 msgid "An account with this identity already exists here."
 msgstr "Akun jeung identitas ieu tos aya di dieu."
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Aya kasalahan"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Aya kasalahan anu teu disangka-sangka"
 
@@ -199,8 +199,8 @@ msgstr "Berkas cadangan ruksak"
 msgid "Backup is too new"
 msgstr "Cadangan téh énggal teuing"
 
-#: ../../../lib/web/src/components/post-tags.tsx:172
-#: ../../../lib/web/src/components/post-tags.tsx:184
+#: ../../../lib/web/src/components/post-tags.tsx:176
+#: ../../../lib/web/src/components/post-tags.tsx:188
 msgid "Boost interest"
 msgstr "Tingkatkeun minat"
 
@@ -311,8 +311,8 @@ msgid "Clear selection (Escape)"
 msgstr "Bersihkeun pilihan (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Tutup"
@@ -341,8 +341,8 @@ msgstr "Kode dikirim."
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Lipet"
 
@@ -520,10 +520,14 @@ msgstr "Mintonkeun sidebar mobile."
 msgid "Done"
 msgstr "Beres"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Unduh"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr "Gagal ngunduh"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:146
 msgid "Dyslexia-friendly"
@@ -591,8 +595,8 @@ msgstr "Asupkeun kode surélék jeung kode authenticator anjeun"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Buka"
 
@@ -818,6 +822,10 @@ msgstr "Ngahubungkeun identitas anjeun"
 msgid "Load more"
 msgstr "Muat leuwih loba"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr "Ngamuat eusi…"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 #: src/features/document/document-page.tsx:71
@@ -913,7 +921,7 @@ msgstr "Mochi mangrupa platform sumber kabuka, federasi, sarta multipangguna pik
 msgid "Monday"
 msgstr "Senén"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Kasalahan jaringan"
 
@@ -936,8 +944,8 @@ msgstr "Daptar pamaké anyar dipareuman."
 msgid "Next"
 msgstr "Salajengna"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Gambar salajengna"
 
@@ -1025,8 +1033,8 @@ msgstr "Aduh! Kaca Teu Kapanggih!"
 msgid "Open account actions"
 msgstr "Buka aksi akun"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Buka aksi"
 
@@ -1140,7 +1148,7 @@ msgstr "Mangga pariksa kode anjeun teras coba deui."
 msgid "Please check your email and try again."
 msgstr "Mangga pariksa surélék anjeun teras coba deui."
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Mangga pariksa sambungan internet anjeun teras cobian deui."
 
@@ -1180,8 +1188,8 @@ msgstr "Mangga paké métode verifikasi séjén."
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Mangga paké tombol \"Asup ku passkey\"."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Gambar saméméhna"
 
@@ -1242,8 +1250,8 @@ msgstr "Ngalihkeun ka login."
 msgid "Redirecting you to the dashboard…"
 msgstr "Ngalihkeun anjeun ka dashboard…"
 
-#: ../../../lib/web/src/components/post-tags.tsx:192
-#: ../../../lib/web/src/components/post-tags.tsx:204
+#: ../../../lib/web/src/components/post-tags.tsx:196
+#: ../../../lib/web/src/components/post-tags.tsx:208
 msgid "Reduce interest"
 msgstr "Kurangan minat"
 
@@ -1276,8 +1284,8 @@ msgstr "Cabut aturan aksés"
 msgid "Remove access?"
 msgstr "Cabut aksés?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:212
-#: ../../../lib/web/src/components/post-tags.tsx:224
+#: ../../../lib/web/src/components/post-tags.tsx:216
+#: ../../../lib/web/src/components/post-tags.tsx:228
 msgid "Remove interest"
 msgstr "Cabut minat"
 
@@ -1418,8 +1426,8 @@ msgstr "Kirim email"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Kasalahan server"
 
@@ -1429,7 +1437,7 @@ msgstr "Kasalahan server"
 msgid "Server rules"
 msgstr "Aturan server"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Sési kadaluwarsa"
 
@@ -1544,8 +1552,8 @@ msgstr "Sistem"
 msgid "Tag"
 msgstr "Tag"
 
-#: ../../../lib/web/src/components/post-tags.tsx:96
-#: ../../../lib/web/src/components/post-tags.tsx:107
+#: ../../../lib/web/src/components/post-tags.tsx:100
+#: ../../../lib/web/src/components/post-tags.tsx:111
 msgid "Tags"
 msgstr "Tag"
 
@@ -1621,10 +1629,10 @@ msgstr "Toggle kolom"
 msgid "Toggle right panel"
 msgstr "Ganti panel katuhu"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Toggle bagian"
 
@@ -1678,7 +1686,7 @@ msgstr "Ketik pikeun néangan pamaké"
 msgid "Type to search..."
 msgstr "Ketik pikeun néangan..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Teu tiasa nyambung ka server jarak jauh"
 

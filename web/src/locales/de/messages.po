@@ -101,7 +101,7 @@ msgstr "Fügen Sie ein Konto hinzu, um Benachrichtigungen zu erhalten und Dienst
 msgid "Add new account"
 msgstr "Neues Konto hinzufügen"
 
-#: ../../../lib/web/src/components/post-tags.tsx:129
+#: ../../../lib/web/src/components/post-tags.tsx:133
 msgid "Add tag..."
 msgstr "Tag hinzufügen ..."
 
@@ -143,11 +143,11 @@ msgstr "Es existiert bereits ein Konto mit dieser E-Mail. Melden Sie sich zuerst
 msgid "An account with this identity already exists here."
 msgstr "Ein Konto mit dieser Identität existiert hier bereits."
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Ein Fehler ist aufgetreten"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Ein unerwarteter Fehler ist aufgetreten"
 
@@ -199,8 +199,8 @@ msgstr "Sicherungsdatei ist beschädigt"
 msgid "Backup is too new"
 msgstr "Sicherung ist zu neu"
 
-#: ../../../lib/web/src/components/post-tags.tsx:172
-#: ../../../lib/web/src/components/post-tags.tsx:184
+#: ../../../lib/web/src/components/post-tags.tsx:176
+#: ../../../lib/web/src/components/post-tags.tsx:188
 msgid "Boost interest"
 msgstr "Interesse hervorheben"
 
@@ -311,8 +311,8 @@ msgid "Clear selection (Escape)"
 msgstr "Auswahl aufheben (Esc)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Schließen"
@@ -341,8 +341,8 @@ msgstr "Code gesendet."
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Einklappen"
 
@@ -520,10 +520,14 @@ msgstr "Zeigt die mobile Seitenleiste an."
 msgid "Done"
 msgstr "Fertig"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Herunterladen"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr "Download fehlgeschlagen"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:146
 msgid "Dyslexia-friendly"
@@ -591,8 +595,8 @@ msgstr "Geben Sie Ihren E-Mail-Code und Authenticator-Code ein"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Ausklappen"
 
@@ -818,6 +822,10 @@ msgstr "Identität wird verknüpft"
 msgid "Load more"
 msgstr "Mehr laden"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr "Inhalt wird geladen…"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 #: src/features/document/document-page.tsx:71
@@ -913,7 +921,7 @@ msgstr "Mochi ist eine quelloffene, föderierte Mehrbenutzer-Plattform für vert
 msgid "Monday"
 msgstr "Montag"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Netzwerkfehler"
 
@@ -936,8 +944,8 @@ msgstr "Die Registrierung neuer Nutzer ist deaktiviert."
 msgid "Next"
 msgstr "Weiter"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Nächstes Bild"
 
@@ -1025,8 +1033,8 @@ msgstr "Hoppla! Seite nicht gefunden!"
 msgid "Open account actions"
 msgstr "Kontoaktionen öffnen"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Aktionen öffnen"
 
@@ -1140,7 +1148,7 @@ msgstr "Bitte überprüfen Sie Ihre Codes und versuchen Sie es erneut."
 msgid "Please check your email and try again."
 msgstr "Bitte überprüfen Sie Ihre E-Mail und versuchen Sie es erneut."
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Bitte überprüfe deine Internetverbindung und versuche es erneut."
 
@@ -1180,8 +1188,8 @@ msgstr "Bitte verwenden Sie eine andere Verifizierungsmethode."
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Bitte verwenden Sie die Schaltfläche „Mit Passkey anmelden“."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Vorheriges Bild"
 
@@ -1242,8 +1250,8 @@ msgstr "Weiterleitung zur Anmeldung."
 msgid "Redirecting you to the dashboard…"
 msgstr "Sie werden zum Dashboard weitergeleitet…"
 
-#: ../../../lib/web/src/components/post-tags.tsx:192
-#: ../../../lib/web/src/components/post-tags.tsx:204
+#: ../../../lib/web/src/components/post-tags.tsx:196
+#: ../../../lib/web/src/components/post-tags.tsx:208
 msgid "Reduce interest"
 msgstr "Interesse reduzieren"
 
@@ -1276,8 +1284,8 @@ msgstr "Zugriffsregel entfernen"
 msgid "Remove access?"
 msgstr "Zugriff entfernen?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:212
-#: ../../../lib/web/src/components/post-tags.tsx:224
+#: ../../../lib/web/src/components/post-tags.tsx:216
+#: ../../../lib/web/src/components/post-tags.tsx:228
 msgid "Remove interest"
 msgstr "Interesse entfernen"
 
@@ -1418,8 +1426,8 @@ msgstr "E-Mail senden"
 msgid "Serif"
 msgstr "Serife"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Serverfehler"
 
@@ -1429,7 +1437,7 @@ msgstr "Serverfehler"
 msgid "Server rules"
 msgstr "Serverregeln"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Sitzung abgelaufen"
 
@@ -1544,8 +1552,8 @@ msgstr "System"
 msgid "Tag"
 msgstr "Tag"
 
-#: ../../../lib/web/src/components/post-tags.tsx:96
-#: ../../../lib/web/src/components/post-tags.tsx:107
+#: ../../../lib/web/src/components/post-tags.tsx:100
+#: ../../../lib/web/src/components/post-tags.tsx:111
 msgid "Tags"
 msgstr "Tags"
 
@@ -1621,10 +1629,10 @@ msgstr "Spalten umschalten"
 msgid "Toggle right panel"
 msgstr "Rechtes Panel umschalten"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Abschnitt ein-/ausklappen"
 
@@ -1678,7 +1686,7 @@ msgstr "Tippen, um Benutzer zu suchen"
 msgid "Type to search..."
 msgstr "Tippen, um zu suchen..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Verbindung zum Remote-Server nicht möglich"
 

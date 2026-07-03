@@ -101,7 +101,7 @@ msgstr "Lägg till ett konto för att ta emot aviseringar och använda tjänster
 msgid "Add new account"
 msgstr "Lägg till nytt konto"
 
-#: ../../../lib/web/src/components/post-tags.tsx:129
+#: ../../../lib/web/src/components/post-tags.tsx:133
 msgid "Add tag..."
 msgstr "Lägg till tagg..."
 
@@ -143,11 +143,11 @@ msgstr "Ett konto med den e-postadressen finns redan. Logga in först, koppla se
 msgid "An account with this identity already exists here."
 msgstr "Ett konto med den här identiteten finns redan här."
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Ett fel uppstod"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Ett oväntat fel uppstod"
 
@@ -199,8 +199,8 @@ msgstr "Säkerhetskopieringsfilen är skadad"
 msgid "Backup is too new"
 msgstr "Säkerhetskopieringen är för ny"
 
-#: ../../../lib/web/src/components/post-tags.tsx:172
-#: ../../../lib/web/src/components/post-tags.tsx:184
+#: ../../../lib/web/src/components/post-tags.tsx:176
+#: ../../../lib/web/src/components/post-tags.tsx:188
 msgid "Boost interest"
 msgstr "Öka intresse"
 
@@ -311,8 +311,8 @@ msgid "Clear selection (Escape)"
 msgstr "Rensa val (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Stäng"
@@ -341,8 +341,8 @@ msgstr "Kod skickad."
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Fäll ihop"
 
@@ -520,10 +520,14 @@ msgstr "Visar mobil-sidofältet."
 msgid "Done"
 msgstr "Klar"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Ladda ner"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr "Nedladdningen misslyckades"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:146
 msgid "Dyslexia-friendly"
@@ -591,8 +595,8 @@ msgstr "Ange din e-postkod och autentiserarkod"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Expandera"
 
@@ -818,6 +822,10 @@ msgstr "Kopplar din identitet"
 msgid "Load more"
 msgstr "Läs in fler"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr "Läser in innehåll…"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 #: src/features/document/document-page.tsx:71
@@ -913,7 +921,7 @@ msgstr "Mochi är en federerad plattform med öppen källkod för flera använda
 msgid "Monday"
 msgstr "Måndag"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Nätverksfel"
 
@@ -936,8 +944,8 @@ msgstr "Registrering av nya användare är avstängd."
 msgid "Next"
 msgstr "Nästa"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Nästa bild"
 
@@ -1025,8 +1033,8 @@ msgstr "Hoppsan! Sidan hittades inte!"
 msgid "Open account actions"
 msgstr "Öppna kontoåtgärder"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Öppna åtgärder"
 
@@ -1140,7 +1148,7 @@ msgstr "Kontrollera dina koder och försök igen."
 msgid "Please check your email and try again."
 msgstr "Kontrollera din e-post och försök igen."
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Kontrollera din internetanslutning och försök igen."
 
@@ -1180,8 +1188,8 @@ msgstr "Använd en annan verifieringsmetod."
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Använd knappen \"Logga in med passkey\"."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Föregående bild"
 
@@ -1242,8 +1250,8 @@ msgstr "Omdirigerar till inloggning."
 msgid "Redirecting you to the dashboard…"
 msgstr "Omdirigerar dig till instrumentpanelen…"
 
-#: ../../../lib/web/src/components/post-tags.tsx:192
-#: ../../../lib/web/src/components/post-tags.tsx:204
+#: ../../../lib/web/src/components/post-tags.tsx:196
+#: ../../../lib/web/src/components/post-tags.tsx:208
 msgid "Reduce interest"
 msgstr "Minska intresse"
 
@@ -1276,8 +1284,8 @@ msgstr "Ta bort åtkomstregel"
 msgid "Remove access?"
 msgstr "Ta bort åtkomst?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:212
-#: ../../../lib/web/src/components/post-tags.tsx:224
+#: ../../../lib/web/src/components/post-tags.tsx:216
+#: ../../../lib/web/src/components/post-tags.tsx:228
 msgid "Remove interest"
 msgstr "Ta bort intresse"
 
@@ -1418,8 +1426,8 @@ msgstr "Skicka e-post"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Serverfel"
 
@@ -1429,7 +1437,7 @@ msgstr "Serverfel"
 msgid "Server rules"
 msgstr "Serverregler"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Sessionen har löpt ut"
 
@@ -1544,8 +1552,8 @@ msgstr "System"
 msgid "Tag"
 msgstr "Tagg"
 
-#: ../../../lib/web/src/components/post-tags.tsx:96
-#: ../../../lib/web/src/components/post-tags.tsx:107
+#: ../../../lib/web/src/components/post-tags.tsx:100
+#: ../../../lib/web/src/components/post-tags.tsx:111
 msgid "Tags"
 msgstr "Taggar"
 
@@ -1621,10 +1629,10 @@ msgstr "Växla kolumner"
 msgid "Toggle right panel"
 msgstr "Växla höger panel"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Växla avsnitt"
 
@@ -1678,7 +1686,7 @@ msgstr "Skriv för att söka användare"
 msgid "Type to search..."
 msgstr "Skriv för att söka..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Det gick inte att ansluta till fjärrservern"
 

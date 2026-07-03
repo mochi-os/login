@@ -101,7 +101,7 @@ msgstr "Bæta við reikningi til að fá tilkynningar og nota þjónustur."
 msgid "Add new account"
 msgstr "Bæta við nýjum reikningi"
 
-#: ../../../lib/web/src/components/post-tags.tsx:129
+#: ../../../lib/web/src/components/post-tags.tsx:133
 msgid "Add tag..."
 msgstr "Bæta við merki..."
 
@@ -143,11 +143,11 @@ msgstr "Það er þegar reikningur með þessu netfangi. Skráðu þig fyrst inn
 msgid "An account with this identity already exists here."
 msgstr "Aðgangur með þessa auðkenni er þegar til hér."
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Villa kom upp"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Óvænt villa kom upp"
 
@@ -199,8 +199,8 @@ msgstr "Öryggisafritsskrá er skemmd"
 msgid "Backup is too new"
 msgstr "Öryggisafrit er of nýtt"
 
-#: ../../../lib/web/src/components/post-tags.tsx:172
-#: ../../../lib/web/src/components/post-tags.tsx:184
+#: ../../../lib/web/src/components/post-tags.tsx:176
+#: ../../../lib/web/src/components/post-tags.tsx:188
 msgid "Boost interest"
 msgstr "Auka áhuga"
 
@@ -311,8 +311,8 @@ msgid "Clear selection (Escape)"
 msgstr "Hreinsa val (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Loka"
@@ -341,8 +341,8 @@ msgstr "Kóði sendur."
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Fella saman"
 
@@ -520,10 +520,14 @@ msgstr "Sýnir hliðarstiku farsíma."
 msgid "Done"
 msgstr "Lokið"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Hlaða niður"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr "Niðurhal mistókst"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:146
 msgid "Dyslexia-friendly"
@@ -591,8 +595,8 @@ msgstr "Sláðu inn tölvupóstkóðann og auðkenniskóðann"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Fletta út"
 
@@ -818,6 +822,10 @@ msgstr "Tengir auðkenni þitt"
 msgid "Load more"
 msgstr "Hlaða meiru"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr "Hleð inn efni…"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 #: src/features/document/document-page.tsx:71
@@ -913,7 +921,7 @@ msgstr "Mochi er sambandsbundinn, fjölnotenda vettvangur með opnum frumkóða 
 msgid "Monday"
 msgstr "Mánudagur"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Netvilla"
 
@@ -936,8 +944,8 @@ msgstr "Nýskráning notenda er óvirk."
 msgid "Next"
 msgstr "Næst"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Næsta mynd"
 
@@ -1025,8 +1033,8 @@ msgstr "Úps! Síða fannst ekki!"
 msgid "Open account actions"
 msgstr "Opna reikningsaðgerðir"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Opna aðgerðir"
 
@@ -1140,7 +1148,7 @@ msgstr "Athugaðu kóðana og reyndu aftur."
 msgid "Please check your email and try again."
 msgstr "Athugaðu tölvupóstinn og reyndu aftur."
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Athugaðu nettenginguna og reyndu aftur."
 
@@ -1180,8 +1188,8 @@ msgstr "Notaðu aðra staðfestingaraðferð."
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Notaðu hnappinn „Skrá inn með aðgangslykli“."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Fyrri mynd"
 
@@ -1242,8 +1250,8 @@ msgstr "Áframsendi á innskráningu."
 msgid "Redirecting you to the dashboard…"
 msgstr "Áframsendi þig á stjórnborðið…"
 
-#: ../../../lib/web/src/components/post-tags.tsx:192
-#: ../../../lib/web/src/components/post-tags.tsx:204
+#: ../../../lib/web/src/components/post-tags.tsx:196
+#: ../../../lib/web/src/components/post-tags.tsx:208
 msgid "Reduce interest"
 msgstr "Minnka áhuga"
 
@@ -1276,8 +1284,8 @@ msgstr "Fjarlægja aðgangsreglu"
 msgid "Remove access?"
 msgstr "Fjarlægja aðgang?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:212
-#: ../../../lib/web/src/components/post-tags.tsx:224
+#: ../../../lib/web/src/components/post-tags.tsx:216
+#: ../../../lib/web/src/components/post-tags.tsx:228
 msgid "Remove interest"
 msgstr "Fjarlægja áhuga"
 
@@ -1418,8 +1426,8 @@ msgstr "Senda tölvupóst"
 msgid "Serif"
 msgstr "Þverstrik"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Þjónsvilla"
 
@@ -1429,7 +1437,7 @@ msgstr "Þjónsvilla"
 msgid "Server rules"
 msgstr "Reglur þjónsins"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Seta rann út"
 
@@ -1544,8 +1552,8 @@ msgstr "Kerfi"
 msgid "Tag"
 msgstr "Merki"
 
-#: ../../../lib/web/src/components/post-tags.tsx:96
-#: ../../../lib/web/src/components/post-tags.tsx:107
+#: ../../../lib/web/src/components/post-tags.tsx:100
+#: ../../../lib/web/src/components/post-tags.tsx:111
 msgid "Tags"
 msgstr "Merki"
 
@@ -1621,10 +1629,10 @@ msgstr "Skipta um dálka"
 msgid "Toggle right panel"
 msgstr "Skipta hægra spjaldi"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Víxla hluta"
 
@@ -1678,7 +1686,7 @@ msgstr "Skrifaðu til að leita að notendum"
 msgid "Type to search..."
 msgstr "Skrifaðu til að leita..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Ekki tókst að tengjast fjarþjóni"
 

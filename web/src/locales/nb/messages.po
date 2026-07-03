@@ -101,7 +101,7 @@ msgstr "Legg til en konto for å motta varsler og bruke tjenester."
 msgid "Add new account"
 msgstr "Legg til ny konto"
 
-#: ../../../lib/web/src/components/post-tags.tsx:129
+#: ../../../lib/web/src/components/post-tags.tsx:133
 msgid "Add tag..."
 msgstr "Legg til etikett …"
 
@@ -143,11 +143,11 @@ msgstr "En konto med den e-posten finnes allerede. Logg inn først, og koble der
 msgid "An account with this identity already exists here."
 msgstr "En konto med denne identiteten finnes allerede her."
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Det oppstod en feil"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Det oppstod en uventet feil"
 
@@ -199,8 +199,8 @@ msgstr "Sikkerhetskopifilen er ødelagt"
 msgid "Backup is too new"
 msgstr "Sikkerhetskopien er for ny"
 
-#: ../../../lib/web/src/components/post-tags.tsx:172
-#: ../../../lib/web/src/components/post-tags.tsx:184
+#: ../../../lib/web/src/components/post-tags.tsx:176
+#: ../../../lib/web/src/components/post-tags.tsx:188
 msgid "Boost interest"
 msgstr "Øk interesse"
 
@@ -311,8 +311,8 @@ msgid "Clear selection (Escape)"
 msgstr "Tøm utvalg (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Lukk"
@@ -341,8 +341,8 @@ msgstr "Kode sendt."
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Skjul"
 
@@ -520,10 +520,14 @@ msgstr "Viser sidefeltet for mobil."
 msgid "Done"
 msgstr "Ferdig"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Last ned"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr "Nedlastingen mislyktes"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:146
 msgid "Dyslexia-friendly"
@@ -591,8 +595,8 @@ msgstr "Skriv inn e-postkoden og autentikatorkoden"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Utvid"
 
@@ -818,6 +822,10 @@ msgstr "Kobler til identiteten din"
 msgid "Load more"
 msgstr "Last inn flere"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr "Laster inn innhold…"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 #: src/features/document/document-page.tsx:71
@@ -913,7 +921,7 @@ msgstr "Mochi er en føderert flerbrukerplattform med åpen kildekode for distri
 msgid "Monday"
 msgstr "Mandag"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Nettverksfeil"
 
@@ -936,8 +944,8 @@ msgstr "Registrering av nye brukere er deaktivert."
 msgid "Next"
 msgstr "Neste"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Neste bilde"
 
@@ -1025,8 +1033,8 @@ msgstr "Ups! Side ikke funnet!"
 msgid "Open account actions"
 msgstr "Åpne kontohandlinger"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Åpne handlinger"
 
@@ -1140,7 +1148,7 @@ msgstr "Sjekk kodene og prøv igjen."
 msgid "Please check your email and try again."
 msgstr "Sjekk e-posten og prøv igjen."
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Sjekk internettforbindelsen din og prøv igjen."
 
@@ -1180,8 +1188,8 @@ msgstr "Bruk en annen verifiseringsmetode."
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Bruk knappen «Logg inn med passnøkkel»."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Forrige bilde"
 
@@ -1242,8 +1250,8 @@ msgstr "Omdirigerer til innlogging."
 msgid "Redirecting you to the dashboard…"
 msgstr "Omdirigerer deg til dashbordet…"
 
-#: ../../../lib/web/src/components/post-tags.tsx:192
-#: ../../../lib/web/src/components/post-tags.tsx:204
+#: ../../../lib/web/src/components/post-tags.tsx:196
+#: ../../../lib/web/src/components/post-tags.tsx:208
 msgid "Reduce interest"
 msgstr "Reduser interesse"
 
@@ -1276,8 +1284,8 @@ msgstr "Fjern tilgangsregel"
 msgid "Remove access?"
 msgstr "Fjerne tilgang?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:212
-#: ../../../lib/web/src/components/post-tags.tsx:224
+#: ../../../lib/web/src/components/post-tags.tsx:216
+#: ../../../lib/web/src/components/post-tags.tsx:228
 msgid "Remove interest"
 msgstr "Fjern interesse"
 
@@ -1418,8 +1426,8 @@ msgstr "Send e-post"
 msgid "Serif"
 msgstr "Antikva"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Tjenerfeil"
 
@@ -1429,7 +1437,7 @@ msgstr "Tjenerfeil"
 msgid "Server rules"
 msgstr "Serverregler"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Økten har utløpt"
 
@@ -1544,8 +1552,8 @@ msgstr "System"
 msgid "Tag"
 msgstr "Etikett"
 
-#: ../../../lib/web/src/components/post-tags.tsx:96
-#: ../../../lib/web/src/components/post-tags.tsx:107
+#: ../../../lib/web/src/components/post-tags.tsx:100
+#: ../../../lib/web/src/components/post-tags.tsx:111
 msgid "Tags"
 msgstr "Etiketter"
 
@@ -1621,10 +1629,10 @@ msgstr "Slå av/på kolonner"
 msgid "Toggle right panel"
 msgstr "Veksle høyre panel"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Vis/skjul seksjon"
 
@@ -1678,7 +1686,7 @@ msgstr "Skriv for å søke i brukere"
 msgid "Type to search..."
 msgstr "Skriv for å søke ..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Kan ikke koble til den eksterne tjeneren"
 
