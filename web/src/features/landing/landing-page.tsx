@@ -100,8 +100,6 @@ export function LandingPage() {
   const [isPasskeyLoading, setIsPasskeyLoading] = useState(false)
   const [oauthError, setOauthError] = useState<string | null>(null)
   const [accountSource, setAccountSource] = useState<AccountSource>('none')
-  const [replicateSourceUsername, setReplicateSourceUsername] = useState('')
-  const [replicateSourcePeer, setReplicateSourcePeer] = useState('')
   const [restoreBundle, setRestoreBundle] = useState<File | null>(null)
   const [restorePassphrase, setRestorePassphrase] = useState('')
 
@@ -152,31 +150,6 @@ export function LandingPage() {
     window.history.replaceState({}, '', next + window.location.hash)
     setDialogOpen(true)
   }, [])
-
-  // Surface the per-user replicate-signup denial / expiry bounce
-  // from /login/replicating: the page detected a 401 on /_/identity
-  // (placeholder deleted) and redirected here with ?replicate=denied.
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search)
-
-    if (params.get('replicate') !== 'denied') {
-      return
-    }
-
-    toast.error(t`Replication request denied`, {
-      description: t`The source server did not approve the request, or it expired. Try again or sign up locally.`,
-    })
-
-    params.delete('replicate')
-
-    const qs = params.toString()
-    const next = qs
-      ? `${window.location.pathname}?${qs}`
-      : window.location.pathname
-
-    window.history.replaceState({}, '', next + window.location.hash)
-    setDialogOpen(true)
-  }, [t])
 
   useEffect(() => {
     authApi.getMethods().then((methods) => {
@@ -414,12 +387,6 @@ export function LandingPage() {
             setStep={setStep}
             onPasskeyLogin={handlePasskeyLogin}
             disabled={oauthLoading !== null || isPasskeyLoading}
-            replicateSourceUsername={
-              accountSource === 'replicate' ? replicateSourceUsername : ''
-            }
-            replicateSourcePeer={
-              accountSource === 'replicate' ? replicateSourcePeer : ''
-            }
             restoreBundle={
               accountSource === 'restore' ? restoreBundle : null
             }
@@ -489,10 +456,6 @@ export function LandingPage() {
             <AccountSourceAdvanced
               source={accountSource}
               onSourceChange={setAccountSource}
-              replicateUsername={replicateSourceUsername}
-              onReplicateUsernameChange={setReplicateSourceUsername}
-              replicatePeer={replicateSourcePeer}
-              onReplicatePeerChange={setReplicateSourcePeer}
               restoreBundle={restoreBundle}
               onRestoreBundleChange={setRestoreBundle}
               restorePassphrase={restorePassphrase}

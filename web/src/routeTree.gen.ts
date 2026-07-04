@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as RulesRouteImport } from './routes/rules'
 import { Route as RestoreRouteImport } from './routes/restore'
-import { Route as ReplicatingRouteImport } from './routes/replicating'
 import { Route as RecoveryRouteImport } from './routes/recovery'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as IdentityRouteImport } from './routes/identity'
@@ -33,11 +32,6 @@ const RulesRoute = RulesRouteImport.update({
 const RestoreRoute = RestoreRouteImport.update({
   id: '/restore',
   path: '/restore',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ReplicatingRoute = ReplicatingRouteImport.update({
-  id: '/replicating',
-  path: '/replicating',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RecoveryRoute = RecoveryRouteImport.update({
@@ -78,7 +72,6 @@ export interface FileRoutesByFullPath {
   '/identity': typeof IdentityRoute
   '/privacy': typeof PrivacyRoute
   '/recovery': typeof RecoveryRoute
-  '/replicating': typeof ReplicatingRoute
   '/restore': typeof RestoreRoute
   '/rules': typeof RulesRoute
   '/terms': typeof TermsRoute
@@ -90,7 +83,6 @@ export interface FileRoutesByTo {
   '/identity': typeof IdentityRoute
   '/privacy': typeof PrivacyRoute
   '/recovery': typeof RecoveryRoute
-  '/replicating': typeof ReplicatingRoute
   '/restore': typeof RestoreRoute
   '/rules': typeof RulesRoute
   '/terms': typeof TermsRoute
@@ -103,7 +95,6 @@ export interface FileRoutesById {
   '/identity': typeof IdentityRoute
   '/privacy': typeof PrivacyRoute
   '/recovery': typeof RecoveryRoute
-  '/replicating': typeof ReplicatingRoute
   '/restore': typeof RestoreRoute
   '/rules': typeof RulesRoute
   '/terms': typeof TermsRoute
@@ -117,7 +108,6 @@ export interface FileRouteTypes {
     | '/identity'
     | '/privacy'
     | '/recovery'
-    | '/replicating'
     | '/restore'
     | '/rules'
     | '/terms'
@@ -129,7 +119,6 @@ export interface FileRouteTypes {
     | '/identity'
     | '/privacy'
     | '/recovery'
-    | '/replicating'
     | '/restore'
     | '/rules'
     | '/terms'
@@ -141,7 +130,6 @@ export interface FileRouteTypes {
     | '/identity'
     | '/privacy'
     | '/recovery'
-    | '/replicating'
     | '/restore'
     | '/rules'
     | '/terms'
@@ -154,7 +142,6 @@ export interface RootRouteChildren {
   IdentityRoute: typeof IdentityRoute
   PrivacyRoute: typeof PrivacyRoute
   RecoveryRoute: typeof RecoveryRoute
-  ReplicatingRoute: typeof ReplicatingRoute
   RestoreRoute: typeof RestoreRoute
   RulesRoute: typeof RulesRoute
   TermsRoute: typeof TermsRoute
@@ -181,13 +168,6 @@ declare module '@tanstack/react-router' {
       path: '/restore'
       fullPath: '/restore'
       preLoaderRoute: typeof RestoreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/replicating': {
-      id: '/replicating'
-      path: '/replicating'
-      fullPath: '/replicating'
-      preLoaderRoute: typeof ReplicatingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/recovery': {
@@ -242,7 +222,6 @@ const rootRouteChildren: RootRouteChildren = {
   IdentityRoute: IdentityRoute,
   PrivacyRoute: PrivacyRoute,
   RecoveryRoute: RecoveryRoute,
-  ReplicatingRoute: ReplicatingRoute,
   RestoreRoute: RestoreRoute,
   RulesRoute: RulesRoute,
   TermsRoute: TermsRoute,

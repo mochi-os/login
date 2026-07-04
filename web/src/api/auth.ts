@@ -147,22 +147,6 @@ const totpEnabled = () =>
 const totpDisable = () =>
   requestHelpers.post<{ ok: boolean }>(endpoints.auth.totp.disable, {})
 
-// Per-user replication signup ("Advanced" on the email step)
-interface ReplicateRequest {
-  email: string
-  source: string
-  source_username: string
-}
-
-interface ReplicateResponse {
-  status: 'pending'
-  uid: string
-  source: string
-  source_user: string
-}
-
-const replicate = (payload: ReplicateRequest) =>
-  requestHelpers.post<ReplicateResponse>(endpoints.auth.replicate, payload)
 
 // Recovery codes
 const recoveryLogin = (payload: RecoveryLoginRequest) =>
@@ -225,8 +209,6 @@ export const authApi = {
   totpVerify,
   totpEnabled,
   totpDisable,
-  // Per-user replication signup
-  replicate,
   // Recovery
   recoveryLogin,
   recoveryGenerate,

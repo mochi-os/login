@@ -23,8 +23,6 @@ export function SignIn() {
   const [passkeyEnabled, setPasskeyEnabled] = useState(false)
   const [isPasskeyLoading, setIsPasskeyLoading] = useState(false)
   const [accountSource, setAccountSource] = useState<AccountSource>('none')
-  const [replicateSourceUsername, setReplicateSourceUsername] = useState('')
-  const [replicateSourcePeer, setReplicateSourcePeer] = useState('')
   const [restoreBundle, setRestoreBundle] = useState<File | null>(null)
   const [restorePassphrase, setRestorePassphrase] = useState('')
 
@@ -83,8 +81,6 @@ export function SignIn() {
             step={step}
             setStep={setStep}
             onPasskeyLogin={handlePasskeyLogin}
-            replicateSourceUsername={accountSource === 'replicate' ? replicateSourceUsername : ''}
-            replicateSourcePeer={accountSource === 'replicate' ? replicateSourcePeer : ''}
             restoreBundle={accountSource === 'restore' ? restoreBundle : null}
             restorePassphrase={accountSource === 'restore' ? restorePassphrase : ''}
           />
@@ -119,10 +115,6 @@ export function SignIn() {
             <AccountSourceAdvanced
               source={accountSource}
               onSourceChange={setAccountSource}
-              replicateUsername={replicateSourceUsername}
-              onReplicateUsernameChange={setReplicateSourceUsername}
-              replicatePeer={replicateSourcePeer}
-              onReplicatePeerChange={setReplicateSourcePeer}
               restoreBundle={restoreBundle}
               onRestoreBundleChange={setRestoreBundle}
               restorePassphrase={restorePassphrase}

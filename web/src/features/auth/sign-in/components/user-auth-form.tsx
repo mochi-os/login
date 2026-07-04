@@ -9,7 +9,7 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Link } from '@tanstack/react-router'
-import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa, signupReplicate, signupRestore } from '@/services/auth-service'
+import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa, signupRestore } from '@/services/auth-service'
 import { OauthButtons } from '@/features/auth/components/oauth-buttons'
 import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Key } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
@@ -33,15 +33,6 @@ interface UserAuthFormProps extends React.HTMLAttributes<HTMLFormElement> {
   setStep?: (step: 'email' | 'verification') => void
   onPasskeyLogin?: () => void
   disabled?: boolean
-  /** When both are non-empty, the email submit routes through the
-   * per-user replicate-signup flow instead of the local /_/auth/code
-   * path. AccountSourceAdvanced renders in the parent (below the
-   * passkey/oauth row) for visual priority but uses the HTML5
-   * `form={emailFormId}` association to submit alongside the email
-   * field — that submission is what gets Chrome to remember the
-   * typed values for next time. */
-  replicateSourceUsername?: string
-  replicateSourcePeer?: string
   /** When set, the submit routes through POST /_/auth/restore (multipart). */
   restoreBundle?: File | null
   restorePassphrase?: string
@@ -54,8 +45,6 @@ export function UserAuthForm({
   setStep: externalSetStep,
   onPasskeyLogin,
   disabled = false,
-  replicateSourceUsername = '',
-  replicateSourcePeer = '',
   restoreBundle = null,
   restorePassphrase = '',
   ...props
@@ -178,11 +167,8 @@ export function UserAuthForm({
     })
   }
 
-  // Step 1: Submit email to get required methods. If the Advanced
-  // disclosure has a replicate-from value, route to /_/auth/replicate
-  // instead — this creates a pending-replication placeholder on this
-  // server and emits a link-request to the source. The user lands on
-  // the /replicating waiting page.
+  // Step 1: Submit email to get required methods (or, when the Advanced
+  // disclosure holds a restore bundle, run the restore signup instead).
   async function onSubmitEmail(data: EmailFormValues) {
     setIsLoading(true)
     setUserEmail(data.email)
@@ -227,50 +213,6 @@ export function UserAuthForm({
           })
         } else {
           toast.error(t`Restore failed`, {
-            description: getErrorMessage(error, t`Please try again or contact support.`),
-          })
-        }
-      } finally {
-        setIsLoading(false)
-      }
-      return
-    }
-
-    const sourceUsername = replicateSourceUsername.trim()
-    const source = replicateSourcePeer.trim()
-    if (sourceUsername && source) {
-      try {
-        await signupReplicate(data.email, source, sourceUsername)
-        const params = new URLSearchParams({
-          source,
-          source_user: sourceUsername,
-        })
-        window.location.href = `/login/replicating?${params.toString()}`
-      } catch (error) {
-        const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
-        const code = responseData?.error
-        if (code === 'username_taken') {
-          toast.error(t`Email already in use`, {
-            description: t`Choose a different local email or log in instead.`,
-          })
-        } else if (code === 'already_replicated') {
-          toast.error(t`Account already on this server`, {
-            description: t`Your account is already replicated here. Log in instead.`,
-          })
-        } else if (code === 'source_unreachable') {
-          toast.error(t`Could not reach the source server`, {
-            description: t`Check the address after @ and try again.`,
-          })
-        } else if (code === 'source_user_not_found') {
-          toast.error(t`No matching account on the source server`, {
-            description: t`Check the username before @ and try again.`,
-          })
-        } else if (code === 'signup_disabled') {
-          toast.error(t`Registration disabled`, {
-            description: getErrorMessage(error, t`New user signup is disabled.`),
-          })
-        } else {
-          toast.error(t`Replication signup failed`, {
             description: getErrorMessage(error, t`Please try again or contact support.`),
           })
         }

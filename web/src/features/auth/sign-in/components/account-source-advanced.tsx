@@ -3,22 +3,16 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-import { type ChangeEvent, useRef, useMemo, useState } from 'react'
-import { useLingui, Trans } from '@lingui/react/macro'
+import { type ChangeEvent, useRef, useState } from 'react'
+import { Trans } from '@lingui/react/macro'
 import { ChevronRight } from 'lucide-react'
 import { cn, Input } from '@mochi/web'
-import { emailFormId } from './user-auth-form'
 
-export type AccountSource = 'none' | 'replicate' | 'restore'
+export type AccountSource = 'none' | 'restore'
 
 interface AccountSourceAdvancedProps {
   source: AccountSource
   onSourceChange: (value: AccountSource) => void
-  // replicate fields
-  replicateUsername: string
-  onReplicateUsernameChange: (value: string) => void
-  replicatePeer: string
-  onReplicatePeerChange: (value: string) => void
   // restore fields
   restoreBundle: File | null
   onRestoreBundleChange: (value: File | null) => void
@@ -29,48 +23,20 @@ interface AccountSourceAdvancedProps {
 
 /**
  * Collapsible "Advanced" disclosure that lets the user choose where a
- * new account comes from: a fresh local signup (default), replication
- * from another running server, or restore from a backup bundle.
+ * new account comes from: a fresh local signup (default) or restore
+ * from a backup bundle.
  */
 export function AccountSourceAdvanced({
   source,
   onSourceChange,
-  replicateUsername,
-  onReplicateUsernameChange,
-  replicatePeer,
-  onReplicatePeerChange,
   restoreBundle,
   onRestoreBundleChange,
   restorePassphrase,
   onRestorePassphraseChange,
   disabled = false,
 }: AccountSourceAdvancedProps) {
-  const { t } = useLingui()
   const [open, setOpen] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
-
-  const [replicateUsernameTouched, setReplicateUsernameTouched] = useState(false)
-  const [replicatePeerTouched, setReplicatePeerTouched] = useState(false)
-
-  const usernameError = useMemo(() => {
-    if (!replicateUsernameTouched) return null
-    const trimmed = replicateUsername.trim()
-    if (!trimmed) return null
-    if (!/^[^@\s]+@[^@\s]+$/.test(trimmed)) {
-      return t`Use the form alice@example.com`
-    }
-    return null
-  }, [replicateUsername, replicateUsernameTouched, t])
-
-  const peerError = useMemo(() => {
-    if (!replicatePeerTouched) return null
-    const trimmed = replicatePeer.trim()
-    if (!trimmed) return null
-    if (!/^12D3KooW[A-HJ-NP-Za-km-z1-9]{44}$/.test(trimmed)) {
-      return t`Peer IDs start with 12D3KooW and are 52 characters long`
-    }
-    return null
-  }, [replicatePeer, replicatePeerTouched, t])
 
   return (
     <div>
@@ -105,75 +71,6 @@ export function AccountSourceAdvanced({
               <Trans>None; create a fresh account</Trans>
             </span>
           </label>
-
-          {/* Replicate */}
-          <label className='flex items-center gap-2 cursor-pointer'>
-            <input
-              type='radio'
-              name='account-source'
-              value='replicate'
-              checked={source === 'replicate'}
-              onChange={() => onSourceChange('replicate')}
-              disabled={disabled}
-              className='accent-primary'
-            />
-            <span className='text-xs'>
-              <Trans>Replicate from another server</Trans>
-            </span>
-          </label>
-
-          {source === 'replicate' && (
-            <div className='ms-5 space-y-2'>
-              <p className='text-muted-foreground text-xs'>
-                <Trans>
-                  Your account is copied live from a server you already have access to.
-                  The source server must approve the request before the transfer begins.
-                </Trans>
-              </p>
-              <div>
-                <label className='text-muted-foreground mb-1 block text-xs'>
-                  <Trans>Username on source server</Trans>
-                </label>
-                <Input
-                  form={emailFormId}
-                  name='replicate-username'
-                  placeholder='alice@example.com'
-                  autoComplete='username'
-                  spellCheck={false}
-                  disabled={disabled}
-                  value={replicateUsername}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    onReplicateUsernameChange(e.target.value)
-                  }
-                  onBlur={() => setReplicateUsernameTouched(true)}
-                />
-                {usernameError && (
-                  <p className='text-destructive mt-1 text-xs'>{usernameError}</p>
-                )}
-              </div>
-              <div>
-                <label className='text-muted-foreground mb-1 block text-xs'>
-                  <Trans>Source server peer ID</Trans>
-                </label>
-                <Input
-                  form={emailFormId}
-                  name='replicate-source-peer'
-                  placeholder='12D3KooW…'
-                  autoComplete='on'
-                  spellCheck={false}
-                  disabled={disabled}
-                  value={replicatePeer}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    onReplicatePeerChange(e.target.value)
-                  }
-                  onBlur={() => setReplicatePeerTouched(true)}
-                />
-                {peerError && (
-                  <p className='text-destructive mt-1 text-xs'>{peerError}</p>
-                )}
-              </div>
-            </div>
-          )}
 
           {/* Restore */}
           <label className='flex items-center gap-2 cursor-pointer'>

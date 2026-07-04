@@ -33,12 +33,6 @@ export const Route = createFileRoute('/identity')({
         identity?: { name?: string; privacy?: 'public' | 'private' }
       }>('/_/identity')
 
-      // Pending-replication placeholders wait for the source to
-      // approve. Identity is replicated in, not entered here.
-      if (data.user?.status === 'pending-replication') {
-        throw redirect({ to: '/replicating' })
-      }
-
       // Account pending closure: route to the reactivation interstitial.
       if (data.user?.status === 'closing') {
         throw redirect({ to: '/closing' })

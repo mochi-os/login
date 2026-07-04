@@ -21,7 +21,7 @@ type IdentityResponse = {
 }
 
 export const Route = createFileRoute('/closing')({
-  // No beforeLoad guard (mirrors /restore and /replicating): this page is
+  // No beforeLoad guard (mirrors /restore): this page is
   // reached right after a redirect, and a guard that fetched /_/identity and
   // redirected on the result races the just-confirmed session — a transient
   // hiccup bounces the user to the landing. Resolve status in the component
