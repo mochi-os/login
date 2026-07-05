@@ -260,13 +260,9 @@ export function LandingPage() {
   ]
 
   return (
-    <div className="relative flex min-h-svh flex-col overflow-hidden bg-background text-foreground">
-      {/* Decorative background */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-[420px] sm:h-[560px]"
-        style={{ background: 'radial-gradient(ellipse at top, oklch(var(--primary-l) var(--hue-chroma) var(--hue) / 0.10), transparent 70%)' }}
-      />
+    <div className="relative flex min-h-svh flex-col overflow-hidden text-foreground">
+      {/* Page background (colour + the theme's gentle gradient) comes from the
+          body via the theme variables - see styles/index.css. */}
 
       {/* Top actions */}
       <header className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between md:justify-end gap-2 px-4 pt-4 sm:gap-3 sm:px-6 sm:pt-5 lg:px-8">

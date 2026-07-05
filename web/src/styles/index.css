@@ -10,6 +10,9 @@
 @layer base {
   body {
     background-color: var(--background);
-    background-image: none;
+    background-image: var(--background-image, none);
+    background-size: var(--background-size, cover);
+    background-position: var(--background-position, center);
+    background-repeat: var(--background-repeat, no-repeat);
   }
 }
