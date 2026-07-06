@@ -13,22 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:238
-msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
-msgstr "{failed, plural, one {Försöker igen med # databas} other {Försöker igen med # databaser}}"
-
-#: src/routes/replicating.tsx:239
-msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
-msgstr "{failed, plural, one {Försöker igen med # fil} other {Försöker igen med # filer}}"
-
-#: src/routes/replicating.tsx:243
-msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
-msgstr "{remaining, plural, one {# databas återstår} other {# databaser återstår}}"
-
-#: src/routes/replicating.tsx:244
-msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
-msgstr "{remaining, plural, one {# fil återstår} other {# filer återstår}}"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 timmar"
@@ -40,6 +24,10 @@ msgstr "24 timmar"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Absolut (datum och tid)"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:60
+msgid "Access denied"
+msgstr "Åtkomst nekad"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:16
 msgid "Access Forbidden"
@@ -53,8 +41,7 @@ msgstr "Åtkomstnivå"
 msgid "Account added"
 msgstr "Konto tillagt"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:211
-#: src/features/auth/sign-in/components/user-auth-form.tsx:257
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Kontot finns redan på den här servern"
 
@@ -64,7 +51,7 @@ msgstr "Konto borttaget"
 
 #: src/features/auth/mfa/index.tsx:172
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:413
+#: src/features/auth/sign-in/components/user-auth-form.tsx:355
 msgid "Account suspended"
 msgstr "Konto avstängt"
 
@@ -122,7 +109,7 @@ msgstr "Lägg till vy"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Justera utseende och layout efter dina önskemål."
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:50
 msgid "Advanced"
 msgstr "Avancerat"
 
@@ -139,7 +126,7 @@ msgstr "Alla"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Ett konto med den e-postadressen finns redan. Logga in först, koppla sedan {0} från dina auth-inställningar."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "An account with this identity already exists here."
 msgstr "Ett konto med den här identiteten finns redan här."
 
@@ -147,7 +134,7 @@ msgstr "Ett konto med den här identiteten finns redan här."
 msgid "An error occurred"
 msgstr "Ett fel uppstod"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:256
 msgid "An unexpected error occurred"
 msgstr "Ett oväntat fel uppstod"
 
@@ -173,7 +160,7 @@ msgid "Authenticator code"
 msgstr "Autentiseringskod"
 
 #: ../../../lib/web/src/components/place-picker.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:590
+#: src/features/auth/sign-in/components/user-auth-form.tsx:532
 msgid "Back"
 msgstr "Tillbaka"
 
@@ -187,15 +174,15 @@ msgstr "Tillbaka till start"
 msgid "Back to sign up"
 msgstr "Tillbaka till registrering"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:205
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:102
 msgid "Backup file"
 msgstr "Säkerhetskopieringsfil"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:215
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Backup file is corrupted"
 msgstr "Säkerhetskopieringsfilen är skadad"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Backup is too new"
 msgstr "Säkerhetskopieringen är för ny"
 
@@ -204,7 +191,7 @@ msgstr "Säkerhetskopieringen är för ny"
 msgid "Boost interest"
 msgstr "Öka intresse"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:90
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:56
 msgid "Bring an existing account onto this server:"
 msgstr "Flytta ett befintligt konto till den här servern:"
 
@@ -221,45 +208,31 @@ msgstr "Genom att skapa ditt konto godkänner du <0>Serverreglerna</0>, <1>Villk
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/routes/replicating.tsx:211
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:144
+#: ../../../lib/web/src/components/notification-category-button.tsx:143
 msgid "Category for this notification"
 msgstr "Kategori för denna avisering"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:125
-#: ../../../lib/web/src/components/notification-category-button.tsx:136
+#: ../../../lib/web/src/components/notification-category-button.tsx:124
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Change notification category"
 msgstr "Ändra aviseringskategori"
 
-#: src/features/landing/landing-page.tsx:278
+#: src/features/landing/landing-page.tsx:251
 msgid "Chat"
 msgstr "Chatt"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:262
-msgid "Check the address after @ and try again."
-msgstr "Kontrollera adressen efter @ och försök igen."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
-msgid "Check the username before @ and try again."
-msgstr "Kontrollera användarnamnet före @ och försök igen."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "Check your email."
 msgstr "Kontrollera din e-post."
-
-#: src/routes/replicating.tsx:178
-msgid "Checking every few seconds…"
-msgstr "Kontrollerar var par sekund…"
 
 #: src/routes/restore.tsx:165
 msgid "Checking…"
 msgstr "Kontrollerar…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
-#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Choose a different local email or log in instead."
 msgstr "Välj en annan lokal e-postadress eller logga in i stället."
 
@@ -331,11 +304,11 @@ msgstr "Stäng panelen"
 msgid "Close search"
 msgstr "Stäng sökning"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:149
 msgid "Code copied"
 msgstr "Kod kopierad"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:145
+#: src/features/auth/sign-in/components/user-auth-form.tsx:134
 msgid "Code sent."
 msgstr "Kod skickad."
 
@@ -398,13 +371,12 @@ msgstr "Fortsätt med {label}"
 msgid "Copy"
 msgstr "Kopiera"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+#: src/features/auth/sign-in/components/user-auth-form.tsx:161
 msgid "Copy code"
 msgstr "Kopiera kod"
 
 #: src/features/auth/identity-form.tsx:162
-#: src/routes/replicating.tsx:206
 msgid "Could not cancel"
 msgstr "Kunde inte avbryta"
 
@@ -413,16 +385,12 @@ msgstr "Kunde inte avbryta"
 msgid "Could not load this document. Please try again later."
 msgstr "Kunde inte ladda detta dokument. Försök igen senare."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
-msgid "Could not reach the source server"
-msgstr "Det gick inte att nå källservern"
-
 #: src/routes/closing.tsx:69
 msgid "Could not reactivate your account"
 msgstr "Det gick inte att återaktivera ditt konto"
 
 #: src/features/auth/components/oauth-buttons.tsx:75
-#: src/features/landing/landing-page.tsx:209
+#: src/features/landing/landing-page.tsx:182
 msgid "Could not start sign-in"
 msgstr "Kunde inte starta inloggning"
 
@@ -438,11 +406,11 @@ msgstr "Det gick inte att starta omautentiseringen. Försök igen."
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Det gick inte att verifiera med det kontot. Försök igen."
 
-#: src/features/landing/landing-page.tsx:355
+#: src/features/landing/landing-page.tsx:324
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "Skapa ett <0>gratiskonto</0>, kör <1>din egen server</1> eller utforska <2>källkoden</2>."
 
-#: src/features/landing/landing-page.tsx:279
+#: src/features/landing/landing-page.tsx:252
 msgid "CRM"
 msgstr "CRM"
 
@@ -463,9 +431,9 @@ msgstr "Mörk"
 msgid "Dark mode"
 msgstr "Mörkt läge"
 
-#: src/routes/replicating.tsx:150
-msgid "Databases"
-msgstr "Databaser"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:240
+msgid "Data conflict"
+msgstr "Datakonflikt"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:310
 msgid "Default"
@@ -515,7 +483,6 @@ msgstr "Avfärda"
 msgid "Displays the mobile sidebar."
 msgstr "Visar mobil-sidofältet."
 
-#: src/routes/replicating.tsx:234
 #: src/routes/restore.tsx:56
 msgid "Done"
 msgstr "Klar"
@@ -537,12 +504,11 @@ msgstr "Dyslexivänlig"
 msgid "Edit {label}"
 msgstr "Redigera {label}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:624
+#: src/features/auth/sign-in/components/user-auth-form.tsx:566
 msgid "Email"
 msgstr "E-post"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:219
-#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "Email already in use"
 msgstr "E-postadressen används redan"
 
@@ -552,15 +518,15 @@ msgstr "e-postkod"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:221
-#: src/features/auth/sign-in/components/user-auth-form.tsx:476
+#: src/features/auth/sign-in/components/user-auth-form.tsx:418
 msgid "Email code"
 msgstr "E-postkod"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:501
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Email me a code"
 msgstr "Mejla mig en kod"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Enter a code to continue"
 msgstr "Ange en kod för att fortsätta"
 
@@ -568,7 +534,7 @@ msgstr "Ange en kod för att fortsätta"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Ange en återställningskod för \"{userEmail}\" för att logga in"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:457
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Enter the code from your authenticator app"
 msgstr "Ange koden från din autentiserarapp"
 
@@ -589,7 +555,7 @@ msgstr "Ange din {initial} och {last}"
 msgid "Enter your authenticator code"
 msgstr "Ange din autentiseringskod"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:449
+#: src/features/auth/sign-in/components/user-auth-form.tsx:391
 msgid "Enter your email code and authenticator code"
 msgstr "Ange din e-postkod och autentiserarkod"
 
@@ -616,11 +582,11 @@ msgstr "Misslyckades"
 msgid "Failed to add account"
 msgstr "Kunde inte lägga till konto"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Failed to continue"
 msgstr "Kunde inte fortsätta"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
 msgid "Failed to copy code"
 msgstr "Kunde inte kopiera kod"
 
@@ -636,23 +602,19 @@ msgstr "Kunde inte spara identitet"
 msgid "Failed to send verification code"
 msgstr "Kunde inte skicka verifieringskod"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:112
+#: ../../../lib/web/src/components/notification-category-button.tsx:111
 msgid "Failed to update category"
 msgstr "Kunde inte uppdatera kategori"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:253
 msgid "Feeds"
 msgstr "Flöden"
-
-#: src/routes/replicating.tsx:159
-msgid "Files"
-msgstr "Filer"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:88
 msgid "Finish moving your account"
 msgstr "Slutför flytten av ditt konto"
 
-#: src/routes/identity.tsx:96
+#: src/routes/identity.tsx:90
 msgid "Finish setting up your account"
 msgstr "Slutför kontoinställningen"
 
@@ -668,7 +630,7 @@ msgstr "Platt"
 msgid "Floating"
 msgstr "Flytande"
 
-#: src/features/landing/landing-page.tsx:281
+#: src/features/landing/landing-page.tsx:254
 msgid "Forums"
 msgstr "Forum"
 
@@ -693,11 +655,11 @@ msgstr "Från tema"
 msgid "Full layout"
 msgstr "Fullständig layout"
 
-#: src/features/landing/landing-page.tsx:282
+#: src/features/landing/landing-page.tsx:255
 msgid "Games"
 msgstr "Spel"
 
-#: src/features/landing/landing-page.tsx:283
+#: src/features/landing/landing-page.tsx:256
 msgid "Git repositories"
 msgstr "Git-arkiv"
 
@@ -766,7 +728,7 @@ msgstr "Indrag"
 msgid "Interests"
 msgstr "Intressen"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:401
+#: src/features/auth/sign-in/components/user-auth-form.tsx:343
 msgid "Invalid authenticator code"
 msgstr "Ogiltig autentiserarkod"
 
@@ -775,8 +737,8 @@ msgstr "Ogiltig autentiserarkod"
 #: src/features/auth/mfa/index.tsx:145
 #: src/features/auth/mfa/index.tsx:165
 #: src/features/auth/mfa/index.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
-#: src/features/auth/sign-in/components/user-auth-form.tsx:421
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
+#: src/features/auth/sign-in/components/user-auth-form.tsx:363
 msgid "Invalid code"
 msgstr "Ogiltig kod"
 
@@ -786,8 +748,8 @@ msgid "Invalid recovery code"
 msgstr "Ogiltig återställningskod"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
-#: src/features/auth/sign-in/components/user-auth-form.tsx:384
+#: src/features/auth/sign-in/components/user-auth-form.tsx:307
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Invalid verification code"
 msgstr "Ogiltig verifieringskod"
 
@@ -834,23 +796,23 @@ msgstr "Läser in…"
 
 #: src/features/auth/mfa/index.tsx:297
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:548
+#: src/features/auth/sign-in/components/user-auth-form.tsx:490
 msgid "Log in"
 msgstr "Logga in"
 
-#: src/features/landing/landing-page.tsx:399
+#: src/features/landing/landing-page.tsx:368
 msgid "Log in to Mochi"
 msgstr "Logga in på Mochi"
 
-#: src/features/landing/landing-page.tsx:471
+#: src/features/landing/landing-page.tsx:434
 msgid "Log in with {label}"
 msgstr "Logga in med {label}"
 
-#: src/features/auth/sign-in/index.tsx:109
+#: src/features/auth/sign-in/index.tsx:105
 msgid "Log in with passkey"
 msgstr "Logga in med passnyckel"
 
-#: src/features/auth/sign-in/index.tsx:76
+#: src/features/auth/sign-in/index.tsx:74
 msgid "Log in with your email address"
 msgstr "Logga in med din e-postadress"
 
@@ -865,8 +827,8 @@ msgid "Log out"
 msgstr "Logga ut"
 
 #: src/features/auth/recovery/index.tsx:44
-#: src/features/auth/sign-in/index.tsx:46
-#: src/features/landing/landing-page.tsx:239
+#: src/features/auth/sign-in/index.tsx:44
+#: src/features/landing/landing-page.tsx:212
 msgid "Logged in"
 msgstr "Inloggad"
 
@@ -887,7 +849,7 @@ msgid "Login session expired, please try again"
 msgstr "Inloggningssessionen har gått ut, försök igen"
 
 #: src/features/auth/mfa/index.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:599
+#: src/features/auth/sign-in/components/user-auth-form.tsx:541
 msgid "Lost access? Use a recovery code"
 msgstr "Förlorat åtkomst? Använd en återställningskod"
 
@@ -897,7 +859,7 @@ msgstr "Förlorat åtkomst? Använd en återställningskod"
 msgid "Mark all as read"
 msgstr "Markera alla som lästa"
 
-#: src/features/landing/landing-page.tsx:284
+#: src/features/landing/landing-page.tsx:257
 msgid "Market"
 msgstr "Marknad"
 
@@ -913,7 +875,7 @@ msgstr "Meny"
 msgid "Metric"
 msgstr "Metrisk"
 
-#: src/features/landing/landing-page.tsx:323
+#: src/features/landing/landing-page.tsx:292
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi är en federerad plattform med öppen källkod för flera användare avsedd för distribuerade appar. Vem som helst kan köra sin egen server och ansluta till vilken annan användare som helst på Mochi-nätverket. Vem som helst kan skapa och publicera appar. Varje app är utbytbar, även systemapparna. Servern levereras med över 20 appar, däribland:"
 
@@ -921,7 +883,8 @@ msgstr "Mochi är en federerad plattform med öppen källkod för flera använda
 msgid "Monday"
 msgstr "Måndag"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
+#: ../../../lib/web/src/features/errors/general-error.tsx:53
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:303
 msgid "Network error"
 msgstr "Nätverksfel"
 
@@ -933,14 +896,13 @@ msgstr "Ny"
 msgid "New accounts are disabled on this server"
 msgstr "Nya konton är inaktiverade på denna server"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:270
-#: src/features/auth/sign-in/components/user-auth-form.tsx:319
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "New user signup is disabled."
 msgstr "Registrering av nya användare är avstängd."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:637
+#: src/features/auth/sign-in/components/user-auth-form.tsx:579
 msgid "Next"
 msgstr "Nästa"
 
@@ -953,7 +915,7 @@ msgstr "Nästa bild"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Inga åtkomstregler konfigurerade. Lägg till regler för att styra vem som kan komma åt denna resurs."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:223
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "No backup file selected"
 msgstr "Ingen säkerhetskopieringsfil vald"
 
@@ -964,10 +926,6 @@ msgstr "Inga anslutna konton"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Inga grupper tillgängliga"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:265
-msgid "No matching account on the source server"
-msgstr "Inget matchande konto på källservern"
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -986,7 +944,7 @@ msgstr "Inga resultat hittades."
 msgid "No time zone found."
 msgstr "Ingen tidszon hittades."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:148
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "No topic record yet — try again after the next notification."
 msgstr "Ingen ämnespost ännu — försök igen efter nästa avisering."
 
@@ -1000,7 +958,7 @@ msgstr "Inga användare hittades"
 msgid "None"
 msgstr "Ingen"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:105
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:71
 msgid "None; create a fresh account"
 msgstr "Ingen; skapa ett nytt konto"
 
@@ -1008,9 +966,13 @@ msgstr "Ingen; skapa ett nytt konto"
 msgid "Normal"
 msgstr "Normal"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:203
+#: src/features/auth/sign-in/components/user-auth-form.tsx:189
 msgid "Not a migration bundle"
 msgstr "Inte ett migreringspaket"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:67
+msgid "Not found"
+msgstr "Hittades inte"
 
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:146
 msgid "Not set"
@@ -1053,16 +1015,16 @@ msgstr "Öppna navigeringsmeny"
 msgid "Open theme settings"
 msgstr "Öppna temainställningar"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:95
 msgid "Or"
 msgstr "Eller"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:518
+#: src/features/auth/sign-in/components/user-auth-form.tsx:460
 msgid "Or enter authenticator code"
 msgstr "Eller ange autentiseringskod"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:560
-#: src/features/landing/landing-page.tsx:440
+#: src/features/auth/sign-in/components/user-auth-form.tsx:502
+#: src/features/landing/landing-page.tsx:403
 msgid "Or log in with"
 msgstr "Eller logga in med"
 
@@ -1084,21 +1046,21 @@ msgstr "passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 #: src/features/auth/mfa/index.tsx:279
-#: src/features/landing/landing-page.tsx:459
+#: src/features/landing/landing-page.tsx:422
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/index.tsx:61
-#: src/features/landing/landing-page.tsx:266
+#: src/features/auth/sign-in/index.tsx:59
+#: src/features/landing/landing-page.tsx:239
 msgid "Passkey login cancelled"
 msgstr "Passkey-inloggning avbruten"
 
-#: src/features/auth/sign-in/index.tsx:59
-#: src/features/landing/landing-page.tsx:259
+#: src/features/auth/sign-in/index.tsx:57
+#: src/features/landing/landing-page.tsx:232
 msgid "Passkey login failed"
 msgstr "Passkey-inloggning misslyckades"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:298
+#: src/features/auth/sign-in/components/user-auth-form.tsx:240
 msgid "Passkey login required"
 msgstr "Passkey-inloggning krävs"
 
@@ -1114,41 +1076,39 @@ msgstr "Verifieringen med nyckel misslyckades. Försök igen."
 msgid "Passkeys"
 msgstr "Nycklar"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:224
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
 msgid "Passphrase"
 msgstr "Lösenfras"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:453
+#: src/features/auth/sign-in/components/user-auth-form.tsx:395
 msgid "Paste the login code you received by email"
 msgstr "Klistra in inloggningskoden du fick via e-post"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:70
-msgid "Peer IDs start with 12D3KooW and are 52 characters long"
-msgstr "Peer-ID:n börjar med 12D3KooW och är 52 tecken långa"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/sign-in/components/user-auth-form.tsx:344
 msgid "Please check your authenticator app and try again."
 msgstr "Kontrollera din autentiseringsapp och försök igen."
 
 #: src/features/auth/mfa/index.tsx:146
 #: src/features/auth/mfa/index.tsx:166
 #: src/features/auth/mfa/index.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:422
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Please check your code and try again."
 msgstr "Kontrollera din kod och försök igen."
 
 #: src/features/auth/mfa/index.tsx:104
 #: src/features/auth/mfa/index.tsx:126
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your codes and try again."
 msgstr "Kontrollera dina koder och försök igen."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
-#: src/features/auth/sign-in/components/user-auth-form.tsx:385
+#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:327
 msgid "Please check your email and try again."
 msgstr "Kontrollera din e-post och försök igen."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
+#: ../../../lib/web/src/features/errors/general-error.tsx:54
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:304
+#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "Kontrollera din internetanslutning och försök igen."
 
@@ -1157,11 +1117,11 @@ msgstr "Kontrollera din internetanslutning och försök igen."
 msgid "Please check your recovery code and try again."
 msgstr "Kontrollera din återställningskod och försök igen."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Please copy manually: {devCode}"
 msgstr "Kopiera manuellt: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:79
+#: src/features/auth/sign-in/components/user-auth-form.tsx:68
 msgid "Please enter a valid email"
 msgstr "Ange en giltig e-postadress"
 
@@ -1173,20 +1133,27 @@ msgstr "Ange ditt namn"
 msgid "Please enter your recovery code"
 msgstr "Ange din återställningskod"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:274
-#: src/features/auth/sign-in/components/user-auth-form.tsx:323
-#: src/features/auth/sign-in/components/user-auth-form.tsx:426
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Please try again or contact support."
 msgstr "Försök igen eller kontakta support."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:83
+msgid "Please try again."
+msgstr "Försök igen."
 
 #: src/features/auth/mfa/index.tsx:92
 msgid "Please use another verification method."
 msgstr "Använd en annan verifieringsmetod."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:299
+#: src/features/auth/sign-in/components/user-auth-form.tsx:241
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Använd knappen \"Logga in med passkey\"."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:75
+msgid "Please wait a moment and try again."
+msgstr "Vänta en stund och försök igen."
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
@@ -1196,7 +1163,7 @@ msgstr "Föregående bild"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:27
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 #: src/features/auth/identity-form.tsx:97
-#: src/features/landing/landing-page.tsx:528
+#: src/features/landing/landing-page.tsx:487
 msgid "Privacy"
 msgstr "Integritet"
 
@@ -1209,7 +1176,7 @@ msgstr "Privat"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/features/landing/landing-page.tsx:285
+#: src/features/landing/landing-page.tsx:258
 msgid "Projects"
 msgstr "Projekt"
 
@@ -1233,8 +1200,8 @@ msgstr "Registrera dina nycklar på nytt på den här servern"
 msgid "Reactivate my account"
 msgstr "Återaktivera mitt konto"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:219
-#: ../../../lib/web/src/components/search-entity-page.tsx:194
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:216
+#: ../../../lib/web/src/components/search-entity-page.tsx:240
 msgid "Recommended"
 msgstr "Rekommenderad"
 
@@ -1255,10 +1222,9 @@ msgstr "Omdirigerar dig till instrumentpanelen…"
 msgid "Reduce interest"
 msgstr "Minska intresse"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:269
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
-#: src/features/auth/sign-in/components/user-auth-form.tsx:417
+#: src/features/auth/sign-in/components/user-auth-form.tsx:211
+#: src/features/auth/sign-in/components/user-auth-form.tsx:260
+#: src/features/auth/sign-in/components/user-auth-form.tsx:359
 msgid "Registration disabled"
 msgstr "Registrering inaktiverad"
 
@@ -1289,26 +1255,6 @@ msgstr "Ta bort åtkomst?"
 msgid "Remove interest"
 msgstr "Ta bort intresse"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
-msgid "Replicate from another server"
-msgstr "Replikera från en annan server"
-
-#: src/features/landing/landing-page.tsx:166
-msgid "Replication request denied"
-msgstr "Replikeringsbegäran nekad"
-
-#: src/routes/replicating.tsx:135
-msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
-msgstr "Replikeringsbegäran skickad till <0>{source_user}</0>. Godkänn den på källserverns inställningssida för att slutföra replikeringen."
-
-#: src/routes/replicating.tsx:139
-msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
-msgstr "Replikeringsbegäran skickad till källservern. Godkänn den på källserverns inställningssida för att slutföra replikeringen."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-msgid "Replication signup failed"
-msgstr "Registrering via replikering misslyckades"
-
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Skicka e-post igen"
@@ -1322,11 +1268,11 @@ msgstr "Återställ"
 msgid "Reset all settings to default values"
 msgstr "Återställ alla inställningar till standardvärden"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:190
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:87
 msgid "Restore a backup file"
 msgstr "Återställ en säkerhetskopieringsfil"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:215
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Återställningen misslyckades"
@@ -1376,8 +1322,8 @@ msgstr "Sök användare"
 msgid "Search..."
 msgstr "Sök..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:177
-#: ../../../lib/web/src/components/search-entity-page.tsx:152
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:174
+#: ../../../lib/web/src/components/search-entity-page.tsx:198
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "Söker..."
@@ -1426,20 +1372,20 @@ msgstr "Skicka e-post"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:260
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:286
 msgid "Server error"
 msgstr "Serverfel"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:40
-#: src/features/landing/landing-page.tsx:510
+#: src/features/landing/landing-page.tsx:469
 msgid "Server rules"
 msgstr "Serverregler"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
-msgid "Session expired"
-msgstr "Sessionen har löpt ut"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:210
+msgid "Session expired. Please log in again."
+msgstr "Sessionen har gått ut. Logga in igen."
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:147
 msgid "Set origin and destination"
@@ -1472,7 +1418,7 @@ msgstr "Sidofält"
 msgid "Sign out"
 msgstr "Logga ut"
 
-#: src/features/landing/landing-page.tsx:303
+#: src/features/landing/landing-page.tsx:272
 msgid "Sign up or log in"
 msgstr "Registrera dig eller logga in"
 
@@ -1497,14 +1443,6 @@ msgstr "Hoppa till huvudinnehåll"
 msgid "Small"
 msgstr "Liten"
 
-#: src/routes/replicating.tsx:168
-msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
-msgstr "Vissa överföringar slutfördes inte vid första försöket. De kommer att försökas igen automatiskt."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:156
-msgid "Source server peer ID"
-msgstr "Peer-ID för källservern"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:97
 msgid "Spacious"
 msgstr "Rymlig"
@@ -1513,10 +1451,6 @@ msgstr "Rymlig"
 #: src/features/auth/recovery/index.tsx:143
 msgid "Start again"
 msgstr "Börja om"
-
-#: src/routes/replicating.tsx:246
-msgid "Starting…"
-msgstr "Startar…"
 
 #: src/features/auth/identity-form.tsx:126
 msgid "Stay hidden from directory searches."
@@ -1537,10 +1471,6 @@ msgstr "Inloggning med återställningskod lyckades"
 #: ../../../lib/web/src/lib/preference-utils.ts:65
 msgid "Sunday"
 msgstr "Söndag"
-
-#: src/routes/replicating.tsx:124
-msgid "Syncing your data"
-msgstr "Synkroniserar dina data"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
 #: ../../../lib/web/src/lib/preference-utils.ts:21
@@ -1563,7 +1493,7 @@ msgstr "Team/Appar"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
 #: ../../../lib/web/src/features/document/document-page.tsx:42
-#: src/features/landing/landing-page.tsx:519
+#: src/features/landing/landing-page.tsx:478
 msgid "Terms and conditions"
 msgstr "Villkor"
 
@@ -1580,15 +1510,15 @@ msgstr "Koden är felaktig eller har upphört att gälla."
 msgid "That sign-in provider is not available"
 msgstr "Den inloggningsleverantören är inte tillgänglig"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:197
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:94
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "E-postadressen du anger ovan blir det nya kontots namn på den här servern. Säkerhetskopians identitet får inte redan vara aktiv här — återställ till en annan server, eller ta bort det befintliga kontot först."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "The file may be damaged or have been modified."
 msgstr "Filen kan vara skadad eller ha ändrats."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:200
+#: src/features/auth/sign-in/components/user-auth-form.tsx:186
 msgid "The passphrase you entered does not match the backup."
 msgstr "Lösenfransen du angav stämmer inte med säkerhetskopian."
 
@@ -1596,13 +1526,13 @@ msgstr "Lösenfransen du angav stämmer inte med säkerhetskopian."
 msgid "the provider"
 msgstr "leverantören"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:68
+msgid "The requested content could not be found."
+msgstr "Det begärda innehållet kunde inte hittas."
+
 #: src/routes/restore.tsx:111
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Återställningen slutfördes inte. Säkerhetskopieringsfilen kan vara skadad, lösenfransen kan vara fel eller servern stötte på ett fel."
-
-#: src/features/landing/landing-page.tsx:167
-msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
-msgstr "Källservern godkände inte begäran, eller så löpte den ut. Försök igen eller registrera dig lokalt."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
@@ -1612,7 +1542,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Temainställningar"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:208
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Den här säkerhetskopian skapades av en nyare version av Mochi. Uppdatera den här servern först."
 
@@ -1651,6 +1581,10 @@ msgstr "Växla sidofält"
 msgid "Toggle theme"
 msgstr "Växla tema"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:74
+msgid "Too many requests"
+msgstr "För många förfrågningar"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:45
 msgid "Top"
 msgstr "Topp"
@@ -1659,13 +1593,13 @@ msgstr "Topp"
 msgid "Travelling"
 msgstr "Reser"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:193
-#: ../../../lib/web/src/components/search-entity-page.tsx:168
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:190
+#: ../../../lib/web/src/components/search-entity-page.tsx:214
 msgid "Try adjusting your search terms"
 msgstr "Försök justera dina sökord"
 
-#: ../../../lib/web/src/features/errors/general-error.tsx:128
-#: ../../../lib/web/src/features/errors/general-error.tsx:168
+#: ../../../lib/web/src/features/errors/general-error.tsx:140
+#: ../../../lib/web/src/features/errors/general-error.tsx:180
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:19
 msgid "Try again"
 msgstr "Försök igen"
@@ -1686,7 +1620,7 @@ msgstr "Skriv för att söka användare"
 msgid "Type to search..."
 msgstr "Skriv för att söka..."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:282
 msgid "Unable to connect to remote server"
 msgstr "Det gick inte att ansluta till fjärrservern"
 
@@ -1695,7 +1629,7 @@ msgstr "Det gick inte att ansluta till fjärrservern"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Kunde inte omdirigera till inloggning. Försök igen."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:156
+#: ../../../lib/web/src/components/notification-category-button.tsx:155
 msgid "Unassigned"
 msgstr "Otilldelad"
 
@@ -1715,7 +1649,7 @@ msgstr "Packar upp dina data"
 msgid "Unverified"
 msgstr "Overifierad"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:204
+#: src/features/auth/sign-in/components/user-auth-form.tsx:190
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Ladda upp en .zip-fil som exporterats från Mochis dataexport."
 
@@ -1723,13 +1657,9 @@ msgstr "Ladda upp en .zip-fil som exporterats från Mochis dataexport."
 msgid "Use a different account"
 msgstr "Använd ett annat konto"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:575
+#: src/features/auth/sign-in/components/user-auth-form.tsx:517
 msgid "Use a passkey"
 msgstr "Använd en nyckel"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:60
-msgid "Use the form alice@example.com"
-msgstr "Använd formatet alice@example.com"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1738,10 +1668,6 @@ msgstr "Använd din nyckel"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Användare"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:135
-msgid "Username on source server"
-msgstr "Användarnamn på källservern"
 
 #: src/routes/restore.tsx:51
 msgid "Validating backup"
@@ -1756,7 +1682,7 @@ msgid "Verification code sent"
 msgstr "Verifieringskod skickad"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:367
 msgid "Verification failed"
 msgstr "Verifiering misslyckades"
 
@@ -1795,10 +1721,6 @@ msgstr "Visa alla"
 msgid "View all notifications"
 msgstr "Visa alla aviseringar"
 
-#: src/routes/replicating.tsx:126
-msgid "Waiting for approval"
-msgstr "Väntar på godkännande"
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
 msgstr "Vi är snart online igen."
@@ -1811,13 +1733,17 @@ msgstr "Webbplatsen underhålls!"
 msgid "Wednesday"
 msgstr "Onsdag"
 
-#: src/features/landing/landing-page.tsx:286
+#: src/features/landing/landing-page.tsx:259
 msgid "Wikis"
 msgstr "Wikier"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
 msgid "Wrong passphrase"
 msgstr "Fel lösenfras"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:61
+msgid "You do not have access to this section."
+msgstr "Du har inte åtkomst till det här avsnittet."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43
@@ -1838,21 +1764,9 @@ msgstr "Ditt konto har stängts av"
 
 #: src/features/auth/mfa/index.tsx:173
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/features/auth/sign-in/components/user-auth-form.tsx:356
 msgid "Your account has been suspended."
 msgstr "Ditt konto har stängts av."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:258
-msgid "Your account is already replicated here. Log in instead."
-msgstr "Ditt konto är redan replikerat hit. Logga in i stället."
-
-#: src/routes/replicating.tsx:131
-msgid "Your account is being copied from the source server. Do not close this window."
-msgstr "Ditt konto kopieras från källservern. Stäng inte det här fönstret."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:128
-msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
-msgstr "Ditt konto kopieras live från en server du redan har tillgång till. Källservern måste godkänna begäran innan överföringen börjar."
 
 #: src/routes/closing.tsx:95
 msgid "Your account is scheduled for deletion"
@@ -1870,7 +1784,7 @@ msgstr "Ditt konto kräver en passkey för att logga in"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ditt konto flyttades hit från {source}. Tills du tar bort det där kan meddelanden och notiser nå båda servrarna, en del av ditt innehåll fortsätter att levereras från den gamla servern och följare kan behöva några minuter för att hitta dig här."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:137
 msgid "Your code is: {devCode}"
 msgstr "Din kod är: {devCode}"
 

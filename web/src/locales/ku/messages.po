@@ -13,22 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:238
-msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
-msgstr "{failed, plural, one {Carkirina # databasê dîsa} other {Carkirina # databasan dîsa}}"
-
-#: src/routes/replicating.tsx:239
-msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
-msgstr "{failed, plural, one {Carkirina # pelê dîsa} other {Carkirina # pelan dîsa}}"
-
-#: src/routes/replicating.tsx:243
-msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
-msgstr "{remaining, plural, one {# databasê maye} other {# databasan maye}}"
-
-#: src/routes/replicating.tsx:244
-msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
-msgstr "{remaining, plural, one {# pelê maye} other {# pelan maye}}"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 saet"
@@ -40,6 +24,10 @@ msgstr "24 saet"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Mutleq (dîrok û saet)"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:60
+msgid "Access denied"
+msgstr "Gihîştin hat redkirin"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:16
 msgid "Access Forbidden"
@@ -53,8 +41,7 @@ msgstr "Asta gihîştinê"
 msgid "Account added"
 msgstr "Hesab hat zêdekirin"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:211
-#: src/features/auth/sign-in/components/user-auth-form.tsx:257
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Hesab jixwe li ser vê rajekarê heye"
 
@@ -64,7 +51,7 @@ msgstr "Hesab hat rakirin"
 
 #: src/features/auth/mfa/index.tsx:172
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:413
+#: src/features/auth/sign-in/components/user-auth-form.tsx:355
 msgid "Account suspended"
 msgstr "Hesab hat sekinandin"
 
@@ -122,7 +109,7 @@ msgstr "Dîtin zêde bike"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Xuyabûn û rûxsarê li gor tercîhên xwe biguherîne."
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:50
 msgid "Advanced"
 msgstr "Pêşketî"
 
@@ -139,7 +126,7 @@ msgstr "Hemû"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Hesabek bi wê e-nameyê jixwe heye. Pêşî têkeve, paşê {0} ji mîhengên xwe yên Auth ve girêbide."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "An account with this identity already exists here."
 msgstr "Hesabek bi vê nasnameyê jixwe li vir heye."
 
@@ -147,7 +134,7 @@ msgstr "Hesabek bi vê nasnameyê jixwe li vir heye."
 msgid "An error occurred"
 msgstr "Çewtiyek çêbû"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:256
 msgid "An unexpected error occurred"
 msgstr "Çewtiyeke neçaverêkirî çêbû"
 
@@ -173,7 +160,7 @@ msgid "Authenticator code"
 msgstr "Koda rastandinê"
 
 #: ../../../lib/web/src/components/place-picker.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:590
+#: src/features/auth/sign-in/components/user-auth-form.tsx:532
 msgid "Back"
 msgstr "Vegere"
 
@@ -187,15 +174,15 @@ msgstr "Vegere ser malê"
 msgid "Back to sign up"
 msgstr "Vegere qeydkirinê"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:205
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:102
 msgid "Backup file"
 msgstr "Pelê piştgirîyê"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:215
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Backup file is corrupted"
 msgstr "Pelê piştgirîyê xera bûye"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Backup is too new"
 msgstr "Piştgirî pir nû ye"
 
@@ -204,7 +191,7 @@ msgstr "Piştgirî pir nû ye"
 msgid "Boost interest"
 msgstr "Berjewendiyê zêde bike"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:90
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:56
 msgid "Bring an existing account onto this server:"
 msgstr "Hesabek heyî bînin vê serverê:"
 
@@ -221,45 +208,31 @@ msgstr "Bi çêkirina hesabê xwe re tu bi <0>Qaîdeyên Serverê</0>, <1>Şert 
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/routes/replicating.tsx:211
 msgid "Cancel"
 msgstr "Betal bike"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:144
+#: ../../../lib/web/src/components/notification-category-button.tsx:143
 msgid "Category for this notification"
 msgstr "Kategoriya vê agahdariyê"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:125
-#: ../../../lib/web/src/components/notification-category-button.tsx:136
+#: ../../../lib/web/src/components/notification-category-button.tsx:124
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Change notification category"
 msgstr "Kategoriya agahdariyê biguherîne"
 
-#: src/features/landing/landing-page.tsx:278
+#: src/features/landing/landing-page.tsx:251
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:262
-msgid "Check the address after @ and try again."
-msgstr "Navnîşana piştî @ kontrol bike û dîsa biceribîne."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
-msgid "Check the username before @ and try again."
-msgstr "Navê bikarhêner berî @ kontrol bike û dîsa biceribîne."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "Check your email."
 msgstr "E-nameya xwe kontrol bike."
-
-#: src/routes/replicating.tsx:178
-msgid "Checking every few seconds…"
-msgstr "Her çend çirkeyan caran kontrol dike…"
 
 #: src/routes/restore.tsx:165
 msgid "Checking…"
 msgstr "Kontrol kirin…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
-#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Choose a different local email or log in instead."
 msgstr "E-peyamek herêmî ya cûda hilbijêre an jî di şûna wê de têkeve."
 
@@ -331,11 +304,11 @@ msgstr "Panelê bigire"
 msgid "Close search"
 msgstr "Lêgerînê bigire"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:149
 msgid "Code copied"
 msgstr "Kod hat kopîkirin"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:145
+#: src/features/auth/sign-in/components/user-auth-form.tsx:134
 msgid "Code sent."
 msgstr "Kod hat şandin."
 
@@ -398,13 +371,12 @@ msgstr "Bi {label} berdewam be"
 msgid "Copy"
 msgstr "Kopî bike"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+#: src/features/auth/sign-in/components/user-auth-form.tsx:161
 msgid "Copy code"
 msgstr "Kodê kopî bike"
 
 #: src/features/auth/identity-form.tsx:162
-#: src/routes/replicating.tsx:206
 msgid "Could not cancel"
 msgstr "Nikarîbû betal bibe"
 
@@ -413,16 +385,12 @@ msgstr "Nikarîbû betal bibe"
 msgid "Could not load this document. Please try again later."
 msgstr "Ev belge nikarîbû were barkirin. Ji kerema xwe re paşê dîsa biceribîne."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
-msgid "Could not reach the source server"
-msgstr "Nehate gihîştin rajekara çavkanî"
-
 #: src/routes/closing.tsx:69
 msgid "Could not reactivate your account"
 msgstr "Hesabê we ji nû ve nehat çalakkirin"
 
 #: src/features/auth/components/oauth-buttons.tsx:75
-#: src/features/landing/landing-page.tsx:209
+#: src/features/landing/landing-page.tsx:182
 msgid "Could not start sign-in"
 msgstr "Têketin nikarîbû dest pê bike"
 
@@ -438,11 +406,11 @@ msgstr "Verastkirina ji nû ve nehate destpêkirin. Ji kerema xwe dîsa bicerib�
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Bi wê hesabê re piştrastkirin pêk nehat. Ji kerema xwe dîsa biceribîne."
 
-#: src/features/landing/landing-page.tsx:355
+#: src/features/landing/landing-page.tsx:324
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "<0>hesabek belaş</0> çêbike, <1>servera xwe</1> bixebitîne, an <2>koda çavkaniyê</2> bigere."
 
-#: src/features/landing/landing-page.tsx:279
+#: src/features/landing/landing-page.tsx:252
 msgid "CRM"
 msgstr "CRM"
 
@@ -463,9 +431,9 @@ msgstr "Tarî"
 msgid "Dark mode"
 msgstr "Awayê tarî"
 
-#: src/routes/replicating.tsx:150
-msgid "Databases"
-msgstr "Danegehên daneyan"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:240
+msgid "Data conflict"
+msgstr "Nakokiya daneyan"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:310
 msgid "Default"
@@ -515,7 +483,6 @@ msgstr "Red bike"
 msgid "Displays the mobile sidebar."
 msgstr "Panela kêlekê ya mobîl nîşan dide."
 
-#: src/routes/replicating.tsx:234
 #: src/routes/restore.tsx:56
 msgid "Done"
 msgstr "Qediya"
@@ -537,12 +504,11 @@ msgstr "Hevhewş ji bo dîslêksiyê"
 msgid "Edit {label}"
 msgstr "{label} biguherîne"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:624
+#: src/features/auth/sign-in/components/user-auth-form.tsx:566
 msgid "Email"
 msgstr "E-name"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:219
-#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "Email already in use"
 msgstr "E-peyam jixwe tê bikaranîn"
 
@@ -552,15 +518,15 @@ msgstr "koda e-nameyê"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:221
-#: src/features/auth/sign-in/components/user-auth-form.tsx:476
+#: src/features/auth/sign-in/components/user-auth-form.tsx:418
 msgid "Email code"
 msgstr "Koda e-nameyê"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:501
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Email me a code"
 msgstr "Bi e-nameyê kodekê ji min re bişîne"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Enter a code to continue"
 msgstr "Ji bo berdewamkirinê kodekê binivîse"
 
@@ -568,7 +534,7 @@ msgstr "Ji bo berdewamkirinê kodekê binivîse"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Ji bo têketinê ji bo \"{userEmail}\" kodek vegerandinê binivîse"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:457
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Enter the code from your authenticator app"
 msgstr "Koda ji sepana xwe ya rastandinê binivîse"
 
@@ -589,7 +555,7 @@ msgstr "{initial} û {last} ya xwe binivîse"
 msgid "Enter your authenticator code"
 msgstr "Koda authenticator-a xwe têkevê"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:449
+#: src/features/auth/sign-in/components/user-auth-form.tsx:391
 msgid "Enter your email code and authenticator code"
 msgstr "Koda e-nameyê û koda rastandinê binivîse"
 
@@ -616,11 +582,11 @@ msgstr "Têk çû"
 msgid "Failed to add account"
 msgstr "Zêdekirina hesabê neserkeftî bû"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Failed to continue"
 msgstr "Berdewamkirin neserkeftî bû"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
 msgid "Failed to copy code"
 msgstr "Kopîkirina kodê neserkeftî bû"
 
@@ -636,23 +602,19 @@ msgstr "Tomarkirina nasnameyê neserkeftî bû"
 msgid "Failed to send verification code"
 msgstr "Şandina koda rastandinê neserkeftî bû"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:112
+#: ../../../lib/web/src/components/notification-category-button.tsx:111
 msgid "Failed to update category"
 msgstr "Rojanekirina kategoriyê neserkeftî bû"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:253
 msgid "Feeds"
 msgstr "Feed"
-
-#: src/routes/replicating.tsx:159
-msgid "Files"
-msgstr "Pelan"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:88
 msgid "Finish moving your account"
 msgstr "Veguheztina hesabê xwe biqedînin"
 
-#: src/routes/identity.tsx:96
+#: src/routes/identity.tsx:90
 msgid "Finish setting up your account"
 msgstr "Saznekirina hesabê xwe biqedîne"
 
@@ -668,7 +630,7 @@ msgstr "Tasî"
 msgid "Floating"
 msgstr "Belavbûyî"
 
-#: src/features/landing/landing-page.tsx:281
+#: src/features/landing/landing-page.tsx:254
 msgid "Forums"
 msgstr "Forum"
 
@@ -693,11 +655,11 @@ msgstr "Ji temayê"
 msgid "Full layout"
 msgstr "Bargeyê tev"
 
-#: src/features/landing/landing-page.tsx:282
+#: src/features/landing/landing-page.tsx:255
 msgid "Games"
 msgstr "Lîstik"
 
-#: src/features/landing/landing-page.tsx:283
+#: src/features/landing/landing-page.tsx:256
 msgid "Git repositories"
 msgstr "Depoyên Git"
 
@@ -766,7 +728,7 @@ msgstr "Inset"
 msgid "Interests"
 msgstr "Balkêşî"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:401
+#: src/features/auth/sign-in/components/user-auth-form.tsx:343
 msgid "Invalid authenticator code"
 msgstr "Koda rastînkerê nederbasdar"
 
@@ -775,8 +737,8 @@ msgstr "Koda rastînkerê nederbasdar"
 #: src/features/auth/mfa/index.tsx:145
 #: src/features/auth/mfa/index.tsx:165
 #: src/features/auth/mfa/index.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
-#: src/features/auth/sign-in/components/user-auth-form.tsx:421
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
+#: src/features/auth/sign-in/components/user-auth-form.tsx:363
 msgid "Invalid code"
 msgstr "Koda nederbasdar"
 
@@ -786,8 +748,8 @@ msgid "Invalid recovery code"
 msgstr "Koda vegerandinê nederbasdar"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
-#: src/features/auth/sign-in/components/user-auth-form.tsx:384
+#: src/features/auth/sign-in/components/user-auth-form.tsx:307
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Invalid verification code"
 msgstr "Koda rastandinê nederbasdar"
 
@@ -834,23 +796,23 @@ msgstr "Tê barkirin…"
 
 #: src/features/auth/mfa/index.tsx:297
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:548
+#: src/features/auth/sign-in/components/user-auth-form.tsx:490
 msgid "Log in"
 msgstr "Têkeve"
 
-#: src/features/landing/landing-page.tsx:399
+#: src/features/landing/landing-page.tsx:368
 msgid "Log in to Mochi"
 msgstr "Têkeve Mochi"
 
-#: src/features/landing/landing-page.tsx:471
+#: src/features/landing/landing-page.tsx:434
 msgid "Log in with {label}"
 msgstr "Bi {label} re têkeve"
 
-#: src/features/auth/sign-in/index.tsx:109
+#: src/features/auth/sign-in/index.tsx:105
 msgid "Log in with passkey"
 msgstr "Bi passkey re têkeve"
 
-#: src/features/auth/sign-in/index.tsx:76
+#: src/features/auth/sign-in/index.tsx:74
 msgid "Log in with your email address"
 msgstr "Bi navnîşana e-nameya xwe re têkeve"
 
@@ -865,8 +827,8 @@ msgid "Log out"
 msgstr "Derkeve"
 
 #: src/features/auth/recovery/index.tsx:44
-#: src/features/auth/sign-in/index.tsx:46
-#: src/features/landing/landing-page.tsx:239
+#: src/features/auth/sign-in/index.tsx:44
+#: src/features/landing/landing-page.tsx:212
 msgid "Logged in"
 msgstr "Têket"
 
@@ -887,7 +849,7 @@ msgid "Login session expired, please try again"
 msgstr "Danîştina têketinê derbas bû, ji kerema xwe dîsa biceribîne"
 
 #: src/features/auth/mfa/index.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:599
+#: src/features/auth/sign-in/components/user-auth-form.tsx:541
 msgid "Lost access? Use a recovery code"
 msgstr "Gihiştin wenda? Koda vegerandinê bi kar bîne"
 
@@ -897,7 +859,7 @@ msgstr "Gihiştin wenda? Koda vegerandinê bi kar bîne"
 msgid "Mark all as read"
 msgstr "Hemû wek xwendî nîşan bike"
 
-#: src/features/landing/landing-page.tsx:284
+#: src/features/landing/landing-page.tsx:257
 msgid "Market"
 msgstr "Bazar"
 
@@ -913,7 +875,7 @@ msgstr "Menu"
 msgid "Metric"
 msgstr "Mîtrîk"
 
-#: src/features/landing/landing-page.tsx:323
+#: src/features/landing/landing-page.tsx:292
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi platformeke çavkaniya vekirî, federe û pir-bikarhêner e ji bo sepanên belavkirî. Her kes dikare servera xwe bixebitîne, û bi her bikarhênerekî din yê li ser tora Mochiyê ve girê bide. Her kes dikare sepanan biafirîne û biweşîne. Her sepan dikare bê guhertin, tevî yên pergalê jî. Server bi zêdetirî 20 sepanan re tê, di nav wan de:"
 
@@ -921,7 +883,8 @@ msgstr "Mochi platformeke çavkaniya vekirî, federe û pir-bikarhêner e ji bo 
 msgid "Monday"
 msgstr "Duşem"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
+#: ../../../lib/web/src/features/errors/general-error.tsx:53
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:303
 msgid "Network error"
 msgstr "Çewtiya torê"
 
@@ -933,14 +896,13 @@ msgstr "Nû"
 msgid "New accounts are disabled on this server"
 msgstr "Hesabên nû li ser vê serverê neçalak in"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:270
-#: src/features/auth/sign-in/components/user-auth-form.tsx:319
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "New user signup is disabled."
 msgstr "Tomarkirina bikarhênerên nû neçalak e."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:637
+#: src/features/auth/sign-in/components/user-auth-form.tsx:579
 msgid "Next"
 msgstr "Pêştir"
 
@@ -953,7 +915,7 @@ msgstr "Wêneya pêştir"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Tu rêzikên destpêkirinê nehatine mîhengkirin. Rêzikan zêde bike da ku kontrol bike kî dikare bigihîje vê çavkaniyê."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:223
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "No backup file selected"
 msgstr "Pelê piştgirîyê nehat hilbijartin"
 
@@ -964,10 +926,6 @@ msgstr "Tu hesabên girêdayî tune"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Tu kom berdest nîn in"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:265
-msgid "No matching account on the source server"
-msgstr "Li ser rajekara çavkanî hesabek lihevhatî tune ye"
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -986,7 +944,7 @@ msgstr "Tu encam nehatin dîtin."
 msgid "No time zone found."
 msgstr "Tu herêma demê nehat dîtin."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:148
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "No topic record yet — try again after the next notification."
 msgstr "Hêj tu tomarê mijarê tune — piştî agahdariya pêştir dîsa biceribîne."
 
@@ -1000,7 +958,7 @@ msgstr "Tu bikarhêner nehatin dîtin"
 msgid "None"
 msgstr "Tu"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:105
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:71
 msgid "None; create a fresh account"
 msgstr "Tune; hesabek nû biafirîne"
 
@@ -1008,9 +966,13 @@ msgstr "Tune; hesabek nû biafirîne"
 msgid "Normal"
 msgstr "Asayî"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:203
+#: src/features/auth/sign-in/components/user-auth-form.tsx:189
 msgid "Not a migration bundle"
 msgstr "Ev pakêta koçkirinê nîne"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:67
+msgid "Not found"
+msgstr "Nehat dîtin"
 
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:146
 msgid "Not set"
@@ -1053,16 +1015,16 @@ msgstr "Menûya navîgasyonê veke"
 msgid "Open theme settings"
 msgstr "Mîhengên temayê veke"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:95
 msgid "Or"
 msgstr "An"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:518
+#: src/features/auth/sign-in/components/user-auth-form.tsx:460
 msgid "Or enter authenticator code"
 msgstr "An koda erêkirinê binivîse"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:560
-#: src/features/landing/landing-page.tsx:440
+#: src/features/auth/sign-in/components/user-auth-form.tsx:502
+#: src/features/landing/landing-page.tsx:403
 msgid "Or log in with"
 msgstr "An tê ket bi"
 
@@ -1084,21 +1046,21 @@ msgstr "passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 #: src/features/auth/mfa/index.tsx:279
-#: src/features/landing/landing-page.tsx:459
+#: src/features/landing/landing-page.tsx:422
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/index.tsx:61
-#: src/features/landing/landing-page.tsx:266
+#: src/features/auth/sign-in/index.tsx:59
+#: src/features/landing/landing-page.tsx:239
 msgid "Passkey login cancelled"
 msgstr "Têketina Passkey hate betalkirin"
 
-#: src/features/auth/sign-in/index.tsx:59
-#: src/features/landing/landing-page.tsx:259
+#: src/features/auth/sign-in/index.tsx:57
+#: src/features/landing/landing-page.tsx:232
 msgid "Passkey login failed"
 msgstr "Têketina Passkey têk çû"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:298
+#: src/features/auth/sign-in/components/user-auth-form.tsx:240
 msgid "Passkey login required"
 msgstr "Têketina Passkey pêwîst e"
 
@@ -1114,41 +1076,39 @@ msgstr "Verastkirina passkey têk çû. Ji kerema xwe dîsa biceribîne."
 msgid "Passkeys"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:224
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
 msgid "Passphrase"
 msgstr "Pêvajo"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:453
+#: src/features/auth/sign-in/components/user-auth-form.tsx:395
 msgid "Paste the login code you received by email"
 msgstr "Koda têketinê ya ku te bi e-name stand binivîse"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:70
-msgid "Peer IDs start with 12D3KooW and are 52 characters long"
-msgstr "Peer ID bi 12D3KooW dest pê dikin û 52 tîpan dirêj in"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/sign-in/components/user-auth-form.tsx:344
 msgid "Please check your authenticator app and try again."
 msgstr "Ji kerema xwe app a authenticator kontrol bike û dîsa biceribîne."
 
 #: src/features/auth/mfa/index.tsx:146
 #: src/features/auth/mfa/index.tsx:166
 #: src/features/auth/mfa/index.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:422
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Please check your code and try again."
 msgstr "Ji kerema xwe koda xwe kontrol bike û dîsa biceribîne."
 
 #: src/features/auth/mfa/index.tsx:104
 #: src/features/auth/mfa/index.tsx:126
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your codes and try again."
 msgstr "Ji kerema xwe kodên xwe kontrol bike û dîsa biceribîne."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
-#: src/features/auth/sign-in/components/user-auth-form.tsx:385
+#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:327
 msgid "Please check your email and try again."
 msgstr "Ji kerema xwe e-nameya xwe kontrol bike û dîsa biceribîne."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
+#: ../../../lib/web/src/features/errors/general-error.tsx:54
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:304
+#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "Ji kerema xwe girêdana xwe ya înternetê kontrol bike û dîsa biceribîne."
 
@@ -1157,11 +1117,11 @@ msgstr "Ji kerema xwe girêdana xwe ya înternetê kontrol bike û dîsa bicerib
 msgid "Please check your recovery code and try again."
 msgstr "Ji kerema xwe koda vegerê kontrol bike û dîsa biceribîne."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Please copy manually: {devCode}"
 msgstr "Ji kerema xwe destan jêbibe: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:79
+#: src/features/auth/sign-in/components/user-auth-form.tsx:68
 msgid "Please enter a valid email"
 msgstr "Ji kerema xwe e-nameyek a derbasdar binivîse"
 
@@ -1173,20 +1133,27 @@ msgstr "Ji kerema xwe navê xwe binivîse"
 msgid "Please enter your recovery code"
 msgstr "Ji kerema xwe koda vegerê binivîse"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:274
-#: src/features/auth/sign-in/components/user-auth-form.tsx:323
-#: src/features/auth/sign-in/components/user-auth-form.tsx:426
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Please try again or contact support."
 msgstr "Ji kerema xwe dîsa biceribîne an bi alîkariyê re têkilî daîne."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:83
+msgid "Please try again."
+msgstr "Ji kerema xwe dîsa biceribîne."
 
 #: src/features/auth/mfa/index.tsx:92
 msgid "Please use another verification method."
 msgstr "Ji kerema xwe rêbazek verastkirinê ya din bi kar bîne."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:299
+#: src/features/auth/sign-in/components/user-auth-form.tsx:241
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Ji kerema xwe bişkojka \"Bi passkey têkeve\" bi kar bîne."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:75
+msgid "Please wait a moment and try again."
+msgstr "Ji kerema xwe kêliyekê bisekine û dîsa biceribîne."
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
@@ -1196,7 +1163,7 @@ msgstr "Wêneya pêştir"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:27
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 #: src/features/auth/identity-form.tsx:97
-#: src/features/landing/landing-page.tsx:528
+#: src/features/landing/landing-page.tsx:487
 msgid "Privacy"
 msgstr "Nepenî"
 
@@ -1209,7 +1176,7 @@ msgstr "Taybet"
 msgid "Profile"
 msgstr "Profîl"
 
-#: src/features/landing/landing-page.tsx:285
+#: src/features/landing/landing-page.tsx:258
 msgid "Projects"
 msgstr "Proje"
 
@@ -1233,8 +1200,8 @@ msgstr "Mifteyên gihîştinê yên xwe li ser vî rajeyê ji nû ve qeyd bike"
 msgid "Reactivate my account"
 msgstr "Hesabê min ji nû ve çalak bike"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:219
-#: ../../../lib/web/src/components/search-entity-page.tsx:194
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:216
+#: ../../../lib/web/src/components/search-entity-page.tsx:240
 msgid "Recommended"
 msgstr "Pêşniyarkirî"
 
@@ -1255,10 +1222,9 @@ msgstr "Em te ber bi dashboardê ve beralî dikin…"
 msgid "Reduce interest"
 msgstr "Balkêşî kêm bike"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:269
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
-#: src/features/auth/sign-in/components/user-auth-form.tsx:417
+#: src/features/auth/sign-in/components/user-auth-form.tsx:211
+#: src/features/auth/sign-in/components/user-auth-form.tsx:260
+#: src/features/auth/sign-in/components/user-auth-form.tsx:359
 msgid "Registration disabled"
 msgstr "Tomarkirin neçalak e"
 
@@ -1289,26 +1255,6 @@ msgstr "Destpêkirinê rake?"
 msgid "Remove interest"
 msgstr "Balkêşiyê rake"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
-msgid "Replicate from another server"
-msgstr "Ji serverek din kopî bike"
-
-#: src/features/landing/landing-page.tsx:166
-msgid "Replication request denied"
-msgstr "Daxwaza dubarekirinê hate red kirin"
-
-#: src/routes/replicating.tsx:135
-msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
-msgstr "Daxwaza dubarekirinê ji <0>{source_user}</0> re hat şandin. Ji bo temamkirina dubarekirinê wê li rûpela mîhengên rajekara çavkaniyê pejirîne."
-
-#: src/routes/replicating.tsx:139
-msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
-msgstr "Daxwaza dubarekirinê ji rajekara çavkaniyê re hat şandin. Ji bo temamkirina dubarekirinê wê li rûpela mîhengên rajekara çavkaniyê pejirîne."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-msgid "Replication signup failed"
-msgstr "Tomarkirina bi kopîkirinê têk çû"
-
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Dîsa e-nameyê bişîne"
@@ -1322,11 +1268,11 @@ msgstr "Bişkojka veguhastinê"
 msgid "Reset all settings to default values"
 msgstr "Hemû mîhengan ber bi standardan ve veguhêze"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:190
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:87
 msgid "Restore a backup file"
 msgstr "Pelê piştgiriyê vegerîne"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:215
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Vegerandin têk çû"
@@ -1376,8 +1322,8 @@ msgstr "Li bikarhêneran bigere"
 msgid "Search..."
 msgstr "Bigere..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:177
-#: ../../../lib/web/src/components/search-entity-page.tsx:152
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:174
+#: ../../../lib/web/src/components/search-entity-page.tsx:198
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "Tê gerîn..."
@@ -1426,20 +1372,20 @@ msgstr "E-nameyê bişîne"
 msgid "Serif"
 msgstr "Serîf"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:260
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:286
 msgid "Server error"
 msgstr "Çewtiya rajekarê"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:40
-#: src/features/landing/landing-page.tsx:510
+#: src/features/landing/landing-page.tsx:469
 msgid "Server rules"
 msgstr "Qaîdeyên server"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
-msgid "Session expired"
-msgstr "Danişîn dawî bû"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:210
+msgid "Session expired. Please log in again."
+msgstr "Danişîn bi dawî bû. Ji kerema xwe dîsa têkeve."
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:147
 msgid "Set origin and destination"
@@ -1472,7 +1418,7 @@ msgstr "Milê alî"
 msgid "Sign out"
 msgstr "Derkeve"
 
-#: src/features/landing/landing-page.tsx:303
+#: src/features/landing/landing-page.tsx:272
 msgid "Sign up or log in"
 msgstr "Tomarbûn an têketin"
 
@@ -1497,14 +1443,6 @@ msgstr "Bibihure ji bo Sereke"
 msgid "Small"
 msgstr "Biçûk"
 
-#: src/routes/replicating.tsx:168
-msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
-msgstr "Hin veguhastin di hewldana yekem de neqedîn. Ew ê bixweber ji nû ve werin ceribandin."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:156
-msgid "Source server peer ID"
-msgstr "Peer ID ya servera çavkanî"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:97
 msgid "Spacious"
 msgstr "Berfireh"
@@ -1513,10 +1451,6 @@ msgstr "Berfireh"
 #: src/features/auth/recovery/index.tsx:143
 msgid "Start again"
 msgstr "Dîsa dest pê bike"
-
-#: src/routes/replicating.tsx:246
-msgid "Starting…"
-msgstr "Dest pê dike…"
 
 #: src/features/auth/identity-form.tsx:126
 msgid "Stay hidden from directory searches."
@@ -1537,10 +1471,6 @@ msgstr "Bi koda vegerandinê bi serketî tevlî bûye"
 #: ../../../lib/web/src/lib/preference-utils.ts:65
 msgid "Sunday"
 msgstr "Yekşem"
-
-#: src/routes/replicating.tsx:124
-msgid "Syncing your data"
-msgstr "Daneyên we tên hevdemkirin"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
 #: ../../../lib/web/src/lib/preference-utils.ts:21
@@ -1563,7 +1493,7 @@ msgstr "Tîm/Sepan"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
 #: ../../../lib/web/src/features/document/document-page.tsx:42
-#: src/features/landing/landing-page.tsx:519
+#: src/features/landing/landing-page.tsx:478
 msgid "Terms and conditions"
 msgstr "Mercên bikaranînê"
 
@@ -1580,15 +1510,15 @@ msgstr "Ew kod çewt e an dema wê qediyaye."
 msgid "That sign-in provider is not available"
 msgstr "Ew pêşkêşvanê têketinê ne berdest e"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:197
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:94
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Ew e-nameya ku tu li jor dinivîsî dibe navê hesabê nû li ser vî rajekarî. Nasnameya paşekatê divê berê li vir çalak nebe — li rajekarek din vegerîne, an jî pêşî hesabê heyî jê bibe."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "The file may be damaged or have been modified."
 msgstr "Pel dibe ku xeser bûbe an jî hatibe guhertin."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:200
+#: src/features/auth/sign-in/components/user-auth-form.tsx:186
 msgid "The passphrase you entered does not match the backup."
 msgstr "Pêvajoya ku we nivîsand bi piştgirîyê re nek e."
 
@@ -1596,13 +1526,13 @@ msgstr "Pêvajoya ku we nivîsand bi piştgirîyê re nek e."
 msgid "the provider"
 msgstr "pêşkêşvan"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:68
+msgid "The requested content could not be found."
+msgstr "Naveroka xwestî nehat dîtin."
+
 #: src/routes/restore.tsx:111
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Vegerandin neqediya. Pelê piştgirîyê dibe ku xeser bûbe, pêvajo dibe ku xelet be, an jî server bi xeletiyekê re rû bi rû bûbe."
-
-#: src/features/landing/landing-page.tsx:167
-msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
-msgstr "Servera çavkanî daxwaz nepejirand, an dema wê qediya. Dîsa biceribîne an herêmî tomar bibe."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
@@ -1612,7 +1542,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Mîhengên Temayê"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:208
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Ev piştgirî ji hêla guhertoya nûtir a Mochi ve hatiye çêkirin. Pêşî vê serverê nûve bikin."
 
@@ -1651,6 +1581,10 @@ msgstr "Milê Alî biguherîne"
 msgid "Toggle theme"
 msgstr "Temayê biguherîne"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:74
+msgid "Too many requests"
+msgstr "Daxwazên pir zêde"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:45
 msgid "Top"
 msgstr "Jor"
@@ -1659,13 +1593,13 @@ msgstr "Jor"
 msgid "Travelling"
 msgstr "Rêwîtî"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:193
-#: ../../../lib/web/src/components/search-entity-page.tsx:168
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:190
+#: ../../../lib/web/src/components/search-entity-page.tsx:214
 msgid "Try adjusting your search terms"
 msgstr "Peyvên lêgerîna xwe eyar bike"
 
-#: ../../../lib/web/src/features/errors/general-error.tsx:128
-#: ../../../lib/web/src/features/errors/general-error.tsx:168
+#: ../../../lib/web/src/features/errors/general-error.tsx:140
+#: ../../../lib/web/src/features/errors/general-error.tsx:180
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:19
 msgid "Try again"
 msgstr "Dîsa biceribîne"
@@ -1686,7 +1620,7 @@ msgstr "Ji bo lêgerîna bikarhêneran binivîse"
 msgid "Type to search..."
 msgstr "Ji bo lêgerînê binivîse..."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:282
 msgid "Unable to connect to remote server"
 msgstr "Nikare bi rajekarê dûr ve girê bide"
 
@@ -1695,7 +1629,7 @@ msgstr "Nikare bi rajekarê dûr ve girê bide"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Beralîkirina bo têketinê ne mumkin e. Ji kerema xwe dîsa biceribîne."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:156
+#: ../../../lib/web/src/components/notification-category-button.tsx:155
 msgid "Unassigned"
 msgstr "Nehatiye diyarkirin"
 
@@ -1715,7 +1649,7 @@ msgstr "Daneyên we têne vekirin"
 msgid "Unverified"
 msgstr "Nehatiye verast kirin"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:204
+#: src/features/auth/sign-in/components/user-auth-form.tsx:190
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Pelê .zip yê ji hinardekirin data Mochi hatiye hinardekirin bar bikin."
 
@@ -1723,13 +1657,9 @@ msgstr "Pelê .zip yê ji hinardekirin data Mochi hatiye hinardekirin bar bikin.
 msgid "Use a different account"
 msgstr "Hesabekî cuda bi kar bîne"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:575
+#: src/features/auth/sign-in/components/user-auth-form.tsx:517
 msgid "Use a passkey"
 msgstr "Passkey bikar bîne"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:60
-msgid "Use the form alice@example.com"
-msgstr "Forma alice@example.com bikar bîne"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1738,10 +1668,6 @@ msgstr "Passkey-ya xwe bikar bîne"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Bikarhêner"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:135
-msgid "Username on source server"
-msgstr "Navê bikarhêner li ser servera çavkanî"
 
 #: src/routes/restore.tsx:51
 msgid "Validating backup"
@@ -1756,7 +1682,7 @@ msgid "Verification code sent"
 msgstr "Koda verifîkasyonê hat şandin"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:367
 msgid "Verification failed"
 msgstr "Verifîkasyon têk çû"
 
@@ -1795,10 +1721,6 @@ msgstr "Hemûyan bibîne"
 msgid "View all notifications"
 msgstr "Hemû agahdariyan bibîne"
 
-#: src/routes/replicating.tsx:126
-msgid "Waiting for approval"
-msgstr "Li bendê pejirandinê"
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
 msgstr "Em ê di demek nêzîk de online vegerin."
@@ -1811,13 +1733,17 @@ msgstr "Malper di rewşa lêkirinê de ye!"
 msgid "Wednesday"
 msgstr "Çarşem"
 
-#: src/features/landing/landing-page.tsx:286
+#: src/features/landing/landing-page.tsx:259
 msgid "Wikis"
 msgstr "Wîkî"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
 msgid "Wrong passphrase"
 msgstr "Pêvajo xelet e"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:61
+msgid "You do not have access to this section."
+msgstr "Destûra te ya gihîştina vê beşê tune ye."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43
@@ -1838,21 +1764,9 @@ msgstr "Hesabê te hat sekinandin"
 
 #: src/features/auth/mfa/index.tsx:173
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/features/auth/sign-in/components/user-auth-form.tsx:356
 msgid "Your account has been suspended."
 msgstr "Hesabê te hat sekinandin."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:258
-msgid "Your account is already replicated here. Log in instead."
-msgstr "Hesabê te jixwe li vir hatiye kopîkirin. Di şûna wê de têkeve."
-
-#: src/routes/replicating.tsx:131
-msgid "Your account is being copied from the source server. Do not close this window."
-msgstr "Hesabê te ji rajeya çavkanî tê kopîkirin. Vê pencereyê negire."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:128
-msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
-msgstr "Hesabê we ji serverek ku jixwe gihîştina we heye bi zindî tê kopîkirin. Divê servera çavkaniyê daxwazê bipejirîne berî ku veguhastina dest pê bike."
 
 #: src/routes/closing.tsx:95
 msgid "Your account is scheduled for deletion"
@@ -1870,7 +1784,7 @@ msgstr "Hesabê te ji bo têketinê pêwîstiya passkey-yê heye"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Hesabê we ji {source} hat vir veguheztin. Heya ku hûn wê li wir jênebin, peyam û agahdarî dikarin gihîjin her du servaran, hin naveroka we ji serverê kevn tê dayîn û şopîner dibe ku çend hûrdeman hewce bikin ku we li vir bibînin."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:137
 msgid "Your code is: {devCode}"
 msgstr "Koda te ev e: {devCode}"
 

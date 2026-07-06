@@ -13,22 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:238
-msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
-msgstr "{failed, plural, one {# veritabanı yeniden deneniyor} other {# veritabanı yeniden deneniyor}}"
-
-#: src/routes/replicating.tsx:239
-msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
-msgstr "{failed, plural, one {# dosya yeniden deneniyor} other {# dosya yeniden deneniyor}}"
-
-#: src/routes/replicating.tsx:243
-msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
-msgstr "{remaining, plural, one {# veritabanı kaldı} other {# veritabanı kaldı}}"
-
-#: src/routes/replicating.tsx:244
-msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
-msgstr "{remaining, plural, one {# dosya kaldı} other {# dosya kaldı}}"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 saat"
@@ -40,6 +24,10 @@ msgstr "24 saat"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Mutlak (tarih ve saat)"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:60
+msgid "Access denied"
+msgstr "Erişim reddedildi"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:16
 msgid "Access Forbidden"
@@ -53,8 +41,7 @@ msgstr "Erişim düzeyi"
 msgid "Account added"
 msgstr "Hesap eklendi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:211
-#: src/features/auth/sign-in/components/user-auth-form.tsx:257
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Hesap zaten bu sunucuda mevcut"
 
@@ -64,7 +51,7 @@ msgstr "Hesap kaldırıldı"
 
 #: src/features/auth/mfa/index.tsx:172
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:413
+#: src/features/auth/sign-in/components/user-auth-form.tsx:355
 msgid "Account suspended"
 msgstr "Hesap askıya alındı"
 
@@ -122,7 +109,7 @@ msgstr "Görünüm ekle"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Görünüm ve düzeni tercihlerinize göre ayarlayın."
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:50
 msgid "Advanced"
 msgstr "Gelişmiş"
 
@@ -139,7 +126,7 @@ msgstr "Tümü"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Bu e-posta ile zaten bir hesap var. Önce giriş yapın, ardından kimlik doğrulama ayarlarınızdan {0} bağlantısını yapın."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "An account with this identity already exists here."
 msgstr "Bu kimlikle bir hesap zaten burada mevcut."
 
@@ -147,7 +134,7 @@ msgstr "Bu kimlikle bir hesap zaten burada mevcut."
 msgid "An error occurred"
 msgstr "Bir hata oluştu"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:256
 msgid "An unexpected error occurred"
 msgstr "Beklenmeyen bir hata oluştu"
 
@@ -173,7 +160,7 @@ msgid "Authenticator code"
 msgstr "Authenticator kodu"
 
 #: ../../../lib/web/src/components/place-picker.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:590
+#: src/features/auth/sign-in/components/user-auth-form.tsx:532
 msgid "Back"
 msgstr "Geri"
 
@@ -187,15 +174,15 @@ msgstr "Ana sayfaya dön"
 msgid "Back to sign up"
 msgstr "Kayıta geri dön"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:205
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:102
 msgid "Backup file"
 msgstr "Yedek dosyası"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:215
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Backup file is corrupted"
 msgstr "Yedek dosyası bozulmuş"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Backup is too new"
 msgstr "Yedek çok yeni"
 
@@ -204,7 +191,7 @@ msgstr "Yedek çok yeni"
 msgid "Boost interest"
 msgstr "İlgiyi artır"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:90
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:56
 msgid "Bring an existing account onto this server:"
 msgstr "Mevcut bir hesabı bu sunucuya getir:"
 
@@ -221,45 +208,31 @@ msgstr "Hesabınızı oluşturarak <0>Sunucu kurallarını</0>, <1>Şartlar ve k
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/routes/replicating.tsx:211
 msgid "Cancel"
 msgstr "İptal"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:144
+#: ../../../lib/web/src/components/notification-category-button.tsx:143
 msgid "Category for this notification"
 msgstr "Bu bildirim için kategori"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:125
-#: ../../../lib/web/src/components/notification-category-button.tsx:136
+#: ../../../lib/web/src/components/notification-category-button.tsx:124
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Change notification category"
 msgstr "Bildirim kategorisini değiştir"
 
-#: src/features/landing/landing-page.tsx:278
+#: src/features/landing/landing-page.tsx:251
 msgid "Chat"
 msgstr "Sohbet"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:262
-msgid "Check the address after @ and try again."
-msgstr "@ işaretinden sonraki adresi kontrol edip tekrar deneyin."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
-msgid "Check the username before @ and try again."
-msgstr "@ işaretinden önceki kullanıcı adını kontrol edip tekrar deneyin."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "Check your email."
 msgstr "E-postanızı kontrol edin."
-
-#: src/routes/replicating.tsx:178
-msgid "Checking every few seconds…"
-msgstr "Birkaç saniyede bir kontrol ediliyor…"
 
 #: src/routes/restore.tsx:165
 msgid "Checking…"
 msgstr "Kontrol ediliyor…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
-#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Choose a different local email or log in instead."
 msgstr "Farklı bir yerel e-posta seçin veya onun yerine giriş yapın."
 
@@ -331,11 +304,11 @@ msgstr "Paneli kapat"
 msgid "Close search"
 msgstr "Aramayı kapat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:149
 msgid "Code copied"
 msgstr "Kod kopyalandı"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:145
+#: src/features/auth/sign-in/components/user-auth-form.tsx:134
 msgid "Code sent."
 msgstr "Kod gönderildi."
 
@@ -398,13 +371,12 @@ msgstr "{label} ile devam et"
 msgid "Copy"
 msgstr "Kopyala"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+#: src/features/auth/sign-in/components/user-auth-form.tsx:161
 msgid "Copy code"
 msgstr "Kodu kopyala"
 
 #: src/features/auth/identity-form.tsx:162
-#: src/routes/replicating.tsx:206
 msgid "Could not cancel"
 msgstr "İptal edilemedi"
 
@@ -413,16 +385,12 @@ msgstr "İptal edilemedi"
 msgid "Could not load this document. Please try again later."
 msgstr "Bu belge yüklenemedi. Lütfen daha sonra tekrar deneyin."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
-msgid "Could not reach the source server"
-msgstr "Kaynak sunucuya ulaşılamadı"
-
 #: src/routes/closing.tsx:69
 msgid "Could not reactivate your account"
 msgstr "Hesabınız yeniden etkinleştirilemedi"
 
 #: src/features/auth/components/oauth-buttons.tsx:75
-#: src/features/landing/landing-page.tsx:209
+#: src/features/landing/landing-page.tsx:182
 msgid "Could not start sign-in"
 msgstr "Giriş başlatılamadı"
 
@@ -438,11 +406,11 @@ msgstr "Yeniden kimlik doğrulama başlatılamadı. Lütfen tekrar deneyin."
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Bu hesapla doğrulama yapılamadı. Lütfen tekrar deneyin."
 
-#: src/features/landing/landing-page.tsx:355
+#: src/features/landing/landing-page.tsx:324
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "Bir <0>ücretsiz hesap</0> oluşturun, <1>kendi sunucunuzu</1> çalıştırın veya <2>kaynak kodunu</2> inceleyin."
 
-#: src/features/landing/landing-page.tsx:279
+#: src/features/landing/landing-page.tsx:252
 msgid "CRM"
 msgstr "CRM"
 
@@ -463,9 +431,9 @@ msgstr "Koyu"
 msgid "Dark mode"
 msgstr "Koyu mod"
 
-#: src/routes/replicating.tsx:150
-msgid "Databases"
-msgstr "Veritabanları"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:240
+msgid "Data conflict"
+msgstr "Veri çakışması"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:310
 msgid "Default"
@@ -515,7 +483,6 @@ msgstr "Kapat"
 msgid "Displays the mobile sidebar."
 msgstr "Mobil kenar çubuğunu görüntüler."
 
-#: src/routes/replicating.tsx:234
 #: src/routes/restore.tsx:56
 msgid "Done"
 msgstr "Tamamlandı"
@@ -537,12 +504,11 @@ msgstr "Disleksi dostu"
 msgid "Edit {label}"
 msgstr "{label} düzenle"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:624
+#: src/features/auth/sign-in/components/user-auth-form.tsx:566
 msgid "Email"
 msgstr "E-posta"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:219
-#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "Email already in use"
 msgstr "E-posta zaten kullanımda"
 
@@ -552,15 +518,15 @@ msgstr "e-posta kodu"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:221
-#: src/features/auth/sign-in/components/user-auth-form.tsx:476
+#: src/features/auth/sign-in/components/user-auth-form.tsx:418
 msgid "Email code"
 msgstr "E-posta kodu"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:501
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Email me a code"
 msgstr "Bana e-postayla kod gönder"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Enter a code to continue"
 msgstr "Devam etmek için bir kod girin"
 
@@ -568,7 +534,7 @@ msgstr "Devam etmek için bir kod girin"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Oturum açmak için \"{userEmail}\" hesabına ait bir kurtarma kodu girin"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:457
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Enter the code from your authenticator app"
 msgstr "Kimlik doğrulayıcı uygulamanızdaki kodu girin"
 
@@ -589,7 +555,7 @@ msgstr "{initial} ve {last} bilginizi girin"
 msgid "Enter your authenticator code"
 msgstr "Kimlik doğrulayıcı kodunuzu girin"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:449
+#: src/features/auth/sign-in/components/user-auth-form.tsx:391
 msgid "Enter your email code and authenticator code"
 msgstr "E-posta kodunuzu ve kimlik doğrulayıcı kodunuzu girin"
 
@@ -616,11 +582,11 @@ msgstr "Başarısız"
 msgid "Failed to add account"
 msgstr "Hesap eklenemedi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Failed to continue"
 msgstr "Devam edilemedi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
 msgid "Failed to copy code"
 msgstr "Kod kopyalanamadı"
 
@@ -636,23 +602,19 @@ msgstr "Kimlik kaydedilemedi"
 msgid "Failed to send verification code"
 msgstr "Doğrulama kodu gönderilemedi"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:112
+#: ../../../lib/web/src/components/notification-category-button.tsx:111
 msgid "Failed to update category"
 msgstr "Kategori güncellenemedi"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:253
 msgid "Feeds"
 msgstr "Akışlar"
-
-#: src/routes/replicating.tsx:159
-msgid "Files"
-msgstr "Dosyalar"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:88
 msgid "Finish moving your account"
 msgstr "Hesap taşımayı tamamlayın"
 
-#: src/routes/identity.tsx:96
+#: src/routes/identity.tsx:90
 msgid "Finish setting up your account"
 msgstr "Hesabınızı kurmayı tamamlayın"
 
@@ -668,7 +630,7 @@ msgstr "Düz"
 msgid "Floating"
 msgstr "Kayan"
 
-#: src/features/landing/landing-page.tsx:281
+#: src/features/landing/landing-page.tsx:254
 msgid "Forums"
 msgstr "Forumlar"
 
@@ -693,11 +655,11 @@ msgstr "Temadan"
 msgid "Full layout"
 msgstr "Tam düzen"
 
-#: src/features/landing/landing-page.tsx:282
+#: src/features/landing/landing-page.tsx:255
 msgid "Games"
 msgstr "Oyunlar"
 
-#: src/features/landing/landing-page.tsx:283
+#: src/features/landing/landing-page.tsx:256
 msgid "Git repositories"
 msgstr "Git depoları"
 
@@ -766,7 +728,7 @@ msgstr "İç"
 msgid "Interests"
 msgstr "İlgi alanları"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:401
+#: src/features/auth/sign-in/components/user-auth-form.tsx:343
 msgid "Invalid authenticator code"
 msgstr "Geçersiz kimlik doğrulayıcı kodu"
 
@@ -775,8 +737,8 @@ msgstr "Geçersiz kimlik doğrulayıcı kodu"
 #: src/features/auth/mfa/index.tsx:145
 #: src/features/auth/mfa/index.tsx:165
 #: src/features/auth/mfa/index.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
-#: src/features/auth/sign-in/components/user-auth-form.tsx:421
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
+#: src/features/auth/sign-in/components/user-auth-form.tsx:363
 msgid "Invalid code"
 msgstr "Geçersiz kod"
 
@@ -786,8 +748,8 @@ msgid "Invalid recovery code"
 msgstr "Geçersiz kurtarma kodu"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
-#: src/features/auth/sign-in/components/user-auth-form.tsx:384
+#: src/features/auth/sign-in/components/user-auth-form.tsx:307
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Invalid verification code"
 msgstr "Geçersiz doğrulama kodu"
 
@@ -834,23 +796,23 @@ msgstr "Yükleniyor…"
 
 #: src/features/auth/mfa/index.tsx:297
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:548
+#: src/features/auth/sign-in/components/user-auth-form.tsx:490
 msgid "Log in"
 msgstr "Oturum aç"
 
-#: src/features/landing/landing-page.tsx:399
+#: src/features/landing/landing-page.tsx:368
 msgid "Log in to Mochi"
 msgstr "Mochi'de oturum aç"
 
-#: src/features/landing/landing-page.tsx:471
+#: src/features/landing/landing-page.tsx:434
 msgid "Log in with {label}"
 msgstr "{label} ile oturum aç"
 
-#: src/features/auth/sign-in/index.tsx:109
+#: src/features/auth/sign-in/index.tsx:105
 msgid "Log in with passkey"
 msgstr "Geçiş anahtarıyla oturum aç"
 
-#: src/features/auth/sign-in/index.tsx:76
+#: src/features/auth/sign-in/index.tsx:74
 msgid "Log in with your email address"
 msgstr "E-posta adresinizle oturum açın"
 
@@ -865,8 +827,8 @@ msgid "Log out"
 msgstr "Oturumu kapat"
 
 #: src/features/auth/recovery/index.tsx:44
-#: src/features/auth/sign-in/index.tsx:46
-#: src/features/landing/landing-page.tsx:239
+#: src/features/auth/sign-in/index.tsx:44
+#: src/features/landing/landing-page.tsx:212
 msgid "Logged in"
 msgstr "Oturum açıldı"
 
@@ -887,7 +849,7 @@ msgid "Login session expired, please try again"
 msgstr "Oturum süresi doldu, lütfen tekrar deneyin"
 
 #: src/features/auth/mfa/index.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:599
+#: src/features/auth/sign-in/components/user-auth-form.tsx:541
 msgid "Lost access? Use a recovery code"
 msgstr "Erişiminizi mi kaybettiniz? Kurtarma kodu kullanın"
 
@@ -897,7 +859,7 @@ msgstr "Erişiminizi mi kaybettiniz? Kurtarma kodu kullanın"
 msgid "Mark all as read"
 msgstr "Tümünü okundu olarak işaretle"
 
-#: src/features/landing/landing-page.tsx:284
+#: src/features/landing/landing-page.tsx:257
 msgid "Market"
 msgstr "Pazar"
 
@@ -913,7 +875,7 @@ msgstr "Menü"
 msgid "Metric"
 msgstr "Metrik"
 
-#: src/features/landing/landing-page.tsx:323
+#: src/features/landing/landing-page.tsx:292
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi, dağıtık uygulamalar için açık kaynaklı, federe, çok kullanıcılı bir platformdur. Herkes kendi sunucusunu çalıştırabilir ve Mochi ağındaki başka herhangi bir kullanıcıya bağlanabilir. Herkes uygulama oluşturabilir ve yayımlayabilir. Sistem uygulamaları da dahil olmak üzere her uygulama değiştirilebilir. Sunucu, şunlar da dahil olmak üzere 20'den fazla uygulamayla birlikte gelir:"
 
@@ -921,7 +883,8 @@ msgstr "Mochi, dağıtık uygulamalar için açık kaynaklı, federe, çok kulla
 msgid "Monday"
 msgstr "Pazartesi"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
+#: ../../../lib/web/src/features/errors/general-error.tsx:53
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:303
 msgid "Network error"
 msgstr "Ağ hatası"
 
@@ -933,14 +896,13 @@ msgstr "Yeni"
 msgid "New accounts are disabled on this server"
 msgstr "Bu sunucuda yeni hesaplar devre dışı"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:270
-#: src/features/auth/sign-in/components/user-auth-form.tsx:319
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "New user signup is disabled."
 msgstr "Yeni kullanıcı kaydı devre dışı."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:637
+#: src/features/auth/sign-in/components/user-auth-form.tsx:579
 msgid "Next"
 msgstr "İleri"
 
@@ -953,7 +915,7 @@ msgstr "Sonraki görsel"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Erişim kuralı yapılandırılmamış. Bu kaynağa kimin erişebileceğini kontrol etmek için kural ekleyin."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:223
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "No backup file selected"
 msgstr "Yedek dosyası seçilmedi"
 
@@ -964,10 +926,6 @@ msgstr "Bağlı hesap yok"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Grup yok"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:265
-msgid "No matching account on the source server"
-msgstr "Kaynak sunucuda eşleşen hesap yok"
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -986,7 +944,7 @@ msgstr "Sonuç bulunamadı."
 msgid "No time zone found."
 msgstr "Saat dilimi bulunamadı."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:148
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "No topic record yet — try again after the next notification."
 msgstr "Henüz konu kaydı yok — bir sonraki bildirimden sonra tekrar deneyin."
 
@@ -1000,7 +958,7 @@ msgstr "Kullanıcı bulunamadı"
 msgid "None"
 msgstr "Yok"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:105
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:71
 msgid "None; create a fresh account"
 msgstr "Hiçbiri; yeni bir hesap oluştur"
 
@@ -1008,9 +966,13 @@ msgstr "Hiçbiri; yeni bir hesap oluştur"
 msgid "Normal"
 msgstr "Normal"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:203
+#: src/features/auth/sign-in/components/user-auth-form.tsx:189
 msgid "Not a migration bundle"
 msgstr "Bu bir taşıma paketi değil"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:67
+msgid "Not found"
+msgstr "Bulunamadı"
 
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:146
 msgid "Not set"
@@ -1053,16 +1015,16 @@ msgstr "Gezinme menüsünü aç"
 msgid "Open theme settings"
 msgstr "Tema ayarlarını aç"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:95
 msgid "Or"
 msgstr "Veya"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:518
+#: src/features/auth/sign-in/components/user-auth-form.tsx:460
 msgid "Or enter authenticator code"
 msgstr "Veya kimlik doğrulama kodunu girin"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:560
-#: src/features/landing/landing-page.tsx:440
+#: src/features/auth/sign-in/components/user-auth-form.tsx:502
+#: src/features/landing/landing-page.tsx:403
 msgid "Or log in with"
 msgstr "Veya şununla giriş yap"
 
@@ -1084,21 +1046,21 @@ msgstr "passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 #: src/features/auth/mfa/index.tsx:279
-#: src/features/landing/landing-page.tsx:459
+#: src/features/landing/landing-page.tsx:422
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/index.tsx:61
-#: src/features/landing/landing-page.tsx:266
+#: src/features/auth/sign-in/index.tsx:59
+#: src/features/landing/landing-page.tsx:239
 msgid "Passkey login cancelled"
 msgstr "Passkey girişi iptal edildi"
 
-#: src/features/auth/sign-in/index.tsx:59
-#: src/features/landing/landing-page.tsx:259
+#: src/features/auth/sign-in/index.tsx:57
+#: src/features/landing/landing-page.tsx:232
 msgid "Passkey login failed"
 msgstr "Passkey girişi başarısız"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:298
+#: src/features/auth/sign-in/components/user-auth-form.tsx:240
 msgid "Passkey login required"
 msgstr "Passkey girişi gerekli"
 
@@ -1114,41 +1076,39 @@ msgstr "Geçiş anahtarı doğrulaması başarısız oldu. Lütfen tekrar deneyi
 msgid "Passkeys"
 msgstr "Passkey'ler"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:224
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
 msgid "Passphrase"
 msgstr "Parola cümlesi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:453
+#: src/features/auth/sign-in/components/user-auth-form.tsx:395
 msgid "Paste the login code you received by email"
 msgstr "E-posta ile aldığınız giriş kodunu yapıştırın"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:70
-msgid "Peer IDs start with 12D3KooW and are 52 characters long"
-msgstr "Peer ID 12D3KooW ile başlar ve 52 karakter uzunluğundadır"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/sign-in/components/user-auth-form.tsx:344
 msgid "Please check your authenticator app and try again."
 msgstr "Lütfen kimlik doğrulayıcı uygulamanızı kontrol edip tekrar deneyin."
 
 #: src/features/auth/mfa/index.tsx:146
 #: src/features/auth/mfa/index.tsx:166
 #: src/features/auth/mfa/index.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:422
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Please check your code and try again."
 msgstr "Lütfen kodunuzu kontrol edip tekrar deneyin."
 
 #: src/features/auth/mfa/index.tsx:104
 #: src/features/auth/mfa/index.tsx:126
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your codes and try again."
 msgstr "Lütfen kodlarınızı kontrol edip tekrar deneyin."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
-#: src/features/auth/sign-in/components/user-auth-form.tsx:385
+#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:327
 msgid "Please check your email and try again."
 msgstr "Lütfen e-postanızı kontrol edip tekrar deneyin."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
+#: ../../../lib/web/src/features/errors/general-error.tsx:54
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:304
+#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "Lütfen internet bağlantınızı kontrol edip tekrar deneyin."
 
@@ -1157,11 +1117,11 @@ msgstr "Lütfen internet bağlantınızı kontrol edip tekrar deneyin."
 msgid "Please check your recovery code and try again."
 msgstr "Lütfen kurtarma kodunuzu kontrol edip tekrar deneyin."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Please copy manually: {devCode}"
 msgstr "Lütfen elle kopyalayın: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:79
+#: src/features/auth/sign-in/components/user-auth-form.tsx:68
 msgid "Please enter a valid email"
 msgstr "Lütfen geçerli bir e-posta girin"
 
@@ -1173,20 +1133,27 @@ msgstr "Lütfen adınızı girin"
 msgid "Please enter your recovery code"
 msgstr "Lütfen kurtarma kodunuzu girin"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:274
-#: src/features/auth/sign-in/components/user-auth-form.tsx:323
-#: src/features/auth/sign-in/components/user-auth-form.tsx:426
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Please try again or contact support."
 msgstr "Lütfen tekrar deneyin veya destek ekibiyle iletişime geçin."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:83
+msgid "Please try again."
+msgstr "Lütfen tekrar deneyin."
 
 #: src/features/auth/mfa/index.tsx:92
 msgid "Please use another verification method."
 msgstr "Lütfen başka bir doğrulama yöntemi kullanın."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:299
+#: src/features/auth/sign-in/components/user-auth-form.tsx:241
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Lütfen \"Passkey ile giriş yap\" düğmesini kullanın."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:75
+msgid "Please wait a moment and try again."
+msgstr "Lütfen biraz bekleyip tekrar deneyin."
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
@@ -1196,7 +1163,7 @@ msgstr "Önceki görsel"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:27
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 #: src/features/auth/identity-form.tsx:97
-#: src/features/landing/landing-page.tsx:528
+#: src/features/landing/landing-page.tsx:487
 msgid "Privacy"
 msgstr "Gizlilik"
 
@@ -1209,7 +1176,7 @@ msgstr "Özel"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/features/landing/landing-page.tsx:285
+#: src/features/landing/landing-page.tsx:258
 msgid "Projects"
 msgstr "Projeler"
 
@@ -1233,8 +1200,8 @@ msgstr "Bu sunucuda parola anahtarlarınızı yeniden kaydedin"
 msgid "Reactivate my account"
 msgstr "Hesabımı yeniden etkinleştir"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:219
-#: ../../../lib/web/src/components/search-entity-page.tsx:194
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:216
+#: ../../../lib/web/src/components/search-entity-page.tsx:240
 msgid "Recommended"
 msgstr "Önerilen"
 
@@ -1255,10 +1222,9 @@ msgstr "Dashboard'a yönlendiriliyorsunuz…"
 msgid "Reduce interest"
 msgstr "İlgiyi azalt"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:269
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
-#: src/features/auth/sign-in/components/user-auth-form.tsx:417
+#: src/features/auth/sign-in/components/user-auth-form.tsx:211
+#: src/features/auth/sign-in/components/user-auth-form.tsx:260
+#: src/features/auth/sign-in/components/user-auth-form.tsx:359
 msgid "Registration disabled"
 msgstr "Kayıt devre dışı"
 
@@ -1289,26 +1255,6 @@ msgstr "Erişim kaldırılsın mı?"
 msgid "Remove interest"
 msgstr "İlgiyi kaldır"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
-msgid "Replicate from another server"
-msgstr "Başka bir sunucudan çoğalt"
-
-#: src/features/landing/landing-page.tsx:166
-msgid "Replication request denied"
-msgstr "Çoğaltma isteği reddedildi"
-
-#: src/routes/replicating.tsx:135
-msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
-msgstr "Çoğaltma isteği <0>{source_user}</0> kullanıcısına gönderildi. Çoğaltmayı tamamlamak için kaynak sunucunun ayarlar sayfasında onaylayın."
-
-#: src/routes/replicating.tsx:139
-msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
-msgstr "Çoğaltma isteği kaynak sunucuya gönderildi. Çoğaltmayı tamamlamak için kaynak sunucunun ayarlar sayfasında onaylayın."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-msgid "Replication signup failed"
-msgstr "Çoğaltma yoluyla kayıt başarısız oldu"
-
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "E-postayı yeniden gönder"
@@ -1322,11 +1268,11 @@ msgstr "Sıfırla"
 msgid "Reset all settings to default values"
 msgstr "Tüm ayarları varsayılan değerlere sıfırla"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:190
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:87
 msgid "Restore a backup file"
 msgstr "Yedek dosyasını geri yükle"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:215
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Geri yükleme başarısız oldu"
@@ -1376,8 +1322,8 @@ msgstr "Kullanıcılarda ara"
 msgid "Search..."
 msgstr "Ara..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:177
-#: ../../../lib/web/src/components/search-entity-page.tsx:152
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:174
+#: ../../../lib/web/src/components/search-entity-page.tsx:198
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "Aranıyor..."
@@ -1426,20 +1372,20 @@ msgstr "E-posta gönder"
 msgid "Serif"
 msgstr "Tırnaklı"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:260
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:286
 msgid "Server error"
 msgstr "Sunucu hatası"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:40
-#: src/features/landing/landing-page.tsx:510
+#: src/features/landing/landing-page.tsx:469
 msgid "Server rules"
 msgstr "Sunucu kuralları"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
-msgid "Session expired"
-msgstr "Oturum süresi doldu"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:210
+msgid "Session expired. Please log in again."
+msgstr "Oturumun süresi doldu. Lütfen tekrar giriş yapın."
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:147
 msgid "Set origin and destination"
@@ -1472,7 +1418,7 @@ msgstr "Kenar çubuğu"
 msgid "Sign out"
 msgstr "Oturumu kapat"
 
-#: src/features/landing/landing-page.tsx:303
+#: src/features/landing/landing-page.tsx:272
 msgid "Sign up or log in"
 msgstr "Kaydol veya giriş yap"
 
@@ -1497,14 +1443,6 @@ msgstr "Ana içeriğe atla"
 msgid "Small"
 msgstr "Küçük"
 
-#: src/routes/replicating.tsx:168
-msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
-msgstr "Bazı aktarımlar ilk denemede tamamlanmadı. Otomatik olarak yeniden denenecek."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:156
-msgid "Source server peer ID"
-msgstr "Kaynak sunucu peer ID'si"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:97
 msgid "Spacious"
 msgstr "Geniş"
@@ -1513,10 +1451,6 @@ msgstr "Geniş"
 #: src/features/auth/recovery/index.tsx:143
 msgid "Start again"
 msgstr "Yeniden başla"
-
-#: src/routes/replicating.tsx:246
-msgid "Starting…"
-msgstr "Başlatılıyor…"
 
 #: src/features/auth/identity-form.tsx:126
 msgid "Stay hidden from directory searches."
@@ -1537,10 +1471,6 @@ msgstr "Kurtarma kodu ile başarıyla giriş yapıldı"
 #: ../../../lib/web/src/lib/preference-utils.ts:65
 msgid "Sunday"
 msgstr "Pazar"
-
-#: src/routes/replicating.tsx:124
-msgid "Syncing your data"
-msgstr "Verileriniz senkronize ediliyor"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
 #: ../../../lib/web/src/lib/preference-utils.ts:21
@@ -1563,7 +1493,7 @@ msgstr "Takımlar/Uygulamalar"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
 #: ../../../lib/web/src/features/document/document-page.tsx:42
-#: src/features/landing/landing-page.tsx:519
+#: src/features/landing/landing-page.tsx:478
 msgid "Terms and conditions"
 msgstr "Şartlar ve koşullar"
 
@@ -1580,15 +1510,15 @@ msgstr "Bu kod yanlış veya süresi dolmuş."
 msgid "That sign-in provider is not available"
 msgstr "Bu giriş sağlayıcısı kullanılamıyor"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:197
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:94
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Yukarıda girdiğiniz e-posta, bu sunucudaki yeni hesabın adı olur. Yedeğin kimliği burada zaten etkin olmamalıdır — farklı bir sunucuya geri yükleyin ya da önce mevcut hesabı silin."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "The file may be damaged or have been modified."
 msgstr "Dosya zarar görmüş veya değiştirilmiş olabilir."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:200
+#: src/features/auth/sign-in/components/user-auth-form.tsx:186
 msgid "The passphrase you entered does not match the backup."
 msgstr "Girdiğiniz parola cümlesi yedekle eşleşmiyor."
 
@@ -1596,13 +1526,13 @@ msgstr "Girdiğiniz parola cümlesi yedekle eşleşmiyor."
 msgid "the provider"
 msgstr "sağlayıcı"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:68
+msgid "The requested content could not be found."
+msgstr "İstenen içerik bulunamadı."
+
 #: src/routes/restore.tsx:111
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Geri yükleme tamamlanmadı. Yedek dosyası bozulmuş olabilir, parola cümlesi yanlış olabilir veya sunucu bir hatayla karşılaşmış olabilir."
-
-#: src/features/landing/landing-page.tsx:167
-msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
-msgstr "Kaynak sunucu isteği onaylamadı ya da süresi doldu. Tekrar deneyin veya yerel olarak kaydolun."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
@@ -1612,7 +1542,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Tema ayarları"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:208
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Bu yedek, Mochi'nin daha yeni bir sürümü tarafından oluşturuldu. Önce bu sunucuyu güncelleyin."
 
@@ -1651,6 +1581,10 @@ msgstr "Kenar çubuğunu aç/kapat"
 msgid "Toggle theme"
 msgstr "Temayı değiştir"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:74
+msgid "Too many requests"
+msgstr "Çok fazla istek"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:45
 msgid "Top"
 msgstr "Üst"
@@ -1659,13 +1593,13 @@ msgstr "Üst"
 msgid "Travelling"
 msgstr "Yolda"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:193
-#: ../../../lib/web/src/components/search-entity-page.tsx:168
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:190
+#: ../../../lib/web/src/components/search-entity-page.tsx:214
 msgid "Try adjusting your search terms"
 msgstr "Arama terimlerini ayarlamayı dene"
 
-#: ../../../lib/web/src/features/errors/general-error.tsx:128
-#: ../../../lib/web/src/features/errors/general-error.tsx:168
+#: ../../../lib/web/src/features/errors/general-error.tsx:140
+#: ../../../lib/web/src/features/errors/general-error.tsx:180
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:19
 msgid "Try again"
 msgstr "Tekrar dene"
@@ -1686,7 +1620,7 @@ msgstr "Kullanıcı aramak için yaz"
 msgid "Type to search..."
 msgstr "Aramak için yaz..."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:282
 msgid "Unable to connect to remote server"
 msgstr "Uzak sunucuya bağlanılamadı"
 
@@ -1695,7 +1629,7 @@ msgstr "Uzak sunucuya bağlanılamadı"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Giriş sayfasına yönlendirilemedi. Lütfen tekrar dene."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:156
+#: ../../../lib/web/src/components/notification-category-button.tsx:155
 msgid "Unassigned"
 msgstr "Atanmamış"
 
@@ -1715,7 +1649,7 @@ msgstr "Verileriniz açılıyor"
 msgid "Unverified"
 msgstr "Doğrulanmamış"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:204
+#: src/features/auth/sign-in/components/user-auth-form.tsx:190
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Mochi'nin veri dışa aktarımından dışa aktarılan bir .zip dosyası yükleyin."
 
@@ -1723,13 +1657,9 @@ msgstr "Mochi'nin veri dışa aktarımından dışa aktarılan bir .zip dosyası
 msgid "Use a different account"
 msgstr "Farklı bir hesap kullan"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:575
+#: src/features/auth/sign-in/components/user-auth-form.tsx:517
 msgid "Use a passkey"
 msgstr "Geçiş anahtarı kullan"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:60
-msgid "Use the form alice@example.com"
-msgstr "alice@example.com biçimini kullanın"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1738,10 +1668,6 @@ msgstr "Geçiş anahtarınızı kullanın"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Kullanıcı"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:135
-msgid "Username on source server"
-msgstr "Kaynak sunucudaki kullanıcı adı"
 
 #: src/routes/restore.tsx:51
 msgid "Validating backup"
@@ -1756,7 +1682,7 @@ msgid "Verification code sent"
 msgstr "Doğrulama kodu gönderildi"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:367
 msgid "Verification failed"
 msgstr "Doğrulama başarısız"
 
@@ -1795,10 +1721,6 @@ msgstr "Tümünü görüntüle"
 msgid "View all notifications"
 msgstr "Tüm bildirimleri görüntüle"
 
-#: src/routes/replicating.tsx:126
-msgid "Waiting for approval"
-msgstr "Onay bekleniyor"
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
 msgstr "Kısa süre içinde tekrar çevrimiçi olacağız."
@@ -1811,13 +1733,17 @@ msgstr "Web sitesi bakımda!"
 msgid "Wednesday"
 msgstr "Çarşamba"
 
-#: src/features/landing/landing-page.tsx:286
+#: src/features/landing/landing-page.tsx:259
 msgid "Wikis"
 msgstr "Wiki'ler"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
 msgid "Wrong passphrase"
 msgstr "Yanlış parola cümlesi"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:61
+msgid "You do not have access to this section."
+msgstr "Bu bölüme erişiminiz yok."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43
@@ -1838,21 +1764,9 @@ msgstr "Hesabın askıya alındı"
 
 #: src/features/auth/mfa/index.tsx:173
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/features/auth/sign-in/components/user-auth-form.tsx:356
 msgid "Your account has been suspended."
 msgstr "Hesabın askıya alındı."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:258
-msgid "Your account is already replicated here. Log in instead."
-msgstr "Hesabınız zaten buraya çoğaltılmış. Onun yerine giriş yapın."
-
-#: src/routes/replicating.tsx:131
-msgid "Your account is being copied from the source server. Do not close this window."
-msgstr "Hesabınız kaynak sunucudan kopyalanıyor. Bu pencereyi kapatmayın."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:128
-msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
-msgstr "Hesabınız, zaten erişiminizin olduğu bir sunucudan canlı olarak kopyalanıyor. Aktarım başlamadan önce kaynak sunucunun isteği onaylaması gerekiyor."
 
 #: src/routes/closing.tsx:95
 msgid "Your account is scheduled for deletion"
@@ -1870,7 +1784,7 @@ msgstr "Hesabın giriş yapmak için bir passkey gerektiriyor"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Hesabınız {source} adresinden buraya taşındı. Orada silene kadar mesajlar ve bildirimler her iki sunucuya da ulaşabilir, bazı içerikleriniz eski sunucudan sunulmaya devam eder ve takipçileriniz sizi burada bulmak için birkaç dakika bekleyebilir."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:137
 msgid "Your code is: {devCode}"
 msgstr "Kodun: {devCode}"
 

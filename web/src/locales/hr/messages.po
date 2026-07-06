@@ -13,22 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:238
-msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
-msgstr "{failed, plural, one {Ponovni pokušaj za # bazu podataka} few {Ponovni pokušaj za # baze podataka} other {Ponovni pokušaj za # baza podataka}}"
-
-#: src/routes/replicating.tsx:239
-msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
-msgstr "{failed, plural, one {Ponovni pokušaj za # datoteku} few {Ponovni pokušaj za # datoteke} other {Ponovni pokušaj za # datoteka}}"
-
-#: src/routes/replicating.tsx:243
-msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
-msgstr "{remaining, plural, one {# baza podataka preostala} few {# baze podataka preostale} other {# baza podataka preostalo}}"
-
-#: src/routes/replicating.tsx:244
-msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
-msgstr "{remaining, plural, one {# datoteka preostala} few {# datoteke preostale} other {# datoteka preostalo}}"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 sati"
@@ -40,6 +24,10 @@ msgstr "24 sata"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Apsolutno (datum i vrijeme)"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:60
+msgid "Access denied"
+msgstr "Pristup odbijen"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:16
 msgid "Access Forbidden"
@@ -53,8 +41,7 @@ msgstr "Razina pristupa"
 msgid "Account added"
 msgstr "Račun dodan"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:211
-#: src/features/auth/sign-in/components/user-auth-form.tsx:257
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Račun je već na ovom poslužitelju"
 
@@ -64,7 +51,7 @@ msgstr "Račun uklonjen"
 
 #: src/features/auth/mfa/index.tsx:172
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:413
+#: src/features/auth/sign-in/components/user-auth-form.tsx:355
 msgid "Account suspended"
 msgstr "Račun obustavljen"
 
@@ -122,7 +109,7 @@ msgstr "Dodaj prikaz"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Prilagodite izgled i raspored prema vašim željama."
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:50
 msgid "Advanced"
 msgstr "Napredno"
 
@@ -139,7 +126,7 @@ msgstr "Sve"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Račun s tom e-poštom već postoji. Prvo se prijavite, zatim povežite {0} iz svojih postavki autentifikacije."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "An account with this identity already exists here."
 msgstr "Račun s ovim identitetom već postoji ovdje."
 
@@ -147,7 +134,7 @@ msgstr "Račun s ovim identitetom već postoji ovdje."
 msgid "An error occurred"
 msgstr "Došlo je do pogreške"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:256
 msgid "An unexpected error occurred"
 msgstr "Došlo je do neočekivane pogreške"
 
@@ -173,7 +160,7 @@ msgid "Authenticator code"
 msgstr "Kod autentifikatora"
 
 #: ../../../lib/web/src/components/place-picker.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:590
+#: src/features/auth/sign-in/components/user-auth-form.tsx:532
 msgid "Back"
 msgstr "Natrag"
 
@@ -187,15 +174,15 @@ msgstr "Natrag na početnu"
 msgid "Back to sign up"
 msgstr "Natrag na registraciju"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:205
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:102
 msgid "Backup file"
 msgstr "Sigurnosna kopija"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:215
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Backup file is corrupted"
 msgstr "Datoteka sigurnosne kopije je oštećena"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Backup is too new"
 msgstr "Sigurnosna kopija je prenadna"
 
@@ -204,7 +191,7 @@ msgstr "Sigurnosna kopija je prenadna"
 msgid "Boost interest"
 msgstr "Pojačaj interes"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:90
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:56
 msgid "Bring an existing account onto this server:"
 msgstr "Donesi postojeći račun na ovaj poslužitelj:"
 
@@ -221,45 +208,31 @@ msgstr "Stvaranjem računa, slažete se s <0>Pravilima poslužitelja</0>, <1>Uvj
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/routes/replicating.tsx:211
 msgid "Cancel"
 msgstr "Odustani"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:144
+#: ../../../lib/web/src/components/notification-category-button.tsx:143
 msgid "Category for this notification"
 msgstr "Kategorija za ovu obavijest"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:125
-#: ../../../lib/web/src/components/notification-category-button.tsx:136
+#: ../../../lib/web/src/components/notification-category-button.tsx:124
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Change notification category"
 msgstr "Promijeni kategoriju obavijesti"
 
-#: src/features/landing/landing-page.tsx:278
+#: src/features/landing/landing-page.tsx:251
 msgid "Chat"
 msgstr "Razgovor"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:262
-msgid "Check the address after @ and try again."
-msgstr "Provjerite adresu nakon @ i pokušajte ponovno."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
-msgid "Check the username before @ and try again."
-msgstr "Provjerite korisničko ime prije @ i pokušajte ponovno."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "Check your email."
 msgstr "Provjerite svoju e-poštu."
-
-#: src/routes/replicating.tsx:178
-msgid "Checking every few seconds…"
-msgstr "Provjera svakih nekoliko sekundi…"
 
 #: src/routes/restore.tsx:165
 msgid "Checking…"
 msgstr "Provjera…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
-#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Choose a different local email or log in instead."
 msgstr "Odaberite drugu lokalnu e-poštu ili se umjesto toga prijavite."
 
@@ -331,11 +304,11 @@ msgstr "Zatvori ploču"
 msgid "Close search"
 msgstr "Zatvori pretragu"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:149
 msgid "Code copied"
 msgstr "Kod kopiran"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:145
+#: src/features/auth/sign-in/components/user-auth-form.tsx:134
 msgid "Code sent."
 msgstr "Kod poslan."
 
@@ -398,13 +371,12 @@ msgstr "Nastavi s {label}"
 msgid "Copy"
 msgstr "Kopiraj"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+#: src/features/auth/sign-in/components/user-auth-form.tsx:161
 msgid "Copy code"
 msgstr "Kopiraj kod"
 
 #: src/features/auth/identity-form.tsx:162
-#: src/routes/replicating.tsx:206
 msgid "Could not cancel"
 msgstr "Nije moguće otkazati"
 
@@ -413,16 +385,12 @@ msgstr "Nije moguće otkazati"
 msgid "Could not load this document. Please try again later."
 msgstr "Nije moguće učitati ovaj dokument. Pokušajte ponovno kasnije."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
-msgid "Could not reach the source server"
-msgstr "Nije moguće doseći izvorni poslužitelj"
-
 #: src/routes/closing.tsx:69
 msgid "Could not reactivate your account"
 msgstr "Nije moguće ponovno aktivirati vaš račun"
 
 #: src/features/auth/components/oauth-buttons.tsx:75
-#: src/features/landing/landing-page.tsx:209
+#: src/features/landing/landing-page.tsx:182
 msgid "Could not start sign-in"
 msgstr "Nije moguće započeti prijavu"
 
@@ -438,11 +406,11 @@ msgstr "Pokretanje ponovne autentifikacije nije uspjelo. Pokušajte ponovno."
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Provjera s tim računom nije uspjela. Pokušajte ponovno."
 
-#: src/features/landing/landing-page.tsx:355
+#: src/features/landing/landing-page.tsx:324
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "Stvorite <0>besplatni račun</0>, pokrenite <1>vlastiti poslužitelj</1> ili istražite <2>izvorni kôd</2>."
 
-#: src/features/landing/landing-page.tsx:279
+#: src/features/landing/landing-page.tsx:252
 msgid "CRM"
 msgstr "CRM"
 
@@ -463,9 +431,9 @@ msgstr "Tamno"
 msgid "Dark mode"
 msgstr "Tamni način rada"
 
-#: src/routes/replicating.tsx:150
-msgid "Databases"
-msgstr "Baze podataka"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:240
+msgid "Data conflict"
+msgstr "Sukob podataka"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:310
 msgid "Default"
@@ -515,7 +483,6 @@ msgstr "Odbaci"
 msgid "Displays the mobile sidebar."
 msgstr "Prikazuje mobilnu bočnu traku."
 
-#: src/routes/replicating.tsx:234
 #: src/routes/restore.tsx:56
 msgid "Done"
 msgstr "Gotovo"
@@ -537,12 +504,11 @@ msgstr "Prilagođeno disleksiji"
 msgid "Edit {label}"
 msgstr "Uredi {label}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:624
+#: src/features/auth/sign-in/components/user-auth-form.tsx:566
 msgid "Email"
 msgstr "E-pošta"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:219
-#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "Email already in use"
 msgstr "E-pošta je već u uporabi"
 
@@ -552,15 +518,15 @@ msgstr "kod e-pošte"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:221
-#: src/features/auth/sign-in/components/user-auth-form.tsx:476
+#: src/features/auth/sign-in/components/user-auth-form.tsx:418
 msgid "Email code"
 msgstr "Kod e-pošte"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:501
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Email me a code"
 msgstr "Pošalji mi kôd e-poštom"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Enter a code to continue"
 msgstr "Unesite kôd za nastavak"
 
@@ -568,7 +534,7 @@ msgstr "Unesite kôd za nastavak"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Unesite kod za oporavak za \"{userEmail}\" za prijavu"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:457
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Enter the code from your authenticator app"
 msgstr "Unesite kod iz vaše autentifikacijske aplikacije"
 
@@ -589,7 +555,7 @@ msgstr "Unesite svoje {initial} i {last}"
 msgid "Enter your authenticator code"
 msgstr "Unesite kôd iz aplikacije za autentifikaciju"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:449
+#: src/features/auth/sign-in/components/user-auth-form.tsx:391
 msgid "Enter your email code and authenticator code"
 msgstr "Unesite kod e-pošte i autentifikacijski kod"
 
@@ -616,11 +582,11 @@ msgstr "Neuspješno"
 msgid "Failed to add account"
 msgstr "Dodavanje računa nije uspjelo"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Failed to continue"
 msgstr "Nastavak nije uspio"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
 msgid "Failed to copy code"
 msgstr "Kopiranje koda nije uspjelo"
 
@@ -636,23 +602,19 @@ msgstr "Spremanje identiteta nije uspjelo"
 msgid "Failed to send verification code"
 msgstr "Slanje verifikacijskog koda nije uspjelo"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:112
+#: ../../../lib/web/src/components/notification-category-button.tsx:111
 msgid "Failed to update category"
 msgstr "Ažuriranje kategorije nije uspjelo"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:253
 msgid "Feeds"
 msgstr "Feedovi"
-
-#: src/routes/replicating.tsx:159
-msgid "Files"
-msgstr "Datoteke"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:88
 msgid "Finish moving your account"
 msgstr "Dovršite premještanje računa"
 
-#: src/routes/identity.tsx:96
+#: src/routes/identity.tsx:90
 msgid "Finish setting up your account"
 msgstr "Završite postavljanje računa"
 
@@ -668,7 +630,7 @@ msgstr "Ravna"
 msgid "Floating"
 msgstr "Plutajuće"
 
-#: src/features/landing/landing-page.tsx:281
+#: src/features/landing/landing-page.tsx:254
 msgid "Forums"
 msgstr "Forumi"
 
@@ -693,11 +655,11 @@ msgstr "Iz teme"
 msgid "Full layout"
 msgstr "Puni izgled"
 
-#: src/features/landing/landing-page.tsx:282
+#: src/features/landing/landing-page.tsx:255
 msgid "Games"
 msgstr "Igre"
 
-#: src/features/landing/landing-page.tsx:283
+#: src/features/landing/landing-page.tsx:256
 msgid "Git repositories"
 msgstr "Git repozitoriji"
 
@@ -766,7 +728,7 @@ msgstr "Uvučeno"
 msgid "Interests"
 msgstr "Interesi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:401
+#: src/features/auth/sign-in/components/user-auth-form.tsx:343
 msgid "Invalid authenticator code"
 msgstr "Nevažeći autentifikacijski kod"
 
@@ -775,8 +737,8 @@ msgstr "Nevažeći autentifikacijski kod"
 #: src/features/auth/mfa/index.tsx:145
 #: src/features/auth/mfa/index.tsx:165
 #: src/features/auth/mfa/index.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
-#: src/features/auth/sign-in/components/user-auth-form.tsx:421
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
+#: src/features/auth/sign-in/components/user-auth-form.tsx:363
 msgid "Invalid code"
 msgstr "Nevažeći kod"
 
@@ -786,8 +748,8 @@ msgid "Invalid recovery code"
 msgstr "Nevažeći kod za oporavak"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
-#: src/features/auth/sign-in/components/user-auth-form.tsx:384
+#: src/features/auth/sign-in/components/user-auth-form.tsx:307
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Invalid verification code"
 msgstr "Nevažeći verifikacijski kod"
 
@@ -834,23 +796,23 @@ msgstr "Učitavanje…"
 
 #: src/features/auth/mfa/index.tsx:297
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:548
+#: src/features/auth/sign-in/components/user-auth-form.tsx:490
 msgid "Log in"
 msgstr "Prijavite se"
 
-#: src/features/landing/landing-page.tsx:399
+#: src/features/landing/landing-page.tsx:368
 msgid "Log in to Mochi"
 msgstr "Prijavite se na Mochi"
 
-#: src/features/landing/landing-page.tsx:471
+#: src/features/landing/landing-page.tsx:434
 msgid "Log in with {label}"
 msgstr "Prijavite se s {label}"
 
-#: src/features/auth/sign-in/index.tsx:109
+#: src/features/auth/sign-in/index.tsx:105
 msgid "Log in with passkey"
 msgstr "Prijavite se pristupnim ključem"
 
-#: src/features/auth/sign-in/index.tsx:76
+#: src/features/auth/sign-in/index.tsx:74
 msgid "Log in with your email address"
 msgstr "Prijavite se svojom adresom e-pošte"
 
@@ -865,8 +827,8 @@ msgid "Log out"
 msgstr "Odjavi se"
 
 #: src/features/auth/recovery/index.tsx:44
-#: src/features/auth/sign-in/index.tsx:46
-#: src/features/landing/landing-page.tsx:239
+#: src/features/auth/sign-in/index.tsx:44
+#: src/features/landing/landing-page.tsx:212
 msgid "Logged in"
 msgstr "Prijavljen"
 
@@ -887,7 +849,7 @@ msgid "Login session expired, please try again"
 msgstr "Sesija prijave je istekla, pokušajte ponovno"
 
 #: src/features/auth/mfa/index.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:599
+#: src/features/auth/sign-in/components/user-auth-form.tsx:541
 msgid "Lost access? Use a recovery code"
 msgstr "Izgubili pristup? Koristite kod za oporavak"
 
@@ -897,7 +859,7 @@ msgstr "Izgubili pristup? Koristite kod za oporavak"
 msgid "Mark all as read"
 msgstr "Označi sve kao pročitano"
 
-#: src/features/landing/landing-page.tsx:284
+#: src/features/landing/landing-page.tsx:257
 msgid "Market"
 msgstr "Tržnica"
 
@@ -913,7 +875,7 @@ msgstr "Izbornik"
 msgid "Metric"
 msgstr "Metrički"
 
-#: src/features/landing/landing-page.tsx:323
+#: src/features/landing/landing-page.tsx:292
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi je federirana, višekorisnička platforma otvorenog koda za distribuirane aplikacije. Svatko može pokrenuti vlastiti poslužitelj i povezati se s bilo kojim drugim korisnikom na mreži Mochi. Svatko može stvarati i objavljivati aplikacije. Svaka je aplikacija zamjenjiva, čak i one sustavske. Poslužitelj dolazi s više od 20 aplikacija, uključujući:"
 
@@ -921,7 +883,8 @@ msgstr "Mochi je federirana, višekorisnička platforma otvorenog koda za distri
 msgid "Monday"
 msgstr "Ponedjeljak"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
+#: ../../../lib/web/src/features/errors/general-error.tsx:53
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:303
 msgid "Network error"
 msgstr "Pogreška mreže"
 
@@ -933,14 +896,13 @@ msgstr "Novo"
 msgid "New accounts are disabled on this server"
 msgstr "Novi računi su onemogućeni na ovom poslužitelju"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:270
-#: src/features/auth/sign-in/components/user-auth-form.tsx:319
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "New user signup is disabled."
 msgstr "Registracija novih korisnika je onemogućena."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:637
+#: src/features/auth/sign-in/components/user-auth-form.tsx:579
 msgid "Next"
 msgstr "Sljedeće"
 
@@ -953,7 +915,7 @@ msgstr "Sljedeća slika"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Nisu konfigurirana pravila pristupa. Dodajte pravila za kontrolu pristupa ovom resursu."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:223
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "No backup file selected"
 msgstr "Nije odabrana datoteka sigurnosne kopije"
 
@@ -964,10 +926,6 @@ msgstr "Nema povezanih računa"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Nema dostupnih grupa"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:265
-msgid "No matching account on the source server"
-msgstr "Na izvornom poslužitelju nema odgovarajućeg računa"
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -986,7 +944,7 @@ msgstr "Nema rezultata."
 msgid "No time zone found."
 msgstr "Nije pronađena nijedna vremenska zona."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:148
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "No topic record yet — try again after the next notification."
 msgstr "Još nema zapisa o temi — pokušajte ponovno nakon sljedeće obavijesti."
 
@@ -1000,7 +958,7 @@ msgstr "Nije pronađen nijedan korisnik"
 msgid "None"
 msgstr "Ništa"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:105
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:71
 msgid "None; create a fresh account"
 msgstr "Ništa; stvorite novi račun"
 
@@ -1008,9 +966,13 @@ msgstr "Ništa; stvorite novi račun"
 msgid "Normal"
 msgstr "Normalno"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:203
+#: src/features/auth/sign-in/components/user-auth-form.tsx:189
 msgid "Not a migration bundle"
 msgstr "Nije paket za migraciju"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:67
+msgid "Not found"
+msgstr "Nije pronađeno"
 
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:146
 msgid "Not set"
@@ -1053,16 +1015,16 @@ msgstr "Otvori navigacijski izbornik"
 msgid "Open theme settings"
 msgstr "Otvori postavke teme"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:95
 msgid "Or"
 msgstr "Ili"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:518
+#: src/features/auth/sign-in/components/user-auth-form.tsx:460
 msgid "Or enter authenticator code"
 msgstr "Ili unesite kod za autentifikaciju"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:560
-#: src/features/landing/landing-page.tsx:440
+#: src/features/auth/sign-in/components/user-auth-form.tsx:502
+#: src/features/landing/landing-page.tsx:403
 msgid "Or log in with"
 msgstr "Ili se prijavite s"
 
@@ -1084,21 +1046,21 @@ msgstr "passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 #: src/features/auth/mfa/index.tsx:279
-#: src/features/landing/landing-page.tsx:459
+#: src/features/landing/landing-page.tsx:422
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/index.tsx:61
-#: src/features/landing/landing-page.tsx:266
+#: src/features/auth/sign-in/index.tsx:59
+#: src/features/landing/landing-page.tsx:239
 msgid "Passkey login cancelled"
 msgstr "Prijava passkeyem otkazana"
 
-#: src/features/auth/sign-in/index.tsx:59
-#: src/features/landing/landing-page.tsx:259
+#: src/features/auth/sign-in/index.tsx:57
+#: src/features/landing/landing-page.tsx:232
 msgid "Passkey login failed"
 msgstr "Prijava passkeyem nije uspjela"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:298
+#: src/features/auth/sign-in/components/user-auth-form.tsx:240
 msgid "Passkey login required"
 msgstr "Potrebna je prijava passkeyem"
 
@@ -1114,41 +1076,39 @@ msgstr "Provjera pristupnog ključa nije uspjela. Pokušajte ponovno."
 msgid "Passkeys"
 msgstr "Passkeyevi"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:224
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
 msgid "Passphrase"
 msgstr "Zaporna fraza"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:453
+#: src/features/auth/sign-in/components/user-auth-form.tsx:395
 msgid "Paste the login code you received by email"
 msgstr "Zalijepite kod za prijavu koji ste primili e-poštom"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:70
-msgid "Peer IDs start with 12D3KooW and are 52 characters long"
-msgstr "Peer ID-ovi počinju s 12D3KooW i imaju 52 znaka"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/sign-in/components/user-auth-form.tsx:344
 msgid "Please check your authenticator app and try again."
 msgstr "Provjerite svoju authenticator aplikaciju i pokušajte ponovno."
 
 #: src/features/auth/mfa/index.tsx:146
 #: src/features/auth/mfa/index.tsx:166
 #: src/features/auth/mfa/index.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:422
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Please check your code and try again."
 msgstr "Provjerite svoj kod i pokušajte ponovno."
 
 #: src/features/auth/mfa/index.tsx:104
 #: src/features/auth/mfa/index.tsx:126
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your codes and try again."
 msgstr "Provjerite svoje kodove i pokušajte ponovno."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
-#: src/features/auth/sign-in/components/user-auth-form.tsx:385
+#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:327
 msgid "Please check your email and try again."
 msgstr "Provjerite svoju e-poštu i pokušajte ponovno."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
+#: ../../../lib/web/src/features/errors/general-error.tsx:54
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:304
+#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "Provjerite internetsku vezu i pokušajte ponovno."
 
@@ -1157,11 +1117,11 @@ msgstr "Provjerite internetsku vezu i pokušajte ponovno."
 msgid "Please check your recovery code and try again."
 msgstr "Provjerite svoj kod za oporavak i pokušajte ponovno."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Please copy manually: {devCode}"
 msgstr "Kopirajte ručno: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:79
+#: src/features/auth/sign-in/components/user-auth-form.tsx:68
 msgid "Please enter a valid email"
 msgstr "Unesite važeću e-poštu"
 
@@ -1173,20 +1133,27 @@ msgstr "Unesite svoje ime"
 msgid "Please enter your recovery code"
 msgstr "Unesite svoj kod za oporavak"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:274
-#: src/features/auth/sign-in/components/user-auth-form.tsx:323
-#: src/features/auth/sign-in/components/user-auth-form.tsx:426
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Please try again or contact support."
 msgstr "Pokušajte ponovno ili se obratite podršci."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:83
+msgid "Please try again."
+msgstr "Pokušajte ponovno."
 
 #: src/features/auth/mfa/index.tsx:92
 msgid "Please use another verification method."
 msgstr "Koristite drugu metodu provjere."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:299
+#: src/features/auth/sign-in/components/user-auth-form.tsx:241
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Koristite gumb \"Prijava passkeyem\"."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:75
+msgid "Please wait a moment and try again."
+msgstr "Pričekajte trenutak i pokušajte ponovno."
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
@@ -1196,7 +1163,7 @@ msgstr "Prethodna slika"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:27
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 #: src/features/auth/identity-form.tsx:97
-#: src/features/landing/landing-page.tsx:528
+#: src/features/landing/landing-page.tsx:487
 msgid "Privacy"
 msgstr "Privatnost"
 
@@ -1209,7 +1176,7 @@ msgstr "Privatno"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/features/landing/landing-page.tsx:285
+#: src/features/landing/landing-page.tsx:258
 msgid "Projects"
 msgstr "Projekti"
 
@@ -1233,8 +1200,8 @@ msgstr "Ponovno registrirajte svoje pristupne ključeve na ovom poslužitelju"
 msgid "Reactivate my account"
 msgstr "Ponovno aktiviraj moj račun"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:219
-#: ../../../lib/web/src/components/search-entity-page.tsx:194
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:216
+#: ../../../lib/web/src/components/search-entity-page.tsx:240
 msgid "Recommended"
 msgstr "Preporučeno"
 
@@ -1255,10 +1222,9 @@ msgstr "Preusmjeravanje na nadzornu ploču…"
 msgid "Reduce interest"
 msgstr "Smanji interes"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:269
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
-#: src/features/auth/sign-in/components/user-auth-form.tsx:417
+#: src/features/auth/sign-in/components/user-auth-form.tsx:211
+#: src/features/auth/sign-in/components/user-auth-form.tsx:260
+#: src/features/auth/sign-in/components/user-auth-form.tsx:359
 msgid "Registration disabled"
 msgstr "Registracija onemogućena"
 
@@ -1289,26 +1255,6 @@ msgstr "Ukloniti pristup?"
 msgid "Remove interest"
 msgstr "Ukloni interes"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
-msgid "Replicate from another server"
-msgstr "Replicirajte s drugog poslužitelja"
-
-#: src/features/landing/landing-page.tsx:166
-msgid "Replication request denied"
-msgstr "Zahtjev za replikaciju odbijen"
-
-#: src/routes/replicating.tsx:135
-msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
-msgstr "Zahtjev za replikaciju poslan je korisniku <0>{source_user}</0>. Odobrite ga na stranici postavki izvornog poslužitelja kako biste dovršili replikaciju."
-
-#: src/routes/replicating.tsx:139
-msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
-msgstr "Zahtjev za replikaciju poslan je izvornom poslužitelju. Odobrite ga na stranici postavki izvornog poslužitelja kako biste dovršili replikaciju."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-msgid "Replication signup failed"
-msgstr "Registracija replikacijom nije uspjela"
-
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Ponovno pošalji e-poštu"
@@ -1322,11 +1268,11 @@ msgstr "Resetiraj"
 msgid "Reset all settings to default values"
 msgstr "Resetiraj sve postavke na zadane vrijednosti"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:190
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:87
 msgid "Restore a backup file"
 msgstr "Vratite sigurnosnu datoteku"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:215
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Vraćanje nije uspjelo"
@@ -1376,8 +1322,8 @@ msgstr "Pretraži korisnike"
 msgid "Search..."
 msgstr "Pretraži..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:177
-#: ../../../lib/web/src/components/search-entity-page.tsx:152
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:174
+#: ../../../lib/web/src/components/search-entity-page.tsx:198
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "Pretraživanje..."
@@ -1426,20 +1372,20 @@ msgstr "Pošalji e-poštu"
 msgid "Serif"
 msgstr "Serifno"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:260
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:286
 msgid "Server error"
 msgstr "Pogreška poslužitelja"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:40
-#: src/features/landing/landing-page.tsx:510
+#: src/features/landing/landing-page.tsx:469
 msgid "Server rules"
 msgstr "Pravila poslužitelja"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
-msgid "Session expired"
-msgstr "Sesija je istekla"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:210
+msgid "Session expired. Please log in again."
+msgstr "Sesija je istekla. Ponovno se prijavite."
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:147
 msgid "Set origin and destination"
@@ -1472,7 +1418,7 @@ msgstr "Bočna traka"
 msgid "Sign out"
 msgstr "Odjava"
 
-#: src/features/landing/landing-page.tsx:303
+#: src/features/landing/landing-page.tsx:272
 msgid "Sign up or log in"
 msgstr "Registracija ili prijava"
 
@@ -1497,14 +1443,6 @@ msgstr "Preskoči na glavni sadržaj"
 msgid "Small"
 msgstr "Malo"
 
-#: src/routes/replicating.tsx:168
-msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
-msgstr "Neki prijenosi nisu završeni iz prvog pokušaja. Bit će automatski ponovljeni."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:156
-msgid "Source server peer ID"
-msgstr "Peer ID izvornog poslužitelja"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:97
 msgid "Spacious"
 msgstr "Prostrano"
@@ -1513,10 +1451,6 @@ msgstr "Prostrano"
 #: src/features/auth/recovery/index.tsx:143
 msgid "Start again"
 msgstr "Započni ponovno"
-
-#: src/routes/replicating.tsx:246
-msgid "Starting…"
-msgstr "Pokretanje…"
 
 #: src/features/auth/identity-form.tsx:126
 msgid "Stay hidden from directory searches."
@@ -1537,10 +1471,6 @@ msgstr "Uspješna prijava s kodom za oporavak"
 #: ../../../lib/web/src/lib/preference-utils.ts:65
 msgid "Sunday"
 msgstr "Nedjelja"
-
-#: src/routes/replicating.tsx:124
-msgid "Syncing your data"
-msgstr "Sinkroniziranje vaših podataka"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
 #: ../../../lib/web/src/lib/preference-utils.ts:21
@@ -1563,7 +1493,7 @@ msgstr "Timovi/Aplikacije"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
 #: ../../../lib/web/src/features/document/document-page.tsx:42
-#: src/features/landing/landing-page.tsx:519
+#: src/features/landing/landing-page.tsx:478
 msgid "Terms and conditions"
 msgstr "Uvjeti korištenja"
 
@@ -1580,15 +1510,15 @@ msgstr "Taj kôd nije ispravan ili je istekao."
 msgid "That sign-in provider is not available"
 msgstr "Taj pružatelj prijave nije dostupan"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:197
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:94
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "E-pošta koju unesete iznad postaje naziv novog računa na ovom poslužitelju. Identitet sigurnosne kopije ne smije već biti aktivan ovdje — vratite na drugi poslužitelj ili najprije izbrišite postojeći račun."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "The file may be damaged or have been modified."
 msgstr "Datoteka može biti oštećena ili izmijenjena."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:200
+#: src/features/auth/sign-in/components/user-auth-form.tsx:186
 msgid "The passphrase you entered does not match the backup."
 msgstr "Zaporna fraza koju ste unijeli ne odgovara sigurnosnoj kopiji."
 
@@ -1596,13 +1526,13 @@ msgstr "Zaporna fraza koju ste unijeli ne odgovara sigurnosnoj kopiji."
 msgid "the provider"
 msgstr "pružatelj"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:68
+msgid "The requested content could not be found."
+msgstr "Traženi sadržaj nije moguće pronaći."
+
 #: src/routes/restore.tsx:111
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Vraćanje nije dovršeno. Datoteka sigurnosne kopije može biti oštećena, zaporna fraza može biti netočna, ili je poslužitelj naišao na pogrešku."
-
-#: src/features/landing/landing-page.tsx:167
-msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
-msgstr "Izvorni poslužitelj nije odobrio zahtjev ili je istekao. Pokušajte ponovo ili se registrirajte lokalno."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
@@ -1612,7 +1542,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Postavke teme"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:208
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Ova sigurnosna kopija je stvorena novijom verzijom Mochi. Prvo ažurirajte ovaj poslužitelj."
 
@@ -1651,6 +1581,10 @@ msgstr "Prebaci bočnu traku"
 msgid "Toggle theme"
 msgstr "Prebaci temu"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:74
+msgid "Too many requests"
+msgstr "Previše zahtjeva"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:45
 msgid "Top"
 msgstr "Vrh"
@@ -1659,13 +1593,13 @@ msgstr "Vrh"
 msgid "Travelling"
 msgstr "Putovanje"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:193
-#: ../../../lib/web/src/components/search-entity-page.tsx:168
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:190
+#: ../../../lib/web/src/components/search-entity-page.tsx:214
 msgid "Try adjusting your search terms"
 msgstr "Pokušajte prilagoditi pojmove pretrage"
 
-#: ../../../lib/web/src/features/errors/general-error.tsx:128
-#: ../../../lib/web/src/features/errors/general-error.tsx:168
+#: ../../../lib/web/src/features/errors/general-error.tsx:140
+#: ../../../lib/web/src/features/errors/general-error.tsx:180
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:19
 msgid "Try again"
 msgstr "Pokušaj ponovno"
@@ -1686,7 +1620,7 @@ msgstr "Tipkajte za pretragu korisnika"
 msgid "Type to search..."
 msgstr "Tipkajte za pretragu..."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:282
 msgid "Unable to connect to remote server"
 msgstr "Nije moguće povezati se s udaljenim poslužiteljem"
 
@@ -1695,7 +1629,7 @@ msgstr "Nije moguće povezati se s udaljenim poslužiteljem"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Nije moguće preusmjeriti na prijavu. Pokušajte ponovno."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:156
+#: ../../../lib/web/src/components/notification-category-button.tsx:155
 msgid "Unassigned"
 msgstr "Nedodijeljeno"
 
@@ -1715,7 +1649,7 @@ msgstr "Raspakiravanje vaših podataka"
 msgid "Unverified"
 msgstr "Neprovjereno"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:204
+#: src/features/auth/sign-in/components/user-auth-form.tsx:190
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Prenesite .zip datoteku izvezenu iz Mochi izvoza podataka."
 
@@ -1723,13 +1657,9 @@ msgstr "Prenesite .zip datoteku izvezenu iz Mochi izvoza podataka."
 msgid "Use a different account"
 msgstr "Koristi drugi račun"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:575
+#: src/features/auth/sign-in/components/user-auth-form.tsx:517
 msgid "Use a passkey"
 msgstr "Upotrijebi pristupni ključ"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:60
-msgid "Use the form alice@example.com"
-msgstr "Koristite oblik alice@example.com"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1738,10 +1668,6 @@ msgstr "Upotrijebite svoj pristupni ključ"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Korisnik"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:135
-msgid "Username on source server"
-msgstr "Korisničko ime na izvornom poslužitelju"
 
 #: src/routes/restore.tsx:51
 msgid "Validating backup"
@@ -1756,7 +1682,7 @@ msgid "Verification code sent"
 msgstr "Verifikacijski kod poslan"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:367
 msgid "Verification failed"
 msgstr "Provjera nije uspjela"
 
@@ -1795,10 +1721,6 @@ msgstr "Prikaži sve"
 msgid "View all notifications"
 msgstr "Prikaži sve obavijesti"
 
-#: src/routes/replicating.tsx:126
-msgid "Waiting for approval"
-msgstr "Čekanje odobrenja"
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
 msgstr "Uskoro ćemo biti ponovno dostupni."
@@ -1811,13 +1733,17 @@ msgstr "Web stranica je u održavanju!"
 msgid "Wednesday"
 msgstr "Srijeda"
 
-#: src/features/landing/landing-page.tsx:286
+#: src/features/landing/landing-page.tsx:259
 msgid "Wikis"
 msgstr "Wikiji"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
 msgid "Wrong passphrase"
 msgstr "Netočna zaporna fraza"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:61
+msgid "You do not have access to this section."
+msgstr "Nemate pristup ovom odjeljku."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43
@@ -1838,21 +1764,9 @@ msgstr "Vaš račun je suspendiran"
 
 #: src/features/auth/mfa/index.tsx:173
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/features/auth/sign-in/components/user-auth-form.tsx:356
 msgid "Your account has been suspended."
 msgstr "Vaš račun je suspendiran."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:258
-msgid "Your account is already replicated here. Log in instead."
-msgstr "Vaš račun je već repliciran ovdje. Umjesto toga se prijavite."
-
-#: src/routes/replicating.tsx:131
-msgid "Your account is being copied from the source server. Do not close this window."
-msgstr "Vaš se račun kopira s izvornog poslužitelja. Nemojte zatvarati ovaj prozor."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:128
-msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
-msgstr "Vaš račun se kopira uživo s poslužitelja kojemu već imate pristup. Izvorni poslužitelj mora odobriti zahtjev prije nego što prijenos počne."
 
 #: src/routes/closing.tsx:95
 msgid "Your account is scheduled for deletion"
@@ -1870,7 +1784,7 @@ msgstr "Vaš račun zahtijeva passkey za prijavu"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Vaš račun je premješten ovdje s {source}. Dok ga tamo ne izbrišete, poruke i obavijesti mogu stizati na oba poslužitelja, dio vašeg sadržaja i dalje se poslužuje s starog poslužitelja, a pratiteljima može trebati nekoliko minuta da vas pronađu ovdje."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:137
 msgid "Your code is: {devCode}"
 msgstr "Vaš kod je: {devCode}"
 

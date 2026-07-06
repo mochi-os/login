@@ -13,22 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:238
-msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
-msgstr "{failed, plural, one {Sake gwadawa # bayanan bayanai} other {Sake gwadawa # bayanan bayanai}}"
-
-#: src/routes/replicating.tsx:239
-msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
-msgstr "{failed, plural, one {Sake gwadawa # fayil} other {Sake gwadawa # fayiloli}}"
-
-#: src/routes/replicating.tsx:243
-msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
-msgstr "{remaining, plural, one {# bayanan bayanai da ya rage} other {# bayanan bayanai da suka rage}}"
-
-#: src/routes/replicating.tsx:244
-msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
-msgstr "{remaining, plural, one {# fayil da ya rage} other {# fayiloli da suka rage}}"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "Awa 12"
@@ -40,6 +24,10 @@ msgstr "Awa 24"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Cikakke (kwanan wata da lokaci)"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:60
+msgid "Access denied"
+msgstr "An hana shiga"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:16
 msgid "Access Forbidden"
@@ -53,8 +41,7 @@ msgstr "Matakin shiga"
 msgid "Account added"
 msgstr "An ƙara asusu"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:211
-#: src/features/auth/sign-in/components/user-auth-form.tsx:257
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Asusu yana akan wannan uwar garken"
 
@@ -64,7 +51,7 @@ msgstr "An cire asusu"
 
 #: src/features/auth/mfa/index.tsx:172
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:413
+#: src/features/auth/sign-in/components/user-auth-form.tsx:355
 msgid "Account suspended"
 msgstr "An dakatar da asusu"
 
@@ -122,7 +109,7 @@ msgstr "Ƙara view"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Daidaita kamannin da tsarin don dacewa da ra'ayinka."
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:50
 msgid "Advanced"
 msgstr "Na ci gaba"
 
@@ -139,7 +126,7 @@ msgstr "Duk"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Akwai asusu da wannan imel. Da farko shiga, sai a haɗa {0} daga saitunan auth ɗin ka."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "An account with this identity already exists here."
 msgstr "Akwai asusun da wannan suna a nan."
 
@@ -147,7 +134,7 @@ msgstr "Akwai asusun da wannan suna a nan."
 msgid "An error occurred"
 msgstr "An samu kuskure"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:256
 msgid "An unexpected error occurred"
 msgstr "An samu kuskuren da ba a zata ba"
 
@@ -173,7 +160,7 @@ msgid "Authenticator code"
 msgstr "Code na authenticator"
 
 #: ../../../lib/web/src/components/place-picker.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:590
+#: src/features/auth/sign-in/components/user-auth-form.tsx:532
 msgid "Back"
 msgstr "Komawa"
 
@@ -187,15 +174,15 @@ msgstr "Komawa gida"
 msgid "Back to sign up"
 msgstr "Koma zuwa rajista"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:205
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:102
 msgid "Backup file"
 msgstr "Fayilin ajiya"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:215
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Backup file is corrupted"
 msgstr "Fayilin ajiya ya lalace"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Backup is too new"
 msgstr "Ajiyar ta yi sabuwa sosai"
 
@@ -204,7 +191,7 @@ msgstr "Ajiyar ta yi sabuwa sosai"
 msgid "Boost interest"
 msgstr "Ƙara sha'awa"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:90
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:56
 msgid "Bring an existing account onto this server:"
 msgstr "Kawo asusun da ke nan zuwa wannan sabar:"
 
@@ -221,45 +208,31 @@ msgstr "Ta hanyar ƙirƙirar account ɗinka, kana yarda da <0>Ƙa'idojin sabar</
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/routes/replicating.tsx:211
 msgid "Cancel"
 msgstr "Soke"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:144
+#: ../../../lib/web/src/components/notification-category-button.tsx:143
 msgid "Category for this notification"
 msgstr "Rukuni don wannan sanarwa"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:125
-#: ../../../lib/web/src/components/notification-category-button.tsx:136
+#: ../../../lib/web/src/components/notification-category-button.tsx:124
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Change notification category"
 msgstr "Sauya rukunin sanarwa"
 
-#: src/features/landing/landing-page.tsx:278
+#: src/features/landing/landing-page.tsx:251
 msgid "Chat"
 msgstr "Hira"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:262
-msgid "Check the address after @ and try again."
-msgstr "Duba adireshin bayan @ kuma sake gwadawa."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
-msgid "Check the username before @ and try again."
-msgstr "Duba sunan mai amfani gabanin @ kuma sake gwadawa."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "Check your email."
 msgstr "Duba imel ɗinka."
-
-#: src/routes/replicating.tsx:178
-msgid "Checking every few seconds…"
-msgstr "Ana dubawa kowane ‘yan dakiku…"
 
 #: src/routes/restore.tsx:165
 msgid "Checking…"
 msgstr "Ana duba…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
-#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Choose a different local email or log in instead."
 msgstr "Zaɓi wani imel na cikin gida ko shiga maimakon haka."
 
@@ -331,11 +304,11 @@ msgstr "Rufe panel"
 msgid "Close search"
 msgstr "Rufe bincike"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:149
 msgid "Code copied"
 msgstr "An kwafi code"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:145
+#: src/features/auth/sign-in/components/user-auth-form.tsx:134
 msgid "Code sent."
 msgstr "An aika code."
 
@@ -398,13 +371,12 @@ msgstr "Ci gaba da {label}"
 msgid "Copy"
 msgstr "Kwafi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+#: src/features/auth/sign-in/components/user-auth-form.tsx:161
 msgid "Copy code"
 msgstr "Kwafe code"
 
 #: src/features/auth/identity-form.tsx:162
-#: src/routes/replicating.tsx:206
 msgid "Could not cancel"
 msgstr "Ba a iya soke ba"
 
@@ -413,16 +385,12 @@ msgstr "Ba a iya soke ba"
 msgid "Could not load this document. Please try again later."
 msgstr "Ba a iya loda wannan takarda ba. Da fatan a sake gwadawa daga baya."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
-msgid "Could not reach the source server"
-msgstr "Ba a iya kaiwa ga uwar garken tushen"
-
 #: src/routes/closing.tsx:69
 msgid "Could not reactivate your account"
 msgstr "An kasa sake kunna asusunka"
 
 #: src/features/auth/components/oauth-buttons.tsx:75
-#: src/features/landing/landing-page.tsx:209
+#: src/features/landing/landing-page.tsx:182
 msgid "Could not start sign-in"
 msgstr "Ba a iya fara shiga ba"
 
@@ -438,11 +406,11 @@ msgstr "An kasa fara sake tantancewa. Don Allah a sake gwadawa."
 msgid "Couldn't verify with that account. Please try again."
 msgstr "An kasa tabbatar da wannan asusun. Da fatan za a sake gwadawa."
 
-#: src/features/landing/landing-page.tsx:355
+#: src/features/landing/landing-page.tsx:324
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "Ƙirƙiri <0>asusun kyauta</0>, gudanar da <1>uwar garken ka</1>, ko bincika <2>lambar tushe</2>."
 
-#: src/features/landing/landing-page.tsx:279
+#: src/features/landing/landing-page.tsx:252
 msgid "CRM"
 msgstr "CRM"
 
@@ -463,9 +431,9 @@ msgstr "Duhu"
 msgid "Dark mode"
 msgstr "Dark mode"
 
-#: src/routes/replicating.tsx:150
-msgid "Databases"
-msgstr "Bayanan tushe"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:240
+msgid "Data conflict"
+msgstr "Rikicin bayanai"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:310
 msgid "Default"
@@ -515,7 +483,6 @@ msgstr "Kau da shi"
 msgid "Displays the mobile sidebar."
 msgstr "Yana nuna sidebar na wayar hannu."
 
-#: src/routes/replicating.tsx:234
 #: src/routes/restore.tsx:56
 msgid "Done"
 msgstr "An gama"
@@ -537,12 +504,11 @@ msgstr "Mai dacewa da rashin karatu"
 msgid "Edit {label}"
 msgstr "Gyara {label}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:624
+#: src/features/auth/sign-in/components/user-auth-form.tsx:566
 msgid "Email"
 msgstr "Email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:219
-#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "Email already in use"
 msgstr "An riga an yi amfani da imel"
 
@@ -552,15 +518,15 @@ msgstr "lambar imel"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:221
-#: src/features/auth/sign-in/components/user-auth-form.tsx:476
+#: src/features/auth/sign-in/components/user-auth-form.tsx:418
 msgid "Email code"
 msgstr "Email code"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:501
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Email me a code"
 msgstr "Aiko mini lambar shiga ta imel"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Enter a code to continue"
 msgstr "Shigar da lamba don ci gaba"
 
@@ -568,7 +534,7 @@ msgstr "Shigar da lamba don ci gaba"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Shigar da lambar dawowa don \"{userEmail}\" don shiga"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:457
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Enter the code from your authenticator app"
 msgstr "Shigar da code daga authenticator app ɗinka"
 
@@ -589,7 +555,7 @@ msgstr "Shigar da {initial} da {last} ɗin ka"
 msgid "Enter your authenticator code"
 msgstr "Shigar da lambar mai tantancewarka"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:449
+#: src/features/auth/sign-in/components/user-auth-form.tsx:391
 msgid "Enter your email code and authenticator code"
 msgstr "Shigar da email code da authenticator code ɗinka"
 
@@ -616,11 +582,11 @@ msgstr "Ya kasa"
 msgid "Failed to add account"
 msgstr "An gaza ƙara account"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Failed to continue"
 msgstr "An gaza ci gaba"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
 msgid "Failed to copy code"
 msgstr "An gaza kwafe code"
 
@@ -636,23 +602,19 @@ msgstr "An gaza ajiye identity"
 msgid "Failed to send verification code"
 msgstr "An gaza aika verification code"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:112
+#: ../../../lib/web/src/components/notification-category-button.tsx:111
 msgid "Failed to update category"
 msgstr "An gaza sabunta category"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:253
 msgid "Feeds"
 msgstr "Jerukan labarai"
-
-#: src/routes/replicating.tsx:159
-msgid "Files"
-msgstr "Fayiloli"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:88
 msgid "Finish moving your account"
 msgstr "Kammala ƙaurar asusunka"
 
-#: src/routes/identity.tsx:96
+#: src/routes/identity.tsx:90
 msgid "Finish setting up your account"
 msgstr "Gama saitin account ɗinka"
 
@@ -668,7 +630,7 @@ msgstr "Lebur"
 msgid "Floating"
 msgstr "Mai yawo"
 
-#: src/features/landing/landing-page.tsx:281
+#: src/features/landing/landing-page.tsx:254
 msgid "Forums"
 msgstr "Tarurruka"
 
@@ -693,11 +655,11 @@ msgstr "Daga jigo"
 msgid "Full layout"
 msgstr "Cikakken layout"
 
-#: src/features/landing/landing-page.tsx:282
+#: src/features/landing/landing-page.tsx:255
 msgid "Games"
 msgstr "Wasanni"
 
-#: src/features/landing/landing-page.tsx:283
+#: src/features/landing/landing-page.tsx:256
 msgid "Git repositories"
 msgstr "Ma'ajiyar Git"
 
@@ -766,7 +728,7 @@ msgstr "Inset"
 msgid "Interests"
 msgstr "Interests"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:401
+#: src/features/auth/sign-in/components/user-auth-form.tsx:343
 msgid "Invalid authenticator code"
 msgstr "Authenticator code mara inganci"
 
@@ -775,8 +737,8 @@ msgstr "Authenticator code mara inganci"
 #: src/features/auth/mfa/index.tsx:145
 #: src/features/auth/mfa/index.tsx:165
 #: src/features/auth/mfa/index.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
-#: src/features/auth/sign-in/components/user-auth-form.tsx:421
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
+#: src/features/auth/sign-in/components/user-auth-form.tsx:363
 msgid "Invalid code"
 msgstr "Code mara inganci"
 
@@ -786,8 +748,8 @@ msgid "Invalid recovery code"
 msgstr "Recovery code mara inganci"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
-#: src/features/auth/sign-in/components/user-auth-form.tsx:384
+#: src/features/auth/sign-in/components/user-auth-form.tsx:307
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Invalid verification code"
 msgstr "Verification code mara inganci"
 
@@ -834,23 +796,23 @@ msgstr "Ana saukarwa…"
 
 #: src/features/auth/mfa/index.tsx:297
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:548
+#: src/features/auth/sign-in/components/user-auth-form.tsx:490
 msgid "Log in"
 msgstr "Shiga"
 
-#: src/features/landing/landing-page.tsx:399
+#: src/features/landing/landing-page.tsx:368
 msgid "Log in to Mochi"
 msgstr "Shiga Mochi"
 
-#: src/features/landing/landing-page.tsx:471
+#: src/features/landing/landing-page.tsx:434
 msgid "Log in with {label}"
 msgstr "Shiga da {label}"
 
-#: src/features/auth/sign-in/index.tsx:109
+#: src/features/auth/sign-in/index.tsx:105
 msgid "Log in with passkey"
 msgstr "Shiga da passkey"
 
-#: src/features/auth/sign-in/index.tsx:76
+#: src/features/auth/sign-in/index.tsx:74
 msgid "Log in with your email address"
 msgstr "Shiga da email address ɗinka"
 
@@ -865,8 +827,8 @@ msgid "Log out"
 msgstr "Fita"
 
 #: src/features/auth/recovery/index.tsx:44
-#: src/features/auth/sign-in/index.tsx:46
-#: src/features/landing/landing-page.tsx:239
+#: src/features/auth/sign-in/index.tsx:44
+#: src/features/landing/landing-page.tsx:212
 msgid "Logged in"
 msgstr "An shiga"
 
@@ -887,7 +849,7 @@ msgid "Login session expired, please try again"
 msgstr "Zaman shigar ya ƙare, don Allah a sake gwadawa"
 
 #: src/features/auth/mfa/index.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:599
+#: src/features/auth/sign-in/components/user-auth-form.tsx:541
 msgid "Lost access? Use a recovery code"
 msgstr "Ka rasa damar shiga? Yi amfani da lambar dawowa"
 
@@ -897,7 +859,7 @@ msgstr "Ka rasa damar shiga? Yi amfani da lambar dawowa"
 msgid "Mark all as read"
 msgstr "Yi alama duka a matsayin karanta"
 
-#: src/features/landing/landing-page.tsx:284
+#: src/features/landing/landing-page.tsx:257
 msgid "Market"
 msgstr "Kasuwa"
 
@@ -913,7 +875,7 @@ msgstr "Menu"
 msgid "Metric"
 msgstr "Metric"
 
-#: src/features/landing/landing-page.tsx:323
+#: src/features/landing/landing-page.tsx:292
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi dandali ne mai buɗaɗɗen tushe, mai haɗin gwiwa, kuma mai amfani da yawa don aikace-aikace masu rarrabuwa. Kowa na iya gudanar da sabar kansa, kuma ya haɗu da kowane mai amfani a kan hanyar sadarwar Mochi. Kowa na iya ƙirƙira da buga aikace-aikace. Kowane aikace-aikace ana iya maye gurbinsa, har da na tsarin. Sabar tana zuwa da aikace-aikace sama da 20, ciki har da:"
 
@@ -921,7 +883,8 @@ msgstr "Mochi dandali ne mai buɗaɗɗen tushe, mai haɗin gwiwa, kuma mai amfan
 msgid "Monday"
 msgstr "Litinin"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
+#: ../../../lib/web/src/features/errors/general-error.tsx:53
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:303
 msgid "Network error"
 msgstr "Kuskuren hanyar sadarwa"
 
@@ -933,14 +896,13 @@ msgstr "Sabon"
 msgid "New accounts are disabled on this server"
 msgstr "An kashe sabbin asusu a wannan sabar"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:270
-#: src/features/auth/sign-in/components/user-auth-form.tsx:319
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "New user signup is disabled."
 msgstr "An kashe rajistar sabon mai amfani."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:637
+#: src/features/auth/sign-in/components/user-auth-form.tsx:579
 msgid "Next"
 msgstr "Na gaba"
 
@@ -953,7 +915,7 @@ msgstr "Hoton na gaba"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Ba a saita ka'idojin shiga ba. Ƙara ka'idoji don sarrafa wanda zai iya shiga wannan albarkatun."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:223
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "No backup file selected"
 msgstr "Ba a zaɓi fayilin ajiya ba"
 
@@ -964,10 +926,6 @@ msgstr "Babu accounts da aka haɗa"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Babu ƙungiyoyi"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:265
-msgid "No matching account on the source server"
-msgstr "Babu asusun da yake daidai a uwar garken tushen"
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -986,7 +944,7 @@ msgstr "Ba a sami sakamako ba."
 msgid "No time zone found."
 msgstr "Ba a sami time zone ba."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:148
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "No topic record yet — try again after the next notification."
 msgstr "Babu rikodin topic tukuna — sake gwadawa bayan sanarwa ta gaba."
 
@@ -1000,7 +958,7 @@ msgstr "Babu masu amfani da aka samu"
 msgid "None"
 msgstr "Babu"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:105
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:71
 msgid "None; create a fresh account"
 msgstr "Babu; ƙirƙiri sabon lissafi"
 
@@ -1008,9 +966,13 @@ msgstr "Babu; ƙirƙiri sabon lissafi"
 msgid "Normal"
 msgstr "Na al'ada"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:203
+#: src/features/auth/sign-in/components/user-auth-form.tsx:189
 msgid "Not a migration bundle"
 msgstr "Ba fakitin ƙaura ba ne"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:67
+msgid "Not found"
+msgstr "Ba a samu ba"
 
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:146
 msgid "Not set"
@@ -1053,16 +1015,16 @@ msgstr "Buɗe menu ɗin navigation"
 msgid "Open theme settings"
 msgstr "Buɗe saitunan theme"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:95
 msgid "Or"
 msgstr "Ko"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:518
+#: src/features/auth/sign-in/components/user-auth-form.tsx:460
 msgid "Or enter authenticator code"
 msgstr "Ko shigar da lambar tantancewa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:560
-#: src/features/landing/landing-page.tsx:440
+#: src/features/auth/sign-in/components/user-auth-form.tsx:502
+#: src/features/landing/landing-page.tsx:403
 msgid "Or log in with"
 msgstr "Ko shiga da"
 
@@ -1084,21 +1046,21 @@ msgstr "maɓallin shiga"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 #: src/features/auth/mfa/index.tsx:279
-#: src/features/landing/landing-page.tsx:459
+#: src/features/landing/landing-page.tsx:422
 msgid "Passkey"
 msgstr "Maɓallin shiga"
 
-#: src/features/auth/sign-in/index.tsx:61
-#: src/features/landing/landing-page.tsx:266
+#: src/features/auth/sign-in/index.tsx:59
+#: src/features/landing/landing-page.tsx:239
 msgid "Passkey login cancelled"
 msgstr "An soke shigar da passkey"
 
-#: src/features/auth/sign-in/index.tsx:59
-#: src/features/landing/landing-page.tsx:259
+#: src/features/auth/sign-in/index.tsx:57
+#: src/features/landing/landing-page.tsx:232
 msgid "Passkey login failed"
 msgstr "Shigar da passkey ya kasa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:298
+#: src/features/auth/sign-in/components/user-auth-form.tsx:240
 msgid "Passkey login required"
 msgstr "Ana buƙatar shigar da passkey"
 
@@ -1114,41 +1076,39 @@ msgstr "Tantance maɓallin shiga ya gaza. Don Allah a sake gwadawa."
 msgid "Passkeys"
 msgstr "Makullan shiga"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:224
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
 msgid "Passphrase"
 msgstr "Kalmar sirri"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:453
+#: src/features/auth/sign-in/components/user-auth-form.tsx:395
 msgid "Paste the login code you received by email"
 msgstr "Liƙa lambar shiga da ka karɓa ta imel"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:70
-msgid "Peer IDs start with 12D3KooW and are 52 characters long"
-msgstr "Peer ID na farawa da 12D3KooW kuma suna da tsayin haruffa 52"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/sign-in/components/user-auth-form.tsx:344
 msgid "Please check your authenticator app and try again."
 msgstr "Don Allah duba manhajar tantancewar ka kuma a sake gwadawa."
 
 #: src/features/auth/mfa/index.tsx:146
 #: src/features/auth/mfa/index.tsx:166
 #: src/features/auth/mfa/index.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:422
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Please check your code and try again."
 msgstr "Don Allah duba lambar ka kuma a sake gwadawa."
 
 #: src/features/auth/mfa/index.tsx:104
 #: src/features/auth/mfa/index.tsx:126
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your codes and try again."
 msgstr "Don Allah duba lambobinka kuma a sake gwadawa."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
-#: src/features/auth/sign-in/components/user-auth-form.tsx:385
+#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:327
 msgid "Please check your email and try again."
 msgstr "Don Allah duba imel ɗinka kuma a sake gwadawa."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
+#: ../../../lib/web/src/features/errors/general-error.tsx:54
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:304
+#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "Da fatan a duba haɗin intanet ɗinka sannan a sake gwadawa."
 
@@ -1157,11 +1117,11 @@ msgstr "Da fatan a duba haɗin intanet ɗinka sannan a sake gwadawa."
 msgid "Please check your recovery code and try again."
 msgstr "Da fatan duba lambar dawowa ka kuma sake gwadawa."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Please copy manually: {devCode}"
 msgstr "Da fatan kwafa da hannu: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:79
+#: src/features/auth/sign-in/components/user-auth-form.tsx:68
 msgid "Please enter a valid email"
 msgstr "Don Allah shigar da imel mai aiki"
 
@@ -1173,20 +1133,27 @@ msgstr "Don Allah shigar da sunanka"
 msgid "Please enter your recovery code"
 msgstr "Don Allah shigar da lambar dawowarka"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:274
-#: src/features/auth/sign-in/components/user-auth-form.tsx:323
-#: src/features/auth/sign-in/components/user-auth-form.tsx:426
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Please try again or contact support."
 msgstr "Da fatan sake gwadawa ko tuntubi support."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:83
+msgid "Please try again."
+msgstr "Da fatan za a sake gwadawa."
 
 #: src/features/auth/mfa/index.tsx:92
 msgid "Please use another verification method."
 msgstr "Don Allah yi amfani da wata hanyar tantancewa."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:299
+#: src/features/auth/sign-in/components/user-auth-form.tsx:241
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Da fatan yi amfani da maɓallin \"Log in with passkey\"."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:75
+msgid "Please wait a moment and try again."
+msgstr "Da fatan za a jira ɗan lokaci sannan a sake gwadawa."
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
@@ -1196,7 +1163,7 @@ msgstr "Hoton da ya gabata"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:27
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 #: src/features/auth/identity-form.tsx:97
-#: src/features/landing/landing-page.tsx:528
+#: src/features/landing/landing-page.tsx:487
 msgid "Privacy"
 msgstr "Sirri"
 
@@ -1209,7 +1176,7 @@ msgstr "Na sirri"
 msgid "Profile"
 msgstr "Profile"
 
-#: src/features/landing/landing-page.tsx:285
+#: src/features/landing/landing-page.tsx:258
 msgid "Projects"
 msgstr "Ayyuka"
 
@@ -1233,8 +1200,8 @@ msgstr "Sake yin rajistar makullan shiga naka a wannan uwar garken"
 msgid "Reactivate my account"
 msgstr "Sake kunna asusuna"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:219
-#: ../../../lib/web/src/components/search-entity-page.tsx:194
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:216
+#: ../../../lib/web/src/components/search-entity-page.tsx:240
 msgid "Recommended"
 msgstr "An ba da shawara"
 
@@ -1255,10 +1222,9 @@ msgstr "Ana kai ka zuwa dashboard…"
 msgid "Reduce interest"
 msgstr "Rage sha'awa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:269
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
-#: src/features/auth/sign-in/components/user-auth-form.tsx:417
+#: src/features/auth/sign-in/components/user-auth-form.tsx:211
+#: src/features/auth/sign-in/components/user-auth-form.tsx:260
+#: src/features/auth/sign-in/components/user-auth-form.tsx:359
 msgid "Registration disabled"
 msgstr "An kashe rajista"
 
@@ -1289,26 +1255,6 @@ msgstr "A cire damar shiga?"
 msgid "Remove interest"
 msgstr "Cire sha'awa"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
-msgid "Replicate from another server"
-msgstr "Kwafawa daga wani uwar garke"
-
-#: src/features/landing/landing-page.tsx:166
-msgid "Replication request denied"
-msgstr "An ƙi buƙatar yin kwafi"
-
-#: src/routes/replicating.tsx:135
-msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
-msgstr "An aika buƙatar kwafi zuwa <0>{source_user}</0>. Amince da shi a shafin saitunan uwar garken tushe don kammala kwafin."
-
-#: src/routes/replicating.tsx:139
-msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
-msgstr "An aika buƙatar kwafi zuwa uwar garken tushe. Amince da shi a shafin saitunan uwar garken tushe don kammala kwafin."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-msgid "Replication signup failed"
-msgstr "Yin rajistan kwafi ya gaza"
-
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Sake aika imel"
@@ -1322,11 +1268,11 @@ msgstr "Saiti"
 msgid "Reset all settings to default values"
 msgstr "Mayar da duk saituna zuwa ƙimar asali"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:190
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:87
 msgid "Restore a backup file"
 msgstr "Maido da fayil ɗin ajiya"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:215
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Maimakon ya kasa"
@@ -1376,8 +1322,8 @@ msgstr "Bincika masu amfani"
 msgid "Search..."
 msgstr "Bincika..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:177
-#: ../../../lib/web/src/components/search-entity-page.tsx:152
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:174
+#: ../../../lib/web/src/components/search-entity-page.tsx:198
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "Ana bincike..."
@@ -1426,20 +1372,20 @@ msgstr "Aika email"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:260
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:286
 msgid "Server error"
 msgstr "Kuskuren saba"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:40
-#: src/features/landing/landing-page.tsx:510
+#: src/features/landing/landing-page.tsx:469
 msgid "Server rules"
 msgstr "Ƙa'idojin sabar"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
-msgid "Session expired"
-msgstr "Session ya ƙare"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:210
+msgid "Session expired. Please log in again."
+msgstr "Lokacin zaman ya ƙare. Da fatan za a sake shiga."
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:147
 msgid "Set origin and destination"
@@ -1472,7 +1418,7 @@ msgstr "Sidebar"
 msgid "Sign out"
 msgstr "Fita"
 
-#: src/features/landing/landing-page.tsx:303
+#: src/features/landing/landing-page.tsx:272
 msgid "Sign up or log in"
 msgstr "Yi rajista ko shiga"
 
@@ -1497,14 +1443,6 @@ msgstr "Tsallake zuwa Babba"
 msgid "Small"
 msgstr "Karami"
 
-#: src/routes/replicating.tsx:168
-msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
-msgstr "Wasu canja wurin ba su kammala a kokarin farko ba. Za a sake gwada su ta atomatik."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:156
-msgid "Source server peer ID"
-msgstr "Peer ID na sabar tushe"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:97
 msgid "Spacious"
 msgstr "Faffaka"
@@ -1513,10 +1451,6 @@ msgstr "Faffaka"
 #: src/features/auth/recovery/index.tsx:143
 msgid "Start again"
 msgstr "Sake farawa"
-
-#: src/routes/replicating.tsx:246
-msgid "Starting…"
-msgstr "Ana farawa…"
 
 #: src/features/auth/identity-form.tsx:126
 msgid "Stay hidden from directory searches."
@@ -1537,10 +1471,6 @@ msgstr "An shiga cikin nasara da lambar dawowa"
 #: ../../../lib/web/src/lib/preference-utils.ts:65
 msgid "Sunday"
 msgstr "Lahadi"
-
-#: src/routes/replicating.tsx:124
-msgid "Syncing your data"
-msgstr "Ana daidaita bayananku"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
 #: ../../../lib/web/src/lib/preference-utils.ts:21
@@ -1563,7 +1493,7 @@ msgstr "Tawagogi/Apps"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
 #: ../../../lib/web/src/features/document/document-page.tsx:42
-#: src/features/landing/landing-page.tsx:519
+#: src/features/landing/landing-page.tsx:478
 msgid "Terms and conditions"
 msgstr "Sharuɗɗa da yanayi"
 
@@ -1580,15 +1510,15 @@ msgstr "Wannan lambar ba daidai ba ce ko kuma ta kare."
 msgid "That sign-in provider is not available"
 msgstr "Wannan mai bayar da shiga ba ya samuwa"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:197
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:94
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Imel ɗin da ka shigar a sama ya zama sunan sabon asusun a wannan uwar garken. Asalin ajiyar bai kamata ya riga ya yi aiki a nan ba — mayar zuwa wata uwar garke daban, ko goge asusun da ke akwai da farko."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "The file may be damaged or have been modified."
 msgstr "Fayilin na iya yin lalaci ko an gyara shi."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:200
+#: src/features/auth/sign-in/components/user-auth-form.tsx:186
 msgid "The passphrase you entered does not match the backup."
 msgstr "Kalmar sirri da kuka shigar ba ta dace da ajiyar ba."
 
@@ -1596,13 +1526,13 @@ msgstr "Kalmar sirri da kuka shigar ba ta dace da ajiyar ba."
 msgid "the provider"
 msgstr "mai bayarwa"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:68
+msgid "The requested content could not be found."
+msgstr "Ba a iya samun abun cikin da aka nema ba."
+
 #: src/routes/restore.tsx:111
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Maimakon bai kammala ba. Fayilin ajiya na iya lalacewa, kalmar sirri na iya zama ba daidai ba, ko sabar ta samu kuskure."
-
-#: src/features/landing/landing-page.tsx:167
-msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
-msgstr "Sabar tushe ba ta amince da buƙatar ba, ko kuma ya ƙare. Sake gwadawa ko yin rajista a gida."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
@@ -1612,7 +1542,7 @@ msgstr "Theme"
 msgid "Theme Settings"
 msgstr "Saitunan Theme"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:208
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "An ƙirƙiri wannan ajiyar ta sabuwar sigar Mochi. Da farko sabunta wannan sabar."
 
@@ -1651,6 +1581,10 @@ msgstr "Toggle Sidebar"
 msgid "Toggle theme"
 msgstr "Toggle theme"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:74
+msgid "Too many requests"
+msgstr "Buƙatu sun yi yawa"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:45
 msgid "Top"
 msgstr "Sama"
@@ -1659,13 +1593,13 @@ msgstr "Sama"
 msgid "Travelling"
 msgstr "Tafiya"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:193
-#: ../../../lib/web/src/components/search-entity-page.tsx:168
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:190
+#: ../../../lib/web/src/components/search-entity-page.tsx:214
 msgid "Try adjusting your search terms"
 msgstr "Gwada gyara kalmomin bincike"
 
-#: ../../../lib/web/src/features/errors/general-error.tsx:128
-#: ../../../lib/web/src/features/errors/general-error.tsx:168
+#: ../../../lib/web/src/features/errors/general-error.tsx:140
+#: ../../../lib/web/src/features/errors/general-error.tsx:180
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:19
 msgid "Try again"
 msgstr "Sake gwadawa"
@@ -1686,7 +1620,7 @@ msgstr "Buga don bincika masu amfani"
 msgid "Type to search..."
 msgstr "Buga don bincika..."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:282
 msgid "Unable to connect to remote server"
 msgstr "An kasa haɗawa da saba mai nesa"
 
@@ -1695,7 +1629,7 @@ msgstr "An kasa haɗawa da saba mai nesa"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Ba a iya tura zuwa login. Da fatan sake gwadawa."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:156
+#: ../../../lib/web/src/components/notification-category-button.tsx:155
 msgid "Unassigned"
 msgstr "Ba a sanya wa kowa"
 
@@ -1715,7 +1649,7 @@ msgstr "Ana buɗe bayananku"
 msgid "Unverified"
 msgstr "Ba a tabbatar ba"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:204
+#: src/features/auth/sign-in/components/user-auth-form.tsx:190
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Loda fayil .zip da aka fitar daga fitar bayanai na Mochi."
 
@@ -1723,13 +1657,9 @@ msgstr "Loda fayil .zip da aka fitar daga fitar bayanai na Mochi."
 msgid "Use a different account"
 msgstr "Yi amfani da wani account dabam"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:575
+#: src/features/auth/sign-in/components/user-auth-form.tsx:517
 msgid "Use a passkey"
 msgstr "Yi amfani da maɓallin shiga"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:60
-msgid "Use the form alice@example.com"
-msgstr "Yi amfani da tsarin alice@example.com"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1738,10 +1668,6 @@ msgstr "Yi amfani da maɓallin shiganka"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Mai amfani"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:135
-msgid "Username on source server"
-msgstr "Sunan mai amfani a sabar tushe"
 
 #: src/routes/restore.tsx:51
 msgid "Validating backup"
@@ -1756,7 +1682,7 @@ msgid "Verification code sent"
 msgstr "An aika lambar tabbatarwa"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:367
 msgid "Verification failed"
 msgstr "Tabbatarwa ya gaza"
 
@@ -1795,10 +1721,6 @@ msgstr "Kalli duka"
 msgid "View all notifications"
 msgstr "Kalli duk sanarwa"
 
-#: src/routes/replicating.tsx:126
-msgid "Waiting for approval"
-msgstr "Ana jiran amincewa"
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
 msgstr "Za mu dawo online ba da daɗewa ba."
@@ -1811,13 +1733,17 @@ msgstr "Shafin yana cikin kulawa!"
 msgid "Wednesday"
 msgstr "Laraba"
 
-#: src/features/landing/landing-page.tsx:286
+#: src/features/landing/landing-page.tsx:259
 msgid "Wikis"
 msgstr "Wikis"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
 msgid "Wrong passphrase"
 msgstr "Kalmar sirri ba daidai ba"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:61
+msgid "You do not have access to this section."
+msgstr "Ba ka da damar shiga wannan sashe ba."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43
@@ -1838,21 +1764,9 @@ msgstr "An dakatar da asusunka"
 
 #: src/features/auth/mfa/index.tsx:173
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/features/auth/sign-in/components/user-auth-form.tsx:356
 msgid "Your account has been suspended."
 msgstr "An dakatar da account ɗinku."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:258
-msgid "Your account is already replicated here. Log in instead."
-msgstr "An riga an kwafi asusunka anan. Shiga maimakon haka."
-
-#: src/routes/replicating.tsx:131
-msgid "Your account is being copied from the source server. Do not close this window."
-msgstr "Ana kwafi asusunka daga sabar tushe. Kada ka rufe wannan taga."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:128
-msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
-msgstr "Ana kwafa asusunka kai tsaye daga sabar da kake da damar shiga. Sabar tushe dole ta amince da buƙatar kafin canja wurin ya fara."
 
 #: src/routes/closing.tsx:95
 msgid "Your account is scheduled for deletion"
@@ -1870,7 +1784,7 @@ msgstr "Asusunka yana buƙatar maɓallin shiga don shiga"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "An ƙauri asusunka zuwa nan daga {source}. Sai ka goge shi a can, saƙonni da sanarwa na iya kai ga uwar garken biyu, wasu abubuwan ka suna ci gaba da samarwa daga tsohon uwar garken, kuma mabiyanka na iya ɗaukar 'yan mintoci don su same ka nan."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:137
 msgid "Your code is: {devCode}"
 msgstr "Lambarka ita ce: {devCode}"
 

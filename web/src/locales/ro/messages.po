@@ -13,22 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:238
-msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
-msgstr "{failed, plural, one {Se reîncearcă # bază de date} few {Se reîncearcă # baze de date} other {Se reîncearcă # de baze de date}}"
-
-#: src/routes/replicating.tsx:239
-msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
-msgstr "{failed, plural, one {Se reîncearcă # fișier} few {Se reîncearcă # fișiere} other {Se reîncearcă # de fișiere}}"
-
-#: src/routes/replicating.tsx:243
-msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
-msgstr "{remaining, plural, one {# bază de date rămasă} few {# baze de date rămase} other {# de baze de date rămase}}"
-
-#: src/routes/replicating.tsx:244
-msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
-msgstr "{remaining, plural, one {# fișier rămas} few {# fișiere rămase} other {# de fișiere rămase}}"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 ore"
@@ -40,6 +24,10 @@ msgstr "24 de ore"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Absolut (dată și oră)"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:60
+msgid "Access denied"
+msgstr "Acces refuzat"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:16
 msgid "Access Forbidden"
@@ -53,8 +41,7 @@ msgstr "Nivel de acces"
 msgid "Account added"
 msgstr "Cont adăugat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:211
-#: src/features/auth/sign-in/components/user-auth-form.tsx:257
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Contul există deja pe acest server"
 
@@ -64,7 +51,7 @@ msgstr "Cont eliminat"
 
 #: src/features/auth/mfa/index.tsx:172
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:413
+#: src/features/auth/sign-in/components/user-auth-form.tsx:355
 msgid "Account suspended"
 msgstr "Cont suspendat"
 
@@ -122,7 +109,7 @@ msgstr "Adaugă vizualizare"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Ajustează aspectul și aranjamentul după preferințe."
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:50
 msgid "Advanced"
 msgstr "Avansat"
 
@@ -139,7 +126,7 @@ msgstr "Toate"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Există deja un cont cu acel email. Autentifică-te mai întâi, apoi conectează {0} din setările de autentificare."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "An account with this identity already exists here."
 msgstr "Un cont cu această identitate există deja aici."
 
@@ -147,7 +134,7 @@ msgstr "Un cont cu această identitate există deja aici."
 msgid "An error occurred"
 msgstr "A apărut o eroare"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:256
 msgid "An unexpected error occurred"
 msgstr "A apărut o eroare neașteptată"
 
@@ -173,7 +160,7 @@ msgid "Authenticator code"
 msgstr "Cod de autentificare"
 
 #: ../../../lib/web/src/components/place-picker.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:590
+#: src/features/auth/sign-in/components/user-auth-form.tsx:532
 msgid "Back"
 msgstr "Înapoi"
 
@@ -187,15 +174,15 @@ msgstr "Înapoi la pornire"
 msgid "Back to sign up"
 msgstr "Înapoi la înregistrare"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:205
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:102
 msgid "Backup file"
 msgstr "Fișier de rezervă"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:215
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Backup file is corrupted"
 msgstr "Fișierul de rezervă este corupt"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Backup is too new"
 msgstr "Copia de rezervă este prea nouă"
 
@@ -204,7 +191,7 @@ msgstr "Copia de rezervă este prea nouă"
 msgid "Boost interest"
 msgstr "Promovează interesul"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:90
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:56
 msgid "Bring an existing account onto this server:"
 msgstr "Aduce un cont existent pe acest server:"
 
@@ -221,45 +208,31 @@ msgstr "Prin crearea contului, ești de acord cu <0>Regulile serverului</0>, <1>
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/routes/replicating.tsx:211
 msgid "Cancel"
 msgstr "Anulează"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:144
+#: ../../../lib/web/src/components/notification-category-button.tsx:143
 msgid "Category for this notification"
 msgstr "Categorie pentru această notificare"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:125
-#: ../../../lib/web/src/components/notification-category-button.tsx:136
+#: ../../../lib/web/src/components/notification-category-button.tsx:124
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Change notification category"
 msgstr "Schimbă categoria notificării"
 
-#: src/features/landing/landing-page.tsx:278
+#: src/features/landing/landing-page.tsx:251
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:262
-msgid "Check the address after @ and try again."
-msgstr "Verificați adresa după @ și încercați din nou."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
-msgid "Check the username before @ and try again."
-msgstr "Verificați numele de utilizator înainte de @ și încercați din nou."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "Check your email."
 msgstr "Verifică-ți emailul."
-
-#: src/routes/replicating.tsx:178
-msgid "Checking every few seconds…"
-msgstr "Se verifică la fiecare câteva secunde…"
 
 #: src/routes/restore.tsx:165
 msgid "Checking…"
 msgstr "Se verifică…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
-#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Choose a different local email or log in instead."
 msgstr "Alegeți un alt e-mail local sau autentificați-vă în loc."
 
@@ -331,11 +304,11 @@ msgstr "Închide panoul"
 msgid "Close search"
 msgstr "Închide căutarea"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:149
 msgid "Code copied"
 msgstr "Cod copiat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:145
+#: src/features/auth/sign-in/components/user-auth-form.tsx:134
 msgid "Code sent."
 msgstr "Cod trimis."
 
@@ -398,13 +371,12 @@ msgstr "Continuă cu {label}"
 msgid "Copy"
 msgstr "Copiază"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+#: src/features/auth/sign-in/components/user-auth-form.tsx:161
 msgid "Copy code"
 msgstr "Copiază codul"
 
 #: src/features/auth/identity-form.tsx:162
-#: src/routes/replicating.tsx:206
 msgid "Could not cancel"
 msgstr "Nu s-a putut anula"
 
@@ -413,16 +385,12 @@ msgstr "Nu s-a putut anula"
 msgid "Could not load this document. Please try again later."
 msgstr "Nu s-a putut încărca acest document. Încearcă din nou mai târziu."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
-msgid "Could not reach the source server"
-msgstr "Nu s-a putut contacta serverul sursă"
-
 #: src/routes/closing.tsx:69
 msgid "Could not reactivate your account"
 msgstr "Contul nu a putut fi reactivat"
 
 #: src/features/auth/components/oauth-buttons.tsx:75
-#: src/features/landing/landing-page.tsx:209
+#: src/features/landing/landing-page.tsx:182
 msgid "Could not start sign-in"
 msgstr "Nu s-a putut porni autentificarea"
 
@@ -438,11 +406,11 @@ msgstr "Reautentificarea nu a putut fi inițiată. Încearcă din nou."
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Nu s-a putut verifica cu acel cont. Încearcă din nou."
 
-#: src/features/landing/landing-page.tsx:355
+#: src/features/landing/landing-page.tsx:324
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "Creează un <0>cont gratuit</0>, rulează <1>propriul tău server</1> sau explorează <2>codul sursă</2>."
 
-#: src/features/landing/landing-page.tsx:279
+#: src/features/landing/landing-page.tsx:252
 msgid "CRM"
 msgstr "CRM"
 
@@ -463,9 +431,9 @@ msgstr "Întunecat"
 msgid "Dark mode"
 msgstr "Mod întunecat"
 
-#: src/routes/replicating.tsx:150
-msgid "Databases"
-msgstr "Baze de date"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:240
+msgid "Data conflict"
+msgstr "Conflict de date"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:310
 msgid "Default"
@@ -515,7 +483,6 @@ msgstr "Renunță"
 msgid "Displays the mobile sidebar."
 msgstr "Afișează bara laterală mobilă."
 
-#: src/routes/replicating.tsx:234
 #: src/routes/restore.tsx:56
 msgid "Done"
 msgstr "Terminat"
@@ -537,12 +504,11 @@ msgstr "Potrivit pentru dislexie"
 msgid "Edit {label}"
 msgstr "Editează {label}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:624
+#: src/features/auth/sign-in/components/user-auth-form.tsx:566
 msgid "Email"
 msgstr "Email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:219
-#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "Email already in use"
 msgstr "E-mailul este deja folosit"
 
@@ -552,15 +518,15 @@ msgstr "cod email"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:221
-#: src/features/auth/sign-in/components/user-auth-form.tsx:476
+#: src/features/auth/sign-in/components/user-auth-form.tsx:418
 msgid "Email code"
 msgstr "Cod email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:501
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Email me a code"
 msgstr "Trimite-mi un cod prin e-mail"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Enter a code to continue"
 msgstr "Introduceți un cod pentru a continua"
 
@@ -568,7 +534,7 @@ msgstr "Introduceți un cod pentru a continua"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Introdu un cod de recuperare pentru „{userEmail}” pentru a te conecta"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:457
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Enter the code from your authenticator app"
 msgstr "Introdu codul din aplicația de autentificare"
 
@@ -589,7 +555,7 @@ msgstr "Introdu {initial} și {last}"
 msgid "Enter your authenticator code"
 msgstr "Introdu codul din aplicația de autentificare"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:449
+#: src/features/auth/sign-in/components/user-auth-form.tsx:391
 msgid "Enter your email code and authenticator code"
 msgstr "Introdu codul email și codul autentificatorului"
 
@@ -616,11 +582,11 @@ msgstr "Eșuat"
 msgid "Failed to add account"
 msgstr "Adăugarea contului a eșuat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Failed to continue"
 msgstr "Continuarea a eșuat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
 msgid "Failed to copy code"
 msgstr "Copierea codului a eșuat"
 
@@ -636,23 +602,19 @@ msgstr "Salvarea identității a eșuat"
 msgid "Failed to send verification code"
 msgstr "Trimiterea codului de verificare a eșuat"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:112
+#: ../../../lib/web/src/components/notification-category-button.tsx:111
 msgid "Failed to update category"
 msgstr "Actualizarea categoriei a eșuat"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:253
 msgid "Feeds"
 msgstr "Fluxuri"
-
-#: src/routes/replicating.tsx:159
-msgid "Files"
-msgstr "Fișiere"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:88
 msgid "Finish moving your account"
 msgstr "Finalizați mutarea contului dvs."
 
-#: src/routes/identity.tsx:96
+#: src/routes/identity.tsx:90
 msgid "Finish setting up your account"
 msgstr "Finalizează configurarea contului"
 
@@ -668,7 +630,7 @@ msgstr "Plat"
 msgid "Floating"
 msgstr "Flotant"
 
-#: src/features/landing/landing-page.tsx:281
+#: src/features/landing/landing-page.tsx:254
 msgid "Forums"
 msgstr "Forumuri"
 
@@ -693,11 +655,11 @@ msgstr "Din temă"
 msgid "Full layout"
 msgstr "Aspect complet"
 
-#: src/features/landing/landing-page.tsx:282
+#: src/features/landing/landing-page.tsx:255
 msgid "Games"
 msgstr "Jocuri"
 
-#: src/features/landing/landing-page.tsx:283
+#: src/features/landing/landing-page.tsx:256
 msgid "Git repositories"
 msgstr "Depozite Git"
 
@@ -766,7 +728,7 @@ msgstr "Încastrat"
 msgid "Interests"
 msgstr "Interese"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:401
+#: src/features/auth/sign-in/components/user-auth-form.tsx:343
 msgid "Invalid authenticator code"
 msgstr "Cod de autentificator invalid"
 
@@ -775,8 +737,8 @@ msgstr "Cod de autentificator invalid"
 #: src/features/auth/mfa/index.tsx:145
 #: src/features/auth/mfa/index.tsx:165
 #: src/features/auth/mfa/index.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
-#: src/features/auth/sign-in/components/user-auth-form.tsx:421
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
+#: src/features/auth/sign-in/components/user-auth-form.tsx:363
 msgid "Invalid code"
 msgstr "Cod invalid"
 
@@ -786,8 +748,8 @@ msgid "Invalid recovery code"
 msgstr "Cod de recuperare invalid"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
-#: src/features/auth/sign-in/components/user-auth-form.tsx:384
+#: src/features/auth/sign-in/components/user-auth-form.tsx:307
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Invalid verification code"
 msgstr "Cod de verificare invalid"
 
@@ -834,23 +796,23 @@ msgstr "Se încarcă…"
 
 #: src/features/auth/mfa/index.tsx:297
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:548
+#: src/features/auth/sign-in/components/user-auth-form.tsx:490
 msgid "Log in"
 msgstr "Autentifică-te"
 
-#: src/features/landing/landing-page.tsx:399
+#: src/features/landing/landing-page.tsx:368
 msgid "Log in to Mochi"
 msgstr "Autentifică-te pe Mochi"
 
-#: src/features/landing/landing-page.tsx:471
+#: src/features/landing/landing-page.tsx:434
 msgid "Log in with {label}"
 msgstr "Autentifică-te cu {label}"
 
-#: src/features/auth/sign-in/index.tsx:109
+#: src/features/auth/sign-in/index.tsx:105
 msgid "Log in with passkey"
 msgstr "Autentifică-te cu passkey"
 
-#: src/features/auth/sign-in/index.tsx:76
+#: src/features/auth/sign-in/index.tsx:74
 msgid "Log in with your email address"
 msgstr "Autentifică-te cu adresa de email"
 
@@ -865,8 +827,8 @@ msgid "Log out"
 msgstr "Deconectează-te"
 
 #: src/features/auth/recovery/index.tsx:44
-#: src/features/auth/sign-in/index.tsx:46
-#: src/features/landing/landing-page.tsx:239
+#: src/features/auth/sign-in/index.tsx:44
+#: src/features/landing/landing-page.tsx:212
 msgid "Logged in"
 msgstr "Autentificat"
 
@@ -887,7 +849,7 @@ msgid "Login session expired, please try again"
 msgstr "Sesiunea de autentificare a expirat, încearcă din nou"
 
 #: src/features/auth/mfa/index.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:599
+#: src/features/auth/sign-in/components/user-auth-form.tsx:541
 msgid "Lost access? Use a recovery code"
 msgstr "Ai pierdut accesul? Folosește un cod de recuperare"
 
@@ -897,7 +859,7 @@ msgstr "Ai pierdut accesul? Folosește un cod de recuperare"
 msgid "Mark all as read"
 msgstr "Marchează totul ca citit"
 
-#: src/features/landing/landing-page.tsx:284
+#: src/features/landing/landing-page.tsx:257
 msgid "Market"
 msgstr "Magazin"
 
@@ -913,7 +875,7 @@ msgstr "Meniu"
 msgid "Metric"
 msgstr "Metric"
 
-#: src/features/landing/landing-page.tsx:323
+#: src/features/landing/landing-page.tsx:292
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi este o platformă open-source, federată, cu mai mulți utilizatori, pentru aplicații distribuite. Oricine își poate rula propriul server și se poate conecta la orice alt utilizator din rețeaua Mochi. Oricine poate crea și publica aplicații. Orice aplicație poate fi înlocuită, chiar și cele de sistem. Serverul vine cu peste 20 de aplicații, printre care:"
 
@@ -921,7 +883,8 @@ msgstr "Mochi este o platformă open-source, federată, cu mai mulți utilizator
 msgid "Monday"
 msgstr "Luni"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
+#: ../../../lib/web/src/features/errors/general-error.tsx:53
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:303
 msgid "Network error"
 msgstr "Eroare de rețea"
 
@@ -933,14 +896,13 @@ msgstr "Nou"
 msgid "New accounts are disabled on this server"
 msgstr "Conturile noi sunt dezactivate pe acest server"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:270
-#: src/features/auth/sign-in/components/user-auth-form.tsx:319
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "New user signup is disabled."
 msgstr "Înregistrarea utilizatorilor noi este dezactivată."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:637
+#: src/features/auth/sign-in/components/user-auth-form.tsx:579
 msgid "Next"
 msgstr "Următor"
 
@@ -953,7 +915,7 @@ msgstr "Imaginea următoare"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Nu sunt configurate reguli de acces. Adaugă reguli pentru a controla cine poate accesa această resursă."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:223
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "No backup file selected"
 msgstr "Niciun fișier de rezervă selectat"
 
@@ -964,10 +926,6 @@ msgstr "Niciun cont conectat"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Niciun grup disponibil"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:265
-msgid "No matching account on the source server"
-msgstr "Nu există un cont corespunzător pe serverul sursă"
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -986,7 +944,7 @@ msgstr "Nu s-au găsit rezultate."
 msgid "No time zone found."
 msgstr "Nu s-a găsit niciun fus orar."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:148
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "No topic record yet — try again after the next notification."
 msgstr "Încă nu există înregistrare de subiect — încearcă din nou după următoarea notificare."
 
@@ -1000,7 +958,7 @@ msgstr "Nu s-au găsit utilizatori"
 msgid "None"
 msgstr "Niciuna"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:105
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:71
 msgid "None; create a fresh account"
 msgstr "Nimic; creați un cont nou"
 
@@ -1008,9 +966,13 @@ msgstr "Nimic; creați un cont nou"
 msgid "Normal"
 msgstr "Normal"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:203
+#: src/features/auth/sign-in/components/user-auth-form.tsx:189
 msgid "Not a migration bundle"
 msgstr "Nu este un pachet de migrare"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:67
+msgid "Not found"
+msgstr "Nu a fost găsit"
 
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:146
 msgid "Not set"
@@ -1053,16 +1015,16 @@ msgstr "Deschide meniul de navigare"
 msgid "Open theme settings"
 msgstr "Deschide setările temei"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:95
 msgid "Or"
 msgstr "Sau"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:518
+#: src/features/auth/sign-in/components/user-auth-form.tsx:460
 msgid "Or enter authenticator code"
 msgstr "Sau introdu codul de autentificare"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:560
-#: src/features/landing/landing-page.tsx:440
+#: src/features/auth/sign-in/components/user-auth-form.tsx:502
+#: src/features/landing/landing-page.tsx:403
 msgid "Or log in with"
 msgstr "Sau autentifică-te cu"
 
@@ -1084,21 +1046,21 @@ msgstr "passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 #: src/features/auth/mfa/index.tsx:279
-#: src/features/landing/landing-page.tsx:459
+#: src/features/landing/landing-page.tsx:422
 msgid "Passkey"
 msgstr "Cheie de acces"
 
-#: src/features/auth/sign-in/index.tsx:61
-#: src/features/landing/landing-page.tsx:266
+#: src/features/auth/sign-in/index.tsx:59
+#: src/features/landing/landing-page.tsx:239
 msgid "Passkey login cancelled"
 msgstr "Autentificare cu cheie de acces anulată"
 
-#: src/features/auth/sign-in/index.tsx:59
-#: src/features/landing/landing-page.tsx:259
+#: src/features/auth/sign-in/index.tsx:57
+#: src/features/landing/landing-page.tsx:232
 msgid "Passkey login failed"
 msgstr "Autentificarea cu cheie de acces a eșuat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:298
+#: src/features/auth/sign-in/components/user-auth-form.tsx:240
 msgid "Passkey login required"
 msgstr "Este necesară autentificarea cu cheie de acces"
 
@@ -1114,41 +1076,39 @@ msgstr "Verificarea cheii de acces a eșuat. Încearcă din nou."
 msgid "Passkeys"
 msgstr "Chei de acces"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:224
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
 msgid "Passphrase"
 msgstr "Frază de acces"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:453
+#: src/features/auth/sign-in/components/user-auth-form.tsx:395
 msgid "Paste the login code you received by email"
 msgstr "Lipește codul de autentificare primit prin email"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:70
-msgid "Peer IDs start with 12D3KooW and are 52 characters long"
-msgstr "Peer ID începe cu 12D3KooW și are 52 de caractere"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/sign-in/components/user-auth-form.tsx:344
 msgid "Please check your authenticator app and try again."
 msgstr "Verifică aplicația de autentificare și încearcă din nou."
 
 #: src/features/auth/mfa/index.tsx:146
 #: src/features/auth/mfa/index.tsx:166
 #: src/features/auth/mfa/index.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:422
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Please check your code and try again."
 msgstr "Verifică codul și încearcă din nou."
 
 #: src/features/auth/mfa/index.tsx:104
 #: src/features/auth/mfa/index.tsx:126
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your codes and try again."
 msgstr "Verifică codurile și încearcă din nou."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
-#: src/features/auth/sign-in/components/user-auth-form.tsx:385
+#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:327
 msgid "Please check your email and try again."
 msgstr "Verifică emailul și încearcă din nou."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
+#: ../../../lib/web/src/features/errors/general-error.tsx:54
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:304
+#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "Verifică conexiunea la internet și încearcă din nou."
 
@@ -1157,11 +1117,11 @@ msgstr "Verifică conexiunea la internet și încearcă din nou."
 msgid "Please check your recovery code and try again."
 msgstr "Verifică codul de recuperare și încearcă din nou."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Please copy manually: {devCode}"
 msgstr "Copiază manual: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:79
+#: src/features/auth/sign-in/components/user-auth-form.tsx:68
 msgid "Please enter a valid email"
 msgstr "Introdu o adresă de email validă"
 
@@ -1173,20 +1133,27 @@ msgstr "Introdu-ți numele"
 msgid "Please enter your recovery code"
 msgstr "Introdu codul de recuperare"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:274
-#: src/features/auth/sign-in/components/user-auth-form.tsx:323
-#: src/features/auth/sign-in/components/user-auth-form.tsx:426
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Please try again or contact support."
 msgstr "Încearcă din nou sau contactează asistența."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:83
+msgid "Please try again."
+msgstr "Încearcă din nou."
 
 #: src/features/auth/mfa/index.tsx:92
 msgid "Please use another verification method."
 msgstr "Folosește o altă metodă de verificare."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:299
+#: src/features/auth/sign-in/components/user-auth-form.tsx:241
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Folosește butonul „Autentificare cu cheie de acces”."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:75
+msgid "Please wait a moment and try again."
+msgstr "Așteptați un moment și încercați din nou."
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
@@ -1196,7 +1163,7 @@ msgstr "Imaginea anterioară"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:27
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 #: src/features/auth/identity-form.tsx:97
-#: src/features/landing/landing-page.tsx:528
+#: src/features/landing/landing-page.tsx:487
 msgid "Privacy"
 msgstr "Confidențialitate"
 
@@ -1209,7 +1176,7 @@ msgstr "Privat"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/features/landing/landing-page.tsx:285
+#: src/features/landing/landing-page.tsx:258
 msgid "Projects"
 msgstr "Proiecte"
 
@@ -1233,8 +1200,8 @@ msgstr "Reînregistrați-vă cheile de acces pe acest server"
 msgid "Reactivate my account"
 msgstr "Reactivează-mi contul"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:219
-#: ../../../lib/web/src/components/search-entity-page.tsx:194
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:216
+#: ../../../lib/web/src/components/search-entity-page.tsx:240
 msgid "Recommended"
 msgstr "Recomandat"
 
@@ -1255,10 +1222,9 @@ msgstr "Te redirecționăm către dashboard…"
 msgid "Reduce interest"
 msgstr "Reduce interesul"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:269
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
-#: src/features/auth/sign-in/components/user-auth-form.tsx:417
+#: src/features/auth/sign-in/components/user-auth-form.tsx:211
+#: src/features/auth/sign-in/components/user-auth-form.tsx:260
+#: src/features/auth/sign-in/components/user-auth-form.tsx:359
 msgid "Registration disabled"
 msgstr "Înregistrare dezactivată"
 
@@ -1289,26 +1255,6 @@ msgstr "Elimini accesul?"
 msgid "Remove interest"
 msgstr "Elimină interesul"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
-msgid "Replicate from another server"
-msgstr "Replicați de pe alt server"
-
-#: src/features/landing/landing-page.tsx:166
-msgid "Replication request denied"
-msgstr "Cerere de replicare refuzată"
-
-#: src/routes/replicating.tsx:135
-msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
-msgstr "Cererea de replicare a fost trimisă către <0>{source_user}</0>. Aprob-o pe pagina de setări a serverului sursă pentru a finaliza replicarea."
-
-#: src/routes/replicating.tsx:139
-msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
-msgstr "Cererea de replicare a fost trimisă către serverul sursă. Aprob-o pe pagina de setări a serverului sursă pentru a finaliza replicarea."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-msgid "Replication signup failed"
-msgstr "Înregistrarea prin replicare a eșuat"
-
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Retrimite e-mailul"
@@ -1322,11 +1268,11 @@ msgstr "Resetează"
 msgid "Reset all settings to default values"
 msgstr "Resetează toate setările la valorile implicite"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:190
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:87
 msgid "Restore a backup file"
 msgstr "Restaurați un fișier de rezervă"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:215
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Restaurarea a eșuat"
@@ -1376,8 +1322,8 @@ msgstr "Caută utilizatori"
 msgid "Search..."
 msgstr "Caută..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:177
-#: ../../../lib/web/src/components/search-entity-page.tsx:152
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:174
+#: ../../../lib/web/src/components/search-entity-page.tsx:198
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "Se caută..."
@@ -1426,20 +1372,20 @@ msgstr "Trimite email"
 msgid "Serif"
 msgstr "Cu serife"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:260
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:286
 msgid "Server error"
 msgstr "Eroare de server"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:40
-#: src/features/landing/landing-page.tsx:510
+#: src/features/landing/landing-page.tsx:469
 msgid "Server rules"
 msgstr "Regulile serverului"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
-msgid "Session expired"
-msgstr "Sesiunea a expirat"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:210
+msgid "Session expired. Please log in again."
+msgstr "Sesiunea a expirat. Autentificați-vă din nou."
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:147
 msgid "Set origin and destination"
@@ -1472,7 +1418,7 @@ msgstr "Bară laterală"
 msgid "Sign out"
 msgstr "Deconectează-te"
 
-#: src/features/landing/landing-page.tsx:303
+#: src/features/landing/landing-page.tsx:272
 msgid "Sign up or log in"
 msgstr "Înregistrează-te sau conectează-te"
 
@@ -1497,14 +1443,6 @@ msgstr "Sari la conținutul principal"
 msgid "Small"
 msgstr "Mic"
 
-#: src/routes/replicating.tsx:168
-msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
-msgstr "Unele transferuri nu s-au finalizat din prima încercare. Vor fi reîncercate automat."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:156
-msgid "Source server peer ID"
-msgstr "Peer ID al serverului sursă"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:97
 msgid "Spacious"
 msgstr "Spațios"
@@ -1513,10 +1451,6 @@ msgstr "Spațios"
 #: src/features/auth/recovery/index.tsx:143
 msgid "Start again"
 msgstr "Începe din nou"
-
-#: src/routes/replicating.tsx:246
-msgid "Starting…"
-msgstr "Se inițiază…"
 
 #: src/features/auth/identity-form.tsx:126
 msgid "Stay hidden from directory searches."
@@ -1537,10 +1471,6 @@ msgstr "Conectare reușită cu codul de recuperare"
 #: ../../../lib/web/src/lib/preference-utils.ts:65
 msgid "Sunday"
 msgstr "Duminică"
-
-#: src/routes/replicating.tsx:124
-msgid "Syncing your data"
-msgstr "Se sincronizează datele tale"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
 #: ../../../lib/web/src/lib/preference-utils.ts:21
@@ -1563,7 +1493,7 @@ msgstr "Echipe/Aplicații"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
 #: ../../../lib/web/src/features/document/document-page.tsx:42
-#: src/features/landing/landing-page.tsx:519
+#: src/features/landing/landing-page.tsx:478
 msgid "Terms and conditions"
 msgstr "Termeni și condiții"
 
@@ -1580,15 +1510,15 @@ msgstr "Acel cod este incorect sau a expirat."
 msgid "That sign-in provider is not available"
 msgstr "Acel furnizor de conectare nu este disponibil"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:197
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:94
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "E-mailul introdus mai sus devine numele noului cont pe acest server. Identitatea copiei de rezervă nu trebuie să fie deja activă aici — restaurați pe un alt server sau ștergeți mai întâi contul existent."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "The file may be damaged or have been modified."
 msgstr "Fișierul poate fi deteriorat sau modificat."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:200
+#: src/features/auth/sign-in/components/user-auth-form.tsx:186
 msgid "The passphrase you entered does not match the backup."
 msgstr "Fraza de acces introdusă nu se potrivește cu copia de rezervă."
 
@@ -1596,13 +1526,13 @@ msgstr "Fraza de acces introdusă nu se potrivește cu copia de rezervă."
 msgid "the provider"
 msgstr "furnizorul"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:68
+msgid "The requested content could not be found."
+msgstr "Conținutul solicitat nu a putut fi găsit."
+
 #: src/routes/restore.tsx:111
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Restaurarea nu s-a finalizat. Fișierul de rezervă poate fi deteriorat, fraza de acces poate fi greșită sau serverul a întâlnit o eroare."
-
-#: src/features/landing/landing-page.tsx:167
-msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
-msgstr "Serverul sursă nu a aprobat cererea sau a expirat. Încearcă din nou sau înregistrează-te local."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
@@ -1612,7 +1542,7 @@ msgstr "Temă"
 msgid "Theme Settings"
 msgstr "Setări temă"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:208
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Această copie de rezervă a fost creată de o versiune mai nouă a Mochi. Actualizează mai întâi acest server."
 
@@ -1651,6 +1581,10 @@ msgstr "Comută bara laterală"
 msgid "Toggle theme"
 msgstr "Comută tema"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:74
+msgid "Too many requests"
+msgstr "Prea multe solicitări"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:45
 msgid "Top"
 msgstr "Sus"
@@ -1659,13 +1593,13 @@ msgstr "Sus"
 msgid "Travelling"
 msgstr "În călătorie"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:193
-#: ../../../lib/web/src/components/search-entity-page.tsx:168
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:190
+#: ../../../lib/web/src/components/search-entity-page.tsx:214
 msgid "Try adjusting your search terms"
 msgstr "Încearcă să ajustezi termenii de căutare"
 
-#: ../../../lib/web/src/features/errors/general-error.tsx:128
-#: ../../../lib/web/src/features/errors/general-error.tsx:168
+#: ../../../lib/web/src/features/errors/general-error.tsx:140
+#: ../../../lib/web/src/features/errors/general-error.tsx:180
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:19
 msgid "Try again"
 msgstr "Încearcă din nou"
@@ -1686,7 +1620,7 @@ msgstr "Tastează pentru a căuta utilizatori"
 msgid "Type to search..."
 msgstr "Tastează pentru a căuta..."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:282
 msgid "Unable to connect to remote server"
 msgstr "Nu se poate conecta la serverul la distanță"
 
@@ -1695,7 +1629,7 @@ msgstr "Nu se poate conecta la serverul la distanță"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Nu se poate redirecționa la conectare. Încearcă din nou."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:156
+#: ../../../lib/web/src/components/notification-category-button.tsx:155
 msgid "Unassigned"
 msgstr "Neatribuit"
 
@@ -1715,7 +1649,7 @@ msgstr "Se despachetează datele tale"
 msgid "Unverified"
 msgstr "Neverificat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:204
+#: src/features/auth/sign-in/components/user-auth-form.tsx:190
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Încarcă un fișier .zip exportat din exportul de date Mochi."
 
@@ -1723,13 +1657,9 @@ msgstr "Încarcă un fișier .zip exportat din exportul de date Mochi."
 msgid "Use a different account"
 msgstr "Folosește un alt cont"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:575
+#: src/features/auth/sign-in/components/user-auth-form.tsx:517
 msgid "Use a passkey"
 msgstr "Utilizați o cheie de acces"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:60
-msgid "Use the form alice@example.com"
-msgstr "Folosește formatul alice@example.com"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1738,10 +1668,6 @@ msgstr "Folosește cheia de acces"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Utilizator"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:135
-msgid "Username on source server"
-msgstr "Nume de utilizator pe serverul sursă"
 
 #: src/routes/restore.tsx:51
 msgid "Validating backup"
@@ -1756,7 +1682,7 @@ msgid "Verification code sent"
 msgstr "Cod de verificare trimis"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:367
 msgid "Verification failed"
 msgstr "Verificarea a eșuat"
 
@@ -1795,10 +1721,6 @@ msgstr "Vizualizează tot"
 msgid "View all notifications"
 msgstr "Vizualizează toate notificările"
 
-#: src/routes/replicating.tsx:126
-msgid "Waiting for approval"
-msgstr "Se așteaptă aprobarea"
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
 msgstr "Vom reveni online în curând."
@@ -1811,13 +1733,17 @@ msgstr "Site-ul este în mentenanță!"
 msgid "Wednesday"
 msgstr "Miercuri"
 
-#: src/features/landing/landing-page.tsx:286
+#: src/features/landing/landing-page.tsx:259
 msgid "Wikis"
 msgstr "Wiki-uri"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
 msgid "Wrong passphrase"
 msgstr "Frază de acces greșită"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:61
+msgid "You do not have access to this section."
+msgstr "Nu aveți acces la această secțiune."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43
@@ -1838,21 +1764,9 @@ msgstr "Contul tău a fost suspendat"
 
 #: src/features/auth/mfa/index.tsx:173
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/features/auth/sign-in/components/user-auth-form.tsx:356
 msgid "Your account has been suspended."
 msgstr "Contul tău a fost suspendat."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:258
-msgid "Your account is already replicated here. Log in instead."
-msgstr "Contul dvs. este deja replicat aici. Autentificați-vă în loc."
-
-#: src/routes/replicating.tsx:131
-msgid "Your account is being copied from the source server. Do not close this window."
-msgstr "Contul tău este copiat de pe serverul sursă. Nu închide această fereastră."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:128
-msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
-msgstr "Contul tău este copiat live de pe un server la care ai deja acces. Serverul sursă trebuie să aprobe cererea înainte ca transferul să înceapă."
 
 #: src/routes/closing.tsx:95
 msgid "Your account is scheduled for deletion"
@@ -1870,7 +1784,7 @@ msgstr "Contul tău necesită un passkey pentru a te conecta"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Contul dvs. a fost mutat aici de la {source}. Până când îl ștergeți de acolo, mesajele și notificările pot ajunge pe ambele servere, o parte din conținutul dvs. continuă să fie servit de pe serverul vechi, iar urmăritorii pot avea nevoie de câteva minute pentru a vă găsi aici."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:137
 msgid "Your code is: {devCode}"
 msgstr "Codul tău este: {devCode}"
 

@@ -13,22 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:238
-msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
-msgstr "{failed, plural, one {# datu-base berrasaiatzen} other {# datu-base berrasaiatzen}}"
-
-#: src/routes/replicating.tsx:239
-msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
-msgstr "{failed, plural, one {# fitxategi berrasaiatzen} other {# fitxategi berrasaiatzen}}"
-
-#: src/routes/replicating.tsx:243
-msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
-msgstr "{remaining, plural, one {# datu-base geratzen da} other {# datu-base geratzen dira}}"
-
-#: src/routes/replicating.tsx:244
-msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
-msgstr "{remaining, plural, one {# fitxategi geratzen da} other {# fitxategi geratzen dira}}"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 ordu"
@@ -40,6 +24,10 @@ msgstr "24 ordu"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Absolutua (data eta ordua)"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:60
+msgid "Access denied"
+msgstr "Sarbidea ukatua"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:16
 msgid "Access Forbidden"
@@ -53,8 +41,7 @@ msgstr "Sarbide maila"
 msgid "Account added"
 msgstr "Kontua gehitu da"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:211
-#: src/features/auth/sign-in/components/user-auth-form.tsx:257
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Kontua dagoeneko zerbitzari honetan dago"
 
@@ -64,7 +51,7 @@ msgstr "Kontua kendua"
 
 #: src/features/auth/mfa/index.tsx:172
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:413
+#: src/features/auth/sign-in/components/user-auth-form.tsx:355
 msgid "Account suspended"
 msgstr "Kontua etenda"
 
@@ -122,7 +109,7 @@ msgstr "Gehitu ikuspegia"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Doitu itxura eta diseinua zure lehentasunetara egokitzeko."
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:50
 msgid "Advanced"
 msgstr "Aurreratua"
 
@@ -139,7 +126,7 @@ msgstr "Guztiak"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Helbide elektroniko horrekin kontu bat dago jada. Hasi saioa lehenik, eta gero estekatu {0} zure autentifikazio ezarpenetatik."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "An account with this identity already exists here."
 msgstr "Identitate honekin kontu bat badago dagoeneko hemen."
 
@@ -147,7 +134,7 @@ msgstr "Identitate honekin kontu bat badago dagoeneko hemen."
 msgid "An error occurred"
 msgstr "Errore bat gertatu da"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:256
 msgid "An unexpected error occurred"
 msgstr "Ustekabeko errore bat gertatu da"
 
@@ -173,7 +160,7 @@ msgid "Authenticator code"
 msgstr "Autentifikatzaile kodea"
 
 #: ../../../lib/web/src/components/place-picker.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:590
+#: src/features/auth/sign-in/components/user-auth-form.tsx:532
 msgid "Back"
 msgstr "Atzera"
 
@@ -187,15 +174,15 @@ msgstr "Itzuli hasierara"
 msgid "Back to sign up"
 msgstr "Erregistrora itzuli"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:205
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:102
 msgid "Backup file"
 msgstr "Babeskopia fitxategia"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:215
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Backup file is corrupted"
 msgstr "Babeskopia fitxategia hondatuta dago"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Backup is too new"
 msgstr "Babeskopia berregia da"
 
@@ -204,7 +191,7 @@ msgstr "Babeskopia berregia da"
 msgid "Boost interest"
 msgstr "Bultzatu interesa"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:90
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:56
 msgid "Bring an existing account onto this server:"
 msgstr "Ekarri lehendik dagoen kontu bat zerbitzari honetara:"
 
@@ -221,45 +208,31 @@ msgstr "Zure kontua sortzean, <0>Zerbitzariaren arauak</0>, <1>Baldintzak</1> et
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/routes/replicating.tsx:211
 msgid "Cancel"
 msgstr "Utzi"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:144
+#: ../../../lib/web/src/components/notification-category-button.tsx:143
 msgid "Category for this notification"
 msgstr "Jakinarazpen honentzako kategoria"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:125
-#: ../../../lib/web/src/components/notification-category-button.tsx:136
+#: ../../../lib/web/src/components/notification-category-button.tsx:124
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Change notification category"
 msgstr "Aldatu jakinarazpen kategoria"
 
-#: src/features/landing/landing-page.tsx:278
+#: src/features/landing/landing-page.tsx:251
 msgid "Chat"
 msgstr "Txata"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:262
-msgid "Check the address after @ and try again."
-msgstr "Egiaztatu @ ondorengo helbidea eta saiatu berriro."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
-msgid "Check the username before @ and try again."
-msgstr "Egiaztatu @ aurreko erabiltzaile-izena eta saiatu berriro."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "Check your email."
 msgstr "Begiratu zure posta elektronikoa."
-
-#: src/routes/replicating.tsx:178
-msgid "Checking every few seconds…"
-msgstr "Segundo gutxiro egiaztatzen…"
 
 #: src/routes/restore.tsx:165
 msgid "Checking…"
 msgstr "Egiaztatzen…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
-#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Choose a different local email or log in instead."
 msgstr "Aukeratu beste tokiko helbide elektroniko bat edo hasi saioa horren ordez."
 
@@ -331,11 +304,11 @@ msgstr "Itxi panela"
 msgid "Close search"
 msgstr "Itxi bilaketa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:149
 msgid "Code copied"
 msgstr "Kodea kopiatuta"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:145
+#: src/features/auth/sign-in/components/user-auth-form.tsx:134
 msgid "Code sent."
 msgstr "Kodea bidalita."
 
@@ -398,13 +371,12 @@ msgstr "Jarraitu {label} erabiliz"
 msgid "Copy"
 msgstr "Kopiatu"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+#: src/features/auth/sign-in/components/user-auth-form.tsx:161
 msgid "Copy code"
 msgstr "Kopiatu kodea"
 
 #: src/features/auth/identity-form.tsx:162
-#: src/routes/replicating.tsx:206
 msgid "Could not cancel"
 msgstr "Ezin izan da bertan behera utzi"
 
@@ -413,16 +385,12 @@ msgstr "Ezin izan da bertan behera utzi"
 msgid "Could not load this document. Please try again later."
 msgstr "Ezin izan da dokumentu hau kargatu. Saiatu berriro geroago."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
-msgid "Could not reach the source server"
-msgstr "Ezin izan da iturburuko zerbitzariarekin konektatu"
-
 #: src/routes/closing.tsx:69
 msgid "Could not reactivate your account"
 msgstr "Ezin izan da zure kontua berraktibatu"
 
 #: src/features/auth/components/oauth-buttons.tsx:75
-#: src/features/landing/landing-page.tsx:209
+#: src/features/landing/landing-page.tsx:182
 msgid "Could not start sign-in"
 msgstr "Ezin izan da saio-hasiera hasi"
 
@@ -438,11 +406,11 @@ msgstr "Ezin izan da berrautentifikazioa hasi. Saiatu berriro."
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Ezin izan da kontu horrekin egiaztatu. Saiatu berriro."
 
-#: src/features/landing/landing-page.tsx:355
+#: src/features/landing/landing-page.tsx:324
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "Sortu <0>doako kontu bat</0>, exekutatu <1>zure zerbitzaria</1> edo arakatu <2>iturburu-kodea</2>."
 
-#: src/features/landing/landing-page.tsx:279
+#: src/features/landing/landing-page.tsx:252
 msgid "CRM"
 msgstr "CRM"
 
@@ -463,9 +431,9 @@ msgstr "Iluna"
 msgid "Dark mode"
 msgstr "Modu iluna"
 
-#: src/routes/replicating.tsx:150
-msgid "Databases"
-msgstr "Datu-baseak"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:240
+msgid "Data conflict"
+msgstr "Datu-gatazka"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:310
 msgid "Default"
@@ -515,7 +483,6 @@ msgstr "Baztertu"
 msgid "Displays the mobile sidebar."
 msgstr "Mugikorraren alboko barra erakusten du."
 
-#: src/routes/replicating.tsx:234
 #: src/routes/restore.tsx:56
 msgid "Done"
 msgstr "Eginda"
@@ -537,12 +504,11 @@ msgstr "Dislexiarako egokia"
 msgid "Edit {label}"
 msgstr "Editatu {label}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:624
+#: src/features/auth/sign-in/components/user-auth-form.tsx:566
 msgid "Email"
 msgstr "Posta elektronikoa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:219
-#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "Email already in use"
 msgstr "Helbide elektronikoa dagoeneko erabilita dago"
 
@@ -552,15 +518,15 @@ msgstr "kode elektronikoa"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:221
-#: src/features/auth/sign-in/components/user-auth-form.tsx:476
+#: src/features/auth/sign-in/components/user-auth-form.tsx:418
 msgid "Email code"
 msgstr "Posta elektronikoko kodea"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:501
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Email me a code"
 msgstr "Bidali kode bat posta elektronikoz"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Enter a code to continue"
 msgstr "Sartu kode bat jarraitzeko"
 
@@ -568,7 +534,7 @@ msgstr "Sartu kode bat jarraitzeko"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Sartu \"{userEmail}\" kontuaren berreskuratze-kode bat saioa hasteko"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:457
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Enter the code from your authenticator app"
 msgstr "Sartu zure autentifikatzaile-aplikazioko kodea"
 
@@ -589,7 +555,7 @@ msgstr "Sartu zure {initial} eta {last}"
 msgid "Enter your authenticator code"
 msgstr "Sartu zure autentifikazio-aplikazioaren kodea"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:449
+#: src/features/auth/sign-in/components/user-auth-form.tsx:391
 msgid "Enter your email code and authenticator code"
 msgstr "Sartu zure posta-kodea eta autentifikatzaile-kodea"
 
@@ -616,11 +582,11 @@ msgstr "Huts egin du"
 msgid "Failed to add account"
 msgstr "Ezin izan da kontua gehitu"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Failed to continue"
 msgstr "Ezin izan da jarraitu"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
 msgid "Failed to copy code"
 msgstr "Ezin izan da kodea kopiatu"
 
@@ -636,23 +602,19 @@ msgstr "Ezin izan da identitatea gorde"
 msgid "Failed to send verification code"
 msgstr "Ezin izan da egiaztapen-kodea bidali"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:112
+#: ../../../lib/web/src/components/notification-category-button.tsx:111
 msgid "Failed to update category"
 msgstr "Ezin izan da kategoria eguneratu"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:253
 msgid "Feeds"
 msgstr "Jarioak"
-
-#: src/routes/replicating.tsx:159
-msgid "Files"
-msgstr "Fitxategiak"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:88
 msgid "Finish moving your account"
 msgstr "Amaitu kontuaren mugiketa"
 
-#: src/routes/identity.tsx:96
+#: src/routes/identity.tsx:90
 msgid "Finish setting up your account"
 msgstr "Amaitu zure kontuaren konfigurazioa"
 
@@ -668,7 +630,7 @@ msgstr "Laua"
 msgid "Floating"
 msgstr "Flotatzailea"
 
-#: src/features/landing/landing-page.tsx:281
+#: src/features/landing/landing-page.tsx:254
 msgid "Forums"
 msgstr "Foroak"
 
@@ -693,11 +655,11 @@ msgstr "Gaiatik"
 msgid "Full layout"
 msgstr "Diseinu osoa"
 
-#: src/features/landing/landing-page.tsx:282
+#: src/features/landing/landing-page.tsx:255
 msgid "Games"
 msgstr "Jokoak"
 
-#: src/features/landing/landing-page.tsx:283
+#: src/features/landing/landing-page.tsx:256
 msgid "Git repositories"
 msgstr "Git biltegiak"
 
@@ -766,7 +728,7 @@ msgstr "Sartzea"
 msgid "Interests"
 msgstr "Interesak"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:401
+#: src/features/auth/sign-in/components/user-auth-form.tsx:343
 msgid "Invalid authenticator code"
 msgstr "Autentifikatzaile-kode baliogabea"
 
@@ -775,8 +737,8 @@ msgstr "Autentifikatzaile-kode baliogabea"
 #: src/features/auth/mfa/index.tsx:145
 #: src/features/auth/mfa/index.tsx:165
 #: src/features/auth/mfa/index.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
-#: src/features/auth/sign-in/components/user-auth-form.tsx:421
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
+#: src/features/auth/sign-in/components/user-auth-form.tsx:363
 msgid "Invalid code"
 msgstr "Kode baliogabea"
 
@@ -786,8 +748,8 @@ msgid "Invalid recovery code"
 msgstr "Berreskuratze-kode baliogabea"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
-#: src/features/auth/sign-in/components/user-auth-form.tsx:384
+#: src/features/auth/sign-in/components/user-auth-form.tsx:307
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Invalid verification code"
 msgstr "Egiaztapen-kode baliogabea"
 
@@ -834,23 +796,23 @@ msgstr "Kargatzen…"
 
 #: src/features/auth/mfa/index.tsx:297
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:548
+#: src/features/auth/sign-in/components/user-auth-form.tsx:490
 msgid "Log in"
 msgstr "Hasi saioa"
 
-#: src/features/landing/landing-page.tsx:399
+#: src/features/landing/landing-page.tsx:368
 msgid "Log in to Mochi"
 msgstr "Hasi saioa Mochin"
 
-#: src/features/landing/landing-page.tsx:471
+#: src/features/landing/landing-page.tsx:434
 msgid "Log in with {label}"
 msgstr "Hasi saioa {label}-(r)ekin"
 
-#: src/features/auth/sign-in/index.tsx:109
+#: src/features/auth/sign-in/index.tsx:105
 msgid "Log in with passkey"
 msgstr "Hasi saioa pasakodearekin"
 
-#: src/features/auth/sign-in/index.tsx:76
+#: src/features/auth/sign-in/index.tsx:74
 msgid "Log in with your email address"
 msgstr "Hasi saioa zure posta elektronikoarekin"
 
@@ -865,8 +827,8 @@ msgid "Log out"
 msgstr "Amaitu saioa"
 
 #: src/features/auth/recovery/index.tsx:44
-#: src/features/auth/sign-in/index.tsx:46
-#: src/features/landing/landing-page.tsx:239
+#: src/features/auth/sign-in/index.tsx:44
+#: src/features/landing/landing-page.tsx:212
 msgid "Logged in"
 msgstr "Saioa hasita"
 
@@ -887,7 +849,7 @@ msgid "Login session expired, please try again"
 msgstr "Saio-hasterako saioa iraungita, saiatu berriro"
 
 #: src/features/auth/mfa/index.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:599
+#: src/features/auth/sign-in/components/user-auth-form.tsx:541
 msgid "Lost access? Use a recovery code"
 msgstr "Sarbidea galdu duzu? Erabili berreskuratze-kode bat"
 
@@ -897,7 +859,7 @@ msgstr "Sarbidea galdu duzu? Erabili berreskuratze-kode bat"
 msgid "Mark all as read"
 msgstr "Markatu denak irakurritzat"
 
-#: src/features/landing/landing-page.tsx:284
+#: src/features/landing/landing-page.tsx:257
 msgid "Market"
 msgstr "Merkatua"
 
@@ -913,7 +875,7 @@ msgstr "Menua"
 msgid "Metric"
 msgstr "Metrikoa"
 
-#: src/features/landing/landing-page.tsx:323
+#: src/features/landing/landing-page.tsx:292
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi kode irekiko plataforma, federatutako eta erabiltzaile anitzeko plataforma bat da, banatutako aplikazioetarako. Edonork exekuta dezake bere zerbitzaria, eta Mochi sareko beste edozein erabiltzailerekin konekta daiteke. Edonork sor eta argitara ditzake aplikazioak. Aplikazio guztiak ordezkagarriak dira, baita sistemakoak ere. Zerbitzariak 20 aplikazio baino gehiago ditu, besteak beste:"
 
@@ -921,7 +883,8 @@ msgstr "Mochi kode irekiko plataforma, federatutako eta erabiltzaile anitzeko pl
 msgid "Monday"
 msgstr "Astelehena"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
+#: ../../../lib/web/src/features/errors/general-error.tsx:53
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:303
 msgid "Network error"
 msgstr "Sareko errorea"
 
@@ -933,14 +896,13 @@ msgstr "Berria"
 msgid "New accounts are disabled on this server"
 msgstr "Kontu berriak desgaituta daude zerbitzari honetan"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:270
-#: src/features/auth/sign-in/components/user-auth-form.tsx:319
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "New user signup is disabled."
 msgstr "Erabiltzaile berrien izen-ematea desgaituta dago."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:637
+#: src/features/auth/sign-in/components/user-auth-form.tsx:579
 msgid "Next"
 msgstr "Hurrengoa"
 
@@ -953,7 +915,7 @@ msgstr "Hurrengo irudia"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Ez da sarbide-araurik konfiguratu. Gehitu arauak baliabide honetara nork sarbidea duen kontrolatzeko."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:223
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "No backup file selected"
 msgstr "Ez da babeskopia fitxategirik hautatuta"
 
@@ -964,10 +926,6 @@ msgstr "Konektatutako konturik ez"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Ez dago talde erabilgarririk"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:265
-msgid "No matching account on the source server"
-msgstr "Iturburuko zerbitzarian ez dago bat datorren konturik"
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -986,7 +944,7 @@ msgstr "Ez da emaitzarik aurkitu."
 msgid "No time zone found."
 msgstr "Ez da ordu-zonarik aurkitu."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:148
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "No topic record yet — try again after the next notification."
 msgstr "Oraindik gairik ez — saiatu berriro hurrengo jakinarazpenaren ondoren."
 
@@ -1000,7 +958,7 @@ msgstr "Ez da erabiltzailerik aurkitu"
 msgid "None"
 msgstr "Bat ere ez"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:105
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:71
 msgid "None; create a fresh account"
 msgstr "Ezer ez; sortu kontu berri bat"
 
@@ -1008,9 +966,13 @@ msgstr "Ezer ez; sortu kontu berri bat"
 msgid "Normal"
 msgstr "Arrunta"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:203
+#: src/features/auth/sign-in/components/user-auth-form.tsx:189
 msgid "Not a migration bundle"
 msgstr "Ez da migrazioaren paketea"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:67
+msgid "Not found"
+msgstr "Ez da aurkitu"
 
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:146
 msgid "Not set"
@@ -1053,16 +1015,16 @@ msgstr "Ireki nabigazio-menua"
 msgid "Open theme settings"
 msgstr "Ireki gaiaren ezarpenak"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:95
 msgid "Or"
 msgstr "Edo"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:518
+#: src/features/auth/sign-in/components/user-auth-form.tsx:460
 msgid "Or enter authenticator code"
 msgstr "Edo sartu autentifikazio-kodea"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:560
-#: src/features/landing/landing-page.tsx:440
+#: src/features/auth/sign-in/components/user-auth-form.tsx:502
+#: src/features/landing/landing-page.tsx:403
 msgid "Or log in with"
 msgstr "Edo saioa hasi honekin"
 
@@ -1084,21 +1046,21 @@ msgstr "passkey-a"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 #: src/features/auth/mfa/index.tsx:279
-#: src/features/landing/landing-page.tsx:459
+#: src/features/landing/landing-page.tsx:422
 msgid "Passkey"
 msgstr "Passkey-a"
 
-#: src/features/auth/sign-in/index.tsx:61
-#: src/features/landing/landing-page.tsx:266
+#: src/features/auth/sign-in/index.tsx:59
+#: src/features/landing/landing-page.tsx:239
 msgid "Passkey login cancelled"
 msgstr "Passkey-aren saio-hasiera bertan behera utzi da"
 
-#: src/features/auth/sign-in/index.tsx:59
-#: src/features/landing/landing-page.tsx:259
+#: src/features/auth/sign-in/index.tsx:57
+#: src/features/landing/landing-page.tsx:232
 msgid "Passkey login failed"
 msgstr "Passkey-aren saio-hasierak huts egin du"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:298
+#: src/features/auth/sign-in/components/user-auth-form.tsx:240
 msgid "Passkey login required"
 msgstr "Passkey-aren saio-hasiera beharrezkoa da"
 
@@ -1114,41 +1076,39 @@ msgstr "Sarbide-gakoaren egiaztapenak huts egin du. Saiatu berriro."
 msgid "Passkeys"
 msgstr "Passkey-ak"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:224
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
 msgid "Passphrase"
 msgstr "Pasahitz-esaldia"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:453
+#: src/features/auth/sign-in/components/user-auth-form.tsx:395
 msgid "Paste the login code you received by email"
 msgstr "Itsatsi posta elektronikoz jaso duzun saio-hasieraren kodea"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:70
-msgid "Peer IDs start with 12D3KooW and are 52 characters long"
-msgstr "Peer ID-ak 12D3KooW-rekin hasten dira eta 52 karaktere dituzte"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/sign-in/components/user-auth-form.tsx:344
 msgid "Please check your authenticator app and try again."
 msgstr "Mesedez egiaztatu zure autentifikatzaile-aplikazioa eta saiatu berriro."
 
 #: src/features/auth/mfa/index.tsx:146
 #: src/features/auth/mfa/index.tsx:166
 #: src/features/auth/mfa/index.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:422
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Please check your code and try again."
 msgstr "Mesedez egiaztatu zure kodea eta saiatu berriro."
 
 #: src/features/auth/mfa/index.tsx:104
 #: src/features/auth/mfa/index.tsx:126
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your codes and try again."
 msgstr "Mesedez egiaztatu zure kodeak eta saiatu berriro."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
-#: src/features/auth/sign-in/components/user-auth-form.tsx:385
+#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:327
 msgid "Please check your email and try again."
 msgstr "Mesedez egiaztatu zure posta elektronikoa eta saiatu berriro."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
+#: ../../../lib/web/src/features/errors/general-error.tsx:54
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:304
+#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "Egiaztatu zure interneteko konexioa eta saiatu berriro."
 
@@ -1157,11 +1117,11 @@ msgstr "Egiaztatu zure interneteko konexioa eta saiatu berriro."
 msgid "Please check your recovery code and try again."
 msgstr "Mesedez egiaztatu zure berreskuratze-kodea eta saiatu berriro."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Please copy manually: {devCode}"
 msgstr "Mesedez kopiatu eskuz: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:79
+#: src/features/auth/sign-in/components/user-auth-form.tsx:68
 msgid "Please enter a valid email"
 msgstr "Mesedez sartu baliozko helbide elektronikoa"
 
@@ -1173,20 +1133,27 @@ msgstr "Mesedez sartu zure izena"
 msgid "Please enter your recovery code"
 msgstr "Mesedez sartu zure berreskuratze-kodea"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:274
-#: src/features/auth/sign-in/components/user-auth-form.tsx:323
-#: src/features/auth/sign-in/components/user-auth-form.tsx:426
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Please try again or contact support."
 msgstr "Mesedez saiatu berriro edo jarri harremanetan laguntzarekin."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:83
+msgid "Please try again."
+msgstr "Saiatu berriro."
 
 #: src/features/auth/mfa/index.tsx:92
 msgid "Please use another verification method."
 msgstr "Mesedez erabili beste egiaztapen-metodo bat."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:299
+#: src/features/auth/sign-in/components/user-auth-form.tsx:241
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Mesedez erabili \"Hasi saioa passkey-arekin\" botoia."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:75
+msgid "Please wait a moment and try again."
+msgstr "Itxaron pixka bat eta saiatu berriro."
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
@@ -1196,7 +1163,7 @@ msgstr "Aurreko irudia"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:27
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 #: src/features/auth/identity-form.tsx:97
-#: src/features/landing/landing-page.tsx:528
+#: src/features/landing/landing-page.tsx:487
 msgid "Privacy"
 msgstr "Pribatutasuna"
 
@@ -1209,7 +1176,7 @@ msgstr "Pribatua"
 msgid "Profile"
 msgstr "Profila"
 
-#: src/features/landing/landing-page.tsx:285
+#: src/features/landing/landing-page.tsx:258
 msgid "Projects"
 msgstr "Proiektuak"
 
@@ -1233,8 +1200,8 @@ msgstr "Erregistratu berriro zure sarbide-gakoak zerbitzari honetan"
 msgid "Reactivate my account"
 msgstr "Berraktibatu nire kontua"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:219
-#: ../../../lib/web/src/components/search-entity-page.tsx:194
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:216
+#: ../../../lib/web/src/components/search-entity-page.tsx:240
 msgid "Recommended"
 msgstr "Gomendatua"
 
@@ -1255,10 +1222,9 @@ msgstr "Aginte-panelera birbideratzen…"
 msgid "Reduce interest"
 msgstr "Murriztu interesa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:269
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
-#: src/features/auth/sign-in/components/user-auth-form.tsx:417
+#: src/features/auth/sign-in/components/user-auth-form.tsx:211
+#: src/features/auth/sign-in/components/user-auth-form.tsx:260
+#: src/features/auth/sign-in/components/user-auth-form.tsx:359
 msgid "Registration disabled"
 msgstr "Erregistroa desgaituta"
 
@@ -1289,26 +1255,6 @@ msgstr "Sarbidea kendu?"
 msgid "Remove interest"
 msgstr "Kendu interesa"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
-msgid "Replicate from another server"
-msgstr "Beste zerbitzari batetik erreplikatu"
-
-#: src/features/landing/landing-page.tsx:166
-msgid "Replication request denied"
-msgstr "Erreplikazio eskaera ukatua"
-
-#: src/routes/replicating.tsx:135
-msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
-msgstr "Erreplikazio-eskaera <0>{source_user}</0> erabiltzaileari bidali zaio. Onartu ezazu iturburu-zerbitzariaren ezarpenen orrian erreplikazioa osatzeko."
-
-#: src/routes/replicating.tsx:139
-msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
-msgstr "Erreplikazio-eskaera iturburu-zerbitzariari bidali zaio. Onartu ezazu iturburu-zerbitzariaren ezarpenen orrian erreplikazioa osatzeko."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-msgid "Replication signup failed"
-msgstr "Errepikapen bidezko izen-ematea huts egin du"
-
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Bidali mezua berriro"
@@ -1322,11 +1268,11 @@ msgstr "Berrezarri"
 msgid "Reset all settings to default values"
 msgstr "Berrezarri ezarpen guztiak balio lehenetsietara"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:190
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:87
 msgid "Restore a backup file"
 msgstr "Leheneratu segurtasun kopiak"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:215
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Berreskuratzeak huts egin du"
@@ -1376,8 +1322,8 @@ msgstr "Bilatu erabiltzaileak"
 msgid "Search..."
 msgstr "Bilatu..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:177
-#: ../../../lib/web/src/components/search-entity-page.tsx:152
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:174
+#: ../../../lib/web/src/components/search-entity-page.tsx:198
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "Bilatzen..."
@@ -1426,20 +1372,20 @@ msgstr "Bidali emaila"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:260
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:286
 msgid "Server error"
 msgstr "Zerbitzariaren errorea"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:40
-#: src/features/landing/landing-page.tsx:510
+#: src/features/landing/landing-page.tsx:469
 msgid "Server rules"
 msgstr "Zerbitzariaren arauak"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
-msgid "Session expired"
-msgstr "Saioa iraungi da"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:210
+msgid "Session expired. Please log in again."
+msgstr "Saioa iraungi da. Hasi saioa berriro."
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:147
 msgid "Set origin and destination"
@@ -1472,7 +1418,7 @@ msgstr "Alboko barra"
 msgid "Sign out"
 msgstr "Amaitu saioa"
 
-#: src/features/landing/landing-page.tsx:303
+#: src/features/landing/landing-page.tsx:272
 msgid "Sign up or log in"
 msgstr "Eman izena edo hasi saioa"
 
@@ -1497,14 +1443,6 @@ msgstr "Saltatu nagusira"
 msgid "Small"
 msgstr "Txikia"
 
-#: src/routes/replicating.tsx:168
-msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
-msgstr "Transferentzia batzuk ez ziren lehen saiakeran osatu. Automatikoki berriz saiatuko dira."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:156
-msgid "Source server peer ID"
-msgstr "Iturburu zerbitzariaren peer ID-a"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:97
 msgid "Spacious"
 msgstr "Lasaia"
@@ -1513,10 +1451,6 @@ msgstr "Lasaia"
 #: src/features/auth/recovery/index.tsx:143
 msgid "Start again"
 msgstr "Hasi berriro"
-
-#: src/routes/replicating.tsx:246
-msgid "Starting…"
-msgstr "Hasten…"
 
 #: src/features/auth/identity-form.tsx:126
 msgid "Stay hidden from directory searches."
@@ -1537,10 +1471,6 @@ msgstr "Berreskuratze-kodearekin saioa ondo hasi da"
 #: ../../../lib/web/src/lib/preference-utils.ts:65
 msgid "Sunday"
 msgstr "Igandea"
-
-#: src/routes/replicating.tsx:124
-msgid "Syncing your data"
-msgstr "Zure datuak sinkronizatzen"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
 #: ../../../lib/web/src/lib/preference-utils.ts:21
@@ -1563,7 +1493,7 @@ msgstr "Taldeak/Aplikazioak"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
 #: ../../../lib/web/src/features/document/document-page.tsx:42
-#: src/features/landing/landing-page.tsx:519
+#: src/features/landing/landing-page.tsx:478
 msgid "Terms and conditions"
 msgstr "Baldintzak"
 
@@ -1580,15 +1510,15 @@ msgstr "Kode hori okerra da edo iraungi egin da."
 msgid "That sign-in provider is not available"
 msgstr "Saio-hasierako hornitzaile hori ez dago eskuragarri"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:197
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:94
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Goian sartzen duzun helbide elektronikoa kontu berriaren izena bihurtzen da zerbitzari honetan. Babeskopiaren identitatea ezin da hemen jada aktibo egon — leheneratu beste zerbitzari batean, edo ezabatu lehenik lehendik dagoen kontua."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "The file may be damaged or have been modified."
 msgstr "Fitxategia hondatuta edo aldatuta egon daiteke."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:200
+#: src/features/auth/sign-in/components/user-auth-form.tsx:186
 msgid "The passphrase you entered does not match the backup."
 msgstr "Sartu duzun pasahitz-esaldia ez dator bat babeskopiararekin."
 
@@ -1596,13 +1526,13 @@ msgstr "Sartu duzun pasahitz-esaldia ez dator bat babeskopiararekin."
 msgid "the provider"
 msgstr "hornitzailea"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:68
+msgid "The requested content could not be found."
+msgstr "Eskatutako edukia ezin izan da aurkitu."
+
 #: src/routes/restore.tsx:111
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Berreskuratzea ez da osatu. Babeskopia fitxategia hondatuta egon daiteke, pasahitz-esaldia okerra izan daiteke edo zerbitzariak akats bat aurkitu du."
-
-#: src/features/landing/landing-page.tsx:167
-msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
-msgstr "Iturburu zerbitzariak ez du eskaera onartu edo iraungi da. Saiatu berriro edo eman izena lokalki."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
@@ -1612,7 +1542,7 @@ msgstr "Gaia"
 msgid "Theme Settings"
 msgstr "Gaiaren ezarpenak"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:208
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Babeskopia hau Mochi-ren bertsio berriagoak sortu du. Eguneratu zerbitzari hau lehenbizi."
 
@@ -1651,6 +1581,10 @@ msgstr "Txandakatu alboko barra"
 msgid "Toggle theme"
 msgstr "Txandakatu gaia"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:74
+msgid "Too many requests"
+msgstr "Eskaera gehiegi"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:45
 msgid "Top"
 msgstr "Goia"
@@ -1659,13 +1593,13 @@ msgstr "Goia"
 msgid "Travelling"
 msgstr "Bidaian"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:193
-#: ../../../lib/web/src/components/search-entity-page.tsx:168
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:190
+#: ../../../lib/web/src/components/search-entity-page.tsx:214
 msgid "Try adjusting your search terms"
 msgstr "Saiatu zure bilaketa-terminoak doitzen"
 
-#: ../../../lib/web/src/features/errors/general-error.tsx:128
-#: ../../../lib/web/src/features/errors/general-error.tsx:168
+#: ../../../lib/web/src/features/errors/general-error.tsx:140
+#: ../../../lib/web/src/features/errors/general-error.tsx:180
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:19
 msgid "Try again"
 msgstr "Saiatu berriro"
@@ -1686,7 +1620,7 @@ msgstr "Idatzi erabiltzaileak bilatzeko"
 msgid "Type to search..."
 msgstr "Idatzi bilatzeko..."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:282
 msgid "Unable to connect to remote server"
 msgstr "Ezin izan da urruneko zerbitzarira konektatu"
 
@@ -1695,7 +1629,7 @@ msgstr "Ezin izan da urruneko zerbitzarira konektatu"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Ezin da saio-hasierara birbideratu. Saiatu berriro."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:156
+#: ../../../lib/web/src/components/notification-category-button.tsx:155
 msgid "Unassigned"
 msgstr "Esleitu gabe"
 
@@ -1715,7 +1649,7 @@ msgstr "Zure datuak deskonprimatzen"
 msgid "Unverified"
 msgstr "Egiaztatu gabe"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:204
+#: src/features/auth/sign-in/components/user-auth-form.tsx:190
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Igo Mochi-ren datu esportaziotik ateratako .zip fitxategi bat."
 
@@ -1723,13 +1657,9 @@ msgstr "Igo Mochi-ren datu esportaziotik ateratako .zip fitxategi bat."
 msgid "Use a different account"
 msgstr "Erabili beste kontu bat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:575
+#: src/features/auth/sign-in/components/user-auth-form.tsx:517
 msgid "Use a passkey"
 msgstr "Erabili sarbide-gako bat"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:60
-msgid "Use the form alice@example.com"
-msgstr "Erabili alice@example.com formatua"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1738,10 +1668,6 @@ msgstr "Erabili zure sarbide-gakoa"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Erabiltzailea"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:135
-msgid "Username on source server"
-msgstr "Erabiltzaile-izena iturburu zerbitzarian"
 
 #: src/routes/restore.tsx:51
 msgid "Validating backup"
@@ -1756,7 +1682,7 @@ msgid "Verification code sent"
 msgstr "Egiaztatze-kodea bidali da"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:367
 msgid "Verification failed"
 msgstr "Egiaztatzeak huts egin du"
 
@@ -1795,10 +1721,6 @@ msgstr "Ikusi guztiak"
 msgid "View all notifications"
 msgstr "Ikusi jakinarazpen guztiak"
 
-#: src/routes/replicating.tsx:126
-msgid "Waiting for approval"
-msgstr "Onarpenaren zain"
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
 msgstr "Laster online egongo gara berriro."
@@ -1811,13 +1733,17 @@ msgstr "Webgunea mantentze-lanetan dago!"
 msgid "Wednesday"
 msgstr "Asteazkena"
 
-#: src/features/landing/landing-page.tsx:286
+#: src/features/landing/landing-page.tsx:259
 msgid "Wikis"
 msgstr "Wikiak"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
 msgid "Wrong passphrase"
 msgstr "Pasahitz-esaldi okerra"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:61
+msgid "You do not have access to this section."
+msgstr "Ez duzu atal honetarako sarbiderik."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43
@@ -1838,21 +1764,9 @@ msgstr "Zure kontua eten da"
 
 #: src/features/auth/mfa/index.tsx:173
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/features/auth/sign-in/components/user-auth-form.tsx:356
 msgid "Your account has been suspended."
 msgstr "Zure kontua eten da."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:258
-msgid "Your account is already replicated here. Log in instead."
-msgstr "Zure kontua dagoeneko hemen errepikatuta dago. Hasi saioa horren ordez."
-
-#: src/routes/replicating.tsx:131
-msgid "Your account is being copied from the source server. Do not close this window."
-msgstr "Zure kontua jatorrizko zerbitzaritik kopiatzen ari da. Ez itxi leiho hau."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:128
-msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
-msgstr "Zure kontua zuzenean kopiatzen da dagoeneko sartzeko aukera duzun zerbitzari batetik. Iturri-zerbitzariak eskaera onartu behar du transferentzia hasi aurretik."
 
 #: src/routes/closing.tsx:95
 msgid "Your account is scheduled for deletion"
@@ -1870,7 +1784,7 @@ msgstr "Zure kontuak passkey bat eskatzen du saioa hasteko"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Zure kontua {source}-etik hona mugitu da. Han ezabatu arte, mezuak eta jakinarazpenak bi zerbitzarietara irits daitezke, zure edukiaren zati bat zerbitzari zaharretik ematen jarraitzen du, eta jarraitzaileek minutu batzuk behar izan ditzakete zu hemen aurkitzeko."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:137
 msgid "Your code is: {devCode}"
 msgstr "Zure kodea: {devCode}"
 

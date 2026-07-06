@@ -13,22 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:238
-msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
-msgstr "{failed, plural, other {Nyoba deui # pangkalan data}}"
-
-#: src/routes/replicating.tsx:239
-msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
-msgstr "{failed, plural, other {Nyoba deui # file}}"
-
-#: src/routes/replicating.tsx:243
-msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
-msgstr "{remaining, plural, other {# pangkalan data sésana}}"
-
-#: src/routes/replicating.tsx:244
-msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
-msgstr "{remaining, plural, other {# file sésana}}"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 jam"
@@ -40,6 +24,10 @@ msgstr "24 jam"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Mutlak (tanggal jeung waktu)"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:60
+msgid "Access denied"
+msgstr "Aksés ditolak"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:16
 msgid "Access Forbidden"
@@ -53,8 +41,7 @@ msgstr "Tingkat aksés"
 msgid "Account added"
 msgstr "Akun ditambahkeun"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:211
-#: src/features/auth/sign-in/components/user-auth-form.tsx:257
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Akun parantos aya dina ieu server"
 
@@ -64,7 +51,7 @@ msgstr "Akun dipiceun"
 
 #: src/features/auth/mfa/index.tsx:172
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:413
+#: src/features/auth/sign-in/components/user-auth-form.tsx:355
 msgid "Account suspended"
 msgstr "Akun diskors"
 
@@ -122,7 +109,7 @@ msgstr "Tambah view"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Atur tampilan jeung tata letak luyu jeung karep anjeun."
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:50
 msgid "Advanced"
 msgstr "Lanjut"
 
@@ -139,7 +126,7 @@ msgstr "Sadaya"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Akun jeung email éta geus aya. Asup heula, terus hubungkeun {0} ti setélan auth anjeun."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "An account with this identity already exists here."
 msgstr "Akun jeung identitas ieu tos aya di dieu."
 
@@ -147,7 +134,7 @@ msgstr "Akun jeung identitas ieu tos aya di dieu."
 msgid "An error occurred"
 msgstr "Aya kasalahan"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:256
 msgid "An unexpected error occurred"
 msgstr "Aya kasalahan anu teu disangka-sangka"
 
@@ -173,7 +160,7 @@ msgid "Authenticator code"
 msgstr "Kode authenticator"
 
 #: ../../../lib/web/src/components/place-picker.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:590
+#: src/features/auth/sign-in/components/user-auth-form.tsx:532
 msgid "Back"
 msgstr "Tukang"
 
@@ -187,15 +174,15 @@ msgstr "Balik ka imah"
 msgid "Back to sign up"
 msgstr "Balik ka daptar"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:205
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:102
 msgid "Backup file"
 msgstr "Berkas cadangan"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:215
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Backup file is corrupted"
 msgstr "Berkas cadangan ruksak"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Backup is too new"
 msgstr "Cadangan téh énggal teuing"
 
@@ -204,7 +191,7 @@ msgstr "Cadangan téh énggal teuing"
 msgid "Boost interest"
 msgstr "Tingkatkeun minat"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:90
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:56
 msgid "Bring an existing account onto this server:"
 msgstr "Bawa akun nu geus aya ka server ieu:"
 
@@ -221,45 +208,31 @@ msgstr "Ku ngadamel akun, anjeun satuju kana <0>Aturan server</0>, <1>Sarat sare
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/routes/replicating.tsx:211
 msgid "Cancel"
 msgstr "Batalkeun"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:144
+#: ../../../lib/web/src/components/notification-category-button.tsx:143
 msgid "Category for this notification"
 msgstr "Katégori pikeun béwara ieu"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:125
-#: ../../../lib/web/src/components/notification-category-button.tsx:136
+#: ../../../lib/web/src/components/notification-category-button.tsx:124
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Change notification category"
 msgstr "Robah katégori béwara"
 
-#: src/features/landing/landing-page.tsx:278
+#: src/features/landing/landing-page.tsx:251
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:262
-msgid "Check the address after @ and try again."
-msgstr "Pariksa alamat sanggeus @ teras cobian deui."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
-msgid "Check the username before @ and try again."
-msgstr "Pariksa ngaran pamaké saméméh @ teras cobian deui."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "Check your email."
 msgstr "Pariksa email anjeun."
-
-#: src/routes/replicating.tsx:178
-msgid "Checking every few seconds…"
-msgstr "Mariksa unggal sababaraha detik…"
 
 #: src/routes/restore.tsx:165
 msgid "Checking…"
 msgstr "Mariksa…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
-#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Choose a different local email or log in instead."
 msgstr "Pilih surélék lokal séjén atawa asup wae."
 
@@ -331,11 +304,11 @@ msgstr "Tutup panel"
 msgid "Close search"
 msgstr "Tutup panéangan"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:149
 msgid "Code copied"
 msgstr "Kode disalin"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:145
+#: src/features/auth/sign-in/components/user-auth-form.tsx:134
 msgid "Code sent."
 msgstr "Kode dikirim."
 
@@ -398,13 +371,12 @@ msgstr "Teraskeun nganggo {label}"
 msgid "Copy"
 msgstr "Salin"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+#: src/features/auth/sign-in/components/user-auth-form.tsx:161
 msgid "Copy code"
 msgstr "Salin kode"
 
 #: src/features/auth/identity-form.tsx:162
-#: src/routes/replicating.tsx:206
 msgid "Could not cancel"
 msgstr "Teu bisa dibatalkeun"
 
@@ -413,16 +385,12 @@ msgstr "Teu bisa dibatalkeun"
 msgid "Could not load this document. Please try again later."
 msgstr "Teu bisa ngamuat dokumén ieu. Mangga cobian deui engké."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
-msgid "Could not reach the source server"
-msgstr "Teu tiasa ngahubungan server sumber"
-
 #: src/routes/closing.tsx:69
 msgid "Could not reactivate your account"
 msgstr "Teu tiasa ngaaktipkeun deui akun anjeun"
 
 #: src/features/auth/components/oauth-buttons.tsx:75
-#: src/features/landing/landing-page.tsx:209
+#: src/features/landing/landing-page.tsx:182
 msgid "Could not start sign-in"
 msgstr "Teu bisa ngamimitian sign-in"
 
@@ -438,11 +406,11 @@ msgstr "Teu bisa ngamimitian pamariksaan deui. Mangga cobian deui."
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Teu tiasa diverifikasi nganggo akun éta. Mangga cobian deui."
 
-#: src/features/landing/landing-page.tsx:355
+#: src/features/landing/landing-page.tsx:324
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "Jieun <0>akun gratis</0>, jalankeun <1>server anjeun sorangan</1>, atawa jelajah <2>kode sumber</2>."
 
-#: src/features/landing/landing-page.tsx:279
+#: src/features/landing/landing-page.tsx:252
 msgid "CRM"
 msgstr "CRM"
 
@@ -463,9 +431,9 @@ msgstr "Poék"
 msgid "Dark mode"
 msgstr "Modeu poék"
 
-#: src/routes/replicating.tsx:150
-msgid "Databases"
-msgstr "Basis data"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:240
+msgid "Data conflict"
+msgstr "Konflik data"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:310
 msgid "Default"
@@ -515,7 +483,6 @@ msgstr "Pasini"
 msgid "Displays the mobile sidebar."
 msgstr "Mintonkeun sidebar mobile."
 
-#: src/routes/replicating.tsx:234
 #: src/routes/restore.tsx:56
 msgid "Done"
 msgstr "Beres"
@@ -537,12 +504,11 @@ msgstr "Cocog pikeun disléksia"
 msgid "Edit {label}"
 msgstr "Édit {label}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:624
+#: src/features/auth/sign-in/components/user-auth-form.tsx:566
 msgid "Email"
 msgstr "Surélék"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:219
-#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "Email already in use"
 msgstr "Surélék parantos dianggo"
 
@@ -552,15 +518,15 @@ msgstr "kode email"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:221
-#: src/features/auth/sign-in/components/user-auth-form.tsx:476
+#: src/features/auth/sign-in/components/user-auth-form.tsx:418
 msgid "Email code"
 msgstr "Kode surélék"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:501
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Email me a code"
 msgstr "Kirimkeun kuring kodeu ngaliwatan surélék"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Enter a code to continue"
 msgstr "Lebetkeun kodeu pikeun neraskeun"
 
@@ -568,7 +534,7 @@ msgstr "Lebetkeun kodeu pikeun neraskeun"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Asupkeun kode pamulihan pikeun \"{userEmail}\" pikeun asup"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:457
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Enter the code from your authenticator app"
 msgstr "Asupkeun kode tina aplikasi authenticator anjeun"
 
@@ -589,7 +555,7 @@ msgstr "Asupkeun {initial} jeung {last} anjeun"
 msgid "Enter your authenticator code"
 msgstr "Lebetkeun kode aplikasi pamariksa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:449
+#: src/features/auth/sign-in/components/user-auth-form.tsx:391
 msgid "Enter your email code and authenticator code"
 msgstr "Asupkeun kode surélék jeung kode authenticator anjeun"
 
@@ -616,11 +582,11 @@ msgstr "Gagal"
 msgid "Failed to add account"
 msgstr "Gagal nambahkeun akun"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Failed to continue"
 msgstr "Gagal neruskeun"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
 msgid "Failed to copy code"
 msgstr "Gagal nyalin kode"
 
@@ -636,23 +602,19 @@ msgstr "Gagal nyimpen identitas"
 msgid "Failed to send verification code"
 msgstr "Gagal ngirim kode vérifikasi"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:112
+#: ../../../lib/web/src/components/notification-category-button.tsx:111
 msgid "Failed to update category"
 msgstr "Gagal ngamutahirkeun katégori"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:253
 msgid "Feeds"
 msgstr "Feed"
-
-#: src/routes/replicating.tsx:159
-msgid "Files"
-msgstr "Berkas"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:88
 msgid "Finish moving your account"
 msgstr "Réngsekeun mindahkeun akun"
 
-#: src/routes/identity.tsx:96
+#: src/routes/identity.tsx:90
 msgid "Finish setting up your account"
 msgstr "Réngsékeun nyetél akun anjeun"
 
@@ -668,7 +630,7 @@ msgstr "Datar"
 msgid "Floating"
 msgstr "Ngambang"
 
-#: src/features/landing/landing-page.tsx:281
+#: src/features/landing/landing-page.tsx:254
 msgid "Forums"
 msgstr "Forum"
 
@@ -693,11 +655,11 @@ msgstr "Tina téma"
 msgid "Full layout"
 msgstr "Tata letak lengkep"
 
-#: src/features/landing/landing-page.tsx:282
+#: src/features/landing/landing-page.tsx:255
 msgid "Games"
 msgstr "Kaulinan"
 
-#: src/features/landing/landing-page.tsx:283
+#: src/features/landing/landing-page.tsx:256
 msgid "Git repositories"
 msgstr "Repositori Git"
 
@@ -766,7 +728,7 @@ msgstr "Sisipan"
 msgid "Interests"
 msgstr "Minat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:401
+#: src/features/auth/sign-in/components/user-auth-form.tsx:343
 msgid "Invalid authenticator code"
 msgstr "Kode authenticator teu sah"
 
@@ -775,8 +737,8 @@ msgstr "Kode authenticator teu sah"
 #: src/features/auth/mfa/index.tsx:145
 #: src/features/auth/mfa/index.tsx:165
 #: src/features/auth/mfa/index.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
-#: src/features/auth/sign-in/components/user-auth-form.tsx:421
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
+#: src/features/auth/sign-in/components/user-auth-form.tsx:363
 msgid "Invalid code"
 msgstr "Kode teu sah"
 
@@ -786,8 +748,8 @@ msgid "Invalid recovery code"
 msgstr "Kode pamulihan teu sah"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
-#: src/features/auth/sign-in/components/user-auth-form.tsx:384
+#: src/features/auth/sign-in/components/user-auth-form.tsx:307
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Invalid verification code"
 msgstr "Kode vérifikasi teu sah"
 
@@ -834,23 +796,23 @@ msgstr "Muat…"
 
 #: src/features/auth/mfa/index.tsx:297
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:548
+#: src/features/auth/sign-in/components/user-auth-form.tsx:490
 msgid "Log in"
 msgstr "Asup"
 
-#: src/features/landing/landing-page.tsx:399
+#: src/features/landing/landing-page.tsx:368
 msgid "Log in to Mochi"
 msgstr "Asup ka Mochi"
 
-#: src/features/landing/landing-page.tsx:471
+#: src/features/landing/landing-page.tsx:434
 msgid "Log in with {label}"
 msgstr "Asup nganggo {label}"
 
-#: src/features/auth/sign-in/index.tsx:109
+#: src/features/auth/sign-in/index.tsx:105
 msgid "Log in with passkey"
 msgstr "Asup nganggo passkey"
 
-#: src/features/auth/sign-in/index.tsx:76
+#: src/features/auth/sign-in/index.tsx:74
 msgid "Log in with your email address"
 msgstr "Asup nganggo alamat surélék anjeun"
 
@@ -865,8 +827,8 @@ msgid "Log out"
 msgstr "Kaluar"
 
 #: src/features/auth/recovery/index.tsx:44
-#: src/features/auth/sign-in/index.tsx:46
-#: src/features/landing/landing-page.tsx:239
+#: src/features/auth/sign-in/index.tsx:44
+#: src/features/landing/landing-page.tsx:212
 msgid "Logged in"
 msgstr "Geus asup"
 
@@ -887,7 +849,7 @@ msgid "Login session expired, please try again"
 msgstr "Sési asup geus béak, mangga cobian deui"
 
 #: src/features/auth/mfa/index.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:599
+#: src/features/auth/sign-in/components/user-auth-form.tsx:541
 msgid "Lost access? Use a recovery code"
 msgstr "Leungit aksés? Pake kode pamulihan"
 
@@ -897,7 +859,7 @@ msgstr "Leungit aksés? Pake kode pamulihan"
 msgid "Mark all as read"
 msgstr "Tandaan sadayana sakumaha dibaca"
 
-#: src/features/landing/landing-page.tsx:284
+#: src/features/landing/landing-page.tsx:257
 msgid "Market"
 msgstr "Pasar"
 
@@ -913,7 +875,7 @@ msgstr "Menu"
 msgid "Metric"
 msgstr "Métrik"
 
-#: src/features/landing/landing-page.tsx:323
+#: src/features/landing/landing-page.tsx:292
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi mangrupa platform sumber kabuka, federasi, sarta multipangguna pikeun aplikasi nu sumebar. Saha waé bisa ngajalankeun servérna sorangan, sarta nyambung ka pangguna séjén dina jaringan Mochi. Saha waé bisa nyieun jeung medalkeun aplikasi. Unggal aplikasi bisa diganti, kaasup nu sistem. Servér ieu dilengkepan ku leuwih ti 20 aplikasi, di antarana:"
 
@@ -921,7 +883,8 @@ msgstr "Mochi mangrupa platform sumber kabuka, federasi, sarta multipangguna pik
 msgid "Monday"
 msgstr "Senén"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
+#: ../../../lib/web/src/features/errors/general-error.tsx:53
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:303
 msgid "Network error"
 msgstr "Kasalahan jaringan"
 
@@ -933,14 +896,13 @@ msgstr "Anyar"
 msgid "New accounts are disabled on this server"
 msgstr "Akun anyar dipareuman dina server ieu"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:270
-#: src/features/auth/sign-in/components/user-auth-form.tsx:319
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "New user signup is disabled."
 msgstr "Daptar pamaké anyar dipareuman."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:637
+#: src/features/auth/sign-in/components/user-auth-form.tsx:579
 msgid "Next"
 msgstr "Salajengna"
 
@@ -953,7 +915,7 @@ msgstr "Gambar salajengna"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Euweuh aturan aksés. Tambahan aturan pikeun ngatur saha nu bisa ngakses sumber ieu."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:223
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "No backup file selected"
 msgstr "Teu aya berkas cadangan dipilih"
 
@@ -964,10 +926,6 @@ msgstr "Teu aya akun nu kasambung"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Teu aya grup"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:265
-msgid "No matching account on the source server"
-msgstr "Teu aya akun nu cocog dina server sumber"
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -986,7 +944,7 @@ msgstr "Teu manggih hasil."
 msgid "No time zone found."
 msgstr "Teu manggih zona waktu."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:148
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "No topic record yet — try again after the next notification."
 msgstr "Tacan aya catetan topik — coba deui sanggeus bewara salajengna."
 
@@ -1000,7 +958,7 @@ msgstr "Teu manggih pamaké"
 msgid "None"
 msgstr "Euweuh"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:105
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:71
 msgid "None; create a fresh account"
 msgstr "Teu aya; jieun akun anyar"
 
@@ -1008,9 +966,13 @@ msgstr "Teu aya; jieun akun anyar"
 msgid "Normal"
 msgstr "Normal"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:203
+#: src/features/auth/sign-in/components/user-auth-form.tsx:189
 msgid "Not a migration bundle"
 msgstr "Lain bundel migrasi"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:67
+msgid "Not found"
+msgstr "Teu kapanggih"
 
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:146
 msgid "Not set"
@@ -1053,16 +1015,16 @@ msgstr "Buka menu navigasi"
 msgid "Open theme settings"
 msgstr "Buka setélan tema"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:95
 msgid "Or"
 msgstr "Atawa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:518
+#: src/features/auth/sign-in/components/user-auth-form.tsx:460
 msgid "Or enter authenticator code"
 msgstr "Atawa lebetkeun kode auténtikasi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:560
-#: src/features/landing/landing-page.tsx:440
+#: src/features/auth/sign-in/components/user-auth-form.tsx:502
+#: src/features/landing/landing-page.tsx:403
 msgid "Or log in with"
 msgstr "Atawa asup ku"
 
@@ -1084,21 +1046,21 @@ msgstr "passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 #: src/features/auth/mfa/index.tsx:279
-#: src/features/landing/landing-page.tsx:459
+#: src/features/landing/landing-page.tsx:422
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/index.tsx:61
-#: src/features/landing/landing-page.tsx:266
+#: src/features/auth/sign-in/index.tsx:59
+#: src/features/landing/landing-page.tsx:239
 msgid "Passkey login cancelled"
 msgstr "Login passkey dibatalkeun"
 
-#: src/features/auth/sign-in/index.tsx:59
-#: src/features/landing/landing-page.tsx:259
+#: src/features/auth/sign-in/index.tsx:57
+#: src/features/landing/landing-page.tsx:232
 msgid "Passkey login failed"
 msgstr "Login passkey gagal"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:298
+#: src/features/auth/sign-in/components/user-auth-form.tsx:240
 msgid "Passkey login required"
 msgstr "Login passkey diperlukeun"
 
@@ -1114,41 +1076,39 @@ msgstr "Pamariksaan konci akses gagal. Mangga cobian deui."
 msgid "Passkeys"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:224
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
 msgid "Passphrase"
 msgstr "Frasa sandi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:453
+#: src/features/auth/sign-in/components/user-auth-form.tsx:395
 msgid "Paste the login code you received by email"
 msgstr "Témpél kode login nu anjeun tarima ngaliwatan surélék"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:70
-msgid "Peer IDs start with 12D3KooW and are 52 characters long"
-msgstr "Peer ID dimimitian ku 12D3KooW jeung panjangna 52 karakter"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/sign-in/components/user-auth-form.tsx:344
 msgid "Please check your authenticator app and try again."
 msgstr "Mangga pariksa app authenticator anjeun teras coba deui."
 
 #: src/features/auth/mfa/index.tsx:146
 #: src/features/auth/mfa/index.tsx:166
 #: src/features/auth/mfa/index.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:422
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Please check your code and try again."
 msgstr "Mangga pariksa kode anjeun teras coba deui."
 
 #: src/features/auth/mfa/index.tsx:104
 #: src/features/auth/mfa/index.tsx:126
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your codes and try again."
 msgstr "Mangga pariksa kode anjeun teras coba deui."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
-#: src/features/auth/sign-in/components/user-auth-form.tsx:385
+#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:327
 msgid "Please check your email and try again."
 msgstr "Mangga pariksa surélék anjeun teras coba deui."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
+#: ../../../lib/web/src/features/errors/general-error.tsx:54
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:304
+#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "Mangga pariksa sambungan internet anjeun teras cobian deui."
 
@@ -1157,11 +1117,11 @@ msgstr "Mangga pariksa sambungan internet anjeun teras cobian deui."
 msgid "Please check your recovery code and try again."
 msgstr "Mangga pariksa kode pamulihan anjeun teras coba deui."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Please copy manually: {devCode}"
 msgstr "Mangga salin sacara manual: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:79
+#: src/features/auth/sign-in/components/user-auth-form.tsx:68
 msgid "Please enter a valid email"
 msgstr "Mangga asupkeun surélék nu valid"
 
@@ -1173,20 +1133,27 @@ msgstr "Mangga asupkeun ngaran anjeun"
 msgid "Please enter your recovery code"
 msgstr "Mangga asupkeun kode pamulihan anjeun"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:274
-#: src/features/auth/sign-in/components/user-auth-form.tsx:323
-#: src/features/auth/sign-in/components/user-auth-form.tsx:426
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Please try again or contact support."
 msgstr "Mangga coba deui atawa hubungi dukungan."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:83
+msgid "Please try again."
+msgstr "Mangga cobian deui."
 
 #: src/features/auth/mfa/index.tsx:92
 msgid "Please use another verification method."
 msgstr "Mangga paké métode verifikasi séjén."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:299
+#: src/features/auth/sign-in/components/user-auth-form.tsx:241
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Mangga paké tombol \"Asup ku passkey\"."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:75
+msgid "Please wait a moment and try again."
+msgstr "Mangga antosan sakedap teras cobian deui."
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
@@ -1196,7 +1163,7 @@ msgstr "Gambar saméméhna"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:27
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 #: src/features/auth/identity-form.tsx:97
-#: src/features/landing/landing-page.tsx:528
+#: src/features/landing/landing-page.tsx:487
 msgid "Privacy"
 msgstr "Privasi"
 
@@ -1209,7 +1176,7 @@ msgstr "Pribadi"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/features/landing/landing-page.tsx:285
+#: src/features/landing/landing-page.tsx:258
 msgid "Projects"
 msgstr "Proyék"
 
@@ -1233,8 +1200,8 @@ msgstr "Daptarkeun deui konci akses anjeun dina ieu server"
 msgid "Reactivate my account"
 msgstr "Aktipkeun deui akun abdi"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:219
-#: ../../../lib/web/src/components/search-entity-page.tsx:194
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:216
+#: ../../../lib/web/src/components/search-entity-page.tsx:240
 msgid "Recommended"
 msgstr "Direkomendasikeun"
 
@@ -1255,10 +1222,9 @@ msgstr "Ngalihkeun anjeun ka dashboard…"
 msgid "Reduce interest"
 msgstr "Kurangan minat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:269
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
-#: src/features/auth/sign-in/components/user-auth-form.tsx:417
+#: src/features/auth/sign-in/components/user-auth-form.tsx:211
+#: src/features/auth/sign-in/components/user-auth-form.tsx:260
+#: src/features/auth/sign-in/components/user-auth-form.tsx:359
 msgid "Registration disabled"
 msgstr "Pendaptaran dipareuman"
 
@@ -1289,26 +1255,6 @@ msgstr "Cabut aksés?"
 msgid "Remove interest"
 msgstr "Cabut minat"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
-msgid "Replicate from another server"
-msgstr "Replikasi ti server séjén"
-
-#: src/features/landing/landing-page.tsx:166
-msgid "Replication request denied"
-msgstr "Panyuhunan replikasi ditolak"
-
-#: src/routes/replicating.tsx:135
-msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
-msgstr "Pamundut réplikasi dikirim ka <0>{source_user}</0>. Setujuan dina kaca setélan server sumber pikeun ngrengsekeun réplikasi."
-
-#: src/routes/replicating.tsx:139
-msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
-msgstr "Pamundut réplikasi dikirim ka server sumber. Setujuan dina kaca setélan server sumber pikeun ngrengsekeun réplikasi."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-msgid "Replication signup failed"
-msgstr "Pendaptaran replika gagal"
-
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Kirim deui email"
@@ -1322,11 +1268,11 @@ msgstr "Reset"
 msgid "Reset all settings to default values"
 msgstr "Setel ulang sakabéh setélan ka nilai baku"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:190
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:87
 msgid "Restore a backup file"
 msgstr "Pulihkeun file cadangan"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:215
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Mulihkeun gagal"
@@ -1376,8 +1322,8 @@ msgstr "Paluruh pamaké"
 msgid "Search..."
 msgstr "Paluruh..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:177
-#: ../../../lib/web/src/components/search-entity-page.tsx:152
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:174
+#: ../../../lib/web/src/components/search-entity-page.tsx:198
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "Maluruh..."
@@ -1426,20 +1372,20 @@ msgstr "Kirim email"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:260
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:286
 msgid "Server error"
 msgstr "Kasalahan server"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:40
-#: src/features/landing/landing-page.tsx:510
+#: src/features/landing/landing-page.tsx:469
 msgid "Server rules"
 msgstr "Aturan server"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
-msgid "Session expired"
-msgstr "Sési kadaluwarsa"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:210
+msgid "Session expired. Please log in again."
+msgstr "Sési parantos kadaluwarsa. Mangga asup deui."
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:147
 msgid "Set origin and destination"
@@ -1472,7 +1418,7 @@ msgstr "Sidebar"
 msgid "Sign out"
 msgstr "Kaluar"
 
-#: src/features/landing/landing-page.tsx:303
+#: src/features/landing/landing-page.tsx:272
 msgid "Sign up or log in"
 msgstr "Daptar atawa asup"
 
@@ -1497,14 +1443,6 @@ msgstr "Liwat ka Utama"
 msgid "Small"
 msgstr "Leutik"
 
-#: src/routes/replicating.tsx:168
-msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
-msgstr "Sababaraha transfer henteu réngsé dina percobaan munggaran. Bakal dicoba deui sacara otomatis."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:156
-msgid "Source server peer ID"
-msgstr "Peer ID server sumber"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:97
 msgid "Spacious"
 msgstr "Lega"
@@ -1513,10 +1451,6 @@ msgstr "Lega"
 #: src/features/auth/recovery/index.tsx:143
 msgid "Start again"
 msgstr "Mimitian deui"
-
-#: src/routes/replicating.tsx:246
-msgid "Starting…"
-msgstr "Ngamimitian…"
 
 #: src/features/auth/identity-form.tsx:126
 msgid "Stay hidden from directory searches."
@@ -1537,10 +1471,6 @@ msgstr "Hasil asup ku kode pamulihan"
 #: ../../../lib/web/src/lib/preference-utils.ts:65
 msgid "Sunday"
 msgstr "Minggu"
-
-#: src/routes/replicating.tsx:124
-msgid "Syncing your data"
-msgstr "Nyinkronkeun data anjeun"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
 #: ../../../lib/web/src/lib/preference-utils.ts:21
@@ -1563,7 +1493,7 @@ msgstr "Tim/App"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
 #: ../../../lib/web/src/features/document/document-page.tsx:42
-#: src/features/landing/landing-page.tsx:519
+#: src/features/landing/landing-page.tsx:478
 msgid "Terms and conditions"
 msgstr "Sarat jeung kondisi"
 
@@ -1580,15 +1510,15 @@ msgstr "Kode éta salah atawa parantos kadaluwarsa."
 msgid "That sign-in provider is not available"
 msgstr "Panyadia asup éta henteu sayogi"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:197
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:94
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Surélék nu diasupkeun ku anjeun di luhur jadi ngaran akun anyar dina ieu server. Identitas cadangan teu meunang geus aktip di dieu — pulihkeun ka server séjén, atawa pupus heula akun nu geus aya."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "The file may be damaged or have been modified."
 msgstr "Berkas éta bisa jadi ruksak atawa tos dirobah."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:200
+#: src/features/auth/sign-in/components/user-auth-form.tsx:186
 msgid "The passphrase you entered does not match the backup."
 msgstr "Frasa sandi nu diasupkeun teu cocog jeung cadangan."
 
@@ -1596,13 +1526,13 @@ msgstr "Frasa sandi nu diasupkeun teu cocog jeung cadangan."
 msgid "the provider"
 msgstr "panyadia"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:68
+msgid "The requested content could not be found."
+msgstr "Eusi anu dipénta teu kapanggih."
+
 #: src/routes/restore.tsx:111
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Mulihkeun teu bérés. Berkas cadangan bisa jadi ruksak, frasa sandi bisa jadi salah, atawa server ngalaman kasalahan."
-
-#: src/features/landing/landing-page.tsx:167
-msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
-msgstr "Server sumber teu nyatujuan panyuhunan, atawa parantos kadaluwarsa. Cobaan deui atawa daptar sacara lokal."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
@@ -1612,7 +1542,7 @@ msgstr "Téma"
 msgid "Theme Settings"
 msgstr "Setélan Téma"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:208
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Cadangan ieu dijieun ku versi Mochi nu langkung anyar. Apdet server ieu heula."
 
@@ -1651,6 +1581,10 @@ msgstr "Toggle Sidebar"
 msgid "Toggle theme"
 msgstr "Toggle téma"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:74
+msgid "Too many requests"
+msgstr "Seueur teuing pamundut"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:45
 msgid "Top"
 msgstr "Luhur"
@@ -1659,13 +1593,13 @@ msgstr "Luhur"
 msgid "Travelling"
 msgstr "Lalampahan"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:193
-#: ../../../lib/web/src/components/search-entity-page.tsx:168
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:190
+#: ../../../lib/web/src/components/search-entity-page.tsx:214
 msgid "Try adjusting your search terms"
 msgstr "Cobian luyukeun istilah pamilarian anjeun"
 
-#: ../../../lib/web/src/features/errors/general-error.tsx:128
-#: ../../../lib/web/src/features/errors/general-error.tsx:168
+#: ../../../lib/web/src/features/errors/general-error.tsx:140
+#: ../../../lib/web/src/features/errors/general-error.tsx:180
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:19
 msgid "Try again"
 msgstr "Cobian deui"
@@ -1686,7 +1620,7 @@ msgstr "Ketik pikeun néangan pamaké"
 msgid "Type to search..."
 msgstr "Ketik pikeun néangan..."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:282
 msgid "Unable to connect to remote server"
 msgstr "Teu tiasa nyambung ka server jarak jauh"
 
@@ -1695,7 +1629,7 @@ msgstr "Teu tiasa nyambung ka server jarak jauh"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Teu tiasa dialihkeun ka login. Mangga cobian deui."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:156
+#: ../../../lib/web/src/components/notification-category-button.tsx:155
 msgid "Unassigned"
 msgstr "Teu ditugaskeun"
 
@@ -1715,7 +1649,7 @@ msgstr "Muka data anjeun"
 msgid "Unverified"
 msgstr "Tacan diverifikasi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:204
+#: src/features/auth/sign-in/components/user-auth-form.tsx:190
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Unggah berkas .zip nu diékspor tina ékspor data Mochi."
 
@@ -1723,13 +1657,9 @@ msgstr "Unggah berkas .zip nu diékspor tina ékspor data Mochi."
 msgid "Use a different account"
 msgstr "Paké akun nu béda"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:575
+#: src/features/auth/sign-in/components/user-auth-form.tsx:517
 msgid "Use a passkey"
 msgstr "Anggo passkey"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:60
-msgid "Use the form alice@example.com"
-msgstr "Anggo wangun alice@example.com"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1738,10 +1668,6 @@ msgstr "Anggo konci akses anjeun"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Pamaké"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:135
-msgid "Username on source server"
-msgstr "Ngaran pamaké dina server sumber"
 
 #: src/routes/restore.tsx:51
 msgid "Validating backup"
@@ -1756,7 +1682,7 @@ msgid "Verification code sent"
 msgstr "Kode verifikasi dikirim"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:367
 msgid "Verification failed"
 msgstr "Verifikasi gagal"
 
@@ -1795,10 +1721,6 @@ msgstr "Tingali sadayana"
 msgid "View all notifications"
 msgstr "Tingali sagala bewara"
 
-#: src/routes/replicating.tsx:126
-msgid "Waiting for approval"
-msgstr "Ngantosan persetujuan"
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
 msgstr "Kami bakal balik online sakedap deui."
@@ -1811,13 +1733,17 @@ msgstr "Situs keur dipigawé!"
 msgid "Wednesday"
 msgstr "Rebo"
 
-#: src/features/landing/landing-page.tsx:286
+#: src/features/landing/landing-page.tsx:259
 msgid "Wikis"
 msgstr "Wiki"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
 msgid "Wrong passphrase"
 msgstr "Frasa sandi salah"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:61
+msgid "You do not have access to this section."
+msgstr "Anjeun teu gaduh aksés kana bagian ieu."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43
@@ -1838,21 +1764,9 @@ msgstr "Akun anjeun tos ditunda"
 
 #: src/features/auth/mfa/index.tsx:173
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/features/auth/sign-in/components/user-auth-form.tsx:356
 msgid "Your account has been suspended."
 msgstr "Akun anjeun tos ditunda."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:258
-msgid "Your account is already replicated here. Log in instead."
-msgstr "Akun anjeun parantos direplika di dieu. Asup wae."
-
-#: src/routes/replicating.tsx:131
-msgid "Your account is being copied from the source server. Do not close this window."
-msgstr "Akun anjeun keur disalin tina server sumber. Ulah nutup jandela ieu."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:128
-msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
-msgstr "Akun anjeun disalin sacara langsung tina server nu tos bisa diaksés ku anjeun. Server sumber kudu nyatujuan panyuhunan saméméh transfer dimimitian."
 
 #: src/routes/closing.tsx:95
 msgid "Your account is scheduled for deletion"
@@ -1870,7 +1784,7 @@ msgstr "Akun anjeun peryogi passkey pikeun asup"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Akun anjeun dipindahkeun ka dieu ti {source}. Dugi ka anjeun mupus éta di ditu, pesen jeung béwara tiasa dugi ka dua server, sababaraha konten anjeun tetep disajikan ti server lami, sareng pangéntép tiasa butuh sababaraha menit pikeun mendakan anjeun di dieu."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:137
 msgid "Your code is: {devCode}"
 msgstr "Kode anjeun nyaéta: {devCode}"
 

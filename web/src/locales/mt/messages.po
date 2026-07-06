@@ -13,22 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:238
-msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
-msgstr "{failed, plural, one {Qed jerġa' jipprova # bażi tad-data} few {Qed jerġa' jipprova # bażijiet tad-data} many {Qed jerġa' jipprova # bażijiet tad-data} other {Qed jerġa' jipprova # bażijiet tad-data}}"
-
-#: src/routes/replicating.tsx:239
-msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
-msgstr "{failed, plural, one {Qed jerġa' jipprova # fajl} few {Qed jerġa' jipprova # fajls} many {Qed jerġa' jipprova # fajls} other {Qed jerġa' jipprova # fajls}}"
-
-#: src/routes/replicating.tsx:243
-msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
-msgstr "{remaining, plural, one {# bażi tad-data fadal} few {# bażijiet tad-data fadal} many {# bażijiet tad-data fadal} other {# bażijiet tad-data fadal}}"
-
-#: src/routes/replicating.tsx:244
-msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
-msgstr "{remaining, plural, one {# fajl fadal} few {# fajls fadal} many {# fajls fadal} other {# fajls fadal}}"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12-il siegħa"
@@ -40,6 +24,10 @@ msgstr "24 siegħa"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Assolut (data u ħin)"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:60
+msgid "Access denied"
+msgstr "Aċċess miċħud"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:16
 msgid "Access Forbidden"
@@ -53,8 +41,7 @@ msgstr "Livell ta' aċċess"
 msgid "Account added"
 msgstr "Kont miżjud"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:211
-#: src/features/auth/sign-in/components/user-auth-form.tsx:257
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Il-kont diġà jeżisti fuq dan is-server"
 
@@ -64,7 +51,7 @@ msgstr "Kont imneħħi"
 
 #: src/features/auth/mfa/index.tsx:172
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:413
+#: src/features/auth/sign-in/components/user-auth-form.tsx:355
 msgid "Account suspended"
 msgstr "Kont sospiż"
 
@@ -122,7 +109,7 @@ msgstr "Żid view"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Aġġusta d-dehra u l-layout skont il-preferenzi tiegħek."
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:50
 msgid "Advanced"
 msgstr "Avvanzat"
 
@@ -139,7 +126,7 @@ msgstr "Kollha"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Diġà jeżisti kont b'dak l-email. Idħol l-ewwel, imbagħad illinkja {0} mis-settings tal-awtentikazzjoni tiegħek."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "An account with this identity already exists here."
 msgstr "Kont b'din l-identità diġà jeżisti hawn."
 
@@ -147,7 +134,7 @@ msgstr "Kont b'din l-identità diġà jeżisti hawn."
 msgid "An error occurred"
 msgstr "Seħħet żball"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:256
 msgid "An unexpected error occurred"
 msgstr "Seħħ żball mhux mistenni"
 
@@ -173,7 +160,7 @@ msgid "Authenticator code"
 msgstr "Kodiċi tal-awtentikazzjoni"
 
 #: ../../../lib/web/src/components/place-picker.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:590
+#: src/features/auth/sign-in/components/user-auth-form.tsx:532
 msgid "Back"
 msgstr "Lura"
 
@@ -187,15 +174,15 @@ msgstr "Lura għall-paġna ewlenija"
 msgid "Back to sign up"
 msgstr "Lura għall-irreġistrar"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:205
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:102
 msgid "Backup file"
 msgstr "Fajl ta' backup"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:215
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Backup file is corrupted"
 msgstr "Il-fajl ta' backup huwa korrott"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Backup is too new"
 msgstr "Il-backup huwa ġdid wisq"
 
@@ -204,7 +191,7 @@ msgstr "Il-backup huwa ġdid wisq"
 msgid "Boost interest"
 msgstr "Saħħaħ l-interess"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:90
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:56
 msgid "Bring an existing account onto this server:"
 msgstr "Ġib kont eżistenti fuq dan is-server:"
 
@@ -221,45 +208,31 @@ msgstr "Billi toħloq il-kont tiegħek, taqbel mar-<0>Regoli tas-server</0>, <1>
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/routes/replicating.tsx:211
 msgid "Cancel"
 msgstr "Ikkanċella"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:144
+#: ../../../lib/web/src/components/notification-category-button.tsx:143
 msgid "Category for this notification"
 msgstr "Kategorija għal din in-notifika"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:125
-#: ../../../lib/web/src/components/notification-category-button.tsx:136
+#: ../../../lib/web/src/components/notification-category-button.tsx:124
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Change notification category"
 msgstr "Ibdel il-kategorija tan-notifika"
 
-#: src/features/landing/landing-page.tsx:278
+#: src/features/landing/landing-page.tsx:251
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:262
-msgid "Check the address after @ and try again."
-msgstr "Iċċekkja l-indirizz wara @ u erġa' pprova."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
-msgid "Check the username before @ and try again."
-msgstr "Iċċekkja l-isem tal-utent qabel @ u erġa' pprova."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "Check your email."
 msgstr "Iċċekkja l-email tiegħek."
-
-#: src/routes/replicating.tsx:178
-msgid "Checking every few seconds…"
-msgstr "Qed jiġi vverifikat kull ftit sekondi…"
 
 #: src/routes/restore.tsx:165
 msgid "Checking…"
 msgstr "Qiegħed jivverifika…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
-#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Choose a different local email or log in instead."
 msgstr "Agħżel email lokali differenti jew idħol minflok."
 
@@ -331,11 +304,11 @@ msgstr "Agħlaq il-pannell"
 msgid "Close search"
 msgstr "Agħlaq it-tiftix"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:149
 msgid "Code copied"
 msgstr "Kodiċi kkupjat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:145
+#: src/features/auth/sign-in/components/user-auth-form.tsx:134
 msgid "Code sent."
 msgstr "Kodiċi mibgħut."
 
@@ -398,13 +371,12 @@ msgstr "Kompli b'{label}"
 msgid "Copy"
 msgstr "Ikkupja"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+#: src/features/auth/sign-in/components/user-auth-form.tsx:161
 msgid "Copy code"
 msgstr "Ikkopja l-kodiċi"
 
 #: src/features/auth/identity-form.tsx:162
-#: src/routes/replicating.tsx:206
 msgid "Could not cancel"
 msgstr "Ma setax jiġi kkanċellat"
 
@@ -413,16 +385,12 @@ msgstr "Ma setax jiġi kkanċellat"
 msgid "Could not load this document. Please try again later."
 msgstr "Ma setax itella' dan id-dokument. Jekk jogħġbok ipprova mill-ġdid iktar tard."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
-msgid "Could not reach the source server"
-msgstr "Ma setax jintlaħaq is-server tas-sors"
-
 #: src/routes/closing.tsx:69
 msgid "Could not reactivate your account"
 msgstr "Ma setax jiġi attivat mill-ġdid il-kont tiegħek"
 
 #: src/features/auth/components/oauth-buttons.tsx:75
-#: src/features/landing/landing-page.tsx:209
+#: src/features/landing/landing-page.tsx:182
 msgid "Could not start sign-in"
 msgstr "Ma setax jibda d-dħul"
 
@@ -438,11 +406,11 @@ msgstr "Ma setgħetx tinbeda l-awtentikazzjoni mill-ġdid. Jekk jogħġbok erġa
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Ma stajniex nivverifikaw b'dak il-kont. Jekk jogħġbok erġa' pprova."
 
-#: src/features/landing/landing-page.tsx:355
+#: src/features/landing/landing-page.tsx:324
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "Oħloq <0>kont bla ħlas</0>, mexxi <1>is-server tiegħek stess</1>, jew esplora <2>il-kodiċi sors</2>."
 
-#: src/features/landing/landing-page.tsx:279
+#: src/features/landing/landing-page.tsx:252
 msgid "CRM"
 msgstr "CRM"
 
@@ -463,9 +431,9 @@ msgstr "Skur"
 msgid "Dark mode"
 msgstr "Modalità skura"
 
-#: src/routes/replicating.tsx:150
-msgid "Databases"
-msgstr "Bażijiet tad-data"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:240
+msgid "Data conflict"
+msgstr "Kunflitt fid-dejta"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:310
 msgid "Default"
@@ -515,7 +483,6 @@ msgstr "Warrab"
 msgid "Displays the mobile sidebar."
 msgstr "Juri l-barra tal-ġenb tal-mobile."
 
-#: src/routes/replicating.tsx:234
 #: src/routes/restore.tsx:56
 msgid "Done"
 msgstr "Lest"
@@ -537,12 +504,11 @@ msgstr "Adattat għad-disleksja"
 msgid "Edit {label}"
 msgstr "Editja {label}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:624
+#: src/features/auth/sign-in/components/user-auth-form.tsx:566
 msgid "Email"
 msgstr "Email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:219
-#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "Email already in use"
 msgstr "L-email diġà qiegħda tintuża"
 
@@ -552,15 +518,15 @@ msgstr "kodiċi email"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:221
-#: src/features/auth/sign-in/components/user-auth-form.tsx:476
+#: src/features/auth/sign-in/components/user-auth-form.tsx:418
 msgid "Email code"
 msgstr "Kodiċi tal-email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:501
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Email me a code"
 msgstr "Ibgħatli kodiċi bl-email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Enter a code to continue"
 msgstr "Daħħal kodiċi biex tkompli"
 
@@ -568,7 +534,7 @@ msgstr "Daħħal kodiċi biex tkompli"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Daħħal kodiċi tal-irkupru għal \"{userEmail}\" biex tidħol"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:457
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Enter the code from your authenticator app"
 msgstr "Daħħal il-kodiċi mill-app tal-awtentikatur"
 
@@ -589,7 +555,7 @@ msgstr "Daħħal {initial} u {last}"
 msgid "Enter your authenticator code"
 msgstr "Daħħal il-kodiċi tal-awtentikatur tiegħek"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:449
+#: src/features/auth/sign-in/components/user-auth-form.tsx:391
 msgid "Enter your email code and authenticator code"
 msgstr "Daħħal il-kodiċi tal-email u l-kodiċi tal-awtentikatur tiegħek"
 
@@ -616,11 +582,11 @@ msgstr "Falla"
 msgid "Failed to add account"
 msgstr "Ma rnexxiex jiżdied il-kont"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Failed to continue"
 msgstr "Ma rnexxiex jitkompla"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
 msgid "Failed to copy code"
 msgstr "Ma rnexxiex jiġi kkupjat il-kodiċi"
 
@@ -636,23 +602,19 @@ msgstr "Ma rnexxiex tiġi ssejvjata l-identità"
 msgid "Failed to send verification code"
 msgstr "Ma rnexxiex jintbagħat il-kodiċi tal-verifika"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:112
+#: ../../../lib/web/src/components/notification-category-button.tsx:111
 msgid "Failed to update category"
 msgstr "Ma rnexxiex tiġi aġġornata l-kategorija"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:253
 msgid "Feeds"
 msgstr "Feeds"
-
-#: src/routes/replicating.tsx:159
-msgid "Files"
-msgstr "Fajls"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:88
 msgid "Finish moving your account"
 msgstr "Lesti t-trasferiment tal-kont tiegħek"
 
-#: src/routes/identity.tsx:96
+#: src/routes/identity.tsx:90
 msgid "Finish setting up your account"
 msgstr "Lesti l-issettjar tal-kont tiegħek"
 
@@ -668,7 +630,7 @@ msgstr "Ċatta"
 msgid "Floating"
 msgstr "Galleġġjant"
 
-#: src/features/landing/landing-page.tsx:281
+#: src/features/landing/landing-page.tsx:254
 msgid "Forums"
 msgstr "Fora"
 
@@ -693,11 +655,11 @@ msgstr "Mit-tema"
 msgid "Full layout"
 msgstr "Layout sħiħ"
 
-#: src/features/landing/landing-page.tsx:282
+#: src/features/landing/landing-page.tsx:255
 msgid "Games"
 msgstr "Logħob"
 
-#: src/features/landing/landing-page.tsx:283
+#: src/features/landing/landing-page.tsx:256
 msgid "Git repositories"
 msgstr "Repożitorji Git"
 
@@ -766,7 +728,7 @@ msgstr "Inset"
 msgid "Interests"
 msgstr "Interessi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:401
+#: src/features/auth/sign-in/components/user-auth-form.tsx:343
 msgid "Invalid authenticator code"
 msgstr "Kodiċi tal-awtentikatur invalidu"
 
@@ -775,8 +737,8 @@ msgstr "Kodiċi tal-awtentikatur invalidu"
 #: src/features/auth/mfa/index.tsx:145
 #: src/features/auth/mfa/index.tsx:165
 #: src/features/auth/mfa/index.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
-#: src/features/auth/sign-in/components/user-auth-form.tsx:421
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
+#: src/features/auth/sign-in/components/user-auth-form.tsx:363
 msgid "Invalid code"
 msgstr "Kodiċi invalidu"
 
@@ -786,8 +748,8 @@ msgid "Invalid recovery code"
 msgstr "Kodiċi tal-irkupru invalidu"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
-#: src/features/auth/sign-in/components/user-auth-form.tsx:384
+#: src/features/auth/sign-in/components/user-auth-form.tsx:307
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Invalid verification code"
 msgstr "Kodiċi tal-verifika invalidu"
 
@@ -834,23 +796,23 @@ msgstr "Qed jitgħabba…"
 
 #: src/features/auth/mfa/index.tsx:297
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:548
+#: src/features/auth/sign-in/components/user-auth-form.tsx:490
 msgid "Log in"
 msgstr "Idħol"
 
-#: src/features/landing/landing-page.tsx:399
+#: src/features/landing/landing-page.tsx:368
 msgid "Log in to Mochi"
 msgstr "Idħol f'Mochi"
 
-#: src/features/landing/landing-page.tsx:471
+#: src/features/landing/landing-page.tsx:434
 msgid "Log in with {label}"
 msgstr "Idħol bi {label}"
 
-#: src/features/auth/sign-in/index.tsx:109
+#: src/features/auth/sign-in/index.tsx:105
 msgid "Log in with passkey"
 msgstr "Idħol b'passkey"
 
-#: src/features/auth/sign-in/index.tsx:76
+#: src/features/auth/sign-in/index.tsx:74
 msgid "Log in with your email address"
 msgstr "Idħol bl-indirizz tal-email tiegħek"
 
@@ -865,8 +827,8 @@ msgid "Log out"
 msgstr "Oħroġ"
 
 #: src/features/auth/recovery/index.tsx:44
-#: src/features/auth/sign-in/index.tsx:46
-#: src/features/landing/landing-page.tsx:239
+#: src/features/auth/sign-in/index.tsx:44
+#: src/features/landing/landing-page.tsx:212
 msgid "Logged in"
 msgstr "Daħal"
 
@@ -887,7 +849,7 @@ msgid "Login session expired, please try again"
 msgstr "Is-sessjoni tal-login skadiet, jekk jogħġbok erġa' pprova"
 
 #: src/features/auth/mfa/index.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:599
+#: src/features/auth/sign-in/components/user-auth-form.tsx:541
 msgid "Lost access? Use a recovery code"
 msgstr "Tlift l-aċċess? Uża kodiċi tal-irkupru"
 
@@ -897,7 +859,7 @@ msgstr "Tlift l-aċċess? Uża kodiċi tal-irkupru"
 msgid "Mark all as read"
 msgstr "Immarka kollox bħala maqru"
 
-#: src/features/landing/landing-page.tsx:284
+#: src/features/landing/landing-page.tsx:257
 msgid "Market"
 msgstr "Suq"
 
@@ -913,7 +875,7 @@ msgstr "Menu"
 msgid "Metric"
 msgstr "Metriku"
 
-#: src/features/landing/landing-page.tsx:323
+#: src/features/landing/landing-page.tsx:292
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi hija pjattaforma b'sors miftuħ, federata u b'ħafna utenti għal applikazzjonijiet distribwiti. Kulħadd jista' jħaddem is-server tiegħu stess, u jgħaqqad ma' kwalunkwe utent ieħor fuq in-netwerk Mochi. Kulħadd jista' joħloq u jippubblika applikazzjonijiet. Kull applikazzjoni hija sostitwibbli, anke dawk tas-sistema. Is-server jiġi b'aktar minn 20 applikazzjoni, fosthom:"
 
@@ -921,7 +883,8 @@ msgstr "Mochi hija pjattaforma b'sors miftuħ, federata u b'ħafna utenti għal 
 msgid "Monday"
 msgstr "It-Tnejn"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
+#: ../../../lib/web/src/features/errors/general-error.tsx:53
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:303
 msgid "Network error"
 msgstr "Żball tan-network"
 
@@ -933,14 +896,13 @@ msgstr "Ġdid"
 msgid "New accounts are disabled on this server"
 msgstr "Kontijiet ġodda huma diżabilitati fuq dan is-server"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:270
-#: src/features/auth/sign-in/components/user-auth-form.tsx:319
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "New user signup is disabled."
 msgstr "Is-signup għal utenti ġodda huwa diżabilitat."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:637
+#: src/features/auth/sign-in/components/user-auth-form.tsx:579
 msgid "Next"
 msgstr "Li jmiss"
 
@@ -953,7 +915,7 @@ msgstr "Stampa li jmiss"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "L-ebda regoli ta' aċċess ikkonfigurati. Żid regoli biex tikkontrolla min jista' jaċċessa din ir-riżorsa."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:223
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "No backup file selected"
 msgstr "L-ebda fajl ta' backup ma ġie magħżul"
 
@@ -964,10 +926,6 @@ msgstr "L-ebda kontijiet konnessi"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "L-ebda gruppi disponibbli"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:265
-msgid "No matching account on the source server"
-msgstr "M'hemm l-ebda kont jaqbel fuq is-server tas-sors"
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -986,7 +944,7 @@ msgstr "Ma nstabu l-ebda riżultati."
 msgid "No time zone found."
 msgstr "Ma nstabu l-ebda żona ta' ħin."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:148
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "No topic record yet — try again after the next notification."
 msgstr "Għadu m'hemm l-ebda rekord tat-topic — erġa' pprova wara n-notifika li jmiss."
 
@@ -1000,7 +958,7 @@ msgstr "Ma nstabu l-ebda utenti"
 msgid "None"
 msgstr "Xejn"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:105
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:71
 msgid "None; create a fresh account"
 msgstr "Xejn; oħloq kont ġdid"
 
@@ -1008,9 +966,13 @@ msgstr "Xejn; oħloq kont ġdid"
 msgid "Normal"
 msgstr "Normali"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:203
+#: src/features/auth/sign-in/components/user-auth-form.tsx:189
 msgid "Not a migration bundle"
 msgstr "Mhux pakkett tal-migrazzjoni"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:67
+msgid "Not found"
+msgstr "Ma nstabx"
 
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:146
 msgid "Not set"
@@ -1053,16 +1015,16 @@ msgstr "Iftaħ menu tan-navigazzjoni"
 msgid "Open theme settings"
 msgstr "Iftaħ settings tat-tema"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:95
 msgid "Or"
 msgstr "Jew"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:518
+#: src/features/auth/sign-in/components/user-auth-form.tsx:460
 msgid "Or enter authenticator code"
 msgstr "Jew daħħal il-kodiċi tal-awtentikazzjoni"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:560
-#: src/features/landing/landing-page.tsx:440
+#: src/features/auth/sign-in/components/user-auth-form.tsx:502
+#: src/features/landing/landing-page.tsx:403
 msgid "Or log in with"
 msgstr "Jew illoggja b'"
 
@@ -1084,21 +1046,21 @@ msgstr "passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 #: src/features/auth/mfa/index.tsx:279
-#: src/features/landing/landing-page.tsx:459
+#: src/features/landing/landing-page.tsx:422
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/index.tsx:61
-#: src/features/landing/landing-page.tsx:266
+#: src/features/auth/sign-in/index.tsx:59
+#: src/features/landing/landing-page.tsx:239
 msgid "Passkey login cancelled"
 msgstr "Login bil-passkey ġie kkanċellat"
 
-#: src/features/auth/sign-in/index.tsx:59
-#: src/features/landing/landing-page.tsx:259
+#: src/features/auth/sign-in/index.tsx:57
+#: src/features/landing/landing-page.tsx:232
 msgid "Passkey login failed"
 msgstr "Login bil-passkey falla"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:298
+#: src/features/auth/sign-in/components/user-auth-form.tsx:240
 msgid "Passkey login required"
 msgstr "Login bil-passkey meħtieġ"
 
@@ -1114,41 +1076,39 @@ msgstr "Il-verifika tal-passkey falliet. Jekk jogħġbok erġa' pprova."
 msgid "Passkeys"
 msgstr "Ċwievet tal-aċċess"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:224
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
 msgid "Passphrase"
 msgstr "Frażi tal-password"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:453
+#: src/features/auth/sign-in/components/user-auth-form.tsx:395
 msgid "Paste the login code you received by email"
 msgstr "Waħħal il-kodiċi tal-login li rċevejt bl-email"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:70
-msgid "Peer IDs start with 12D3KooW and are 52 characters long"
-msgstr "Peer ID jibdew bi 12D3KooW u huma twal 52 karattru"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/sign-in/components/user-auth-form.tsx:344
 msgid "Please check your authenticator app and try again."
 msgstr "Jekk jogħġbok iċċekkja l-app tal-authenticator tiegħek u erġa' pprova."
 
 #: src/features/auth/mfa/index.tsx:146
 #: src/features/auth/mfa/index.tsx:166
 #: src/features/auth/mfa/index.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:422
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Please check your code and try again."
 msgstr "Jekk jogħġbok iċċekkja l-kodiċi tiegħek u erġa' pprova."
 
 #: src/features/auth/mfa/index.tsx:104
 #: src/features/auth/mfa/index.tsx:126
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your codes and try again."
 msgstr "Jekk jogħġbok iċċekkja l-kodiċi tiegħek u erġa' pprova."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
-#: src/features/auth/sign-in/components/user-auth-form.tsx:385
+#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:327
 msgid "Please check your email and try again."
 msgstr "Jekk jogħġbok iċċekkja l-email tiegħek u erġa' pprova."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
+#: ../../../lib/web/src/features/errors/general-error.tsx:54
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:304
+#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "Jekk jogħġbok iċċekkja l-konnessjoni tal-internet tiegħek u erġa' pprova."
 
@@ -1157,11 +1117,11 @@ msgstr "Jekk jogħġbok iċċekkja l-konnessjoni tal-internet tiegħek u erġa' 
 msgid "Please check your recovery code and try again."
 msgstr "Jekk jogħġbok iċċekkja l-kodiċi ta' rkupru tiegħek u erġa' pprova."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Please copy manually: {devCode}"
 msgstr "Jekk jogħġbok ikkupja manwalment: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:79
+#: src/features/auth/sign-in/components/user-auth-form.tsx:68
 msgid "Please enter a valid email"
 msgstr "Jekk jogħġbok daħħal email valida"
 
@@ -1173,20 +1133,27 @@ msgstr "Jekk jogħġbok daħħal ismek"
 msgid "Please enter your recovery code"
 msgstr "Jekk jogħġbok daħħal il-kodiċi ta' rkupru tiegħek"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:274
-#: src/features/auth/sign-in/components/user-auth-form.tsx:323
-#: src/features/auth/sign-in/components/user-auth-form.tsx:426
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Please try again or contact support."
 msgstr "Jekk jogħġbok erġa' pprova jew ikkuntattja s-support."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:83
+msgid "Please try again."
+msgstr "Erġa' pprova."
 
 #: src/features/auth/mfa/index.tsx:92
 msgid "Please use another verification method."
 msgstr "Jekk jogħġbok uża metodu ieħor ta' verifika."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:299
+#: src/features/auth/sign-in/components/user-auth-form.tsx:241
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Jekk jogħġbok uża l-buttuna \"Idħol bil-passkey\"."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:75
+msgid "Please wait a moment and try again."
+msgstr "Jekk jogħġbok stenna ftit u erġa' pprova."
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
@@ -1196,7 +1163,7 @@ msgstr "Stampa preċedenti"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:27
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 #: src/features/auth/identity-form.tsx:97
-#: src/features/landing/landing-page.tsx:528
+#: src/features/landing/landing-page.tsx:487
 msgid "Privacy"
 msgstr "Privatezza"
 
@@ -1209,7 +1176,7 @@ msgstr "Privat"
 msgid "Profile"
 msgstr "Profil"
 
-#: src/features/landing/landing-page.tsx:285
+#: src/features/landing/landing-page.tsx:258
 msgid "Projects"
 msgstr "Proġetti"
 
@@ -1233,8 +1200,8 @@ msgstr "Erġa' rreġistra ċ-ċwievet tal-aċċess tiegħek fuq dan is-server"
 msgid "Reactivate my account"
 msgstr "Attiva l-kont tiegħi mill-ġdid"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:219
-#: ../../../lib/web/src/components/search-entity-page.tsx:194
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:216
+#: ../../../lib/web/src/components/search-entity-page.tsx:240
 msgid "Recommended"
 msgstr "Rakkomandat"
 
@@ -1255,10 +1222,9 @@ msgstr "Qed inwassluk għad-dashboard…"
 msgid "Reduce interest"
 msgstr "Naqqas l-interess"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:269
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
-#: src/features/auth/sign-in/components/user-auth-form.tsx:417
+#: src/features/auth/sign-in/components/user-auth-form.tsx:211
+#: src/features/auth/sign-in/components/user-auth-form.tsx:260
+#: src/features/auth/sign-in/components/user-auth-form.tsx:359
 msgid "Registration disabled"
 msgstr "Reġistrazzjoni diżabilitata"
 
@@ -1289,26 +1255,6 @@ msgstr "Tneħħi l-aċċess?"
 msgid "Remove interest"
 msgstr "Neħħi interess"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
-msgid "Replicate from another server"
-msgstr "Irreplikaw minn server ieħor"
-
-#: src/features/landing/landing-page.tsx:166
-msgid "Replication request denied"
-msgstr "Talba ta' replikazzjoni miċħuda"
-
-#: src/routes/replicating.tsx:135
-msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
-msgstr "Talba ta' replikazzjoni mibgħuta lil <0>{source_user}</0>. Approvaha fil-paġna tas-settings tas-server tas-sors biex tlesti r-replikazzjoni."
-
-#: src/routes/replicating.tsx:139
-msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
-msgstr "Talba ta' replikazzjoni mibgħuta lis-server tas-sors. Approvaha fil-paġna tas-settings tas-server tas-sors biex tlesti r-replikazzjoni."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-msgid "Replication signup failed"
-msgstr "L-iffirmar permezz tar-replika falla"
-
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Erġa' ibgħat l-email"
@@ -1322,11 +1268,11 @@ msgstr "Reset"
 msgid "Reset all settings to default values"
 msgstr "Irriżetta s-settings kollha għall-valuri default"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:190
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:87
 msgid "Restore a backup file"
 msgstr "Irrestawra fajl ta' backup"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:215
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "L-irristorjar falla"
@@ -1376,8 +1322,8 @@ msgstr "Fittex utenti"
 msgid "Search..."
 msgstr "Fittex..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:177
-#: ../../../lib/web/src/components/search-entity-page.tsx:152
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:174
+#: ../../../lib/web/src/components/search-entity-page.tsx:198
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "Qed ifittex..."
@@ -1426,20 +1372,20 @@ msgstr "Ibgħat email"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:260
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:286
 msgid "Server error"
 msgstr "Żball tas-server"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:40
-#: src/features/landing/landing-page.tsx:510
+#: src/features/landing/landing-page.tsx:469
 msgid "Server rules"
 msgstr "Regoli tas-server"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
-msgid "Session expired"
-msgstr "Sessjoni skadiet"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:210
+msgid "Session expired. Please log in again."
+msgstr "Is-sessjoni skadiet. Jekk jogħġbok erġa' idħol."
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:147
 msgid "Set origin and destination"
@@ -1472,7 +1418,7 @@ msgstr "Sidebar"
 msgid "Sign out"
 msgstr "Oħroġ"
 
-#: src/features/landing/landing-page.tsx:303
+#: src/features/landing/landing-page.tsx:272
 msgid "Sign up or log in"
 msgstr "Iffirma jew idħol"
 
@@ -1497,14 +1443,6 @@ msgstr "Aqbeż għall-Main"
 msgid "Small"
 msgstr "Żgħir"
 
-#: src/routes/replicating.tsx:168
-msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
-msgstr "Xi trasferimenti ma temmewx fl-ewwel prova. Se jiġu pruvati mill-ġdid awtomatikament."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:156
-msgid "Source server peer ID"
-msgstr "Peer ID tas-server tas-sors"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:97
 msgid "Spacious"
 msgstr "Wiesa'"
@@ -1513,10 +1451,6 @@ msgstr "Wiesa'"
 #: src/features/auth/recovery/index.tsx:143
 msgid "Start again"
 msgstr "Ibda mill-ġdid"
-
-#: src/routes/replicating.tsx:246
-msgid "Starting…"
-msgstr "Qed jibda…"
 
 #: src/features/auth/identity-form.tsx:126
 msgid "Stay hidden from directory searches."
@@ -1537,10 +1471,6 @@ msgstr "Iffirmajt b'suċċess b'kodiċi ta' rkupru"
 #: ../../../lib/web/src/lib/preference-utils.ts:65
 msgid "Sunday"
 msgstr "Il-Ħadd"
-
-#: src/routes/replicating.tsx:124
-msgid "Syncing your data"
-msgstr "Qed nissinkronizzaw id-data tiegħek"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
 #: ../../../lib/web/src/lib/preference-utils.ts:21
@@ -1563,7 +1493,7 @@ msgstr "Timijiet/Apps"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
 #: ../../../lib/web/src/features/document/document-page.tsx:42
-#: src/features/landing/landing-page.tsx:519
+#: src/features/landing/landing-page.tsx:478
 msgid "Terms and conditions"
 msgstr "Termini u kondizzjonijiet"
 
@@ -1580,15 +1510,15 @@ msgstr "Dak il-kodiċi mhux korrett jew skada."
 msgid "That sign-in provider is not available"
 msgstr "Dak il-fornitur tad-dħul mhux disponibbli"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:197
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:94
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "L-email li ddaħħal hawn fuq isir l-isem tal-kont il-ġdid fuq dan is-server. L-identità tal-backup ma għandhiex tkun diġà attiva hawn — irrestawra fuq server ieħor, jew ħassar l-ewwel il-kont eżistenti."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "The file may be damaged or have been modified."
 msgstr "Il-fajl jista' jkun imdaħħal jew ibiddel."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:200
+#: src/features/auth/sign-in/components/user-auth-form.tsx:186
 msgid "The passphrase you entered does not match the backup."
 msgstr "Il-frażi tal-password li daħħalt ma taqbilx mal-backup."
 
@@ -1596,13 +1526,13 @@ msgstr "Il-frażi tal-password li daħħalt ma taqbilx mal-backup."
 msgid "the provider"
 msgstr "il-fornitur"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:68
+msgid "The requested content could not be found."
+msgstr "Il-kontenut mitlub ma setax jinstab."
+
 #: src/routes/restore.tsx:111
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "L-irristorjar ma tlestax. Il-fajl ta' backup jista' jkun imdaħħal, il-frażi tal-password tista' tkun ħażin, jew is-server waqa' f'żball."
-
-#: src/features/landing/landing-page.tsx:167
-msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
-msgstr "Is-server tas-sors ma approvax it-talba, jew skadiet. Erġa' pprova jew irreġistra lokalment."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
@@ -1612,7 +1542,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Settings tat-Tema"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:208
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Dan il-backup inħoloq minn verżjoni aktar ġdida ta' Mochi. Aġġorna dan is-server l-ewwel."
 
@@ -1651,6 +1581,10 @@ msgstr "Aqleb is-Sidebar"
 msgid "Toggle theme"
 msgstr "Aqleb it-tema"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:74
+msgid "Too many requests"
+msgstr "Wisq talbiet"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:45
 msgid "Top"
 msgstr "Quċċata"
@@ -1659,13 +1593,13 @@ msgstr "Quċċata"
 msgid "Travelling"
 msgstr "Qed jivvjaġġa"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:193
-#: ../../../lib/web/src/components/search-entity-page.tsx:168
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:190
+#: ../../../lib/web/src/components/search-entity-page.tsx:214
 msgid "Try adjusting your search terms"
 msgstr "Ipprova taġġusta t-termini tat-tfittxija tiegħek"
 
-#: ../../../lib/web/src/features/errors/general-error.tsx:128
-#: ../../../lib/web/src/features/errors/general-error.tsx:168
+#: ../../../lib/web/src/features/errors/general-error.tsx:140
+#: ../../../lib/web/src/features/errors/general-error.tsx:180
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:19
 msgid "Try again"
 msgstr "Erġa' pprova"
@@ -1686,7 +1620,7 @@ msgstr "Ittajpja biex tfittex utenti"
 msgid "Type to search..."
 msgstr "Ittajpja biex tfittex..."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:282
 msgid "Unable to connect to remote server"
 msgstr "Ma jistax jaqbad mas-server remot"
 
@@ -1695,7 +1629,7 @@ msgstr "Ma jistax jaqbad mas-server remot"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Ma rnexxiex jirridrettja għal-login. Jekk jogħġbok erġa' pprova."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:156
+#: ../../../lib/web/src/components/notification-category-button.tsx:155
 msgid "Unassigned"
 msgstr "Mhux assenjat"
 
@@ -1715,7 +1649,7 @@ msgstr "Qiegħed jiftaħ id-data tiegħek"
 msgid "Unverified"
 msgstr "Mhux ivverifikat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:204
+#: src/features/auth/sign-in/components/user-auth-form.tsx:190
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Tella' fajl .zip esportat mill-esportazzjoni tad-data ta' Mochi."
 
@@ -1723,13 +1657,9 @@ msgstr "Tella' fajl .zip esportat mill-esportazzjoni tad-data ta' Mochi."
 msgid "Use a different account"
 msgstr "Uża kont differenti"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:575
+#: src/features/auth/sign-in/components/user-auth-form.tsx:517
 msgid "Use a passkey"
 msgstr "Uża passkey"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:60
-msgid "Use the form alice@example.com"
-msgstr "Uża l-forma alice@example.com"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1738,10 +1668,6 @@ msgstr "Uża l-passkey tiegħek"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Utent"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:135
-msgid "Username on source server"
-msgstr "Isem tal-utent fuq is-server tas-sors"
 
 #: src/routes/restore.tsx:51
 msgid "Validating backup"
@@ -1756,7 +1682,7 @@ msgid "Verification code sent"
 msgstr "Kodiċi ta' verifika mibgħut"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:367
 msgid "Verification failed"
 msgstr "Verifika falliet"
 
@@ -1795,10 +1721,6 @@ msgstr "Ara kollox"
 msgid "View all notifications"
 msgstr "Ara n-notifiki kollha"
 
-#: src/routes/replicating.tsx:126
-msgid "Waiting for approval"
-msgstr "Qed nistennew l-approvazzjoni"
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
 msgstr "Nerġgħu nkunu online dalwaqt."
@@ -1811,13 +1733,17 @@ msgstr "Il-websajt qed tinżamm!"
 msgid "Wednesday"
 msgstr "L-Erbgħa"
 
-#: src/features/landing/landing-page.tsx:286
+#: src/features/landing/landing-page.tsx:259
 msgid "Wikis"
 msgstr "Wikis"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
 msgid "Wrong passphrase"
 msgstr "Frażi tal-password ħażina"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:61
+msgid "You do not have access to this section."
+msgstr "M'għandekx aċċess għal din it-taqsima."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43
@@ -1838,21 +1764,9 @@ msgstr "Il-kont tiegħek ġie sospiż"
 
 #: src/features/auth/mfa/index.tsx:173
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/features/auth/sign-in/components/user-auth-form.tsx:356
 msgid "Your account has been suspended."
 msgstr "Il-kont tiegħek ġie sospiż."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:258
-msgid "Your account is already replicated here. Log in instead."
-msgstr "Il-kont tiegħek diġà ġie replikat hawn. Idħol minflok."
-
-#: src/routes/replicating.tsx:131
-msgid "Your account is being copied from the source server. Do not close this window."
-msgstr "Il-kont tiegħek qed jiġi kkupjat mis-server tas-sors. Tagħlaqx din it-tieqa."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:128
-msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
-msgstr "Il-kont tiegħek jinkopja direttament minn server li diġà għandek aċċess għalih. Is-server sors irid japprova t-talba qabel ma tibda t-trasferiment."
 
 #: src/routes/closing.tsx:95
 msgid "Your account is scheduled for deletion"
@@ -1870,7 +1784,7 @@ msgstr "Il-kont tiegħek jeħtieġ passkey biex tidħol"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Il-kont tiegħek ġie miċċaqqlaq hawn minn {source}. Sakemm tħassru hemm, il-messaġġi u n-notifiki jistgħu jaslu fuq iż-żewġ servers, xi kontenut tiegħek jibqa' jingħata mis-server il-qadim, u s-segwaċi jistgħu jieħdu ftit minuti biex isibuk hawn."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:137
 msgid "Your code is: {devCode}"
 msgstr "Il-kodiċi tiegħek hu: {devCode}"
 

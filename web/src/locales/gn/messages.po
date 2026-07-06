@@ -13,22 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/replicating.tsx:238
-msgid "{failed, plural, one {Retrying # database} other {Retrying # databases}}"
-msgstr "{failed, plural, other {# mba'ekuaarã ñepyrũjey}}"
-
-#: src/routes/replicating.tsx:239
-msgid "{failed, plural, one {Retrying # file} other {Retrying # files}}"
-msgstr "{failed, plural, other {# marandurenda ñepyrũjey}}"
-
-#: src/routes/replicating.tsx:243
-msgid "{remaining, plural, one {# database remaining} other {# databases remaining}}"
-msgstr "{remaining, plural, other {# mba'ekuaarã ahenyhẽva}}"
-
-#: src/routes/replicating.tsx:244
-msgid "{remaining, plural, one {# file remaining} other {# files remaining}}"
-msgstr "{remaining, plural, other {# marandurenda ahenyhẽva}}"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 aravo"
@@ -40,6 +24,10 @@ msgstr "24 aravo"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Sa'ipýpe (ára ha aravo)"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:60
+msgid "Access denied"
+msgstr "Jeike noñemoneĩri"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:16
 msgid "Access Forbidden"
@@ -53,8 +41,7 @@ msgstr "Jeike rupa"
 msgid "Account added"
 msgstr "Tetãygua oñembojuajúma"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:211
-#: src/features/auth/sign-in/components/user-auth-form.tsx:257
+#: src/features/auth/sign-in/components/user-auth-form.tsx:197
 msgid "Account already on this server"
 msgstr "Tetãygua oĩma ko servidorpe"
 
@@ -64,7 +51,7 @@ msgstr "Tetãygua oñehundíma"
 
 #: src/features/auth/mfa/index.tsx:172
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:413
+#: src/features/auth/sign-in/components/user-auth-form.tsx:355
 msgid "Account suspended"
 msgstr "Tetãygua oñepe'ã"
 
@@ -122,7 +109,7 @@ msgstr "Embojuaju view"
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Embojeko ne ojeguáva ha tape eipotaháicha."
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:84
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:50
 msgid "Advanced"
 msgstr "Tenondevegua"
 
@@ -139,7 +126,7 @@ msgstr "Opaite"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Peteĩ tetãygua upe email reheve oĩma. Eñepyrũ raẽ, upéi embojuaju {0} ne auth ñembohekogui."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:198
 msgid "An account with this identity already exists here."
 msgstr "Pe teko reheguáva ndive cuenta oĩma ko'ápe."
 
@@ -147,7 +134,7 @@ msgstr "Pe teko reheguáva ndive cuenta oĩma ko'ápe."
 msgid "An error occurred"
 msgstr "Oĩ peteĩ jejavy"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:256
 msgid "An unexpected error occurred"
 msgstr "Oĩ peteĩ jejavy ñeha'ãrõ'ỹva"
 
@@ -173,7 +160,7 @@ msgid "Authenticator code"
 msgstr "Authenticator código"
 
 #: ../../../lib/web/src/components/place-picker.tsx:155
-#: src/features/auth/sign-in/components/user-auth-form.tsx:590
+#: src/features/auth/sign-in/components/user-auth-form.tsx:532
 msgid "Back"
 msgstr "Tapykuépe"
 
@@ -187,15 +174,15 @@ msgstr "Eju jey ógape"
 msgid "Back to sign up"
 msgstr "Jey jehecharã rejeregistrávo"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:205
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:102
 msgid "Backup file"
 msgstr "Archivo rugua"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:215
+#: src/features/auth/sign-in/components/user-auth-form.tsx:201
 msgid "Backup file is corrupted"
 msgstr "Archivo rugua oiko vai"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:207
+#: src/features/auth/sign-in/components/user-auth-form.tsx:193
 msgid "Backup is too new"
 msgstr "Rugua ipy'aiterei"
 
@@ -204,7 +191,7 @@ msgstr "Rugua ipy'aiterei"
 msgid "Boost interest"
 msgstr "Boost mba'erekohápe"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:90
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:56
 msgid "Bring an existing account onto this server:"
 msgstr "Emondo cuenta oĩva ko servidórpe:"
 
@@ -221,45 +208,31 @@ msgstr "Embojeguávo ne tetãygua, eñemoneĩ <0>Servidor reglas</0>, <1>Términ
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/routes/replicating.tsx:211
 msgid "Cancel"
 msgstr "Heja"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:144
+#: ../../../lib/web/src/components/notification-category-button.tsx:143
 msgid "Category for this notification"
 msgstr "Categoría ko ñe'ẽmondo-pegua"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:125
-#: ../../../lib/web/src/components/notification-category-button.tsx:136
+#: ../../../lib/web/src/components/notification-category-button.tsx:124
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Change notification category"
 msgstr "Embojere ñe'ẽmondo categoría"
 
-#: src/features/landing/landing-page.tsx:278
+#: src/features/landing/landing-page.tsx:251
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:262
-msgid "Check the address after @ and try again."
-msgstr "Ehecha pe kuatiarogue @ rire ha eñeha'ã jey."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:266
-msgid "Check the username before @ and try again."
-msgstr "Ehecha pe puruhárã réra @ mboyve ha eñeha'ã jey."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "Check your email."
 msgstr "Ehecha ne email."
-
-#: src/routes/replicating.tsx:178
-msgid "Checking every few seconds…"
-msgstr "Ojehechajeýta ko'ã ne mbyky aravo'ípe…"
 
 #: src/routes/restore.tsx:165
 msgid "Checking…"
 msgstr "Ohechauka…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:220
-#: src/features/auth/sign-in/components/user-auth-form.tsx:254
+#: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Choose a different local email or log in instead."
 msgstr "Eiporavo ambue local email térã eike ehagua hekoviarã."
 
@@ -331,11 +304,11 @@ msgstr "Emboty panel"
 msgid "Close search"
 msgstr "Mboty jeheka"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:160
+#: src/features/auth/sign-in/components/user-auth-form.tsx:149
 msgid "Code copied"
 msgstr "Código oñekopiáma"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:145
+#: src/features/auth/sign-in/components/user-auth-form.tsx:134
 msgid "Code sent."
 msgstr "Código oñemondóma."
 
@@ -398,13 +371,12 @@ msgstr "Eku tenonde {label} ndive"
 msgid "Copy"
 msgstr "Kopia"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
-#: src/features/auth/sign-in/components/user-auth-form.tsx:172
+#: src/features/auth/sign-in/components/user-auth-form.tsx:156
+#: src/features/auth/sign-in/components/user-auth-form.tsx:161
 msgid "Copy code"
 msgstr "Embokopia código"
 
 #: src/features/auth/identity-form.tsx:162
-#: src/routes/replicating.tsx:206
 msgid "Could not cancel"
 msgstr "Ndaikatúi heja"
 
@@ -413,16 +385,12 @@ msgstr "Ndaikatúi heja"
 msgid "Could not load this document. Please try again later."
 msgstr "Ndaikatúi oñemyenyhẽ ko documento. Eha'ã jeýta upéi."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
-msgid "Could not reach the source server"
-msgstr "Ndaikatúi rohupyty servidor ypygua"
-
 #: src/routes/closing.tsx:69
 msgid "Could not reactivate your account"
 msgstr "Ndaikatúi oñembojey nde mba'ete"
 
 #: src/features/auth/components/oauth-buttons.tsx:75
-#: src/features/landing/landing-page.tsx:209
+#: src/features/landing/landing-page.tsx:182
 msgid "Could not start sign-in"
 msgstr "Ndaikatúi oñepyrũ jeike"
 
@@ -438,11 +406,11 @@ msgstr "Ndaikatúi oñepyrũ ñemoneʼẽ jey. Eñehaʼã jey."
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Ndaikatúi ojehechajey upe mba'ete ndive. Eha'ã jey."
 
-#: src/features/landing/landing-page.tsx:355
+#: src/features/landing/landing-page.tsx:324
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "Emoheñói peteĩ <0>jeike reñói reíva</0>, emongu'e <1>ne mba'e tee servidor</1>, térã ehecha <2>código fonte</2>."
 
-#: src/features/landing/landing-page.tsx:279
+#: src/features/landing/landing-page.tsx:252
 msgid "CRM"
 msgstr "CRM"
 
@@ -463,9 +431,9 @@ msgstr "Yvotypaha"
 msgid "Dark mode"
 msgstr "Yvotypaha mode"
 
-#: src/routes/replicating.tsx:150
-msgid "Databases"
-msgstr "Mba'ekuaarã renda"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:240
+msgid "Data conflict"
+msgstr "Mba'ekuaarã joavy"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:310
 msgid "Default"
@@ -515,7 +483,6 @@ msgstr "Mbohovái"
 msgid "Displays the mobile sidebar."
 msgstr "Ohechauka mobile sidebar."
 
-#: src/routes/replicating.tsx:234
 #: src/routes/restore.tsx:56
 msgid "Done"
 msgstr "Apopyre"
@@ -537,12 +504,11 @@ msgstr "Disléxia peguarã iporãva"
 msgid "Edit {label}"
 msgstr "Embosako'i {label}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:624
+#: src/features/auth/sign-in/components/user-auth-form.tsx:566
 msgid "Email"
 msgstr "Email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:219
-#: src/features/auth/sign-in/components/user-auth-form.tsx:253
+#: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "Email already in use"
 msgstr "Email ojepuruma"
 
@@ -552,15 +518,15 @@ msgstr "email código"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:221
-#: src/features/auth/sign-in/components/user-auth-form.tsx:476
+#: src/features/auth/sign-in/components/user-auth-form.tsx:418
 msgid "Email code"
 msgstr "Código email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:501
+#: src/features/auth/sign-in/components/user-auth-form.tsx:443
 msgid "Email me a code"
 msgstr "Emondo chéve peteĩ código ñanduti veve rupive"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:350
 msgid "Enter a code to continue"
 msgstr "Emoinge peteĩ código resegui haguã"
 
@@ -568,7 +534,7 @@ msgstr "Emoinge peteĩ código resegui haguã"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Emoinge código recuperación \"{userEmail}\" peguarã eike haguã"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:457
+#: src/features/auth/sign-in/components/user-auth-form.tsx:399
 msgid "Enter the code from your authenticator app"
 msgstr "Emoinge código ne autenticador app-gui"
 
@@ -589,7 +555,7 @@ msgstr "Emoinge ne {initial} ha {last}"
 msgid "Enter your authenticator code"
 msgstr "Emoinge nde código autenticador rehegua"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:449
+#: src/features/auth/sign-in/components/user-auth-form.tsx:391
 msgid "Enter your email code and authenticator code"
 msgstr "Emoinge ne email código ha autenticador código"
 
@@ -616,11 +582,11 @@ msgstr "Ndojejapo porãi"
 msgid "Failed to add account"
 msgstr "Ndaikatúi oñembojuaju cuenta"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:322
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
 msgid "Failed to continue"
 msgstr "Ndaikatúi oku'éve"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:151
 msgid "Failed to copy code"
 msgstr "Ndaikatúi oñemonguatia código"
 
@@ -636,23 +602,19 @@ msgstr "Ndaikatúi oñongatu identidad"
 msgid "Failed to send verification code"
 msgstr "Ndaikatúi oñemondo verificación código"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:112
+#: ../../../lib/web/src/components/notification-category-button.tsx:111
 msgid "Failed to update category"
 msgstr "Ndaikatúi oñembohera'ã pyahu categoría"
 
-#: src/features/landing/landing-page.tsx:280
+#: src/features/landing/landing-page.tsx:253
 msgid "Feeds"
 msgstr "Feeds"
-
-#: src/routes/replicating.tsx:159
-msgid "Files"
-msgstr "Archivos"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:88
 msgid "Finish moving your account"
 msgstr "Oñepyrũ nde cuenta mbojuaju"
 
-#: src/routes/identity.tsx:96
+#: src/routes/identity.tsx:90
 msgid "Finish setting up your account"
 msgstr "Embopaha cuenta jeguerojera"
 
@@ -668,7 +630,7 @@ msgstr "Ipe"
 msgid "Floating"
 msgstr "Oguatáva"
 
-#: src/features/landing/landing-page.tsx:281
+#: src/features/landing/landing-page.tsx:254
 msgid "Forums"
 msgstr "Foros"
 
@@ -693,11 +655,11 @@ msgstr "Téma guive"
 msgid "Full layout"
 msgstr "Layout iguasúva"
 
-#: src/features/landing/landing-page.tsx:282
+#: src/features/landing/landing-page.tsx:255
 msgid "Games"
 msgstr "Ñembosarái"
 
-#: src/features/landing/landing-page.tsx:283
+#: src/features/landing/landing-page.tsx:256
 msgid "Git repositories"
 msgstr "Git repositorios"
 
@@ -766,7 +728,7 @@ msgstr "Inset"
 msgid "Interests"
 msgstr "Oikotevevakuéra"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:401
+#: src/features/auth/sign-in/components/user-auth-form.tsx:343
 msgid "Invalid authenticator code"
 msgstr "Autenticador código ndoikóiva"
 
@@ -775,8 +737,8 @@ msgstr "Autenticador código ndoikóiva"
 #: src/features/auth/mfa/index.tsx:145
 #: src/features/auth/mfa/index.tsx:165
 #: src/features/auth/mfa/index.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:353
-#: src/features/auth/sign-in/components/user-auth-form.tsx:421
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
+#: src/features/auth/sign-in/components/user-auth-form.tsx:363
 msgid "Invalid code"
 msgstr "Código ndoikóiva"
 
@@ -786,8 +748,8 @@ msgid "Invalid recovery code"
 msgstr "Recuperación código ndoikóiva"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:365
-#: src/features/auth/sign-in/components/user-auth-form.tsx:384
+#: src/features/auth/sign-in/components/user-auth-form.tsx:307
+#: src/features/auth/sign-in/components/user-auth-form.tsx:326
 msgid "Invalid verification code"
 msgstr "Verificación código ndoikóiva"
 
@@ -834,23 +796,23 @@ msgstr "Ojembogue…"
 
 #: src/features/auth/mfa/index.tsx:297
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:548
+#: src/features/auth/sign-in/components/user-auth-form.tsx:490
 msgid "Log in"
 msgstr "Eike"
 
-#: src/features/landing/landing-page.tsx:399
+#: src/features/landing/landing-page.tsx:368
 msgid "Log in to Mochi"
 msgstr "Eike Mochi-pe"
 
-#: src/features/landing/landing-page.tsx:471
+#: src/features/landing/landing-page.tsx:434
 msgid "Log in with {label}"
 msgstr "Eike {label} ndive"
 
-#: src/features/auth/sign-in/index.tsx:109
+#: src/features/auth/sign-in/index.tsx:105
 msgid "Log in with passkey"
 msgstr "Eike passkey ndive"
 
-#: src/features/auth/sign-in/index.tsx:76
+#: src/features/auth/sign-in/index.tsx:74
 msgid "Log in with your email address"
 msgstr "Eike ne email dirección ndive"
 
@@ -865,8 +827,8 @@ msgid "Log out"
 msgstr "Esẽ"
 
 #: src/features/auth/recovery/index.tsx:44
-#: src/features/auth/sign-in/index.tsx:46
-#: src/features/landing/landing-page.tsx:239
+#: src/features/auth/sign-in/index.tsx:44
+#: src/features/landing/landing-page.tsx:212
 msgid "Logged in"
 msgstr "Eike"
 
@@ -887,7 +849,7 @@ msgid "Login session expired, please try again"
 msgstr "Login sesión opyru, eñeha'ã jey"
 
 #: src/features/auth/mfa/index.tsx:321
-#: src/features/auth/sign-in/components/user-auth-form.tsx:599
+#: src/features/auth/sign-in/components/user-auth-form.tsx:541
 msgid "Lost access? Use a recovery code"
 msgstr "¿Ndereikéiva? Ejepuru recuperación código"
 
@@ -897,7 +859,7 @@ msgstr "¿Ndereikéiva? Ejepuru recuperación código"
 msgid "Mark all as read"
 msgstr "Ehecha pyre opavave"
 
-#: src/features/landing/landing-page.tsx:284
+#: src/features/landing/landing-page.tsx:257
 msgid "Market"
 msgstr "Mercado"
 
@@ -913,7 +875,7 @@ msgstr "Menu"
 msgid "Metric"
 msgstr "Métrico"
 
-#: src/features/landing/landing-page.tsx:323
+#: src/features/landing/landing-page.tsx:292
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi ha'e peteĩ plataforma código abierto, oñembojoajúva ha hetaiterei puruhárape guarã, aplikasiõ oñembosarakuapyrépe guarã. Oimeraẽva ikatu omongu'e iservidor tee, ha oñembojoaju oimeraẽ ambue puruhára Mochi redes-pe. Oimeraẽva ikatu omoheñói ha omyasãi aplikasiõ. Opa aplikasiõ ikatu oñemyengovia, jepe umi sistéma mba'éva. Pe servidor ou 20 aplikasiõ rehe, oĩháme:"
 
@@ -921,7 +883,8 @@ msgstr "Mochi ha'e peteĩ plataforma código abierto, oñembojoajúva ha hetaite
 msgid "Monday"
 msgstr "Arakõi"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
+#: ../../../lib/web/src/features/errors/general-error.tsx:53
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:303
 msgid "Network error"
 msgstr "Jejavy ñanduti rehegua"
 
@@ -933,14 +896,13 @@ msgstr "Pyahu"
 msgid "New accounts are disabled on this server"
 msgstr "Marandu pyahu oñembogue ko serverpe"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:270
-#: src/features/auth/sign-in/components/user-auth-form.tsx:319
-#: src/features/auth/sign-in/components/user-auth-form.tsx:418
+#: src/features/auth/sign-in/components/user-auth-form.tsx:212
+#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "New user signup is disabled."
 msgstr "Marandu pyahu oñembogue."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:637
+#: src/features/auth/sign-in/components/user-auth-form.tsx:579
 msgid "Next"
 msgstr "Tenondeve"
 
@@ -953,7 +915,7 @@ msgstr "Ta'anga oseguíva"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Ndaiporivéi reglas oñembosako'íva. Embojuaju reglas remohenondévo mávapa ikatúta oike ko mba'épe."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:223
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "No backup file selected"
 msgstr "Ndojejupýi archivo rugua"
 
@@ -964,10 +926,6 @@ msgstr "Ndaipóri cuenta ojuajúva"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Ndaipóri grupos oĩva"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:265
-msgid "No matching account on the source server"
-msgstr "Ndaipóri tetãygua ojejogua servidor ypyguápe"
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -986,7 +944,7 @@ msgstr "Ndojejuhúi resultados."
 msgid "No time zone found."
 msgstr "Ndojejuhúi tiempo zona."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:148
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "No topic record yet — try again after the next notification."
 msgstr "Ndaipóri tópico marandu gueteri — eha'ã jey notificación pyahu rire."
 
@@ -1000,7 +958,7 @@ msgstr "Ndojejuhúi usuarios"
 msgid "None"
 msgstr "Mba'eve"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:105
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:71
 msgid "None; create a fresh account"
 msgstr "Mba'eve; emoñe'ẽ pyahu oñepyrũ peteĩ cuenta"
 
@@ -1008,9 +966,13 @@ msgstr "Mba'eve; emoñe'ẽ pyahu oñepyrũ peteĩ cuenta"
 msgid "Normal"
 msgstr "Iko háicha"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:203
+#: src/features/auth/sign-in/components/user-auth-form.tsx:189
 msgid "Not a migration bundle"
 msgstr "Ndaijepehejokuéva paketei"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:67
+msgid "Not found"
+msgstr "Ndojejuhúi"
 
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:146
 msgid "Not set"
@@ -1053,16 +1015,16 @@ msgstr "Eipe'a navegación menú"
 msgid "Open theme settings"
 msgstr "Eipe'a tema oñembosako'íva"
 
-#: src/features/auth/sign-in/index.tsx:99
+#: src/features/auth/sign-in/index.tsx:95
 msgid "Or"
 msgstr "Térã"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:518
+#: src/features/auth/sign-in/components/user-auth-form.tsx:460
 msgid "Or enter authenticator code"
 msgstr "Térã emoinge autenticación código"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:560
-#: src/features/landing/landing-page.tsx:440
+#: src/features/auth/sign-in/components/user-auth-form.tsx:502
+#: src/features/landing/landing-page.tsx:403
 msgid "Or log in with"
 msgstr "Térã eikéke ko'ã ndive"
 
@@ -1084,21 +1046,21 @@ msgstr "passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 #: src/features/auth/mfa/index.tsx:279
-#: src/features/landing/landing-page.tsx:459
+#: src/features/landing/landing-page.tsx:422
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/auth/sign-in/index.tsx:61
-#: src/features/landing/landing-page.tsx:266
+#: src/features/auth/sign-in/index.tsx:59
+#: src/features/landing/landing-page.tsx:239
 msgid "Passkey login cancelled"
 msgstr "Passkey login oñehejarei"
 
-#: src/features/auth/sign-in/index.tsx:59
-#: src/features/landing/landing-page.tsx:259
+#: src/features/auth/sign-in/index.tsx:57
+#: src/features/landing/landing-page.tsx:232
 msgid "Passkey login failed"
 msgstr "Passkey login ndaikatúi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:298
+#: src/features/auth/sign-in/components/user-auth-form.tsx:240
 msgid "Passkey login required"
 msgstr "Passkey login oñeikotevẽ"
 
@@ -1114,41 +1076,39 @@ msgstr "Passkey ñemyatã ndoikói. Eñehaʼã jey."
 msgid "Passkeys"
 msgstr "Passkeys"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:224
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
 msgid "Passphrase"
 msgstr "Ñemi ñe'ẽ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:453
+#: src/features/auth/sign-in/components/user-auth-form.tsx:395
 msgid "Paste the login code you received by email"
 msgstr "Embojuaju login papapy oñog̃uahẽva email rupive"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:70
-msgid "Peer IDs start with 12D3KooW and are 52 characters long"
-msgstr "Peer ID oñepyrũ 12D3KooW reheve ha oguereko 52 tai"
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:402
+#: src/features/auth/sign-in/components/user-auth-form.tsx:344
 msgid "Please check your authenticator app and try again."
 msgstr "Eha'ã ne authenticator app-pe ha eha'ã jey."
 
 #: src/features/auth/mfa/index.tsx:146
 #: src/features/auth/mfa/index.tsx:166
 #: src/features/auth/mfa/index.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:422
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Please check your code and try again."
 msgstr "Eha'ã ne papapy ha eha'ã jey."
 
 #: src/features/auth/mfa/index.tsx:104
 #: src/features/auth/mfa/index.tsx:126
-#: src/features/auth/sign-in/components/user-auth-form.tsx:354
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your codes and try again."
 msgstr "Eha'ã ne papapykuéra ha eha'ã jey."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:366
-#: src/features/auth/sign-in/components/user-auth-form.tsx:385
+#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:327
 msgid "Please check your email and try again."
 msgstr "Eha'ã ne email ha eha'ã jey."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
+#: ../../../lib/web/src/features/errors/general-error.tsx:54
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:304
+#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "Ehechami nde internet conexión ha eha'ã jey."
 
@@ -1157,11 +1117,11 @@ msgstr "Ehechami nde internet conexión ha eha'ã jey."
 msgid "Please check your recovery code and try again."
 msgstr "Eha'ã ne recuperación papapy ha eha'ã jey."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:152
 msgid "Please copy manually: {devCode}"
 msgstr "Ekopia ne pópe: {devCode}"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:79
+#: src/features/auth/sign-in/components/user-auth-form.tsx:68
 msgid "Please enter a valid email"
 msgstr "Emoinge email iporãva"
 
@@ -1173,20 +1133,27 @@ msgstr "Emoinge ne téra"
 msgid "Please enter your recovery code"
 msgstr "Emoinge ne recuperación papapy"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:274
-#: src/features/auth/sign-in/components/user-auth-form.tsx:323
-#: src/features/auth/sign-in/components/user-auth-form.tsx:426
+#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Please try again or contact support."
 msgstr "Eha'ã jey térã eñe'ẽ soporte ndive."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:83
+msgid "Please try again."
+msgstr "Eha'ãjey angána."
 
 #: src/features/auth/mfa/index.tsx:92
 msgid "Please use another verification method."
 msgstr "Eporu ambue verificación métodopa."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:299
+#: src/features/auth/sign-in/components/user-auth-form.tsx:241
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Eporúke \"Eike passkey ndive\" votõ."
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:75
+msgid "Please wait a moment and try again."
+msgstr "Eha'arõmi sapy'aite ha eha'ã jey."
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
@@ -1196,7 +1163,7 @@ msgstr "Ta'anga tenondete"
 #: ../../../lib/web/src/components/server-documents-footer.tsx:27
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 #: src/features/auth/identity-form.tsx:97
-#: src/features/landing/landing-page.tsx:528
+#: src/features/landing/landing-page.tsx:487
 msgid "Privacy"
 msgstr "Privacidad"
 
@@ -1209,7 +1176,7 @@ msgstr "Ñemiguáva"
 msgid "Profile"
 msgstr "Perfil"
 
-#: src/features/landing/landing-page.tsx:285
+#: src/features/landing/landing-page.tsx:258
 msgid "Projects"
 msgstr "Mba'apokuéra"
 
@@ -1233,8 +1200,8 @@ msgstr "Emoinge jey nde passkeys ko servidor-pe"
 msgid "Reactivate my account"
 msgstr "Embojevy che mba'ete"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:219
-#: ../../../lib/web/src/components/search-entity-page.tsx:194
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:216
+#: ../../../lib/web/src/components/search-entity-page.tsx:240
 msgid "Recommended"
 msgstr "Ojeporavóva"
 
@@ -1255,10 +1222,9 @@ msgstr "Oñembojevyhína dashboard…pe"
 msgid "Reduce interest"
 msgstr "Embogue ñembyeko'ói"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:269
-#: src/features/auth/sign-in/components/user-auth-form.tsx:318
-#: src/features/auth/sign-in/components/user-auth-form.tsx:417
+#: src/features/auth/sign-in/components/user-auth-form.tsx:211
+#: src/features/auth/sign-in/components/user-auth-form.tsx:260
+#: src/features/auth/sign-in/components/user-auth-form.tsx:359
 msgid "Registration disabled"
 msgstr "Ñembohera oñembogue"
 
@@ -1289,26 +1255,6 @@ msgstr "Embogue acceso?"
 msgid "Remove interest"
 msgstr "Embogue ñembyeko'ói"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:121
-msgid "Replicate from another server"
-msgstr "Replika ambue server gui"
-
-#: src/features/landing/landing-page.tsx:166
-msgid "Replication request denied"
-msgstr "Replicación jerure ojeguenohẽ"
-
-#: src/routes/replicating.tsx:135
-msgid "Replication request sent to <0>{source_user}</0>. Approve it on the source server's settings page to complete replication."
-msgstr "Replicación jerure oñemondo <0>{source_user}</0>-pe. Emoneĩ servidor teñói rembiapoite roguépe rembojoju hag̃ua replicación."
-
-#: src/routes/replicating.tsx:139
-msgid "Replication request sent to the source server. Approve it on the source server's settings page to complete replication."
-msgstr "Replicación jerure oñemondo servidor teñóime. Emoneĩ servidor teñói rembiapoite roguépe rembojoju hag̃ua replicación."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-msgid "Replication signup failed"
-msgstr "Ñembohovái jeike ndoikói"
-
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Embou jey ñe'ẽveve"
@@ -1322,11 +1268,11 @@ msgstr "Embojevy"
 msgid "Reset all settings to default values"
 msgstr "Embojevy opa ñembosako'i ypy peguávape"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:190
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:87
 msgid "Restore a backup file"
 msgstr "Ogueru mba'e'oka archivo pype"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:215
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Oñemoguahẽ jey ndojejapo porãi"
@@ -1376,8 +1322,8 @@ msgstr "Eheka usuarios"
 msgid "Search..."
 msgstr "Eheka..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:177
-#: ../../../lib/web/src/components/search-entity-page.tsx:152
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:174
+#: ../../../lib/web/src/components/search-entity-page.tsx:198
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "Ohekahína..."
@@ -1426,20 +1372,20 @@ msgstr "Emondo email"
 msgid "Serif"
 msgstr "Serif"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:260
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:286
 msgid "Server error"
 msgstr "Jejavy servidor rehegua"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:40
-#: src/features/landing/landing-page.tsx:510
+#: src/features/landing/landing-page.tsx:469
 msgid "Server rules"
 msgstr "Mohendaha mbojeguatára"
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
-msgid "Session expired"
-msgstr "Sesión opa"
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:210
+msgid "Session expired. Please log in again."
+msgstr "Pe tembiapo opáma. Eñepyrũ jey tembiapo."
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:147
 msgid "Set origin and destination"
@@ -1472,7 +1418,7 @@ msgstr "Yke"
 msgid "Sign out"
 msgstr "Esẽ tembiapógui"
 
-#: src/features/landing/landing-page.tsx:303
+#: src/features/landing/landing-page.tsx:272
 msgid "Sign up or log in"
 msgstr "Ejehupi térã eike"
 
@@ -1497,14 +1443,6 @@ msgstr "Eheja Tenondévare"
 msgid "Small"
 msgstr "Michĩ"
 
-#: src/routes/replicating.tsx:168
-msgid "Some transfers didn't complete on the first attempt. They'll be retried automatically."
-msgstr "Heta mba'e ñembohasa ndopáiri itenondevépe. Oñeha'ã jeýta automátikamente."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:156
-msgid "Source server peer ID"
-msgstr "Servidor ypygua peer ID"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:97
 msgid "Spacious"
 msgstr "Ipa'ũva"
@@ -1513,10 +1451,6 @@ msgstr "Ipa'ũva"
 #: src/features/auth/recovery/index.tsx:143
 msgid "Start again"
 msgstr "Eñepyrũ jey"
-
-#: src/routes/replicating.tsx:246
-msgid "Starting…"
-msgstr "Oñepyrũmbýramo…"
 
 #: src/features/auth/identity-form.tsx:126
 msgid "Stay hidden from directory searches."
@@ -1537,10 +1471,6 @@ msgstr "Eikéma porãite recovery código reheve"
 #: ../../../lib/web/src/lib/preference-utils.ts:65
 msgid "Sunday"
 msgstr "Arateĩ"
-
-#: src/routes/replicating.tsx:124
-msgid "Syncing your data"
-msgstr "Nde mba'ekuaa ojesinkronisa hína"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
 #: ../../../lib/web/src/lib/preference-utils.ts:21
@@ -1563,7 +1493,7 @@ msgstr "Atykuéra/Tembiporukuéra"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
 #: ../../../lib/web/src/features/document/document-page.tsx:42
-#: src/features/landing/landing-page.tsx:519
+#: src/features/landing/landing-page.tsx:478
 msgid "Terms and conditions"
 msgstr "Ñe'ẽmecha ha tekorosã rehegua"
 
@@ -1580,15 +1510,15 @@ msgstr "Upe código ndoikoporãi térã hiʼaravoʼimáma."
 msgid "That sign-in provider is not available"
 msgstr "Pe eike kuave'ẽha ndaipóri"
 
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:197
+#: src/features/auth/sign-in/components/account-source-advanced.tsx:94
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Pe email reñongatúva yvate oiko pyahúva mba'ete réra ko servidor-pe. Pe backup identidad ndaikatúi oĩma ko'ápe — embojevy ambue servidor-pe, térã embogue raẽ pe mba'ete oĩva."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:216
+#: src/features/auth/sign-in/components/user-auth-form.tsx:202
 msgid "The file may be damaged or have been modified."
 msgstr "Archivo oiko vai térã ojehekopyhy."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:200
+#: src/features/auth/sign-in/components/user-auth-form.tsx:186
 msgid "The passphrase you entered does not match the backup."
 msgstr "Ñemi ñe'ẽ reihai ndojokuáai archivo rugua ndive."
 
@@ -1596,13 +1526,13 @@ msgstr "Ñemi ñe'ẽ reihai ndojokuáai archivo rugua ndive."
 msgid "the provider"
 msgstr "pe kuave'ẽha"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:68
+msgid "The requested content could not be found."
+msgstr "Ndaikatúi ojejuhu tetepy ojejeruréva."
+
 #: src/routes/restore.tsx:111
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Oñemoguahẽ jey ndopytái. Archivo rugua oiko vai térã ñemi ñe'ẽ oĩ vai, servidor ndojejapo porãi voi."
-
-#: src/features/landing/landing-page.tsx:167
-msgid "The source server did not approve the request, or it expired. Try again or sign up locally."
-msgstr "Servidor ypygua nomboaprovái jerure, térã hi'ára opa. Eñeha'ã jevy térã ejeskriví aipopémente."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
@@ -1612,7 +1542,7 @@ msgstr "Theme"
 msgid "Theme Settings"
 msgstr "Theme Ñemboheko"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:208
+#: src/features/auth/sign-in/components/user-auth-form.tsx:194
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Ko rugua oñemoheñói Mochi versión pyahuvéva ndive. Emoaktualisá pe servidor mboypy."
 
@@ -1651,6 +1581,10 @@ msgstr "Embojere Yke"
 msgid "Toggle theme"
 msgstr "Embojere theme"
 
+#: ../../../lib/web/src/features/errors/general-error.tsx:74
+msgid "Too many requests"
+msgstr "Hetaiterei mba'ejerure"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:45
 msgid "Top"
 msgstr "Yvate"
@@ -1659,13 +1593,13 @@ msgstr "Yvate"
 msgid "Travelling"
 msgstr "Ojeguatáva"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:193
-#: ../../../lib/web/src/components/search-entity-page.tsx:168
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:190
+#: ../../../lib/web/src/components/search-entity-page.tsx:214
 msgid "Try adjusting your search terms"
 msgstr "Eha'ã embohekopyahu ne jeheka peha"
 
-#: ../../../lib/web/src/features/errors/general-error.tsx:128
-#: ../../../lib/web/src/features/errors/general-error.tsx:168
+#: ../../../lib/web/src/features/errors/general-error.tsx:140
+#: ../../../lib/web/src/features/errors/general-error.tsx:180
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:19
 msgid "Try again"
 msgstr "Eha'ã jey"
@@ -1686,7 +1620,7 @@ msgstr "Ehai eheka mboapurevahára"
 msgid "Type to search..."
 msgstr "Ehai eheka..."
 
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:282
 msgid "Unable to connect to remote server"
 msgstr "Ndaikatúi ojeike servidor mombyrýpe"
 
@@ -1695,7 +1629,7 @@ msgstr "Ndaikatúi ojeike servidor mombyrýpe"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Ndaikatúi ohohag̃ua login-pe. Eha'ã jey."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:156
+#: ../../../lib/web/src/components/notification-category-button.tsx:155
 msgid "Unassigned"
 msgstr "Mavevenoĩva"
 
@@ -1715,7 +1649,7 @@ msgstr "Ne mba'ekuaarã oñemonguera"
 msgid "Unverified"
 msgstr "Verificación'ỹva"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:204
+#: src/features/auth/sign-in/components/user-auth-form.tsx:190
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Emosẽ .zip archivo Mochi mba'ekuaarã ñemurã guive."
 
@@ -1723,13 +1657,9 @@ msgstr "Emosẽ .zip archivo Mochi mba'ekuaarã ñemurã guive."
 msgid "Use a different account"
 msgstr "Eipuru ambue cuenta"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:575
+#: src/features/auth/sign-in/components/user-auth-form.tsx:517
 msgid "Use a passkey"
 msgstr "Eipuru peteĩ passkey"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:60
-msgid "Use the form alice@example.com"
-msgstr "Eipuru ko apoha alice@example.com"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1738,10 +1668,6 @@ msgstr "Eipuru nde passkey"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Mboapurevahára"
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:135
-msgid "Username on source server"
-msgstr "Puruhára réra servidor ypyguápe"
 
 #: src/routes/restore.tsx:51
 msgid "Validating backup"
@@ -1756,7 +1682,7 @@ msgid "Verification code sent"
 msgstr "Verificación código mondopyre"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:367
 msgid "Verification failed"
 msgstr "Verificación ndoiporãi"
 
@@ -1795,10 +1721,6 @@ msgstr "Ehecha opa"
 msgid "View all notifications"
 msgstr "Ehecha opa marandu"
 
-#: src/routes/replicating.tsx:126
-msgid "Waiting for approval"
-msgstr "Oñeha'arõ ñemoneĩ"
-
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
 msgstr "Roike jeýta línea-pe pya'e."
@@ -1811,13 +1733,17 @@ msgstr "Web tembiporu ojejapo!"
 msgid "Wednesday"
 msgstr "Mba'embohopapa"
 
-#: src/features/landing/landing-page.tsx:286
+#: src/features/landing/landing-page.tsx:259
 msgid "Wikis"
 msgstr "Wikis"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:199
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
 msgid "Wrong passphrase"
 msgstr "Ñemi ñe'ẽ javy"
+
+#: ../../../lib/web/src/features/errors/general-error.tsx:61
+msgid "You do not have access to this section."
+msgstr "Ndereguerekói jeike ko vorépe."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43
@@ -1838,21 +1764,9 @@ msgstr "Ne cuenta oñembohasy"
 
 #: src/features/auth/mfa/index.tsx:173
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:414
+#: src/features/auth/sign-in/components/user-auth-form.tsx:356
 msgid "Your account has been suspended."
 msgstr "Ne cuenta oñembohasy."
-
-#: src/features/auth/sign-in/components/user-auth-form.tsx:258
-msgid "Your account is already replicated here. Log in instead."
-msgstr "Ne tetãygua oñembohováima ko'ápe. Eike ehagua hekoviarã."
-
-#: src/routes/replicating.tsx:131
-msgid "Your account is being copied from the source server. Do not close this window."
-msgstr "Nde cuenta oñemboheraguapy hína pe servidor teñoĩguágui. Emboty'ỹ ko ovetã."
-
-#: src/features/auth/sign-in/components/account-source-advanced.tsx:128
-msgid "Your account is copied live from a server you already have access to. The source server must approve the request before the transfer begins."
-msgstr "Ne cuenta oñemboguapy tekove servidor reguare nderembiapohare ndive. Servidor mombyry oñeha'ã omoñepyrũ mboypy mba'eporu."
 
 #: src/routes/closing.tsx:95
 msgid "Your account is scheduled for deletion"
@@ -1870,7 +1784,7 @@ msgstr "Ne cuenta oikotevẽ passkey eike haguã"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Nde cuenta oiko ko'ápe {source} guive. Peve reipe'a upépe, marandu ha mba'emimi ikatu ogueru servidor mokõive-pe, nde mba'e mba'eapo ambuéva ohasave ypykue servidor guive, ha erekopy'araka'e minutopi peve reko'ata ko'ápe."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:148
+#: src/features/auth/sign-in/components/user-auth-form.tsx:137
 msgid "Your code is: {devCode}"
 msgstr "Ne código ha'e: {devCode}"
 
