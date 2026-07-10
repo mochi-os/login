@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Solid background on first paint; avoids flash of theme SVG background. -->
+    <!-- Solid background on first paint, before the stylesheet loads. -->
     <style>
       body {
         background-color: var(--background, #fff);
-        background-image: none;
       }
       /* Fallback matches theme.css dark --background when vars are not loaded yet. */
       html.dark body {
