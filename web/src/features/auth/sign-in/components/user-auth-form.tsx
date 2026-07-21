@@ -11,9 +11,9 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Link } from '@tanstack/react-router'
 import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa, signupRestore } from '@/services/auth-service'
 import { OauthButtons } from '@/features/auth/components/oauth-buttons'
-import { Loader2, Mail, ArrowLeft, ArrowRight, Copy, Key } from 'lucide-react'
+import { Loader2, Mail, ArrowLeft, ArrowRight, Key } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
-import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot, shellClipboardWrite, Tooltip, TooltipTrigger, TooltipContent } from '@mochi/web'
+import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot } from '@mochi/web'
 import { safeRedirect } from '@/lib/redirect'
 
 type EmailFormValues = { email: string }
@@ -121,49 +121,14 @@ export function UserAuthForm({
     window.location.replace(`/login/codes${codesParams}`)
   }
 
-  // Send (or resend) the emailed login code, surfacing the dev-mode code when
-  // the server returns one. Marks codeSent so the verification step shows the
-  // code input rather than the "Email me a code" button.
+  // Send (or resend) the emailed login code. Marks codeSent so the verification
+  // step shows the code input rather than the "Email me a code" button.
   async function sendCode(email: string) {
     const codeResult = await requestCode(email)
-    const devCode = codeResult.data?.code
-    const requestSucceeded =
-      codeResult?.status?.toLowerCase() === 'ok' || Boolean(devCode)
-    if (!requestSucceeded) return
+    if (codeResult?.status?.toLowerCase() !== 'ok') return
     setCodeSent(true)
     toast.success(t`Code sent.`, {
-      description: devCode ? (
-        <div className='flex items-center gap-2'>
-          <span><Trans>Your code is: {devCode}</Trans></span>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant='ghost'
-                size='sm'
-                className='h-6 w-6 p-0'
-                onClick={async (e) => {
-                  e.preventDefault()
-                  e.stopPropagation()
-                  const ok = await shellClipboardWrite(devCode!)
-                  if (ok) {
-                    toast.success(t`Code copied`)
-                  } else {
-                    toast.error(t`Failed to copy code`, {
-                      description: t`Please copy manually: ${devCode}`,
-                    })
-                  }
-                }}
-                aria-label={t`Copy code`}
-              >
-                <Copy className='h-3 w-3' />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>{t`Copy code`}</TooltipContent>
-          </Tooltip>
-        </div>
-      ) : (
-        t`Check your email.`
-      ),
+      description: t`Check your email.`,
     })
   }
 

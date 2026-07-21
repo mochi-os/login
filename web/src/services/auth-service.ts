@@ -93,11 +93,7 @@ export const requestCode = async (
 ): Promise<RequestCodeResponse> => {
   const response = await authApi.requestCode({ email })
 
-  const responseStatus = response.status?.toLowerCase()
-  const devCode = response.data?.code
-  const isSuccess = responseStatus === 'ok' || Boolean(devCode)
-
-  if (!isSuccess) {
+  if (response.status?.toLowerCase() !== 'ok') {
     throw new Error(response.message || 'Failed to request login code')
   }
 

@@ -19,9 +19,6 @@ export interface RequestCodeRequest {
 export interface RequestCodeResponse {
   status: string
   message?: string
-  data?: {
-    code?: string
-  }
 }
 
 export interface VerifyCodeRequest {
