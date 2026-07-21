@@ -78,22 +78,6 @@ export interface OAuthBeginResponse {
   url: string
 }
 
-export interface OAuthIdentity {
-  provider: OAuthProvider
-  email: string
-  name: string
-  created: number
-  used: number
-}
-
-export interface OAuthListResponse {
-  identities: OAuthIdentity[]
-}
-
-export interface OAuthUnlinkRequest {
-  provider: OAuthProvider
-}
-
 // MFA types
 export interface MfaRequest {
   partial: string
@@ -112,40 +96,7 @@ export interface MfaResponse {
   remaining?: string[]
 }
 
-// Passkey types
-export interface PasskeyCredential {
-  id: string
-  name: string
-  transports: string
-  created: number
-  last_used: number
-}
-
-export interface PasskeyListResponse {
-  credentials: PasskeyCredential[]
-}
-
-export interface PasskeyCountResponse {
-  count: number
-}
-
-export interface PasskeyRegisterBeginResponse {
-  // Using unknown since the exact type from @simplewebauthn/browser has strict requirements
-  options: unknown
-  ceremony: string
-}
-
-export interface PasskeyRegisterFinishRequest {
-  ceremony: string
-  credential: unknown
-  name?: string
-}
-
-export interface PasskeyRegisterFinishResponse {
-  status: string
-  name: string
-}
-
+// Passkey login (unauthenticated)
 export interface PasskeyLoginBeginResponse {
   // Using unknown since the exact type from @simplewebauthn/browser has strict requirements
   options: unknown
@@ -161,44 +112,7 @@ export interface PasskeyLoginFinishResponse {
   remaining?: string[]
 }
 
-export interface PasskeyRenameRequest {
-  id: string
-  name: string
-}
-
-export interface PasskeyDeleteRequest {
-  id: string
-}
-
-// TOTP types
-export interface TotpSetupResponse {
-  secret: string
-  url: string
-  issuer: string
-  domain: string
-}
-
-export interface TotpVerifyRequest {
-  code: string
-}
-
-export interface TotpVerifyResponse {
-  ok: boolean
-}
-
-export interface TotpEnabledResponse {
-  enabled: boolean
-}
-
-// Recovery types
-export interface RecoveryGenerateResponse {
-  codes: string[]
-}
-
-export interface RecoveryCountResponse {
-  count: number
-}
-
+// Recovery login
 export interface RecoveryLoginRequest {
   username: string
   code: string
@@ -208,13 +122,4 @@ export interface RecoveryLoginResponse {
   token?: string
   login?: string
   name?: string
-}
-
-// Methods types
-export interface MethodsGetResponse {
-  methods: string[]
-}
-
-export interface MethodsSetRequest {
-  methods: string[]
 }

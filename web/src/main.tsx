@@ -212,8 +212,9 @@ declare module '@tanstack/react-router' {
   }
 }
 
-// Initialize auth state from cookie on app start
-// In shell mode, auth is initialized asynchronously via postMessage in _authenticated/route.tsx
+// Initialize auth state from the session cookie on app start. In shell mode the
+// cookie isn't readable from the sandboxed iframe, so we skip this and let auth
+// arrive asynchronously via the shell bridge instead.
 if (!isInShell()) {
   useAuthStore.getState().initialize()
 }

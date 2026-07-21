@@ -9,31 +9,15 @@ import {
   type AuthUser,
   type MfaRequest,
   type MfaResponse,
-  type MethodsGetResponse,
-  type MethodsSetRequest,
   type OAuthBeginRequest,
   type OAuthBeginResponse,
-  type OAuthListResponse,
   type OAuthProvider,
-  type PasskeyCountResponse,
-  type PasskeyDeleteRequest,
-  type PasskeyListResponse,
   type PasskeyLoginBeginResponse,
   type PasskeyLoginFinishResponse,
-  type PasskeyRegisterBeginResponse,
-  type PasskeyRegisterFinishRequest,
-  type PasskeyRegisterFinishResponse,
-  type PasskeyRenameRequest,
-  type RecoveryCountResponse,
-  type RecoveryGenerateResponse,
   type RecoveryLoginRequest,
   type RecoveryLoginResponse,
   type RequestCodeRequest,
   type RequestCodeResponse,
-  type TotpEnabledResponse,
-  type TotpSetupResponse,
-  type TotpVerifyRequest,
-  type TotpVerifyResponse,
   type VerifyCodeRequest,
   type VerifyCodeResponse,
 } from '@/api/types/auth'
@@ -109,67 +93,12 @@ const passkeyLoginFinish = (ceremony: string, credential: unknown) =>
     { ceremony, ...(credential as object) }
   )
 
-// Passkey management (authenticated)
-const passkeyList = () =>
-  requestHelpers.get<PasskeyListResponse>(endpoints.auth.passkey.list)
-
-const passkeyCount = () =>
-  requestHelpers.get<PasskeyCountResponse>(endpoints.auth.passkey.count)
-
-const passkeyRegisterBegin = () =>
-  requestHelpers.post<PasskeyRegisterBeginResponse>(
-    endpoints.auth.passkey.registerBegin,
-    {}
-  )
-
-const passkeyRegisterFinish = (payload: PasskeyRegisterFinishRequest) =>
-  requestHelpers.post<PasskeyRegisterFinishResponse>(
-    endpoints.auth.passkey.registerFinish,
-    payload
-  )
-
-const passkeyRename = (payload: PasskeyRenameRequest) =>
-  requestHelpers.post<{ ok: boolean }>(endpoints.auth.passkey.rename, payload)
-
-const passkeyDelete = (payload: PasskeyDeleteRequest) =>
-  requestHelpers.post<{ ok: boolean }>(endpoints.auth.passkey.delete, payload)
-
-// TOTP (authenticated)
-const totpSetup = () =>
-  requestHelpers.post<TotpSetupResponse>(endpoints.auth.totp.setup, {})
-
-const totpVerify = (payload: TotpVerifyRequest) =>
-  requestHelpers.post<TotpVerifyResponse>(endpoints.auth.totp.verify, payload)
-
-const totpEnabled = () =>
-  requestHelpers.get<TotpEnabledResponse>(endpoints.auth.totp.enabled)
-
-const totpDisable = () =>
-  requestHelpers.post<{ ok: boolean }>(endpoints.auth.totp.disable, {})
-
-
-// Recovery codes
+// Recovery login
 const recoveryLogin = (payload: RecoveryLoginRequest) =>
   requestHelpers.post<RecoveryLoginResponse>(
     endpoints.auth.recovery.login,
     payload
   )
-
-const recoveryGenerate = () =>
-  requestHelpers.post<RecoveryGenerateResponse>(
-    endpoints.auth.recovery.generate,
-    {}
-  )
-
-const recoveryCount = () =>
-  requestHelpers.get<RecoveryCountResponse>(endpoints.auth.recovery.count)
-
-// User methods (authenticated)
-const userMethodsGet = () =>
-  requestHelpers.get<MethodsGetResponse>(endpoints.auth.userMethods.get)
-
-const userMethodsSet = (payload: MethodsSetRequest) =>
-  requestHelpers.post<{ ok: boolean }>(endpoints.auth.userMethods.set, payload)
 
 // OAuth login / linking
 const oauthBegin = (provider: OAuthProvider, payload: OAuthBeginRequest = {}) =>
@@ -177,12 +106,6 @@ const oauthBegin = (provider: OAuthProvider, payload: OAuthBeginRequest = {}) =>
     endpoints.auth.oauth.begin(provider),
     payload
   )
-
-const oauthList = () =>
-  requestHelpers.get<OAuthListResponse>(endpoints.auth.oauth.list)
-
-const oauthUnlink = (provider: OAuthProvider) =>
-  requestHelpers.post<{ ok: boolean }>(endpoints.auth.oauth.unlink, { provider })
 
 export const authApi = {
   // Login flow
@@ -195,59 +118,18 @@ export const authApi = {
   // MFA
   completeMfa,
   getPartial,
-  // Passkey
+  // Passkey login
   passkeyLoginBegin,
   passkeyLoginFinish,
-  passkeyList,
-  passkeyCount,
-  passkeyRegisterBegin,
-  passkeyRegisterFinish,
-  passkeyRename,
-  passkeyDelete,
-  // TOTP
-  totpSetup,
-  totpVerify,
-  totpEnabled,
-  totpDisable,
-  // Recovery
+  // Recovery login
   recoveryLogin,
-  recoveryGenerate,
-  recoveryCount,
-  // User methods
-  userMethodsGet,
-  userMethodsSet,
   // OAuth
   oauthBegin,
-  oauthList,
-  oauthUnlink,
 }
 
 export type {
-  AuthMethodsResponse,
   AuthUser,
-  MfaRequest,
   MfaResponse,
-  MethodsGetResponse,
-  MethodsSetRequest,
-  OAuthBeginRequest,
-  OAuthBeginResponse,
-  OAuthListResponse,
-  OAuthProvider,
-  PasskeyCountResponse,
-  PasskeyDeleteRequest,
-  PasskeyListResponse,
-  PasskeyRegisterFinishRequest,
-  PasskeyRenameRequest,
-  RecoveryCountResponse,
-  RecoveryGenerateResponse,
-  RecoveryLoginRequest,
-  RecoveryLoginResponse,
-  RequestCodeRequest,
   RequestCodeResponse,
-  TotpEnabledResponse,
-  TotpSetupResponse,
-  TotpVerifyRequest,
-  TotpVerifyResponse,
-  VerifyCodeRequest,
   VerifyCodeResponse,
 }
