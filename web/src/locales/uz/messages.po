@@ -54,7 +54,7 @@ msgstr "Hisob ushbu serverda allaqachon mavjud"
 msgid "Account removed"
 msgstr "Hisob olib tashlandi"
 
-#: src/features/auth/mfa/index.tsx:172
+#: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
 #: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Account suspended"
@@ -155,12 +155,12 @@ msgstr "Oʻsib"
 msgid "Ascending"
 msgstr "Oʻsish boʻyicha"
 
-#: src/features/auth/mfa/index.tsx:189
+#: src/features/auth/mfa/index.tsx:212
 msgid "authenticator code"
 msgstr "autentifikator kodi"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:315
-#: src/features/auth/mfa/index.tsx:248
+#: src/features/auth/mfa/index.tsx:272
 msgid "Authenticator code"
 msgstr "Autentifikator kodi"
 
@@ -337,7 +337,7 @@ msgstr "Tez orada!"
 msgid "Compact"
 msgstr "Ixcham"
 
-#: src/features/auth/mfa/index.tsx:193
+#: src/features/auth/mfa/index.tsx:217
 msgid "Complete verification to continue"
 msgstr "Davom etish uchun tasdiqlashni yakunlang"
 
@@ -508,12 +508,12 @@ msgstr "Email"
 msgid "Email already in use"
 msgstr "Elektron pochta allaqachon foydalanilmoqda"
 
-#: src/features/auth/mfa/index.tsx:188
+#: src/features/auth/mfa/index.tsx:211
 msgid "email code"
 msgstr "email kodi"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
-#: src/features/auth/mfa/index.tsx:221
+#: src/features/auth/mfa/index.tsx:245
 #: src/features/auth/sign-in/components/user-auth-form.tsx:383
 msgid "Email code"
 msgstr "Email kodi"
@@ -539,11 +539,11 @@ msgid "Enter the code from your email"
 msgstr "Elektron pochtangizdagi kodni kiriting"
 
 #. placeholder {0}: methods[0]
-#: src/features/auth/mfa/index.tsx:196
+#: src/features/auth/mfa/index.tsx:220
 msgid "Enter your {0}"
 msgstr "{0} ni kiriting"
 
-#: src/features/auth/mfa/index.tsx:200
+#: src/features/auth/mfa/index.tsx:224
 msgid "Enter your {initial} and {last}"
 msgstr "{initial} va {last} ni kiriting"
 
@@ -724,11 +724,11 @@ msgstr "Qiziqishlar"
 msgid "Invalid authenticator code"
 msgstr "Notoʻgʻri autentifikator kodi"
 
-#: src/features/auth/mfa/index.tsx:103
-#: src/features/auth/mfa/index.tsx:125
-#: src/features/auth/mfa/index.tsx:145
-#: src/features/auth/mfa/index.tsx:165
-#: src/features/auth/mfa/index.tsx:176
+#: src/features/auth/mfa/index.tsx:126
+#: src/features/auth/mfa/index.tsx:148
+#: src/features/auth/mfa/index.tsx:168
+#: src/features/auth/mfa/index.tsx:188
+#: src/features/auth/mfa/index.tsx:199
 #: src/features/auth/sign-in/components/user-auth-form.tsx:260
 #: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Invalid code"
@@ -768,6 +768,14 @@ msgstr "Chapdan oʻngga"
 msgid "Light"
 msgstr "Yorugʻ"
 
+#: src/features/auth/mfa/index.tsx:214
+msgid "linked account"
+msgstr "bog'langan hisob"
+
+#: src/features/auth/mfa/index.tsx:324
+msgid "Linked account"
+msgstr "Bog'langan hisob"
+
 #: src/routes/restore.tsx:54
 msgid "Linking your identity"
 msgstr "Shaxsiyatingizni bog'lash"
@@ -786,7 +794,7 @@ msgstr "Kontent yuklanmoqda…"
 msgid "Loading…"
 msgstr "Yuklanmoqda…"
 
-#: src/features/auth/mfa/index.tsx:297
+#: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
 #: src/features/auth/sign-in/components/user-auth-form.tsx:455
 msgid "Log in"
@@ -831,7 +839,7 @@ msgstr "Chiqilmoqda…"
 msgid "Login session expired, please try again"
 msgstr "Kirish sessiyasi muddati tugadi, iltimos qayta urinib koʻring"
 
-#: src/features/auth/mfa/index.tsx:321
+#: src/features/auth/mfa/index.tsx:357
 #: src/features/auth/sign-in/components/user-auth-form.tsx:506
 msgid "Lost access? Use a recovery code"
 msgstr "Kirish yoʻqolganmi? Tiklash kodidan foydalaning"
@@ -1019,20 +1027,22 @@ msgstr "Boshqa foydalanuvchilar profilingizni topa oladi."
 msgid "Owner"
 msgstr "Egasi"
 
-#: src/features/auth/mfa/index.tsx:190
+#: src/features/auth/mfa/index.tsx:213
 msgid "passkey"
 msgstr "passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
-#: src/features/auth/mfa/index.tsx:279
+#: src/features/auth/mfa/index.tsx:303
 #: src/features/landing/landing-page.tsx:422
 msgid "Passkey"
 msgstr "Passkey"
 
+#: src/features/auth/mfa/index.tsx:110
 #: src/features/landing/landing-page.tsx:239
 msgid "Passkey login cancelled"
 msgstr "Passkey bilan kirish bekor qilindi"
 
+#: src/features/auth/mfa/index.tsx:112
 #: src/features/landing/landing-page.tsx:232
 msgid "Passkey login failed"
 msgstr "Passkey bilan kirish amalga oshmadi"
@@ -1040,10 +1050,6 @@ msgstr "Passkey bilan kirish amalga oshmadi"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "Passkey login required"
 msgstr "Passkey bilan kirish talab etiladi"
-
-#: src/features/auth/mfa/index.tsx:91
-msgid "Passkey MFA not yet implemented"
-msgstr "Passkey MFA hali amalga oshirilmagan"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:209
 msgid "Passkey verification failed. Please try again."
@@ -1065,15 +1071,15 @@ msgstr "Email orqali olgan kirish kodingizni joylashtiring"
 msgid "Please check your authenticator app and try again."
 msgstr "Iltimos, autentifikator ilovangizni tekshirib qayta urinib koʻring."
 
-#: src/features/auth/mfa/index.tsx:146
-#: src/features/auth/mfa/index.tsx:166
-#: src/features/auth/mfa/index.tsx:177
+#: src/features/auth/mfa/index.tsx:169
+#: src/features/auth/mfa/index.tsx:189
+#: src/features/auth/mfa/index.tsx:200
 #: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "Please check your code and try again."
 msgstr "Iltimos, kodingizni tekshirib qayta urinib koʻring."
 
-#: src/features/auth/mfa/index.tsx:104
-#: src/features/auth/mfa/index.tsx:126
+#: src/features/auth/mfa/index.tsx:127
+#: src/features/auth/mfa/index.tsx:149
 #: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Please check your codes and try again."
 msgstr "Iltimos, kodlaringizni tekshirib qayta urinib koʻring."
@@ -1114,10 +1120,6 @@ msgstr "Iltimos, qayta urinib koʻring yoki yordam xizmatiga murojaat qiling."
 #: ../../../lib/web/src/features/errors/general-error.tsx:83
 msgid "Please try again."
 msgstr "Iltimos, qayta urinib ko'ring."
-
-#: src/features/auth/mfa/index.tsx:92
-msgid "Please use another verification method."
-msgstr "Iltimos, boshqa tasdiqlash usulidan foydalaning."
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Please use the \"Log in with passkey\" button."
@@ -1419,7 +1421,7 @@ msgstr "Kichik"
 msgid "Spacious"
 msgstr "Keng"
 
-#: src/features/auth/mfa/index.tsx:309
+#: src/features/auth/mfa/index.tsx:345
 #: src/features/auth/recovery/index.tsx:143
 msgid "Start again"
 msgstr "Qaytadan boshlash"
@@ -1668,7 +1670,7 @@ msgstr "Tasdiqlash"
 msgid "Verify email address"
 msgstr "Email manzilini tasdiqlash"
 
-#: src/features/auth/mfa/index.tsx:289
+#: src/features/auth/mfa/index.tsx:313
 msgid "Verify with passkey"
 msgstr "Passkey bilan tasdiqlash"
 
@@ -1676,7 +1678,7 @@ msgstr "Passkey bilan tasdiqlash"
 msgid "Verifying backup"
 msgstr "Zaxira nusxani tekshirish"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:74
+#: ../../../lib/web/src/components/attachment-gallery.tsx:79
 msgid "Video thumbnail"
 msgstr "Video eskizi"
 
@@ -1734,7 +1736,7 @@ msgstr "Hisobingiz qayta faollashtirildi"
 msgid "Your account has been suspended"
 msgstr "Hisobingiz toʻxtatib qoʻyildi"
 
-#: src/features/auth/mfa/index.tsx:173
+#: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
 #: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Your account has been suspended."

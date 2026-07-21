@@ -54,7 +54,7 @@ msgstr "このサーバーにすでにアカウントが存在します"
 msgid "Account removed"
 msgstr "アカウントを削除しました"
 
-#: src/features/auth/mfa/index.tsx:172
+#: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
 #: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Account suspended"
@@ -155,12 +155,12 @@ msgstr "昇順"
 msgid "Ascending"
 msgstr "昇順"
 
-#: src/features/auth/mfa/index.tsx:189
+#: src/features/auth/mfa/index.tsx:212
 msgid "authenticator code"
 msgstr "認証アプリのコード"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:315
-#: src/features/auth/mfa/index.tsx:248
+#: src/features/auth/mfa/index.tsx:272
 msgid "Authenticator code"
 msgstr "認証コード"
 
@@ -337,7 +337,7 @@ msgstr "近日公開!"
 msgid "Compact"
 msgstr "コンパクト"
 
-#: src/features/auth/mfa/index.tsx:193
+#: src/features/auth/mfa/index.tsx:217
 msgid "Complete verification to continue"
 msgstr "続行するには認証を完了してください"
 
@@ -508,12 +508,12 @@ msgstr "メールアドレス"
 msgid "Email already in use"
 msgstr "メールアドレスはすでに使用されています"
 
-#: src/features/auth/mfa/index.tsx:188
+#: src/features/auth/mfa/index.tsx:211
 msgid "email code"
 msgstr "メールコード"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
-#: src/features/auth/mfa/index.tsx:221
+#: src/features/auth/mfa/index.tsx:245
 #: src/features/auth/sign-in/components/user-auth-form.tsx:383
 msgid "Email code"
 msgstr "メールコード"
@@ -539,11 +539,11 @@ msgid "Enter the code from your email"
 msgstr "メールに記載されたコードを入力してください"
 
 #. placeholder {0}: methods[0]
-#: src/features/auth/mfa/index.tsx:196
+#: src/features/auth/mfa/index.tsx:220
 msgid "Enter your {0}"
 msgstr "{0} を入力してください"
 
-#: src/features/auth/mfa/index.tsx:200
+#: src/features/auth/mfa/index.tsx:224
 msgid "Enter your {initial} and {last}"
 msgstr "{initial} と {last} を入力してください"
 
@@ -724,11 +724,11 @@ msgstr "興味"
 msgid "Invalid authenticator code"
 msgstr "認証コードが無効です"
 
-#: src/features/auth/mfa/index.tsx:103
-#: src/features/auth/mfa/index.tsx:125
-#: src/features/auth/mfa/index.tsx:145
-#: src/features/auth/mfa/index.tsx:165
-#: src/features/auth/mfa/index.tsx:176
+#: src/features/auth/mfa/index.tsx:126
+#: src/features/auth/mfa/index.tsx:148
+#: src/features/auth/mfa/index.tsx:168
+#: src/features/auth/mfa/index.tsx:188
+#: src/features/auth/mfa/index.tsx:199
 #: src/features/auth/sign-in/components/user-auth-form.tsx:260
 #: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Invalid code"
@@ -768,6 +768,14 @@ msgstr "左から右"
 msgid "Light"
 msgstr "ライト"
 
+#: src/features/auth/mfa/index.tsx:214
+msgid "linked account"
+msgstr "連携済みアカウント"
+
+#: src/features/auth/mfa/index.tsx:324
+msgid "Linked account"
+msgstr "連携済みアカウント"
+
 #: src/routes/restore.tsx:54
 msgid "Linking your identity"
 msgstr "ID をリンク中"
@@ -786,7 +794,7 @@ msgstr "コンテンツを読み込んでいます…"
 msgid "Loading…"
 msgstr "読み込み中…"
 
-#: src/features/auth/mfa/index.tsx:297
+#: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
 #: src/features/auth/sign-in/components/user-auth-form.tsx:455
 msgid "Log in"
@@ -831,7 +839,7 @@ msgstr "ログアウトしています…"
 msgid "Login session expired, please try again"
 msgstr "ログインセッションが期限切れです。もう一度お試しください"
 
-#: src/features/auth/mfa/index.tsx:321
+#: src/features/auth/mfa/index.tsx:357
 #: src/features/auth/sign-in/components/user-auth-form.tsx:506
 msgid "Lost access? Use a recovery code"
 msgstr "アクセスできなくなりましたか? リカバリーコードをご利用ください"
@@ -1019,20 +1027,22 @@ msgstr "他のユーザーがあなたのプロフィールを見つけられま
 msgid "Owner"
 msgstr "オーナー"
 
-#: src/features/auth/mfa/index.tsx:190
+#: src/features/auth/mfa/index.tsx:213
 msgid "passkey"
 msgstr "パスキー"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
-#: src/features/auth/mfa/index.tsx:279
+#: src/features/auth/mfa/index.tsx:303
 #: src/features/landing/landing-page.tsx:422
 msgid "Passkey"
 msgstr "パスキー"
 
+#: src/features/auth/mfa/index.tsx:110
 #: src/features/landing/landing-page.tsx:239
 msgid "Passkey login cancelled"
 msgstr "パスキーログインがキャンセルされました"
 
+#: src/features/auth/mfa/index.tsx:112
 #: src/features/landing/landing-page.tsx:232
 msgid "Passkey login failed"
 msgstr "パスキーログインに失敗しました"
@@ -1040,10 +1050,6 @@ msgstr "パスキーログインに失敗しました"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "Passkey login required"
 msgstr "パスキーでのログインが必要です"
-
-#: src/features/auth/mfa/index.tsx:91
-msgid "Passkey MFA not yet implemented"
-msgstr "パスキー MFA はまだ実装されていません"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:209
 msgid "Passkey verification failed. Please try again."
@@ -1065,15 +1071,15 @@ msgstr "メールで届いたログインコードを貼り付けてください
 msgid "Please check your authenticator app and try again."
 msgstr "認証アプリを確認してもう一度お試しください。"
 
-#: src/features/auth/mfa/index.tsx:146
-#: src/features/auth/mfa/index.tsx:166
-#: src/features/auth/mfa/index.tsx:177
+#: src/features/auth/mfa/index.tsx:169
+#: src/features/auth/mfa/index.tsx:189
+#: src/features/auth/mfa/index.tsx:200
 #: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "Please check your code and try again."
 msgstr "コードを確認してもう一度お試しください。"
 
-#: src/features/auth/mfa/index.tsx:104
-#: src/features/auth/mfa/index.tsx:126
+#: src/features/auth/mfa/index.tsx:127
+#: src/features/auth/mfa/index.tsx:149
 #: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Please check your codes and try again."
 msgstr "コードを確認してもう一度お試しください。"
@@ -1114,10 +1120,6 @@ msgstr "もう一度お試しいただくか、サポートにお問い合わせ
 #: ../../../lib/web/src/features/errors/general-error.tsx:83
 msgid "Please try again."
 msgstr "もう一度お試しください。"
-
-#: src/features/auth/mfa/index.tsx:92
-msgid "Please use another verification method."
-msgstr "別の認証方法をお使いください。"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Please use the \"Log in with passkey\" button."
@@ -1419,7 +1421,7 @@ msgstr "小"
 msgid "Spacious"
 msgstr "ゆったり"
 
-#: src/features/auth/mfa/index.tsx:309
+#: src/features/auth/mfa/index.tsx:345
 #: src/features/auth/recovery/index.tsx:143
 msgid "Start again"
 msgstr "やり直す"
@@ -1668,7 +1670,7 @@ msgstr "認証"
 msgid "Verify email address"
 msgstr "メールアドレスを認証"
 
-#: src/features/auth/mfa/index.tsx:289
+#: src/features/auth/mfa/index.tsx:313
 msgid "Verify with passkey"
 msgstr "パスキーで認証"
 
@@ -1676,7 +1678,7 @@ msgstr "パスキーで認証"
 msgid "Verifying backup"
 msgstr "バックアップを確認中"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:74
+#: ../../../lib/web/src/components/attachment-gallery.tsx:79
 msgid "Video thumbnail"
 msgstr "動画のサムネイル"
 
@@ -1734,7 +1736,7 @@ msgstr "お客様のアカウントが再有効化されました"
 msgid "Your account has been suspended"
 msgstr "アカウントが停止されました"
 
-#: src/features/auth/mfa/index.tsx:173
+#: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
 #: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Your account has been suspended."

@@ -9,7 +9,7 @@ import { useNavigate, Link } from '@tanstack/react-router'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Loader2, ArrowLeft, ArrowRight, Smartphone, Key, Mail } from 'lucide-react'
+import { Loader2, ArrowLeft, ArrowRight, Smartphone, Key, Mail, Globe } from 'lucide-react'
 import {
   Card,
   CardContent,
@@ -29,8 +29,13 @@ import {
   Input,
 } from '@mochi/web'
 import { AuthLayout } from '../auth-layout'
+import { OauthButtons } from '@/features/auth/components/oauth-buttons'
 import { useAuthStore } from '@/stores/auth-store'
-import { completeMfa, completeMfaMultiple } from '@/services/auth-service'
+import {
+  completeMfa,
+  completeMfaMultiple,
+  passkeyLogin,
+} from '@/services/auth-service'
 import { safeRedirect } from '@/lib/redirect'
 
 const mfaSchema = z.object({
@@ -45,15 +50,15 @@ interface MfaProps {
 export function Mfa({ redirectTo }: MfaProps = {}) {
   const { t } = useLingui()
   const navigate = useNavigate()
-  const { mfa, clearMfa } = useAuthStore()
+  const { mfa, clearMfa, user } = useAuthStore()
   const [isLoading, setIsLoading] = useState(false)
   const [completedMethods, setCompletedMethods] = useState<string[]>([])
 
   const remaining = mfa.remaining || []
   const needsEmail = remaining.includes('email')
   const needsTotp = remaining.includes('totp')
-  // TODO: Passkey MFA requires server-side implementation
   const needsPasskey = remaining.includes('passkey')
+  const needsOauth = remaining.includes('oauth')
 
   const form = useForm<z.infer<typeof mfaSchema>>({
     resolver: zodResolver(mfaSchema),
@@ -86,11 +91,29 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
     })
   }
 
-  // TODO: Implement passkey MFA when server-side endpoints are available
+  // Run the passkey ceremony; the server folds it into this partial, so the
+  // response either completes the login or returns the factors still needed
+  // (which passkeyLogin already writes to the store).
   const handlePasskeyAuth = async () => {
-    toast.error(t`Passkey MFA not yet implemented`, {
-      description: t`Please use another verification method.`,
-    })
+    setIsLoading(true)
+    try {
+      const result = await passkeyLogin()
+      if (result.success && !result.mfa) {
+        await handleSuccess()
+      }
+    } catch (error) {
+      if (
+        typeof error === 'object' &&
+        error !== null &&
+        (error as { name?: string }).name === 'NotAllowedError'
+      ) {
+        toast.error(t`Passkey login cancelled`)
+      } else {
+        toast.error(getErrorMessage(error, t`Passkey login failed`))
+      }
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   async function onSubmit(data: z.infer<typeof mfaSchema>) {
@@ -188,6 +211,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
     if (needsEmail) methods.push(t`email code`)
     if (needsTotp) methods.push(t`authenticator code`)
     if (needsPasskey) methods.push(t`passkey`)
+    if (needsOauth) methods.push(t`linked account`)
 
     if (methods.length === 0) {
       return t`Complete verification to continue`
@@ -273,7 +297,7 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
 
               {needsPasskey && (
                 <div className='space-y-2'>
-                  {(needsEmail || needsTotp) && (
+                  {(needsEmail || needsTotp || needsOauth) && (
                     <div className='mb-2 flex items-center gap-2 text-sm font-medium'>
                       <Key className='h-4 w-4' />
                       <span><Trans>Passkey</Trans></span>
@@ -289,6 +313,18 @@ export function Mfa({ redirectTo }: MfaProps = {}) {
                     <Trans>Verify with passkey</Trans>
                     {isLoading ? <Loader2 className='animate-spin' /> : <Key />}
                   </Button>
+                </div>
+              )}
+
+              {needsOauth && (
+                <div className='space-y-2'>
+                  {(needsEmail || needsTotp || needsPasskey) && (
+                    <div className='mb-2 flex items-center gap-2 text-sm font-medium'>
+                      <Globe className='h-4 w-4' />
+                      <span><Trans>Linked account</Trans></span>
+                    </div>
+                  )}
+                  <OauthButtons email={user?.email} redirect={redirectTo} />
                 </div>
               )}
 

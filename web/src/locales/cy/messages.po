@@ -54,7 +54,7 @@ msgstr "Mae'r cyfrif eisoes ar y gweinydd hwn"
 msgid "Account removed"
 msgstr "Cyfrif wedi'i dynnu"
 
-#: src/features/auth/mfa/index.tsx:172
+#: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
 #: src/features/auth/sign-in/components/user-auth-form.tsx:320
 msgid "Account suspended"
@@ -155,12 +155,12 @@ msgstr "Esg"
 msgid "Ascending"
 msgstr "Esgynnol"
 
-#: src/features/auth/mfa/index.tsx:189
+#: src/features/auth/mfa/index.tsx:212
 msgid "authenticator code"
 msgstr "cod dilysydd"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:315
-#: src/features/auth/mfa/index.tsx:248
+#: src/features/auth/mfa/index.tsx:272
 msgid "Authenticator code"
 msgstr "Cod dilyswr"
 
@@ -337,7 +337,7 @@ msgstr "Yn dod yn fuan!"
 msgid "Compact"
 msgstr "Cryno"
 
-#: src/features/auth/mfa/index.tsx:193
+#: src/features/auth/mfa/index.tsx:217
 msgid "Complete verification to continue"
 msgstr "Cwblhewch ddilysiad i barhau"
 
@@ -508,12 +508,12 @@ msgstr "E-bost"
 msgid "Email already in use"
 msgstr "Mae'r e-bost yn cael ei ddefnyddio'n barod"
 
-#: src/features/auth/mfa/index.tsx:188
+#: src/features/auth/mfa/index.tsx:211
 msgid "email code"
 msgstr "cod e-bost"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
-#: src/features/auth/mfa/index.tsx:221
+#: src/features/auth/mfa/index.tsx:245
 #: src/features/auth/sign-in/components/user-auth-form.tsx:383
 msgid "Email code"
 msgstr "Cod e-bost"
@@ -539,11 +539,11 @@ msgid "Enter the code from your email"
 msgstr "Rhowch y cod o'ch e-bost"
 
 #. placeholder {0}: methods[0]
-#: src/features/auth/mfa/index.tsx:196
+#: src/features/auth/mfa/index.tsx:220
 msgid "Enter your {0}"
 msgstr "Rhowch eich {0}"
 
-#: src/features/auth/mfa/index.tsx:200
+#: src/features/auth/mfa/index.tsx:224
 msgid "Enter your {initial} and {last}"
 msgstr "Rhowch eich {initial} a {last}"
 
@@ -724,11 +724,11 @@ msgstr "Diddordebau"
 msgid "Invalid authenticator code"
 msgstr "Cod dilysydd annilys"
 
-#: src/features/auth/mfa/index.tsx:103
-#: src/features/auth/mfa/index.tsx:125
-#: src/features/auth/mfa/index.tsx:145
-#: src/features/auth/mfa/index.tsx:165
-#: src/features/auth/mfa/index.tsx:176
+#: src/features/auth/mfa/index.tsx:126
+#: src/features/auth/mfa/index.tsx:148
+#: src/features/auth/mfa/index.tsx:168
+#: src/features/auth/mfa/index.tsx:188
+#: src/features/auth/mfa/index.tsx:199
 #: src/features/auth/sign-in/components/user-auth-form.tsx:260
 #: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Invalid code"
@@ -768,6 +768,14 @@ msgstr "Chwith i'r Dde"
 msgid "Light"
 msgstr "Golau"
 
+#: src/features/auth/mfa/index.tsx:214
+msgid "linked account"
+msgstr "cyfrif cysylltiedig"
+
+#: src/features/auth/mfa/index.tsx:324
+msgid "Linked account"
+msgstr "Cyfrif cysylltiedig"
+
 #: src/routes/restore.tsx:54
 msgid "Linking your identity"
 msgstr "Cysylltu eich hunaniaeth"
@@ -786,7 +794,7 @@ msgstr "Yn llwytho cynnwys…"
 msgid "Loading…"
 msgstr "Yn llwytho…"
 
-#: src/features/auth/mfa/index.tsx:297
+#: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
 #: src/features/auth/sign-in/components/user-auth-form.tsx:455
 msgid "Log in"
@@ -831,7 +839,7 @@ msgstr "Yn allgofnodi…"
 msgid "Login session expired, please try again"
 msgstr "Mae'r sesiwn mewngofnodi wedi dod i ben, rhowch gynnig arall arni"
 
-#: src/features/auth/mfa/index.tsx:321
+#: src/features/auth/mfa/index.tsx:357
 #: src/features/auth/sign-in/components/user-auth-form.tsx:506
 msgid "Lost access? Use a recovery code"
 msgstr "Wedi colli mynediad? Defnyddiwch god adfer"
@@ -1019,20 +1027,22 @@ msgstr "Mae defnyddwyr eraill yn gallu dod o hyd i'ch proffil."
 msgid "Owner"
 msgstr "Perchennog"
 
-#: src/features/auth/mfa/index.tsx:190
+#: src/features/auth/mfa/index.tsx:213
 msgid "passkey"
 msgstr "passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
-#: src/features/auth/mfa/index.tsx:279
+#: src/features/auth/mfa/index.tsx:303
 #: src/features/landing/landing-page.tsx:422
 msgid "Passkey"
 msgstr "Pasallwedd"
 
+#: src/features/auth/mfa/index.tsx:110
 #: src/features/landing/landing-page.tsx:239
 msgid "Passkey login cancelled"
 msgstr "Mewngofnodi pasallwedd wedi'i ganslo"
 
+#: src/features/auth/mfa/index.tsx:112
 #: src/features/landing/landing-page.tsx:232
 msgid "Passkey login failed"
 msgstr "Methodd mewngofnodi pasallwedd"
@@ -1040,10 +1050,6 @@ msgstr "Methodd mewngofnodi pasallwedd"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:205
 msgid "Passkey login required"
 msgstr "Mae angen mewngofnodi pasallwedd"
-
-#: src/features/auth/mfa/index.tsx:91
-msgid "Passkey MFA not yet implemented"
-msgstr "Nid yw MFA pasallwedd wedi'i weithredu eto"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:209
 msgid "Passkey verification failed. Please try again."
@@ -1065,15 +1071,15 @@ msgstr "Gludwch y cod mewngofnodi a gawsoch trwy e-bost"
 msgid "Please check your authenticator app and try again."
 msgstr "Gwiriwch eich ap dilysu a rhowch gynnig arall arni."
 
-#: src/features/auth/mfa/index.tsx:146
-#: src/features/auth/mfa/index.tsx:166
-#: src/features/auth/mfa/index.tsx:177
+#: src/features/auth/mfa/index.tsx:169
+#: src/features/auth/mfa/index.tsx:189
+#: src/features/auth/mfa/index.tsx:200
 #: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "Please check your code and try again."
 msgstr "Gwiriwch eich cod a rhowch gynnig arall arni."
 
-#: src/features/auth/mfa/index.tsx:104
-#: src/features/auth/mfa/index.tsx:126
+#: src/features/auth/mfa/index.tsx:127
+#: src/features/auth/mfa/index.tsx:149
 #: src/features/auth/sign-in/components/user-auth-form.tsx:261
 msgid "Please check your codes and try again."
 msgstr "Gwiriwch eich codau a rhowch gynnig arall arni."
@@ -1114,10 +1120,6 @@ msgstr "Rhowch gynnig arall arni neu cysylltwch â chymorth."
 #: ../../../lib/web/src/features/errors/general-error.tsx:83
 msgid "Please try again."
 msgstr "Rhowch gynnig arall arni."
-
-#: src/features/auth/mfa/index.tsx:92
-msgid "Please use another verification method."
-msgstr "Defnyddiwch ddull dilysu arall."
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:206
 msgid "Please use the \"Log in with passkey\" button."
@@ -1419,7 +1421,7 @@ msgstr "Bach"
 msgid "Spacious"
 msgstr "Helaeth"
 
-#: src/features/auth/mfa/index.tsx:309
+#: src/features/auth/mfa/index.tsx:345
 #: src/features/auth/recovery/index.tsx:143
 msgid "Start again"
 msgstr "Cychwyn eto"
@@ -1668,7 +1670,7 @@ msgstr "Dilysu"
 msgid "Verify email address"
 msgstr "Dilysu cyfeiriad e-bost"
 
-#: src/features/auth/mfa/index.tsx:289
+#: src/features/auth/mfa/index.tsx:313
 msgid "Verify with passkey"
 msgstr "Dilysu â passkey"
 
@@ -1676,7 +1678,7 @@ msgstr "Dilysu â passkey"
 msgid "Verifying backup"
 msgstr "Gwirio'r copi wrth gefn"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:74
+#: ../../../lib/web/src/components/attachment-gallery.tsx:79
 msgid "Video thumbnail"
 msgstr "Bawd fideo"
 
@@ -1734,7 +1736,7 @@ msgstr "Mae eich cyfrif wedi'i ailysgogi"
 msgid "Your account has been suspended"
 msgstr "Mae eich cyfrif wedi'i atal"
 
-#: src/features/auth/mfa/index.tsx:173
+#: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
 #: src/features/auth/sign-in/components/user-auth-form.tsx:321
 msgid "Your account has been suspended."
