@@ -30,6 +30,7 @@ import {
 } from '@mochi/web'
 import { AuthLayout } from '../auth-layout'
 import { OauthButtons } from '@/features/auth/components/oauth-buttons'
+import { Route } from '@/routes/codes'
 import { useAuthStore } from '@/stores/auth-store'
 import {
   completeMfa,
@@ -43,11 +44,10 @@ const mfaSchema = z.object({
   totpCode: z.string().optional(),
 })
 
-interface MfaProps {
-  redirectTo?: string
-}
-
-export function Mfa({ redirectTo }: MfaProps = {}) {
+export function Mfa() {
+  // Read the requested destination from the route search (the recovery
+  // component does the same) so it survives MFA completion and cancel.
+  const { redirect: redirectTo } = Route.useSearch()
   const { t } = useLingui()
   const navigate = useNavigate()
   const { mfa, clearMfa, user } = useAuthStore()
