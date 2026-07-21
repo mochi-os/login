@@ -31,6 +31,45 @@ const completeAuth = (response: {
   return true
 }
 
+// The session lives in an HttpOnly cookie the client cannot see, so a page
+// reload knows nothing — the only way to learn whether the visitor is
+// already logged in is to ask the server. Resolves /_/identity and syncs
+// the store: setAuth/setIdentity for a live session, clearAuth when
+// anonymous. Returns the session summary, or null for anonymous visitors.
+export const resolveSession = async (): Promise<{
+  closing: boolean
+  hasIdentity: boolean
+} | null> => {
+  const store = useAuthStore.getState()
+  let data: {
+    user?: { email?: string; name?: string; status?: string }
+    identity?: { name?: string; privacy?: 'public' | 'private' }
+  }
+  try {
+    data = await requestHelpers.get('/_/identity')
+  } catch {
+    store.clearAuth()
+    return null
+  }
+
+  const name = data.identity?.name || data.user?.name
+  store.setAuth({
+    ...(store.user || {}),
+    ...(data.user?.email ? { email: data.user.email } : {}),
+    ...(name ? { name } : {}),
+  })
+  if (data.identity?.name && data.identity.privacy) {
+    store.setIdentity(data.identity.name, data.identity.privacy)
+  } else {
+    store.clearIdentity()
+  }
+
+  return {
+    closing: data.user?.status === 'closing',
+    hasIdentity: Boolean(name),
+  }
+}
+
 interface BeginLoginResponse {
   // The factors AND-ed at login (empty = any one allowed factor suffices).
   methods: string[]

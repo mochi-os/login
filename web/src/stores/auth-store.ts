@@ -25,7 +25,6 @@ export interface MfaState {
 
 interface AuthState {
   user: AuthUser | null
-  token: string
   isLoading: boolean
   isInitialized: boolean
   identityName: string
@@ -44,12 +43,11 @@ interface AuthState {
   clearMfa: () => void
 }
 
-export const useAuthStore = create<AuthState>()((set, get) => {
+export const useAuthStore = create<AuthState>()((set) => {
   const initialProfile = readProfileCookie()
 
   return {
     user: null,
-    token: '',
     isLoading: false,
     isInitialized: false,
     identityName: initialProfile.name || '',
@@ -69,7 +67,6 @@ export const useAuthStore = create<AuthState>()((set, get) => {
 
       set({
         user,
-        token: '',
         isAuthenticated: true,
         identityName: user?.name || '',
         hasIdentity: Boolean(user?.name),
@@ -77,15 +74,15 @@ export const useAuthStore = create<AuthState>()((set, get) => {
       })
     },
 
+    // Profile data only — authentication is a cookie session the client
+    // cannot see, so setUser never changes isAuthenticated (use setAuth
+    // after the server has confirmed the session, clearAuth when it 401s).
     setUser: (user) => {
       mergeProfileCookie({
         email: user?.email,
         name: user?.name,
       })
-      set({
-        user,
-        isAuthenticated: Boolean(get().token),
-      })
+      set({ user })
     },
 
     clearAuth: () => {
@@ -93,7 +90,6 @@ export const useAuthStore = create<AuthState>()((set, get) => {
 
       set({
         user: null,
-        token: '',
         identityName: '',
         identityPrivacy: '',
         isAuthenticated: false,

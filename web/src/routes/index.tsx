@@ -5,8 +5,8 @@
 
 import { z } from 'zod'
 import { createFileRoute } from '@tanstack/react-router'
-import { requestHelpers } from '@mochi/web'
 import { useAuthStore } from '@/stores/auth-store'
+import { resolveSession } from '@/services/auth-service'
 import { safeRedirect } from '@/lib/redirect'
 import { LandingPage } from '@/features/landing/landing-page'
 
@@ -31,45 +31,19 @@ export const Route = createFileRoute('/')({
       return
     }
 
-    // If already authenticated, verify token is still valid before redirecting
-    if (store.isAuthenticated) {
-      try {
-        // Verify token and refresh identity state from server truth
-        const data = await requestHelpers.get<{
-          user?: { email?: string; name?: string; status?: string }
-          identity?: { name?: string; privacy?: 'public' | 'private' }
-        }>('/_/identity')
-
-        // Account pending closure: route to the reactivation interstitial
-        // rather than into the app.
-        if (data.user?.status === 'closing') {
-          window.location.replace('/login/closing')
-          return new Promise(() => {})
-        }
-
-        const nextUser = {
-          ...(store.user || {}),
-          ...(data.user?.email ? { email: data.user.email } : {}),
-          ...(data.identity?.name
-            ? { name: data.identity.name }
-            : data.user?.name
-              ? { name: data.user.name }
-              : {}),
-        }
-        store.setUser(nextUser)
-
-        if (data.identity?.name && data.identity.privacy) {
-          store.setIdentity(data.identity.name, data.identity.privacy)
-        } else {
-          store.clearIdentity()
-        }
-      } catch {
-        // Token is invalid/expired, clear auth and show login form
-        store.clearAuth()
-        return
+    // Always resolve the cookie session against the server — the store holds
+    // no token, so on a page reload it cannot know the visitor is already
+    // logged in. Anonymous visitors fall through to the login form.
+    const session = await resolveSession()
+    if (session) {
+      // Account pending closure: route to the reactivation interstitial
+      // rather than into the app.
+      if (session.closing) {
+        window.location.replace('/login/closing')
+        return new Promise(() => {})
       }
 
-      if (!store.hasIdentity) {
+      if (!session.hasIdentity) {
         const params = search.redirect ? `?redirect=${encodeURIComponent(search.redirect)}` : ''
         window.location.replace(`/login/identity${params}`)
         return new Promise(() => {})

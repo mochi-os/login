@@ -7,6 +7,7 @@ import { z } from 'zod'
 import { createFileRoute, redirect } from '@tanstack/react-router'
 import { useAuthStore } from '@/stores/auth-store'
 import { Recovery } from '@/features/auth/recovery'
+import { resolveSession } from '@/services/auth-service'
 import { safeRedirect } from '@/lib/redirect'
 
 const searchSchema = z.object({
@@ -14,7 +15,7 @@ const searchSchema = z.object({
 })
 
 export const Route = createFileRoute('/recovery')({
-  beforeLoad: ({ search }) => {
+  beforeLoad: async ({ search }) => {
     const store = useAuthStore.getState()
 
     // Sync from cookies if not initialized
@@ -22,11 +23,13 @@ export const Route = createFileRoute('/recovery')({
       store.initialize()
     }
 
-    // If already authenticated, redirect away
-    if (store.isAuthenticated) {
+    // Already logged in (resolved against the server — the store cannot
+    // know on a page reload): redirect away instead of offering recovery.
+    const session = await resolveSession()
+    if (session) {
       const targetPath = safeRedirect(search.redirect)
 
-      if (!store.hasIdentity) {
+      if (!session.hasIdentity) {
         throw redirect({
           to: '/identity',
           search: { redirect: targetPath },

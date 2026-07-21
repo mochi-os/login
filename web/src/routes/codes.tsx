@@ -7,6 +7,7 @@ import { z } from 'zod'
 import { createFileRoute, redirect } from '@tanstack/react-router'
 import { useAuthStore } from '@/stores/auth-store'
 import { Mfa } from '@/features/auth/mfa'
+import { resolveSession } from '@/services/auth-service'
 import { safeRedirect } from '@/lib/redirect'
 import { authApi } from '@/api/auth'
 
@@ -23,11 +24,13 @@ export const Route = createFileRoute('/codes')({
       store.initialize()
     }
 
-    // If already fully authenticated, redirect away
-    if (store.isAuthenticated) {
+    // Already fully authenticated (resolved against the server — the store
+    // cannot know on a page reload): redirect away instead of showing MFA.
+    const session = await resolveSession()
+    if (session) {
       const targetPath = safeRedirect(search.redirect)
 
-      if (!store.hasIdentity) {
+      if (!session.hasIdentity) {
         throw redirect({
           to: '/identity',
           search: { redirect: targetPath },

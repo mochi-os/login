@@ -7,20 +7,16 @@ import { useEffect } from 'react'
 import { Trans } from '@lingui/react/macro'
 import { z } from 'zod'
 import { createFileRoute, redirect } from '@tanstack/react-router'
-import { Card, CardContent, CardHeader, CardTitle, requestHelpers } from '@mochi/web'
+import { Card, CardContent, CardHeader, CardTitle } from '@mochi/web'
 import { AuthLayout } from '@/features/auth/auth-layout'
 import { IdentityForm } from '@/features/auth/identity-form'
 import { useAuthStore } from '@/stores/auth-store'
+import { resolveSession } from '@/services/auth-service'
 import { safeRedirect } from '@/lib/redirect'
 
 const searchSchema = z.object({
   redirect: z.string().optional(),
 })
-
-type IdentityResponse = {
-  user?: { email?: string; name?: string; status?: string }
-  identity?: { name?: string; privacy?: 'public' | 'private' }
-}
 
 export const Route = createFileRoute('/identity')({
   validateSearch: searchSchema,
@@ -31,16 +27,12 @@ export const Route = createFileRoute('/identity')({
       store.initialize()
     }
 
-    // Verify session with the server (in-memory store doesn't survive page
-    // reloads). Only the request itself is inside the try — the router
-    // redirects thrown below must not be swallowed and converted into the
-    // no-session login redirect (that sent closing accounts back to the
-    // login form instead of the reactivation interstitial).
-    let data: IdentityResponse
-    try {
-      data = await requestHelpers.get<IdentityResponse>('/_/identity')
-    } catch {
-      // No valid session — redirect to login
+    // Resolve the cookie session with the server (the in-memory store does
+    // not survive page reloads) and sync the store from server truth.
+    const session = await resolveSession()
+
+    // No valid session — redirect to login
+    if (!session) {
       throw redirect({
         to: '/',
         search: {
@@ -50,25 +42,8 @@ export const Route = createFileRoute('/identity')({
     }
 
     // Account pending closure: route to the reactivation interstitial.
-    if (data.user?.status === 'closing') {
+    if (session.closing) {
       throw redirect({ to: '/closing' })
-    }
-
-    const nextUser = {
-      ...(store.user || {}),
-      ...(data.user?.email ? { email: data.user.email } : {}),
-      ...(data.identity?.name
-        ? { name: data.identity.name }
-        : data.user?.name
-          ? { name: data.user.name }
-          : {}),
-    }
-    store.setAuth(nextUser)
-
-    if (data.identity?.name && data.identity.privacy) {
-      store.setIdentity(data.identity.name, data.identity.privacy)
-    } else {
-      store.clearIdentity()
     }
   },
   component: IdentityRouteComponent,
