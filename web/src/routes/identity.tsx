@@ -17,6 +17,11 @@ const searchSchema = z.object({
   redirect: z.string().optional(),
 })
 
+type IdentityResponse = {
+  user?: { email?: string; name?: string; status?: string }
+  identity?: { name?: string; privacy?: 'public' | 'private' }
+}
+
 export const Route = createFileRoute('/identity')({
   validateSearch: searchSchema,
   beforeLoad: async ({ search, location }) => {
@@ -26,34 +31,14 @@ export const Route = createFileRoute('/identity')({
       store.initialize()
     }
 
-    // Verify session with the server (in-memory store doesn't survive page reloads)
+    // Verify session with the server (in-memory store doesn't survive page
+    // reloads). Only the request itself is inside the try — the router
+    // redirects thrown below must not be swallowed and converted into the
+    // no-session login redirect (that sent closing accounts back to the
+    // login form instead of the reactivation interstitial).
+    let data: IdentityResponse
     try {
-      const data = await requestHelpers.get<{
-        user?: { email?: string; name?: string; status?: string }
-        identity?: { name?: string; privacy?: 'public' | 'private' }
-      }>('/_/identity')
-
-      // Account pending closure: route to the reactivation interstitial.
-      if (data.user?.status === 'closing') {
-        throw redirect({ to: '/closing' })
-      }
-
-      const nextUser = {
-        ...(store.user || {}),
-        ...(data.user?.email ? { email: data.user.email } : {}),
-        ...(data.identity?.name
-          ? { name: data.identity.name }
-          : data.user?.name
-            ? { name: data.user.name }
-            : {}),
-      }
-      store.setAuth(nextUser)
-
-      if (data.identity?.name && data.identity.privacy) {
-        store.setIdentity(data.identity.name, data.identity.privacy)
-      } else {
-        store.clearIdentity()
-      }
+      data = await requestHelpers.get<IdentityResponse>('/_/identity')
     } catch {
       // No valid session — redirect to login
       throw redirect({
@@ -62,6 +47,28 @@ export const Route = createFileRoute('/identity')({
           redirect: search.redirect ?? location.href,
         },
       })
+    }
+
+    // Account pending closure: route to the reactivation interstitial.
+    if (data.user?.status === 'closing') {
+      throw redirect({ to: '/closing' })
+    }
+
+    const nextUser = {
+      ...(store.user || {}),
+      ...(data.user?.email ? { email: data.user.email } : {}),
+      ...(data.identity?.name
+        ? { name: data.identity.name }
+        : data.user?.name
+          ? { name: data.user.name }
+          : {}),
+    }
+    store.setAuth(nextUser)
+
+    if (data.identity?.name && data.identity.privacy) {
+      store.setIdentity(data.identity.name, data.identity.privacy)
+    } else {
+      store.clearIdentity()
     }
   },
   component: IdentityRouteComponent,
