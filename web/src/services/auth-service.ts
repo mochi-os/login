@@ -3,6 +3,8 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
+import { msg } from '@lingui/core/macro'
+import { i18n } from '@lingui/core'
 import { authApi,
   type AuthUser,
   type MfaResponse,
@@ -96,8 +98,6 @@ export const beginLogin = async (email: string): Promise<BeginLoginResponse> => 
 }
 
 interface TotpLoginResponse {
-  token?: string
-  login?: string
   name?: string
   mfa?: boolean
   partial?: string
@@ -133,7 +133,7 @@ export const requestCode = async (
   const response = await authApi.requestCode({ email })
 
   if (response.status?.toLowerCase() !== 'ok') {
-    throw new Error(response.message || 'Failed to request login code')
+    throw new Error(response.message || i18n._(msg`Failed to request login code`))
   }
 
   const currentUser = useAuthStore.getState().user
@@ -198,7 +198,7 @@ export const completeMfa = async (
 ): Promise<MfaResponse & { success: boolean }> => {
   const { mfa } = useAuthStore.getState()
   if (!mfa.partial) {
-    throw new Error("No MFA session")
+    throw new Error(i18n._(msg`No MFA session`))
   }
 
   const response = await authApi.completeMfa({
@@ -230,7 +230,7 @@ export const completeMfaMultiple = async (codes: {
 }): Promise<MfaResponse & { success: boolean }> => {
   const { mfa } = useAuthStore.getState()
   if (!mfa.partial) {
-    throw new Error("No MFA session")
+    throw new Error(i18n._(msg`No MFA session`))
   }
 
   const response = await authApi.completeMfa({

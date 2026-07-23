@@ -13,7 +13,6 @@ type DocumentName = 'rules' | 'terms' | 'privacy'
 
 interface DocumentResponse {
   name: string
-  body: string
   html: string
 }
 

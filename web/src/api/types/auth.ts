@@ -6,10 +6,6 @@
 export interface AuthUser {
   email?: string
   name?: string
-  accountNo?: string
-  role?: string[]
-  exp?: number
-  avatar?: string
 }
 
 export interface RequestCodeRequest {
@@ -27,13 +23,9 @@ export interface VerifyCodeRequest {
 
 export interface VerifyCodeResponse {
   success: boolean
-  token?: string
-  login?: string
   user?: AuthUser
   name?: string
   message?: string
-  expiresIn?: number
-  expires_in?: number
   // MFA fields
   mfa?: boolean
   partial?: string
@@ -85,8 +77,6 @@ export interface MfaRequest {
 }
 
 export interface MfaResponse {
-  token?: string
-  login?: string
   name?: string
   mfa?: boolean
   partial?: string
@@ -101,8 +91,6 @@ export interface PasskeyLoginBeginResponse {
 }
 
 export interface PasskeyLoginFinishResponse {
-  token?: string
-  login?: string
   name?: string
   mfa?: boolean
   partial?: string
@@ -116,7 +104,5 @@ export interface RecoveryLoginRequest {
 }
 
 export interface RecoveryLoginResponse {
-  token?: string
-  login?: string
   name?: string
 }
