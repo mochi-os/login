@@ -285,6 +285,7 @@ export function LandingPage() {
           </div>
 
           <h1 className="mx-auto mb-5 max-w-[850px] bg-gradient-to-br from-foreground to-muted-foreground/30 bg-clip-text text-balance text-[2.25rem] font-light leading-[1.08] tracking-[3px] text-transparent sm:mb-6 sm:text-5xl lg:text-[3.5rem]">
+            {/* jsx-text-ok: brand wordmark, verbatim in every locale */}
             mochi
           </h1>
 

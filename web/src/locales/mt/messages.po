@@ -18,6 +18,31 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Jekk jogħġbok iċċekkja l-konnessjoni tal-internet tiegħek u erġa' pprova."
 
+#. placeholder {0}: selectedValues.size
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
+msgid "{0, plural, one {# selected} other {# selected}}"
+msgstr "{0, plural, one {# magħżul} few {# magħżula} many {# magħżula} other {# magħżula}}"
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+msgid "{entityLabel} name"
+msgstr "Isem ta' {entityLabel}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
+msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+msgstr "{selectedCount, plural, one {{entityName} magħżul} few {{manyName} magħżula} many {{manyName} magħżula} other {{manyName} magħżula}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:52
+msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+msgstr "{selectedCount, plural, one {# {entityName} magħżul. Il-barra tal-għodod għall-azzjonijiet bl-ingrossa hija disponibbli.} few {# {manyName} magħżula. Il-barra tal-għodod għall-azzjonijiet bl-ingrossa hija disponibbli.} many {# {manyName} magħżula. Il-barra tal-għodod għall-azzjonijiet bl-ingrossa hija disponibbli.} other {# {manyName} magħżula. Il-barra tal-għodod għall-azzjonijiet bl-ingrossa hija disponibbli.}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:202
+msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+msgstr "{selectedCount, plural, one {# magħżula} few {# magħżula} many {# magħżula} other {# magħżula}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:149
+msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+msgstr "{selectedCount, plural, one {Azzjonijiet bl-ingrossa għal # {entityName} magħżul} few {Azzjonijiet bl-ingrossa għal # {manyName} magħżula} many {Azzjonijiet bl-ingrossa għal # {manyName} magħżula} other {Azzjonijiet bl-ingrossa għal # {manyName} magħżula}}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12-il siegħa"
@@ -169,9 +194,9 @@ msgstr "Kodiċi tal-awtentikazzjoni"
 msgid "Back"
 msgstr "Lura"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
+#: ../../../lib/web/src/features/errors/forbidden.tsx:28
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:28
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
 msgstr "Lura għall-paġna ewlenija"
 
@@ -212,7 +237,7 @@ msgstr "Billi toħloq il-kont tiegħek, taqbel mar-<0>Regoli tas-server</0>, <1>
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:89
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 msgid "Cancel"
 msgstr "Ikkanċella"
 
@@ -275,28 +300,29 @@ msgstr "Naddaf"
 msgid "Clear all"
 msgstr "Naddaf kollox"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:140
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "Naddaf il-filtri"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:167
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
 msgid "Clear selection"
 msgstr "Naddaf l-għażla"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:168
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:185
 msgid "Clear selection (Escape)"
 msgstr "Naddaf l-għażla (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Agħlaq"
 
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:107
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:112
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:108
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:113
 msgid "Close navigation"
 msgstr "Agħlaq in-navigazzjoni"
 
@@ -402,7 +428,7 @@ msgstr "Ma setgħetx tinbeda l-awtentikazzjoni mill-ġdid. Jekk jogħġbok erġa
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Ma stajniex nivverifikaw b'dak il-kont. Jekk jogħġbok erġa' pprova."
 
-#: src/features/landing/landing-page.tsx:324
+#: src/features/landing/landing-page.tsx:325
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "Oħloq <0>kont bla ħlas</0>, mexxi <1>is-server tiegħek stess</1>, jew esplora <2>il-kodiċi sors</2>."
 
@@ -415,6 +441,7 @@ msgid "Custom"
 msgstr "Personalizzat"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
 msgstr "Skur"
@@ -483,8 +510,8 @@ msgstr "Juri l-barra tal-ġenb tal-mobile."
 msgid "Done"
 msgstr "Lest"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
 msgstr "Niżżel"
 
@@ -582,6 +609,14 @@ msgstr "Ma rnexxiex jiżdied il-kont"
 msgid "Failed to continue"
 msgstr "Ma rnexxiex jitkompla"
 
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load image"
+msgstr "Ma rnexxielux jitgħabba l-istampa"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load video"
+msgstr "Ma rnexxielux jitgħabba l-vidjo"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:234
 msgid "Failed to remove account"
 msgstr "Ma rnexxiex jitneħħa l-kont"
@@ -659,29 +694,29 @@ msgstr "Logħob"
 msgid "Git repositories"
 msgstr "Repożitorji Git"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:24
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:24
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:24
+#: ../../../lib/web/src/features/errors/forbidden.tsx:26
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Lura"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:78
+#: ../../../lib/web/src/components/data-table/pagination.tsx:82
 msgid "Go to first page"
 msgstr "Mur l-ewwel paġna"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:124
+#: ../../../lib/web/src/components/data-table/pagination.tsx:128
 msgid "Go to last page"
 msgstr "Mur l-aħħar paġna"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:115
+#: ../../../lib/web/src/components/data-table/pagination.tsx:119
 msgid "Go to next page"
 msgstr "Mur il-paġna li jmiss"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:102
+#: ../../../lib/web/src/components/data-table/pagination.tsx:106
 msgid "Go to page {pageNumber}"
 msgstr "Mur fil-paġna {pageNumber}"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:87
+#: ../../../lib/web/src/components/data-table/pagination.tsx:91
 msgid "Go to previous page"
 msgstr "Mur il-paġna ta' qabel"
 
@@ -711,6 +746,11 @@ msgstr "Sħun"
 #: src/features/auth/identity-form.tsx:56
 msgid "Identity saved"
 msgstr "L-identità ġiet issejvjata"
+
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:247
+msgid "Image viewer: {0}"
+msgstr "Viewer tal-istampi: {0}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:86
 msgid "Imperial"
@@ -749,6 +789,10 @@ msgstr "Kodiċi tal-irkupru invalidu"
 msgid "Invalid verification code"
 msgstr "Kodiċi tal-verifika invalidu"
 
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:18
+msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
+msgstr "Jidher li l-paġna li qed tfittex <0/>ma teżistix jew tneħħiet."
+
 #: ../../../lib/web/src/lib/preference-utils.ts:108
 #: ../../../lib/web/src/lib/preference-utils.ts:135
 msgid "Large"
@@ -768,6 +812,7 @@ msgid "Left to Right"
 msgstr "Mix-Xellug għal-Lemin"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
 msgstr "Ċar"
@@ -804,11 +849,11 @@ msgstr "Qed jitgħabba..."
 msgid "Log in"
 msgstr "Idħol"
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:369
 msgid "Log in to Mochi"
 msgstr "Idħol f'Mochi"
 
-#: src/features/landing/landing-page.tsx:434
+#: src/features/landing/landing-page.tsx:435
 msgid "Log in with {label}"
 msgstr "Idħol bi {label}"
 
@@ -848,8 +893,8 @@ msgstr "Is-sessjoni tal-login skadiet, jekk jogħġbok erġa' pprova"
 msgid "Lost access? Use a recovery code"
 msgstr "Tlift l-aċċess? Uża kodiċi tal-irkupru"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:92
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:99
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Immarka kollox bħala maqru"
@@ -870,7 +915,7 @@ msgstr "Menu"
 msgid "Metric"
 msgstr "Metriku"
 
-#: src/features/landing/landing-page.tsx:292
+#: src/features/landing/landing-page.tsx:293
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi hija pjattaforma b'sors miftuħ, federata u b'ħafna utenti għal applikazzjonijiet distribwiti. Kulħadd jista' jħaddem is-server tiegħu stess, u jgħaqqad ma' kwalunkwe utent ieħor fuq in-netwerk Mochi. Kulħadd jista' joħloq u jippubblika applikazzjonijiet. Kull applikazzjoni hija sostitwibbli, anke dawk tas-sistema. Is-server jiġi b'aktar minn 20 applikazzjoni, fosthom:"
 
@@ -901,8 +946,8 @@ msgstr "Is-signup għal utenti ġodda huwa diżabilitat."
 msgid "Next"
 msgstr "Li jmiss"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
 msgstr "Stampa li jmiss"
 
@@ -936,7 +981,7 @@ msgid "No profile"
 msgstr "L-ebda profil"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:90
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "Ma nstabu l-ebda riżultati."
 
@@ -986,6 +1031,11 @@ msgstr "Mhux issettjat"
 msgid "Notifications"
 msgstr "Notifiki"
 
+#. placeholder {0}: unread.length
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+msgid "Notifications: {0}"
+msgstr "Notifiki: {0}"
+
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:16
 msgid "Oops! Page Not Found!"
 msgstr "Oops! Paġna Mhux Misjuba!"
@@ -1020,7 +1070,7 @@ msgid "Or enter authenticator code"
 msgstr "Jew daħħal il-kodiċi tal-awtentikazzjoni"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:467
-#: src/features/landing/landing-page.tsx:403
+#: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "Jew illoggja b'"
 
@@ -1036,13 +1086,18 @@ msgstr "Utenti oħra jistgħu jsibu l-profil tiegħek."
 msgid "Owner"
 msgstr "Sid"
 
+#: ../../../lib/web/src/components/data-table/pagination.tsx:43
+#: ../../../lib/web/src/components/data-table/pagination.tsx:71
+msgid "Page {currentPage} of {totalPages}"
+msgstr "Paġna {currentPage} minn {totalPages}"
+
 #: src/features/auth/mfa/index.tsx:213
 msgid "passkey"
 msgstr "passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 #: src/features/auth/mfa/index.tsx:303
-#: src/features/landing/landing-page.tsx:422
+#: src/features/landing/landing-page.tsx:423
 msgid "Passkey"
 msgstr "Passkey"
 
@@ -1120,6 +1175,10 @@ msgstr "Jekk jogħġbok daħħal ismek"
 msgid "Please enter your recovery code"
 msgstr "Jekk jogħġbok daħħal il-kodiċi ta' rkupru tiegħek"
 
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
+msgid "Please log in with the appropriate credentials <0/> to access this resource."
+msgstr "Jekk jogħġbok idħol bil-kredenzjali xierqa <0/> biex taċċessa din ir-riżorsa."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:181
 #: src/features/auth/sign-in/components/user-auth-form.tsx:230
 #: src/features/auth/sign-in/components/user-auth-form.tsx:333
@@ -1138,15 +1197,15 @@ msgstr "Jekk jogħġbok uża l-buttuna \"Idħol bil-passkey\"."
 msgid "Please wait a moment and try again."
 msgstr "Jekk jogħġbok stenna ftit u erġa' pprova."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:377
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:382
 msgid "Previous image"
 msgstr "Stampa preċedenti"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:27
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 #: src/features/auth/identity-form.tsx:97
-#: src/features/landing/landing-page.tsx:487
+#: src/features/landing/landing-page.tsx:488
 msgid "Privacy"
 msgstr "Privatezza"
 
@@ -1229,6 +1288,11 @@ msgstr "Neħħi"
 msgid "Remove access rule"
 msgstr "Neħħi r-regola tal-aċċess"
 
+#. placeholder {0}: formatSubject(subject, data.name)
+#: ../../../lib/web/src/features/access/access-list.tsx:259
+msgid "Remove access rule for \"{0}\"?"
+msgstr "Tneħħi r-regola ta' aċċess għal \"{0}\"?"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:257
 msgid "Remove access?"
 msgstr "Tneħħi l-aċċess?"
@@ -1268,7 +1332,7 @@ msgstr "Qiegħed jirrestawra l-kont tiegħek"
 msgid "Right to Left"
 msgstr "Lemin għal Xellug"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:63
+#: ../../../lib/web/src/components/data-table/pagination.tsx:65
 msgid "Rows per page"
 msgstr "Ringieli kull paġna"
 
@@ -1343,7 +1407,16 @@ msgstr "Agħżel direzzjoni tas-sit"
 msgid "Select theme preference"
 msgstr "Agħżel preferenza tat-tema"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:98
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
+msgid "selected"
+msgstr "magħżula"
+
+#. placeholder {0}: getSelectedName()
+#: ../../../lib/web/src/features/access/access-dialog.tsx:309
+msgid "Selected: <0>{0}</0>"
+msgstr "Magħżul: <0>{0}</0>"
+
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:100
 msgid "Send again"
 msgstr "Ibgħat mill-ġdid"
 
@@ -1362,7 +1435,7 @@ msgstr "Żball tas-server"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:40
-#: src/features/landing/landing-page.tsx:469
+#: src/features/landing/landing-page.tsx:470
 msgid "Server rules"
 msgstr "Regoli tas-server"
 
@@ -1456,6 +1529,7 @@ msgid "Sunday"
 msgstr "Il-Ħadd"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
 msgid "System"
@@ -1476,7 +1550,7 @@ msgstr "Timijiet/Apps"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
 #: ../../../lib/web/src/features/document/document-page.tsx:42
-#: src/features/landing/landing-page.tsx:478
+#: src/features/landing/landing-page.tsx:479
 msgid "Terms and conditions"
 msgstr "Termini u kondizzjonijiet"
 
@@ -1517,6 +1591,10 @@ msgstr "Il-kontenut mitlub ma setax jinstab."
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "L-irristorjar ma tlestax. Il-fajl ta' backup jista' jkun imdaħħal, il-frażi tal-password tista' tkun ħażin, jew is-server waqa' f'żball."
 
+#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
+msgid "The site is not available at the moment."
+msgstr "Is-sit mhuwiex disponibbli bħalissa."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "Tema"
@@ -1529,9 +1607,17 @@ msgstr "Settings tat-Tema"
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Dan il-backup inħoloq minn verżjoni aktar ġdida ta' Mochi. Aġġorna dan is-server l-ewwel."
 
+#: ../../../lib/web/src/components/coming-soon.tsx:14
+msgid "This page has not been created yet."
+msgstr "Din il-paġna għadha ma nħolqotx."
+
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Il-Ħamis"
+
+#: ../../../lib/web/src/components/travelling-picker.tsx:220
+msgid "To"
+msgstr "Lejn"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
 msgid "Toggle columns"
@@ -1656,7 +1742,7 @@ msgstr "Utent"
 msgid "Validating backup"
 msgstr "Qiegħed jivvalida l-backup"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:71
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "Kodiċi ta' verifika"
 
@@ -1671,7 +1757,7 @@ msgstr "Verifika falliet"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:388
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:109
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "Ivverifika"
 
@@ -1691,6 +1777,11 @@ msgstr "Qiegħed jivverifika l-backup"
 msgid "Video thumbnail"
 msgstr "Thumbnail tal-vidjo"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:246
+msgid "Video viewer: {0}"
+msgstr "Viewer tal-vidjo: {0}"
+
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
 msgid "View"
 msgstr "Ara"
@@ -1699,10 +1790,15 @@ msgstr "Ara"
 msgid "View all"
 msgstr "Ara kollox"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:105
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
 msgid "View all notifications"
 msgstr "Ara n-notifiki kollha"
+
+#. placeholder {0}: account.identifier
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:63
+msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
+msgstr "Bgħatna kodiċi ta' verifika lil <0>{0}</0>. Daħħal il-kodiċi hawn taħt biex tivverifika l-indirizz elettroniku tiegħek."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
@@ -1727,6 +1823,10 @@ msgstr "Frażi tal-password ħażina"
 #: ../../../lib/web/src/features/errors/general-error.tsx:61
 msgid "You do not have access to this section."
 msgstr "M'għandekx aċċess għal din it-taqsima."
+
+#: ../../../lib/web/src/features/errors/forbidden.tsx:18
+msgid "You don't have necessary permission <0/>to view this resource."
+msgstr "M'għandekx il-permess meħtieġ <0/>biex tara din ir-riżorsa."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43

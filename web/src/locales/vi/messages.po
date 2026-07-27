@@ -18,6 +18,31 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Vui lòng kiểm tra kết nối internet và thử lại."
 
+#. placeholder {0}: selectedValues.size
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
+msgid "{0, plural, one {# selected} other {# selected}}"
+msgstr "{0, plural, one {# đã chọn} other {# đã chọn}}"
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+msgid "{entityLabel} name"
+msgstr "Tên {entityLabel}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
+msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+msgstr "{selectedCount, plural, one {Đã chọn {entityName}} other {Đã chọn {manyName}}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:52
+msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+msgstr "{selectedCount, plural, one {Đã chọn # {entityName}. Thanh công cụ thao tác hàng loạt khả dụng.} other {Đã chọn # {manyName}. Thanh công cụ thao tác hàng loạt khả dụng.}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:202
+msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+msgstr "{selectedCount, plural, one {# đã chọn} other {# đã chọn}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:149
+msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+msgstr "{selectedCount, plural, one {Thao tác hàng loạt cho # {entityName} đã chọn} other {Thao tác hàng loạt cho # {manyName} đã chọn}}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 giờ"
@@ -169,9 +194,9 @@ msgstr "Mã xác thực"
 msgid "Back"
 msgstr "Quay lại"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
+#: ../../../lib/web/src/features/errors/forbidden.tsx:28
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:28
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
 msgstr "Về trang chủ"
 
@@ -212,7 +237,7 @@ msgstr "Bằng việc tạo tài khoản, bạn đồng ý với <0>Quy tắc m�
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:89
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 msgid "Cancel"
 msgstr "Hủy"
 
@@ -275,28 +300,29 @@ msgstr "Xóa"
 msgid "Clear all"
 msgstr "Xóa tất cả"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:140
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "Xóa bộ lọc"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:167
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
 msgid "Clear selection"
 msgstr "Bỏ chọn"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:168
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:185
 msgid "Clear selection (Escape)"
 msgstr "Bỏ chọn (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Đóng"
 
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:107
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:112
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:108
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:113
 msgid "Close navigation"
 msgstr "Đóng điều hướng"
 
@@ -402,7 +428,7 @@ msgstr "Không thể bắt đầu xác thực lại. Vui lòng thử lại."
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Không thể xác minh bằng tài khoản đó. Vui lòng thử lại."
 
-#: src/features/landing/landing-page.tsx:324
+#: src/features/landing/landing-page.tsx:325
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "Tạo một <0>tài khoản miễn phí</0>, chạy <1>máy chủ của riêng bạn</1>, hoặc khám phá <2>mã nguồn</2>."
 
@@ -415,6 +441,7 @@ msgid "Custom"
 msgstr "Tùy chỉnh"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
 msgstr "Tối"
@@ -483,8 +510,8 @@ msgstr "Hiển thị thanh bên di động."
 msgid "Done"
 msgstr "Xong"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
 msgstr "Tải xuống"
 
@@ -582,6 +609,14 @@ msgstr "Không thêm tài khoản được"
 msgid "Failed to continue"
 msgstr "Không tiếp tục được"
 
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load image"
+msgstr "Không tải được hình ảnh"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load video"
+msgstr "Không tải được video"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:234
 msgid "Failed to remove account"
 msgstr "Không xoá tài khoản được"
@@ -659,29 +694,29 @@ msgstr "Trò chơi"
 msgid "Git repositories"
 msgstr "Kho lưu trữ Git"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:24
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:24
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:24
+#: ../../../lib/web/src/features/errors/forbidden.tsx:26
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Quay lại"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:78
+#: ../../../lib/web/src/components/data-table/pagination.tsx:82
 msgid "Go to first page"
 msgstr "Đến trang đầu"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:124
+#: ../../../lib/web/src/components/data-table/pagination.tsx:128
 msgid "Go to last page"
 msgstr "Đến trang cuối"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:115
+#: ../../../lib/web/src/components/data-table/pagination.tsx:119
 msgid "Go to next page"
 msgstr "Đến trang tiếp"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:102
+#: ../../../lib/web/src/components/data-table/pagination.tsx:106
 msgid "Go to page {pageNumber}"
 msgstr "Đến trang {pageNumber}"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:87
+#: ../../../lib/web/src/components/data-table/pagination.tsx:91
 msgid "Go to previous page"
 msgstr "Đến trang trước"
 
@@ -711,6 +746,11 @@ msgstr "Nóng"
 #: src/features/auth/identity-form.tsx:56
 msgid "Identity saved"
 msgstr "Đã lưu danh tính"
+
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:247
+msgid "Image viewer: {0}"
+msgstr "Trình xem ảnh: {0}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:86
 msgid "Imperial"
@@ -749,6 +789,10 @@ msgstr "Mã khôi phục không hợp lệ"
 msgid "Invalid verification code"
 msgstr "Mã xác minh không hợp lệ"
 
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:18
+msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
+msgstr "Có vẻ như trang bạn đang tìm <0/>không tồn tại hoặc đã bị xóa."
+
 #: ../../../lib/web/src/lib/preference-utils.ts:108
 #: ../../../lib/web/src/lib/preference-utils.ts:135
 msgid "Large"
@@ -768,6 +812,7 @@ msgid "Left to Right"
 msgstr "Trái sang phải"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
 msgstr "Sáng"
@@ -804,11 +849,11 @@ msgstr "Đang tải..."
 msgid "Log in"
 msgstr "Đăng nhập"
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:369
 msgid "Log in to Mochi"
 msgstr "Đăng nhập Mochi"
 
-#: src/features/landing/landing-page.tsx:434
+#: src/features/landing/landing-page.tsx:435
 msgid "Log in with {label}"
 msgstr "Đăng nhập bằng {label}"
 
@@ -848,8 +893,8 @@ msgstr "Phiên đăng nhập đã hết hạn, vui lòng thử lại"
 msgid "Lost access? Use a recovery code"
 msgstr "Mất quyền truy cập? Dùng mã khôi phục"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:92
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:99
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Đánh dấu tất cả là đã đọc"
@@ -870,7 +915,7 @@ msgstr "Menu"
 msgid "Metric"
 msgstr "Hệ mét"
 
-#: src/features/landing/landing-page.tsx:292
+#: src/features/landing/landing-page.tsx:293
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi là một nền tảng mã nguồn mở, liên hợp, đa người dùng dành cho các ứng dụng phân tán. Bất kỳ ai cũng có thể vận hành máy chủ của riêng mình và kết nối với bất kỳ người dùng nào khác trên mạng lưới Mochi. Bất kỳ ai cũng có thể tạo và xuất bản ứng dụng. Mọi ứng dụng đều có thể thay thế được, kể cả các ứng dụng hệ thống. Máy chủ đi kèm hơn 20 ứng dụng, bao gồm:"
 
@@ -901,8 +946,8 @@ msgstr "Đăng ký người dùng mới đã bị tắt."
 msgid "Next"
 msgstr "Tiếp"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
 msgstr "Hình tiếp theo"
 
@@ -936,7 +981,7 @@ msgid "No profile"
 msgstr "Không có hồ sơ"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:90
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "Không tìm thấy kết quả nào."
 
@@ -986,6 +1031,11 @@ msgstr "Chưa đặt"
 msgid "Notifications"
 msgstr "Thông báo"
 
+#. placeholder {0}: unread.length
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+msgid "Notifications: {0}"
+msgstr "Thông báo: {0}"
+
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:16
 msgid "Oops! Page Not Found!"
 msgstr "Rất tiếc! Không tìm thấy trang!"
@@ -1020,7 +1070,7 @@ msgid "Or enter authenticator code"
 msgstr "Hoặc nhập mã xác thực"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:467
-#: src/features/landing/landing-page.tsx:403
+#: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "Hoặc đăng nhập bằng"
 
@@ -1036,13 +1086,18 @@ msgstr "Người dùng khác có thể tìm thấy hồ sơ của bạn."
 msgid "Owner"
 msgstr "Chủ sở hữu"
 
+#: ../../../lib/web/src/components/data-table/pagination.tsx:43
+#: ../../../lib/web/src/components/data-table/pagination.tsx:71
+msgid "Page {currentPage} of {totalPages}"
+msgstr "Trang {currentPage} trên {totalPages}"
+
 #: src/features/auth/mfa/index.tsx:213
 msgid "passkey"
 msgstr "passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 #: src/features/auth/mfa/index.tsx:303
-#: src/features/landing/landing-page.tsx:422
+#: src/features/landing/landing-page.tsx:423
 msgid "Passkey"
 msgstr "Passkey"
 
@@ -1120,6 +1175,10 @@ msgstr "Vui lòng nhập tên của bạn"
 msgid "Please enter your recovery code"
 msgstr "Vui lòng nhập mã khôi phục"
 
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
+msgid "Please log in with the appropriate credentials <0/> to access this resource."
+msgstr "Vui lòng đăng nhập bằng thông tin đăng nhập phù hợp <0/> để truy cập tài nguyên này."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:181
 #: src/features/auth/sign-in/components/user-auth-form.tsx:230
 #: src/features/auth/sign-in/components/user-auth-form.tsx:333
@@ -1138,15 +1197,15 @@ msgstr "Vui lòng sử dụng nút \"Đăng nhập bằng passkey\"."
 msgid "Please wait a moment and try again."
 msgstr "Vui lòng đợi một lát rồi thử lại."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:377
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:382
 msgid "Previous image"
 msgstr "Hình trước"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:27
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 #: src/features/auth/identity-form.tsx:97
-#: src/features/landing/landing-page.tsx:487
+#: src/features/landing/landing-page.tsx:488
 msgid "Privacy"
 msgstr "Quyền riêng tư"
 
@@ -1229,6 +1288,11 @@ msgstr "Xoá"
 msgid "Remove access rule"
 msgstr "Xoá quy tắc truy cập"
 
+#. placeholder {0}: formatSubject(subject, data.name)
+#: ../../../lib/web/src/features/access/access-list.tsx:259
+msgid "Remove access rule for \"{0}\"?"
+msgstr "Xóa quy tắc truy cập cho \"{0}\"?"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:257
 msgid "Remove access?"
 msgstr "Xoá quyền truy cập?"
@@ -1268,7 +1332,7 @@ msgstr "Đang khôi phục tài khoản của bạn"
 msgid "Right to Left"
 msgstr "Phải sang trái"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:63
+#: ../../../lib/web/src/components/data-table/pagination.tsx:65
 msgid "Rows per page"
 msgstr "Số hàng mỗi trang"
 
@@ -1343,7 +1407,16 @@ msgstr "Chọn hướng trang web"
 msgid "Select theme preference"
 msgstr "Chọn tùy chọn giao diện"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:98
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
+msgid "selected"
+msgstr "đã chọn"
+
+#. placeholder {0}: getSelectedName()
+#: ../../../lib/web/src/features/access/access-dialog.tsx:309
+msgid "Selected: <0>{0}</0>"
+msgstr "Đã chọn: <0>{0}</0>"
+
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:100
 msgid "Send again"
 msgstr "Gửi lại"
 
@@ -1362,7 +1435,7 @@ msgstr "Lỗi máy chủ"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:40
-#: src/features/landing/landing-page.tsx:469
+#: src/features/landing/landing-page.tsx:470
 msgid "Server rules"
 msgstr "Quy tắc máy chủ"
 
@@ -1456,6 +1529,7 @@ msgid "Sunday"
 msgstr "Chủ nhật"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
 msgid "System"
@@ -1476,7 +1550,7 @@ msgstr "Đội/Ứng dụng"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
 #: ../../../lib/web/src/features/document/document-page.tsx:42
-#: src/features/landing/landing-page.tsx:478
+#: src/features/landing/landing-page.tsx:479
 msgid "Terms and conditions"
 msgstr "Điều khoản và điều kiện"
 
@@ -1517,6 +1591,10 @@ msgstr "Không tìm thấy nội dung được yêu cầu."
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Không thể hoàn tất khôi phục. Tệp sao lưu có thể bị hỏng, cụm mật khẩu có thể sai, hoặc máy chủ gặp lỗi."
 
+#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
+msgid "The site is not available at the moment."
+msgstr "Trang web hiện không khả dụng."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "Giao diện"
@@ -1529,9 +1607,17 @@ msgstr "Cài đặt giao diện"
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Bản sao lưu này được tạo bởi phiên bản mới hơn của Mochi. Hãy cập nhật máy chủ này trước."
 
+#: ../../../lib/web/src/components/coming-soon.tsx:14
+msgid "This page has not been created yet."
+msgstr "Trang này chưa được tạo."
+
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Thứ năm"
+
+#: ../../../lib/web/src/components/travelling-picker.tsx:220
+msgid "To"
+msgstr "Đến"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
 msgid "Toggle columns"
@@ -1656,7 +1742,7 @@ msgstr "Người dùng"
 msgid "Validating backup"
 msgstr "Đang xác thực bản sao lưu"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:71
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "Mã xác minh"
 
@@ -1671,7 +1757,7 @@ msgstr "Xác minh thất bại"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:388
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:109
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "Xác minh"
 
@@ -1691,6 +1777,11 @@ msgstr "Đang xác minh bản sao lưu"
 msgid "Video thumbnail"
 msgstr "Hình thu nhỏ video"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:246
+msgid "Video viewer: {0}"
+msgstr "Trình xem video: {0}"
+
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
 msgid "View"
 msgstr "Xem"
@@ -1699,10 +1790,15 @@ msgstr "Xem"
 msgid "View all"
 msgstr "Xem tất cả"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:105
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
 msgid "View all notifications"
 msgstr "Xem tất cả thông báo"
+
+#. placeholder {0}: account.identifier
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:63
+msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
+msgstr "Chúng tôi đã gửi mã xác minh đến <0>{0}</0>. Nhập mã bên dưới để xác minh địa chỉ email của bạn."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
@@ -1727,6 +1823,10 @@ msgstr "Cụm mật khẩu sai"
 #: ../../../lib/web/src/features/errors/general-error.tsx:61
 msgid "You do not have access to this section."
 msgstr "Bạn không có quyền truy cập vào phần này."
+
+#: ../../../lib/web/src/features/errors/forbidden.tsx:18
+msgid "You don't have necessary permission <0/>to view this resource."
+msgstr "Bạn không có quyền cần thiết <0/>để xem tài nguyên này."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43

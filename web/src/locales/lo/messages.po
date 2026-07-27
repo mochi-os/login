@@ -18,6 +18,31 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "ກະລຸນາກວດສອບການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານ ແລະ ລອງໃໝ່ອີກຄັ້ງ."
 
+#. placeholder {0}: selectedValues.size
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
+msgid "{0, plural, one {# selected} other {# selected}}"
+msgstr "{0, plural, other {# ເລືອກແລ້ວ}}"
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+msgid "{entityLabel} name"
+msgstr "ຊື່ {entityLabel}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
+msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+msgstr "{selectedCount, plural, other {ເລືອກ {manyName} ແລ້ວ}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:52
+msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+msgstr "{selectedCount, plural, other {ເລືອກ # {manyName} ແລ້ວ. ແຖບເຄື່ອງມືການດຳເນີນການເປັນກຸ່ມພ້ອມໃຊ້ງານ.}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:202
+msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+msgstr "{selectedCount, plural, other {# ເລືອກແລ້ວ}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:149
+msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+msgstr "{selectedCount, plural, other {ການດຳເນີນການເປັນກຸ່ມສຳລັບ {manyName} # ທີ່ເລືອກ}}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 ຊົ່ວໂມງ"
@@ -169,9 +194,9 @@ msgstr "ລະຫັດ authenticator"
 msgid "Back"
 msgstr "ກັບຄືນ"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
+#: ../../../lib/web/src/features/errors/forbidden.tsx:28
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:28
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
 msgstr "ກັບໄປໜ້າຫຼັກ"
 
@@ -212,7 +237,7 @@ msgstr "ໂດຍການສ້າງບັນຊີ, ທ່ານຍອມຮ�
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:89
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 msgid "Cancel"
 msgstr "ຍົກເລີກ"
 
@@ -275,28 +300,29 @@ msgstr "ລ້າງ"
 msgid "Clear all"
 msgstr "ລ້າງທັງໝົດ"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:140
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "ລ້າງຕົວກອງ"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:167
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
 msgid "Clear selection"
 msgstr "ລ້າງການເລືອກ"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:168
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:185
 msgid "Clear selection (Escape)"
 msgstr "ລ້າງການເລືອກ (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "ປິດ"
 
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:107
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:112
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:108
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:113
 msgid "Close navigation"
 msgstr "ປິດການນຳທາງ"
 
@@ -402,7 +428,7 @@ msgstr "ບໍ່ສາມາດເລີ່ມການຢືນຢັນຕົ
 msgid "Couldn't verify with that account. Please try again."
 msgstr "ບໍ່ສາມາດຢືນຢັນດ້ວຍບັນຊີນັ້ນໄດ້. ກະລຸນາລອງໃໝ່ອີກຄັ້ງ."
 
-#: src/features/landing/landing-page.tsx:324
+#: src/features/landing/landing-page.tsx:325
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "ສ້າງ<0>ບັນຊີຟຣີ</0>, ແລ່ນ<1>ເຊີບເວີຂອງທ່ານເອງ</1>, ຫຼື ສຳຫຼວດ<2>ໂຄ້ດຕົ້ນສະບັບ</2>."
 
@@ -415,6 +441,7 @@ msgid "Custom"
 msgstr "ກຳນົດເອງ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
 msgstr "ມືດ"
@@ -483,8 +510,8 @@ msgstr "ສະແດງແຖບຂ້າງມືຖື."
 msgid "Done"
 msgstr "ສຳເລັດແລ້ວ"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
 msgstr "ດາວໂຫຼດ"
 
@@ -582,6 +609,14 @@ msgstr "ເພີ່ມບັນຊີລົ້ມເຫຼວ"
 msgid "Failed to continue"
 msgstr "ດຳເນີນການຕໍ່ລົ້ມເຫຼວ"
 
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load image"
+msgstr "ໂຫຼດຮູບພາບບໍ່ສຳເລັດ"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load video"
+msgstr "ໂຫຼດວິດີໂອບໍ່ສຳເລັດ"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:234
 msgid "Failed to remove account"
 msgstr "ຍ້າຍບັນຊີລົ້ມເຫຼວ"
@@ -659,29 +694,29 @@ msgstr "ເກມ"
 msgid "Git repositories"
 msgstr "ບ່ອນເກັບ Git"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:24
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:24
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:24
+#: ../../../lib/web/src/features/errors/forbidden.tsx:26
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "ກັບໄປ"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:78
+#: ../../../lib/web/src/components/data-table/pagination.tsx:82
 msgid "Go to first page"
 msgstr "ໄປໜ້າທຳອິດ"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:124
+#: ../../../lib/web/src/components/data-table/pagination.tsx:128
 msgid "Go to last page"
 msgstr "ໄປໜ້າສຸດທ້າຍ"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:115
+#: ../../../lib/web/src/components/data-table/pagination.tsx:119
 msgid "Go to next page"
 msgstr "ໄປໜ້າຖັດໄປ"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:102
+#: ../../../lib/web/src/components/data-table/pagination.tsx:106
 msgid "Go to page {pageNumber}"
 msgstr "ໄປຫາໜ້າ {pageNumber}"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:87
+#: ../../../lib/web/src/components/data-table/pagination.tsx:91
 msgid "Go to previous page"
 msgstr "ໄປໜ້າກ່ອນໜ້າ"
 
@@ -711,6 +746,11 @@ msgstr "ມາແຮງ"
 #: src/features/auth/identity-form.tsx:56
 msgid "Identity saved"
 msgstr "ບັນທຶກຕົວຕົນແລ້ວ"
+
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:247
+msgid "Image viewer: {0}"
+msgstr "ຕົວເບິ່ງຮູບພາບ: {0}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:86
 msgid "Imperial"
@@ -749,6 +789,10 @@ msgstr "ລະຫັດກູ້ຄືນບໍ່ຖືກຕ້ອງ"
 msgid "Invalid verification code"
 msgstr "ລະຫັດຢືນຢັນບໍ່ຖືກຕ້ອງ"
 
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:18
+msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
+msgstr "ເບິ່ງຄືວ່າໜ້າທີ່ທ່ານກຳລັງຊອກຫາ <0/>ບໍ່ມີ ຫຼື ອາດຖືກລຶບອອກແລ້ວ."
+
 #: ../../../lib/web/src/lib/preference-utils.ts:108
 #: ../../../lib/web/src/lib/preference-utils.ts:135
 msgid "Large"
@@ -768,6 +812,7 @@ msgid "Left to Right"
 msgstr "ຊ້າຍຫາຂວາ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
 msgstr "ສະຫວ່າງ"
@@ -804,11 +849,11 @@ msgstr "ກຳລັງໂຫຼດ..."
 msgid "Log in"
 msgstr "ເຂົ້າສູ່ລະບົບ"
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:369
 msgid "Log in to Mochi"
 msgstr "ເຂົ້າສູ່ລະບົບ Mochi"
 
-#: src/features/landing/landing-page.tsx:434
+#: src/features/landing/landing-page.tsx:435
 msgid "Log in with {label}"
 msgstr "ເຂົ້າສູ່ລະບົບດ້ວຍ {label}"
 
@@ -848,8 +893,8 @@ msgstr "ເຊດຊັນເຂົ້າສູ່ລະບົບໝົດອາ
 msgid "Lost access? Use a recovery code"
 msgstr "ສູນເສຍການເຂົ້າເຖິງບໍ? ໃຊ້ລະຫັດກູ້ຄືນ"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:92
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:99
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "ໝາຍທັງໝົດເປັນອ່ານແລ້ວ"
@@ -870,7 +915,7 @@ msgstr "ເມນູ"
 msgid "Metric"
 msgstr "Metric"
 
-#: src/features/landing/landing-page.tsx:292
+#: src/features/landing/landing-page.tsx:293
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi ເປັນແພລດຟອມ ໂອເພນຊອສ ແບບເຟເດີເຣເຕັດ ຫຼາຍຜູ້ໃຊ້ ສຳລັບແອັບແບບກະຈາຍ. ໃຜກໍສາມາດແລ່ນເຊີບເວີຂອງຕົນເອງ ແລະ ເຊື່ອມຕໍ່ຫາຜູ້ໃຊ້ຄົນອື່ນໃດກໍໄດ້ໃນເຄືອຂ່າຍ Mochi. ໃຜກໍສາມາດສ້າງ ແລະ ເຜີຍແຜ່ແອັບໄດ້. ທຸກແອັບສາມາດປ່ຽນແທນໄດ້ ເຖິງແມ່ນແອັບລະບົບ. ເຊີບເວີມາພ້ອມກັບແອັບຫຼາຍກວ່າ 20 ແອັບ ລວມທັງ:"
 
@@ -901,8 +946,8 @@ msgstr "ການລົງທະບຽນຜູ້ໃຊ້ໃໝ່ຖືກປ
 msgid "Next"
 msgstr "ຕໍ່ໄປ"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
 msgstr "ຮູບຕໍ່ໄປ"
 
@@ -936,7 +981,7 @@ msgid "No profile"
 msgstr "ບໍ່ມີໂປຣໄຟລ໌"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:90
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "ບໍ່ພົບຜົນ."
 
@@ -986,6 +1031,11 @@ msgstr "ບໍ່ໄດ້ຕັ້ງຄ່າ"
 msgid "Notifications"
 msgstr "ການແຈ້ງເຕືອນ"
 
+#. placeholder {0}: unread.length
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+msgid "Notifications: {0}"
+msgstr "ການແຈ້ງເຕືອນ: {0}"
+
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:16
 msgid "Oops! Page Not Found!"
 msgstr "ອຸບຍ! ບໍ່ພົບໜ້າ!"
@@ -1020,7 +1070,7 @@ msgid "Or enter authenticator code"
 msgstr "ຫຼືໃສ່ລະຫັດຢືນຢັນຕົວຕົນ"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:467
-#: src/features/landing/landing-page.tsx:403
+#: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "ຫຼືເຂົ້າສູ່ລະບົບດ້ວຍ"
 
@@ -1036,13 +1086,18 @@ msgstr "ຜູ້ໃຊ້ຄົນອື່ນສາມາດຊອກຫາໂ
 msgid "Owner"
 msgstr "ເຈົ້າຂອງ"
 
+#: ../../../lib/web/src/components/data-table/pagination.tsx:43
+#: ../../../lib/web/src/components/data-table/pagination.tsx:71
+msgid "Page {currentPage} of {totalPages}"
+msgstr "ໜ້າ {currentPage} ຈາກ {totalPages}"
+
 #: src/features/auth/mfa/index.tsx:213
 msgid "passkey"
 msgstr "passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 #: src/features/auth/mfa/index.tsx:303
-#: src/features/landing/landing-page.tsx:422
+#: src/features/landing/landing-page.tsx:423
 msgid "Passkey"
 msgstr "Passkey"
 
@@ -1120,6 +1175,10 @@ msgstr "ກະລຸນາປ້ອນຊື່ຂອງທ່ານ"
 msgid "Please enter your recovery code"
 msgstr "ກະລຸນາປ້ອນລະຫັດກູ້ຄືນຂອງທ່ານ"
 
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
+msgid "Please log in with the appropriate credentials <0/> to access this resource."
+msgstr "ກະລຸນາເຂົ້າສູ່ລະບົບດ້ວຍຂໍ້ມູນປະຈຳຕົວທີ່ເໝາະສົມ <0/> ເພື່ອເຂົ້າເຖິງຊັບພະຍາກອນນີ້."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:181
 #: src/features/auth/sign-in/components/user-auth-form.tsx:230
 #: src/features/auth/sign-in/components/user-auth-form.tsx:333
@@ -1138,15 +1197,15 @@ msgstr "ກະລຸນາໃຊ້ປຸ່ມ \"ເຂົ້າສູ່ລະ
 msgid "Please wait a moment and try again."
 msgstr "ກະລຸນາລໍຖ້າຈັກໜ້ອຍ ແລ້ວລອງໃໝ່ອີກຄັ້ງ."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:377
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:382
 msgid "Previous image"
 msgstr "ຮູບກ່ອນໜ້າ"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:27
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 #: src/features/auth/identity-form.tsx:97
-#: src/features/landing/landing-page.tsx:487
+#: src/features/landing/landing-page.tsx:488
 msgid "Privacy"
 msgstr "ຄວາມເປັນສ່ວນຕົວ"
 
@@ -1229,6 +1288,11 @@ msgstr "ລຶບອອກ"
 msgid "Remove access rule"
 msgstr "ລຶບກົດການເຂົ້າເຖິງ"
 
+#. placeholder {0}: formatSubject(subject, data.name)
+#: ../../../lib/web/src/features/access/access-list.tsx:259
+msgid "Remove access rule for \"{0}\"?"
+msgstr "ລຶບກົດການເຂົ້າເຖິງສຳລັບ \"{0}\" ບໍ?"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:257
 msgid "Remove access?"
 msgstr "ລຶບການເຂົ້າເຖິງ?"
@@ -1268,7 +1332,7 @@ msgstr "ກໍາລັງກູ້ຄືນບັນຊີຂອງທ່ານ
 msgid "Right to Left"
 msgstr "ຂວາໄປຊ້າຍ"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:63
+#: ../../../lib/web/src/components/data-table/pagination.tsx:65
 msgid "Rows per page"
 msgstr "ແຖວຕໍ່ໜ້າ"
 
@@ -1343,7 +1407,16 @@ msgstr "ເລືອກທິດທາງເວັບໄຊ"
 msgid "Select theme preference"
 msgstr "ເລືອກຄວາມຕ້ອງການຮູບແບບ"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:98
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
+msgid "selected"
+msgstr "ເລືອກແລ້ວ"
+
+#. placeholder {0}: getSelectedName()
+#: ../../../lib/web/src/features/access/access-dialog.tsx:309
+msgid "Selected: <0>{0}</0>"
+msgstr "ເລືອກແລ້ວ: <0>{0}</0>"
+
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:100
 msgid "Send again"
 msgstr "ສົ່ງອີກຄັ້ງ"
 
@@ -1362,7 +1435,7 @@ msgstr "ຂໍ້ຜິດພາດເຊີບເວີ"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:40
-#: src/features/landing/landing-page.tsx:469
+#: src/features/landing/landing-page.tsx:470
 msgid "Server rules"
 msgstr "ກົດລະບຽບເຊີບເວີ"
 
@@ -1456,6 +1529,7 @@ msgid "Sunday"
 msgstr "ວັນອາທິດ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
 msgid "System"
@@ -1476,7 +1550,7 @@ msgstr "ທີມ/ແອັບ"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
 #: ../../../lib/web/src/features/document/document-page.tsx:42
-#: src/features/landing/landing-page.tsx:478
+#: src/features/landing/landing-page.tsx:479
 msgid "Terms and conditions"
 msgstr "ຂໍ້ກຳນົດແລະເງື່ອນໄຂ"
 
@@ -1517,6 +1591,10 @@ msgstr "ບໍ່ພົບເນື້ອຫາທີ່ຮ້ອງຂໍ."
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "ການກູ້ຄືນບໍ່ສຳເລັດ. ໄຟລ໌ສຳຮອງອາດຈະຖືກເສຍຫາຍ, ລະຫັດຜ່ານອາດຈະຜິດ, ຫຼື ເຊີບເວີພົບຂໍ້ຜິດພາດ."
 
+#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
+msgid "The site is not available at the moment."
+msgstr "ເວັບໄຊທ໌ບໍ່ສາມາດໃຊ້ໄດ້ໃນຂະນະນີ້."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "ຮູບແບບ"
@@ -1529,9 +1607,17 @@ msgstr "ການຕັ້ງຄ່າຮູບແບບ"
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "ໄຟລ໌ສຳຮອງນີ້ຖືກສ້າງໂດຍ Mochi ລຸ້ນໃໝ່ກວ່າ. ອັບເດດເຊີບເວີນີ້ກ່ອນ."
 
+#: ../../../lib/web/src/components/coming-soon.tsx:14
+msgid "This page has not been created yet."
+msgstr "ໜ້ານີ້ຍັງບໍ່ໄດ້ຖືກສ້າງຂຶ້ນ."
+
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "ວັນພະຫັດ"
+
+#: ../../../lib/web/src/components/travelling-picker.tsx:220
+msgid "To"
+msgstr "ໄປ"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
 msgid "Toggle columns"
@@ -1656,7 +1742,7 @@ msgstr "ຜູ້ໃຊ້"
 msgid "Validating backup"
 msgstr "ກໍາລັງຢືນຢັນໄຟລ໌ສຳຮອງ"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:71
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "ລະຫັດການຢືນຢັນ"
 
@@ -1671,7 +1757,7 @@ msgstr "ການຢືນຢັນລົ້ມເຫຼວ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:388
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:109
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "ຢືນຢັນ"
 
@@ -1691,6 +1777,11 @@ msgstr "ກໍາລັງກວດສອບໄຟລ໌ສຳຮອງ"
 msgid "Video thumbnail"
 msgstr "ຮູບຫຍໍ້ວິດີໂອ"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:246
+msgid "Video viewer: {0}"
+msgstr "ຕົວເບິ່ງວິດີໂອ: {0}"
+
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
 msgid "View"
 msgstr "ເບິ່ງ"
@@ -1699,10 +1790,15 @@ msgstr "ເບິ່ງ"
 msgid "View all"
 msgstr "ເບິ່ງທັງໝົດ"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:105
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
 msgid "View all notifications"
 msgstr "ເບິ່ງການແຈ້ງເຕືອນທັງໝົດ"
+
+#. placeholder {0}: account.identifier
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:63
+msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
+msgstr "ພວກເຮົາໄດ້ສົ່ງລະຫັດຢືນຢັນໄປທີ່ <0>{0}</0>. ປ້ອນລະຫັດຂ້າງລຸ່ມນີ້ເພື່ອຢືນຢັນທີ່ຢູ່ອີເມວຂອງທ່ານ."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
@@ -1727,6 +1823,10 @@ msgstr "ລະຫັດຜ່ານຜິດ"
 #: ../../../lib/web/src/features/errors/general-error.tsx:61
 msgid "You do not have access to this section."
 msgstr "ທ່ານບໍ່ມີສິດເຂົ້າເຖິງພາກສ່ວນນີ້."
+
+#: ../../../lib/web/src/features/errors/forbidden.tsx:18
+msgid "You don't have necessary permission <0/>to view this resource."
+msgstr "ທ່ານບໍ່ມີສິດທີ່ຈຳເປັນ <0/>ໃນການເບິ່ງຊັບພະຍາກອນນີ້."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43

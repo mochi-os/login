@@ -18,6 +18,31 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Zkontrolujte připojení k internetu a zkuste to znovu."
 
+#. placeholder {0}: selectedValues.size
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
+msgid "{0, plural, one {# selected} other {# selected}}"
+msgstr "{0, plural, one {# vybráno} few {# vybráno} other {# vybráno}}"
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+msgid "{entityLabel} name"
+msgstr "Název {entityLabel}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
+msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+msgstr "{selectedCount, plural, one {Vybráno {entityName}} few {Vybrány {manyName}} other {Vybráno {manyName}}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:52
+msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+msgstr "{selectedCount, plural, one {Vybrán # {entityName}. Panel hromadných akcí je k dispozici.} few {Vybrány # {manyName}. Panel hromadných akcí je k dispozici.} other {Vybráno # {manyName}. Panel hromadných akcí je k dispozici.}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:202
+msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+msgstr "{selectedCount, plural, one {# vybráno} few {# vybráno} other {# vybráno}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:149
+msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+msgstr "{selectedCount, plural, one {Hromadné akce pro # vybraný {entityName}} few {Hromadné akce pro # vybrané {manyName}} other {Hromadné akce pro # vybraných {manyName}}}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 hodin"
@@ -169,9 +194,9 @@ msgstr "Autentizační kód"
 msgid "Back"
 msgstr "Zpět"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
+#: ../../../lib/web/src/features/errors/forbidden.tsx:28
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:28
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
 msgstr "Zpět na úvod"
 
@@ -212,7 +237,7 @@ msgstr "Vytvořením účtu souhlasíte s <0>Pravidly serveru</0>, <1>Smluvními
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:89
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 msgid "Cancel"
 msgstr "Zrušit"
 
@@ -275,28 +300,29 @@ msgstr "Vymazat"
 msgid "Clear all"
 msgstr "Vymazat vše"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:140
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "Vymazat filtry"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:167
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
 msgid "Clear selection"
 msgstr "Zrušit výběr"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:168
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:185
 msgid "Clear selection (Escape)"
 msgstr "Zrušit výběr (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Zavřít"
 
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:107
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:112
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:108
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:113
 msgid "Close navigation"
 msgstr "Zavřít navigaci"
 
@@ -402,7 +428,7 @@ msgstr "Opětovné ověření se nepodařilo zahájit. Zkuste to prosím znovu."
 msgid "Couldn't verify with that account. Please try again."
 msgstr "S tímto účtem se nepodařilo ověřit. Zkuste to prosím znovu."
 
-#: src/features/landing/landing-page.tsx:324
+#: src/features/landing/landing-page.tsx:325
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "Vytvořte si <0>bezplatný účet</0>, provozujte <1>vlastní server</1> nebo prozkoumejte <2>zdrojový kód</2>."
 
@@ -415,6 +441,7 @@ msgid "Custom"
 msgstr "Vlastní"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
 msgstr "Tmavá"
@@ -483,8 +510,8 @@ msgstr "Zobrazí mobilní postranní panel."
 msgid "Done"
 msgstr "Hotovo"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
 msgstr "Stáhnout"
 
@@ -582,6 +609,14 @@ msgstr "Nepodařilo se přidat účet"
 msgid "Failed to continue"
 msgstr "Nepodařilo se pokračovat"
 
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load image"
+msgstr "Obrázek se nepodařilo načíst"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load video"
+msgstr "Video se nepodařilo načíst"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:234
 msgid "Failed to remove account"
 msgstr "Nepodařilo se odebrat účet"
@@ -659,29 +694,29 @@ msgstr "Hry"
 msgid "Git repositories"
 msgstr "Git repozitáře"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:24
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:24
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:24
+#: ../../../lib/web/src/features/errors/forbidden.tsx:26
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Zpět"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:78
+#: ../../../lib/web/src/components/data-table/pagination.tsx:82
 msgid "Go to first page"
 msgstr "Přejít na první stránku"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:124
+#: ../../../lib/web/src/components/data-table/pagination.tsx:128
 msgid "Go to last page"
 msgstr "Přejít na poslední stránku"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:115
+#: ../../../lib/web/src/components/data-table/pagination.tsx:119
 msgid "Go to next page"
 msgstr "Přejít na další stránku"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:102
+#: ../../../lib/web/src/components/data-table/pagination.tsx:106
 msgid "Go to page {pageNumber}"
 msgstr "Přejít na stránku {pageNumber}"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:87
+#: ../../../lib/web/src/components/data-table/pagination.tsx:91
 msgid "Go to previous page"
 msgstr "Přejít na předchozí stránku"
 
@@ -711,6 +746,11 @@ msgstr "Žhavé"
 #: src/features/auth/identity-form.tsx:56
 msgid "Identity saved"
 msgstr "Identita uložena"
+
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:247
+msgid "Image viewer: {0}"
+msgstr "Prohlížeč obrázků: {0}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:86
 msgid "Imperial"
@@ -749,6 +789,10 @@ msgstr "Neplatný obnovovací kód"
 msgid "Invalid verification code"
 msgstr "Neplatný ověřovací kód"
 
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:18
+msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
+msgstr "Zdá se, že stránka, kterou hledáte, <0/>neexistuje nebo byla odebrána."
+
 #: ../../../lib/web/src/lib/preference-utils.ts:108
 #: ../../../lib/web/src/lib/preference-utils.ts:135
 msgid "Large"
@@ -768,6 +812,7 @@ msgid "Left to Right"
 msgstr "Zleva doprava"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
 msgstr "Světlý"
@@ -804,11 +849,11 @@ msgstr "Načítám..."
 msgid "Log in"
 msgstr "Přihlásit se"
 
-#: src/features/landing/landing-page.tsx:368
+#: src/features/landing/landing-page.tsx:369
 msgid "Log in to Mochi"
 msgstr "Přihlásit se do Mochi"
 
-#: src/features/landing/landing-page.tsx:434
+#: src/features/landing/landing-page.tsx:435
 msgid "Log in with {label}"
 msgstr "Přihlásit se pomocí {label}"
 
@@ -848,8 +893,8 @@ msgstr "Přihlašovací relace vypršela, zkuste to prosím znovu"
 msgid "Lost access? Use a recovery code"
 msgstr "Ztracený přístup? Použijte obnovovací kód"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:92
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:99
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Označit vše jako přečtené"
@@ -870,7 +915,7 @@ msgstr "Menu"
 msgid "Metric"
 msgstr "Metrika"
 
-#: src/features/landing/landing-page.tsx:292
+#: src/features/landing/landing-page.tsx:293
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi je federovaná, víceuživatelská platforma s otevřeným zdrojovým kódem pro distribuované aplikace. Kdokoli může provozovat vlastní server a připojit se k libovolnému jinému uživateli v síti Mochi. Kdokoli může vytvářet a publikovat aplikace. Každá aplikace je nahraditelná, dokonce i systémové. Server obsahuje více než 20 aplikací, mimo jiné:"
 
@@ -901,8 +946,8 @@ msgstr "Registrace nových uživatelů je vypnuta."
 msgid "Next"
 msgstr "Další"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
 msgstr "Další obrázek"
 
@@ -936,7 +981,7 @@ msgid "No profile"
 msgstr "Žádný profil"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:90
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "Žádné výsledky nenalezeny."
 
@@ -986,6 +1031,11 @@ msgstr "Nenastaveno"
 msgid "Notifications"
 msgstr "Oznámení"
 
+#. placeholder {0}: unread.length
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+msgid "Notifications: {0}"
+msgstr "Oznámení: {0}"
+
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:16
 msgid "Oops! Page Not Found!"
 msgstr "Jejda! Stránka nenalezena!"
@@ -1020,7 +1070,7 @@ msgid "Or enter authenticator code"
 msgstr "Nebo zadejte ověřovací kód"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:467
-#: src/features/landing/landing-page.tsx:403
+#: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "Nebo se přihlaste pomocí"
 
@@ -1036,13 +1086,18 @@ msgstr "Ostatní uživatelé mohou najít váš profil."
 msgid "Owner"
 msgstr "Vlastník"
 
+#: ../../../lib/web/src/components/data-table/pagination.tsx:43
+#: ../../../lib/web/src/components/data-table/pagination.tsx:71
+msgid "Page {currentPage} of {totalPages}"
+msgstr "Stránka {currentPage} z {totalPages}"
+
 #: src/features/auth/mfa/index.tsx:213
 msgid "passkey"
 msgstr "passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 #: src/features/auth/mfa/index.tsx:303
-#: src/features/landing/landing-page.tsx:422
+#: src/features/landing/landing-page.tsx:423
 msgid "Passkey"
 msgstr "Passkey"
 
@@ -1120,6 +1175,10 @@ msgstr "Zadejte své jméno"
 msgid "Please enter your recovery code"
 msgstr "Zadejte záchranný kód"
 
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
+msgid "Please log in with the appropriate credentials <0/> to access this resource."
+msgstr "Přihlaste se prosím s příslušnými přihlašovacími údaji, <0/> abyste získali přístup k tomuto zdroji."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:181
 #: src/features/auth/sign-in/components/user-auth-form.tsx:230
 #: src/features/auth/sign-in/components/user-auth-form.tsx:333
@@ -1138,15 +1197,15 @@ msgstr "Použijte tlačítko „Přihlásit pomocí passkey“."
 msgid "Please wait a moment and try again."
 msgstr "Chvíli počkejte a zkuste to znovu."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:377
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:382
 msgid "Previous image"
 msgstr "Předchozí obrázek"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:27
 #: ../../../lib/web/src/features/document/document-page.tsx:44
 #: src/features/auth/identity-form.tsx:97
-#: src/features/landing/landing-page.tsx:487
+#: src/features/landing/landing-page.tsx:488
 msgid "Privacy"
 msgstr "Soukromí"
 
@@ -1229,6 +1288,11 @@ msgstr "Odebrat"
 msgid "Remove access rule"
 msgstr "Odebrat pravidlo přístupu"
 
+#. placeholder {0}: formatSubject(subject, data.name)
+#: ../../../lib/web/src/features/access/access-list.tsx:259
+msgid "Remove access rule for \"{0}\"?"
+msgstr "Odebrat pravidlo přístupu pro „{0}“?"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:257
 msgid "Remove access?"
 msgstr "Odebrat přístup?"
@@ -1268,7 +1332,7 @@ msgstr "Obnovování vašeho účtu"
 msgid "Right to Left"
 msgstr "Zprava doleva"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:63
+#: ../../../lib/web/src/components/data-table/pagination.tsx:65
 msgid "Rows per page"
 msgstr "Řádků na stránku"
 
@@ -1343,7 +1407,16 @@ msgstr "Vyberte směr písma"
 msgid "Select theme preference"
 msgstr "Vyberte preferenci motivu"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:98
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
+msgid "selected"
+msgstr "vybráno"
+
+#. placeholder {0}: getSelectedName()
+#: ../../../lib/web/src/features/access/access-dialog.tsx:309
+msgid "Selected: <0>{0}</0>"
+msgstr "Vybráno: <0>{0}</0>"
+
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:100
 msgid "Send again"
 msgstr "Odeslat znovu"
 
@@ -1362,7 +1435,7 @@ msgstr "Chyba serveru"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:19
 #: ../../../lib/web/src/features/document/document-page.tsx:40
-#: src/features/landing/landing-page.tsx:469
+#: src/features/landing/landing-page.tsx:470
 msgid "Server rules"
 msgstr "Pravidla serveru"
 
@@ -1456,6 +1529,7 @@ msgid "Sunday"
 msgstr "Neděle"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
 msgid "System"
@@ -1476,7 +1550,7 @@ msgstr "Týmy/Aplikace"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx:23
 #: ../../../lib/web/src/features/document/document-page.tsx:42
-#: src/features/landing/landing-page.tsx:478
+#: src/features/landing/landing-page.tsx:479
 msgid "Terms and conditions"
 msgstr "Smluvní podmínky"
 
@@ -1517,6 +1591,10 @@ msgstr "Požadovaný obsah se nepodařilo najít."
 msgid "The restore did not complete. The backup file may be damaged, the passphrase may be wrong, or the server encountered an error."
 msgstr "Obnovení se nedokončilo. Záložní soubor může být poškozen, přístupové heslo může být nesprávné nebo server narazil na chybu."
 
+#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
+msgid "The site is not available at the moment."
+msgstr "Web momentálně není dostupný."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "Motiv"
@@ -1529,9 +1607,17 @@ msgstr "Nastavení motivu"
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Tato záloha byla vytvořena novější verzí Mochi. Nejprve aktualizujte tento server."
 
+#: ../../../lib/web/src/components/coming-soon.tsx:14
+msgid "This page has not been created yet."
+msgstr "Tato stránka zatím nebyla vytvořena."
+
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Čtvrtek"
+
+#: ../../../lib/web/src/components/travelling-picker.tsx:220
+msgid "To"
+msgstr "Kam"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
 msgid "Toggle columns"
@@ -1656,7 +1742,7 @@ msgstr "Uživatel"
 msgid "Validating backup"
 msgstr "Ověřování zálohy"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:71
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "Ověřovací kód"
 
@@ -1671,7 +1757,7 @@ msgstr "Ověření selhalo"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:388
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:109
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "Ověřit"
 
@@ -1691,6 +1777,11 @@ msgstr "Kontrola zálohy"
 msgid "Video thumbnail"
 msgstr "Náhled videa"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:246
+msgid "Video viewer: {0}"
+msgstr "Přehrávač videa: {0}"
+
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
 msgid "View"
 msgstr "Zobrazit"
@@ -1699,10 +1790,15 @@ msgstr "Zobrazit"
 msgid "View all"
 msgstr "Zobrazit vše"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:105
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
 msgid "View all notifications"
 msgstr "Zobrazit všechna oznámení"
+
+#. placeholder {0}: account.identifier
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:63
+msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
+msgstr "Ověřovací kód jsme odeslali na <0>{0}</0>. Zadejte kód níže pro ověření vaší e-mailové adresy."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
@@ -1727,6 +1823,10 @@ msgstr "Nesprávné přístupové heslo"
 #: ../../../lib/web/src/features/errors/general-error.tsx:61
 msgid "You do not have access to this section."
 msgstr "K této sekci nemáte přístup."
+
+#: ../../../lib/web/src/features/errors/forbidden.tsx:18
+msgid "You don't have necessary permission <0/>to view this resource."
+msgstr "Nemáte potřebné oprávnění <0/>k zobrazení tohoto zdroje."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43
