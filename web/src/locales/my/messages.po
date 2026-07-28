@@ -23,9 +23,18 @@ msgstr "သင့်အင်တာနက်ချိတ်ဆက်မှုက
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, other {# ရွေးထား}}"
 
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+#. placeholder {0}: item.label
+#: ../../../lib/web/src/components/config-drawer.tsx:160
+msgid "{0} option preview"
+msgstr ""
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:174
 msgid "{entityLabel} name"
 msgstr "{entityLabel} အမည်"
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:99
+msgid "{entityLabel} name is required"
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
@@ -42,6 +51,10 @@ msgstr "{selectedCount, plural, other {# ခု ရွေးထားသည်}}
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:149
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, other {ရွေးချယ်ထားသော {manyName} # ခုအတွက် အစုလိုက်လုပ်ဆောင်ချက်များ}}"
+
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
+msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -63,7 +76,7 @@ msgstr "ဝင်ရောက်ခွင့် ငြင်းပယ်ခံ�
 msgid "Access Forbidden"
 msgstr "ဝင်ရောက်ခွင့် တားမြစ်ထားသည်"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:192
+#: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "ဝင်ရောက်ခွင့်အဆင့်"
 
@@ -93,6 +106,7 @@ msgstr "အကောင့်အမျိုးအစား"
 msgid "Account verified"
 msgstr "အကောင့် အတည်ပြုပြီး"
 
+#: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
 msgstr "ထည့်မည်"
@@ -114,11 +128,12 @@ msgstr "အကောင့် ထည့်မည်"
 msgid "Add an account to receive notifications and use services."
 msgstr "အကြောင်းကြားချက်များ ရရှိရန်နှင့် ဝန်ဆောင်မှုများ အသုံးပြုရန် အကောင့်တစ်ခု ထည့်မည်။"
 
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:101
+#: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
 msgstr "အကောင့်အသစ် ထည့်မည်"
 
 #: ../../../lib/web/src/components/post-tags.tsx:137
+#: ../../../lib/web/src/components/tag-input.tsx:40
 msgid "Add tag..."
 msgstr "tag ထည့်ရန်..."
 
@@ -135,7 +150,11 @@ msgstr "ရှိပြီးသား အကြောင်းကြားခ�
 msgid "Add view"
 msgstr "ကြည့်ရှုမှု ထည့်မည်"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:71
+#: ../../../lib/web/src/features/access/access-dialog.tsx:332
+msgid "Adding..."
+msgstr "ထည့်နေသည်..."
+
+#: ../../../lib/web/src/components/config-drawer.tsx:72
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "သင့်စိတ်ကြိုက်အတိုင်း အသွင်အပြင်နှင့် အပြင်အဆင်ကို ချိန်ညှိပါ။"
 
@@ -150,6 +169,11 @@ msgstr "AI"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:163
 msgid "All"
 msgstr "အားလုံး"
+
+#. placeholder {0}: entityLabel.toLowerCase()
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:85
+msgid "Allow anyone to search for {0}"
+msgstr ""
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:41
@@ -168,6 +192,19 @@ msgstr "အမှားတစ်ခု ဖြစ်ပွားခဲ့သည�
 msgid "An unexpected error occurred"
 msgstr "မမျှော်လင့်ထားသော အမှားတစ်ခု ဖြစ်ပွားခဲ့သည်"
 
+#: ../../../lib/web/src/features/accounts/types.ts:16
+msgid "Android push"
+msgstr ""
+
+#: ../../../lib/web/src/features/access/access-list.tsx:45
+#: ../../../lib/web/src/features/access/types.ts:42
+msgid "Anyone"
+msgstr "မည်သူမဆို"
+
+#: ../../../lib/web/src/features/access/types.ts:41
+msgid "Anyone who is logged in"
+msgstr ""
+
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:27
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "log out လုပ်မှာသေချာပါသလား? သင့်အကောင့်ကို ပြန်ဝင်ရန် log in ပြန်လုပ်ရမည်။"
@@ -180,6 +217,11 @@ msgstr "Asc"
 msgid "Ascending"
 msgstr "ငယ်စဉ်ကြီးလိုက်"
 
+#: ../../../lib/web/src/features/access/access-list.tsx:46
+#: ../../../lib/web/src/features/access/types.ts:41
+msgid "Authenticated users"
+msgstr "အတည်ပြုပြီး အသုံးပြုသူများ"
+
 #: src/features/auth/mfa/index.tsx:212
 msgid "authenticator code"
 msgstr "authenticator ကုဒ်"
@@ -189,7 +231,15 @@ msgstr "authenticator ကုဒ်"
 msgid "Authenticator code"
 msgstr "Authenticator ကုဒ်"
 
-#: ../../../lib/web/src/components/place-picker.tsx:155
+#: ../../../lib/web/src/components/entity-avatar.tsx:99
+msgid "Avatar"
+msgstr "အသွင်ပုံ"
+
+#: ../../../lib/web/src/components/entity-avatar.tsx:99
+msgid "Avatar for {name}"
+msgstr ""
+
+#: ../../../lib/web/src/components/place-picker.tsx:156
 #: src/features/auth/sign-in/components/user-auth-form.tsx:497
 msgid "Back"
 msgstr "နောက်သို့"
@@ -216,6 +266,10 @@ msgstr "Backup ဖိုင် ပျက်စီးနေသည်"
 msgid "Backup is too new"
 msgstr "Backup သည် အလွန်သစ်နေသည်"
 
+#: ../../../lib/web/src/components/entity-banner.tsx:17
+msgid "Banner"
+msgstr "ပိုစတာ"
+
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
@@ -225,6 +279,10 @@ msgstr "စိတ်ဝင်စားမှု မြှင့်တင်မ�
 msgid "Bring an existing account onto this server:"
 msgstr "ရှိပြီးသား account ကို ဤ server သို့ ယူဆောင်လာပါ:"
 
+#: ../../../lib/web/src/features/accounts/types.ts:13
+msgid "Browser notifications"
+msgstr "Browser အကြောင်းကြားချက်များ"
+
 #: src/features/auth/identity-form.tsx:144
 msgid "By creating your account, you agree to the <0>Server rules</0>, <1>Terms and conditions</1>, and <2>Privacy</2>."
 msgstr "သင့်အကောင့်ဖန်တီးခြင်းဖြင့် <0>Server စည်းမျဉ်းများ</0>၊ <1>စည်းကမ်းချက်များ</1>၊ နှင့် <2>ကိုယ်ရေးကိုယ်တာ</2> ကို သဘောတူသည်။"
@@ -232,10 +290,10 @@ msgstr "သင့်အကောင့်ဖန်တီးခြင်းဖြ
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:67
 #: ../../../lib/web/src/components/step-up-dialog.tsx:363
 #: ../../../lib/web/src/components/travelling-picker.tsx:308
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:248
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:249
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
-#: ../../../lib/web/src/features/access/access-list.tsx:263
+#: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 msgid "Cancel"
@@ -254,6 +312,10 @@ msgstr "အကြောင်းကြားချက် အမျိုးအ�
 msgid "Chat"
 msgstr "စကားပြောခန်း"
 
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:198
+msgid "Check \"All\" to see your past notifications."
+msgstr "ယခင်အကြောင်းကြားချက်များကြည့်ရန် \"အားလုံး\" ကိုရွေးပါ။"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Check your email."
 msgstr "သင့် email ကို စစ်ဆေးပါ။"
@@ -266,19 +328,19 @@ msgstr "စစ်ဆေးနေသည်…"
 msgid "Choose a different local email or log in instead."
 msgstr "အခြားဒေသခံအီးမေးလ်ကို ရွေးချယ်ပါ သို့မဟုတ် အစား ဝင်ရောက်ပါ။"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:328
+#: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
 msgstr "ပုံမှန်ချဲ့ထားသော၊ icon တင်ကျစ်ကျစ်၊ သို့မဟုတ် အပြည့်အစုံ layout အကြား ရွေးချယ်ပါ"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:270
+#: ../../../lib/web/src/components/config-drawer.tsx:271
 msgid "Choose between inset, floating, or standard sidebar layout"
 msgstr "inset၊ floating၊ သို့မဟုတ် စံပြ ဘေးဘား layout အကြား ရွေးချယ်ပါ"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:371
+#: ../../../lib/web/src/components/config-drawer.tsx:372
 msgid "Choose between left-to-right or right-to-left site direction"
 msgstr "ဘယ်မှ ညာ သို့မဟုတ် ညာမှ ဘယ် site ဦးတည်ရာ အကြား ရွေးချယ်ပါ"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:226
+#: ../../../lib/web/src/components/config-drawer.tsx:227
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "system စိတ်ကြိုက်၊ အလင်းပုံစံ၊ သို့မဟုတ် အမှောင်ပုံစံ အကြား ရွေးချယ်ပါ"
 
@@ -287,8 +349,8 @@ msgstr "system စိတ်ကြိုက်၊ အလင်းပုံစံ�
 msgid "Choose language"
 msgstr "ဘာသာစကား ရွေးချယ်ပါ"
 
-#: ../../../lib/web/src/components/colour-picker.tsx:269
-#: ../../../lib/web/src/components/colour-picker.tsx:350
+#: ../../../lib/web/src/components/colour-picker.tsx:270
+#: ../../../lib/web/src/components/colour-picker.tsx:351
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
 #: ../../../lib/web/src/components/travelling-picker.tsx:170
 #: ../../../lib/web/src/components/travelling-picker.tsx:231
@@ -296,13 +358,17 @@ msgstr "ဘာသာစကား ရွေးချယ်ပါ"
 msgid "Clear"
 msgstr "ရှင်းမည်"
 
-#: ../../../lib/web/src/components/filter-bar.tsx:73
+#: ../../../lib/web/src/components/filter-bar.tsx:74
 msgid "Clear all"
 msgstr "အားလုံး ရှင်းမည်"
 
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "filter များ ရှင်းမည်"
+
+#: ../../../lib/web/src/components/search-input.tsx:26
+msgid "Clear search"
+msgstr "ရှာဖွေမှု ရှင်းမည်"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
@@ -358,7 +424,11 @@ msgstr "အဆင်ပြေသည်"
 msgid "Coming Soon!"
 msgstr "မကြာမီ ရောက်လာမည်!"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:315
+#: ../../../lib/web/src/components/ui/command.tsx:34
+msgid "Command Palette"
+msgstr ""
+
+#: ../../../lib/web/src/components/config-drawer.tsx:316
 #: ../../../lib/web/src/lib/preference-utils.ts:95
 msgid "Compact"
 msgstr "ကျစ်လျစ်"
@@ -367,10 +437,26 @@ msgstr "ကျစ်လျစ်"
 msgid "Complete verification to continue"
 msgstr "ဆက်လက်လုပ်ဆောင်ရန် အတည်ပြုခြင်း ပြီးစီးအောင်လုပ်ပါ"
 
-#: ../../../lib/web/src/components/place-picker.tsx:159
+#: ../../../lib/web/src/components/place-picker.tsx:160
 #: ../../../lib/web/src/components/travelling-picker.tsx:316
 msgid "Confirm"
 msgstr "အတည်ပြုမည်"
+
+#: ../../../lib/web/src/lib/chat-ui.ts:18
+msgid "Connected"
+msgstr "ချိတ်ဆက်ပြီး"
+
+#: ../../../lib/web/src/features/accounts/account-manager.tsx:191
+msgid "Connected accounts"
+msgstr "ချိတ်ဆက်ထားသော အကောင့်များ"
+
+#: ../../../lib/web/src/lib/chat-ui.ts:21
+msgid "Connecting..."
+msgstr "ချိတ်ဆက်နေသည်..."
+
+#: ../../../lib/web/src/lib/handle-server-error.ts:18
+msgid "Content not found."
+msgstr "အကြောင်းအရာ မတွေ့ပါ။"
 
 #: ../../../lib/web/src/lib/query-client.ts:81
 msgid "Content not modified"
@@ -394,7 +480,15 @@ msgstr "ပိတ်ခြင်းကို ဆက်လုပ်ပြီး �
 msgid "Continue with {label}"
 msgstr "{label} ဖြင့် ဆက်လက်လုပ်ဆောင်ပါ"
 
-#: ../../../lib/web/src/components/ui/copy-button.tsx:63
+#: ../../../lib/web/src/lib/toast-utils.ts:42
+msgid "Copied"
+msgstr "ကူးယူပြီးပါပြီ"
+
+#: ../../../lib/web/src/components/ui/copy-button.tsx:25
+msgid "Copied to clipboard"
+msgstr "ကလစ်ဘုတ်သို့ ကူးပြီး"
+
+#: ../../../lib/web/src/components/ui/copy-button.tsx:64
 msgid "Copy"
 msgstr "ကူးမည်"
 
@@ -428,19 +522,32 @@ msgstr "ပြန်လည်အတည်ပြုခြင်းကို စ�
 msgid "Couldn't verify with that account. Please try again."
 msgstr "ထိုအကောင့်ဖြင့် အတည်ပြု၍မရပါ။ ကျေးဇူးပြု၍ ထပ်မံကြိုးစားပါ။"
 
+#. placeholder {0}: entityLabel.toLowerCase()
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:144
+msgid "Create {0}"
+msgstr ""
+
 #: src/features/landing/landing-page.tsx:325
 msgid "Create a <0>free account</0>, run <1>your own server</1>, or explore the <2>source code</2>."
 msgstr "<0>အခမဲ့အကောင့်</0> တစ်ခုဖန်တီးပါ၊ <1>သင့်ကိုယ်ပိုင်ဆာဗာ</1> ကိုလည်ပတ်ပါ၊ သို့မဟုတ် <2>source code</2> ကိုလေ့လာပါ။"
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
+msgid "Creating..."
+msgstr "ဖန်တီးနေသည်..."
 
 #: src/features/landing/landing-page.tsx:252
 msgid "CRM"
 msgstr "CRM"
 
-#: ../../../lib/web/src/components/colour-picker.tsx:260
+#: ../../../lib/web/src/components/map-view.tsx:208
+msgid "Current location"
+msgstr "လက်ရှိတည်နေရာ"
+
+#: ../../../lib/web/src/components/colour-picker.tsx:261
 msgid "Custom"
 msgstr "စိတ်ကြိုက်"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/config-drawer.tsx:219
 #: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
@@ -458,7 +565,7 @@ msgstr "အမှောင်ပုံစံ"
 msgid "Data conflict"
 msgstr "ဒေတာ ကွဲလွဲမှု"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:310
+#: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "မူရင်း"
 
@@ -478,6 +585,10 @@ msgstr "Desc"
 msgid "Descending"
 msgstr "ကြီးစဉ်ငယ်လိုက်"
 
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:83
+msgid "Description"
+msgstr "ဖော်ပြချက်"
+
 #: ../../../lib/web/src/components/layout/right-panel.tsx:148
 msgid "Details Panel"
 msgstr "အသေးစိတ် Panel"
@@ -493,9 +604,18 @@ msgstr "အသေးစိတ် Panel"
 msgid "Detect from web browser"
 msgstr "Web browser မှ ရှာဖွေဖော်ထုတ်မည်"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:340
+#: ../../../lib/web/src/components/config-drawer.tsx:341
 msgid "Direction"
 msgstr "ဦးတည်ရာ"
+
+#: ../../../lib/web/src/components/person-picker.tsx:214
+msgid "Directory"
+msgstr "လမ်းညွှန်"
+
+#: ../../../lib/web/src/lib/chat-ui.ts:25
+#: ../../../lib/web/src/lib/chat-ui.ts:29
+msgid "Disconnected"
+msgstr "ချိတ်ဆက်မှု ပြတ်တောက်ပြီး"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:79
 #: ../../../lib/web/src/components/restore-banner.tsx:85
@@ -527,6 +647,7 @@ msgstr "စာဖတ်ရခက်သူများအတွက်ရိုး
 msgid "Edit {label}"
 msgstr "{label} ကို တည်းဖြတ်ပါ"
 
+#: ../../../lib/web/src/features/accounts/types.ts:15
 #: src/features/auth/sign-in/components/user-auth-form.tsx:531
 msgid "Email"
 msgstr "အီးမေးလ်"
@@ -593,6 +714,10 @@ msgstr "ချဲ့ရန်"
 msgid "Expand sidebar"
 msgstr "ဘေးဘားကို ချဲ့ပါ"
 
+#: ../../../lib/web/src/features/accounts/types.ts:22
+msgid "External URL"
+msgstr "ပြင်ပ URL"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:136
 msgid "Extra large"
 msgstr "အလွန်ကြီး"
@@ -605,9 +730,22 @@ msgstr "မအောင်မြင်ပါ"
 msgid "Failed to add account"
 msgstr "အကောင့် ထည့်၍ မရပါ"
 
+#: ../../../lib/web/src/components/tag-input.tsx:39
+msgid "Failed to add tag"
+msgstr "တဂ် ထည့်၍ မရပါ"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:229
 msgid "Failed to continue"
 msgstr "ဆက်လုပ်၍ မရပါ"
+
+#: ../../../lib/web/src/components/ui/copy-button.tsx:26
+#: ../../../lib/web/src/lib/toast-utils.ts:44
+msgid "Failed to copy"
+msgstr "ကူးယူ၍ မရပါ"
+
+#: ../../../lib/web/src/hooks/use-load-more.ts:74
+msgid "Failed to load"
+msgstr "တင်၍ မရပါ"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
 msgid "Failed to load image"
@@ -641,6 +779,10 @@ msgstr "အမျိုးအစား ပြင်ဆင်၍ မရပါ"
 msgid "Feeds"
 msgstr "ဖိဒ်များ"
 
+#: ../../../lib/web/src/components/data-table/toolbar.tsx:30
+msgid "Filter..."
+msgstr "စစ်ထုတ်..."
+
 #: ../../../lib/web/src/components/restore-banner.tsx:88
 msgid "Finish moving your account"
 msgstr "အကောင့်ရွှေ့ပြောင်းခြင်း ပြီးဆုံးပါ"
@@ -657,7 +799,7 @@ msgstr "ပြီးဆုံးနေသည်"
 msgid "Flat"
 msgstr "ပြားသော"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:257
+#: ../../../lib/web/src/components/config-drawer.tsx:258
 msgid "Floating"
 msgstr "လွင့်မျော"
 
@@ -668,6 +810,10 @@ msgstr "ဖိုရမ်များ"
 #: ../../../lib/web/src/lib/preference-utils.ts:63
 msgid "Friday"
 msgstr "သောကြာ"
+
+#: ../../../lib/web/src/components/person-picker.tsx:207
+msgid "Friends"
+msgstr "သူငယ်ချင်းများ"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:153
 msgid "From"
@@ -682,7 +828,7 @@ msgstr "မှ"
 msgid "From theme"
 msgstr "အပြင်အဆင်မှ"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:320
+#: ../../../lib/web/src/components/config-drawer.tsx:321
 msgid "Full layout"
 msgstr "အပြည့် အပြင်အဆင်"
 
@@ -724,6 +870,11 @@ msgstr "ယခင်စာမျက်နှာသို့"
 msgid "Group"
 msgstr "အုပ်စု"
 
+#. placeholder {0}: name || subject.slice(1)
+#: ../../../lib/web/src/features/access/access-list.tsx:68
+msgid "Group: {0}"
+msgstr "အုပ်စု- {0}"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:70
 msgid "Hide"
 msgstr "ဝှက်"
@@ -756,7 +907,19 @@ msgstr "ပုံကြည့်ရှုစနစ်- {0}"
 msgid "Imperial"
 msgstr "Imperial"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:252
+#: ../../../lib/web/src/features/access/types.ts:42
+msgid "Including anonymous users"
+msgstr ""
+
+#: ../../../lib/web/src/components/faceless-avatar.tsx:69
+msgid "Initials avatar"
+msgstr ""
+
+#: ../../../lib/web/src/components/faceless-avatar.tsx:69
+msgid "Initials avatar for {name}"
+msgstr ""
+
+#: ../../../lib/web/src/components/config-drawer.tsx:253
 msgid "Inset"
 msgstr "အတွင်းသို့"
 
@@ -783,6 +946,10 @@ msgstr "မမှန်ကန်သော ကုဒ်"
 msgid "Invalid recovery code"
 msgstr "မမှန်ကန်သော ပြန်လည်ရယူရေး ကုဒ်"
 
+#: ../../../lib/web/src/components/tag-input.tsx:38
+msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
 #: src/features/auth/sign-in/components/user-auth-form.tsx:272
 #: src/features/auth/sign-in/components/user-auth-form.tsx:291
@@ -793,12 +960,16 @@ msgstr "မမှန်ကန်သော အတည်ပြု ကုဒ်"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "သင်ရှာဖွေနေသော စာမျက်နှာသည် <0/>မရှိတော့ပါ သို့မဟုတ် ဖယ်ရှားခံရပုံရသည်။"
 
+#: ../../../lib/web/src/lib/locale-format.ts:62
+msgid "Just now"
+msgstr "အခုပဲ"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:108
 #: ../../../lib/web/src/lib/preference-utils.ts:135
 msgid "Large"
 msgstr "ကြီး"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:286
+#: ../../../lib/web/src/components/config-drawer.tsx:287
 msgid "Layout"
 msgstr "အပြင်အဆင်"
 
@@ -807,11 +978,15 @@ msgstr "အပြင်အဆင်"
 msgid "Learn more"
 msgstr "ပိုလေ့လာ"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:354
+#: ../../../lib/web/src/components/config-drawer.tsx:355
 msgid "Left to Right"
 msgstr "ဘယ်မှ ညာသို့"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/post-tags.tsx:72
+msgid "Letters, numbers, spaces, and hyphens only"
+msgstr "စာလုံး၊ ဂဏန်း၊ ကွက်လပ်နှင့် အလျားတံသာ"
+
+#: ../../../lib/web/src/components/config-drawer.tsx:214
 #: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
@@ -893,6 +1068,10 @@ msgstr "ဝင်ရောက်မှု စက်ရှင် သက်တမ�
 msgid "Lost access? Use a recovery code"
 msgstr "ဝင်ရောက်ခွင့် ဆုံးရှုံးပြီလား။ ပြန်လည်ရယူရေး ကုဒ် သုံးပါ"
 
+#: ../../../lib/web/src/features/accounts/account-manager.tsx:192
+msgid "Manage your connected accounts for notifications and services."
+msgstr ""
+
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:93
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
@@ -902,6 +1081,10 @@ msgstr "အားလုံးကို ဖတ်ပြီးအဖြစ် မ�
 #: src/features/landing/landing-page.tsx:257
 msgid "Market"
 msgstr "ဈေး"
+
+#: ../../../lib/web/src/features/accounts/types.ts:17
+msgid "MCP server"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:107
 msgid "Medium"
@@ -919,9 +1102,21 @@ msgstr "မက်ထရစ်"
 msgid "Mochi is an open source, federated, multi-user platform for distributed apps. Anyone can run their own server, and connect to any other user on the Mochi network. Anyone can create and publish apps. Every app is replaceable, even system ones. The server comes with over 20 apps, including:"
 msgstr "Mochi သည် ဖြန့်ကျက်ထားသော အက်ပ်များအတွက် ပွင့်လင်းရင်းမြစ်၊ ဖက်ဒရိတ်စနစ်ဖြင့်ချိတ်ဆက်ထားသော၊ အသုံးပြုသူများစွာဆိုင်ရာ ပလက်ဖောင်းတစ်ခုဖြစ်သည်။ မည်သူမဆို မိမိ၏ဆာဗာကိုယ်ပိုင် လည်ပတ်ပြီး Mochi ကွန်ရက်ပေါ်ရှိ အခြားအသုံးပြုသူ မည်သူနှင့်မဆို ချိတ်ဆက်နိုင်သည်။ မည်သူမဆို အက်ပ်များကို ဖန်တီးပြီး ထုတ်ဝေနိုင်သည်။ စနစ်အက်ပ်များပင်လျှင် အက်ပ်တိုင်းကို အစားထိုးနိုင်သည်။ ဆာဗာတွင် အောက်ပါတို့အပါအဝင် အက်ပ် ၂၀ ကျော် ပါဝင်လာသည်။"
 
+#: ../../../lib/web/src/features/accounts/types.ts:23
+msgid "Mochi web"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Monday"
 msgstr "တနင်္လာ"
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:102
+msgid "Name cannot contain angle brackets, backslash, semicolon, quotes or backticks"
+msgstr ""
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:100
+msgid "Name must be 1000 characters or less"
+msgstr "အမည်သည် စာလုံး ၁၀၀၀ သို့မဟုတ် ထိုထက်နည်းရမည်"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:53
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:303
@@ -951,7 +1146,7 @@ msgstr "ရှေ့သို့"
 msgid "Next image"
 msgstr "နောက်ပုံ"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:160
+#: ../../../lib/web/src/features/access/access-list.tsx:165
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "ဝင်ရောက်ခွင့်စည်းမျဉ်းများ မသတ်မှတ်ထားပါ။ ဤအရင်းအမြစ်ကို မည်သူဝင်နိုင်သည်ကို ထိန်းချုပ်ရန် စည်းမျဉ်းများ ထည့်ပါ။"
 
@@ -972,13 +1167,26 @@ msgstr "အုပ်စုများ မရရှိနိုင်ပါ"
 msgid "No MFA session"
 msgstr "MFA session မရှိပါ"
 
-#: ../../../lib/web/src/components/place-picker.tsx:132
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
+msgid "No notifications yet"
+msgstr "အကြောင်းကြားချက် မရှိသေးပါ"
+
+#: ../../../lib/web/src/components/person-picker.tsx:84
+msgid "No people found"
+msgstr "လူများ မတွေ့ပါ"
+
+#: ../../../lib/web/src/components/place-picker.tsx:133
 msgid "No places found"
 msgstr "နေရာများ မတွေ့ပါ"
 
 #: ../../../lib/web/src/components/profile-dropdown.tsx:58
 msgid "No profile"
 msgstr "ပရိုဖိုင် မရှိ"
+
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:82
+#: ../../../lib/web/src/components/search-entity-page.tsx:73
+msgid "No results found"
+msgstr "ရလဒ်မတွေ့ပါ"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
@@ -997,6 +1205,7 @@ msgstr "topic မှတ်တမ်း မရှိသေးပါ — နော
 msgid "No users found"
 msgstr "သုံးစွဲသူများ မတွေ့ပါ"
 
+#: ../../../lib/web/src/components/colour-picker.tsx:345
 #: ../../../lib/web/src/components/person-picker.tsx:350
 #: ../../../lib/web/src/lib/preference-utils.ts:105
 #: ../../../lib/web/src/lib/preference-utils.ts:125
@@ -1036,6 +1245,10 @@ msgstr "အသိပေးချက်များ"
 msgid "Notifications: {0}"
 msgstr "အကြောင်းကြားချက်များ- {0}"
 
+#: ../../../lib/web/src/components/filter-bar.tsx:35
+msgid "On"
+msgstr "ဖွင့်"
+
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:16
 msgid "Oops! Page Not Found!"
 msgstr "အိုး! စာမျက်နှာ မတွေ့ပါ!"
@@ -1050,6 +1263,10 @@ msgstr "အကောင့် လုပ်ဆောင်ချက်မျာ�
 msgid "Open actions"
 msgstr "လုပ်ဆောင်ချက်များ ဖွင့်ရန်"
 
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:133
+msgid "Open menu"
+msgstr "မီနူးကို ဖွင့်"
+
 #: ../../../lib/web/src/components/layout/top-bar.tsx:63
 #: ../../../lib/web/src/components/layout/top-bar.tsx:68
 msgid "Open navigation"
@@ -1060,8 +1277,8 @@ msgstr "navigation ကို ဖွင့်"
 msgid "Open navigation menu"
 msgstr "navigation menu ကို ဖွင့်"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:57
-#: ../../../lib/web/src/components/config-drawer.tsx:65
+#: ../../../lib/web/src/components/config-drawer.tsx:58
+#: ../../../lib/web/src/components/config-drawer.tsx:66
 msgid "Open theme settings"
 msgstr "theme ဆက်တင်များကို ဖွင့်"
 
@@ -1082,7 +1299,7 @@ msgstr "အခြား"
 msgid "Other users can find your profile."
 msgstr "အခြားသုံးစွဲသူများသည် သင့်ပရိုဖိုင်ကို ရှာတွေ့နိုင်သည်။"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:217
+#: ../../../lib/web/src/features/access/access-list.tsx:222
 msgid "Owner"
 msgstr "ပိုင်ရှင်"
 
@@ -1130,6 +1347,10 @@ msgstr "Passphrase"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Paste the login code you received by email"
 msgstr "အီးမေးလ်ဖြင့် ရရှိထားသော login code ကို paste လုပ်ပါ"
+
+#: ../../../lib/web/src/components/date-picker.tsx:20
+msgid "Pick a date"
+msgstr "ရက်စွဲရွေးပါ"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:309
 msgid "Please check your authenticator app and try again."
@@ -1218,6 +1439,10 @@ msgstr "သီးသန့်"
 msgid "Profile"
 msgstr "ပရိုဖိုင်"
 
+#: ../../../lib/web/src/components/person-picker.tsx:200
+msgid "Project members"
+msgstr "ပရောဂျက်အဖွဲ့ဝင်များ"
+
 #: src/features/landing/landing-page.tsx:258
 msgid "Projects"
 msgstr "ပရောဂျက်များ"
@@ -1225,6 +1450,10 @@ msgstr "ပရောဂျက်များ"
 #: src/features/auth/identity-form.tsx:110
 msgid "Public"
 msgstr "အများသုံး"
+
+#: ../../../lib/web/src/features/accounts/types.ts:21
+msgid "Push notification"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:117
 msgid "Raised"
@@ -1242,10 +1471,14 @@ msgstr "ဤဆာဗာတွင် သင်၏ passkey များကို �
 msgid "Reactivate my account"
 msgstr "ကျွန်ုပ်၏အကောင့်ကို ပြန်လည်အသက်သွင်းရန်"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:216
-#: ../../../lib/web/src/components/search-entity-page.tsx:242
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:217
+#: ../../../lib/web/src/components/search-entity-page.tsx:243
 msgid "Recommended"
 msgstr "အကြံပြုထား"
+
+#: ../../../lib/web/src/lib/chat-ui.ts:21
+msgid "Reconnecting ({retries})..."
+msgstr ""
 
 #: src/features/auth/recovery/index.tsx:120
 msgid "Recovery code"
@@ -1278,22 +1511,28 @@ msgstr "ဆက်စပ် (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "၂၄ နာရီအတွင်း ဆက်စပ်၊ ပြင်ပတွင် တိကျသော"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:265
+#: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
 msgstr "ဖယ်ရှား"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:247
-#: ../../../lib/web/src/features/access/access-list.tsx:253
+#. placeholder {0}: filter.label
+#: ../../../lib/web/src/components/filter-bar.tsx:56
+#: ../../../lib/web/src/components/filter-bar.tsx:62
+msgid "Remove {0} filter"
+msgstr "{0} filter ဖယ်ရှား"
+
+#: ../../../lib/web/src/features/access/access-list.tsx:252
+#: ../../../lib/web/src/features/access/access-list.tsx:258
 msgid "Remove access rule"
 msgstr "ဝင်ရောက်ခွင့် စည်းမျဉ်း ဖယ်ရှား"
 
 #. placeholder {0}: formatSubject(subject, data.name)
-#: ../../../lib/web/src/features/access/access-list.tsx:259
+#: ../../../lib/web/src/features/access/access-list.tsx:264
 msgid "Remove access rule for \"{0}\"?"
 msgstr "\"{0}\" အတွက် ဝင်ရောက်ခွင့်စည်းမျဉ်းကို ဖယ်ရှားမလား။"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:257
+#: ../../../lib/web/src/features/access/access-list.tsx:262
 msgid "Remove access?"
 msgstr "ဝင်ရောက်ခွင့် ဖယ်ရှားမလား?"
 
@@ -1306,12 +1545,17 @@ msgstr "စိတ်ဝင်စားမှု ဖယ်ရှား"
 msgid "Resend email"
 msgstr "အီးမေးလ်ပြန်ပို့ရန်"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:86
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:81
+#: ../../../lib/web/src/components/config-drawer.tsx:87
+#: ../../../lib/web/src/components/data-table/toolbar.tsx:82
 msgid "Reset"
 msgstr "ပြန်စတင်"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:84
+#: ../../../lib/web/src/components/config-drawer.tsx:122
+#: ../../../lib/web/src/components/config-drawer.tsx:127
+msgid "Reset {title}"
+msgstr ""
+
+#: ../../../lib/web/src/components/config-drawer.tsx:85
 msgid "Reset all settings to default values"
 msgstr "ဆက်တင်အားလုံးကို ပုံသေတန်ဖိုးများသို့ ပြန်ထား"
 
@@ -1328,7 +1572,7 @@ msgstr "ပြန်လည်ရယူမှု မအောင်မြင်�
 msgid "Restoring your account"
 msgstr "သင်၏ account ပြန်လည်ရယူနေသည်"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:361
+#: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
 msgstr "ညာမှ ဘယ်သို့"
 
@@ -1345,9 +1589,23 @@ msgstr "စနေနေ့"
 msgid "Save"
 msgstr "သိမ်းမည်"
 
-#: ../../../lib/web/src/components/place-picker.tsx:85
+#: ../../../lib/web/src/components/filter-bar.tsx:32
+#: ../../../lib/web/src/components/header-search.tsx:22
+#: ../../../lib/web/src/components/search.tsx:18
+msgid "Search"
+msgstr "ရှာဖွေ"
+
+#: ../../../lib/web/src/components/ui/command.tsx:35
+msgid "Search for a command to run..."
+msgstr ""
+
+#: ../../../lib/web/src/components/place-picker.tsx:86
 msgid "Search for a place"
 msgstr "နေရာတစ်ခုကို ရှာဖွေ"
+
+#: ../../../lib/web/src/components/place-picker.tsx:50
+msgid "Search for a place..."
+msgstr ""
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:250
 msgid "Search for destination..."
@@ -1366,14 +1624,21 @@ msgid "Search users"
 msgstr "သုံးစွဲသူများ ရှာဖွေ"
 
 #: ../../../lib/web/src/components/person-picker.tsx:324
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:81
+#: ../../../lib/web/src/components/search-entity-page.tsx:72
 msgid "Search..."
 msgstr "ရှာဖွေ..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:174
-#: ../../../lib/web/src/components/search-entity-page.tsx:200
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:175
+#: ../../../lib/web/src/components/search-entity-page.tsx:201
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "ရှာဖွေနေသည်..."
+
+#. placeholder {0}: item.label.toLowerCase()
+#: ../../../lib/web/src/components/config-drawer.tsx:149
+msgid "Select {0}"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
@@ -1383,6 +1648,10 @@ msgstr "ဝင်ရောက်ခွင့်ပေးရန် သုံး�
 msgid "Select access rule"
 msgstr "ဝင်ရောက်ခွင့် စည်းမျဉ်း ရွေးချယ်"
 
+#: ../../../lib/web/src/features/accounts/account-picker.tsx:34
+msgid "Select account"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-add.tsx:129
 msgid "Select account type"
 msgstr "အကောင့်အမျိုးအစား ရွေးချယ်"
@@ -1391,19 +1660,27 @@ msgstr "အကောင့်အမျိုးအစား ရွေးချ�
 msgid "Select group"
 msgstr "အုပ်စုကို ရွေးပါ"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:304
+#: ../../../lib/web/src/components/config-drawer.tsx:305
 msgid "Select layout style"
 msgstr "အပြင်အဆင်ပုံစံကို ရွေးပါ"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:246
+#: ../../../lib/web/src/components/place-picker.tsx:49
+msgid "Select location"
+msgstr "တည်နေရာကို ရွေးပါ"
+
+#: ../../../lib/web/src/components/person-picker.tsx:83
+msgid "Select person..."
+msgstr ""
+
+#: ../../../lib/web/src/components/config-drawer.tsx:247
 msgid "Select sidebar style"
 msgstr "ဘေးဘားပုံစံကို ရွေးပါ"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:348
+#: ../../../lib/web/src/components/config-drawer.tsx:349
 msgid "Select site direction"
 msgstr "ဆိုက်ဦးတည်ရာကို ရွေးပါ"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:202
+#: ../../../lib/web/src/components/config-drawer.tsx:203
 msgid "Select theme preference"
 msgstr "အပြင်အဆင် ဦးစားပေးကို ရွေးပါ"
 
@@ -1463,8 +1740,8 @@ msgstr "စကားဝှက်ကို ပြရန်"
 msgid "Showing {totalShown} of {total}"
 msgstr "{total} ထဲမှ {totalShown} ကို ပြသနေသည်"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:238
-#: ../../../lib/web/src/components/config-drawer.tsx:262
+#: ../../../lib/web/src/components/config-drawer.tsx:239
+#: ../../../lib/web/src/components/config-drawer.tsx:263
 #: ../../../lib/web/src/components/ui/sidebar.tsx:237
 msgid "Sidebar"
 msgstr "ဘေးဘား"
@@ -1516,9 +1793,14 @@ msgstr "လမ်းညွှန်ရှာဖွေမှုမှ ဖုံ�
 msgid "Stay tuned though!"
 msgstr "သို့သော် ဆက်လက်စောင့်ကြည့်ပါ။"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:191
+#: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "ခေါင်းစဉ်"
+
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:83
+#: ../../../lib/web/src/components/search-entity-page.tsx:74
+msgid "Subscribe"
+msgstr "Subscribe လုပ်မည်"
 
 #: src/features/auth/recovery/index.tsx:45
 msgid "Successfully signed in with recovery code"
@@ -1528,16 +1810,24 @@ msgstr "ပြန်လည်ရှာဖွေသော ကုဒ်ဖြင�
 msgid "Sunday"
 msgstr "တနင်္ဂနွေ"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/config-drawer.tsx:209
 #: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
 msgid "System"
 msgstr "စနစ်"
 
-#: ../../../lib/web/src/components/tag-input.tsx:94
+#: ../../../lib/web/src/components/tag-input.tsx:95
 msgid "Tag"
 msgstr "Tag"
+
+#: ../../../lib/web/src/components/post-tags.tsx:76
+msgid "Tag already exists"
+msgstr "Tag ရှိနှင့်ပြီးဖြစ်သည်"
+
+#: ../../../lib/web/src/components/post-tags.tsx:68
+msgid "Tag must be 50 characters or less"
+msgstr "တဂ်သည် စာလုံး ၅၀ သို့မဟုတ် ထို့ထက်နည်းရမည်"
 
 #: ../../../lib/web/src/components/post-tags.tsx:101
 #: ../../../lib/web/src/components/post-tags.tsx:115
@@ -1595,11 +1885,11 @@ msgstr "ပြန်လည်ရယူမှု မပြီးမြောက�
 msgid "The site is not available at the moment."
 msgstr "ဤဆိုက်ကို ယခုအချိန်တွင် အသုံးပြု၍မရပါ။"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:194
+#: ../../../lib/web/src/components/config-drawer.tsx:195
 msgid "Theme"
 msgstr "အပြင်အဆင်"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:69
+#: ../../../lib/web/src/components/config-drawer.tsx:70
 msgid "Theme Settings"
 msgstr "အပြင်အဆင် ဆက်တင်များ"
 
@@ -1662,8 +1952,8 @@ msgstr "ထိပ်"
 msgid "Travelling"
 msgstr "ခရီးသွားနေသည်"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:190
-#: ../../../lib/web/src/components/search-entity-page.tsx:216
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:191
+#: ../../../lib/web/src/components/search-entity-page.tsx:217
 msgid "Try adjusting your search terms"
 msgstr "သင်၏ ရှာဖွေစကားလုံးများကို ပြင်ဆင်ကြည့်ပါ"
 
@@ -1706,9 +1996,18 @@ msgstr "မသတ်မှတ်ထား"
 msgid "Unauthorized Access"
 msgstr "ခွင့်ပြုမထားသော ဝင်ရောက်မှု"
 
+#: ../../../lib/web/src/lib/request.ts:133
+#: ../../../lib/web/src/lib/request.ts:206
+msgid "Unexpected API error"
+msgstr "မမျှော်လင့်သော API အမှား"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:87
 msgid "United States"
 msgstr "United States"
+
+#: ../../../lib/web/src/features/accounts/types.ts:29
+msgid "Unknown"
+msgstr "မသိရသော"
 
 #: src/routes/restore.tsx:53
 msgid "Unpacking your data"
@@ -1734,6 +2033,7 @@ msgstr "passkey ကို သုံးပါ"
 msgid "Use your passkey"
 msgstr "သင့်ပတ်စ်ကီးကို သုံးပါ"
 
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:86
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "သုံးစွဲသူ"
@@ -1795,6 +2095,10 @@ msgstr "အားလုံး ကြည့်ရှုမည်"
 msgid "View all notifications"
 msgstr "အသိပေးချက်များ အားလုံး ကြည့်ရှုမည်"
 
+#: ../../../lib/web/src/components/filter-bar.tsx:35
+msgid "Watched"
+msgstr "ကြည့်ရှုထား"
+
 #. placeholder {0}: account.identifier
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:63
 msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
@@ -1803,6 +2107,10 @@ msgstr "<0>{0}</0> သို့ အတည်ပြုကုဒ် ပို့�
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
 msgstr "မကြာမီ ပြန်လည် online ဖြစ်လာပါမည်။"
+
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:197
+msgid "We'll notify you when something important happens."
+msgstr "အရေးကြီးတာတစ်ခုခုဖြစ်ရင် အကြောင်းကြားပါမယ်။"
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "Website is under maintenance!"
@@ -1827,6 +2135,14 @@ msgstr "ဤအပိုင်းသို့ သင့်တွင် ဝင်�
 #: ../../../lib/web/src/features/errors/forbidden.tsx:18
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "ဤအရင်းအမြစ်ကို ကြည့်ရှုရန် <0/>လိုအပ်သော ခွင့်ပြုချက် သင့်တွင်မရှိပါ။"
+
+#: ../../../lib/web/src/lib/show-submitted-data.tsx:9
+msgid "You submitted the following values:"
+msgstr ""
+
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
+msgid "You're all caught up!"
+msgstr "အားလုံးကြည့်ပြီးပါပြီ။"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts:43
