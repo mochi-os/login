@@ -52,6 +52,10 @@ msgstr "{selectedCount, plural, one {# ਚੁਣੇ ਗਏ} other {# ਚੁਣ�
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# ਚੁਣੇ {entityName} ਲਈ ਬਲਕ ਕਾਰਵਾਈਆਂ} other {# ਚੁਣੇ {manyName} ਲਈ ਬਲਕ ਕਾਰਵਾਈਆਂ}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{totalLabel} ਵਿੱਚੋਂ {sentLabel}"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {ਮੀਨੂ ਖੋਲ੍ਹੋ (# ਅਣਪੜ੍ਹੀ ਸੂਚਨਾ)} other {ਮੀਨੂ ਖੋਲ੍ਹੋ (# ਅਣਪੜ੍ਹੀਆਂ ਸੂਚਨਾਵਾਂ)}}"
@@ -299,12 +303,12 @@ msgstr "ਆਪਣਾ ਖਾਤਾ ਬਣਾ ਕੇ, ਤੁਸੀਂ <0>ਸਰਵ
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "ਇਸ ਨੋਟੀਫਿਕੇਸ਼ਨ ਲਈ ਸ਼੍ਰੇਣੀ"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਸ਼੍ਰੇਣੀ ਬਦਲੋ"
 
@@ -612,6 +616,14 @@ msgstr "ਦਿਸ਼ਾ"
 msgid "Directory"
 msgstr "ਡਾਇਰੈਕਟਰੀ"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr "ਰੱਦ ਕਰੋ"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr "ਡਰਾਫਟ ਰੱਦ ਕਰਨਾ ਹੈ?"
+
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
@@ -771,7 +783,7 @@ msgstr "ਪਛਾਣ ਸੁਰੱਖਿਅਤ ਕਰਨ ਵਿੱਚ ਅਸਫ�
 msgid "Failed to send verification code"
 msgstr "ਤਸਦੀਕ ਕੋਡ ਭੇਜਣ ਵਿੱਚ ਅਸਫਲ"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "ਸ਼੍ਰੇਣੀ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ"
 
@@ -1197,7 +1209,7 @@ msgstr "ਕੋਈ ਨਤੀਜੇ ਨਹੀਂ ਮਿਲੇ।"
 msgid "No time zone found."
 msgstr "ਕੋਈ ਟਾਈਮ ਜ਼ੋਨ ਨਹੀਂ ਮਿਲਿਆ।"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "ਅਜੇ ਕੋਈ ਟੌਪਿਕ ਰਿਕਾਰਡ ਨਹੀਂ — ਅਗਲੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਤੋਂ ਬਾਅਦ ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
@@ -1374,6 +1386,7 @@ msgstr "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਕੋਡ ਚੈੱਕ ਕਰ�
 msgid "Please check your email and try again."
 msgstr "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਈਮੇਲ ਚੈੱਕ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1433,6 +1446,10 @@ msgstr "ਪ੍ਰਾਈਵੇਸੀ"
 #: src/features/auth/identity-form.tsx:124
 msgid "Private"
 msgstr "ਨਿੱਜੀ"
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "ਪ੍ਰਕਿਰਿਆ ਜਾਰੀ ਹੈ…"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
@@ -1511,6 +1528,7 @@ msgstr "ਸਾਪੇਖਿਕ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 ਘੰਟਿਆਂ ਅੰਦਰ ਸਾਪੇਖਿਕ, ਨਹੀਂ ਤਾਂ ਪੂਰਨ"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1571,6 +1589,10 @@ msgstr "ਰੀਸਟੋਰ ਅਸਫਲ ਰਿਹਾ"
 #: src/routes/restore.tsx:132
 msgid "Restoring your account"
 msgstr "ਤੁਹਾਡਾ ਖਾਤਾ ਰੀਸਟੋਰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr "ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1988,7 +2010,7 @@ msgstr "ਰਿਮੋਟ ਸਰਵਰ ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਹ�
 msgid "Unable to redirect to login. Please try again."
 msgstr "ਲੌਗਇਨ 'ਤੇ ਰੀਡਾਇਰੈਕਟ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ। ਕਿਰਪਾ ਕਰਕੇ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "ਨਾ ਨਿਰਧਾਰਤ"
 
@@ -2020,6 +2042,10 @@ msgstr "ਅਪ੍ਰਮਾਣਿਤ"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Mochi ਦੇ ਡੇਟਾ ਐਕਸਪੋਰਟ ਤੋਂ ਐਕਸਪੋਰਟ ਕੀਤੀ .zip ਫ਼ਾਈਲ ਅਪਲੋਡ ਕਰੋ।"
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "ਅੱਪਲੋਡ ਪ੍ਰਗਤੀ"
 
 #: src/features/auth/identity-form.tsx:166
 msgid "Use a different account"
@@ -2183,6 +2209,10 @@ msgstr "ਸਾਈਨ ਇਨ ਕਰਨ ਲਈ ਤੁਹਾਡੇ ਖਾਤੇ ਨ
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "ਤੁਹਾਡਾ ਖਾਤਾ {source} ਤੋਂ ਇੱਥੇ ਲਿਆਂਦਾ ਗਿਆ। ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਉੱਥੇ ਇਸਨੂੰ ਮਿਟਾ ਨਹੀਂ ਲੈਂਦੇ, ਸੁਨੇਹੇ ਅਤੇ ਸੂਚਨਾਵਾਂ ਦੋਵੇਂ ਸਰਵਰਾਂ ਤੱਕ ਪਹੁੰਚ ਸਕਦੀਆਂ ਹਨ, ਕੁਝ ਸਮੱਗਰੀ ਪੁਰਾਣੇ ਸਰਵਰ ਤੋਂ ਪਰੋਸੀ ਜਾਂਦੀ ਰਹੇਗੀ, ਅਤੇ ਫ਼ੋਲੋਅਰਾਂ ਨੂੰ ਤੁਹਾਨੂੰ ਇੱਥੇ ਲੱਭਣ ਵਿੱਚ ਕੁਝ ਮਿੰਟ ਲੱਗ ਸਕਦੇ ਹਨ।"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr "ਤੁਹਾਡੇ ਅਟੈਚਮੈਂਟ ਗੁੰਮ ਹੋ ਜਾਣਗੇ।"
+
 #: src/routes/restore.tsx:135
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "ਬੈਕਅੱਪ ਤੋਂ ਤੁਹਾਡਾ ਡੇਟਾ ਰੀਸਟੋਰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ। ਇਹ ਵਿੰਡੋ ਬੰਦ ਨਾ ਕਰੋ।"
@@ -2190,3 +2220,11 @@ msgstr "ਬੈਕਅੱਪ ਤੋਂ ਤੁਹਾਡਾ ਡੇਟਾ ਰੀਸ�
 #: src/features/auth/identity-form.tsx:75
 msgid "Your name, as you'd like others to see it"
 msgstr "ਤੁਹਾਡਾ ਨਾਮ, ਜਿਵੇਂ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ ਕਿ ਦੂਜੇ ਦੇਖਣ"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr "ਤੁਹਾਡਾ ਟੈਕਸਟ ਅਤੇ ਅਟੈਚਮੈਂਟ ਗੁੰਮ ਹੋ ਜਾਣਗੇ।"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr "ਤੁਹਾਡਾ ਟੈਕਸਟ ਗੁੰਮ ਹੋ ਜਾਵੇਗਾ।"

@@ -52,6 +52,10 @@ msgstr "{selectedCount, plural, one {# seleccionats} other {# seleccionats}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Accions massives per a # {entityName} seleccionat} other {Accions massives per a # {manyName} seleccionats}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} de {totalLabel}"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Obre el menú (# notificació no llegida)} other {Obre el menú (# notificacions no llegides)}}"
@@ -299,12 +303,12 @@ msgstr "En crear el teu compte, acceptes les <0>Normes del servidor</0>, els <1>
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "Categoria d'aquesta notificació"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "Canvia la categoria de notificació"
 
@@ -612,6 +616,14 @@ msgstr "Direcció"
 msgid "Directory"
 msgstr "Directori"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr "Descarta"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr "Vols descartar l'esborrany?"
+
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
@@ -771,7 +783,7 @@ msgstr "No s'ha pogut desar la identitat"
 msgid "Failed to send verification code"
 msgstr "No s'ha pogut enviar el codi de verificació"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "No s'ha pogut actualitzar la categoria"
 
@@ -1197,7 +1209,7 @@ msgstr "No s'ha trobat cap resultat."
 msgid "No time zone found."
 msgstr "No s'ha trobat cap fus horari."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "Encara no hi ha cap registre de tema; torna-ho a provar després de la pròxima notificació."
 
@@ -1374,6 +1386,7 @@ msgstr "Comprova els codis i torna-ho a provar."
 msgid "Please check your email and try again."
 msgstr "Comprova el correu i torna-ho a provar."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1433,6 +1446,10 @@ msgstr "Privadesa"
 #: src/features/auth/identity-form.tsx:124
 msgid "Private"
 msgstr "Privat"
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "S'està processant…"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
@@ -1511,6 +1528,7 @@ msgstr "Relativa (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relativa en 24 hores, si no absoluta"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1571,6 +1589,10 @@ msgstr "La restauració ha fallat"
 #: src/routes/restore.tsx:132
 msgid "Restoring your account"
 msgstr "Restaurant el vostre compte"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr "Torna-ho a provar"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1988,7 +2010,7 @@ msgstr "No s'ha pogut connectar amb el servidor remot"
 msgid "Unable to redirect to login. Please try again."
 msgstr "No s'ha pogut redirigir a l'inici de sessió. Torna-ho a provar."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "Sense assignar"
 
@@ -2020,6 +2042,10 @@ msgstr "No verificat"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Pengeu un fitxer .zip exportat des de l'exportació de dades de Mochi."
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "Progrés de la pujada"
 
 #: src/features/auth/identity-form.tsx:166
 msgid "Use a different account"
@@ -2183,6 +2209,10 @@ msgstr "El teu compte requereix una passkey per iniciar sessió"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "El vostre compte s'ha mogut aquí des de {source}. Fins que no l'elimineu d'allà, els missatges i les notificacions poden arribar als dos servidors, part del vostre contingut es continuarà servint des de l'antic servidor i els seguidors poden trigar uns minuts a trobar-vos aquí."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr "Es perdran els fitxers adjunts."
+
 #: src/routes/restore.tsx:135
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Les vostres dades s'estan restaurant des de la còpia de seguretat. No tanqueu aquesta finestra."
@@ -2190,3 +2220,11 @@ msgstr "Les vostres dades s'estan restaurant des de la còpia de seguretat. No t
 #: src/features/auth/identity-form.tsx:75
 msgid "Your name, as you'd like others to see it"
 msgstr "El teu nom, tal com vols que el vegin els altres"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr "Es perdran el text i els fitxers adjunts."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr "El text es perdrà."

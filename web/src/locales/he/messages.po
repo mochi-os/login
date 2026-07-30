@@ -52,6 +52,10 @@ msgstr "{selectedCount, plural, one {# נבחרו} two {# נבחרו} many {# נ
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {פעולות קבוצתיות עבור {entityName} אחד שנבחר} two {פעולות קבוצתיות עבור שני {manyName} שנבחרו} many {פעולות קבוצתיות עבור # {manyName} שנבחרו} other {פעולות קבוצתיות עבור # {manyName} שנבחרו}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} מתוך {totalLabel}"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {פתיחת התפריט (התראה אחת שלא נקראה)} two {פתיחת התפריט (# התראות שלא נקראו)} many {פתיחת התפריט (# התראות שלא נקראו)} other {פתיחת התפריט (# התראות שלא נקראו)}}"
@@ -299,12 +303,12 @@ msgstr "ביצירת החשבון שלך אתה מסכים ל<0>כללי השר�
 msgid "Cancel"
 msgstr "ביטול"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "קטגוריה עבור התראה זו"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "שנה קטגוריית התראה"
 
@@ -612,6 +616,14 @@ msgstr "כיוון"
 msgid "Directory"
 msgstr "מדריך"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr "מחיקה"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr "למחוק את הטיוטה?"
+
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
@@ -771,7 +783,7 @@ msgstr "שמירת הזהות נכשלה"
 msgid "Failed to send verification code"
 msgstr "שליחת קוד האימות נכשלה"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "עדכון הקטגוריה נכשל"
 
@@ -1197,7 +1209,7 @@ msgstr "לא נמצאו תוצאות."
 msgid "No time zone found."
 msgstr "לא נמצא אזור זמן."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "עדיין אין רשומת נושא — נסה שוב לאחר ההתראה הבאה."
 
@@ -1374,6 +1386,7 @@ msgstr "בדוק את הקודים שלך ונסה שוב."
 msgid "Please check your email and try again."
 msgstr "בדוק את האימייל שלך ונסה שוב."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1433,6 +1446,10 @@ msgstr "פרטיות"
 #: src/features/auth/identity-form.tsx:124
 msgid "Private"
 msgstr "פרטי"
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "מעבד…"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
@@ -1511,6 +1528,7 @@ msgstr "יחסי (5 דקות, 3 שעות, 2 ימים)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "יחסי בתוך 24 שעות, אחרת מוחלט"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1571,6 +1589,10 @@ msgstr "השחזור נכשל"
 #: src/routes/restore.tsx:132
 msgid "Restoring your account"
 msgstr "משחזר את החשבון שלך"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr "נסה שוב"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1988,7 +2010,7 @@ msgstr "לא ניתן להתחבר לשרת המרוחק"
 msgid "Unable to redirect to login. Please try again."
 msgstr "לא ניתן להפנות להתחברות. נסה שוב."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "לא משויך"
 
@@ -2020,6 +2042,10 @@ msgstr "לא מאומת"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "העלה קובץ .zip שיוצא מייצוא הנתונים של Mochi."
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "התקדמות ההעלאה"
 
 #: src/features/auth/identity-form.tsx:166
 msgid "Use a different account"
@@ -2183,6 +2209,10 @@ msgstr "החשבון שלך דורש מפתח גישה להתחברות"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "חשבונך הועבר לכאן מ-{source}. עד שתמחק אותו שם, הודעות והתראות עשויות להגיע לשני השרתים, חלק מהתוכן שלך ממשיך להיות מוגש מהשרת הישן, ועוקבים עשויים לקחת מספר דקות למצוא אותך כאן."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr "הקבצים המצורפים שלך יאבדו."
+
 #: src/routes/restore.tsx:135
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "הנתונים שלך משוחזרים מהגיבוי. אל תסגור חלון זה."
@@ -2190,3 +2220,11 @@ msgstr "הנתונים שלך משוחזרים מהגיבוי. אל תסגור �
 #: src/features/auth/identity-form.tsx:75
 msgid "Your name, as you'd like others to see it"
 msgstr "השם שלך, כפי שתרצה שאחרים יראו אותו"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr "הטקסט והקבצים המצורפים שלך יאבדו."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr "הטקסט שלכם יאבד."

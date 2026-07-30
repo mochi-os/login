@@ -52,6 +52,10 @@ msgstr "{selectedCount, plural, one {# таңдалды} other {# таңдалд
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# таңдалған {entityName} үшін топтық әрекеттер} other {# таңдалған {manyName} үшін топтық әрекеттер}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{totalLabel} ішінен {sentLabel}"
+
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Мәзірді ашу (# оқылмаған хабарландыру)} other {Мәзірді ашу (# оқылмаған хабарландыру)}}"
@@ -299,12 +303,12 @@ msgstr "Тіркелгі құру арқылы сіз <0>Сервер ереже
 msgid "Cancel"
 msgstr "Болдырмау"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "Осы хабарландырудың санаты"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "Хабарландыру санатын өзгерту"
 
@@ -612,6 +616,14 @@ msgstr "Бағыт"
 msgid "Directory"
 msgstr "Каталог"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr "Алып тастау"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr "Жобаны алып тастау керек пе?"
+
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
@@ -771,7 +783,7 @@ msgstr "Жеке басын сақтау сәтсіз аяқталды"
 msgid "Failed to send verification code"
 msgstr "Растау кодын жіберу сәтсіз аяқталды"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "Санатты жаңарту сәтсіз аяқталды"
 
@@ -1197,7 +1209,7 @@ msgstr "Нәтижелер табылмады."
 msgid "No time zone found."
 msgstr "Уақыт белдеуі табылмады."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "Тақырып жазбасы әлі жоқ — келесі хабарландырудан кейін қайталап көріңіз."
 
@@ -1374,6 +1386,7 @@ msgstr "Кодтарды тексеріп қайталап көріңіз."
 msgid "Please check your email and try again."
 msgstr "Email-ды тексеріп қайталап көріңіз."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1433,6 +1446,10 @@ msgstr "Құпиялылық"
 #: src/features/auth/identity-form.tsx:124
 msgid "Private"
 msgstr "Жеке"
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "Өңделуде…"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
@@ -1511,6 +1528,7 @@ msgstr "Қатысты (5м, 3с, 2к)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 сағат ішінде салыстырмалы, әйтпесе абсолютті"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1571,6 +1589,10 @@ msgstr "Қалпына келтіру сәтсіз аяқталды"
 #: src/routes/restore.tsx:132
 msgid "Restoring your account"
 msgstr "Тіркелгіңіз қалпына келтірілуде"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr "Қайталап көру"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1988,7 +2010,7 @@ msgstr "Қашықтағы серверге қосылу мүмкін болма
 msgid "Unable to redirect to login. Please try again."
 msgstr "Кіру бетіне қайта бағыттау мүмкін болмады. Қайталап көріңіз."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "Тағайындалмаған"
 
@@ -2020,6 +2042,10 @@ msgstr "Тексерілмеген"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Mochi деректер экспортынан экспортталған .zip файлын жүктеңіз."
+
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "Жүктеп салу барысы"
 
 #: src/features/auth/identity-form.tsx:166
 msgid "Use a different account"
@@ -2183,6 +2209,10 @@ msgstr "Есептік жазбаңыз кіру үшін passkey қажет"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Тіркелгіңіз {source} жерінен осында ауыстырылды. Сіз оны сол жерден жоймайынша, хабарлар мен хабарландырулар екі серверге де жетуі мүмкін, кейбір мазмұныңыз ескі серверден берілуін жалғастырады, ал жазылушылар сізді осында табу үшін бірнеше минут кетуі мүмкін."
 
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr "Тіркемелеріңіз жоғалады."
+
 #: src/routes/restore.tsx:135
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Деректеріңіз резервтік көшірмеден қалпына келтірілуде. Бұл терезені жаппаңыз."
@@ -2190,3 +2220,11 @@ msgstr "Деректеріңіз резервтік көшірмеден қал�
 #: src/features/auth/identity-form.tsx:75
 msgid "Your name, as you'd like others to see it"
 msgstr "Атыңыз, басқалар көретіндей"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr "Мәтініңіз бен тіркемелеріңіз жоғалады."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr "Мәтініңіз жоғалады."

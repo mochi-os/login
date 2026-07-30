@@ -5,6 +5,7 @@
 
 import { msg } from '@lingui/core/macro'
 import { i18n } from '@lingui/core'
+import axios, { type AxiosProgressEvent } from 'axios'
 import { authApi,
   type AuthUser,
   type MfaResponse,
@@ -150,24 +151,22 @@ export const signupRestore = async (
   email: string,
   passphrase: string,
   bundle: File,
+  onProgress?: (event: AxiosProgressEvent) => void,
 ): Promise<{ status: string; uid: string }> => {
   const form = new FormData()
   form.append('email', email)
   form.append('passphrase', passphrase)
   form.append('bundle', bundle)
-  const response = await fetch(endpoints.auth.restore, {
-    method: 'POST',
-    body: form,
-    credentials: 'same-origin',
-  })
-  if (!response.ok) {
-    const data = await response.json().catch(() => ({}))
-    const err: { response: { data: unknown } } = { response: { data } }
-    throw err
-  }
-  const data = await response.json()
+  // Plain axios rather than fetch so onUploadProgress can report byte progress
+  // on the bundle upload; errors keep the {response: {data}} shape the caller
+  // reads. No timeout — bundles can be large.
+  const response = await axios.post<{ status: string; uid: string }>(
+    endpoints.auth.restore,
+    form,
+    { timeout: 0, onUploadProgress: onProgress },
+  )
   useAuthStore.getState().setUser({ email })
-  return data
+  return response.data
 }
 
 export const verifyCode = async (

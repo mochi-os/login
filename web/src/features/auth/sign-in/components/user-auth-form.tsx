@@ -13,7 +13,7 @@ import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa, signupRest
 import { OauthButtons } from '@/features/auth/components/oauth-buttons'
 import { Loader2, Mail, ArrowLeft, ArrowRight, Key } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
-import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot } from '@mochi/web'
+import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot, UploadProgress, useUploadProgress } from '@mochi/web'
 import { safeRedirect } from '@/lib/redirect'
 
 type EmailFormValues = { email: string }
@@ -50,6 +50,7 @@ export function UserAuthForm({
   ...props
 }: UserAuthFormProps) {
   const { t } = useLingui()
+  const { progress, upload } = useUploadProgress()
   const [isLoading, setIsLoading] = useState(false)
   const [internalStep, setInternalStep] = useState<'email' | 'verification'>('email')
   const [userEmail, setUserEmail] = useState('')
@@ -140,8 +141,11 @@ export function UserAuthForm({
 
     // Restore from backup bundle
     if (restoreBundle) {
+      const bundle = restoreBundle
       try {
-        await signupRestore(data.email, restorePassphrase, restoreBundle)
+        await upload((onProgress) =>
+          signupRestore(data.email, restorePassphrase, bundle, onProgress)
+        )
         window.location.href = '/login/restore'
       } catch (error) {
         const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
@@ -539,6 +543,8 @@ export function UserAuthForm({
             </FormItem>
           )}
         />
+
+        <UploadProgress progress={progress} />
 
         <Button className='mt-2' disabled={disabled || isLoading}>
           <Trans>Next</Trans>
