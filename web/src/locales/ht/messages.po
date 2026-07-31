@@ -36,6 +36,10 @@ msgstr "Non {entityLabel}"
 msgid "{entityLabel} name is required"
 msgstr "Non {entityLabel} obligatwa"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} ofri yon egal"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, other {{manyName} chwazi}}"
@@ -60,6 +64,11 @@ msgstr "{sentLabel} sou {totalLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, other {Louvri meni (# notifikasyon ki poko li)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} anpile"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 èdtan"
@@ -71,6 +80,10 @@ msgstr "24 èdtan"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Absoli (dat ak lè)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "Aksepte"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "Nivo aksè"
 msgid "Account added"
 msgstr "Kont ajoute"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "Kont la deja sou sèvè sa a"
 
@@ -98,7 +111,7 @@ msgstr "Kont retire"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "Kont sispann"
 
@@ -110,6 +123,7 @@ msgstr "Tip kont"
 msgid "Account verified"
 msgstr "Kont verifye"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "Ajoute kont"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "Ajoute yon kont pou resevwa notifikasyon epi itilize sèvis yo."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "Ajoute eleman lis verifikasyon"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "Ajoute eleman..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "Pèmèt nenpòt moun chèche {0}"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Yon kont ak imèl sa a deja egziste. Konekte dabò, epi lye {0} nan paramèt otantifikasyon ou yo."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "Yon kont ak idantite sa a deja egziste isit la."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "Avata pou {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "Retounen"
 
@@ -262,17 +284,22 @@ msgstr "Retounen nan enskripsyon"
 msgid "Backup file"
 msgstr "Fichye kopi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "Fichye kopi a korónpi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "Kopi a twò nouvo"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Banyè"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "Navigasyon bloke nan lyen pa fyab"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "Chat"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Tcheke \"Tout\" pou wè ansyen notifikasyon ou yo."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "Tcheke imèl ou."
 
@@ -328,9 +355,13 @@ msgstr "Tcheke imèl ou."
 msgid "Checking…"
 msgstr "Ap verifye…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "Chwazi yon lòt imèl lokal oswa konekte olye."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "Chwazi yon jwèt nan ba kote a oswa kòmanse yon nouvo."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "Fèmen panèl"
 msgid "Close search"
 msgstr "Fèmen rechèch"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "Kòd voye."
 
@@ -569,6 +600,10 @@ msgstr "Mòd fonse"
 msgid "Data conflict"
 msgstr "Konfli done"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "Refize"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "Defo"
@@ -577,7 +612,7 @@ msgstr "Defo"
 msgid "Default AI account"
 msgstr "Kont AI defo"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Efase kont ou sou ansyen sèvè a"
 
@@ -629,8 +664,8 @@ msgstr "Jete bouyon an?"
 msgid "Disconnected"
 msgstr "Dekonekte"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Rejte"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "Modifye {label}"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "Imèl"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "Imèl la ap itilize deja"
 
@@ -674,15 +709,15 @@ msgstr "kòd imèl"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "Kòd imèl"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "Voye yon kòd ban mwen pa imèl"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "Antre yon kòd pou kontinye"
 
@@ -690,7 +725,7 @@ msgstr "Antre yon kòd pou kontinye"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Antre yon kòd rekiperasyon pou \"{userEmail}\" pou konekte"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "Antre kòd ki soti nan app otantifikatè ou a"
 
@@ -711,7 +746,7 @@ msgstr "Antre {initial} ak {last} ou"
 msgid "Enter your authenticator code"
 msgstr "Antre kòd otantifikatè ou"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "Antre kòd imèl ou ak kòd otantifikatè ou"
 
@@ -746,7 +781,7 @@ msgstr "Echwe pou ajoute kont"
 msgid "Failed to add tag"
 msgstr "Echwe pou ajoute tag"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "Echwe pou kontinye"
 
@@ -771,7 +806,7 @@ msgstr "Echèk chajman videyo a"
 msgid "Failed to remove account"
 msgstr "Echwe pou retire kont"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "Demann kòd koneksyon an echwe"
 
@@ -795,7 +830,7 @@ msgstr "Feed"
 msgid "Filter..."
 msgstr "Filtre..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Fini deplase kont ou"
 
@@ -939,7 +974,7 @@ msgstr "Inset"
 msgid "Interests"
 msgstr "Enterè"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "Kòd otantifikatè envalid"
 
@@ -948,10 +983,14 @@ msgstr "Kòd otantifikatè envalid"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "Kòd envalid"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "Dat envalid"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "Etikèt envalid: sèlman lèt, chif, espas, tirè ak bar oblik (maksimòm 50 karaktè)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "Kòd verifikasyon envalid"
 
@@ -1032,7 +1071,7 @@ msgstr "Ap chaje..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "Konekte"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "Sesyon login ekspire, tanpri eseye ankò"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "Pèdi aksè? Sèvi ak yon kòd rekiperasyon"
 
@@ -1084,8 +1123,8 @@ msgstr "Pèdi aksè? Sèvi ak yon kòd rekiperasyon"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "Jere kont ou konekte yo pou notifikasyon ak sèvis."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Make tout kòm li"
@@ -1105,6 +1144,10 @@ msgstr "Mwayen"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Meni"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "Mesaj"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "Nouvo"
 msgid "New accounts are disabled on this server"
 msgstr "Nouvo kont yo dezaktive sou sèvè sa a"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "Nouvo jwèt"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "Enskripsyon nouvo itilizatè dezaktive."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "Pwochen"
 
@@ -1162,7 +1210,7 @@ msgstr "Pwochen imaj"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Pa gen règ aksè konfigire. Ajoute règ pou kontwole kiyès ki ka jwenn aksè nan resous sa a."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "Pa gen fichye kopi ki chwazi"
 
@@ -1170,12 +1218,16 @@ msgstr "Pa gen fichye kopi ki chwazi"
 msgid "No connected accounts"
 msgstr "Pa gen kont konekte"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "Poko gen jwèt"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Pa gen gwoup disponib"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "Pa gen sesyon MFA"
 
@@ -1183,6 +1235,7 @@ msgstr "Pa gen sesyon MFA"
 msgid "No notifications yet"
 msgstr "Poko gen notifikasyon"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Pa gen moun ki jwenn"
@@ -1232,7 +1285,7 @@ msgstr "Anyen; kreye yon nouvo kont"
 msgid "Normal"
 msgstr "Nòmal"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "Pa yon pakè migrasyon"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "Notifikasyon"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "Notifikasyon: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "Ouvri meni navigasyon"
 msgid "Open theme settings"
 msgstr "Ouvri paramèt tèm"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "Oswa antre kòd otantifikasyon"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "Oswa konekte ak"
@@ -1340,7 +1393,7 @@ msgstr "Koneksyon passkey anile"
 msgid "Passkey login failed"
 msgstr "Koneksyon passkey echwe"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "Koneksyon passkey obligatwa"
 
@@ -1348,7 +1401,7 @@ msgstr "Koneksyon passkey obligatwa"
 msgid "Passkey verification failed. Please try again."
 msgstr "Verifikasyon passkey la echwe. Tanpri eseye ankò."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Paskey"
 
@@ -1356,7 +1409,7 @@ msgstr "Paskey"
 msgid "Passphrase"
 msgstr "Fraz sekrè"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "Kole kòd koneksyon ou te resevwa pa imèl"
 
@@ -1364,25 +1417,25 @@ msgstr "Kole kòd koneksyon ou te resevwa pa imèl"
 msgid "Pick a date"
 msgstr "Chwazi yon dat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "Tanpri tcheke aplikasyon otantifikatè ou epi eseye ankò."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "Tanpri tcheke kòd ou epi eseye ankò."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "Tanpri tcheke kòd ou yo epi eseye ankò."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "Tanpri tcheke imèl ou epi eseye ankò."
 
@@ -1397,7 +1450,7 @@ msgstr "Tanpri tcheke koneksyon entènèt ou epi eseye ankò."
 msgid "Please check your recovery code and try again."
 msgstr "Tanpri tcheke kòd rekiperasyon ou epi eseye ankò."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "Tanpri antre yon imèl valid"
 
@@ -1413,9 +1466,9 @@ msgstr "Tanpri antre kòd rekiperasyon ou"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Tanpri konekte ak bon idantifyan yo <0/> pou w jwenn aksè nan resous sa a."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "Tanpri eseye ankò oswa kontakte sipò."
 
@@ -1423,7 +1476,7 @@ msgstr "Tanpri eseye ankò oswa kontakte sipò."
 msgid "Please try again."
 msgstr "Tanpri, eseye ankò."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Tanpri sèvi ak bouton \"Konekte ak passkey\" la."
 
@@ -1476,11 +1529,11 @@ msgstr "Notifikasyon push"
 msgid "Raised"
 msgstr "Leve"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Konekte kont ou yo ankò sou sèvè sa a"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Re-enskri paskey ou yo sou sèvè sa a"
 
@@ -1514,9 +1567,9 @@ msgstr "Ap redirije ou nan dashboard la…"
 msgid "Reduce interest"
 msgstr "Diminye enterè"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "Enskripsyon dezaktive"
 
@@ -1559,6 +1612,10 @@ msgstr "Retire aksè?"
 msgid "Remove interest"
 msgstr "Retire enterè"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "Retire atik"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Voye imèl la ankò"
@@ -1581,7 +1638,7 @@ msgstr "Reset tout paramèt nan valè default"
 msgid "Restore a backup file"
 msgstr "Restore yon fichye backup"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Restablisman echwe"
@@ -1662,6 +1719,10 @@ msgstr "Ap chèche..."
 msgid "Select {0}"
 msgstr "Chwazi {0}"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "Chwazi yon jwèt"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Chwazi yon itilizatè, gwoup, oswa lòt règ pou bay aksè."
@@ -1706,6 +1767,11 @@ msgstr "Chwazi direksyon sit la"
 msgid "Select theme preference"
 msgstr "Chwazi preferans tèm"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "Chwazi..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "chwazi"
@@ -1722,6 +1788,11 @@ msgstr "Voye ankò"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "Voye imèl"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "Voye mesaj"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "Founisè koneksyon sa pa disponib"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Imèl ou antre anwo a vin non nouvo kont lan sou sèvè sa a. Idantite sovgad la pa dwe deja aktif isit la — retabli sou yon lòt sèvè, oswa efase kont ki egziste a anvan."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "Fichye a ka andòmaje oswa modifye."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "Fraz sekrè ou antre a pa koresponn ak kopi a."
 
@@ -1915,7 +1986,7 @@ msgstr "Tèm"
 msgid "Theme Settings"
 msgstr "Paramèt Tèm"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Kopi sa a te kreye pa yon vèsyon pi resan Mochi. Mete jou sèvè sa a anvan."
 
@@ -1993,6 +2064,10 @@ msgstr "Madi"
 msgid "Type a command or search..."
 msgstr "Tape yon kòmand oswa rechèch..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Tape yon mesaj…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "Tape pou chèche itilizatè"
@@ -2039,7 +2114,7 @@ msgstr "Ap deplwaye done ou"
 msgid "Unverified"
 msgstr "Pa verifye"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Telechaje yon fichye .zip ki ekspòte nan ekspòtasyon done Mochi a."
 
@@ -2051,7 +2126,7 @@ msgstr "Pwogrè chajman an"
 msgid "Use a different account"
 msgstr "Itilize yon lòt kont"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "Sèvi ak yon kle pasaj"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "Kòd verifikasyon voye"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "Verifikasyon echwe"
 
@@ -2116,8 +2191,8 @@ msgstr "Wè"
 msgid "View all"
 msgstr "Wè tout"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "Wè tout notifikasyon"
 
@@ -2150,7 +2225,7 @@ msgstr "Mèkredi"
 msgid "Wikis"
 msgstr "Wiki"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "Fraz sekrè mal"
 
@@ -2189,7 +2264,7 @@ msgstr "Kont ou sispann"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "Kont ou sispann."
 
@@ -2205,7 +2280,7 @@ msgstr "Kont ou pwograme pou efase."
 msgid "Your account requires a passkey to sign in"
 msgstr "Kont ou mande yon passkey pou konekte"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Kont ou te deplase isit la depi {source}. Jiskaske ou efase li la, mesaj ak notifikasyon yo ka rive sou de sèvè yo, yon pati nan kontni ou ap kontinye sèvi depi ansyen sèvè a, epi moun k ap swiv ou yo ka pran kèk minit pou jwenn ou isit la."
 

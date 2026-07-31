@@ -36,6 +36,10 @@ msgstr "{entityLabel} нэр"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel}-ийн нэр шаардлагатай"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} тэнцлэлд санал болгосон"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} сонгогдсон} other {{manyName} сонгогдсон}}"
@@ -60,6 +64,11 @@ msgstr "{totalLabel}-с {sentLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Цэс нээх (# уншаагүй мэдэгдэл)} other {Цэс нээх (# уншаагүй мэдэгдэл)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} үүрлэсэн"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 цаг"
@@ -71,6 +80,10 @@ msgstr "24 цаг"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Үнэмлэхүй (огноо ба цаг)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "Зөвшөөрөх"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "Хандалтын түвшин"
 msgid "Account added"
 msgstr "Бүртгэл нэмэгдсэн"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "Энэ серверт бүртгэл аль хэдийн байна"
 
@@ -98,7 +111,7 @@ msgstr "Бүртгэл хасагдсан"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "Бүртгэлийг түр зогсоосон"
 
@@ -110,6 +123,7 @@ msgstr "Бүртгэлийн төрөл"
 msgid "Account verified"
 msgstr "Бүртгэл баталгаажсан"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "Бүртгэл нэмэх"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "Мэдэгдэл хүлээн авах болон үйлчилгээ ашиглахын тулд бүртгэл нэмнэ."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "Жагсаалтын зүйл нэмэх"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "Зүйл нэмэх..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "Хэн ч {0} хайхыг зөвшөөрөх"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Энэ имэйлтэй бүртгэл аль хэдийн байна. Эхлээд нэвтэрч, дараа нь auth тохиргооноос {0}-г холбоно уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "Энэ таниулбар бүхий бүртгэл энд аль хэдийн байна."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "{name}-ийн аватар"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "Буцах"
 
@@ -262,17 +284,22 @@ msgstr "Бүртгүүлэх хуудас руу буцах"
 msgid "Backup file"
 msgstr "Нөөцлөлтийн файл"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "Нөөцлөлтийн файл гэмтсэн"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "Нөөцлөлт хэт шинэ байна"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Баннер"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "Найдвартай биш холбоос руу шилжихийг блоклосон"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "Чат"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Өмнөх мэдэгдлүүдийг харахын тулд \"Бүгд\"-ийг сонгоно уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "Имэйлээ шалгана уу."
 
@@ -328,9 +355,13 @@ msgstr "Имэйлээ шалгана уу."
 msgid "Checking…"
 msgstr "Шалгаж байна…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "Өөр локал имэйл сонгох эсвэл оронд нь нэвтэрнэ үү."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "Хажуугийн талбараас тоглоом сонгох эсвэл шинээр эхлүүлнэ үү."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "Самбарыг хаах"
 msgid "Close search"
 msgstr "Хайлтыг хаах"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "Код илгээсэн."
 
@@ -569,6 +600,10 @@ msgstr "Харанхуй горим"
 msgid "Data conflict"
 msgstr "Өгөгдлийн зөрчил"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "Татгалзах"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "Үндсэн"
@@ -577,7 +612,7 @@ msgstr "Үндсэн"
 msgid "Default AI account"
 msgstr "Үндсэн AI бүртгэл"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Хуучин серверт байгаа бүртгэлээ устгана уу"
 
@@ -629,8 +664,8 @@ msgstr "Ноорогийг хаах уу?"
 msgid "Disconnected"
 msgstr "Салгагдсан"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Болих"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "{label} засах"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "Имэйл"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "Имэйл аль хэдийн ашиглагдаж байна"
 
@@ -674,15 +709,15 @@ msgstr "имэйл код"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "Имэйл код"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "Надад имэйлээр код илгээнэ үү"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "Үргэлжлүүлэхийн тулд код оруулна уу"
 
@@ -690,7 +725,7 @@ msgstr "Үргэлжлүүлэхийн тулд код оруулна уу"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Нэвтрэхийн тулд \"{userEmail}\"-н сэргээх кодыг оруулна уу"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "Authenticator апп-аасаа кодоо оруулна уу"
 
@@ -711,7 +746,7 @@ msgstr "{initial} болон {last} оруулна уу"
 msgid "Enter your authenticator code"
 msgstr "Баталгаажуулагчийн кодоо оруулна уу"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "Имэйл код болон authenticator кодоо оруулна уу"
 
@@ -746,7 +781,7 @@ msgstr "Бүртгэл нэмж чадсангүй"
 msgid "Failed to add tag"
 msgstr "Шошго нэмж чадсангүй"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "Үргэлжлүүлж чадсангүй"
 
@@ -771,7 +806,7 @@ msgstr "Видеог ачаалж чадсангүй"
 msgid "Failed to remove account"
 msgstr "Бүртгэл хасч чадсангүй"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "Нэвтрэх кодыг хүсэх амжилтгүй боллоо"
 
@@ -795,7 +830,7 @@ msgstr "Feed-үүд"
 msgid "Filter..."
 msgstr "Шүүх..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Бүртгэлээ шилжүүлэхийг дуусгана уу"
 
@@ -939,7 +974,7 @@ msgstr "Дотогшоо"
 msgid "Interests"
 msgstr "Сонирхлууд"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "Authenticator код хүчингүй"
 
@@ -948,10 +983,14 @@ msgstr "Authenticator код хүчингүй"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "Код хүчингүй"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "Огноо хүчингүй"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "Буруу шошго: зөвхөн үсэг, тоо, зай, зураас, ташуу зураас (дээд тал нь 50 тэмдэгт)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "Баталгаажуулах код хүчингүй"
 
@@ -1032,7 +1071,7 @@ msgstr "Ачаалж байна..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "Нэвтрэх"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "Нэвтрэх сешн дууссан, дахин оролдоно уу"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "Хандалт алдсан уу? Сэргээх код ашиглана уу"
 
@@ -1084,8 +1123,8 @@ msgstr "Хандалт алдсан уу? Сэргээх код ашиглана
 msgid "Manage your connected accounts for notifications and services."
 msgstr "Мэдэгдэл, үйлчилгээнд зориулж холбогдсон дансаа удирдана уу."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Бүгдийг уншсан гэж тэмдэглэх"
@@ -1105,6 +1144,10 @@ msgstr "Дунд"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Цэс"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "Мессеж"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "Шинэ"
 msgid "New accounts are disabled on this server"
 msgstr "Энэ серверт шинэ бүртгэл идэвхгүй байна"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "Шинэ тоглоом"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "Шинэ хэрэглэгчийн бүртгэл идэвхгүй байна."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "Дараах"
 
@@ -1162,7 +1210,7 @@ msgstr "Дараагийн зураг"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Хандалтын дүрэм тохируулагдаагүй байна. Энэ нөөцөд хэн хандах эрхтэй байхыг тохируулахын тулд дүрэм нэмнэ үү."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "Нөөцлөлтийн файл сонгогдоогүй"
 
@@ -1170,12 +1218,16 @@ msgstr "Нөөцлөлтийн файл сонгогдоогүй"
 msgid "No connected accounts"
 msgstr "Холбогдсон бүртгэл байхгүй"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "Тоглоом алга"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Боломжит групп байхгүй"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "MFA сесс байхгүй"
 
@@ -1183,6 +1235,7 @@ msgstr "MFA сесс байхгүй"
 msgid "No notifications yet"
 msgstr "Одоогоор мэдэгдэл алга"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Хүн олдсонгүй"
@@ -1232,7 +1285,7 @@ msgstr "Юу ч үгүй; шинэ данс үүсгэх"
 msgid "Normal"
 msgstr "Энгийн"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "Шилжүүлгийн багц биш"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "Мэдэгдэл"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "Мэдэгдэл: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "Навигацийн цэс нээх"
 msgid "Open theme settings"
 msgstr "Сэдвийн тохиргоо нээх"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "Эсвэл баталгаажуулалтын кодыг оруулна уу"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "Эсвэл-ээр нэвтрэх"
@@ -1340,7 +1393,7 @@ msgstr "Passkey-ээр нэвтрэх цуцлагдсан"
 msgid "Passkey login failed"
 msgstr "Passkey-ээр нэвтрэх амжилтгүй"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "Passkey-ээр нэвтрэх шаардлагатай"
 
@@ -1348,7 +1401,7 @@ msgstr "Passkey-ээр нэвтрэх шаардлагатай"
 msgid "Passkey verification failed. Please try again."
 msgstr "Нэвтрэх түлхүүрийн баталгаажуулалт амжилтгүй боллоо. Дахин оролдоно уу."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Passkey-ууд"
 
@@ -1356,7 +1409,7 @@ msgstr "Passkey-ууд"
 msgid "Passphrase"
 msgstr "Нууц үг"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "Имэйлээр хүлээн авсан нэвтрэх кодоо буулгана уу"
 
@@ -1364,25 +1417,25 @@ msgstr "Имэйлээр хүлээн авсан нэвтрэх кодоо бу�
 msgid "Pick a date"
 msgstr "Огноо сонгох"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "Authenticator апп-аа шалгаад дахин оролдоно уу."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "Кодоо шалгаад дахин оролдоно уу."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "Кодуудаа шалгаад дахин оролдоно уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "Имэйлээ шалгаад дахин оролдоно уу."
 
@@ -1397,7 +1450,7 @@ msgstr "Интернет холболтоо шалгаад дахин оролд
 msgid "Please check your recovery code and try again."
 msgstr "Сэргээх кодоо шалгаад дахин оролдоно уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "Зөв имэйл оруулна уу"
 
@@ -1413,9 +1466,9 @@ msgstr "Сэргээх кодоо оруулна уу"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Энэ нөөцөд хандахын тулд <0/> тохирох мэдээллээр нэвтэрнэ үү."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "Дахин оролдох эсвэл дэмжлэг авна уу."
 
@@ -1423,7 +1476,7 @@ msgstr "Дахин оролдох эсвэл дэмжлэг авна уу."
 msgid "Please try again."
 msgstr "Дахин оролдоно уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "\"Passkey-ээр нэвтрэх\" товчийг ашиглана уу."
 
@@ -1476,11 +1529,11 @@ msgstr "Push мэдэгдэл"
 msgid "Raised"
 msgstr "Өргөгдсөн"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Энэ серверт бүртгэлүүдээ дахин холбоно уу"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Энэ серверт нэвтрэх түлхүүрээ дахин бүртгүүлнэ үү"
 
@@ -1514,9 +1567,9 @@ msgstr "Dashboard руу шилжүүлж байна…"
 msgid "Reduce interest"
 msgstr "Хүүг бууруулах"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "Бүртгэл идэвхгүй"
 
@@ -1559,6 +1612,10 @@ msgstr "Хандалтыг хасах уу?"
 msgid "Remove interest"
 msgstr "Сонирхол хасах"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "Зүйл хасах"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Имэйлийг дахин илгээх"
@@ -1581,7 +1638,7 @@ msgstr "Бүх тохиргоог анхдагч утгад нь сэргээх"
 msgid "Restore a backup file"
 msgstr "Нөөцлөлтийн файлыг сэргээх"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Сэргээх амжилтгүй болсон"
@@ -1662,6 +1719,10 @@ msgstr "Хайж байна..."
 msgid "Select {0}"
 msgstr "{0} сонгох"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "Тоглоом сонгох"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Хандалтын эрх олгох хэрэглэгч, групп, эсвэл бусад дүрэм сонгоно уу."
@@ -1706,6 +1767,11 @@ msgstr "Сайтын чиглэл сонгох"
 msgid "Select theme preference"
 msgstr "Загварын тохируулга сонгох"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "Сонгох..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "сонгогдсон"
@@ -1722,6 +1788,11 @@ msgstr "Дахин илгээх"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "Имэйл илгээх"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "Зурвас илгээх"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "Тэр нэвтрэх үйлчилгээ боломжгүй байна"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Дээр оруулсан имэйл нь энэ серверт шинэ бүртгэлийн нэр болно. Нөөшлөлтийн таних мэдээлэл энд аль хэдийн идэвхтэй байж болохгүй — өөр сервер рүү сэргээх, эсвэл одоо байгаа бүртгэлийг эхлээд устгана уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "Файл гэмтсэн эсвэл өөрчлөгдсөн байж магадгүй."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "Таны оруулсан нууц үг нөөцлөлттэй тохирохгүй байна."
 
@@ -1915,7 +1986,7 @@ msgstr "Загвар"
 msgid "Theme Settings"
 msgstr "Загварын тохиргоо"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Энэ нөөцлөлтийг Mochi-ийн шинэ хувилбараар үүсгэсэн. Эхлээд энэ серверийг шинэчилнэ үү."
 
@@ -1993,6 +2064,10 @@ msgstr "Мягмар гараг"
 msgid "Type a command or search..."
 msgstr "Команд бичих эсвэл хайх..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Зурвас бичих…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "Хэрэглэгч хайхын тулд бичих"
@@ -2039,7 +2114,7 @@ msgstr "Таны өгөгдлийг задалж байна"
 msgid "Unverified"
 msgstr "Баталгаажаагүй"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Mochi-ийн өгөгдлийн экспортоос экспортолсон .zip файлыг байршуулна уу."
 
@@ -2051,7 +2126,7 @@ msgstr "Байршуулалтын явц"
 msgid "Use a different account"
 msgstr "Өөр данс ашиглах"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "Нэвтрэх түлхүүр ашиглах"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "Баталгаажуулах код илгээгдсэн"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "Баталгаажуулалт амжилтгүй"
 
@@ -2116,8 +2191,8 @@ msgstr "Үзэх"
 msgid "View all"
 msgstr "Бүгдийг үзэх"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "Бүх мэдэгдлүүдийг үзэх"
 
@@ -2150,7 +2225,7 @@ msgstr "Лхагва гараг"
 msgid "Wikis"
 msgstr "Wiki-нууд"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "Нууц үг буруу"
 
@@ -2189,7 +2264,7 @@ msgstr "Таны данс түр зогсоосон"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "Таны данс түр зогсоосон."
 
@@ -2205,7 +2280,7 @@ msgstr "Таны акаунт устгахаар товлогдсон байна
 msgid "Your account requires a passkey to sign in"
 msgstr "Таны данс нэвтрэхэд passkey шаардаж байна"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Таны бүртгэл {source}-с энд шилжсэн. Тэнд устгах хүртэл мессеж, мэдэгдлүүд хоёр сервер рүү хүрч болно, таны зарим контент хуучин серверээс ирсээр байж болно, дагагчид таныг эндээс олоход хэдэн минут зарцуулж магадгүй."
 

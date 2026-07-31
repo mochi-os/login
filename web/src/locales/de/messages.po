@@ -36,6 +36,10 @@ msgstr "{entityLabel}-Name"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel}-Name ist erforderlich"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} hat ein Remis angeboten"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} ausgewählt} other {{manyName} ausgewählt}}"
@@ -60,6 +64,11 @@ msgstr "{sentLabel} von {totalLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Menü öffnen (# ungelesene Benachrichtigung)} other {Menü öffnen (# ungelesene Benachrichtigungen)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} verschachtelt"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 Stunden"
@@ -71,6 +80,10 @@ msgstr "24 Stunden"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Absolut (Datum und Uhrzeit)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "Annehmen"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "Zugriffsebene"
 msgid "Account added"
 msgstr "Konto hinzugefügt"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "Konto bereits auf diesem Server vorhanden"
 
@@ -98,7 +111,7 @@ msgstr "Konto entfernt"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "Konto ausgesetzt"
 
@@ -110,6 +123,7 @@ msgstr "Kontotyp"
 msgid "Account verified"
 msgstr "Konto verifiziert"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "Konto hinzufügen"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "Fügen Sie ein Konto hinzu, um Benachrichtigungen zu erhalten und Dienste zu nutzen."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "Checklisten-Eintrag hinzufügen"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "Eintrag hinzufügen ..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "Allen erlauben, nach {0} zu suchen"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Es existiert bereits ein Konto mit dieser E-Mail. Melden Sie sich zuerst an und verknüpfen Sie dann {0} in Ihren Auth-Einstellungen."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "Ein Konto mit dieser Identität existiert hier bereits."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "Avatar für {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "Zurück"
 
@@ -262,17 +284,22 @@ msgstr "Zurück zur Registrierung"
 msgid "Backup file"
 msgstr "Sicherungsdatei"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "Sicherungsdatei ist beschädigt"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "Sicherung ist zu neu"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Banner"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "Navigation zu nicht vertrauenswürdigem Link blockiert"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "Chat"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Wählen Sie „Alle“, um frühere Benachrichtigungen zu sehen."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "Prüfen Sie Ihre E-Mail."
 
@@ -328,9 +355,13 @@ msgstr "Prüfen Sie Ihre E-Mail."
 msgid "Checking…"
 msgstr "Überprüfen…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "Wählen Sie eine andere lokale E-Mail oder melden Sie sich stattdessen an."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "Wählen Sie ein Spiel aus der Seitenleiste aus oder starten Sie ein neues."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "Panel schließen"
 msgid "Close search"
 msgstr "Suche schließen"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "Code gesendet."
 
@@ -569,6 +600,10 @@ msgstr "Dunkler Modus"
 msgid "Data conflict"
 msgstr "Datenkonflikt"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "Ablehnen"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "Standard"
@@ -577,7 +612,7 @@ msgstr "Standard"
 msgid "Default AI account"
 msgstr "Standard-KI-Konto"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Konto auf dem alten Server löschen"
 
@@ -629,8 +664,8 @@ msgstr "Entwurf verwerfen?"
 msgid "Disconnected"
 msgstr "Getrennt"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Schließen"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "{label} bearbeiten"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "E-Mail"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "E-Mail wird bereits verwendet"
 
@@ -674,15 +709,15 @@ msgstr "E-Mail-Code"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "E-Mail-Code"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "Code per E-Mail senden"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "Geben Sie einen Code ein, um fortzufahren"
 
@@ -690,7 +725,7 @@ msgstr "Geben Sie einen Code ein, um fortzufahren"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Geben Sie einen Wiederherstellungscode für \"{userEmail}\" ein, um sich anzumelden"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "Geben Sie den Code aus Ihrer Authenticator-App ein"
 
@@ -711,7 +746,7 @@ msgstr "Geben Sie Ihren {initial} und {last} ein"
 msgid "Enter your authenticator code"
 msgstr "Code Ihrer Authenticator-App eingeben"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "Geben Sie Ihren E-Mail-Code und Authenticator-Code ein"
 
@@ -746,7 +781,7 @@ msgstr "Konto konnte nicht hinzugefügt werden"
 msgid "Failed to add tag"
 msgstr "Tag konnte nicht hinzugefügt werden"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "Fortsetzung fehlgeschlagen"
 
@@ -771,7 +806,7 @@ msgstr "Video konnte nicht geladen werden"
 msgid "Failed to remove account"
 msgstr "Konto konnte nicht entfernt werden"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "Anmeldecode konnte nicht angefordert werden"
 
@@ -795,7 +830,7 @@ msgstr "Feeds"
 msgid "Filter..."
 msgstr "Filtern …"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Kontoumzug abschließen"
 
@@ -939,7 +974,7 @@ msgstr "Eingerückt"
 msgid "Interests"
 msgstr "Interessen"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "Ungültiger Authenticator-Code"
 
@@ -948,10 +983,14 @@ msgstr "Ungültiger Authenticator-Code"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "Ungültiger Code"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "Ungültiges Datum"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "Ungültiges Schlagwort: nur Buchstaben, Ziffern, Leerzeichen, Bindestriche und Schrägstriche (max. 50 Zeichen)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "Ungültiger Bestätigungscode"
 
@@ -1032,7 +1071,7 @@ msgstr "Wird geladen..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "Anmelden"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "Anmeldesitzung abgelaufen, bitte erneut versuchen"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "Zugang verloren? Verwenden Sie einen Wiederherstellungscode"
 
@@ -1084,8 +1123,8 @@ msgstr "Zugang verloren? Verwenden Sie einen Wiederherstellungscode"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "Verwalten Sie Ihre verbundenen Konten für Benachrichtigungen und Dienste."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Alle als gelesen markieren"
@@ -1105,6 +1144,10 @@ msgstr "Mittel"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Menü"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "Nachricht"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "Neu"
 msgid "New accounts are disabled on this server"
 msgstr "Neue Konten sind auf diesem Server deaktiviert"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "Neues Spiel"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "Die Registrierung neuer Nutzer ist deaktiviert."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "Weiter"
 
@@ -1162,7 +1210,7 @@ msgstr "Nächstes Bild"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Keine Zugriffsregeln konfiguriert. Fügen Sie Regeln hinzu, um den Zugriff auf diese Ressource zu steuern."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "Keine Sicherungsdatei ausgewählt"
 
@@ -1170,12 +1218,16 @@ msgstr "Keine Sicherungsdatei ausgewählt"
 msgid "No connected accounts"
 msgstr "Keine verbundenen Konten"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "Noch keine Spiele"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Keine Gruppen verfügbar"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "Keine MFA-Sitzung"
 
@@ -1183,6 +1235,7 @@ msgstr "Keine MFA-Sitzung"
 msgid "No notifications yet"
 msgstr "Noch keine Benachrichtigungen"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Keine Personen gefunden"
@@ -1232,7 +1285,7 @@ msgstr "Keine; neues Konto erstellen"
 msgid "Normal"
 msgstr "Normal"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "Kein Migrationspaket"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "Benachrichtigungen"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "Benachrichtigungen: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "Navigationsmenü öffnen"
 msgid "Open theme settings"
 msgstr "Theme-Einstellungen öffnen"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "Oder Authentifizierungscode eingeben"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "Oder anmelden mit"
@@ -1340,7 +1393,7 @@ msgstr "Passkey-Anmeldung abgebrochen"
 msgid "Passkey login failed"
 msgstr "Passkey-Anmeldung fehlgeschlagen"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "Passkey-Anmeldung erforderlich"
 
@@ -1348,7 +1401,7 @@ msgstr "Passkey-Anmeldung erforderlich"
 msgid "Passkey verification failed. Please try again."
 msgstr "Die Passkey-Überprüfung ist fehlgeschlagen. Bitte versuchen Sie es erneut."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Passkeys"
 
@@ -1356,7 +1409,7 @@ msgstr "Passkeys"
 msgid "Passphrase"
 msgstr "Passphrase"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "Fügen Sie den per E-Mail erhaltenen Anmeldecode ein"
 
@@ -1364,25 +1417,25 @@ msgstr "Fügen Sie den per E-Mail erhaltenen Anmeldecode ein"
 msgid "Pick a date"
 msgstr "Datum auswählen"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "Bitte überprüfen Sie Ihre Authenticator-App und versuchen Sie es erneut."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "Bitte überprüfen Sie Ihren Code und versuchen Sie es erneut."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "Bitte überprüfen Sie Ihre Codes und versuchen Sie es erneut."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "Bitte überprüfen Sie Ihre E-Mail und versuchen Sie es erneut."
 
@@ -1397,7 +1450,7 @@ msgstr "Bitte überprüfe deine Internetverbindung und versuche es erneut."
 msgid "Please check your recovery code and try again."
 msgstr "Bitte überprüfen Sie Ihren Wiederherstellungscode und versuchen Sie es erneut."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "Bitte geben Sie eine gültige E-Mail ein"
 
@@ -1413,9 +1466,9 @@ msgstr "Bitte geben Sie Ihren Wiederherstellungscode ein"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Bitte melden Sie sich mit den entsprechenden Zugangsdaten an, <0/> um auf diese Ressource zuzugreifen."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "Bitte versuchen Sie es erneut oder wenden Sie sich an den Support."
 
@@ -1423,7 +1476,7 @@ msgstr "Bitte versuchen Sie es erneut oder wenden Sie sich an den Support."
 msgid "Please try again."
 msgstr "Bitte versuche es erneut."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Bitte verwenden Sie die Schaltfläche „Mit Passkey anmelden“."
 
@@ -1476,11 +1529,11 @@ msgstr "Push-Benachrichtigung"
 msgid "Raised"
 msgstr "Erhöht"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Konten auf diesem Server erneut verknüpfen"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Registrieren Sie Ihre Passkeys auf diesem Server erneut"
 
@@ -1514,9 +1567,9 @@ msgstr "Sie werden zum Dashboard weitergeleitet…"
 msgid "Reduce interest"
 msgstr "Interesse reduzieren"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "Registrierung deaktiviert"
 
@@ -1559,6 +1612,10 @@ msgstr "Zugriff entfernen?"
 msgid "Remove interest"
 msgstr "Interesse entfernen"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "Element entfernen"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "E-Mail erneut senden"
@@ -1581,7 +1638,7 @@ msgstr "Alle Einstellungen auf Standardwerte zurücksetzen"
 msgid "Restore a backup file"
 msgstr "Eine Sicherungsdatei wiederherstellen"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Wiederherstellung fehlgeschlagen"
@@ -1662,6 +1719,10 @@ msgstr "Wird gesucht..."
 msgid "Select {0}"
 msgstr "{0} auswählen"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "Spiel auswählen"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Wählen Sie einen Benutzer, eine Gruppe oder eine andere Regel aus, um Zugriff zu gewähren."
@@ -1706,6 +1767,11 @@ msgstr "Site-Richtung auswählen"
 msgid "Select theme preference"
 msgstr "Theme-Einstellung auswählen"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "Auswählen..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "ausgewählt"
@@ -1722,6 +1788,11 @@ msgstr "Erneut senden"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "E-Mail senden"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "Nachricht senden"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "Dieser Anmeldeanbieter ist nicht verfügbar"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Die oben eingegebene E-Mail-Adresse wird zum Namen des neuen Kontos auf diesem Server. Die Identität der Sicherung darf hier nicht bereits aktiv sein — stellen Sie auf einem anderen Server wieder her oder löschen Sie zuerst das vorhandene Konto."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "Die Datei könnte beschädigt oder verändert worden sein."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "Die eingegebene Passphrase stimmt nicht mit der Sicherung überein."
 
@@ -1915,7 +1986,7 @@ msgstr "Theme"
 msgid "Theme Settings"
 msgstr "Theme-Einstellungen"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Diese Sicherung wurde mit einer neueren Version von Mochi erstellt. Aktualisiere zuerst diesen Server."
 
@@ -1993,6 +2064,10 @@ msgstr "Dienstag"
 msgid "Type a command or search..."
 msgstr "Befehl eingeben oder suchen..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Nachricht eingeben…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "Tippen, um Benutzer zu suchen"
@@ -2039,7 +2114,7 @@ msgstr "Daten werden entpackt"
 msgid "Unverified"
 msgstr "Nicht verifiziert"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Lade eine .zip-Datei hoch, die aus dem Datenexport von Mochi exportiert wurde."
 
@@ -2051,7 +2126,7 @@ msgstr "Upload-Fortschritt"
 msgid "Use a different account"
 msgstr "Anderes Konto verwenden"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "Passkey verwenden"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "Verifizierungscode gesendet"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "Verifizierung fehlgeschlagen"
 
@@ -2116,8 +2191,8 @@ msgstr "Ansicht"
 msgid "View all"
 msgstr "Alle anzeigen"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "Alle Benachrichtigungen anzeigen"
 
@@ -2150,7 +2225,7 @@ msgstr "Mittwoch"
 msgid "Wikis"
 msgstr "Wikis"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "Falsche Passphrase"
 
@@ -2189,7 +2264,7 @@ msgstr "Ihr Konto wurde gesperrt"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "Ihr Konto wurde gesperrt."
 
@@ -2205,7 +2280,7 @@ msgstr "Ihr Konto ist zur Löschung vorgemerkt."
 msgid "Your account requires a passkey to sign in"
 msgstr "Ihr Konto erfordert einen Passkey für die Anmeldung"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ihr Konto wurde von {source} hierher verschoben. Bis Sie es dort löschen, können Nachrichten und Benachrichtigungen beide Server erreichen, ein Teil Ihrer Inhalte wird weiterhin vom alten Server bereitgestellt, und Follower benötigen möglicherweise ein paar Minuten, um Sie hier zu finden."
 

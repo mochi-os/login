@@ -36,6 +36,10 @@ msgstr "{entityLabel} neve"
 msgid "{entityLabel} name is required"
 msgstr "A(z) {entityLabel} neve kötelező"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} döntetlent ajánlott"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} kiválasztva} other {{manyName} kiválasztva}}"
@@ -60,6 +64,11 @@ msgstr "{sentLabel} / {totalLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Menü megnyitása (# olvasatlan értesítés)} other {Menü megnyitása (# olvasatlan értesítés)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} beágyazott"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 óra"
@@ -71,6 +80,10 @@ msgstr "24 óra"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Abszolút (dátum és idő)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "Elfogadás"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "Hozzáférési szint"
 msgid "Account added"
 msgstr "Fiók hozzáadva"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "A fiók már létezik ezen a kiszolgálón"
 
@@ -98,7 +111,7 @@ msgstr "Fiók eltávolítva"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "Fiók felfüggesztve"
 
@@ -110,6 +123,7 @@ msgstr "Fióktípus"
 msgid "Account verified"
 msgstr "Fiók ellenőrizve"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "Fiók hozzáadása"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "Adjon hozzá egy fiókot az értesítések fogadásához és a szolgáltatások használatához."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "Ellenőrzőlista-elem hozzáadása"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "Elem hozzáadása..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "Bárki kereshessen {0} elemre"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Már létezik fiók ezzel az e-mail-címmel. Először jelentkezzen be, majd csatolja {0}-t az auth beállításokban."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "Ezzel az identitással már létezik fiók itt."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "{name} profilképe"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "Vissza"
 
@@ -262,17 +284,22 @@ msgstr "Vissza a regisztrációhoz"
 msgid "Backup file"
 msgstr "Biztonsági mentés fájl"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "A biztonsági mentés fájl sérült"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "A biztonsági mentés túl új"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Fejléckép"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "Megbízhatatlan hivatkozásra való navigáció letiltva"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "Csevegés"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Jelölje be az „Összes” lehetőséget a korábbi értesítésekhez."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "Nézze meg az e-mailjeit."
 
@@ -328,9 +355,13 @@ msgstr "Nézze meg az e-mailjeit."
 msgid "Checking…"
 msgstr "Ellenőrzés…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "Válasszon másik helyi e-mailt, vagy jelentkezzen be helyette."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "Válasszon egy játékot az oldalsávból, vagy kezdjen újat."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "Panel bezárása"
 msgid "Close search"
 msgstr "Keresés bezárása"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "Kód elküldve."
 
@@ -569,6 +600,10 @@ msgstr "Sötét mód"
 msgid "Data conflict"
 msgstr "Adatütközés"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "Elutasítás"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "Alapértelmezett"
@@ -577,7 +612,7 @@ msgstr "Alapértelmezett"
 msgid "Default AI account"
 msgstr "Alapértelmezett MI-fiók"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Törölje fiókját a régi szerveren"
 
@@ -629,8 +664,8 @@ msgstr "Elveted a piszkozatot?"
 msgid "Disconnected"
 msgstr "Leválasztva"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Elvetés"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "{label} szerkesztése"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "E-mail"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "Az e-mail már használatban van"
 
@@ -674,15 +709,15 @@ msgstr "e-mail kód"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "E-mail kód"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "Kód küldése e-mailben"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "Adjon meg egy kódot a folytatáshoz"
 
@@ -690,7 +725,7 @@ msgstr "Adjon meg egy kódot a folytatáshoz"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Adjon meg helyreállítási kódot \"{userEmail}\" számára a bejelentkezéshez"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "Adja meg a hitelesítő alkalmazásból származó kódot"
 
@@ -711,7 +746,7 @@ msgstr "Adja meg a {initial} és {last} kódját"
 msgid "Enter your authenticator code"
 msgstr "Adja meg a hitelesítő kódját"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "Adja meg az e-mail kódot és a hitelesítő kódot"
 
@@ -746,7 +781,7 @@ msgstr "Nem sikerült hozzáadni a fiókot"
 msgid "Failed to add tag"
 msgstr "Nem sikerült hozzáadni a címkét"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "Nem sikerült folytatni"
 
@@ -771,7 +806,7 @@ msgstr "A videó betöltése sikertelen"
 msgid "Failed to remove account"
 msgstr "Nem sikerült eltávolítani a fiókot"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "A bejelentkezési kód kérése sikertelen"
 
@@ -795,7 +830,7 @@ msgstr "Hírcsatornák"
 msgid "Filter..."
 msgstr "Szűrés…"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Fejezze be a fiók áthelyezését"
 
@@ -939,7 +974,7 @@ msgstr "Beillesztett"
 msgid "Interests"
 msgstr "Érdeklődések"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "Érvénytelen hitelesítő kód"
 
@@ -948,10 +983,14 @@ msgstr "Érvénytelen hitelesítő kód"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "Érvénytelen kód"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "Érvénytelen dátum"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "Érvénytelen címke: csak betűk, számok, szóközök, kötőjelek és perjelek (legfeljebb 50 karakter)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "Érvénytelen ellenőrző kód"
 
@@ -1032,7 +1071,7 @@ msgstr "Betöltés..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "Bejelentkezés"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "A bejelentkezési munkamenet lejárt, próbálja újra"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "Elveszett a hozzáférés? Használjon helyreállítási kódot"
 
@@ -1084,8 +1123,8 @@ msgstr "Elveszett a hozzáférés? Használjon helyreállítási kódot"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "Kezelje csatlakoztatott fiókjait az értesítésekhez és szolgáltatásokhoz."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Összes megjelölése olvasottként"
@@ -1105,6 +1144,10 @@ msgstr "Közepes"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Menü"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "Üzenet"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "Új"
 msgid "New accounts are disabled on this server"
 msgstr "Ezen a kiszolgálón az új fiókok le vannak tiltva"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "Új játék"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "Új felhasználói regisztráció letiltva."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "Következő"
 
@@ -1162,7 +1210,7 @@ msgstr "Következő kép"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Nincsenek konfigurált hozzáférési szabályok. Adjon hozzá szabályokat a hozzáférés szabályozásához."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "Nincs biztonsági mentés fájl kiválasztva"
 
@@ -1170,12 +1218,16 @@ msgstr "Nincs biztonsági mentés fájl kiválasztva"
 msgid "No connected accounts"
 msgstr "Nincsenek csatlakoztatott fiókok"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "Még nincsenek játékok"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Nincsenek elérhető csoportok"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "Nincs MFA-munkamenet"
 
@@ -1183,6 +1235,7 @@ msgstr "Nincs MFA-munkamenet"
 msgid "No notifications yet"
 msgstr "Még nincsenek értesítések"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Nem találhatók személyek"
@@ -1232,7 +1285,7 @@ msgstr "Semmi; hozzon létre egy új fiókot"
 msgid "Normal"
 msgstr "Normál"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "Nem migrációs csomag"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "Értesítések"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "Értesítések: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "Navigációs menü megnyitása"
 msgid "Open theme settings"
 msgstr "Téma beállításainak megnyitása"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "Vagy adja meg a hitelesítő kódot"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "Vagy jelentkezzen be a következővel"
@@ -1340,7 +1393,7 @@ msgstr "Passkey-bejelentkezés megszakítva"
 msgid "Passkey login failed"
 msgstr "Passkey-bejelentkezés sikertelen"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "Passkey-bejelentkezés szükséges"
 
@@ -1348,7 +1401,7 @@ msgstr "Passkey-bejelentkezés szükséges"
 msgid "Passkey verification failed. Please try again."
 msgstr "A hozzáférési kulcs ellenőrzése sikertelen. Próbálja újra."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Passkey-ek"
 
@@ -1356,7 +1409,7 @@ msgstr "Passkey-ek"
 msgid "Passphrase"
 msgstr "Jelmondat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "Illessze be az e-mailben kapott bejelentkezési kódot"
 
@@ -1364,25 +1417,25 @@ msgstr "Illessze be az e-mailben kapott bejelentkezési kódot"
 msgid "Pick a date"
 msgstr "Válasszon dátumot"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "Ellenőrizze a hitelesítő alkalmazást, és próbálja újra."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "Ellenőrizze a kódot, és próbálja újra."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "Ellenőrizze a kódokat, és próbálja újra."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "Ellenőrizze az e-mailt, és próbálja újra."
 
@@ -1397,7 +1450,7 @@ msgstr "Ellenőrizze az internetkapcsolatát, és próbálja újra."
 msgid "Please check your recovery code and try again."
 msgstr "Ellenőrizze a helyreállítási kódot, és próbálja újra."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "Adjon meg érvényes e-mail-címet"
 
@@ -1413,9 +1466,9 @@ msgstr "Adja meg a helyreállítási kódot"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Jelentkezzen be a megfelelő hitelesítő adatokkal, <0/> hogy hozzáférjen ehhez az erőforráshoz."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "Próbálja újra, vagy lépjen kapcsolatba az ügyfélszolgálattal."
 
@@ -1423,7 +1476,7 @@ msgstr "Próbálja újra, vagy lépjen kapcsolatba az ügyfélszolgálattal."
 msgid "Please try again."
 msgstr "Próbálja újra."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Használja a „Bejelentkezés passkey-jel” gombot."
 
@@ -1476,11 +1529,11 @@ msgstr "Push értesítés"
 msgid "Raised"
 msgstr "Kiemelt"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Kapcsolja újra össze fiókjait ezen a szerveren"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Regisztrálja újra a hozzáférési kulcsait ezen a kiszolgálón"
 
@@ -1514,9 +1567,9 @@ msgstr "Átirányítás az irányítópultra…"
 msgid "Reduce interest"
 msgstr "Érdeklődés csökkentése"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "Regisztráció letiltva"
 
@@ -1559,6 +1612,10 @@ msgstr "Eltávolítja a hozzáférést?"
 msgid "Remove interest"
 msgstr "Érdeklődés eltávolítása"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "Elem eltávolítása"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "E-mail újraküldése"
@@ -1581,7 +1638,7 @@ msgstr "Minden beállítás visszaállítása alapértelmezett értékekre"
 msgid "Restore a backup file"
 msgstr "Mentési fájl visszaállítása"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "A visszaállítás sikertelen"
@@ -1662,6 +1719,10 @@ msgstr "Keresés folyamatban..."
 msgid "Select {0}"
 msgstr "{0} kiválasztása"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "Játék kiválasztása"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Válasszon felhasználót, csoportot vagy más szabályt a hozzáférés megadásához."
@@ -1706,6 +1767,11 @@ msgstr "Oldalirány kiválasztása"
 msgid "Select theme preference"
 msgstr "Téma beállításának kiválasztása"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "Kiválasztás..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "kiválasztva"
@@ -1722,6 +1788,11 @@ msgstr "Újraküldés"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "E-mail küldése"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "Üzenet küldése"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "Ez a bejelentkezési szolgáltató nem érhető el"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "A fent megadott e-mail lesz az új fiók neve ezen a kiszolgálón. A biztonsági mentés identitása itt nem lehet már aktív — állítsa vissza egy másik kiszolgálóra, vagy először törölje a meglévő fiókot."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "A fájl sérült vagy módosított lehet."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "A megadott jelmondat nem egyezik a biztonsági mentéssel."
 
@@ -1915,7 +1986,7 @@ msgstr "Téma"
 msgid "Theme Settings"
 msgstr "Témabeállítások"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Ez a biztonsági mentés a Mochi újabb verziójával készült. Frissítse először ezt a szervert."
 
@@ -1993,6 +2064,10 @@ msgstr "Kedd"
 msgid "Type a command or search..."
 msgstr "Adjon meg egy parancsot vagy keressen..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Írjon egy üzenetet…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "Gépeljen a felhasználók kereséséhez"
@@ -2039,7 +2114,7 @@ msgstr "Adatok kicsomagolása"
 msgid "Unverified"
 msgstr "Nem ellenőrzött"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Töltsön fel egy .zip fájlt, amelyet a Mochi adatexportjából exportált."
 
@@ -2051,7 +2126,7 @@ msgstr "Feltöltés folyamata"
 msgid "Use a different account"
 msgstr "Másik fiók használata"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "Azonosítókulcs használata"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "Ellenőrző kód elküldve"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "Az ellenőrzés sikertelen"
 
@@ -2116,8 +2191,8 @@ msgstr "Megtekintés"
 msgid "View all"
 msgstr "Összes megtekintése"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "Összes értesítés megtekintése"
 
@@ -2150,7 +2225,7 @@ msgstr "Szerda"
 msgid "Wikis"
 msgstr "Wikik"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "Helytelen jelmondat"
 
@@ -2189,7 +2264,7 @@ msgstr "A fiókja fel lett függesztve"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "A fiókját felfüggesztették."
 
@@ -2205,7 +2280,7 @@ msgstr "Fiókja törlésre van ütemezve."
 msgid "Your account requires a passkey to sign in"
 msgstr "A bejelentkezéshez a fiók hitelesítőkulcsot igényel"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Fiókja ide lett áthelyezve innen: {source}. Amíg nem törli onnan, az üzenetek és értesítések mindkét szerverre eljuthatnak, tartalmának egy része továbbra is a régi szerverről lesz kiszolgálva, és a követőknek néhány percbe telhet, mire megtalálják Önt itt."
 

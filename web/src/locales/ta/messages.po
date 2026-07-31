@@ -36,6 +36,10 @@ msgstr "{entityLabel} பெயர்"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel} பெயர் தேவை"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} சமநிலை வழங்கினார்"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} தேர்ந்தெடுக்கப்பட்டது} other {{manyName} தேர்ந்தெடுக்கப்பட்டன}}"
@@ -60,6 +64,11 @@ msgstr "{totalLabel}இல் {sentLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {மெனுவைத் திற (# படிக்காத அறிவிப்பு)} other {மெனுவைத் திற (# படிக்காத அறிவிப்புகள்)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} உள்ளடங்கியவை"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 மணிநேரம்"
@@ -71,6 +80,10 @@ msgstr "24 மணிநேரம்"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "முழுமையானது (தேதி மற்றும் நேரம்)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "ஏற்றுக்கொள்"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "அணுகல் நிலை"
 msgid "Account added"
 msgstr "கணக்கு சேர்க்கப்பட்டது"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "கணக்கு ஏற்கனவே இந்த சேவையகத்தில் உள்ளது"
 
@@ -98,7 +111,7 @@ msgstr "கணக்கு அகற்றப்பட்டது"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "கணக்கு இடைநிறுத்தப்பட்டது"
 
@@ -110,6 +123,7 @@ msgstr "கணக்கு வகை"
 msgid "Account verified"
 msgstr "கணக்கு சரிபார்க்கப்பட்டது"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "கணக்கு சேர்"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "அறிவிப்புகளைப் பெறவும் சேவைகளைப் பயன்படுத்தவும் கணக்கைச் சேர்க்கவும்."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "சரிபார்ப்பு பட்டியல் உருப்படி சேர்"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "உருப்படி சேர்..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "யாரும் {0} தேட அனுமதிக்கவும்
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "அந்த மின்னஞ்சலுடன் கணக்கு ஏற்கனவே உள்ளது. முதலில் உள்நுழைந்து, பின்னர் உங்கள் auth அமைப்புகளிலிருந்து {0} இணைக்கவும்."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "இந்த அடையாளத்துடன் ஒரு கணக்கு ஏற்கனவே இங்கே உள்ளது."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "{name} இன் அவதாரம்"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "பின்"
 
@@ -262,17 +284,22 @@ msgstr "பதிவுக்கு திரும்பவும்"
 msgid "Backup file"
 msgstr "காப்புப் பிரதி கோப்பு"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "காப்புப் பிரதி கோப்பு சிதைந்துள்ளது"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "காப்புப் பிரதி மிகவும் புதியது"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "பேனர்"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "நம்பகமற்ற இணைப்புக்கு வழிசெலுத்தல் தடுக்கப்பட்டது"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "அரட்டை"
 msgid "Check \"All\" to see your past notifications."
 msgstr "முந்தைய அறிவிப்புகளைப் பார்க்க \"அனைத்தும்\" தேர்ந்தெடுக்கவும்."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "உங்கள் மின்னஞ்சலைச் சரிபார்க்கவும்."
 
@@ -328,9 +355,13 @@ msgstr "உங்கள் மின்னஞ்சலைச் சரிபா�
 msgid "Checking…"
 msgstr "சரிபார்க்கப்படுகிறது…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "வேறு உள்ளக மின்னஞ்சலைத் தேர்வுசெய்க அல்லது அதற்குப் பதிலாக உள்நுழைக."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "பக்கப்பட்டியில் இருந்து ஒரு விளையாட்டைத் தேர்ந்தெடுக்கவும் அல்லது புதிய ஒன்றைத் தொடங்கவும்."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "பலகத்தை மூடு"
 msgid "Close search"
 msgstr "தேடலை மூடு"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "குறியீடு அனுப்பப்பட்டது."
 
@@ -569,6 +600,10 @@ msgstr "இருள் முறை"
 msgid "Data conflict"
 msgstr "தரவு முரண்பாடு"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "மறு"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "இயல்புநிலை"
@@ -577,7 +612,7 @@ msgstr "இயல்புநிலை"
 msgid "Default AI account"
 msgstr "இயல்புநிலை AI கணக்கு"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "பழைய சேவையகத்தில் உங்கள் கணக்கை நீக்கவும்"
 
@@ -629,8 +664,8 @@ msgstr "வரைவை நிராகரிக்கவா?"
 msgid "Disconnected"
 msgstr "துண்டிக்கப்பட்டது"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "நிராகரி"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "{label} திருத்து"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "மின்னஞ்சல்"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "மின்னஞ்சல் ஏற்கனவே பயன்பாட்டில் உள்ளது"
 
@@ -674,15 +709,15 @@ msgstr "மின்னஞ்சல் குறியீடு"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "மின்னஞ்சல் குறியீடு"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "எனக்கு ஒரு குறியீட்டை மின்னஞ்சல் செய்யுங்கள்"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "தொடர ஒரு குறியீட்டை உள்ளிடவும்"
 
@@ -690,7 +725,7 @@ msgstr "தொடர ஒரு குறியீட்டை உள்ளிட
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "உள்நுழைய \"{userEmail}\" க்கான மீட்பு குறியீட்டை உள்ளிடவும்"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "உங்கள் அங்கீகரிப்பு பயன்பாட்டிலிருந்து குறியீட்டை உள்ளிடவும்"
 
@@ -711,7 +746,7 @@ msgstr "உங்கள் {initial} மற்றும் {last} ஐ உள்�
 msgid "Enter your authenticator code"
 msgstr "உங்கள் அங்கீகரிப்பான் குறியீட்டை உள்ளிடவும்"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "உங்கள் மின்னஞ்சல் குறியீடு மற்றும் அங்கீகரிப்பான் குறியீட்டை உள்ளிடவும்"
 
@@ -746,7 +781,7 @@ msgstr "கணக்கைச் சேர்க்க முடியவில�
 msgid "Failed to add tag"
 msgstr "டேக்கைச் சேர்க்க முடியவில்லை"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "தொடர முடியவில்லை"
 
@@ -771,7 +806,7 @@ msgstr "வீடியோவை ஏற்ற முடியவில்லை"
 msgid "Failed to remove account"
 msgstr "கணக்கை நீக்க முடியவில்லை"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "உள்நுழைவு குறியீட்டைக் கோர முடியவில்லை"
 
@@ -795,7 +830,7 @@ msgstr "ஊட்டங்கள்"
 msgid "Filter..."
 msgstr "வடிகட்டு..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "கணக்கை நகர்த்துவதை முடிக்கவும்"
 
@@ -939,7 +974,7 @@ msgstr "உள்ளமைக்கப்பட்ட"
 msgid "Interests"
 msgstr "ஆர்வங்கள்"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "தவறான அங்கீகரிப்பு குறியீடு"
 
@@ -948,10 +983,14 @@ msgstr "தவறான அங்கீகரிப்பு குறியீ�
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "தவறான குறியீடு"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "தவறான தேதி"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "தவறான குறிச்சொல்: எழுத்துகள், எண்கள், இடைவெளிகள், இணைப்புக்கோடுகள், சாய்வுக்கோடுகள் மட்டுமே (அதிகபட்சம் 50 எழுத்துகள்)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "தவறான சரிபார்ப்பு குறியீடு"
 
@@ -1032,7 +1071,7 @@ msgstr "ஏற்றுகிறது..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "உள்நுழை"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "உள்நுழைவு அமர்வு காலாவதியானது, மீண்டும் முயற்சிக்கவும்"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "அணுகல் இழந்தீர்களா? மீட்பு குறியீட்டைப் பயன்படுத்தவும்"
 
@@ -1084,8 +1123,8 @@ msgstr "அணுகல் இழந்தீர்களா? மீட்பு
 msgid "Manage your connected accounts for notifications and services."
 msgstr "அறிவிப்புகள் மற்றும் சேவைகளுக்கான உங்கள் இணைக்கப்பட்ட கணக்குகளை நிர்வகிக்கவும்."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "அனைத்தையும் படித்ததாகக் குறிக்கவும்"
@@ -1105,6 +1144,10 @@ msgstr "நடுத்தரம்"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "மெனு"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "செய்தி"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "புதியது"
 msgid "New accounts are disabled on this server"
 msgstr "இந்த சேவையகத்தில் புதிய கணக்குகள் முடக்கப்பட்டுள்ளன"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "புதிய விளையாட்டு"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "புதிய பயனர் பதிவு முடக்கப்பட்டுள்ளது."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "அடுத்து"
 
@@ -1162,7 +1210,7 @@ msgstr "அடுத்த படம்"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "அணுகல் விதிகள் எதுவும் கட்டமைக்கப்படவில்லை. இந்த ஆதாரத்தை யார் அணுகலாம் என்பதைக் கட்டுப்படுத்த விதிகளைச் சேர்க்கவும்."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "காப்புப் பிரதி கோப்பு தேர்ந்தெடுக்கப்படவில்லை"
 
@@ -1170,12 +1218,16 @@ msgstr "காப்புப் பிரதி கோப்பு தேர்
 msgid "No connected accounts"
 msgstr "இணைக்கப்பட்ட கணக்குகள் இல்லை"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "விளையாட்டுகள் இன்னும் இல்லை"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "குழுக்கள் கிடைக்கவில்லை"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "MFA அமர்வு இல்லை"
 
@@ -1183,6 +1235,7 @@ msgstr "MFA அமர்வு இல்லை"
 msgid "No notifications yet"
 msgstr "இதுவரை அறிவிப்புகள் இல்லை"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "நபர்கள் எதுவும் கிடைக்கவில்லை"
@@ -1232,7 +1285,7 @@ msgstr "எதுவுமில்லை; புதிய கணக்கு �
 msgid "Normal"
 msgstr "சாதாரணம்"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "இது இடம்பெயர்வு தொகுப்பு அல்ல"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "அறிவிப்புகள்"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "அறிவிப்புகள்: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "வழிசெலுத்தல் மெனுவைத் திற�
 msgid "Open theme settings"
 msgstr "தீம் அமைப்புகளைத் திறக்கவும்"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "அல்லது அங்கீகரிப்புக் குறியீட்டை உள்ளிடவும்"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "அல்லது இதைப் பயன்படுத்தி உள்நுழையவும்"
@@ -1340,7 +1393,7 @@ msgstr "Passkey உள்நுழைவு ரத்து செய்யப�
 msgid "Passkey login failed"
 msgstr "Passkey உள்நுழைவு தோல்வியடைந்தது"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "Passkey உள்நுழைவு தேவை"
 
@@ -1348,7 +1401,7 @@ msgstr "Passkey உள்நுழைவு தேவை"
 msgid "Passkey verification failed. Please try again."
 msgstr "கடவுவிசை சரிபார்ப்பு தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Passkeyக்கள்"
 
@@ -1356,7 +1409,7 @@ msgstr "Passkeyக்கள்"
 msgid "Passphrase"
 msgstr "கடவுச்சொற்றொடர்"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "மின்னஞ்சல் வழியாக நீங்கள் பெற்ற உள்நுழைவு குறியீட்டை ஒட்டவும்"
 
@@ -1364,25 +1417,25 @@ msgstr "மின்னஞ்சல் வழியாக நீங்கள் 
 msgid "Pick a date"
 msgstr "தேதியைத் தேர்ந்தெடுக்கவும்"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "உங்கள் ஆதரிப்பு பயன்பாட்டை சரிபார்த்து மீண்டும் முயற்சிக்கவும்."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "உங்கள் குறியீட்டை சரிபார்த்து மீண்டும் முயற்சிக்கவும்."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "உங்கள் குறியீடுகளை சரிபார்த்து மீண்டும் முயற்சிக்கவும்."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "உங்கள் மின்னஞ்சலை சரிபார்த்து மீண்டும் முயற்சிக்கவும்."
 
@@ -1397,7 +1450,7 @@ msgstr "உங்கள் இணைய இணைப்பைச் சரிப
 msgid "Please check your recovery code and try again."
 msgstr "உங்கள் மீட்பு குறியீட்டைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும்."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "சரியான மின்னஞ்சலை உள்ளிடவும்"
 
@@ -1413,9 +1466,9 @@ msgstr "உங்கள் மீட்பு குறியீட்டை உ
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "இந்த ஆதாரத்தை அணுக <0/> சரியான சான்றுகளுடன் உள்நுழையவும்."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "தயவுசெய்து மீண்டும் முயற்சிக்கவும் அல்லது ஆதரவைத் தொடர்பு கொள்ளவும்."
 
@@ -1423,7 +1476,7 @@ msgstr "தயவுசெய்து மீண்டும் முயற்�
 msgid "Please try again."
 msgstr "தயவுசெய்து மீண்டும் முயற்சிக்கவும்."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "தயவுசெய்து \"Passkey-உடன் உள்நுழை\" பட்டனைப் பயன்படுத்தவும்."
 
@@ -1476,11 +1529,11 @@ msgstr "புஷ் அறிவிப்பு"
 msgid "Raised"
 msgstr "உயர்த்தப்பட்டது"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "இந்த சேவையகத்தில் உங்கள் கணக்குகளை மீண்டும் இணைக்கவும்"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "இந்த சேவையகத்தில் உங்கள் கடவுச்சாவிகளை மீண்டும் பதிவு செய்யவும்"
 
@@ -1514,9 +1567,9 @@ msgstr "டாஷ்போர்டுக்கு திருப்பிவ�
 msgid "Reduce interest"
 msgstr "ஆர்வத்தைக் குறைக்கவும்"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "பதிவு முடக்கப்பட்டுள்ளது"
 
@@ -1559,6 +1612,10 @@ msgstr "அணுகலை அகற்றவா?"
 msgid "Remove interest"
 msgstr "ஆர்வத்தை அகற்று"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "உருப்படியை அகற்று"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "மின்னஞ்சலை மீண்டும் அனுப்பு"
@@ -1581,7 +1638,7 @@ msgstr "அனைத்து அமைப்புகளையும் இய�
 msgid "Restore a backup file"
 msgstr "இருப்பு கோப்பை மீட்டமை"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "மீட்டமைப்பு தோல்வியடைந்தது"
@@ -1662,6 +1719,10 @@ msgstr "தேடுகிறது..."
 msgid "Select {0}"
 msgstr "{0} தேர்ந்தெடுக்கவும்"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "ஒரு கேமை தேர்ந்தெடு"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "அணுகலை வழங்க ஒரு பயனர், குழு அல்லது மற்ற விதியை தேர்ந்தெடு."
@@ -1706,6 +1767,11 @@ msgstr "தள திசையை தேர்ந்தெடு"
 msgid "Select theme preference"
 msgstr "தீம் விருப்பத்தை தேர்ந்தெடு"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "தேர்ந்தெடு..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "தேர்ந்தெடுக்கப்பட்டது"
@@ -1722,6 +1788,11 @@ msgstr "மீண்டும் அனுப்பு"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "மின்னஞ்சல் அனுப்பு"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "செய்தியை அனுப்பு"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "அந்த உள்நுழைவு வழங்குநர் க
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "மேலே நீங்கள் உள்ளிடும் மின்னஞ்சல் இந்த சேவையகத்தில் புதிய கணக்கின் பெயராக மாறும். காப்புப்பிரதியின் அடையாளம் இங்கே ஏற்கனவே செயலில் இருக்கக் கூடாது — வேறு சேவையகத்திற்கு மீட்டமைக்கவும், அல்லது தற்போதுள்ள கணக்கை முதலில் நீக்கவும்."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "கோப்பு சேதமடைந்திருக்கலாம் அல்லது மாற்றப்பட்டிருக்கலாம்."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "நீங்கள் உள்ளிட்ட கடவுச்சொற்றொடர் காப்புப் பிரதியுடன் பொருந்தவில்லை."
 
@@ -1915,7 +1986,7 @@ msgstr "தீம்"
 msgid "Theme Settings"
 msgstr "தீம் அமைப்புகள்"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "இந்த காப்புப் பிரதி Mochi-யின் புதிய பதிப்பால் உருவாக்கப்பட்டது. முதலில் இந்த சர்வரை புதுப்பிக்கவும்."
 
@@ -1993,6 +2064,10 @@ msgstr "செவ்வாய்க்கிழமை"
 msgid "Type a command or search..."
 msgstr "ஒரு கட்டளை அல்லது தேடலை தட்டச்சு செய்..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "ஒரு செய்தியை தட்டச்சு செய்…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "பயனர்களை தேட தட்டச்சு செய்"
@@ -2039,7 +2114,7 @@ msgstr "உங்கள் தரவு திறக்கப்படுகி�
 msgid "Unverified"
 msgstr "சரிபார்க்கப்படாதது"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Mochi-யின் தரவு ஏற்றுமதியிலிருந்து ஏற்றுமதி செய்யப்பட்ட .zip கோப்பை பதிவேற்றவும்."
 
@@ -2051,7 +2126,7 @@ msgstr "பதிவேற்ற முன்னேற்றம்"
 msgid "Use a different account"
 msgstr "வேறு கணக்கை பயன்படுத்து"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "கடவுச்சாவியைப் பயன்படுத்தவும்"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "சரிபார்ப்பு குறியீடு அனுப்பப்பட்டது"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "சரிபார்ப்பு தோல்வியடைந்தது"
 
@@ -2116,8 +2191,8 @@ msgstr "காட்டு"
 msgid "View all"
 msgstr "அனைத்தையும் காட்டு"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "அனைத்து அறிவிப்புகளையும் காட்டு"
 
@@ -2150,7 +2225,7 @@ msgstr "புதன்கிழமை"
 msgid "Wikis"
 msgstr "Wiki-கள்"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "தவறான கடவுச்சொற்றொடர்"
 
@@ -2189,7 +2264,7 @@ msgstr "உங்கள் கணக்கு இடைநிறுத்தப�
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "உங்கள் கணக்கு இடைநிறுத்தப்பட்டுள்ளது."
 
@@ -2205,7 +2280,7 @@ msgstr "உங்கள் கணக்கு நீக்கத்திற்�
 msgid "Your account requires a passkey to sign in"
 msgstr "உள்நுழைய உங்கள் கணக்குக்கு passkey தேவை"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "உங்கள் கணக்கு {source} இலிருந்து இங்கே நகர்த்தப்பட்டது. நீங்கள் அதை அங்கே நீக்கும் வரை, செய்திகளும் அறிவிப்புகளும் இரண்டு சேவையகங்களையும் அடையலாம், உங்கள் சில உள்ளடக்கம் பழைய சேவையகத்தில் இருந்து தொடர்ந்து வழங்கப்படும், மேலும் உங்கள் பின்தொடர்பவர்கள் இங்கே உங்களை கண்டுபிடிக்க சில நிமிடங்கள் ஆகலாம்."
 

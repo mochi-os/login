@@ -36,6 +36,10 @@ msgstr "Emri i {entityLabel}"
 msgid "{entityLabel} name is required"
 msgstr "Emri i {entityLabel} është i detyrueshëm"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} ofroi një barazim"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} u zgjodh} other {{manyName} u zgjodhën}}"
@@ -60,6 +64,11 @@ msgstr "{sentLabel} nga {totalLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Hap menynë (# njoftim i palexuar)} other {Hap menynë (# njoftime të palexuara)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} të ndërthurura"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 orë"
@@ -71,6 +80,10 @@ msgstr "24 orë"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Absolut (data dhe ora)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "Prano"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "Niveli i qasjes"
 msgid "Account added"
 msgstr "Llogaria u shtua"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "Llogaria është tashmë në këtë server"
 
@@ -98,7 +111,7 @@ msgstr "Llogaria u hoq"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "Llogaria u pezullua"
 
@@ -110,6 +123,7 @@ msgstr "Lloji i llogarisë"
 msgid "Account verified"
 msgstr "Llogaria u verifikua"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "Shto llogari"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "Shto një llogari për të marrë njoftime dhe për të përdorur shërbime."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "Shto element të listës"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "Shto element..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "Lejo këdo të kërkojë {0}"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Një llogari me atë email ekziston tashmë. Hyr së pari, pastaj lidh {0} nga cilësimet e tua të autentikimit."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "Një llogari me këtë identitet ekziston tashmë këtu."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "Avatar për {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "Mbrapa"
 
@@ -262,17 +284,22 @@ msgstr "Kthehu tek regjistrimi"
 msgid "Backup file"
 msgstr "Skedar rezervë"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "Skedari rezervë është i dëmtuar"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "Kopja rezervë është shumë e re"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Banner-i"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "Lundrimi te lidhja e pabesueshme u bllokua"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "Bisedë"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Zgjidhni \"Të gjitha\" për të parë njoftimet e mëparshme."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "Kontrollo email-in tënd."
 
@@ -328,9 +355,13 @@ msgstr "Kontrollo email-in tënd."
 msgid "Checking…"
 msgstr "Duke kontrolluar…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "Zgjidhni një email tjetër lokal ose hyni në vend."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "Zgjidh një lojë nga ana ose nis një të re."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "Mbyll panelin"
 msgid "Close search"
 msgstr "Mbyll kërkimin"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "Kodi u dërgua."
 
@@ -569,6 +600,10 @@ msgstr "Modë e errët"
 msgid "Data conflict"
 msgstr "Konflikt të dhënash"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "Refuzo"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "I parazgjedhur"
@@ -577,7 +612,7 @@ msgstr "I parazgjedhur"
 msgid "Default AI account"
 msgstr "Llogaria e parazgjedhur AI"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Fshini llogarinë tuaj në serverin e vjetër"
 
@@ -629,8 +664,8 @@ msgstr "Ta hedhësh draftin?"
 msgid "Disconnected"
 msgstr "I shkëputur"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Hidhe"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "Modifiko {label}"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "Email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "Emaili është tashmë në përdorim"
 
@@ -674,15 +709,15 @@ msgstr "kodi i email-it"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "Kodi me email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "Më dërgo një kod me email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "Vendosni një kod për të vazhduar"
 
@@ -690,7 +725,7 @@ msgstr "Vendosni një kod për të vazhduar"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Shkruani një kod rikuperimi për \"{userEmail}\" për t'u kyçur"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "Shkruani kodin nga aplikacioni juaj autentikues"
 
@@ -711,7 +746,7 @@ msgstr "Shkruani {initial} dhe {last} tuaj"
 msgid "Enter your authenticator code"
 msgstr "Vendosni kodin e aplikacionit të vërtetimit"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "Shkruani kodin e emailit dhe kodin e autentikuesit"
 
@@ -746,7 +781,7 @@ msgstr "Shtimi i llogarisë dështoi"
 msgid "Failed to add tag"
 msgstr "Shtimi i etiketës dështoi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "Vazhdimi dështoi"
 
@@ -771,7 +806,7 @@ msgstr "Ngarkimi i videos dështoi"
 msgid "Failed to remove account"
 msgstr "Heqja e llogarisë dështoi"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "Kërkimi i kodit të hyrjes dështoi"
 
@@ -795,7 +830,7 @@ msgstr "Furnizime"
 msgid "Filter..."
 msgstr "Filtro..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Përfundoni lëvizjen e llogarisë suaj"
 
@@ -939,7 +974,7 @@ msgstr "I brendshëm"
 msgid "Interests"
 msgstr "Interesat"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "Kod autentikuesi i pavlefshëm"
 
@@ -948,10 +983,14 @@ msgstr "Kod autentikuesi i pavlefshëm"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "Kod i pavlefshëm"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "Datë e pavlefshme"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "Etiketë e pavlefshme: vetëm shkronja, numra, hapësira, vija ndarëse dhe vija të pjerrëta (maksimumi 50 karaktere)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "Kod verifikimi i pavlefshëm"
 
@@ -1032,7 +1071,7 @@ msgstr "Duke ngarkuar..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "Kyçu"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "Sesioni i kyçjes skadoi, ju lutemi provoni përsëri"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "Humbur qasjen? Përdorni një kod rikuperimi"
 
@@ -1084,8 +1123,8 @@ msgstr "Humbur qasjen? Përdorni një kod rikuperimi"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "Menaxhoni llogaritë tuaja të lidhura për njoftime dhe shërbime."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Shëno të gjitha si të lexuara"
@@ -1105,6 +1144,10 @@ msgstr "I mesëm"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Menyja"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "Mesazhi"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "I ri"
 msgid "New accounts are disabled on this server"
 msgstr "Llogaritë e reja janë çaktivizuar në këtë server"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "Lojë e re"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "Regjistrimi i përdoruesve të rinj është çaktivizuar."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "Tjetri"
 
@@ -1162,7 +1210,7 @@ msgstr "Imazhi tjetër"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Asnjë rregull qasjeje i konfiguruar. Shto rregulla për të kontrolluar kush mund të qaset në këtë burim."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "Nuk u zgjodh asnjë skedar rezervë"
 
@@ -1170,12 +1218,16 @@ msgstr "Nuk u zgjodh asnjë skedar rezervë"
 msgid "No connected accounts"
 msgstr "Asnjë llogari e lidhur"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "Ende pa lojëra"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Asnjë grup i disponueshëm"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "Asnjë sesion MFA"
 
@@ -1183,6 +1235,7 @@ msgstr "Asnjë sesion MFA"
 msgid "No notifications yet"
 msgstr "Ende asnjë njoftim"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "S'u gjet asnjë person"
@@ -1232,7 +1285,7 @@ msgstr "Asgjë; krijo një llogari të re"
 msgid "Normal"
 msgstr "Normale"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "Nuk është paketë migrimi"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "Njoftime"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "Njoftimet: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "Hap menynë e navigimit"
 msgid "Open theme settings"
 msgstr "Hap cilësimet e temës"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "Ose vendosni kodin e vërtetimit"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "Ose hyni me"
@@ -1340,7 +1393,7 @@ msgstr "Hyrja me kyç u anulua"
 msgid "Passkey login failed"
 msgstr "Hyrja me kyç dështoi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "Kërkohet hyrja me kyç"
 
@@ -1348,7 +1401,7 @@ msgstr "Kërkohet hyrja me kyç"
 msgid "Passkey verification failed. Please try again."
 msgstr "Verifikimi i çelësit të hyrjes dështoi. Ju lutemi provoni përsëri."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Kyçet"
 
@@ -1356,7 +1409,7 @@ msgstr "Kyçet"
 msgid "Passphrase"
 msgstr "Fjalëkalim"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "Ngjit kodin e hyrjes që morët me email"
 
@@ -1364,25 +1417,25 @@ msgstr "Ngjit kodin e hyrjes që morët me email"
 msgid "Pick a date"
 msgstr "Zgjidhni një datë"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "Ju lutemi kontrolloni aplikacionin e vërtetuesit dhe provoni përsëri."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "Ju lutemi kontrolloni kodin tuaj dhe provoni përsëri."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "Ju lutemi kontrolloni kodet tuaja dhe provoni përsëri."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "Ju lutemi kontrolloni emailin tuaj dhe provoni përsëri."
 
@@ -1397,7 +1450,7 @@ msgstr "Kontrolloni lidhjen tuaj me internetin dhe provoni përsëri."
 msgid "Please check your recovery code and try again."
 msgstr "Ju lutemi kontrolloni kodin e rikuperimit dhe provoni përsëri."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "Ju lutemi futni një email të vlefshëm"
 
@@ -1413,9 +1466,9 @@ msgstr "Ju lutemi futni kodin tuaj të rikuperimit"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Ju lutemi hyni me kredencialet e duhura <0/> për të hyrë në këtë burim."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "Ju lutemi provoni përsëri ose kontaktoni mbështetjen."
 
@@ -1423,7 +1476,7 @@ msgstr "Ju lutemi provoni përsëri ose kontaktoni mbështetjen."
 msgid "Please try again."
 msgstr "Provoni përsëri."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Ju lutemi përdorni butonin \"Hyr me kyç\"."
 
@@ -1476,11 +1529,11 @@ msgstr "Njoftim push"
 msgid "Raised"
 msgstr "Ngritur"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Rilinkoni llogaritë tuaja në këtë server"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Riregjistroni çelësat tuaj të hyrjes në këtë server"
 
@@ -1514,9 +1567,9 @@ msgstr "Duke ju ridrejtuar te paneli…"
 msgid "Reduce interest"
 msgstr "Zvogëlo interesin"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "Regjistrimi i çaktivizuar"
 
@@ -1559,6 +1612,10 @@ msgstr "Të hiqet qasja?"
 msgid "Remove interest"
 msgstr "Hiq interesin"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "Hiq artikullin"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Ridërgo email-in"
@@ -1581,7 +1638,7 @@ msgstr "Rivendos të gjitha cilësimet në vlerat parazgjedhura"
 msgid "Restore a backup file"
 msgstr "Rivendos një skedar rezervë"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Rivendosja dështoi"
@@ -1662,6 +1719,10 @@ msgstr "Duke kërkuar..."
 msgid "Select {0}"
 msgstr "Zgjidh {0}"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "Zgjidh një lojë"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Zgjidh një përdorues, grup, ose rregull tjetër për të dhënë qasje."
@@ -1706,6 +1767,11 @@ msgstr "Zgjidh drejtimin e faqes"
 msgid "Select theme preference"
 msgstr "Zgjidh preferencën e temës"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "Zgjidh..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "të zgjedhura"
@@ -1722,6 +1788,11 @@ msgstr "Dërgo përsëri"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "Dërgo email"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "Dërgo mesazhin"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "Ai ofrues hyrjeje nuk është i disponueshëm"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Email-i që vendosni më sipër bëhet emri i llogarisë së re në këtë server. Identiteti i rezervimit nuk duhet të jetë tashmë aktiv këtu — rivendoseni në një server tjetër, ose fshini fillimisht llogarinë ekzistuese."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "Skedari mund të jetë i dëmtuar ose modifikuar."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "Fjalëkalimi që keni shkruar nuk përputhet me kopjen rezervë."
 
@@ -1915,7 +1986,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Cilësimet e temës"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Ky arkivim u krijua nga një version më i ri i Mochi. Përditësoni këtë server fillimisht."
 
@@ -1993,6 +2064,10 @@ msgstr "E martë"
 msgid "Type a command or search..."
 msgstr "Shkruaj një komandë ose kërko..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Shkruaj një mesazh…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "Shkruaj për të kërkuar përdorues"
@@ -2039,7 +2114,7 @@ msgstr "Duke hapur paketat e të dhënave tuaja"
 msgid "Unverified"
 msgstr "I paverifikuar"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Ngarkoni një skedar .zip të eksportuar nga eksportimi i të dhënave të Mochi."
 
@@ -2051,7 +2126,7 @@ msgstr "Ecuria e ngarkimit"
 msgid "Use a different account"
 msgstr "Përdor një llogari tjetër"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "Përdor një çelës hyrjeje"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "Kodi i verifikimit u dërgua"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "Verifikimi dështoi"
 
@@ -2116,8 +2191,8 @@ msgstr "Shiko"
 msgid "View all"
 msgstr "Shiko të gjitha"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "Shiko të gjitha njoftimet"
 
@@ -2150,7 +2225,7 @@ msgstr "E mërkurë"
 msgid "Wikis"
 msgstr "Wiki-t"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "Fjalëkalim i gabuar"
 
@@ -2189,7 +2264,7 @@ msgstr "Llogaria jote është pezulluar"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "Llogaria jote është pezulluar."
 
@@ -2205,7 +2280,7 @@ msgstr "Llogaria juaj është planifikuar për fshirje."
 msgid "Your account requires a passkey to sign in"
 msgstr "Llogaria jote kërkon një passkey për të hyrë"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Llogaria juaj u zhvendos këtu nga {source}. Derisa ta fshini atje, mesazhet dhe njoftimet mund të arrijnë në të dy serverët, një pjesë e përmbajtjes suaj vazhdon të shërbejë nga serveri i vjetër dhe ndjekësit mund të kenë nevojë për disa minuta që t'ju gjejnë këtu."
 

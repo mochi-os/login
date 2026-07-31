@@ -36,6 +36,10 @@ msgstr "{entityLabel} නම"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel} නම අවශ්‍යයි"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} ජය පරාජය ඉදිරිපත් කළා"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} තෝරාගත්තා} other {{manyName} තෝරාගත්තා}}"
@@ -60,6 +64,11 @@ msgstr "{totalLabel}න් {sentLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {මෙනුව විවෘත කරන්න (කියවා නැති දැනුම්දීම් #)} other {මෙනුව විවෘත කරන්න (කියවා නැති දැනුම්දීම් #)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} කැදලි"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "පැය 12"
@@ -71,6 +80,10 @@ msgstr "පැය 24"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "නිරපේක්ෂ (දිනය සහ වේලාව)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "පිළිගන්න"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "ප්‍රවේශ මට්ටම"
 msgid "Account added"
 msgstr "ගිණුම එක් කරන ලදී"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "ගිණුම දැනටමත් මෙම සේවාදායකය තුළ ඇත"
 
@@ -98,7 +111,7 @@ msgstr "ගිණුම ඉවත් කරන ලදී"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "ගිණුම අත්හිටුවා ඇත"
 
@@ -110,6 +123,7 @@ msgstr "ගිණුම් වර්ගය"
 msgid "Account verified"
 msgstr "ගිණුම සත්‍යාපනය කරන ලදී"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "ගිණුමක් එක් කරන්න"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "දැනුම්දීම් ලබා ගැනීමට සහ සේවාවන් භාවිත කිරීමට ගිණුමක් එක් කරන්න."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "පරීක්ෂා ලැයිස්තු අයිතමයක් එක් කරන්න"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "අයිතමයක් එක් කරන්න..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "ඕනෑම කෙනෙකුට {0} සෙවීමට ඉඩ දෙ�
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "එම ඊමේල් සහිත ගිණුමක් දැනටමත් පවතී. පළමුව පුරනය වන්න, ඉන්පසු ඔබේ auth සැකසුම් වලින් {0} සම්බන්ධ කරන්න."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "මෙම හැඳුනුම්පතකින් ගිණුමක් දැනටමත් මෙහි පවතී."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "{name} සඳහා අවතාරය"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "ආපසු"
 
@@ -262,17 +284,22 @@ msgstr "ලියාපදිංචිය වෙත ආපසු"
 msgid "Backup file"
 msgstr "උපස්ථ ගොනුව"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "උපස්ථ ගොනුව දූෂිතයි"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "උපස්ථය ඉතා නව"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "බැනරය"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "විශ්වාස නොකළ සබැඳියකට සංචාලනය අවහිර කරන ලදී"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "චැට්"
 msgid "Check \"All\" to see your past notifications."
 msgstr "පෙර දැනුම්දීම් බැලීමට \"සියල්ල\" තෝරන්න."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "ඔබේ ඊමේල් පරීක්ෂා කරන්න."
 
@@ -328,9 +355,13 @@ msgstr "ඔබේ ඊමේල් පරීක්ෂා කරන්න."
 msgid "Checking…"
 msgstr "පරීක්ෂා කරමින්…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "වෙනස් දේශීය විද්‍යුත් තැපෑලක් තෝරන්න හෝ ඒ වෙනුවට ඇතුළු වන්න."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "පැති තීරුවෙන් ක්‍රීඩාවක් තෝරන්න හෝ නව එකක් ආරම්භ කරන්න."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "පැනලය වසන්න"
 msgid "Close search"
 msgstr "සෙවුම වසන්න"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "කේතය යවන ලදී."
 
@@ -569,6 +600,10 @@ msgstr "අඳුරු ආකාරය"
 msgid "Data conflict"
 msgstr "දත්ත ගැටුමක්"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "ප්‍රතික්ෂේප කරන්න"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "පෙරනිමි"
@@ -577,7 +612,7 @@ msgstr "පෙරනිමි"
 msgid "Default AI account"
 msgstr "පෙරනිමි AI ගිණුම"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "පැරණි සේවාදායකයේ ඔබේ ගිණුම මකන්න"
 
@@ -629,8 +664,8 @@ msgstr "කෙටුම්පත ඉවත ලන්නද?"
 msgid "Disconnected"
 msgstr "විසන්ධියි"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "ඉවත ලන්න"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "{label} සංස්කරණය කරන්න"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "ඊමේල්"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "විද්‍යුත් තැපෑල දැනටමත් භාවිතයේ ඇත"
 
@@ -674,15 +709,15 @@ msgstr "ඊමේල් කේතය"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "ඊමේල් කේතය"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "මට කේතයක් විද්‍යුත් තැපෑලෙන් එවන්න"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "ඉදිරියට යාමට කේතයක් ඇතුළත් කරන්න"
 
@@ -690,7 +725,7 @@ msgstr "ඉදිරියට යාමට කේතයක් ඇතුළත්
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "පුරනය වීමට \"{userEmail}\" සඳහා ප්‍රතිසාධන කේතයක් ඇතුළත් කරන්න"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "ඔබේ සත්‍යාපක යෙදුමෙන් කේතය ඇතුළු කරන්න"
 
@@ -711,7 +746,7 @@ msgstr "ඔබේ {initial} සහ {last} ඇතුළත් කරන්න"
 msgid "Enter your authenticator code"
 msgstr "ඔබගේ සත්‍යාපන කේතය ඇතුළත් කරන්න"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "ඔබේ ඊමේල් කේතය සහ සත්‍යාපක කේතය ඇතුළු කරන්න"
 
@@ -746,7 +781,7 @@ msgstr "ගිණුම එක් කිරීමට අසමත් විය"
 msgid "Failed to add tag"
 msgstr "ටැගය එක් කිරීමට අසමත් විය"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "ඉදිරියට යාමට අසමත් විය"
 
@@ -771,7 +806,7 @@ msgstr "වීඩියෝව පූරණය කිරීමට අසමත්
 msgid "Failed to remove account"
 msgstr "ගිණුම ඉවත් කිරීමට අසමත් විය"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "පිවිසුම් කේතය ඉල්ලීම අසාර්ථක විය"
 
@@ -795,7 +830,7 @@ msgstr "පෝෂණයන්"
 msgid "Filter..."
 msgstr "පෙරහන..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "ඔබේ ගිණුම ගෙන යාම අවසන් කරන්න"
 
@@ -939,7 +974,7 @@ msgstr "ඇතුළත"
 msgid "Interests"
 msgstr "උනන්දු"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "අවලංගු සත්‍යාපක කේතය"
 
@@ -948,10 +983,14 @@ msgstr "අවලංගු සත්‍යාපක කේතය"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "අවලංගු කේතය"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "අවලංගු දිනය"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "වලංගු නොවන ටැගය: අකුරු, ඉලක්කම්, හිස්තැන්, ඉරි සහ ඇල ඉරි පමණි (උපරිම අකුරු 50)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "අවලංගු සත්‍යාපන කේතය"
 
@@ -1032,7 +1071,7 @@ msgstr "පූරණය වෙමින්..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "පිවිසෙන්න"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "පිවිසුම් සැසිය කල් ඉකුත් වී ඇත, කරුණාකර නැවත උත්සාහ කරන්න"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "ප්‍රවේශය නැති වුණාද? ප්‍රතිසාධන කේතයක් භාවිතා කරන්න"
 
@@ -1084,8 +1123,8 @@ msgstr "ප්‍රවේශය නැති වුණාද? ප්‍රත�
 msgid "Manage your connected accounts for notifications and services."
 msgstr "දැනුම්දීම් සහ සේවා සඳහා ඔබේ සම්බන්ධිත ගිණුම් කළමනාකරණය කරන්න."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "සියල්ල කියවූ ලෙස සලකුණු කරන්න"
@@ -1105,6 +1144,10 @@ msgstr "මධ්‍යම"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "මෙනුව"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "පණිවිඩය"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "අලුත්"
 msgid "New accounts are disabled on this server"
 msgstr "මෙම සේවාදායකයේ නව ගිණුම් අක්‍රිය කර ඇත"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "නව ක්‍රීඩාවක්"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "නව පරිශීලක ලියාපදිංචිය අක්‍රීය කර ඇත."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "ඊළඟ"
 
@@ -1162,7 +1210,7 @@ msgstr "ඊළඟ පින්තූරය"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "ප්‍රවේශ නියමයන් කිසිවක් සැකසී නැත. මෙම සම්පතට ප්‍රවේශ විය හැක්කේ කවුද යන්න පාලනය කිරීමට නියමයන් එක් කරන්න."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "උපස්ථ ගොනුවක් තෝරා නොමැත"
 
@@ -1170,12 +1218,16 @@ msgstr "උපස්ථ ගොනුවක් තෝරා නොමැත"
 msgid "No connected accounts"
 msgstr "සම්බන්ධිත ගිණුම් නැත"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "තවම ක්‍රීඩා නැත"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "කණ්ඩායම් ලබා ගත නොහැක"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "MFA සැසියක් නැත"
 
@@ -1183,6 +1235,7 @@ msgstr "MFA සැසියක් නැත"
 msgid "No notifications yet"
 msgstr "තවම දැනුම්දීම් නැත"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "පුද්ගලයන් හමු නොවීය"
@@ -1232,7 +1285,7 @@ msgstr "කිසිවක් නෑ; නව ගිණුමක් සාදන�
 msgid "Normal"
 msgstr "සාමාන්‍ය"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "සංක්‍රමණ බේරුම්කරුවක් නොවේ"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "දැනුම්දීම්"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "දැනුම්දීම්: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "සංචාලන මෙනුව විවෘත කරන්න"
 msgid "Open theme settings"
 msgstr "theme සැකසුම් විවෘත කරන්න"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "හෝ සත්‍යාපන කේතය ඇතුළු කරන්න"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "හෝ ලොග් වන්න"
@@ -1340,7 +1393,7 @@ msgstr "Passkey පිවිසුම අවලංගු කරන ලදී"
 msgid "Passkey login failed"
 msgstr "Passkey පිවිසුම අසාර්ථක විය"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "Passkey පිවිසුම අවශ්‍යයි"
 
@@ -1348,7 +1401,7 @@ msgstr "Passkey පිවිසුම අවශ්‍යයි"
 msgid "Passkey verification failed. Please try again."
 msgstr "මුරයතුර සත්‍යාපනය අසාර්ථක විය. නැවත උත්සාහ කරන්න."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "මුරයතුරු"
 
@@ -1356,7 +1409,7 @@ msgstr "මුරයතුරු"
 msgid "Passphrase"
 msgstr "රහස් ශ්‍රේණිය"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "ඊමේල් මගින් ඔබට ලැබුණු පිවිසුම් කේතය අලවන්න"
 
@@ -1364,25 +1417,25 @@ msgstr "ඊමේල් මගින් ඔබට ලැබුණු පිව�
 msgid "Pick a date"
 msgstr "දිනයක් තෝරන්න"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "කරුණාකර ඔබේ සත්‍යාපන යෙදුම පරීක්ෂා කර නැවත උත්සාහ කරන්න."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "කරුණාකර ඔබේ කේතය පරීක්ෂා කර නැවත උත්සාහ කරන්න."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "කරුණාකර ඔබේ කේත පරීක්ෂා කර නැවත උත්සාහ කරන්න."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "කරුණාකර ඔබේ ඊමේල් පරීක්ෂා කර නැවත උත්සාහ කරන්න."
 
@@ -1397,7 +1450,7 @@ msgstr "කරුණාකර ඔබගේ අන්තර්ජාල සම්
 msgid "Please check your recovery code and try again."
 msgstr "කරුණාකර ඔබේ ප්‍රතිසාධන කේතය පරීක්ෂා කර නැවත උත්සාහ කරන්න."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "කරුණාකර වලංගු ඊමේල් එකක් ඇතුළත් කරන්න"
 
@@ -1413,9 +1466,9 @@ msgstr "කරුණාකර ඔබේ ප්‍රතිසාධන කේත
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "මෙම සම්පතට ප්‍රවේශ වීමට <0/> කරුණාකර සුදුසු අක්තපත්‍ර සමඟ පිවිසෙන්න."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "කරුණාකර නැවත උත්සාහ කරන්න හෝ සහාය ලබාගන්න."
 
@@ -1423,7 +1476,7 @@ msgstr "කරුණාකර නැවත උත්සාහ කරන්න �
 msgid "Please try again."
 msgstr "කරුණාකර නැවත උත්සාහ කරන්න."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "කරුණාකර \"Passkey භාවිතයෙන් ලොගින් වන්න\" බොත්තම භාවිතා කරන්න."
 
@@ -1476,11 +1529,11 @@ msgstr "තල්ලු දැනුම්දීම"
 msgid "Raised"
 msgstr "උස්කළ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "මෙම සේවාදායකයේ ඔබේ ගිණුම් නැවත සම්බන්ධ කරන්න"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "මෙම සේවාදායකයේ ඔබගේ මුරයතුරු නැවත ලියාපදිංචි කරන්න"
 
@@ -1514,9 +1567,9 @@ msgstr "ඔබව උපකරණ පුවරුවට යොමු කරම�
 msgid "Reduce interest"
 msgstr "උනන්දුව අඩු කරන්න"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "ලියාපදිංචිය අක්‍රීය කර ඇත"
 
@@ -1559,6 +1612,10 @@ msgstr "ප්‍රවේශය ඉවත් කරන්නද?"
 msgid "Remove interest"
 msgstr "උනන්දුව ඉවත් කරන්න"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "අයිතමය ඉවත් කරන්න"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "විද්‍යුත් තැපෑල නැවත එවන්න"
@@ -1581,7 +1638,7 @@ msgstr "සියලු සැකසුම් පෙරනිමි අගයන
 msgid "Restore a backup file"
 msgstr "උපස්ථ ගොනුවක් ප්‍රතිස්ථාපනය කරන්න"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "ප්‍රතිසාධනය අසාර්ථක විය"
@@ -1662,6 +1719,10 @@ msgstr "සොයමින්..."
 msgid "Select {0}"
 msgstr "{0} තෝරන්න"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "ක්‍රීඩාවක් තෝරන්න"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "ප්‍රවේශය ලබා දීමට පරිශීලකයෙක්, කණ්ඩායමක්, හෝ වෙනත් රීතියක් තෝරන්න."
@@ -1706,6 +1767,11 @@ msgstr "අඩවියේ දිශාව තෝරන්න"
 msgid "Select theme preference"
 msgstr "theme මනාපය තෝරන්න"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "තෝරන්න..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "තෝරාගත්"
@@ -1722,6 +1788,11 @@ msgstr "නැවත යවන්න"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "ඊමේල් යවන්න"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "පණිවිඩය යවන්න"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "එම පිවිසුම් සැපයුම්කරු නොම
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "ඔබ ඉහත ඇතුළත් කරන ඊමේල් මෙම සේවාදායකයේ නව ගිණුමේ නම බවට පත් වේ. උපස්ථයේ අනන්‍යතාව මෙහි දැනටමත් සක්‍රීය නොවිය යුතුය — වෙනත් සේවාදායකයකට ප්‍රතිස්ථාපනය කරන්න, නැතහොත් පවතින ගිණුම මුලින් මකන්න."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "ගොනුව හානියට පත් වී හෝ වෙනස් කර ඇති විය හැකිය."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "ඔබ ඇතුළු කළ රහස් ශ්‍රේණිය උපස්ථය සමඟ නොගැළපේ."
 
@@ -1915,7 +1986,7 @@ msgstr "theme"
 msgid "Theme Settings"
 msgstr "theme සැකසුම්"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "මෙම උපස්ථය Mochi හි නව අනුවාදයක් මඟින් සාදන ලදී. පළමුව මෙම සේවාදායකය යාවත්කාලීන කරන්න."
 
@@ -1993,6 +2064,10 @@ msgstr "අඟහරුවාදා"
 msgid "Type a command or search..."
 msgstr "විධානයක් ටයිප් කරන්න හෝ සොයන්න..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "පණිවිඩයක් ටයිප් කරන්න…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "පරිශීලකයින් සෙවීමට ටයිප් කරන්න"
@@ -2039,7 +2114,7 @@ msgstr "ඔබේ දත්ත unpack කරමින්"
 msgid "Unverified"
 msgstr "සත්‍යාපනය නොකළ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Mochi හි දත්ත අපනයනයෙන් අපනයනය කළ .zip ගොනුවක් උඩුගත කරන්න."
 
@@ -2051,7 +2126,7 @@ msgstr "උඩුගත කිරීමේ ප්‍රගතිය"
 msgid "Use a different account"
 msgstr "වෙනස් ගිණුමක් භාවිතා කරන්න"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "මුරයතුරක් භාවිතා කරන්න"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "සත්‍යාපන කේතය යවන ලදී"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "සත්‍යාපනය අසාර්ථක විය"
 
@@ -2116,8 +2191,8 @@ msgstr "බලන්න"
 msgid "View all"
 msgstr "සියල්ල බලන්න"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "සියලුම දැනුම්දීම් බලන්න"
 
@@ -2150,7 +2225,7 @@ msgstr "බදාදා"
 msgid "Wikis"
 msgstr "wikis"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "වැරදි රහස් ශ්‍රේණිය"
 
@@ -2189,7 +2264,7 @@ msgstr "ඔබේ ගිණුම අත්හිටුවා ඇත"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "ඔබේ ගිණුම අත්හිටුවා ඇත."
 
@@ -2205,7 +2280,7 @@ msgstr "ඔබගේ ගිණුම මැකීමට කාලසටහන්
 msgid "Your account requires a passkey to sign in"
 msgstr "පිවිසීමට ඔබේ ගිණුමට passkey එකක් අවශ්‍ය වේ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "ඔබේ ගිණුම {source} සිට මෙහි ගෙන ආවා. එතන ඉවත් කරන තෙක්, පණිවිඩ සහ දැනුම්දීම් සේවාදායකයන් දෙකටම ළඟා විය හැකිය, ඔබේ සමහර අන්තර්ගතය පැරණි සේවාදායකයෙන් ලබාදීම ඉදිරියටත් සිදු වේ, සහ අනුගාමිකයින්ට ඔබව මෙහිදී සොයා ගැනීමට මිනිත්තු කිහිපයක් ගත වනු ඇත."
 

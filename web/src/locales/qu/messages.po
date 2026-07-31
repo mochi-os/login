@@ -36,6 +36,10 @@ msgstr "{entityLabel} suti"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel} sutin necesitakun"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} kuska kayta nirqan"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} akllasqa} other {{manyName} akllasqa}}"
@@ -60,6 +64,11 @@ msgstr "{sentLabel} / {totalLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Menuta kichay (# mana ñawinchasqa willakuy)} other {Menuta kichay (# mana ñawinchasqa willakuykuna)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} ukhupi"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 hora"
@@ -71,6 +80,10 @@ msgstr "24 hora"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Sut'i (p'unchaw hinaspa hora)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "Chaskiy"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "Yaykuy patachan"
 msgid "Account added"
 msgstr "Cuenta yapasqa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "Cuenta kayqa servidorpiñam kachkan"
 
@@ -98,7 +111,7 @@ msgstr "Cuenta hurqusqa"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "Cuenta sayachisqa"
 
@@ -110,6 +123,7 @@ msgstr "Cuenta laya"
 msgid "Account verified"
 msgstr "Cuenta takyachisqa"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "Cuenta yapay"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "Cuentata yapay willaykunata chaskinaykipaq hinaspa servicios apaykachanaykipaq."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "Lista item yapay"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "Item yapay..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "Llapallanmanmi saqiy {0} maskanankupaq"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Chay email-niyuq cuenta ñam kanña. Ñawpaqta yaykuy, chaymantam {0}-ta authentication settings-pi watay."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "Kay suti ukhupi ñam tiyakun."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "{name} avatar"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "Kutichiy"
 
@@ -262,17 +284,22 @@ msgstr "Qillqakuyman kutiy"
 msgid "Backup file"
 msgstr "Waqaychana archivo"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "Waqaychana archivo qhipachasqa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "Waqaychana anchata musuq"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Banner"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "Mana iñikuq link-man yaykuy hark'asqa"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "Chat"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Ñawpa willakuykunata qhawanaykipaq «Llapan» akllay."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "Email-niykita qhaway."
 
@@ -328,9 +355,13 @@ msgstr "Email-niykita qhaway."
 msgid "Checking…"
 msgstr "Qhawarikuspan…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "Huk local correo electrónico akllariy utaq aswan allinmi haykuy."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "Pukllay akllay sidebar-manta utaq musuq qallariy."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "Panelta wisq’ay"
 msgid "Close search"
 msgstr "Maskhay wichq'ay"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "Código kachasqa."
 
@@ -569,6 +600,10 @@ msgstr "Tutayaq layapi"
 msgid "Data conflict"
 msgstr "Datukunap awqanakuynin"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "Mana chaskiy"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "Default"
@@ -577,7 +612,7 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Default AI cuenta"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Ñawpaq serverpi cuenta-ykita qichuy"
 
@@ -629,8 +664,8 @@ msgstr "¿Qillqa qallariyta wikch'unkichu?"
 msgid "Disconnected"
 msgstr "Mana tinkichisqa"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Wischuy"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "{label} allinchay"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "Email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "Correo electronicoqa nañam haqarayuchkan"
 
@@ -674,15 +709,15 @@ msgstr "email codigo"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "Email código"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "Correo nisqawan huk codigota apachimuway"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "Catinaykipaq huk codigota yaykuchiy"
 
@@ -690,7 +725,7 @@ msgstr "Catinaykipaq huk codigota yaykuchiy"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "\"{userEmail}\"-paq hampikuy códigota qillqay yaykunaykipaq"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "Authenticator app-niykimanta códigota qillqay"
 
@@ -711,7 +746,7 @@ msgstr "{initial}-niykita hinaspa {last}-niykita qillqay"
 msgid "Enter your authenticator code"
 msgstr "Takyachiqniykiq codigonta yaykuchiy"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "Email códigoykita hinaspa authenticator códigoykita qillqay"
 
@@ -746,7 +781,7 @@ msgstr "Mana cuentata yapayta atinchu"
 msgid "Failed to add tag"
 msgstr "Mana tagta yapayta atinchu"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "Mana qatiyta atinchu"
 
@@ -771,7 +806,7 @@ msgstr "Manam videota cargayta atikunchu"
 msgid "Failed to remove account"
 msgstr "Mana cuentata pichayta atinchu"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "Login código mañakuy manam atikunchu"
 
@@ -795,7 +830,7 @@ msgstr "Feedkuna"
 msgid "Filter..."
 msgstr "Suysuy..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Cuenta-ykita apaykachay tukuchiy"
 
@@ -939,7 +974,7 @@ msgstr "Ukhupi"
 msgid "Interests"
 msgstr "Munakuykuna"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "Mana allin authenticator código"
 
@@ -948,10 +983,14 @@ msgstr "Mana allin authenticator código"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "Mana allin código"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "Mana allin pacha"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "Mana allin etiqueta: sananchakunalla, yupaykuna, ch'usaqkuna, guionkuna, barrakunapas (astawan 50 sanancha)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "Mana allin sut'inchay código"
 
@@ -1032,7 +1071,7 @@ msgstr "Wichachichkan..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "Yaykuy"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "Yaykuy sesion tukukurqun, ama hina kachkay kutiy"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "¿Yaykuy chinkarqun? Hampikuy códigota llamkachiy"
 
@@ -1084,8 +1123,8 @@ msgstr "¿Yaykuy chinkarqun? Hampikuy códigota llamkachiy"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "Willakuykunapaq ruwaykunapaqpas t'inkisqa cuentaykikunata kamachiy."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Llapanta ñawinchasqaman churay"
@@ -1105,6 +1144,10 @@ msgstr "Chawpi"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Menu"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "Willakuy"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "Musuq"
 msgid "New accounts are disabled on this server"
 msgstr "Kay servidorpi musuq cuentakuna mana atikunchu"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "Musuq pukllay"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "Musuq usuario qillqakuy mana atikunchu."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "Qatiqnin"
 
@@ -1162,7 +1210,7 @@ msgstr "Qatiqnin imagen"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Mana yaykuy kamachiy churasqa. Kamachiykunata yapay pichus kay recursoman yaykuyta atinanpaq."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "Mana waqaychana archivo akllakorqanchu"
 
@@ -1170,12 +1218,16 @@ msgstr "Mana waqaychana archivo akllakorqanchu"
 msgid "No connected accounts"
 msgstr "Mana huñusqa cuentakuna"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "Manaraq pukllaykuna"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Mana grupokuna atikuq"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "Manam MFA sesión kanchu"
 
@@ -1183,6 +1235,7 @@ msgstr "Manam MFA sesión kanchu"
 msgid "No notifications yet"
 msgstr "Manaraqmi willakuykuna kanchu"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Mana runakuna tarisqachu"
@@ -1232,7 +1285,7 @@ msgstr "Mana; Account musuqta ruwana"
 msgid "Normal"
 msgstr "Walliq"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "Mana ripuy paketachu"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "Notificacionkuna"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "Willakuykuna: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "Navegación menúta kichay"
 msgid "Open theme settings"
 msgstr "Tema configuracionta kichay"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "Utaq autenticación código yaykuchiy"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "Utaq kaykunawan yaykuy"
@@ -1340,7 +1393,7 @@ msgstr "Passkey yaykuy mana ruway"
 msgid "Passkey login failed"
 msgstr "Passkey yaykuy mana atikuy"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "Passkey yaykuy munasqa"
 
@@ -1348,7 +1401,7 @@ msgstr "Passkey yaykuy munasqa"
 msgid "Passkey verification failed. Please try again."
 msgstr "Yaykuna llaveq takyachiynin mana atikurqanchu. Ama hina kaspa watiqmanta ruway."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Passkeykuna"
 
@@ -1356,7 +1409,7 @@ msgstr "Passkeykuna"
 msgid "Passphrase"
 msgstr "Fraseyta"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "Email nisqawan chaskisqayki yaykuy códigota churay"
 
@@ -1364,25 +1417,25 @@ msgstr "Email nisqawan chaskisqayki yaykuy códigota churay"
 msgid "Pick a date"
 msgstr "Huk p'unchawta akllay"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "Ama hina, authenticator appniykita qhaway hinaspa watiqmanta ruway."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "Ama hina, códigoykita qhaway hinaspa watiqmanta ruway."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "Ama hina, códigoykikunata qhaway hinaspa watiqmanta ruway."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "Ama hina, emailniykita qhaway hinaspa watiqmanta ruway."
 
@@ -1397,7 +1450,7 @@ msgstr "Internet tinkiyniykita qhaway, kutiykachimuy."
 msgid "Please check your recovery code and try again."
 msgstr "Ama hina, recuperación códigoykita qhaway hinaspa watiqmanta ruway."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "Ama hina, allin emailta churay"
 
@@ -1413,9 +1466,9 @@ msgstr "Ama hina, recuperación códigoykita churay"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Kay ruwanaman yaykunaykipaq <0/> allin willakuywan yaykuy."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "Ama hina, watiqmanta ruway utaq soportewan rimay."
 
@@ -1423,7 +1476,7 @@ msgstr "Ama hina, watiqmanta ruway utaq soportewan rimay."
 msgid "Please try again."
 msgstr "Ama hina kaspa, huk kutita ruway."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Ama hina, \"Passkey nisqawan yaykuy\" botonta llamk'achiy."
 
@@ -1476,11 +1529,11 @@ msgstr "Push willakuy"
 msgid "Raised"
 msgstr "Hoqarisqa"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Kay serverpi cuenta-ykikunata watiqmanta huñuy"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Kay servidorpi passkeyniykita musukmanta qillqachiy"
 
@@ -1514,9 +1567,9 @@ msgstr "Dashboardman redirigshan…"
 msgid "Reduce interest"
 msgstr "Munayta pisichiy"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "Qillqakuy mana atikuy"
 
@@ -1559,6 +1612,10 @@ msgstr "Yaykuyta qichuy?"
 msgid "Remove interest"
 msgstr "Munayta qichuy"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "Itemta qichuy"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Correota kutiy apachiy"
@@ -1581,7 +1638,7 @@ msgstr "Llapan configuracionkunata por defecto valoresman kutichiy"
 msgid "Restore a backup file"
 msgstr "Backup archivota kutichiyna"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Kutichiy mana atikurqanchu"
@@ -1662,6 +1719,10 @@ msgstr "Maskashan..."
 msgid "Select {0}"
 msgstr "{0} akllay"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "Pukllayta akllay"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Yaykuyta qonapaq usuariota, grupota, utaq huk kamachiyta akllay."
@@ -1706,6 +1767,11 @@ msgstr "Sitio direccionta akllay"
 msgid "Select theme preference"
 msgstr "Tema munayta akllay"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "Akllay..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "akllasqa"
@@ -1722,6 +1788,11 @@ msgstr "Watiqmanta apachiy"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "Email apachiy"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "Willakuyta apachiy"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "Chay yaykuy provider mana atikuqchu"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Hanaqpi churasqayki correoqa kay servidorpi musuq cuentap sutinmi kanqa. Backuppa identidadnin kaypi manaña kachkanmanchu — huk servidorman kutichiy, utaq kaq cuentata ñawpaqta pichay."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "Archivori t'ukusqa o tikrasqa kayman."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "Yaykachisqayki fraseyqa waqaychanawanqa mana tupanchu."
 
@@ -1915,7 +1986,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Tema Wakichiykuna"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Kay waqaychana Mochipi musuq versiónwan ruwasqa. Puntata kay serverta actualiza."
 
@@ -1993,6 +2064,10 @@ msgstr "Antichaw"
 msgid "Type a command or search..."
 msgstr "Comandota qillqay utaq maskay..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Willakuyta qillqay…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "Apaykachaqkunata maskanapaq qillqay"
@@ -2039,7 +2114,7 @@ msgstr "Willayniykita kacharikuspan"
 msgid "Unverified"
 msgstr "Mana qhawasqa"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Mochi willay lluqsichiyninmanta .zip archivota sayaychiy."
 
@@ -2051,7 +2126,7 @@ msgstr "Cargasqa puririynin"
 msgid "Use a different account"
 msgstr "Huk cuentata apaykachay"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "Passkey nisqata llamkachiy"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "Qhawariy codigo apachisqa"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "Qhawariy mana atikurqanchu"
 
@@ -2116,8 +2191,8 @@ msgstr "Qhaway"
 msgid "View all"
 msgstr "Llapanta qhaway"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "Llapan willakuykunata qhaway"
 
@@ -2150,7 +2225,7 @@ msgstr "Quyllurchaw"
 msgid "Wikis"
 msgstr "Wikikuna"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "Pantasqa fraseyta"
 
@@ -2189,7 +2264,7 @@ msgstr "Cuentayki hark'asqa kapun"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "Cuentayki hark'asqa kapun."
 
@@ -2205,7 +2280,7 @@ msgstr "Cuentaykiqa wañuchinapaqmi churasqa."
 msgid "Your account requires a passkey to sign in"
 msgstr "Cuentayki yaykunapaq passkeyta munan"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Cuenta-yki {source} llaqtamanta kaypi churasqa karqan. Chaypeqa manaraj qichuykiptiyki, willakuykuna hinaspa sut'ichakuykuna iskay serverkunaman chayayta atinku, imaymayki wakin ñawpaq servermanta kamachikapusqanmi kachkan, hinaspa qhatiqniykim kaypi tarisunkaypaq huk minutokunata suyayta atinku."
 

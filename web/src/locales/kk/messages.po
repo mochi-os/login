@@ -36,6 +36,10 @@ msgstr "{entityLabel} атауы"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel} атауы қажет"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} тең ойын ұсынды"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} таңдалды} other {{manyName} таңдалды}}"
@@ -60,6 +64,11 @@ msgstr "{totalLabel} ішінен {sentLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Мәзірді ашу (# оқылмаған хабарландыру)} other {Мәзірді ашу (# оқылмаған хабарландыру)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} кірістірілген"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 сағат"
@@ -71,6 +80,10 @@ msgstr "24 сағат"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Абсолютті (күн және уақыт)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "Қабылдау"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "Қол жеткізу деңгейі"
 msgid "Account added"
 msgstr "Тіркелгі қосылды"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "Тіркелгі бұл серверде бар"
 
@@ -98,7 +111,7 @@ msgstr "Тіркелгі алып тасталды"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "Тіркелгі тоқтатылды"
 
@@ -110,6 +123,7 @@ msgstr "Тіркелгі түрі"
 msgid "Account verified"
 msgstr "Тіркелгі расталды"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "Тіркелгі қосу"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "Хабарландырулар алу және қызметтерді пайдалану үшін тіркелгі қосыңыз."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "Тапсырмалар тізімінің тармағын қосу"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "Тармақ қосу..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "Кез келген адамға {0} іздеуге рұқсат ету"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Бұл электрондық пошта мекенжайымен тіркелгі бар. Алдымен кіріңіз, содан кейін аутентификация параметрлерінен {0} байланыстырыңыз."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "Бұл жеке куәлікпен тіркелгі мұнда бұрыннан бар."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "{name} аватары"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "Артқа"
 
@@ -262,17 +284,22 @@ msgstr "Тіркелуге оралу"
 msgid "Backup file"
 msgstr "Резервтік көшірме файлы"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "Резервтік көшірме файлы зақымдалған"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "Резервтік көшірме тым жаңа"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Баннер"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "Сенімсіз сілтемеге өту бөгелді"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "Чат"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Бұрынғы хабарландыруларды көру үшін «Барлығы» таңдаңыз."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "Электрондық поштаңызды тексеріңіз."
 
@@ -328,9 +355,13 @@ msgstr "Электрондық поштаңызды тексеріңіз."
 msgid "Checking…"
 msgstr "Тексерілуде…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "Басқа жергілікті электрондық пошта таңдаңыз немесе оның орнына кіріңіз."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "Бүйір тақтадан ойынды таңдаңыз немесе жаңасын бастаңыз."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "Тақтаны жабу"
 msgid "Close search"
 msgstr "Іздеуді жабу"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "Код жіберілді."
 
@@ -569,6 +600,10 @@ msgstr "Қараңғы режим"
 msgid "Data conflict"
 msgstr "Деректер қайшылығы"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "Қабылдамау"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "Әдепкі"
@@ -577,7 +612,7 @@ msgstr "Әдепкі"
 msgid "Default AI account"
 msgstr "Әдепкі AI тіркелгісі"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Ескі серверден тіркелгіңізді жойыңыз"
 
@@ -629,8 +664,8 @@ msgstr "Жобаны алып тастау керек пе?"
 msgid "Disconnected"
 msgstr "Ажыратылды"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Жабу"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "{label} өңдеу"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "Электрондық пошта"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "Электрондық пошта қолданыста"
 
@@ -674,15 +709,15 @@ msgstr "электрондық пошта коды"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "Электрондық пошта коды"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "Маған кодты электрондық поштаға жіберіңіз"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "Жалғастыру үшін кодты енгізіңіз"
 
@@ -690,7 +725,7 @@ msgstr "Жалғастыру үшін кодты енгізіңіз"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Жүйеге кіру үшін «{userEmail}» үшін қалпына келтіру кодын енгізіңіз"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "Аутентификация қолданбасынан кодты енгізіңіз"
 
@@ -711,7 +746,7 @@ msgstr "{initial} және {last} енгізіңіз"
 msgid "Enter your authenticator code"
 msgstr "Authenticator кодын енгізіңіз"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "Электрондық пошта кодын және аутентификатор кодын енгізіңіз"
 
@@ -746,7 +781,7 @@ msgstr "Тіркелгіні қосу сәтсіз аяқталды"
 msgid "Failed to add tag"
 msgstr "Тегті қосу сәтсіз аяқталды"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "Жалғастыру сәтсіз аяқталды"
 
@@ -771,7 +806,7 @@ msgstr "Бейнені жүктеу мүмкін болмады"
 msgid "Failed to remove account"
 msgstr "Тіркелгіні жою сәтсіз аяқталды"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "Кіру кодын сұрау сәтсіз аяқталды"
 
@@ -795,7 +830,7 @@ msgstr "Таспалар"
 msgid "Filter..."
 msgstr "Сүзу..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Тіркелгіні ауыстыруды аяқтаңыз"
 
@@ -939,7 +974,7 @@ msgstr "Ішкі"
 msgid "Interests"
 msgstr "Қызығушылықтар"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "Жарамсыз аутентификатор коды"
 
@@ -948,10 +983,14 @@ msgstr "Жарамсыз аутентификатор коды"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "Жарамсыз код"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "Жарамсыз күн"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "Жарамсыз тег: тек әріптер, сандар, бос орындар, дефистер және қиғаш сызықтар (ең көбі 50 таңба)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "Жарамсыз растау коды"
 
@@ -1032,7 +1071,7 @@ msgstr "Жүктелуде..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "Кіру"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "Кіру сеансының мерзімі бітті, қайталап көріңіз"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "Кіру жоғалды ма? Қалпына келтіру кодын пайдаланыңыз"
 
@@ -1084,8 +1123,8 @@ msgstr "Кіру жоғалды ма? Қалпына келтіру кодын �
 msgid "Manage your connected accounts for notifications and services."
 msgstr "Хабарландырулар мен қызметтер үшін жалғанған тіркелгілеріңізді басқарыңыз."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Барлығын оқылды деп белгілеу"
@@ -1105,6 +1144,10 @@ msgstr "Орташа"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Мәзір"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "Хабарлама"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "Жаңа"
 msgid "New accounts are disabled on this server"
 msgstr "Бұл серверде жаңа тіркелгілер өшірілген"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "Жаңа ойын"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "Жаңа қолданушыларды тіркеу өшірілген."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "Келесі"
 
@@ -1162,7 +1210,7 @@ msgstr "Келесі сурет"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Қатынау ережелері реттелмеген. Кімнің қатынай алатынын реттеу үшін ереже қосыңыз."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "Резервтік көшірме файлы таңдалмаған"
 
@@ -1170,12 +1218,16 @@ msgstr "Резервтік көшірме файлы таңдалмаған"
 msgid "No connected accounts"
 msgstr "Байланысқан тіркелгілер жоқ"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "Ойындар әлі жоқ"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Топтар қолжетімсіз"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "MFA сеансы жоқ"
 
@@ -1183,6 +1235,7 @@ msgstr "MFA сеансы жоқ"
 msgid "No notifications yet"
 msgstr "Әзірге хабарландыру жоқ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Адамдар табылмады"
@@ -1232,7 +1285,7 @@ msgstr "Ештеңе жоқ; жаңа тіркелгі жасаңыз"
 msgid "Normal"
 msgstr "Қалыпты"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "Бұл миграция бумасы емес"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "Хабарландырулар"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "Хабарландырулар: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "Навигация мәзірін ашу"
 msgid "Open theme settings"
 msgstr "Тақырып параметрлерін ашу"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "Немесе аутентификация кодын енгізіңіз"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "Немесе келесімен кіріңіз"
@@ -1340,7 +1393,7 @@ msgstr "Passkey арқылы кіру тоқтатылды"
 msgid "Passkey login failed"
 msgstr "Passkey арқылы кіру сәтсіз"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "Passkey арқылы кіру керек"
 
@@ -1348,7 +1401,7 @@ msgstr "Passkey арқылы кіру керек"
 msgid "Passkey verification failed. Please try again."
 msgstr "Passkey тексеруі сәтсіз аяқталды. Қайталап көріңіз."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Passkey-лер"
 
@@ -1356,7 +1409,7 @@ msgstr "Passkey-лер"
 msgid "Passphrase"
 msgstr "Кілт сөз тіркесі"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "Email арқылы алған кіру кодын қойыңыз"
 
@@ -1364,25 +1417,25 @@ msgstr "Email арқылы алған кіру кодын қойыңыз"
 msgid "Pick a date"
 msgstr "Күнді таңдаңыз"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "Аутентификатор қолданбасын тексеріп қайталап көріңіз."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "Кодты тексеріп қайталап көріңіз."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "Кодтарды тексеріп қайталап көріңіз."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "Email-ды тексеріп қайталап көріңіз."
 
@@ -1397,7 +1450,7 @@ msgstr "Интернет байланысын тексеріп, қайталап
 msgid "Please check your recovery code and try again."
 msgstr "Қалпына келтіру кодын тексеріп қайталап көріңіз."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "Жарамды email енгізіңіз"
 
@@ -1413,9 +1466,9 @@ msgstr "Қалпына келтіру кодыңызды енгізіңіз"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Осы ресурсқа қол жеткізу үшін <0/> тиісті тіркелгі деректерімен кіріңіз."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "Қайталап көріңіз немесе қолдау қызметіне хабарласыңыз."
 
@@ -1423,7 +1476,7 @@ msgstr "Қайталап көріңіз немесе қолдау қызметі
 msgid "Please try again."
 msgstr "Қайталап көріңіз."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "\"Passkey арқылы кіру\" түймесін пайдаланыңыз."
 
@@ -1476,11 +1529,11 @@ msgstr "Push хабарландыруы"
 msgid "Raised"
 msgstr "Көтерілген"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Осы серверде тіркелгілеріңізді қайта байланыстырыңыз"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Бұл серверде кіру кілттерін қайта тіркеңіз"
 
@@ -1514,9 +1567,9 @@ msgstr "Бақылау тақтасына қайта бағыттаулыда…
 msgid "Reduce interest"
 msgstr "Қызығушылықты азайту"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "Тіркелу өшірулі"
 
@@ -1559,6 +1612,10 @@ msgstr "Қатынауды жою керек пе?"
 msgid "Remove interest"
 msgstr "Қызығушылықты жою"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "Элементті жою"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Хатты қайта жіберу"
@@ -1581,7 +1638,7 @@ msgstr "Барлық параметрлерді әдепкі мәндерге қ
 msgid "Restore a backup file"
 msgstr "Сақтық көшірме файлын қалпына келтіру"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Қалпына келтіру сәтсіз аяқталды"
@@ -1662,6 +1719,10 @@ msgstr "Іздеуде..."
 msgid "Select {0}"
 msgstr "{0} таңдау"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "Ойынды таңдау"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Қатынау беру үшін қолданушыны, топты немесе басқа ережені таңдаңыз."
@@ -1706,6 +1767,11 @@ msgstr "Сайт бағытын таңдау"
 msgid "Select theme preference"
 msgstr "Тақырып теңшелімін таңдау"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "Таңдау..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "таңдалды"
@@ -1722,6 +1788,11 @@ msgstr "Қайта жіберу"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "Электрондық пошта жіберу"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "Хабар жіберу"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "Бұл кіру провайдері қол жетімді емес"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Жоғарыда енгізген электрондық поштаңыз осы серверде жаңа тіркелгінің атауы болады. Сақтық көшірменің сәйкестігі мұнда бұрыннан белсенді болмауы керек — басқа серверге қалпына келтіріңіз немесе алдымен бар тіркелгіні жойыңыз."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "Файл зақымдалған немесе өзгертілген болуы мүмкін."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "Сіз енгізген кілт сөз тіркесі резервтік көшірмеге сәйкес келмейді."
 
@@ -1915,7 +1986,7 @@ msgstr "Тақырып"
 msgid "Theme Settings"
 msgstr "Тақырып параметрлері"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Бұл резервтік көшірме Mochi жаңа нұсқасымен жасалған. Алдымен осы серверді жаңартыңыз."
 
@@ -1993,6 +2064,10 @@ msgstr "Сейсенбі"
 msgid "Type a command or search..."
 msgstr "Команданы теріңіз немесе іздеңіз..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Хабар теріңіз…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "Пайдаланушыларды іздеу үшін теріңіз"
@@ -2039,7 +2114,7 @@ msgstr "Деректеріңіз ашылуда"
 msgid "Unverified"
 msgstr "Тексерілмеген"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Mochi деректер экспортынан экспортталған .zip файлын жүктеңіз."
 
@@ -2051,7 +2126,7 @@ msgstr "Жүктеп салу барысы"
 msgid "Use a different account"
 msgstr "Басқа есептік жазбаны пайдалану"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "Кіру кілтін пайдалану"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "Тексеру коды жіберілді"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "Тексеру сәтсіз"
 
@@ -2116,8 +2191,8 @@ msgstr "Көру"
 msgid "View all"
 msgstr "Барлығын көру"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "Барлық хабарландыруларды көру"
 
@@ -2150,7 +2225,7 @@ msgstr "Сәрсенбі"
 msgid "Wikis"
 msgstr "Wiki-лер"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "Кілт сөз тіркесі қате"
 
@@ -2189,7 +2264,7 @@ msgstr "Есептік жазбаңыз тоқтатылды"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "Есептік жазбаңыз тоқтатылды."
 
@@ -2205,7 +2280,7 @@ msgstr "Сіздің тіркелгіңіз жоюға жоспарланған.
 msgid "Your account requires a passkey to sign in"
 msgstr "Есептік жазбаңыз кіру үшін passkey қажет"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Тіркелгіңіз {source} жерінен осында ауыстырылды. Сіз оны сол жерден жоймайынша, хабарлар мен хабарландырулар екі серверге де жетуі мүмкін, кейбір мазмұныңыз ескі серверден берілуін жалғастырады, ал жазылушылар сізді осында табу үшін бірнеше минут кетуі мүмкін."
 

@@ -36,6 +36,10 @@ msgstr "ناوی {entityLabel}"
 msgid "{entityLabel} name is required"
 msgstr "ناوی {entityLabel} پێویستە"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} پێشنیاری یەکسانی کرد"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} هەڵبژێردرا} other {{manyName} هەڵبژێردران}}"
@@ -60,6 +64,11 @@ msgstr "{sentLabel} لە {totalLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {پێڕست بکەرەوە (# ئاگادارکردنەوەی نەخوێندراو)} other {پێڕست بکەرەوە (# ئاگادارکردنەوەی نەخوێندراو)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} ناوەکی"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "١٢ کاتژمێر"
@@ -71,6 +80,10 @@ msgstr "٢٤ کاتژمێر"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "ڕاستەوخۆ (بەروار و کات)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "وەرگرتن"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "ئاستی دەستڕاگەیشتن"
 msgid "Account added"
 msgstr "هەژمار زیادکرا"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "هەژمار پێشتر لەسەر ئەم سێرڤەرە هەیە"
 
@@ -98,7 +111,7 @@ msgstr "هەژمار لابرا"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "هەژمار ڕاگیراوە"
 
@@ -110,6 +123,7 @@ msgstr "جۆری هەژمار"
 msgid "Account verified"
 msgstr "هەژمار پشتڕاست کرایەوە"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "زیادکردنی هەژمار"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "هەژمارێک زیاد بکە بۆ وەرگرتنی ئاگادارکردنەوە و بەکارهێنانی خزمەتگوزارییەکان."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "زیادکردنی بڕگەی لیستی پشکنین"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "بڕگە زیاد بکە..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "ڕێگە بە هەموو کەسێک بدە بۆ گەڕان بەدوای 
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "هەژمارێک بەو ئیمەیڵە پێشتر هەیە. سەرەتا بچۆ ژوورەوە، پاشان {0} پەیوەست بکە لە ڕێکخستنی ناسنامەی هەژمارەکەتدا."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "ئەکاونتێک بە ئەم ناسنامەیە لێرە هەیە."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "ئەڤاتار بۆ {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "گەڕانەوە"
 
@@ -262,17 +284,22 @@ msgstr "گەڕانەوە بۆ تۆمارکردن"
 msgid "Backup file"
 msgstr "فایلی پاراستنەوە"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "فایلی پاراستنەوە خراپ بووە"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "پاراستنەوەکە خۆرتر زۆر نوێیە"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "بانەر"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "ڕێگەنەدرا بە چوون بۆ بەستەری نامتمانە"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "گفتوگۆ"
 msgid "Check \"All\" to see your past notifications."
 msgstr "\"هەموو\" هەڵبژێرە بۆ بینینی ئاگادارکردنەوە پێشووەکانت."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "ئیمەیڵەکەت بپشکنە."
 
@@ -328,9 +355,13 @@ msgstr "ئیمەیڵەکەت بپشکنە."
 msgid "Checking…"
 msgstr "پشکنین…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "ئیمەیڵێکی ناوخۆیی جیاواز هەڵبژێرە یان لە جیاتیدا بچۆرە ژوورەوە."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "یارییەک هەڵبژێرە لە لاتەنیشت یان نوێیەک دەست پێ بکە."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "داخستنی پانێل"
 msgid "Close search"
 msgstr "داخستنی گەڕان"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "کۆد نێردرا."
 
@@ -569,6 +600,10 @@ msgstr "دۆخی تاریک"
 msgid "Data conflict"
 msgstr "ناکۆکی داتا"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "ڕەتکردنەوە"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "بنەڕەت"
@@ -577,7 +612,7 @@ msgstr "بنەڕەت"
 msgid "Default AI account"
 msgstr "هەژماری بنەڕەتی AI"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "هەژمارەکەت لە سێرڤەری کۆنەکەوە بسڕەوە"
 
@@ -629,8 +664,8 @@ msgstr "ڕەشنووسەکە فڕێبدرێت؟"
 msgid "Disconnected"
 msgstr "پەیوەست نییە"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "لابردن"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "دەستکاری {label}"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "ئیمەیڵ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "ئیمەیڵ پێشتر بەکار هاتووە"
 
@@ -674,15 +709,15 @@ msgstr "کۆدی ئیمەیڵ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "کۆدی ئیمەیڵ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "بە ئیمەیڵ کۆدێکم بۆ بنێرە"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "بۆ بەردەوامبوون کۆدێک بنووسە"
 
@@ -690,7 +725,7 @@ msgstr "بۆ بەردەوامبوون کۆدێک بنووسە"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "بۆ چوونەژوورەوە کۆدی هێنانەوەیەک بۆ \"{userEmail}\" بنووسە"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "کۆدی ئەپی Authenticator بنووسە"
 
@@ -711,7 +746,7 @@ msgstr "{initial} و {last}ـی خۆت بنووسە"
 msgid "Enter your authenticator code"
 msgstr "کۆدی ڕاستاندنەکەت بنووسە"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "کۆدی ئیمەیڵ و کۆدی Authenticator بنووسە"
 
@@ -746,7 +781,7 @@ msgstr "زیادکردنی هەژمار سەرکەوتوو نەبوو"
 msgid "Failed to add tag"
 msgstr "زیادکردنی تاگ سەرکەوتوو نەبوو"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "بەردەوامبوون سەرکەوتوو نەبوو"
 
@@ -771,7 +806,7 @@ msgstr "ڤیدیۆکە بار نەکرا"
 msgid "Failed to remove account"
 msgstr "لابردنی هەژمار سەرکەوتوو نەبوو"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "داواکردنی کۆدی چوونەژوورەوە سەرکەوتوو نەبوو"
 
@@ -795,7 +830,7 @@ msgstr "Feedەکان"
 msgid "Filter..."
 msgstr "پاڵاوتن..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "گواستنەوەی هەژمارەکەت تەواو بکە"
 
@@ -939,7 +974,7 @@ msgstr "ناوەوە"
 msgid "Interests"
 msgstr "ئارەزووەکان"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "کۆدی Authenticator نادروست"
 
@@ -948,10 +983,14 @@ msgstr "کۆدی Authenticator نادروست"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "کۆدی نادروست"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "بەرواری نادروست"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "تاگی نادروست: تەنها پیت، ژمارە، بۆشایی، هێڵی بچووک و سلاش (زۆرترین ٥٠ پیت)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "کۆدی پشتڕاستکردنەوەی نادروست"
 
@@ -1032,7 +1071,7 @@ msgstr "بار دەکرێت..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "چوونەژوورەوە"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "نشستی چوونەژوورەوە بەسەرچووە، تکایە دووبارە هەوڵبدەوە"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "گەیشتن لەدەستچوو؟ کۆدی هێنانەوە بەکاربهێنە"
 
@@ -1084,8 +1123,8 @@ msgstr "گەیشتن لەدەستچوو؟ کۆدی هێنانەوە بەکارب
 msgid "Manage your connected accounts for notifications and services."
 msgstr "هەژمارە بەستراوەکانت بۆ ئاگادارکردنەوە و خزمەتگوزارییەکان بەڕێوە ببە."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "نیشانەکردنی هەمووان وەک خوێندراوە"
@@ -1105,6 +1144,10 @@ msgstr "مامناوەند"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Menu"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "پەیام"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "نوێ"
 msgid "New accounts are disabled on this server"
 msgstr "هەژمارە نوێیەکان لەسەر ئەم سێرڤەرە ناچالاکن"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "یاری نوێ"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "تۆمارکردنی بەکارهێنەری نوێ ناچالاکە."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "دواتر"
 
@@ -1162,7 +1210,7 @@ msgstr "وێنەی دواتر"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "هیچ ڕێسایەکی دەستڕاگەیشتن ڕێکنەخراوە. ڕێسا زیاد بکە بۆ کۆنترۆڵکردنی ئەوەی کێ دەتوانێت دەستی بەم سەرچاوەیە بگات."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "هیچ فایلی پاراستنەوەیەک هەڵنەبژێردراوە"
 
@@ -1170,12 +1218,16 @@ msgstr "هیچ فایلی پاراستنەوەیەک هەڵنەبژێردراو�
 msgid "No connected accounts"
 msgstr "هیچ هەژمارێکی پەیوەندیدراو نییە"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "هێشتا هیچ یارییەک نییە"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "هیچ گرووپێک بەردەست نییە"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "هیچ دانیشتنی MFA نییە"
 
@@ -1183,6 +1235,7 @@ msgstr "هیچ دانیشتنی MFA نییە"
 msgid "No notifications yet"
 msgstr "هێشتا هیچ ئاگادارکردنەوەیەک نییە"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "هیچ کەسێک نەدۆزرایەوە"
@@ -1232,7 +1285,7 @@ msgstr "هیچ؛ هەژمارێکی نوێ دروست بکە"
 msgid "Normal"
 msgstr "ئاسایی"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "گروپی کۆچبەرایی نییە"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "ئاگادارکردنەوەکان"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "ئاگادارکردنەوەکان: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "کردنەوەی لیستی ڕێدۆزی"
 msgid "Open theme settings"
 msgstr "کردنەوەی ڕێکخستنەکانی ڕووکار"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "یان کۆدی ڕاستکردنەوە بنووسە"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "یان چونەژوورەوە بە"
@@ -1340,7 +1393,7 @@ msgstr "چونەژوورەوە بە پاسکی هەڵوەشایەوە"
 msgid "Passkey login failed"
 msgstr "چونەژوورەوە بە پاسکی شکستی هێنا"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "چونەژوورەوە بە پاسکی پێویستە"
 
@@ -1348,7 +1401,7 @@ msgstr "چونەژوورەوە بە پاسکی پێویستە"
 msgid "Passkey verification failed. Please try again."
 msgstr "پشتڕاستکردنەوەی کلیلی تێپەڕبوون سەرکەوتوو نەبوو. تکایە دووبارە هەوڵ بدەرەوە."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "پاسکییەکان"
 
@@ -1356,7 +1409,7 @@ msgstr "پاسکییەکان"
 msgid "Passphrase"
 msgstr "دەستەواژەی نهێنی"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "کۆدی چونەژوورەوەی کە بە ئیمەیڵ وەرت گرت بلکێنە"
 
@@ -1364,25 +1417,25 @@ msgstr "کۆدی چونەژوورەوەی کە بە ئیمەیڵ وەرت گرت
 msgid "Pick a date"
 msgstr "بەروارێک هەڵبژێرە"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "تکایە ئەپی ڕاستکەرەوەکەت بپشکنە و دووبارە هەوڵ بدەرەوە."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "تکایە کۆدەکەت بپشکنە و دووبارە هەوڵ بدەرەوە."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "تکایە کۆدەکانت بپشکنە و دووبارە هەوڵ بدەرەوە."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "تکایە ئیمەیڵەکەت بپشکنە و دووبارە هەوڵ بدەرەوە."
 
@@ -1397,7 +1450,7 @@ msgstr "تکایە پەیوەندی ئینتەرنێتەکەت بپشکنە و �
 msgid "Please check your recovery code and try again."
 msgstr "تکایە کۆدی گەڕانەوەکەت بپشکنە و دووبارە هەوڵ بدەرەوە."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "تکایە ئیمەیڵێکی دروست بنووسە"
 
@@ -1413,9 +1466,9 @@ msgstr "تکایە کۆدی گەڕانەوەکەت بنووسە"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "تکایە بە زانیارییە گونجاوەکان بچۆ ژوورەوە <0/> بۆ دەستپێگەیشتن بەم سەرچاوەیە."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "تکایە دووبارە هەوڵ بدەرەوە یان پەیوەندی بە پشتگیری بکە."
 
@@ -1423,7 +1476,7 @@ msgstr "تکایە دووبارە هەوڵ بدەرەوە یان پەیوەند�
 msgid "Please try again."
 msgstr "تکایە دووبارە هەوڵ بدەرەوە."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "تکایە دوگمەی \"چونەژوورەوە بە پاسکی\" بەکار بهێنە."
 
@@ -1476,11 +1529,11 @@ msgstr "ئاگادارکردنەوەی پاڵنان"
 msgid "Raised"
 msgstr "بەرز"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "هەژمارەکانت لەم سێرڤەرەدا دووبارە بەستەوە"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "پاسکیەکانت لەسەر ئەم ڕاژەیە دووبارە تۆمار بکە"
 
@@ -1514,9 +1567,9 @@ msgstr "ڕەوانەکردنەوەت بۆ داشبۆرد…"
 msgid "Reduce interest"
 msgstr "کەمکردنەوەی بەرژەوەندی"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "تۆمارکردن ناچالاکە"
 
@@ -1559,6 +1612,10 @@ msgstr "دەستڕاگەیشتن لاببەیت؟"
 msgid "Remove interest"
 msgstr "لابردنی بەرژەوەندی"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "لابردنی بڕگە"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "ئیمەیڵ دووبارە بنێرە"
@@ -1581,7 +1638,7 @@ msgstr "هەموو ڕێکخستنەکان بۆ بەهای بنەڕەت بگەڕ�
 msgid "Restore a backup file"
 msgstr "فایلی پشتگیری ووگەڕێنەوە"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "گەڕاندنەوە شکست هێنا"
@@ -1662,6 +1719,10 @@ msgstr "گەڕان..."
 msgid "Select {0}"
 msgstr "{0} هەڵبژێرە"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "یارییەک هەڵبژێرە"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "بەکارهێنەرێک، گرووپێک، یان ڕێسایەکی هیتر هەڵبژێرە بۆ پێدانی دەستڕاگەیشتن."
@@ -1706,6 +1767,11 @@ msgstr "ئاراستەی ماڵپەڕ هەڵبژێرە"
 msgid "Select theme preference"
 msgstr "هەڵبژاردەی ڕووکار هەڵبژێرە"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "هەڵبژێرە..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "هەڵبژێردراو"
@@ -1722,6 +1788,11 @@ msgstr "دیسان بنێرە"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "ئیمەیڵ بنێرە"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "نامە بنێرە"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "ئەو دابینکەری چوونەژوورەوە بەردەست نیی
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "ئەو ئیمەیڵەی لە سەرەوە دەینووسیت دەبێتە ناوی هەژماری نوێ لەسەر ئەم ڕاژەکارە. ناسنامەی پاڵپشتەکە نابێت پێشتر لێرە چالاک بێت — بۆ ڕاژەکارێکی تر بیگەڕێنەوە، یان سەرەتا هەژمارە هەبووەکە بسڕەوە."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "فایلەکە لەوانەیە خراپ بووبێت یان گۆڕاوبێت."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "دەستەواژەی نهێنی کە تۆمارکردیت ناگونجێت بە پاراستنەوەکەوە."
 
@@ -1915,7 +1986,7 @@ msgstr "ڕووکار"
 msgid "Theme Settings"
 msgstr "ڕێکخستنەکانی ڕووکار"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "ئەم پاراستنەوەیە لەلایەن وەشانێکی نوێتری Mochi درووستکراوە. پێشتر ئەم سێرڤەرە نوێ بکەوە."
 
@@ -1993,6 +2064,10 @@ msgstr "سێشەممە"
 msgid "Type a command or search..."
 msgstr "فەرمانێک یان گەڕان بنووسە..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "نامەیەک بنووسە…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "بنووسە بۆ گەڕان لە بەکارهێنەران"
@@ -2039,7 +2114,7 @@ msgstr "کردنەوەی داتاکەت"
 msgid "Unverified"
 msgstr "پشتڕاستنەکراوەتەوە"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "فایلی .zip کە لە ناردنی داتای Mochi دەرچووبێت بارکە."
 
@@ -2051,7 +2126,7 @@ msgstr "پێشکەوتنی بارکردن"
 msgid "Use a different account"
 msgstr "هەژمارێکی جیاواز بەکاربێنە"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "پاسکی بەکاربهێنە"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "کۆدی پشتڕاستکردنەوە نێردرا"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "پشتڕاستکردنەوە سەرکەوتوو نەبوو"
 
@@ -2116,8 +2191,8 @@ msgstr "بینین"
 msgid "View all"
 msgstr "هەمووی ببینە"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "هەموو ئاگادارکردنەوەکان ببینە"
 
@@ -2150,7 +2225,7 @@ msgstr "چوارشەممە"
 msgid "Wikis"
 msgstr "Wiki-یەکان"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "دەستەواژەی نهێنی هەڵەیە"
 
@@ -2189,7 +2264,7 @@ msgstr "هەژمارت ڕاگیراوە"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "هەژمارت ڕاگیراوە."
 
@@ -2205,7 +2280,7 @@ msgstr "هەژمارەکەت بۆ سڕینەوە خشتەبەندی کراوە."
 msgid "Your account requires a passkey to sign in"
 msgstr "هەژمارت پێویستی بە passkey هەیە بۆ چوونەژوورەوە"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "هەژمارەکەت لە {source} بۆ ئێرە گواستراوەتەوە. تا کاتێک ئەوێ بیسڕیتەوە، پەیام و ئاگادارکردنەوەکان دەتوانن بگەنە هەردوو سێرڤەرەکە، بەشێک لە ناوەڕۆکەکەت لە سێرڤەری کۆنەکەوە دەمێنێتەوە، و بەدواداچووەکانت دەتوانن چەند خولەکێک بخایەن تا بیتدۆزنەوە."
 

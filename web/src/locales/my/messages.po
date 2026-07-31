@@ -36,6 +36,10 @@ msgstr "{entityLabel} အမည်"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel} အမည် လိုအပ်သည်"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} က သရေ ပေးခဲ့သည်"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, other {{manyName} ရွေးထားသည်}}"
@@ -60,6 +64,11 @@ msgstr "{totalLabel} အနက် {sentLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, other {မီနူးဖွင့်ရန် (မဖတ်ရသေးသော အကြောင်းကြားချက် # ခု)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} ခု အထပ်လိုက်"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "၁၂ နာရီ"
@@ -71,6 +80,10 @@ msgstr "၂၄ နာရီ"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "အပြည့်အစုံ (ရက်စွဲနှင့် အချိန်)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "လက်ခံမည်"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "ဝင်ရောက်ခွင့်အဆင့်"
 msgid "Account added"
 msgstr "အကောင့် ထည့်ပြီး"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "ဤဆာဗာတွင် အကောင့်ရှိနေပြီးဖြစ်ပါသည်"
 
@@ -98,7 +111,7 @@ msgstr "အကောင့် ဖယ်ရှားပြီး"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "အကောင့် ဆိုင်းငံ့ထားသည်"
 
@@ -110,6 +123,7 @@ msgstr "အကောင့်အမျိုးအစား"
 msgid "Account verified"
 msgstr "အကောင့် အတည်ပြုပြီး"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "အကောင့် ထည့်မည်"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "အကြောင်းကြားချက်များ ရရှိရန်နှင့် ဝန်ဆောင်မှုများ အသုံးပြုရန် အကောင့်တစ်ခု ထည့်မည်။"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "checklist အရာ ထည့်မည်"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "အရာ ထည့်ရန်..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "မည်သူမဆို {0} ရှာဖွေခွင့်ပြ�
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "ထို email ဖြင့် အကောင့်တစ်ခု ရှိပြီးဖြစ်သည်။ အရင် sign in ဝင်ပြီး auth ဆက်တင်များမှ {0} ကို ချိတ်ဆက်ပါ။"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "ဤ identity ဖြင့် account တစ်ခု ဤနေရာတွင် ရှိပြီးသားဖြစ်သည်။"
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "{name} အတွက် အသွင်ပုံ"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "နောက်သို့"
 
@@ -262,17 +284,22 @@ msgstr "အကောင့်ဖွင့်ရန် ပြန်သွား�
 msgid "Backup file"
 msgstr "Backup ဖိုင်"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "Backup ဖိုင် ပျက်စီးနေသည်"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "Backup သည် အလွန်သစ်နေသည်"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "ပိုစတာ"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "မယုံကြည်ရသော လင့်ခ်သို့ သွားရောက်ခြင်းကို ပိတ်ဆို့ထားသည်"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "စကားပြောခန်း"
 msgid "Check \"All\" to see your past notifications."
 msgstr "ယခင်အကြောင်းကြားချက်များကြည့်ရန် \"အားလုံး\" ကိုရွေးပါ။"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "သင့် email ကို စစ်ဆေးပါ။"
 
@@ -328,9 +355,13 @@ msgstr "သင့် email ကို စစ်ဆေးပါ။"
 msgid "Checking…"
 msgstr "စစ်ဆေးနေသည်…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "အခြားဒေသခံအီးမေးလ်ကို ရွေးချယ်ပါ သို့မဟုတ် အစား ဝင်ရောက်ပါ။"
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "ဘေးဘားမှ ဂိမ်းတစ်ခုကို ရွေးချယ်ပါ သို့မဟုတ် အသစ်တစ်ခု စတင်ပါ။"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "ပန်နယ်ပိတ်ပါ"
 msgid "Close search"
 msgstr "ရှာဖွေမှု ပိတ်မည်"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "ကုဒ် ပို့ပြီး။"
 
@@ -569,6 +600,10 @@ msgstr "အမှောင်ပုံစံ"
 msgid "Data conflict"
 msgstr "ဒေတာ ကွဲလွဲမှု"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "ငြင်းပယ်မည်"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "မူရင်း"
@@ -577,7 +612,7 @@ msgstr "မူရင်း"
 msgid "Default AI account"
 msgstr "မူရင်း AI အကောင့်"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "ဟောင်းသောဆာဗာမှ သင်၏အကောင့်ကို ဖျက်ပါ"
 
@@ -629,8 +664,8 @@ msgstr "မူကြမ်းကို ဖျက်ပစ်မလား။"
 msgid "Disconnected"
 msgstr "ချိတ်ဆက်မှု ပြတ်တောက်ပြီး"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "ပယ်မည်"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "{label} ကို တည်းဖြတ်ပါ"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "အီးမေးလ်"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "အီးမေးလ်ကို အသုံးပြုနေပြီးဖြစ်သည်"
 
@@ -674,15 +709,15 @@ msgstr "အီးမေးလ် ကုဒ်"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "အီးမေးလ် ကုဒ်"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "ကျွန်ုပ်ထံ ကုဒ်တစ်ခု အီးမေးလ်ပို့ပါ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "ဆက်လက်ရန် ကုဒ်တစ်ခု ထည့်ပါ"
 
@@ -690,7 +725,7 @@ msgstr "ဆက်လက်ရန် ကုဒ်တစ်ခု ထည့်ပ�
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "ဝင်ရောက်ရန် \"{userEmail}\" အတွက် ပြန်လည်ရယူရေး ကုဒ်ထည့်ပါ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "သင်၏ အထောက်အထား အက်ပ်မှ ကုဒ်ကို ထည့်ပါ"
 
@@ -711,7 +746,7 @@ msgstr "သင်၏ {initial} နှင့် {last} ကို ထည့်ပ�
 msgid "Enter your authenticator code"
 msgstr "သင့်အထောက်အထားစိစစ်ရေးကုဒ်ကို ထည့်ပါ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "သင်၏ အီးမေးလ်ကုဒ်နှင့် အထောက်အထားကုဒ်ကို ထည့်ပါ"
 
@@ -746,7 +781,7 @@ msgstr "အကောင့် ထည့်၍ မရပါ"
 msgid "Failed to add tag"
 msgstr "တဂ် ထည့်၍ မရပါ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "ဆက်လုပ်၍ မရပါ"
 
@@ -771,7 +806,7 @@ msgstr "ဗီဒီယိုကို ဖွင့်၍မရပါ"
 msgid "Failed to remove account"
 msgstr "အကောင့် ဖယ်ရှား၍ မရပါ"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "အကောင့်ဝင်ကုဒ် တောင်းဆိုမှု မအောင်မြင်ပါ"
 
@@ -795,7 +830,7 @@ msgstr "ဖိဒ်များ"
 msgid "Filter..."
 msgstr "စစ်ထုတ်..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "အကောင့်ရွှေ့ပြောင်းခြင်း ပြီးဆုံးပါ"
 
@@ -939,7 +974,7 @@ msgstr "အတွင်းသို့"
 msgid "Interests"
 msgstr "စိတ်ဝင်စားမှုများ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "မမှန်ကန်သော အထောက်အထား ကုဒ်"
 
@@ -948,10 +983,14 @@ msgstr "မမှန်ကန်သော အထောက်အထား ကု�
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "မမှန်ကန်သော ကုဒ်"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "မမှန်ကန်သော ရက်စွဲ"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "မမှန်ကန်သော အညွှန်း- စာလုံး၊ ဂဏန်း၊ ကွက်လပ်၊ အနှုတ်လက္ခဏာနှင့် မျဉ်းစောင်းများသာ (အများဆုံး ၅၀ လုံး)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "မမှန်ကန်သော အတည်ပြု ကုဒ်"
 
@@ -1032,7 +1071,7 @@ msgstr "တင်နေသည်..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "ဝင်"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "ဝင်ရောက်မှု စက်ရှင် သက်တမ်းကုန်ပြီ၊ ထပ်ကြိုးစားပါ"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "ဝင်ရောက်ခွင့် ဆုံးရှုံးပြီလား။ ပြန်လည်ရယူရေး ကုဒ် သုံးပါ"
 
@@ -1084,8 +1123,8 @@ msgstr "ဝင်ရောက်ခွင့် ဆုံးရှုံးပ�
 msgid "Manage your connected accounts for notifications and services."
 msgstr "အကြောင်းကြားချက်များနှင့် ဝန်ဆောင်မှုများအတွက် ချိတ်ဆက်ထားသော အကောင့်များကို စီမံပါ။"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "အားလုံးကို ဖတ်ပြီးအဖြစ် မှတ်"
@@ -1105,6 +1144,10 @@ msgstr "အလယ်အလတ်"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "မီနူး"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "မက်ဆေ့ဂျ်"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "အသစ်"
 msgid "New accounts are disabled on this server"
 msgstr "ဤဆာဗာတွင် အကောင့်အသစ်များ ပိတ်ထားသည်"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "ဂိမ်းအသစ်"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "သုံးစွဲသူအသစ် ဆိုင်းအပ်ခြင်းကို ပိတ်ထားသည်။"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "ရှေ့သို့"
 
@@ -1162,7 +1210,7 @@ msgstr "နောက်ပုံ"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "ဝင်ရောက်ခွင့်စည်းမျဉ်းများ မသတ်မှတ်ထားပါ။ ဤအရင်းအမြစ်ကို မည်သူဝင်နိုင်သည်ကို ထိန်းချုပ်ရန် စည်းမျဉ်းများ ထည့်ပါ။"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "Backup ဖိုင် မရွေးချယ်ရသေးပါ"
 
@@ -1170,12 +1218,16 @@ msgstr "Backup ဖိုင် မရွေးချယ်ရသေးပါ"
 msgid "No connected accounts"
 msgstr "ချိတ်ဆက်ထားသော အကောင့်များ မရှိပါ"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "ဂိမ်းများ မရှိသေးပါ"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "အုပ်စုများ မရရှိနိုင်ပါ"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "MFA session မရှိပါ"
 
@@ -1183,6 +1235,7 @@ msgstr "MFA session မရှိပါ"
 msgid "No notifications yet"
 msgstr "အကြောင်းကြားချက် မရှိသေးပါ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "လူများ မတွေ့ပါ"
@@ -1232,7 +1285,7 @@ msgstr "မရှိ; အကောင့်အသစ်ဖန်တီးပါ"
 msgid "Normal"
 msgstr "ပုံမှန်"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "ဤသည် migration bundle မဟုတ်ပါ"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "အသိပေးချက်များ"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "အကြောင်းကြားချက်များ- {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "navigation menu ကို ဖွင့်"
 msgid "Open theme settings"
 msgstr "theme ဆက်တင်များကို ဖွင့်"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "သို့မဟုတ် အထောက်အထားစိစစ်ရေးကုဒ်ထည့်ပါ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "သို့မဟုတ် အောက်ပါတို့ဖြင့် log in ဝင်ပါ"
@@ -1340,7 +1393,7 @@ msgstr "Passkey login ပယ်ဖျက်ပြီး"
 msgid "Passkey login failed"
 msgstr "Passkey login မအောင်မြင်ပါ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "Passkey login လိုအပ်သည်"
 
@@ -1348,7 +1401,7 @@ msgstr "Passkey login လိုအပ်သည်"
 msgid "Passkey verification failed. Please try again."
 msgstr "ပတ်စ်ကီးအတည်ပြုခြင်း မအောင်မြင်ပါ။ ကျေးဇူးပြု၍ ထပ်စမ်းကြည့်ပါ။"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Passkey များ"
 
@@ -1356,7 +1409,7 @@ msgstr "Passkey များ"
 msgid "Passphrase"
 msgstr "Passphrase"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "အီးမေးလ်ဖြင့် ရရှိထားသော login code ကို paste လုပ်ပါ"
 
@@ -1364,25 +1417,25 @@ msgstr "အီးမေးလ်ဖြင့် ရရှိထားသော l
 msgid "Pick a date"
 msgstr "ရက်စွဲရွေးပါ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "သင့် authenticator app ကို စစ်ဆေးပြီး ထပ်စမ်းကြည့်ပါ။"
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "သင့် code ကို စစ်ဆေးပြီး ထပ်စမ်းကြည့်ပါ။"
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "သင့် code များကို စစ်ဆေးပြီး ထပ်စမ်းကြည့်ပါ။"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "သင့် အီးမေးလ်ကို စစ်ဆေးပြီး ထပ်စမ်းကြည့်ပါ။"
 
@@ -1397,7 +1450,7 @@ msgstr "သင့်အင်တာနက်ချိတ်ဆက်မှုက
 msgid "Please check your recovery code and try again."
 msgstr "သင့် recovery code ကို စစ်ဆေးပြီး ထပ်စမ်းကြည့်ပါ။"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "မှန်ကန်သော အီးမေးလ် ရိုက်ထည့်ပါ"
 
@@ -1413,9 +1466,9 @@ msgstr "သင့် recovery code ရိုက်ထည့်ပါ"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "ဤအရင်းအမြစ်ကို ဝင်ရောက်ရန် <0/> သင့်လျော်သော အထောက်အထားများဖြင့် ဝင်ရောက်ပါ။"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "ထပ်စမ်းကြည့်ပါ သို့မဟုတ် support နှင့် ဆက်သွယ်ပါ။"
 
@@ -1423,7 +1476,7 @@ msgstr "ထပ်စမ်းကြည့်ပါ သို့မဟုတ် s
 msgid "Please try again."
 msgstr "ကျေးဇူးပြု၍ ထပ်ကြိုးစားပါ။"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "\"Passkey ဖြင့် Log in\" ခလုတ်ကို သုံးပါ။"
 
@@ -1476,11 +1529,11 @@ msgstr "Push အကြောင်းကြားချက်"
 msgid "Raised"
 msgstr "ဖော့တက်"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "ဤဆာဗာပေါ်တွင် သင်၏အကောင့်များကို ပြန်လည်ချိတ်ဆက်ပါ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "ဤဆာဗာတွင် သင်၏ passkey များကို ပြန်လည်မှတ်ပုံတင်ပါ"
 
@@ -1514,9 +1567,9 @@ msgstr "Dashboard သို့ redirect လုပ်နေသည်…"
 msgid "Reduce interest"
 msgstr "စိတ်ဝင်စားမှု လျှော့ချ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "မှတ်ပုံတင်ခြင်း ပိတ်ထား"
 
@@ -1559,6 +1612,10 @@ msgstr "ဝင်ရောက်ခွင့် ဖယ်ရှားမလာ�
 msgid "Remove interest"
 msgstr "စိတ်ဝင်စားမှု ဖယ်ရှား"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "item ဖယ်ရှား"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "အီးမေးလ်ပြန်ပို့ရန်"
@@ -1581,7 +1638,7 @@ msgstr "ဆက်တင်အားလုံးကို ပုံသေတန�
 msgid "Restore a backup file"
 msgstr "Backup ဖိုင်ကို ပြန်လည်ရယူပါ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "ပြန်လည်ရယူမှု မအောင်မြင်ပါ"
@@ -1662,6 +1719,10 @@ msgstr "ရှာဖွေနေသည်..."
 msgid "Select {0}"
 msgstr "{0} ရွေးပါ"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "ဂိမ်းတစ်ခုကို ရွေးချယ်ပါ"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "ဝင်ရောက်ခွင့်ပေးရန် သုံးစွဲသူ၊ အုပ်စု၊ သို့မဟုတ် အခြားစည်းမျဉ်းကို ရွေးချယ်ပါ။"
@@ -1706,6 +1767,11 @@ msgstr "ဆိုက်ဦးတည်ရာကို ရွေးပါ"
 msgid "Select theme preference"
 msgstr "အပြင်အဆင် ဦးစားပေးကို ရွေးပါ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "ရွေးပါ..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "ရွေးချယ်ထားသည်"
@@ -1722,6 +1788,11 @@ msgstr "ထပ်ပို့ပါ"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "အီးမေးလ်ပို့ရန်"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "မက်ဆေ့ပို့မည်"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "ထို ဝင်ရောက်ရေး ဝန်ဆောင်မ�
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "အပေါ်တွင် သင်ထည့်သွင်းသော အီးမေးလ်သည် ဤဆာဗာတွင် အကောင့်အသစ်၏ အမည်ဖြစ်လာသည်။ အရန်သိမ်းဆည်းမှု၏ အထောက်အထားသည် ဤနေရာတွင် ရှိနှင့်ပြီး အသုံးပြုနေခြင်း မရှိရပါ — အခြားဆာဗာသို့ ပြန်လည်ရယူပါ၊ သို့မဟုတ် ရှိပြီးသား အကောင့်ကို အရင်ဖျက်ပါ။"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "ဖိုင်သည် ပျက်စီးနေနိုင်သည် သို့မဟုတ် ပြောင်းလဲထားနိုင်သည်။"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "သင် ထည့်သွင်းသော passphrase သည် backup နှင့် မကိုက်ညီပါ။"
 
@@ -1915,7 +1986,7 @@ msgstr "အပြင်အဆင်"
 msgid "Theme Settings"
 msgstr "အပြင်အဆင် ဆက်တင်များ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "ဤ backup ကို Mochi ၏ သစ်သောဗားရှင်းဖြင့် ဖန်တီးထားသည်။ ဤ server ကို အရင် အပ်ဒိတ်လုပ်ပါ။"
 
@@ -1993,6 +2064,10 @@ msgstr "အင်္ဂါ"
 msgid "Type a command or search..."
 msgstr "command တစ်ခု ရိုက်ပါ သို့မဟုတ် ရှာပါ..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "မက်ဆေ့ ရိုက်ပါ…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "သုံးစွဲသူရှာရန် ရိုက်ပါ"
@@ -2039,7 +2114,7 @@ msgstr "သင်၏ ဒေတာ ဖြည်ထုတ်နေသည်"
 msgid "Unverified"
 msgstr "အတည်ပြုမထား"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Mochi ၏ ဒေတာ export မှ ထုတ်ယူထားသော .zip ဖိုင်ကို upload လုပ်ပါ။"
 
@@ -2051,7 +2126,7 @@ msgstr "အပ်လုဒ်တိုးတက်မှု"
 msgid "Use a different account"
 msgstr "အကောင့် အခြားတစ်ခုကို သုံးပါ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "passkey ကို သုံးပါ"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "အတည်ပြု ကုဒ် ပို့ပြီး"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "အတည်ပြုခြင်း မအောင်မြင်ပါ"
 
@@ -2116,8 +2191,8 @@ msgstr "ကြည့်ရှုမည်"
 msgid "View all"
 msgstr "အားလုံး ကြည့်ရှုမည်"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "အသိပေးချက်များ အားလုံး ကြည့်ရှုမည်"
 
@@ -2150,7 +2225,7 @@ msgstr "ဗုဒ္ဓဟူး"
 msgid "Wikis"
 msgstr "Wikis"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "Passphrase မှားသည်"
 
@@ -2189,7 +2264,7 @@ msgstr "သင့်အကောင့်ကို ဆိုင်းငံ့�
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "သင့်အကောင့်ကို ဆိုင်းငံ့ထားသည်။"
 
@@ -2205,7 +2280,7 @@ msgstr "သင့်အကောင့်ကို ဖျက်ရန် စီ�
 msgid "Your account requires a passkey to sign in"
 msgstr "သင့်အကောင့်သည် ဝင်ရောက်ရန် passkey လိုအပ်သည်"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "သင်၏အကောင့်ကို {source} မှ ဤနေရာသို့ ရွှေ့ပြောင်းခဲ့သည်။ သင်ကာကိုဖျက်မသည်အထိ၊ မက်ဆေ့ချ်များနှင့် အကြောင်းကြားချက်များ ဆာဗာနှစ်ခုလုံးသို့ ရောက်နိုင်သည်၊ သင်၏အချို့သောအကြောင်းအရာများကို ဟောင်းသောဆာဗာမှ ဆက်လက်ပေးဆောင်နေမည်ဖြစ်ပြီး ကြည့်ရှုသူများ သင်ကိုဤနေရာတွင် ရှာဖွေရန် မိနစ်အနည်းငယ် ကြာနိုင်သည်။"
 

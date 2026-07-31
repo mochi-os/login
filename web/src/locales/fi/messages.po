@@ -36,6 +36,10 @@ msgstr "{entityLabel}: nimi"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel}-nimi vaaditaan"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} tarjosi tasapeliä"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} valittu} other {{manyName} valittu}}"
@@ -60,6 +64,11 @@ msgstr "{sentLabel} / {totalLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Avaa valikko (# lukematon ilmoitus)} other {Avaa valikko (# lukematonta ilmoitusta)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} sisäkkäistä"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 tuntia"
@@ -71,6 +80,10 @@ msgstr "24 tuntia"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Absoluuttinen (päivämäärä ja kellonaika)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "Hyväksy"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "Käyttöoikeustaso"
 msgid "Account added"
 msgstr "Tili lisätty"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "Tili on jo tällä palvelimella"
 
@@ -98,7 +111,7 @@ msgstr "Tili poistettu"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "Tili jäädytetty"
 
@@ -110,6 +123,7 @@ msgstr "Tilin tyyppi"
 msgid "Account verified"
 msgstr "Tili vahvistettu"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "Lisää tili"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "Lisää tili saadaksesi ilmoituksia ja käyttääksesi palveluita."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "Lisää tarkistuslistakohde"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "Lisää kohde..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "Salli kenen tahansa hakea {0}"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Tällä sähköpostilla on jo tili. Kirjaudu ensin sisään, ja yhdistä sitten {0} tunnistautumisasetuksissa."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "Tili, jolla on tämä henkilöllisyys, on jo olemassa täällä."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "Käyttäjän {name} avatar"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "Takaisin"
 
@@ -262,17 +284,22 @@ msgstr "Takaisin rekisteröitymiseen"
 msgid "Backup file"
 msgstr "Varmuuskopiointitiedosto"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "Varmuuskopiointitiedosto on vioittunut"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "Varmuuskopio on liian uusi"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Banneri"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "Estetty siirtyminen epäluotettavaan linkkiin"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "Keskustelu"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Valitse ”Kaikki” nähdäksesi aiemmat ilmoitukset."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "Tarkista sähköpostisi."
 
@@ -328,9 +355,13 @@ msgstr "Tarkista sähköpostisi."
 msgid "Checking…"
 msgstr "Tarkistetaan…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "Valitse toinen paikallinen sähköposti tai kirjaudu sen sijaan sisään."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "Valitse peli sivupalkista tai aloita uusi."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "Sulje paneeli"
 msgid "Close search"
 msgstr "Sulje haku"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "Koodi lähetetty."
 
@@ -569,6 +600,10 @@ msgstr "Tumma tila"
 msgid "Data conflict"
 msgstr "Tietoristiriita"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "Hylkää"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "Oletus"
@@ -577,7 +612,7 @@ msgstr "Oletus"
 msgid "Default AI account"
 msgstr "Oletustekoälytili"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Poista tilisi vanhalta palvelimelta"
 
@@ -629,8 +664,8 @@ msgstr "Hylätäänkö luonnos?"
 msgid "Disconnected"
 msgstr "Ei yhteyttä"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Hylkää"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "Muokkaa {label}"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "Sähköposti"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "Sähköposti on jo käytössä"
 
@@ -674,15 +709,15 @@ msgstr "sähköpostikoodi"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "Sähköpostikoodi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "Lähetä koodi sähköpostiini"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "Anna koodi jatkaaksesi"
 
@@ -690,7 +725,7 @@ msgstr "Anna koodi jatkaaksesi"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Kirjaudu sisään syöttämällä palautuskoodi käyttäjälle \"{userEmail}\""
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "Anna koodi todentajasovelluksestasi"
 
@@ -711,7 +746,7 @@ msgstr "Syötä {initial} ja {last}"
 msgid "Enter your authenticator code"
 msgstr "Anna todennussovelluksen koodi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "Anna sähköpostikoodi ja todentajakoodi"
 
@@ -746,7 +781,7 @@ msgstr "Tilin lisääminen epäonnistui"
 msgid "Failed to add tag"
 msgstr "Tunnisteen lisääminen epäonnistui"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "Jatkaminen epäonnistui"
 
@@ -771,7 +806,7 @@ msgstr "Videon lataus epäonnistui"
 msgid "Failed to remove account"
 msgstr "Tilin poisto epäonnistui"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "Kirjautumiskoodin pyyntö epäonnistui"
 
@@ -795,7 +830,7 @@ msgstr "Syötteet"
 msgid "Filter..."
 msgstr "Suodata..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Viimeistele tilin siirto"
 
@@ -939,7 +974,7 @@ msgstr "Sisennetty"
 msgid "Interests"
 msgstr "Kiinnostuksen kohteet"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "Virheellinen todentajakoodi"
 
@@ -948,10 +983,14 @@ msgstr "Virheellinen todentajakoodi"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "Virheellinen koodi"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "Virheellinen päivämäärä"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "Virheellinen tunniste: vain kirjaimet, numerot, välilyönnit, yhdysmerkit ja kauttaviivat (enintään 50 merkkiä)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "Virheellinen vahvistuskoodi"
 
@@ -1032,7 +1071,7 @@ msgstr "Ladataan..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "Kirjaudu sisään"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "Kirjautumisistunto vanhentui, yritä uudelleen"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "Menetitkö käyttöoikeuden? Käytä palautuskoodia"
 
@@ -1084,8 +1123,8 @@ msgstr "Menetitkö käyttöoikeuden? Käytä palautuskoodia"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "Hallitse yhdistettyjä tilejäsi ilmoituksia ja palveluita varten."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Merkitse kaikki luetuiksi"
@@ -1105,6 +1144,10 @@ msgstr "Keskikoko"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Valikko"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "Viesti"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "Uusi"
 msgid "New accounts are disabled on this server"
 msgstr "Uudet tilit on poistettu käytöstä tällä palvelimella"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "Uusi peli"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "Uusien käyttäjien rekisteröityminen on poistettu käytöstä."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "Seuraava"
 
@@ -1162,7 +1210,7 @@ msgstr "Seuraava kuva"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Käyttöoikeussääntöjä ei ole määritetty. Lisää sääntöjä hallitaksesi, kuka voi käyttää tätä resurssia."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "Varmuuskopiointitiedostoa ei valittu"
 
@@ -1170,12 +1218,16 @@ msgstr "Varmuuskopiointitiedostoa ei valittu"
 msgid "No connected accounts"
 msgstr "Ei yhdistettyjä tilejä"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "Ei vielä pelejä"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Ei saatavilla olevia ryhmiä"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "Ei MFA-istuntoa"
 
@@ -1183,6 +1235,7 @@ msgstr "Ei MFA-istuntoa"
 msgid "No notifications yet"
 msgstr "Ei vielä ilmoituksia"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Henkilöitä ei löytynyt"
@@ -1232,7 +1285,7 @@ msgstr "Ei mitään; luo uusi tili"
 msgid "Normal"
 msgstr "Normaali"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "Ei ole siirtopaketti"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "Ilmoitukset"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "Ilmoitukset: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "Avaa navigointivalikko"
 msgid "Open theme settings"
 msgstr "Avaa teeman asetukset"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "Tai syötä todennuskoodi"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "Tai kirjaudu"
@@ -1340,7 +1393,7 @@ msgstr "Avainkoodikirjautuminen peruutettu"
 msgid "Passkey login failed"
 msgstr "Avainkoodikirjautuminen epäonnistui"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "Avainkoodikirjautuminen vaaditaan"
 
@@ -1348,7 +1401,7 @@ msgstr "Avainkoodikirjautuminen vaaditaan"
 msgid "Passkey verification failed. Please try again."
 msgstr "Avainkoodin vahvistus epäonnistui. Yritä uudelleen."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Avainkoodit"
 
@@ -1356,7 +1409,7 @@ msgstr "Avainkoodit"
 msgid "Passphrase"
 msgstr "Tunnuslause"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "Liitä sähköpostitse saamasi kirjautumiskoodi"
 
@@ -1364,25 +1417,25 @@ msgstr "Liitä sähköpostitse saamasi kirjautumiskoodi"
 msgid "Pick a date"
 msgstr "Valitse päivä"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "Tarkista todennussovellus ja yritä uudelleen."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "Tarkista koodi ja yritä uudelleen."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "Tarkista koodit ja yritä uudelleen."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "Tarkista sähköposti ja yritä uudelleen."
 
@@ -1397,7 +1450,7 @@ msgstr "Tarkista internetyhteytesi ja yritä uudelleen."
 msgid "Please check your recovery code and try again."
 msgstr "Tarkista palautuskoodisi ja yritä uudelleen."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "Syötä kelvollinen sähköposti"
 
@@ -1413,9 +1466,9 @@ msgstr "Syötä palautuskoodi"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Kirjaudu sisään asianmukaisilla tunnuksilla <0/> päästäksesi tähän resurssiin."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "Yritä uudelleen tai ota yhteyttä tukeen."
 
@@ -1423,7 +1476,7 @@ msgstr "Yritä uudelleen tai ota yhteyttä tukeen."
 msgid "Please try again."
 msgstr "Yritä uudelleen."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Käytä \"Kirjaudu avainkoodilla\" -painiketta."
 
@@ -1476,11 +1529,11 @@ msgstr "Push-ilmoitus"
 msgid "Raised"
 msgstr "Korotettu"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Yhdistä tilisi uudelleen tällä palvelimella"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Rekisteröi pääsyavaimesi uudelleen tällä palvelimella"
 
@@ -1514,9 +1567,9 @@ msgstr "Ohjataan koontinäyttöön…"
 msgid "Reduce interest"
 msgstr "Vähennä kiinnostusta"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "Rekisteröinti poistettu käytöstä"
 
@@ -1559,6 +1612,10 @@ msgstr "Poistetaanko käyttöoikeus?"
 msgid "Remove interest"
 msgstr "Poista kiinnostus"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "Poista kohde"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Lähetä sähköposti uudelleen"
@@ -1581,7 +1638,7 @@ msgstr "Palauta kaikki asetukset oletusarvoihin"
 msgid "Restore a backup file"
 msgstr "Palauta varmuuskopiotiedosto"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Palautus epäonnistui"
@@ -1662,6 +1719,10 @@ msgstr "Haetaan..."
 msgid "Select {0}"
 msgstr "Valitse {0}"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "Valitse peli"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Valitse käyttäjä, ryhmä tai muu sääntö, jolle myönnät käyttöoikeuden."
@@ -1706,6 +1767,11 @@ msgstr "Valitse sivuston suunta"
 msgid "Select theme preference"
 msgstr "Valitse teeman asetus"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "Valitse..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "valittu"
@@ -1722,6 +1788,11 @@ msgstr "Lähetä uudelleen"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "Lähetä sähköposti"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "Lähetä viesti"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "Tätä kirjautumistarjoajaa ei ole saatavilla"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Yllä antamasi sähköposti tulee uuden tilin nimeksi tällä palvelimella. Varmuuskopion henkilöllisyys ei saa olla jo aktiivinen täällä — palauta toiselle palvelimelle tai poista olemassa oleva tili ensin."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "Tiedosto saattaa olla vioittunut tai muokattu."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "Syöttämäsi tunnuslause ei vastaa varmuuskopiota."
 
@@ -1915,7 +1986,7 @@ msgstr "Teema"
 msgid "Theme Settings"
 msgstr "Teema-asetukset"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Tämä varmuuskopio on luotu Mochin uudemmalla versiolla. Päivitä ensin tämä palvelin."
 
@@ -1993,6 +2064,10 @@ msgstr "Tiistai"
 msgid "Type a command or search..."
 msgstr "Kirjoita komento tai hae..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Kirjoita viesti…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "Kirjoita hakeaksesi käyttäjiä"
@@ -2039,7 +2114,7 @@ msgstr "Puretaan tietojasi"
 msgid "Unverified"
 msgstr "Vahvistamaton"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Lataa Mochin tietojen viennistä viety .zip-tiedosto."
 
@@ -2051,7 +2126,7 @@ msgstr "Latauksen edistyminen"
 msgid "Use a different account"
 msgstr "Käytä toista tiliä"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "Käytä avainkoodia"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "Vahvistuskoodi lähetetty"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "Vahvistus epäonnistui"
 
@@ -2116,8 +2191,8 @@ msgstr "Näytä"
 msgid "View all"
 msgstr "Näytä kaikki"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "Näytä kaikki ilmoitukset"
 
@@ -2150,7 +2225,7 @@ msgstr "Keskiviikko"
 msgid "Wikis"
 msgstr "Wikit"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "Väärä tunnuslause"
 
@@ -2189,7 +2264,7 @@ msgstr "Tilisi on jäädytetty"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "Tilisi on keskeytetty."
 
@@ -2205,7 +2280,7 @@ msgstr "Tilisi on ajastettu poistettavaksi."
 msgid "Your account requires a passkey to sign in"
 msgstr "Tilisi vaatii passkey'n kirjautumiseen"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Tilisi siirrettiin tänne kohteesta {source}. Kunnes poistat sen sieltä, viestit ja ilmoitukset voivat tavoittaa molemmat palvelimet, osa sisällöstäsi toimitetaan edelleen vanhalta palvelimelta ja seuraajillasi voi kestää muutama minuutti löytää sinut täältä."
 

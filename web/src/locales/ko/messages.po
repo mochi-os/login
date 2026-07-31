@@ -36,6 +36,10 @@ msgstr "{entityLabel} 이름"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel} 이름은 필수입니다"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName}이(가) 무승부를 제안했습니다"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} 선택됨} other {{manyName} 선택됨}}"
@@ -60,6 +64,11 @@ msgstr "{totalLabel} 중 {sentLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {메뉴 열기(읽지 않은 알림 #개)} other {메뉴 열기(읽지 않은 알림 #개)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0}개 중첩"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12시간"
@@ -71,6 +80,10 @@ msgstr "24시간"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "절대값 (날짜 및 시간)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "수락"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "접근 수준"
 msgid "Account added"
 msgstr "계정이 추가되었어요"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "이 서버에 이미 계정이 있습니다"
 
@@ -98,7 +111,7 @@ msgstr "계정이 제거되었어요"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "계정이 정지되었어요"
 
@@ -110,6 +123,7 @@ msgstr "계정 유형"
 msgid "Account verified"
 msgstr "계정이 인증되었어요"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "계정 추가"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "알림을 받고 서비스를 이용하려면 계정을 추가하세요."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "체크리스트 항목 추가"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "항목 추가..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "누구나 {0}을(를) 검색할 수 있도록 허용"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "해당 이메일로 등록된 계정이 이미 있습니다. 먼저 로그인한 후, 인증 설정에서 {0}을(를) 연결하세요."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "이 신원으로 계정이 이미 여기에 존재합니다."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "{name}의 아바타"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "뒤로"
 
@@ -262,17 +284,22 @@ msgstr "가입으로 돌아가기"
 msgid "Backup file"
 msgstr "백업 파일"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "백업 파일이 손상되었습니다"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "백업이 너무 새것입니다"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "배너"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "신뢰할 수 없는 링크로의 이동이 차단되었어요"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "채팅"
 msgid "Check \"All\" to see your past notifications."
 msgstr "지난 알림을 보려면 \"전체\"를 선택하세요."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "이메일을 확인해주세요."
 
@@ -328,9 +355,13 @@ msgstr "이메일을 확인해주세요."
 msgid "Checking…"
 msgstr "확인 중…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "다른 로컬 이메일을 선택하거나 대신 로그인하세요."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "사이드바에서 게임을 선택하거나 새로 시작하세요."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "패널 닫기"
 msgid "Close search"
 msgstr "검색 닫기"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "코드가 전송되었어요."
 
@@ -569,6 +600,10 @@ msgstr "다크 모드"
 msgid "Data conflict"
 msgstr "데이터 충돌"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "거절"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "기본값"
@@ -577,7 +612,7 @@ msgstr "기본값"
 msgid "Default AI account"
 msgstr "기본 AI 계정"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "이전 서버에서 계정 삭제"
 
@@ -629,8 +664,8 @@ msgstr "초안을 버릴까요?"
 msgid "Disconnected"
 msgstr "연결 끊김"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "닫기"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "{label} 편집"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "이메일"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "이메일이 이미 사용 중입니다"
 
@@ -674,15 +709,15 @@ msgstr "이메일 코드"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "이메일 코드"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "코드를 이메일로 받기"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "계속하려면 코드를 입력하세요"
 
@@ -690,7 +725,7 @@ msgstr "계속하려면 코드를 입력하세요"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "로그인하려면 \"{userEmail}\"의 복구 코드를 입력하세요"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "인증 앱의 코드를 입력하세요"
 
@@ -711,7 +746,7 @@ msgstr "{initial}와(과) {last}을(를) 입력하세요"
 msgid "Enter your authenticator code"
 msgstr "인증 앱 코드를 입력하세요"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "이메일 코드와 인증 앱 코드를 입력하세요"
 
@@ -746,7 +781,7 @@ msgstr "계정 추가에 실패했어요"
 msgid "Failed to add tag"
 msgstr "태그 추가에 실패했어요"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "계속 진행에 실패했어요"
 
@@ -771,7 +806,7 @@ msgstr "동영상을 불러오지 못했어요"
 msgid "Failed to remove account"
 msgstr "계정 제거에 실패했어요"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "로그인 코드 요청에 실패했습니다"
 
@@ -795,7 +830,7 @@ msgstr "피드"
 msgid "Filter..."
 msgstr "필터..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "계정 이전 완료"
 
@@ -939,7 +974,7 @@ msgstr "인셋"
 msgid "Interests"
 msgstr "관심사"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "잘못된 인증 코드"
 
@@ -948,10 +983,14 @@ msgstr "잘못된 인증 코드"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "잘못된 코드"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "잘못된 날짜"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "잘못된 태그입니다. 문자, 숫자, 공백, 하이픈, 슬래시만 사용할 수 있습니다(최대 50자)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "잘못된 인증 코드"
 
@@ -1032,7 +1071,7 @@ msgstr "로딩 중..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "로그인"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "로그인 세션이 만료되었습니다. 다시 시도하세요"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "접근이 어려우신가요? 복구 코드를 사용하세요"
 
@@ -1084,8 +1123,8 @@ msgstr "접근이 어려우신가요? 복구 코드를 사용하세요"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "알림과 서비스를 위한 연결된 계정을 관리하세요."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "모두 읽음으로 표시"
@@ -1105,6 +1144,10 @@ msgstr "보통"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "메뉴"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "메시지"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "새로 만들기"
 msgid "New accounts are disabled on this server"
 msgstr "이 서버에서는 신규 계정이 비활성화되어 있습니다"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "새 게임"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "신규 사용자 가입이 비활성화되어 있어요."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "다음"
 
@@ -1162,7 +1210,7 @@ msgstr "다음 이미지"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "설정된 접근 규칙이 없어요. 이 리소스에 접근할 수 있는 사용자를 제어하려면 규칙을 추가하세요."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "백업 파일이 선택되지 않았습니다"
 
@@ -1170,12 +1218,16 @@ msgstr "백업 파일이 선택되지 않았습니다"
 msgid "No connected accounts"
 msgstr "연결된 계정이 없어요"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "아직 게임이 없어요"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "이용 가능한 그룹이 없어요"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "MFA 세션이 없습니다"
 
@@ -1183,6 +1235,7 @@ msgstr "MFA 세션이 없습니다"
 msgid "No notifications yet"
 msgstr "아직 알림이 없어요"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "사람을 찾을 수 없어요"
@@ -1232,7 +1285,7 @@ msgstr "없음; 새 계정 만들기"
 msgid "Normal"
 msgstr "기본"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "마이그레이션 번들이 아닙니다"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "알림"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "알림: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "내비게이션 메뉴 열기"
 msgid "Open theme settings"
 msgstr "테마 설정 열기"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "또는 인증 코드 입력"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "또는 다음으로 로그인"
@@ -1340,7 +1393,7 @@ msgstr "패스키 로그인이 취소되었어요"
 msgid "Passkey login failed"
 msgstr "패스키 로그인에 실패했어요"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "패스키 로그인이 필요해요"
 
@@ -1348,7 +1401,7 @@ msgstr "패스키 로그인이 필요해요"
 msgid "Passkey verification failed. Please try again."
 msgstr "패스키 인증에 실패했습니다. 다시 시도해 주세요."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "패스키"
 
@@ -1356,7 +1409,7 @@ msgstr "패스키"
 msgid "Passphrase"
 msgstr "암호 문구"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "이메일로 받은 로그인 코드를 붙여넣으세요"
 
@@ -1364,25 +1417,25 @@ msgstr "이메일로 받은 로그인 코드를 붙여넣으세요"
 msgid "Pick a date"
 msgstr "날짜 선택"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "인증 앱을 확인한 후 다시 시도하세요."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "코드를 확인한 후 다시 시도하세요."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "코드를 확인한 후 다시 시도하세요."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "이메일을 확인한 후 다시 시도하세요."
 
@@ -1397,7 +1450,7 @@ msgstr "인터넷 연결을 확인하고 다시 시도하세요."
 msgid "Please check your recovery code and try again."
 msgstr "복구 코드를 확인하고 다시 시도해 주세요."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "유효한 이메일을 입력하세요"
 
@@ -1413,9 +1466,9 @@ msgstr "복구 코드를 입력하세요"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "이 리소스에 접근하려면 <0/> 적절한 자격 증명으로 로그인해 주세요."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "다시 시도하거나 지원팀에 문의해 주세요."
 
@@ -1423,7 +1476,7 @@ msgstr "다시 시도하거나 지원팀에 문의해 주세요."
 msgid "Please try again."
 msgstr "다시 시도해 주세요."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "\"패스키로 로그인\" 버튼을 사용해 주세요."
 
@@ -1476,11 +1529,11 @@ msgstr "푸시 알림"
 msgid "Raised"
 msgstr "돌출"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "이 서버에서 계정 다시 연결"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "이 서버에서 패스키를 다시 등록하세요"
 
@@ -1514,9 +1567,9 @@ msgstr "대시보드로 이동 중…"
 msgid "Reduce interest"
 msgstr "관심사 줄이기"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "등록이 비활성화되어 있어요"
 
@@ -1559,6 +1612,10 @@ msgstr "접근 권한을 제거할까요?"
 msgid "Remove interest"
 msgstr "관심사 제거"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "항목 제거"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "이메일 다시 보내기"
@@ -1581,7 +1638,7 @@ msgstr "모든 설정을 기본값으로 재설정"
 msgid "Restore a backup file"
 msgstr "백업 파일 복원"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "복원 실패"
@@ -1662,6 +1719,10 @@ msgstr "검색 중..."
 msgid "Select {0}"
 msgstr "{0} 선택"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "게임 선택"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "접근 권한을 부여할 사용자, 그룹 또는 다른 규칙을 선택해 주세요."
@@ -1706,6 +1767,11 @@ msgstr "사이트 방향 선택"
 msgid "Select theme preference"
 msgstr "테마 환경설정 선택"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "선택..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "개 선택됨"
@@ -1722,6 +1788,11 @@ msgstr "다시 보내기"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "이메일 보내기"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "메시지 보내기"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "해당 로그인 제공자를 사용할 수 없습니다"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "위에 입력한 이메일이 이 서버의 새 계정 이름이 됩니다. 백업의 신원이 여기에서 이미 활성 상태여서는 안 됩니다. 다른 서버로 복원하거나 기존 계정을 먼저 삭제하세요."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "파일이 손상되었거나 수정되었을 수 있습니다."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "입력한 암호 문구가 백업과 일치하지 않습니다."
 
@@ -1915,7 +1986,7 @@ msgstr "테마"
 msgid "Theme Settings"
 msgstr "테마 설정"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "이 백업은 최신 버전의 Mochi에서 생성되었습니다. 먼저 이 서버를 업데이트하세요."
 
@@ -1993,6 +2064,10 @@ msgstr "화요일"
 msgid "Type a command or search..."
 msgstr "명령어를 입력하거나 검색..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "메시지 입력…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "입력하여 사용자 검색"
@@ -2039,7 +2114,7 @@ msgstr "데이터 압축 해제 중"
 msgid "Unverified"
 msgstr "확인되지 않음"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Mochi의 데이터 내보내기에서 내보낸 .zip 파일을 업로드하세요."
 
@@ -2051,7 +2126,7 @@ msgstr "업로드 진행률"
 msgid "Use a different account"
 msgstr "다른 계정 사용"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "패스키 사용"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "확인 코드가 전송되었어요"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "확인에 실패했어요"
 
@@ -2116,8 +2191,8 @@ msgstr "보기"
 msgid "View all"
 msgstr "모두 보기"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "모든 알림 보기"
 
@@ -2150,7 +2225,7 @@ msgstr "수요일"
 msgid "Wikis"
 msgstr "위키"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "잘못된 암호 문구"
 
@@ -2189,7 +2264,7 @@ msgstr "계정이 정지되었습니다"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "계정이 정지되었어요."
 
@@ -2205,7 +2280,7 @@ msgstr "회원님의 계정은 삭제 예정입니다."
 msgid "Your account requires a passkey to sign in"
 msgstr "로그인하려면 계정에 패스키가 필요합니다"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "계정이 {source}에서 이곳으로 이전되었습니다. 거기서 삭제할 때까지 메시지와 알림이 두 서버 모두에 전달될 수 있으며, 일부 콘텐츠는 이전 서버에서 계속 제공되고 팔로워가 이곳에서 나를 찾는 데 몇 분이 걸릴 수 있습니다."
 

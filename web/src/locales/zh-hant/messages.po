@@ -36,6 +36,10 @@ msgstr "{entityLabel}名稱"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel}名稱為必填項"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} 提議和棋"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {已選取 {entityName}} other {已選取 {manyName}}}"
@@ -60,6 +64,11 @@ msgstr "{sentLabel} / {totalLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {開啟選單（# 則未讀通知）} other {開啟選單（# 則未讀通知）}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} 個巢狀"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 小時"
@@ -71,6 +80,10 @@ msgstr "24 小時"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "絕對 (日期與時間)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "接受"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "存取層級"
 msgid "Account added"
 msgstr "帳戶已新增"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "此伺服器上已存在該帳戶"
 
@@ -98,7 +111,7 @@ msgstr "帳戶已移除"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "帳戶已暫停"
 
@@ -110,6 +123,7 @@ msgstr "帳戶類型"
 msgid "Account verified"
 msgstr "帳戶已驗證"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "新增帳戶"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "新增帳戶以接收通知並使用服務。"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "新增檢查清單項目"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "新增項目..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "允許任何人搜尋{0}"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "該電子郵件已存在帳號。請先登入，然後從驗證設定中連結 {0}。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "此處已存在具有此身份的帳號。"
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "{name} 的頭像"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "返回"
 
@@ -262,17 +284,22 @@ msgstr "返回註冊"
 msgid "Backup file"
 msgstr "備份檔案"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "備份檔案已損毀"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "備份版本過新"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "橫幅"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "已封鎖前往不受信任連結的導航"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "聊天"
 msgid "Check \"All\" to see your past notifications."
 msgstr "選擇\"全部\"以檢視過往通知。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "請查看您的電子郵件。"
 
@@ -328,9 +355,13 @@ msgstr "請查看您的電子郵件。"
 msgid "Checking…"
 msgstr "檢查中…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "選擇其他本機電子郵件,或改為登入。"
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "從側邊欄選擇遊戲或開始新的遊戲。"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "關閉面板"
 msgid "Close search"
 msgstr "關閉搜尋"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "代碼已發送。"
 
@@ -569,6 +600,10 @@ msgstr "深色模式"
 msgid "Data conflict"
 msgstr "資料衝突"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "拒絕"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "預設"
@@ -577,7 +612,7 @@ msgstr "預設"
 msgid "Default AI account"
 msgstr "預設 AI 帳戶"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "刪除您在舊伺服器上的帳號"
 
@@ -629,8 +664,8 @@ msgstr "捨棄草稿?"
 msgid "Disconnected"
 msgstr "已斷線"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "關閉"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "編輯 {label}"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "電子郵件"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "電子郵件已被使用"
 
@@ -674,15 +709,15 @@ msgstr "電郵代碼"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "電子郵件代碼"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "透過電子郵件寄送驗證碼給我"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "輸入驗證碼以繼續"
 
@@ -690,7 +725,7 @@ msgstr "輸入驗證碼以繼續"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "輸入 \"{userEmail}\" 的復原代碼以登入"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "請輸入驗證器應用程式中的代碼"
 
@@ -711,7 +746,7 @@ msgstr "輸入您的 {initial} 與 {last}"
 msgid "Enter your authenticator code"
 msgstr "請輸入您的驗證器代碼"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "請輸入電子郵件代碼與驗證器代碼"
 
@@ -746,7 +781,7 @@ msgstr "新增帳號失敗"
 msgid "Failed to add tag"
 msgstr "新增標籤失敗"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "繼續失敗"
 
@@ -771,7 +806,7 @@ msgstr "無法載入影片"
 msgid "Failed to remove account"
 msgstr "移除帳號失敗"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "無法要求登入碼"
 
@@ -795,7 +830,7 @@ msgstr "摘要"
 msgid "Filter..."
 msgstr "篩選..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "完成帳號遷移"
 
@@ -939,7 +974,7 @@ msgstr "內嵌"
 msgid "Interests"
 msgstr "興趣"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "無效的驗證器代碼"
 
@@ -948,10 +983,14 @@ msgstr "無效的驗證器代碼"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "無效的代碼"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "無效的日期"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "標籤無效：僅限字母、數字、空格、連字號和斜線（最多 50 個字元）"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "無效的驗證碼"
 
@@ -1032,7 +1071,7 @@ msgstr "載入中..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "登入"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "登入工作階段已過期，請重試"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "無法存取?使用復原代碼"
 
@@ -1084,8 +1123,8 @@ msgstr "無法存取?使用復原代碼"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "管理用於通知和服務的已連結帳戶。"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "全部標示為已讀"
@@ -1105,6 +1144,10 @@ msgstr "中"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "選單"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "訊息"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "新增"
 msgid "New accounts are disabled on this server"
 msgstr "此伺服器已停用新帳號"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "新遊戲"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "新用戶註冊已停用。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "下一個"
 
@@ -1162,7 +1210,7 @@ msgstr "下一張圖片"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "未設定存取規則。新增規則以控制誰可以存取此資源。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "未選擇備份檔案"
 
@@ -1170,12 +1218,16 @@ msgstr "未選擇備份檔案"
 msgid "No connected accounts"
 msgstr "無已連接的帳戶"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "尚無遊戲"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "無可用的群組"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "沒有 MFA 工作階段"
 
@@ -1183,6 +1235,7 @@ msgstr "沒有 MFA 工作階段"
 msgid "No notifications yet"
 msgstr "尚無通知"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "找不到人員"
@@ -1232,7 +1285,7 @@ msgstr "無；建立新帳戶"
 msgid "Normal"
 msgstr "標準"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "這不是遷移套件"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "通知"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "通知：{0}"
 
@@ -1294,11 +1347,11 @@ msgstr "開啟導覽選單"
 msgid "Open theme settings"
 msgstr "開啟佈景主題設定"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "或輸入驗證碼"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "或使用以下方式登入"
@@ -1340,7 +1393,7 @@ msgstr "Passkey 登入已取消"
 msgid "Passkey login failed"
 msgstr "Passkey 登入失敗"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "需要 Passkey 登入"
 
@@ -1348,7 +1401,7 @@ msgstr "需要 Passkey 登入"
 msgid "Passkey verification failed. Please try again."
 msgstr "通行金鑰驗證失敗。請再試一次。"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Passkey"
 
@@ -1356,7 +1409,7 @@ msgstr "Passkey"
 msgid "Passphrase"
 msgstr "密語"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "貼上您透過電子郵件收到的登入代碼"
 
@@ -1364,25 +1417,25 @@ msgstr "貼上您透過電子郵件收到的登入代碼"
 msgid "Pick a date"
 msgstr "選擇日期"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "請檢查您的驗證器應用程式並重試。"
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "請檢查您的代碼並重試。"
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "請檢查您的代碼並重試。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "請檢查您的電郵並重試。"
 
@@ -1397,7 +1450,7 @@ msgstr "請檢查您的網際網路連線後再試一次。"
 msgid "Please check your recovery code and try again."
 msgstr "請檢查您的復原代碼並再試一次。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "請輸入有效的電郵"
 
@@ -1413,9 +1466,9 @@ msgstr "請輸入您的復原代碼"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "請使用適當的憑證登入 <0/> 以存取此資源。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "請再試一次或聯絡客戶支援。"
 
@@ -1423,7 +1476,7 @@ msgstr "請再試一次或聯絡客戶支援。"
 msgid "Please try again."
 msgstr "請再試一次。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "請使用「使用 Passkey 登入」按鈕。"
 
@@ -1476,11 +1529,11 @@ msgstr "推播通知"
 msgid "Raised"
 msgstr "凸起"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "在此伺服器上重新連結您的帳號"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "在此伺服器上重新註冊您的通行密鑰"
 
@@ -1514,9 +1567,9 @@ msgstr "正在重新導向至儀表板…"
 msgid "Reduce interest"
 msgstr "降低興趣"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "註冊已停用"
 
@@ -1559,6 +1612,10 @@ msgstr "移除存取權?"
 msgid "Remove interest"
 msgstr "移除興趣"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "移除項目"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "重新發送電郵"
@@ -1581,7 +1638,7 @@ msgstr "將所有設定重設為預設值"
 msgid "Restore a backup file"
 msgstr "還原備份檔案"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "還原失敗"
@@ -1662,6 +1719,10 @@ msgstr "搜尋中..."
 msgid "Select {0}"
 msgstr "選擇{0}"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "選擇遊戲"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "選擇使用者、群組或其他規則以授予存取權。"
@@ -1706,6 +1767,11 @@ msgstr "選擇網站方向"
 msgid "Select theme preference"
 msgstr "選擇主題偏好"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "選擇..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "項已選取"
@@ -1722,6 +1788,11 @@ msgstr "重新傳送"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "傳送郵件"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "傳送訊息"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "該登入提供者不可用"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "您在上方輸入的電子郵件將成為此伺服器上新帳戶的名稱。備份的身分不得已在此處處於活動狀態——請還原到其他伺服器，或先刪除現有帳戶。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "檔案可能已損壞或被修改。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "您輸入的密語與備份不相符。"
 
@@ -1915,7 +1986,7 @@ msgstr "主題"
 msgid "Theme Settings"
 msgstr "主題設定"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "此備份由較新版本的 Mochi 建立。請先更新此伺服器。"
 
@@ -1993,6 +2064,10 @@ msgstr "星期二"
 msgid "Type a command or search..."
 msgstr "輸入指令或搜尋..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "輸入訊息…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "輸入以搜尋使用者"
@@ -2039,7 +2114,7 @@ msgstr "正在解壓縮您的資料"
 msgid "Unverified"
 msgstr "未驗證"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "上傳從 Mochi 資料匯出功能匯出的 .zip 檔案。"
 
@@ -2051,7 +2126,7 @@ msgstr "上傳進度"
 msgid "Use a different account"
 msgstr "使用其他帳戶"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "使用密碼金鑰"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "驗證碼已傳送"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "驗證失敗"
 
@@ -2116,8 +2191,8 @@ msgstr "檢視"
 msgid "View all"
 msgstr "檢視全部"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "檢視所有通知"
 
@@ -2150,7 +2225,7 @@ msgstr "星期三"
 msgid "Wikis"
 msgstr "Wiki"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "密語錯誤"
 
@@ -2189,7 +2264,7 @@ msgstr "您的帳號已被暫停"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "您的帳戶已被停權。"
 
@@ -2205,7 +2280,7 @@ msgstr "您的帳戶已排定刪除。"
 msgid "Your account requires a passkey to sign in"
 msgstr "您的帳號需要通行金鑰才能登入"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "您的帳號已從 {source} 遷移至此。在您於該處刪除帳號之前，訊息和通知可能會同時到達兩個伺服器，部分內容仍由舊伺服器提供，追蹤者可能需要幾分鐘才能在此找到您。"
 

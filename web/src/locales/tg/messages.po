@@ -36,6 +36,10 @@ msgstr "Номи {entityLabel}"
 msgid "{entityLabel} name is required"
 msgstr "Номи {entityLabel} лозим аст"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} баробариро пешниҳод кард"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} интихоб шуд} other {{manyName} интихоб шуданд}}"
@@ -60,6 +64,11 @@ msgstr "{sentLabel} аз {totalLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Менюро кушоед (# огоҳиномаи хонданашуда)} other {Менюро кушоед (# огоҳиномаи хонданашуда)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} дарунӣ"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 соат"
@@ -71,6 +80,10 @@ msgstr "24 соат"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Мутлақ (сана ва вақт)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "Қабул кардан"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "Сатҳи дастрасӣ"
 msgid "Account added"
 msgstr "Ҳисоб илова карда шуд"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "Ҳисоб дар ин сервер аллакай мавҷуд аст"
 
@@ -98,7 +111,7 @@ msgstr "Ҳисоб хориҷ карда шуд"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "Ҳисоб боздошта шуд"
 
@@ -110,6 +123,7 @@ msgstr "Намуди ҳисоб"
 msgid "Account verified"
 msgstr "Ҳисоб тасдиқ карда шуд"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "Иловаи ҳисоб"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "Барои гирифтани огоҳиномаҳо ва истифодаи хидматҳо ҳисоб илова кунед."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "Иловаи нуктаи рӯйхат"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "Иловаи нукта..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "Ба ҳама иҷозат диҳед, ки {0}-ро ҷустуҷӯ ку
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Ҳисоб бо ин почтаи электронӣ аллакай вуҷуд дорад. Аввал ворид шавед, баъд {0}-ро аз танзимоти аутентификатсия пайваст кунед."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "Ҳисоб бо ин шахсият аллакай дар ин ҷо вуҷуд дорад."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "Аватар барои {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "Бозгашт"
 
@@ -262,17 +284,22 @@ msgstr "Бозгашт ба бақайдгирӣ"
 msgid "Backup file"
 msgstr "Файли захира"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "Файли захира зарар дидааст"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "Захира хеле нав аст"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Баннер"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "Гузариш ба пайванди беэътимод манъ шуд"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "Чат"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Барои дидани огоҳиномаҳои гузашта «Ҳама»-ро интихоб кунед."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "Почтаи электронии худро санҷед."
 
@@ -328,9 +355,13 @@ msgstr "Почтаи электронии худро санҷед."
 msgid "Checking…"
 msgstr "Санҷида мешавад…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "Почтаи маҳаллии дигаре интихоб кунед ё ба ҷои он ворид шавед."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "Аз панели канорӣ бозиеро интихоб кунед ё нав оғоз кунед."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "Панелро пӯшидан"
 msgid "Close search"
 msgstr "Пӯшидани ҷустуҷӯ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "Код фиристода шуд."
 
@@ -569,6 +600,10 @@ msgstr "Ҳолати торик"
 msgid "Data conflict"
 msgstr "Ихтилофи маълумот"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "Рад кардан"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "Пешфарз"
@@ -577,7 +612,7 @@ msgstr "Пешфарз"
 msgid "Default AI account"
 msgstr "Ҳисоби пешфарз AI"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Ҳисоби худро дар сервери кӯҳна нест кунед"
 
@@ -629,8 +664,8 @@ msgstr "Сиёҳнависро партофта мешавад?"
 msgid "Disconnected"
 msgstr "Ҷудо шуда"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Рад кардан"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "{label}-ро таҳрир кунед"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "Имейл"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "Почта аллакай истифода мешавад"
 
@@ -674,15 +709,15 @@ msgstr "рамзи почтаи электронӣ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "Рамзи email"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "Ба ман рамзро тавассути почтаи электронӣ фиристед"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "Барои идома рамзро ворид кунед"
 
@@ -690,7 +725,7 @@ msgstr "Барои идома рамзро ворид кунед"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Барои ворид шудан барои \"{userEmail}\" рамзи барқароркуниро ворид кунед"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "Рамзро аз барномаи аутентификатори худ ворид кунед"
 
@@ -711,7 +746,7 @@ msgstr "{initial} ва {last} худро ворид кунед"
 msgid "Enter your authenticator code"
 msgstr "Рамзи аутентификатори худро ворид кунед"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "Рамзи email ва рамзи аутентификатори худро ворид кунед"
 
@@ -746,7 +781,7 @@ msgstr "Илова кардани ҳисоб ба анҷом нарасид"
 msgid "Failed to add tag"
 msgstr "Илова кардани нишона ба анҷом нарасид"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "Идома ба анҷом нарасид"
 
@@ -771,7 +806,7 @@ msgstr "Видео бор карда нашуд"
 msgid "Failed to remove account"
 msgstr "Бартараф кардани ҳисоб ба анҷом нарасид"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "Дархости рамзи вуруд ноком шуд"
 
@@ -795,7 +830,7 @@ msgstr "Фидҳо"
 msgid "Filter..."
 msgstr "Филтр..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Интиқоли ҳисобро анҷом диҳед"
 
@@ -939,7 +974,7 @@ msgstr "Дохилӣ"
 msgid "Interests"
 msgstr "Шавқҳо"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "Рамзи аутентификатор нодуруст"
 
@@ -948,10 +983,14 @@ msgstr "Рамзи аутентификатор нодуруст"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "Рамзи нодуруст"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "Сана нодуруст"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "Тамғаи нодуруст: танҳо ҳарфҳо, рақамҳо, фосилаҳо, дефисҳо ва каҷхатҳо (ҳадди аксар 50 аломат)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "Рамзи тасдиқ нодуруст"
 
@@ -1032,7 +1071,7 @@ msgstr "Бор карда мешавад..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "Воридшавӣ"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "Ҷаласаи воридшавӣ ба охир расид, лутфан боз кӯшиш кунед"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "Дастрасиро аз даст додаед? Рамзи барқароркуниро истифода баред"
 
@@ -1084,8 +1123,8 @@ msgstr "Дастрасиро аз даст додаед? Рамзи барқар
 msgid "Manage your connected accounts for notifications and services."
 msgstr "Ҳисобҳои пайвастшудаи худро барои огоҳиномаҳо ва хидматҳо идора кунед."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Аломатгузорӣ ҳамчун хондашуда"
@@ -1105,6 +1144,10 @@ msgstr "Миёна"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Меню"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "Паём"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "Нав"
 msgid "New accounts are disabled on this server"
 msgstr "Ҳисобҳои нав дар ин сервер ғайрифаъол шудаанд"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "Бозии нав"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "Бақайдгирии корбарони нав ғайрифаъол аст."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "Минбаъд"
 
@@ -1162,7 +1210,7 @@ msgstr "Тасвири навбатӣ"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Ягон қоидаи дастрасӣ танзим нашудааст. Барои назорати касе ки ба ин манбаъ дастрасӣ дорад қоидаҳо илова кунед."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "Ягон файли захира интихоб нашудааст"
 
@@ -1170,12 +1218,16 @@ msgstr "Ягон файли захира интихоб нашудааст"
 msgid "No connected accounts"
 msgstr "Ягон ҳисоби пайвастшуда нест"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "То ҳол ягон бозӣ нест"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Ягон гурӯҳ дастрас нест"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "Ягон ҷаласаи MFA нест"
 
@@ -1183,6 +1235,7 @@ msgstr "Ягон ҷаласаи MFA нест"
 msgid "No notifications yet"
 msgstr "Ҳанӯз огоҳинома нест"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Ягон шахс ёфт нашуд"
@@ -1232,7 +1285,7 @@ msgstr "Ҳеҷ чиз нест; ҳисоби нав эҷод кунед"
 msgid "Normal"
 msgstr "Муқаррарӣ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "Ин бастаи муҳоҷират нест"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "Огоҳиномаҳо"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "Огоҳиномаҳо: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "Кушодани менюи навигатсия"
 msgid "Open theme settings"
 msgstr "Кушодани танзимоти мавзӯъ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "Ё рамзи аутентификатсияро ворид кунед"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "Ё бо воситаи зерин ворид шавед"
@@ -1340,7 +1393,7 @@ msgstr "Вуруд бо калиди дастрасӣ бекор карда шу
 msgid "Passkey login failed"
 msgstr "Вуруд бо калиди дастрасӣ ноком шуд"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "Вуруд бо калиди дастрасӣ талаб карда мешавад"
 
@@ -1348,7 +1401,7 @@ msgstr "Вуруд бо калиди дастрасӣ талаб карда ме
 msgid "Passkey verification failed. Please try again."
 msgstr "Тасдиқи калиди дастрасӣ ноком шуд. Лутфан, аз нав кӯшиш кунед."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Калидҳои дастрасӣ"
 
@@ -1356,7 +1409,7 @@ msgstr "Калидҳои дастрасӣ"
 msgid "Passphrase"
 msgstr "Ибораи рамзӣ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "Рамзи воридшавиро, ки тавассути почта гирифтаед, гузоред"
 
@@ -1364,25 +1417,25 @@ msgstr "Рамзи воридшавиро, ки тавассути почта г
 msgid "Pick a date"
 msgstr "Санаро интихоб кунед"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "Лутфан барномаи аутентификатори худро тафтиш кунед ва бори дигар кӯшиш кунед."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "Лутфан рамзи худро тафтиш кунед ва бори дигар кӯшиш кунед."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "Лутфан рамзҳои худро тафтиш кунед ва бори дигар кӯшиш кунед."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "Лутфан почтаи электронии худро тафтиш кунед ва бори дигар кӯшиш кунед."
 
@@ -1397,7 +1450,7 @@ msgstr "Лутфан пайвасти интернети худро санҷед
 msgid "Please check your recovery code and try again."
 msgstr "Лутфан рамзи барқарорсозии худро тафтиш кунед ва бори дигар кӯшиш кунед."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "Лутфан почтаи электронии дурустро ворид кунед"
 
@@ -1413,9 +1466,9 @@ msgstr "Лутфан рамзи барқарорсозии худро ворид
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Лутфан барои дастрасӣ ба ин манбаъ <0/> бо маълумоти мувофиқ ворид шавед."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "Лутфан бори дигар кӯшиш кунед ё бо дастгирӣ тамос гиред."
 
@@ -1423,7 +1476,7 @@ msgstr "Лутфан бори дигар кӯшиш кунед ё бо даст�
 msgid "Please try again."
 msgstr "Лутфан, бори дигар кӯшиш кунед."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Лутфан тугмаи \"Вуруд бо калиди дастрасӣ\"-ро истифода баред."
 
@@ -1476,11 +1529,11 @@ msgstr "Огоҳиномаи push"
 msgid "Raised"
 msgstr "Бардошта"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Ҳисобҳоятонро дар ин сервер аз нав пайванд кунед"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Калидҳои дастрасии худро дар ин сервер аз нав сабт кунед"
 
@@ -1514,9 +1567,9 @@ msgstr "Шуморо ба идоракунӣ тағйир мекунем…"
 msgid "Reduce interest"
 msgstr "Кам кардани шавқу ҳавас"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "Бақайдгирӣ ғайрифаъол шудааст"
 
@@ -1559,6 +1612,10 @@ msgstr "Дастрасиро хориҷ кардан?"
 msgid "Remove interest"
 msgstr "Хориҷ кардани шавқу ҳавас"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "Хориҷ кардани ашё"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Мактубро дубора фиристед"
@@ -1581,7 +1638,7 @@ msgstr "Барқарорсозии ҳамаи танзимот ба қиматҳ
 msgid "Restore a backup file"
 msgstr "Файли захиравиро барқарор кунед"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Барқарорсозӣ ноком шуд"
@@ -1662,6 +1719,10 @@ msgstr "Ҷустуҷӯ карда мешавад..."
 msgid "Select {0}"
 msgstr "Интихоби {0}"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "Як бозиро интихоб кунед"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Як корбар, гурӯҳ, ё қоидаи дигарро барои додани дастрасӣ интихоб кунед."
@@ -1706,6 +1767,11 @@ msgstr "Самти сайтро интихоб кунед"
 msgid "Select theme preference"
 msgstr "Афзалияти мавзӯъро интихоб кунед"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "Интихоб кунед..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "интихобшуда"
@@ -1722,6 +1788,11 @@ msgstr "Бори дигар фиристодан"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "Имейл фиристодан"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "Паём фиристодан"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "Он провайдери воридшавӣ дастрас нест"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Почтаи электроние, ки шумо дар боло ворид мекунед, ба номи ҳисоби нав дар ин сервер табдил меёбад. Шахсияти нусхаи эҳтиётӣ набояд аллакай дар ин ҷо фаъол бошад — ба сервери дигар барқарор кунед ё аввал ҳисоби мавҷударо нест кунед."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "Файл шояд зарар дида бошад ё тағйир карда шуда бошад."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "Ибораи рамзие, ки ворид кардед, бо захира мувофиқат намекунад."
 
@@ -1915,7 +1986,7 @@ msgstr "Мавзӯъ"
 msgid "Theme Settings"
 msgstr "Танзимоти мавзӯъ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Ин захира аз нусхаи навтари Mochi сохта шуд. Аввал ин серверро навсозӣ кунед."
 
@@ -1993,6 +2064,10 @@ msgstr "Сешанбе"
 msgid "Type a command or search..."
 msgstr "Фармонеро чоп кунед ё ҷустуҷӯ кунед..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Паёмеро чоп кунед…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "Барои ҷустуҷӯи корбарон чоп кунед"
@@ -2039,7 +2114,7 @@ msgstr "Кушодани маълумоти шумо"
 msgid "Unverified"
 msgstr "Тасдиқ нашудааст"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Файли .zip-ро, ки аз содироти маълумоти Mochi содир карда шуд, бор кунед."
 
@@ -2051,7 +2126,7 @@ msgstr "Рафти боркунӣ"
 msgid "Use a different account"
 msgstr "Ҳисоби дигарро истифода баред"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "Калиди дастрасиро истифода баред"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "Рамзи тасдиқ фиристода шуд"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "Тасдиқ ноком шуд"
 
@@ -2116,8 +2191,8 @@ msgstr "Намоиш"
 msgid "View all"
 msgstr "Ҳамаро дидан"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "Ҳама огоҳиҳоро дидан"
 
@@ -2150,7 +2225,7 @@ msgstr "Чоршанбе"
 msgid "Wikis"
 msgstr "Викиҳо"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "Ибораи рамзии нодуруст"
 
@@ -2189,7 +2264,7 @@ msgstr "Ҳисоби шумо боздошта шудааст"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "Ҳисоби шумо боздошта шудааст."
 
@@ -2205,7 +2280,7 @@ msgstr "Ҳисоби шумо барои нест кардан ба нақша �
 msgid "Your account requires a passkey to sign in"
 msgstr "Ҳисоби шумо барои воридшавӣ passkey талаб мекунад"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ҳисоби шумо аз {source} ба ин ҷо интиқол дода шуд. То он гоҳ, ки онро дар он ҷо нест накунед, паёмҳо ва огоҳиҳо метавонанд ба ҳарду сервер расанд, қисмати муайяни мазмуни шумо аз сервери кӯҳна хизмат медиҳад ва пайравон метавонанд чанд дақиқа вақт барои ёфтани шумо дар ин ҷо сарф кунанд."
 

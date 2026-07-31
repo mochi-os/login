@@ -36,6 +36,10 @@ msgstr "Име на {entityLabel}"
 msgid "{entityLabel} name is required"
 msgstr "Името на {entityLabel} е задължително"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} предложи равенство"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} е избран} other {{manyName} са избрани}}"
@@ -60,6 +64,11 @@ msgstr "{sentLabel} от {totalLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Отваряне на менюто (# непрочетено известие)} other {Отваряне на менюто (# непрочетени известия)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} вложени"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 часа"
@@ -71,6 +80,10 @@ msgstr "24 часа"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Абсолютно (дата и час)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "Приеми"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "Ниво на достъп"
 msgid "Account added"
 msgstr "Акаунтът е добавен"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "Акаунтът вече е на този сървър"
 
@@ -98,7 +111,7 @@ msgstr "Акаунтът е премахнат"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "Акаунтът е спрян"
 
@@ -110,6 +123,7 @@ msgstr "Тип акаунт"
 msgid "Account verified"
 msgstr "Акаунтът е потвърден"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "Добави акаунт"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "Добавете акаунт, за да получавате известия и да използвате услуги."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "Добави елемент от списъка"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "Добави елемент..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "Разрешаване на всеки да търси {0}"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Вече съществува акаунт с този имейл. Първо влезте, след това свържете {0} от настройките за удостоверяване."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "Профил с тази идентичност вече съществува тук."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "Аватар за {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "Назад"
 
@@ -262,17 +284,22 @@ msgstr "Обратно към регистрацията"
 msgid "Backup file"
 msgstr "Резервен файл"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "Резервният файл е повреден"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "Резервното копие е твърде ново"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Банер"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "Блокирана навигация към ненадеждна връзка"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "Чат"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Изберете „Всички“, за да видите миналите си известия."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "Проверете имейла си."
 
@@ -328,9 +355,13 @@ msgstr "Проверете имейла си."
 msgid "Checking…"
 msgstr "Проверка…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "Изберете друг локален имейл или влезте вместо това."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "Изберете игра от страничната лента или започнете нова."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "Затвори панела"
 msgid "Close search"
 msgstr "Затвори търсенето"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "Кодът е изпратен."
 
@@ -569,6 +600,10 @@ msgstr "Тъмен режим"
 msgid "Data conflict"
 msgstr "Конфликт в данните"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "Откажи"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "По подразбиране"
@@ -577,7 +612,7 @@ msgstr "По подразбиране"
 msgid "Default AI account"
 msgstr "AI акаунт по подразбиране"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Изтрийте профила си на стария сървър"
 
@@ -629,8 +664,8 @@ msgstr "Да се отхвърли ли черновата?"
 msgid "Disconnected"
 msgstr "Несвързано"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Отхвърли"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "Редактиране на {label}"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "Имейл"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "Имейлът вече се използва"
 
@@ -674,15 +709,15 @@ msgstr "код за имейл"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "Имейл код"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "Изпратете ми код по имейл"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "Въведете код, за да продължите"
 
@@ -690,7 +725,7 @@ msgstr "Въведете код, за да продължите"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Въведете код за възстановяване за „{userEmail}“, за да влезете"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "Въведете кода от вашето приложение за удостоверяване"
 
@@ -711,7 +746,7 @@ msgstr "Въведете вашето {initial} и {last}"
 msgid "Enter your authenticator code"
 msgstr "Въведете кода от приложението за удостоверяване"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "Въведете вашия имейл код и код от удостоверителя"
 
@@ -746,7 +781,7 @@ msgstr "Неуспешно добавяне на акаунт"
 msgid "Failed to add tag"
 msgstr "Неуспешно добавяне на таг"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "Неуспешно продължаване"
 
@@ -771,7 +806,7 @@ msgstr "Видеото не можа да се зареди"
 msgid "Failed to remove account"
 msgstr "Неуспешно премахване на акаунт"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "Заявката за код за вход е неуспешна"
 
@@ -795,7 +830,7 @@ msgstr "Емисии"
 msgid "Filter..."
 msgstr "Филтриране..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Завършете преместването на профила"
 
@@ -939,7 +974,7 @@ msgstr "Вмъкнато"
 msgid "Interests"
 msgstr "Интереси"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "Невалиден код от удостоверител"
 
@@ -948,10 +983,14 @@ msgstr "Невалиден код от удостоверител"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "Невалиден код"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "Невалидна дата"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "Невалиден етикет: само букви, цифри, интервали, тирета и наклонени черти (макс. 50 знака)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "Невалиден код за потвърждение"
 
@@ -1032,7 +1071,7 @@ msgstr "Зареждане..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "Вход"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "Сесията за вход е изтекла, моля, опитайте отново"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "Загубен достъп? Използвайте код за възстановяване"
 
@@ -1084,8 +1123,8 @@ msgstr "Загубен достъп? Използвайте код за възс
 msgid "Manage your connected accounts for notifications and services."
 msgstr "Управлявайте свързаните си акаунти за известия и услуги."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Маркирай всички като прочетени"
@@ -1105,6 +1144,10 @@ msgstr "Среден"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Меню"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "Съобщение"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "Ново"
 msgid "New accounts are disabled on this server"
 msgstr "Новите акаунти са изключени на този сървър"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "Нова игра"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "Регистрацията на нови потребители е изключена."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "Напред"
 
@@ -1162,7 +1210,7 @@ msgstr "Следващо изображение"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Няма конфигурирани правила за достъп. Добавете правила, за да контролирате кой има достъп до този ресурс."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "Не е избран резервен файл"
 
@@ -1170,12 +1218,16 @@ msgstr "Не е избран резервен файл"
 msgid "No connected accounts"
 msgstr "Няма свързани акаунти"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "Все още няма игри"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Няма налични групи"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "Няма MFA сесия"
 
@@ -1183,6 +1235,7 @@ msgstr "Няма MFA сесия"
 msgid "No notifications yet"
 msgstr "Все още няма известия"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Не са намерени хора"
@@ -1232,7 +1285,7 @@ msgstr "Нищо; създайте нов акаунт"
 msgid "Normal"
 msgstr "Нормален"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "Не е пакет за миграция"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "Известия"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "Известия: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "Отвори менюто за навигация"
 msgid "Open theme settings"
 msgstr "Отвори настройки на темата"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "Или въведете код за удостоверяване"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "Или влезте с"
@@ -1340,7 +1393,7 @@ msgstr "Влизането с passkey е отказано"
 msgid "Passkey login failed"
 msgstr "Влизането с passkey се провали"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "Изисква се вход с passkey"
 
@@ -1348,7 +1401,7 @@ msgstr "Изисква се вход с passkey"
 msgid "Passkey verification failed. Please try again."
 msgstr "Проверката на ключа за достъп беше неуспешна. Моля, опитайте отново."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Ключове за достъп"
 
@@ -1356,7 +1409,7 @@ msgstr "Ключове за достъп"
 msgid "Passphrase"
 msgstr "Парола-фраза"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "Поставете кода за вход, който получихте по имейл"
 
@@ -1364,25 +1417,25 @@ msgstr "Поставете кода за вход, който получихте
 msgid "Pick a date"
 msgstr "Изберете дата"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "Моля, проверете authenticator приложението си и опитайте отново."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "Моля, проверете кода си и опитайте отново."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "Моля, проверете кодовете си и опитайте отново."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "Моля, проверете имейла си и опитайте отново."
 
@@ -1397,7 +1450,7 @@ msgstr "Проверете интернет връзката си и опита�
 msgid "Please check your recovery code and try again."
 msgstr "Моля, проверете кода за възстановяване и опитайте отново."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "Моля, въведете валиден имейл"
 
@@ -1413,9 +1466,9 @@ msgstr "Моля, въведете кода си за възстановяван
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Моля, влезте с подходящите данни за вход, <0/> за да получите достъп до този ресурс."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "Моля, опитайте отново или се свържете с поддръжката."
 
@@ -1423,7 +1476,7 @@ msgstr "Моля, опитайте отново или се свържете с 
 msgid "Please try again."
 msgstr "Опитайте отново."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Моля, използвайте бутона „Влез с passkey“."
 
@@ -1476,11 +1529,11 @@ msgstr "Push известие"
 msgid "Raised"
 msgstr "Повдигнат"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Свържете отново профилите си на този сървър"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Регистрирайте отново ключовете си за достъп на този сървър"
 
@@ -1514,9 +1567,9 @@ msgstr "Пренасочване към таблото…"
 msgid "Reduce interest"
 msgstr "Намали лихвата"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "Регистрацията е изключена"
 
@@ -1559,6 +1612,10 @@ msgstr "Премахни достъпа?"
 msgid "Remove interest"
 msgstr "Премахни интерес"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "Премахни елемент"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Изпрати имейла отново"
@@ -1581,7 +1638,7 @@ msgstr "Нулирай всички настройки до стойностит
 msgid "Restore a backup file"
 msgstr "Възстановяване на резервен файл"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Възстановяването е неуспешно"
@@ -1662,6 +1719,10 @@ msgstr "Търси се..."
 msgid "Select {0}"
 msgstr "Изберете {0}"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "Изберете игра"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Изберете потребител, група или друго правило, за да предоставите достъп."
@@ -1706,6 +1767,11 @@ msgstr "Избор на посока на сайта"
 msgid "Select theme preference"
 msgstr "Избор на предпочитание за тема"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "Избор..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "избрани"
@@ -1722,6 +1788,11 @@ msgstr "Изпрати отново"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "Изпрати имейл"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "Изпрати съобщение"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "Този доставчик за вход не е наличен"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Имейлът, който въвеждате по-горе, става името на новия акаунт на този сървър. Самоличността от резервното копие не трябва да е вече активна тук — възстановете на друг сървър или първо изтрийте съществуващия акаунт."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "Файлът може да е повреден или променен."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "Въведената парола-фраза не съответства на резервното копие."
 
@@ -1915,7 +1986,7 @@ msgstr "Тема"
 msgid "Theme Settings"
 msgstr "Настройки на темата"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Това резервно копие е създадено от по-нова версия на Mochi. Първо актуализирайте този сървър."
 
@@ -1993,6 +2064,10 @@ msgstr "Вторник"
 msgid "Type a command or search..."
 msgstr "Въведете команда или потърсете..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Въведете съобщение…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "Пишете, за да търсите потребители"
@@ -2039,7 +2114,7 @@ msgstr "Разопаковане на вашите данни"
 msgid "Unverified"
 msgstr "Непотвърдено"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Качете .zip файл, експортиран от функцията за експортиране на данни на Mochi."
 
@@ -2051,7 +2126,7 @@ msgstr "Напредък на качването"
 msgid "Use a different account"
 msgstr "Използвай друг профил"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "Използвайте ключ за достъп"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "Кодът за потвърждение е изпратен"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "Потвърждението не успя"
 
@@ -2116,8 +2191,8 @@ msgstr "Преглед"
 msgid "View all"
 msgstr "Виж всички"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "Виж всички известия"
 
@@ -2150,7 +2225,7 @@ msgstr "Сряда"
 msgid "Wikis"
 msgstr "Wiki"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "Грешна парола-фраза"
 
@@ -2189,7 +2264,7 @@ msgstr "Вашият профил беше спрян"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "Вашият профил беше спрян."
 
@@ -2205,7 +2280,7 @@ msgstr "Акаунтът ви е планиран за изтриване."
 msgid "Your account requires a passkey to sign in"
 msgstr "Вашият профил изисква passkey, за да влезете"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Профилът ви беше преместен тук от {source}. Докато не го изтриете там, съобщенията и известията може да достигат до двата сървъра, част от съдържанието ви продължава да се обслужва от стария сървър и последователите може да отнеме няколко минути, за да ви намерят тук."
 

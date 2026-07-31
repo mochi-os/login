@@ -36,6 +36,10 @@ msgstr "Ainm {entityLabel}"
 msgid "{entityLabel} name is required"
 msgstr "Tá ainm {entityLabel} riachtanach"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "Mhol {opponentName} comhscór"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} roghnaithe} two {{manyName} roghnaithe} few {{manyName} roghnaithe} many {{manyName} roghnaithe} other {{manyName} roghnaithe}}"
@@ -60,6 +64,11 @@ msgstr "{sentLabel} as {totalLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Oscail an roghchlár (# fhógra gan léamh)} two {Oscail an roghchlár (# fhógra gan léamh)} few {Oscail an roghchlár (# fhógra gan léamh)} many {Oscail an roghchlár (# bhfógra gan léamh)} other {Oscail an roghchlár (# fógra gan léamh)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} neadaithe"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 uair"
@@ -71,6 +80,10 @@ msgstr "24 uair"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "Absalóideach (dáta agus am)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "Glac leis"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "Leibhéal rochtana"
 msgid "Account added"
 msgstr "Cuntas curtha leis"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "Tá an cuntas ar an bhfreastalaí seo cheana"
 
@@ -98,7 +111,7 @@ msgstr "Cuntas bainte"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "Cuntas ar fionraí"
 
@@ -110,6 +123,7 @@ msgstr "Cineál cuntais"
 msgid "Account verified"
 msgstr "Cuntas fíoraithe"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "Cuir cuntas leis"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "Cuir cuntas leis chun fógraí a fháil agus seirbhísí a úsáid."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "Cuir mír seicliosta leis"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "Cuir mír leis..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "Ceadaigh d'aon duine {0} a chuardach"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Tá cuntas ann cheana leis an seoladh ríomhphoist sin. Sínigh isteach ar dtús, ansin nasc {0} ó na socruithe fíordheimhnithe agat."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "Tá cuntas leis an gcéannacht seo ann cheana anseo."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "Abhatár do {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "Ar ais"
 
@@ -262,17 +284,22 @@ msgstr "Ar ais chuig clárú"
 msgid "Backup file"
 msgstr "Comhad cúltaca"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "Tá an comhad cúltaca truaillithe"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "Tá an cúltaca ró-nua"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Meirge"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "Cuireadh bac le nascleanúint go nasc neamhiontaofa"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "Comhrá"
 msgid "Check \"All\" to see your past notifications."
 msgstr "Tic \"Gach rud\" chun d'fhógraí roimhe seo a fheiceáil."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "Seiceáil do ríomhphost."
 
@@ -328,9 +355,13 @@ msgstr "Seiceáil do ríomhphost."
 msgid "Checking…"
 msgstr "Ag seiceáil…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "Roghnaigh ríomhphost áitiúil eile nó logáil isteach ina ionad."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "Roghnaigh cluiche ón mbarra taoibh nó tosaigh ceann nua."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "Dún an painéal"
 msgid "Close search"
 msgstr "Dún cuardach"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "Cód seolta."
 
@@ -569,6 +600,10 @@ msgstr "Mód dorcha"
 msgid "Data conflict"
 msgstr "Coinbhleacht sonraí"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "Diúltaigh"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "Réamhshocrú"
@@ -577,7 +612,7 @@ msgstr "Réamhshocrú"
 msgid "Default AI account"
 msgstr "Cuntas AI réamhshocraithe"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Scrios do chuntas ar an sean-fhreastalaí"
 
@@ -629,8 +664,8 @@ msgstr "An gcuirfear an dréacht i leataobh?"
 msgid "Disconnected"
 msgstr "Dícheangailte"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Dífhostaigh"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "Cuir {label} in eagar"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "Ríomhphost"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "Ríomhphost in úsáid cheana féin"
 
@@ -674,15 +709,15 @@ msgstr "cód ríomhphoist"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "Cód ríomhphoist"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "Seol cód chugam ar ríomhphost"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "Cuir cód isteach chun leanúint ar aghaidh"
 
@@ -690,7 +725,7 @@ msgstr "Cuir cód isteach chun leanúint ar aghaidh"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Iontráil cód aisghabhála do \"{userEmail}\" chun síniú isteach"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "Iontráil an cód ó d'aip fíordheimhnitheora"
 
@@ -711,7 +746,7 @@ msgstr "Iontráil do {initial} agus {last}"
 msgid "Enter your authenticator code"
 msgstr "Cuir isteach cód d'aip fhíordheimhnithe"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "Iontráil do chód ríomhphoist agus cód fíordheimhnitheora"
 
@@ -746,7 +781,7 @@ msgstr "Theip ar chuntas a chur leis"
 msgid "Failed to add tag"
 msgstr "Theip ar chlib a chur leis"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "Theip ar leanúint ar aghaidh"
 
@@ -771,7 +806,7 @@ msgstr "Theip ar an bhfíseán a lódáil"
 msgid "Failed to remove account"
 msgstr "Theip ar bhaint chuntais"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "Theip ar iarratas ar chód logála isteach"
 
@@ -795,7 +830,7 @@ msgstr "Fothaí"
 msgid "Filter..."
 msgstr "Scag..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Críochnaigh aistriú do chuntas"
 
@@ -939,7 +974,7 @@ msgstr "Insocraithe"
 msgid "Interests"
 msgstr "Suimeanna"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "Cód fíordheimhnitheora neamhbhailí"
 
@@ -948,10 +983,14 @@ msgstr "Cód fíordheimhnitheora neamhbhailí"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "Cód neamhbhailí"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "Dáta neamhbhailí"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "Clib neamhbhailí: litreacha, uimhreacha, spásanna, fleiscíní agus slaiseanna amháin (50 carachtar ar a mhéad)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "Cód fíoraithe neamhbhailí"
 
@@ -1032,7 +1071,7 @@ msgstr "Á luchtú..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "Logáil isteach"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "Tá an seisiún logála isteach imithe in éag, bain triail eile as"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "Rochtain caillte? Úsáid cód aisghabhála"
 
@@ -1084,8 +1123,8 @@ msgstr "Rochtain caillte? Úsáid cód aisghabhála"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "Bainistigh do chuntais nasctha le haghaidh fógraí agus seirbhísí."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Marcáil gach rud mar léite"
@@ -1105,6 +1144,10 @@ msgstr "Meánach"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "Roghchlár"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "Teachtaireacht"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "Nua"
 msgid "New accounts are disabled on this server"
 msgstr "Tá cuntais nua díchumasaithe ar an bhfreastalaí seo"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "Cluiche nua"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "Tá clárú úsáideoirí nua díchumasaithe."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "Ar aghaidh"
 
@@ -1162,7 +1210,7 @@ msgstr "An chéad íomhá eile"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Níl aon rialacha rochtana cumraithe. Cuir rialacha leis chun rialú a dhéanamh ar cé atá in ann an acmhainn seo a rochtain."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "Níl aon chomhad cúltaca roghnaithe"
 
@@ -1170,12 +1218,16 @@ msgstr "Níl aon chomhad cúltaca roghnaithe"
 msgid "No connected accounts"
 msgstr "Níl aon chuntas nasctha"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "Níl aon chluiche fós"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "Níl aon ghrúpa ar fáil"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "Gan seisiún MFA"
 
@@ -1183,6 +1235,7 @@ msgstr "Gan seisiún MFA"
 msgid "No notifications yet"
 msgstr "Níl aon fhógra ann fós"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Níor aimsíodh aon duine"
@@ -1232,7 +1285,7 @@ msgstr "Dada; cruthaigh cuntas nua"
 msgid "Normal"
 msgstr "Gnách"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "Ní beart imirce é"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "Fógraí"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "Fógraí: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "Oscail roghchlár nascleanúna"
 msgid "Open theme settings"
 msgstr "Oscail socruithe téama"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "Nó cuir isteach cód fíordheimhnithe"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "Nó logáil isteach le"
@@ -1340,7 +1393,7 @@ msgstr "Cealaíodh logáil isteach pasluiche"
 msgid "Passkey login failed"
 msgstr "Theip ar logáil isteach pasluiche"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "Tá logáil isteach pasluiche riachtanach"
 
@@ -1348,7 +1401,7 @@ msgstr "Tá logáil isteach pasluiche riachtanach"
 msgid "Passkey verification failed. Please try again."
 msgstr "Theip ar fhíorú na heochrach rochtana. Bain triail eile as."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Pasluichí"
 
@@ -1356,7 +1409,7 @@ msgstr "Pasluichí"
 msgid "Passphrase"
 msgstr "Frása faire"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "Greamaigh an cód logála isteach a fuair tú trí ríomhphost"
 
@@ -1364,25 +1417,25 @@ msgstr "Greamaigh an cód logála isteach a fuair tú trí ríomhphost"
 msgid "Pick a date"
 msgstr "Roghnaigh dáta"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "Seiceáil d'aip fhíordheimhneora agus bain triail eile as."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "Seiceáil do chód agus bain triail eile as."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "Seiceáil do chódanna agus bain triail eile as."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "Seiceáil do ríomhphost agus bain triail eile as."
 
@@ -1397,7 +1450,7 @@ msgstr "Seiceáil do nasc idirlín agus bain triail eile as."
 msgid "Please check your recovery code and try again."
 msgstr "Seiceáil do chód aisghabhála agus bain triail eile as."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "Cuir ríomhphost bailí isteach le do thoil"
 
@@ -1413,9 +1466,9 @@ msgstr "Cuir do chód aisghabhála isteach le do thoil"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Logáil isteach le dintiúir chuí <0/> chun rochtain a fháil ar an acmhainn seo."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "Bain triail eile as nó déan teagmháil le tacaíocht le do thoil."
 
@@ -1423,7 +1476,7 @@ msgstr "Bain triail eile as nó déan teagmháil le tacaíocht le do thoil."
 msgid "Please try again."
 msgstr "Bain triail eile as."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "Úsáid an cnaipe \"Logáil isteach le pasluiche\" le do thoil."
 
@@ -1476,11 +1529,11 @@ msgstr "Fógra brú"
 msgid "Raised"
 msgstr "Ardaithe"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Athnasc do chuntais ar an bhfreastalaí seo"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Athchláraigh do heochracha rochtana ar an bhfreastalaí seo"
 
@@ -1514,9 +1567,9 @@ msgstr "Á atreorú chuig an bpainéal…"
 msgid "Reduce interest"
 msgstr "Laghdaigh spéis"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "Tá an clárú díchumasaithe"
 
@@ -1559,6 +1612,10 @@ msgstr "Bain rochtain?"
 msgid "Remove interest"
 msgstr "Bain spéis"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "Bain mír"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Seol an ríomhphost arís"
@@ -1581,7 +1638,7 @@ msgstr "Athshocraigh gach socrú chuig na luachanna réamhshocraithe"
 msgid "Restore a backup file"
 msgstr "Athchóirigh comhad cúltaca"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Theip ar an athchóiriú"
@@ -1662,6 +1719,10 @@ msgstr "Ag cuardach..."
 msgid "Select {0}"
 msgstr "Roghnaigh {0}"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "Roghnaigh cluiche"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "Roghnaigh úsáideoir, grúpa, nó riail eile chun rochtain a dheonú."
@@ -1706,6 +1767,11 @@ msgstr "Roghnaigh treo an tsuímh"
 msgid "Select theme preference"
 msgstr "Roghnaigh sainrogha téama"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "Roghnaigh..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "roghnaithe"
@@ -1722,6 +1788,11 @@ msgstr "Seol arís"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "Seol ríomhphost"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "Seol teachtaireacht"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "Níl an soláthraí sín-isteach sin ar fáil"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Déanann an ríomhphost a chuireann tú isteach thuas ainm an chuntais nua ar an bhfreastalaí seo. Níor cheart go mbeadh aitheantas an chúltaca gníomhach anseo cheana — athchóirigh ar fhreastalaí eile, nó scrios an cuntas atá ann cheana ar dtús."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "D'fhéadfadh an comhad a bheith damáistithe nó athraithe."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "Ní mheaitseálann an frása faire a d'iontráil tú leis an gcúltaca."
 
@@ -1915,7 +1986,7 @@ msgstr "Téama"
 msgid "Theme Settings"
 msgstr "Socruithe Téama"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Cruthaíodh an cúltaca seo ag leagan níos nuaí de Mochi. Nuashonraigh an freastalaí seo ar dtús."
 
@@ -1993,6 +2064,10 @@ msgstr "Máirt"
 msgid "Type a command or search..."
 msgstr "Clóscríobh ordú nó cuardach..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Clóscríobh teachtaireacht…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "Clóscríobh chun cuardach a dhéanamh ar úsáideoirí"
@@ -2039,7 +2114,7 @@ msgstr "Ag díphacáil do chuid sonraí"
 msgid "Unverified"
 msgstr "Neamhfhíoraithe"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Uaslódáil comhad .zip a honnmhairíodh ó easpórtáil sonraí Mochi."
 
@@ -2051,7 +2126,7 @@ msgstr "Dul chun cinn an uaslódála"
 msgid "Use a different account"
 msgstr "Úsáid cuntas difriúil"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "Úsáid eochair rochtana"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "Cód fíoraithe seolta"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "Theip ar an bhfíorú"
 
@@ -2116,8 +2191,8 @@ msgstr "Féach"
 msgid "View all"
 msgstr "Féach ar gach ceann"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "Féach ar gach fógra"
 
@@ -2150,7 +2225,7 @@ msgstr "Céadaoin"
 msgid "Wikis"
 msgstr "Vicíonna"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "Frása faire mícheart"
 
@@ -2189,7 +2264,7 @@ msgstr "Cuireadh do chuntas ar fionraí"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "Cuireadh do chuntas ar fionraí."
 
@@ -2205,7 +2280,7 @@ msgstr "Tá do chuntas sceidealta lena scriosadh."
 msgid "Your account requires a passkey to sign in"
 msgstr "Tá eochair pas de dhíth ar do chuntas chun síniú isteach"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Aistríodh do chuntas anseo ó {source}. Go dtí go scriosann tú é ansin, d'fhéadfadh teachtaireachtaí agus fógraí an dá fhreastalaí a bhaint amach, leanann roinnt de d'ábhar á sheirbheáil ón sean-fhreastalaí, agus d'fhéadfadh sé cúpla nóiméad a thógáil ar do lucht leanúna tú a aimsiú anseo."
 

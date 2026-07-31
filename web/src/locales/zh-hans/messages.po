@@ -36,6 +36,10 @@ msgstr "{entityLabel}名称"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel}名称为必填项"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} 提议和棋"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {已选择 {entityName}} other {已选择 {manyName}}}"
@@ -60,6 +64,11 @@ msgstr "{sentLabel} / {totalLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {打开菜单（# 条未读通知）} other {打开菜单（# 条未读通知）}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} 个嵌套"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 小时"
@@ -71,6 +80,10 @@ msgstr "24 小时"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "绝对(日期和时间)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "接受"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "访问级别"
 msgid "Account added"
 msgstr "账户已添加"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "此服务器上已存在该账户"
 
@@ -98,7 +111,7 @@ msgstr "账户已移除"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "账户已暂停"
 
@@ -110,6 +123,7 @@ msgstr "账户类型"
 msgid "Account verified"
 msgstr "账户已验证"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "添加账户"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "添加账户以接收通知并使用服务。"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "添加清单项"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "添加条目..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "允许任何人搜索{0}"
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "该邮箱已存在账号。请先登录，然后从认证设置中关联 {0}。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "具有此身份的账户已在此处存在。"
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "{name} 的头像"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "返回"
 
@@ -262,17 +284,22 @@ msgstr "返回注册"
 msgid "Backup file"
 msgstr "备份文件"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "备份文件已损坏"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "备份版本过新"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "横幅"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "已阻止跳转到不可信链接"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "聊天"
 msgid "Check \"All\" to see your past notifications."
 msgstr "选择\"全部\"以查看过往通知。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "请查看你的邮箱。"
 
@@ -328,9 +355,13 @@ msgstr "请查看你的邮箱。"
 msgid "Checking…"
 msgstr "检查中…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "选择其他本地邮箱,或改为登录。"
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "从侧边栏选择一个游戏或开始新游戏。"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "关闭面板"
 msgid "Close search"
 msgstr "关闭搜索"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "代码已发送。"
 
@@ -569,6 +600,10 @@ msgstr "深色模式"
 msgid "Data conflict"
 msgstr "数据冲突"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "拒绝"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "默认"
@@ -577,7 +612,7 @@ msgstr "默认"
 msgid "Default AI account"
 msgstr "默认 AI 账户"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "删除旧服务器上的账户"
 
@@ -629,8 +664,8 @@ msgstr "放弃草稿?"
 msgid "Disconnected"
 msgstr "已断开"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "关闭"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "编辑 {label}"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "邮箱"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "邮箱已被使用"
 
@@ -674,15 +709,15 @@ msgstr "邮箱代码"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "邮箱验证码"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "通过电子邮件向我发送验证码"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "输入验证码以继续"
 
@@ -690,7 +725,7 @@ msgstr "输入验证码以继续"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "输入 \"{userEmail}\" 的恢复代码以登录"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "请输入身份验证器应用中的代码"
 
@@ -711,7 +746,7 @@ msgstr "输入您的 {initial} 和 {last}"
 msgid "Enter your authenticator code"
 msgstr "请输入您的身份验证器代码"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "请输入您的邮箱验证码和身份验证器代码"
 
@@ -746,7 +781,7 @@ msgstr "添加账户失败"
 msgid "Failed to add tag"
 msgstr "添加标签失败"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "继续操作失败"
 
@@ -771,7 +806,7 @@ msgstr "无法加载视频"
 msgid "Failed to remove account"
 msgstr "移除账户失败"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "请求登录码失败"
 
@@ -795,7 +830,7 @@ msgstr "信息流"
 msgid "Filter..."
 msgstr "筛选..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "完成账户迁移"
 
@@ -939,7 +974,7 @@ msgstr "嵌入"
 msgid "Interests"
 msgstr "兴趣"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "身份验证器代码无效"
 
@@ -948,10 +983,14 @@ msgstr "身份验证器代码无效"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "代码无效"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "日期无效"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "标签无效：仅限字母、数字、空格、连字符和斜杠（最多 50 个字符）"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "验证码无效"
 
@@ -1032,7 +1071,7 @@ msgstr "加载中..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "登录"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "登录会话已过期，请重试"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "无法登录?使用恢复码"
 
@@ -1084,8 +1123,8 @@ msgstr "无法登录?使用恢复码"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "管理用于通知和服务的已连接账户。"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "全部标为已读"
@@ -1105,6 +1144,10 @@ msgstr "中"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "菜单"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "消息"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "新建"
 msgid "New accounts are disabled on this server"
 msgstr "此服务器已禁用新账号"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "新游戏"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "新用户注册已关闭。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "下一步"
 
@@ -1162,7 +1210,7 @@ msgstr "下一张图片"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "尚未配置访问规则。添加规则以控制谁可以访问此资源。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "未选择备份文件"
 
@@ -1170,12 +1218,16 @@ msgstr "未选择备份文件"
 msgid "No connected accounts"
 msgstr "无已连接的账户"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "暂无游戏"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "无可用群组"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "没有 MFA 会话"
 
@@ -1183,6 +1235,7 @@ msgstr "没有 MFA 会话"
 msgid "No notifications yet"
 msgstr "暂无通知"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "未找到任何人"
@@ -1232,7 +1285,7 @@ msgstr "无；创建新帐户"
 msgid "Normal"
 msgstr "标准"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "不是迁移包"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "通知"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "通知：{0}"
 
@@ -1294,11 +1347,11 @@ msgstr "打开导航菜单"
 msgid "Open theme settings"
 msgstr "打开主题设置"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "或输入身份验证码"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "或使用以下方式登录"
@@ -1340,7 +1393,7 @@ msgstr "通行密钥登录已取消"
 msgid "Passkey login failed"
 msgstr "通行密钥登录失败"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "需要使用通行密钥登录"
 
@@ -1348,7 +1401,7 @@ msgstr "需要使用通行密钥登录"
 msgid "Passkey verification failed. Please try again."
 msgstr "通行密钥验证失败。请重试。"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "通行密钥"
 
@@ -1356,7 +1409,7 @@ msgstr "通行密钥"
 msgid "Passphrase"
 msgstr "密码短语"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "粘贴你通过邮箱收到的登录验证码"
 
@@ -1364,25 +1417,25 @@ msgstr "粘贴你通过邮箱收到的登录验证码"
 msgid "Pick a date"
 msgstr "选择日期"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "请检查您的验证器应用并重试。"
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "请检查您的代码并重试。"
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "请检查您的代码并重试。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "请检查您的邮箱并重试。"
 
@@ -1397,7 +1450,7 @@ msgstr "请检查您的网络连接后重试。"
 msgid "Please check your recovery code and try again."
 msgstr "请检查你的恢复码并重试。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "请输入有效的邮箱"
 
@@ -1413,9 +1466,9 @@ msgstr "请输入您的恢复代码"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "请使用适当的凭据登录 <0/> 以访问此资源。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "请重试或联系客服。"
 
@@ -1423,7 +1476,7 @@ msgstr "请重试或联系客服。"
 msgid "Please try again."
 msgstr "请重试。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "请使用\"使用通行密钥登录\"按钮。"
 
@@ -1476,11 +1529,11 @@ msgstr "推送通知"
 msgid "Raised"
 msgstr "凸起"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "在此服务器上重新关联账户"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "在此服务器上重新注册您的通行密钥"
 
@@ -1514,9 +1567,9 @@ msgstr "正在重定向到仪表板…"
 msgid "Reduce interest"
 msgstr "降低兴趣"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "注册已停用"
 
@@ -1559,6 +1612,10 @@ msgstr "移除访问权限?"
 msgid "Remove interest"
 msgstr "移除兴趣"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "移除条目"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "重新发送邮件"
@@ -1581,7 +1638,7 @@ msgstr "将所有设置重置为默认值"
 msgid "Restore a backup file"
 msgstr "恢复备份文件"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "恢复失败"
@@ -1662,6 +1719,10 @@ msgstr "正在搜索..."
 msgid "Select {0}"
 msgstr "选择{0}"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "选择游戏"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "选择用户、群组或其他规则以授予访问权限。"
@@ -1706,6 +1767,11 @@ msgstr "选择站点方向"
 msgid "Select theme preference"
 msgstr "选择主题偏好"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "选择..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "项已选择"
@@ -1722,6 +1788,11 @@ msgstr "再次发送"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "发送邮件"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "发送消息"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "该登录提供商不可用"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "您在上方输入的电子邮件将成为此服务器上新账户的名称。备份的身份不得已在此处处于活动状态——请还原到其他服务器，或先删除现有账户。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "文件可能已损坏或被修改。"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "您输入的密码短语与备份不匹配。"
 
@@ -1915,7 +1986,7 @@ msgstr "主题"
 msgid "Theme Settings"
 msgstr "主题设置"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "此备份由较新版本的 Mochi 创建。请先更新此服务器。"
 
@@ -1993,6 +2064,10 @@ msgstr "星期二"
 msgid "Type a command or search..."
 msgstr "输入命令或搜索..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "输入消息…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "输入以搜索用户"
@@ -2039,7 +2114,7 @@ msgstr "正在解压您的数据"
 msgid "Unverified"
 msgstr "未验证"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "上传从 Mochi 数据导出功能导出的 .zip 文件。"
 
@@ -2051,7 +2126,7 @@ msgstr "上传进度"
 msgid "Use a different account"
 msgstr "使用其他账户"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "使用通行密钥"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "验证码已发送"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "验证失败"
 
@@ -2116,8 +2191,8 @@ msgstr "查看"
 msgid "View all"
 msgstr "查看全部"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "查看所有通知"
 
@@ -2150,7 +2225,7 @@ msgstr "星期三"
 msgid "Wikis"
 msgstr "Wiki"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "密码短语错误"
 
@@ -2189,7 +2264,7 @@ msgstr "您的账号已被暂停"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "您的账户已被暂停。"
 
@@ -2205,7 +2280,7 @@ msgstr "您的账户已排定删除。"
 msgid "Your account requires a passkey to sign in"
 msgstr "您的账号需要通行密钥才能登录"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "您的账户已从 {source} 迁移至此。在您于那里删除之前，消息和通知可能会同时到达两个服务器，您的部分内容仍会从旧服务器提供，关注者可能需要几分钟才能在此找到您。"
 

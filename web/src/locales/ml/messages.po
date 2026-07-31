@@ -36,6 +36,10 @@ msgstr "{entityLabel} പേര്"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel} പേര് ആവശ്യമാണ്"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} സമനില വാഗ്ദാനം ചെയ്തു"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} തിരഞ്ഞെടുത്തു} other {{manyName} തിരഞ്ഞെടുത്തു}}"
@@ -60,6 +64,11 @@ msgstr "{totalLabel}-ൽ {sentLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {മെനു തുറക്കുക (# വായിക്കാത്ത അറിയിപ്പ്)} other {മെനു തുറക്കുക (# വായിക്കാത്ത അറിയിപ്പുകൾ)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} നെസ്റ്റഡ്"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 മണിക്കൂർ"
@@ -71,6 +80,10 @@ msgstr "24 മണിക്കൂർ"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "സമ്പൂർണ്ണം (തീയതിയും സമയവും)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "സ്വീകരിക്കുക"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "ആക്സസ് ലെവൽ"
 msgid "Account added"
 msgstr "അക്കൗണ്ട് ചേർത്തു"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "അക്കൗണ്ട് ഈ സെർവറിൽ ഇതിനകം നിലവിലുണ്ട്"
 
@@ -98,7 +111,7 @@ msgstr "അക്കൗണ്ട് നീക്കം ചെയ്തു"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "അക്കൗണ്ട് സസ്പെൻഡ് ചെയ്തു"
 
@@ -110,6 +123,7 @@ msgstr "അക്കൗണ്ട് തരം"
 msgid "Account verified"
 msgstr "അക്കൗണ്ട് പരിശോധിച്ചുറപ്പിച്ചു"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "അക്കൗണ്ട് ചേർക്കുക"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "അറിയിപ്പുകൾ സ്വീകരിക്കാനും സേവനങ്ങൾ ഉപയോഗിക്കാനും ഒരു അക്കൗണ്ട് ചേർക്കുക."
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "ചെക്ക്‌ലിസ്റ്റ് ഇനം ചേർക്കുക"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "ഇനം ചേർക്കുക..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "ആർക്കും {0} തിരയാൻ അനുവദിക്ക
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "ആ ഇമെയിലുള്ള ഒരു അക്കൗണ്ട് ഇതിനകം നിലവിലുണ്ട്. ആദ്യം സൈൻ ഇൻ ചെയ്യുക, പിന്നെ നിങ്ങളുടെ auth ക്രമീകരണങ്ങളിൽ നിന്ന് {0} ലിങ്ക് ചെയ്യുക."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "ഈ ഐഡന്റിറ്റിയുള്ള ഒരു അക്കൗണ്ട് ഇവിടെ ഇതിനകം നിലവിലുണ്ട്."
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "{name}-ന്റെ അവതാർ"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "തിരികെ"
 
@@ -262,17 +284,22 @@ msgstr "സൈൻ അപ്പ് ലേക്ക് മടങ്ങുക"
 msgid "Backup file"
 msgstr "ബാക്കപ്പ് ഫയൽ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "ബാക്കപ്പ് ഫയൽ കേടായിരിക്കുന്നു"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "ബാക്കപ്പ് വളരെ പുതിയതാണ്"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "ബാനർ"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "വിശ്വസനീയമല്ലാത്ത ലിങ്കിലേക്കുള്ള നാവിഗേഷൻ തടഞ്ഞു"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "ചാറ്റ്"
 msgid "Check \"All\" to see your past notifications."
 msgstr "മുൻ അറിയിപ്പുകൾ കാണാൻ \"എല്ലാം\" തിരഞ്ഞെടുക്കുക."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "നിങ്ങളുടെ ഇമെയിൽ പരിശോധിക്കുക."
 
@@ -328,9 +355,13 @@ msgstr "നിങ്ങളുടെ ഇമെയിൽ പരിശോധിക�
 msgid "Checking…"
 msgstr "പരിശോധിക്കുന്നു…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "മറ്റൊരു പ്രാദേശിക ഇമെയിൽ തിരഞ്ഞെടുക്കുക അല്ലെങ്കിൽ പകരം ലോഗിൻ ചെയ്യുക."
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "സൈഡ്ബാറിൽ നിന്ന് ഒരു ഗെയിം തിരഞ്ഞെടുക്കുക അല്ലെങ്കിൽ ഒരു പുതിയത് ആരംഭിക്കുക."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "പാനൽ അടയ്ക്കുക"
 msgid "Close search"
 msgstr "തിരയൽ അടയ്ക്കുക"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "കോഡ് അയച്ചു."
 
@@ -569,6 +600,10 @@ msgstr "ഡാർക്ക് മോഡ്"
 msgid "Data conflict"
 msgstr "ഡാറ്റ വൈരുദ്ധ്യം"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "നിരസിക്കുക"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "ഡിഫോൾട്ട്"
@@ -577,7 +612,7 @@ msgstr "ഡിഫോൾട്ട്"
 msgid "Default AI account"
 msgstr "ഡിഫോൾട്ട് AI അക്കൗണ്ട്"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "പഴയ സെർവറിൽ നിങ്ങളുടെ അക്കൗണ്ട് ഇല്ലാതാക്കുക"
 
@@ -629,8 +664,8 @@ msgstr "ഡ്രാഫ്റ്റ് ഉപേക്ഷിക്കണോ?"
 msgid "Disconnected"
 msgstr "വിച്ഛേദിച്ചു"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "ഒഴിവാക്കുക"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "{label} എഡിറ്റ് ചെയ്യുക"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "ഇമെയിൽ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "ഇമെയിൽ ഇതിനകം ഉപയോഗത്തിലുണ്ട്"
 
@@ -674,15 +709,15 @@ msgstr "ഇമെയിൽ കോഡ്"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "ഇമെയിൽ കോഡ്"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "എനിക്ക് ഇമെയിലിൽ ഒരു കോഡ് അയയ്ക്കുക"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "തുടരാൻ ഒരു കോഡ് നൽകുക"
 
@@ -690,7 +725,7 @@ msgstr "തുടരാൻ ഒരു കോഡ് നൽകുക"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "സൈൻ ഇൻ ചെയ്യാൻ \"{userEmail}\" നുള്ള റിക്കവറി കോഡ് നൽകുക"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "നിങ്ങളുടെ ഓതന്റിക്കേറ്റർ ആപ്പിൽ നിന്നുള്ള കോഡ് നൽകുക"
 
@@ -711,7 +746,7 @@ msgstr "നിങ്ങളുടെ {initial}, {last} എന്നിവ നൽ�
 msgid "Enter your authenticator code"
 msgstr "നിങ്ങളുടെ ഓതെന്റിക്കേറ്റർ കോഡ് നൽകുക"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "നിങ്ങളുടെ ഇമെയിൽ കോഡും ഓതന്റിക്കേറ്റർ കോഡും നൽകുക"
 
@@ -746,7 +781,7 @@ msgstr "അക്കൗണ്ട് ചേർക്കുന്നതിൽ പ�
 msgid "Failed to add tag"
 msgstr "ടാഗ് ചേർക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "തുടരുന്നതിൽ പരാജയപ്പെട്ടു"
 
@@ -771,7 +806,7 @@ msgstr "വീഡിയോ ലോഡ് ചെയ്യാനായില്ല"
 msgid "Failed to remove account"
 msgstr "അക്കൗണ്ട് നീക്കം ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "ലോഗിൻ കോഡ് അഭ്യർത്ഥിക്കുന്നത് പരാജയപ്പെട്ടു"
 
@@ -795,7 +830,7 @@ msgstr "ഫീഡുകൾ"
 msgid "Filter..."
 msgstr "ഫിൽട്ടർ..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "നിങ്ങളുടെ അക്കൗണ്ട് മാറ്റൽ പൂർത്തിയാക്കുക"
 
@@ -939,7 +974,7 @@ msgstr "ഇൻസെറ്റ്"
 msgid "Interests"
 msgstr "താൽപ്പര്യങ്ങൾ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "അസാധുവായ ഓതന്റിക്കേറ്റർ കോഡ്"
 
@@ -948,10 +983,14 @@ msgstr "അസാധുവായ ഓതന്റിക്കേറ്റർ ക�
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "അസാധുവായ കോഡ്"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "അസാധുവായ തീയതി"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "അസാധുവായ ടാഗ്: അക്ഷരങ്ങൾ, അക്കങ്ങൾ, സ്പേസുകൾ, ഹൈഫനുകൾ, സ്ലാഷുകൾ മാത്രം (പരമാവധി 50 അക്ഷരങ്ങൾ)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "അസാധുവായ സ്ഥിരീകരണ കോഡ്"
 
@@ -1032,7 +1071,7 @@ msgstr "ലോഡുചെയ്യുന്നു..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "ലോഗിൻ ചെയ്യുക"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "ലോഗിൻ സെഷൻ കാലഹരണപ്പെട്ടു, ദയവായി വീണ്ടും ശ്രമിക്കുക"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "ആക്സസ് നഷ്ടപ്പെട്ടോ? ഒരു റിക്കവറി കോഡ് ഉപയോഗിക്കുക"
 
@@ -1084,8 +1123,8 @@ msgstr "ആക്സസ് നഷ്ടപ്പെട്ടോ? ഒരു റ�
 msgid "Manage your connected accounts for notifications and services."
 msgstr "അറിയിപ്പുകൾക്കും സേവനങ്ങൾക്കുമായി നിങ്ങളുടെ കണക്റ്റ് ചെയ്ത അക്കൗണ്ടുകൾ കൈകാര്യം ചെയ്യുക."
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "എല്ലാം വായിച്ചതായി അടയാളപ്പെടുത്തുക"
@@ -1105,6 +1144,10 @@ msgstr "ഇടത്തരം"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "മെനു"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "സന്ദേശം"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "പുതിയത്"
 msgid "New accounts are disabled on this server"
 msgstr "ഈ സെർവറിൽ പുതിയ അക്കൗണ്ടുകൾ പ്രവർത്തനരഹിതമാക്കിയിരിക്കുന്നു"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "പുതിയ ഗെയിം"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "പുതിയ ഉപയോക്തൃ സൈൻഅപ്പ് പ്രവർത്തനരഹിതമാക്കിയിരിക്കുന്നു."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "അടുത്തത്"
 
@@ -1162,7 +1210,7 @@ msgstr "അടുത്ത ചിത്രം"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "ആക്സസ് നിയമങ്ങളൊന്നും കോൺഫിഗർ ചെയ്തിട്ടില്ല. ഈ റിസോഴ്സ് ആർക്കെല്ലാം ആക്സസ് ചെയ്യാമെന്ന് നിയന്ത്രിക്കാൻ നിയമങ്ങൾ ചേർക്കുക."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "ബാക്കപ്പ് ഫയൽ തിരഞ്ഞെടുത്തിട്ടില്ല"
 
@@ -1170,12 +1218,16 @@ msgstr "ബാക്കപ്പ് ഫയൽ തിരഞ്ഞെടുത്�
 msgid "No connected accounts"
 msgstr "ബന്ധിപ്പിച്ച അക്കൗണ്ടുകളൊന്നുമില്ല"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "ഗെയിമുകളൊന്നും ഇതുവരെ ഇല്ല"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "ഗ്രൂപ്പുകളൊന്നും ലഭ്യമല്ല"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "MFA സെഷൻ ഇല്ല"
 
@@ -1183,6 +1235,7 @@ msgstr "MFA സെഷൻ ഇല്ല"
 msgid "No notifications yet"
 msgstr "ഇതുവരെ അറിയിപ്പുകളൊന്നുമില്ല"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "ആളുകളെ കണ്ടെത്തിയില്ല"
@@ -1232,7 +1285,7 @@ msgstr "ഒന്നുമില്ല; ഒരു പുതിയ അക്ക�
 msgid "Normal"
 msgstr "സാധാരണം"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "ഇത് ഒരു മൈഗ്രേഷൻ ബണ്ടിൽ അല്ല"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "അറിയിപ്പുകൾ"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "അറിയിപ്പുകൾ: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "navigation മെനു തുറക്കുക"
 msgid "Open theme settings"
 msgstr "തീം സെറ്റിങ്ങുകൾ തുറക്കുക"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "അല്ലെങ്കിൽ പ്രാമാണീകരണ കോഡ് നൽകുക"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "അല്ലെങ്കിൽ ഇതുപയോഗിച്ച് ലോഗിൻ ചെയ്യുക"
@@ -1340,7 +1393,7 @@ msgstr "പാസ്കീ ലോഗിൻ റദ്ദാക്കി"
 msgid "Passkey login failed"
 msgstr "പാസ്കീ ലോഗിൻ പരാജയപ്പെട്ടു"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "പാസ്കീ ലോഗിൻ ആവശ്യമാണ്"
 
@@ -1348,7 +1401,7 @@ msgstr "പാസ്കീ ലോഗിൻ ആവശ്യമാണ്"
 msgid "Passkey verification failed. Please try again."
 msgstr "പാസ്‌കീ പരിശോധന പരാജയപ്പെട്ടു. ദയവായി വീണ്ടും ശ്രമിക്കുക."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "പാസ്കീകൾ"
 
@@ -1356,7 +1409,7 @@ msgstr "പാസ്കീകൾ"
 msgid "Passphrase"
 msgstr "രഹസ്യ വാക്യം"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "ഇമെയിൽ വഴി ലഭിച്ച ലോഗിൻ കോഡ് പേസ്റ്റ് ചെയ്യുക"
 
@@ -1364,25 +1417,25 @@ msgstr "ഇമെയിൽ വഴി ലഭിച്ച ലോഗിൻ കോ�
 msgid "Pick a date"
 msgstr "തീയതി തിരഞ്ഞെടുക്കുക"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "ദയവായി നിങ്ങളുടെ ഓതെന്റിക്കേറ്റർ ആപ്പ് പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "ദയവായി നിങ്ങളുടെ കോഡ് പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "ദയവായി നിങ്ങളുടെ കോഡുകൾ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "ദയവായി നിങ്ങളുടെ ഇമെയിൽ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക."
 
@@ -1397,7 +1450,7 @@ msgstr "നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക�
 msgid "Please check your recovery code and try again."
 msgstr "നിങ്ങളുടെ റിക്കവറി കോഡ് പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "ദയവായി സാധുവായ ഇമെയിൽ നൽകുക"
 
@@ -1413,9 +1466,9 @@ msgstr "ദയവായി നിങ്ങളുടെ റിക്കവറി 
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "ഈ ഉറവിടം ആക്‌സസ് ചെയ്യാൻ <0/> ഉചിതമായ ക്രെഡൻഷ്യലുകൾ ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "വീണ്ടും ശ്രമിക്കുക അല്ലെങ്കിൽ സപ്പോർട്ടുമായി ബന്ധപ്പെടുക."
 
@@ -1423,7 +1476,7 @@ msgstr "വീണ്ടും ശ്രമിക്കുക അല്ലെങ�
 msgid "Please try again."
 msgstr "ദയവായി വീണ്ടും ശ്രമിക്കുക."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "ദയവായി \"പാസ്കീ ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക\" ബട്ടൺ ഉപയോഗിക്കുക."
 
@@ -1476,11 +1529,11 @@ msgstr "പുഷ് അറിയിപ്പ്"
 msgid "Raised"
 msgstr "ഉയർന്നത്"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "ഈ സെർവറിൽ നിങ്ങളുടെ അക്കൗണ്ടുകൾ വീണ്ടും ലിങ്ക് ചെയ്യുക"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "ഈ സെർവറിൽ നിങ്ങളുടെ പാസ്‌കീകൾ വീണ്ടും രജിസ്റ്റർ ചെയ്യുക"
 
@@ -1514,9 +1567,9 @@ msgstr "നിങ്ങളെ ഡാഷ്ബോർഡിലേക്ക് റ�
 msgid "Reduce interest"
 msgstr "പുതുക്കുക"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "നിരസിക്കുക"
 
@@ -1559,6 +1612,10 @@ msgstr "അക്കൗണ്ട് നീക്കം ചെയ്യണോ?"
 msgid "Remove interest"
 msgstr "item നീക്കം ചെയ്യുക"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "ലിസ്റ്റിങ് നീക്കം ചെയ്യുക"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "ഇമെയിൽ വീണ്ടും അയയ്ക്കുക"
@@ -1581,7 +1638,7 @@ msgstr "മുൻഗണനകൾ റീസെറ്റ് ചെയ്യണോ?
 msgid "Restore a backup file"
 msgstr "ഒരു ബാക്കപ്പ് ഫയൽ പുനഃസ്ഥാപിക്കുക"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "പുനഃസ്ഥാപിക്കൽ പരാജയപ്പെട്ടു"
@@ -1662,6 +1719,10 @@ msgstr "തിരയുന്നു..."
 msgid "Select {0}"
 msgstr "{0} തിരഞ്ഞെടുക്കുക"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "ഒരു ഗെയിം തിരഞ്ഞെടുക്കുക"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "ആക്സസ് നൽകാൻ ഒരു ഉപയോക്താവിനെ, ഗ്രൂപ്പിനെ അല്ലെങ്കിൽ മറ്റൊരു റൂൾ തിരഞ്ഞെടുക്കുക."
@@ -1706,6 +1767,11 @@ msgstr "സൈറ്റ് ദിശ തിരഞ്ഞെടുക്കുക"
 msgid "Select theme preference"
 msgstr "തീം മുൻഗണന തിരഞ്ഞെടുക്കുക"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "തിരഞ്ഞെടുക്കുക..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "തിരഞ്ഞെടുത്തു"
@@ -1722,6 +1788,11 @@ msgstr "വീണ്ടും അയയ്ക്കുക"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "ഇമെയിൽ അയയ്ക്കുക"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "സന്ദേശം അയയ്ക്കുക"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "ആ സൈൻ-ഇൻ ദാതാവ് ലഭ്യമല്ല"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "മുകളിൽ നൽകുന്ന ഇമെയിൽ ഈ സെർവറിലെ പുതിയ അക്കൗണ്ടിന്റെ പേരായി മാറുന്നു. ബാക്കപ്പിന്റെ ഐഡന്റിറ്റി ഇവിടെ ഇതിനകം സജീവമായിരിക്കരുത് — മറ്റൊരു സെർവറിലേക്ക് പുനഃസ്ഥാപിക്കുക, അല്ലെങ്കിൽ നിലവിലുള്ള അക്കൗണ്ട് ആദ്യം ഇല്ലാതാക്കുക."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "ഫയൽ കേടായിരിക്കാം അല്ലെങ്കിൽ പരിഷ്കരിച്ചിരിക്കാം."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "നിങ്ങൾ നൽകിയ രഹസ്യ വാക്യം ബാക്കപ്പുമായി പൊരുത്തപ്പെടുന്നില്ല."
 
@@ -1915,7 +1986,7 @@ msgstr "തീം"
 msgid "Theme Settings"
 msgstr "തീം ക്രമീകരണങ്ങൾ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "ഈ ബാക്കപ്പ് Mochi-ന്റെ ഒരു പുതിയ പതിപ്പ് ഉപയോഗിച്ച് സൃഷ്ടിച്ചതാണ്. ആദ്യം ഈ സെർവർ അപ്ഡേറ്റ് ചെയ്യുക."
 
@@ -1993,6 +2064,10 @@ msgstr "ചൊവ്വാഴ്ച"
 msgid "Type a command or search..."
 msgstr "ഒരു കമാൻഡ് ടൈപ്പ് ചെയ്യുക അല്ലെങ്കിൽ തിരയുക..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "ഒരു സന്ദേശം ടൈപ്പ് ചെയ്യുക…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "ഉപയോക്താക്കളെ തിരയാൻ ടൈപ്പ് ചെയ്യുക"
@@ -2039,7 +2114,7 @@ msgstr "നിങ്ങളുടെ ഡേറ്റ അൺപാക്ക് ച
 msgid "Unverified"
 msgstr "സ്ഥിരീകരിച്ചിട്ടില്ല"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Mochi-ന്റെ ഡേറ്റ എക്സ്പോർട്ടിൽ നിന്ന് എക്സ്പോർട്ട് ചെയ്ത .zip ഫയൽ അപ്ലോഡ് ചെയ്യുക."
 
@@ -2051,7 +2126,7 @@ msgstr "അപ്‌ലോഡ് പുരോഗതി"
 msgid "Use a different account"
 msgstr "മറ്റൊരു അക്കൗണ്ട് ഉപയോഗിക്കുക"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "പാസ്‌കീ ഉപയോഗിക്കുക"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "സ്ഥിരീകരണ കോഡ് അയച്ചു"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "സ്ഥിരീകരണം പരാജയപ്പെട്ടു"
 
@@ -2116,8 +2191,8 @@ msgstr "കാണുക"
 msgid "View all"
 msgstr "എല്ലാം കാണുക"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "എല്ലാ അറിയിപ്പുകളും കാണുക"
 
@@ -2150,7 +2225,7 @@ msgstr "ബുധനാഴ്ച"
 msgid "Wikis"
 msgstr "വിക്കികൾ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "തെറ്റായ രഹസ്യ വാക്യം"
 
@@ -2189,7 +2264,7 @@ msgstr "നിങ്ങളുടെ അക്കൗണ്ട് സസ്പെ�
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "നിങ്ങളുടെ അക്കൗണ്ട് സസ്പെൻഡ് ചെയ്തിരിക്കുന്നു."
 
@@ -2205,7 +2280,7 @@ msgstr "നിങ്ങളുടെ അക്കൗണ്ട് ഇല്ലാ�
 msgid "Your account requires a passkey to sign in"
 msgstr "സൈൻ ഇൻ ചെയ്യാൻ നിങ്ങളുടെ അക്കൗണ്ടിന് ഒരു പാസ്‌കീ ആവശ്യമാണ്"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "നിങ്ങളുടെ അക്കൗണ്ട് {source} ൽ നിന്ന് ഇവിടേക്ക് മാറ്റി. അവിടെ ഇല്ലാതാക്കുന്നതുവരെ, സന്ദേശങ്ങളും അറിയിപ്പുകളും രണ്ട് സെർവറുകളിലും എത്തിയേക്കാം, നിങ്ങളുടെ ചില ഉള്ളടക്കം പഴയ സെർവറിൽ നിന്ന് വിതരണം ചെയ്യപ്പെടും, ഫോളോവർമാർ ഇവിടെ നിങ്ങളെ കണ്ടെത്താൻ ഏതാനും മിനിറ്റ് എടുക്കാം."
 

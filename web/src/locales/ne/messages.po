@@ -36,6 +36,10 @@ msgstr "{entityLabel} नाम"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel} नाम आवश्यक छ"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} ले बराबरीको प्रस्ताव गर्‍यो"
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
 msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
 msgstr "{selectedCount, plural, one {{entityName} चयन गरियो} other {{manyName} चयन गरियो}}"
@@ -60,6 +64,11 @@ msgstr "{totalLabel}मध्ये {sentLabel}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {मेनु खोल्नुहोस् (# नपढिएको सूचना)} other {मेनु खोल्नुहोस् (# नपढिएका सूचनाहरू)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr "+{0} नेस्टेड"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "१२ घण्टा"
@@ -71,6 +80,10 @@ msgstr "२४ घण्टा"
 #: ../../../lib/web/src/lib/preference-utils.ts:51
 msgid "Absolute (date and time)"
 msgstr "निरपेक्ष (मिति र समय)"
+
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
+msgid "Accept"
+msgstr "स्वीकार गर्नुहोस्"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:60
 msgid "Access denied"
@@ -88,7 +101,7 @@ msgstr "पहुँच स्तर"
 msgid "Account added"
 msgstr "खाता थपियो"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "Account already on this server"
 msgstr "खाता पहिल्यै यो सर्भरमा छ"
 
@@ -98,7 +111,7 @@ msgstr "खाता हटाइयो"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:320
+#: src/features/auth/sign-in/components/user-auth-form.tsx:324
 msgid "Account suspended"
 msgstr "खाता निलम्बित गरियो"
 
@@ -110,6 +123,7 @@ msgstr "खाता प्रकार"
 msgid "Account verified"
 msgstr "खाता प्रमाणीकरण गरियो"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -131,6 +145,14 @@ msgstr "खाता थप्नुहोस्"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:297
 msgid "Add an account to receive notifications and use services."
 msgstr "सूचनाहरू प्राप्त गर्न र सेवाहरू प्रयोग गर्न खाता थप्नुहोस्।"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr "चेकलिस्ट वस्तु थप्नुहोस्"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr "वस्तु थप्नुहोस्..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -184,7 +206,7 @@ msgstr "जो कोहीलाई {0} खोज्न अनुमति द�
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "त्यो इमेल भएको खाता पहिले नै अवस्थित छ। पहिले साइन इन गर्नुहोस्, त्यसपछि आफ्नो auth सेटिङबाट {0} लिङ्क गर्नुहोस्।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:167
 msgid "An account with this identity already exists here."
 msgstr "यस पहिचानसँग एउटा खाता यहाँ पहिल्यै अवस्थित छ।"
 
@@ -244,7 +266,7 @@ msgid "Avatar for {name}"
 msgstr "{name} को अवतार"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:497
+#: src/features/auth/sign-in/components/user-auth-form.tsx:501
 msgid "Back"
 msgstr "पछाडि"
 
@@ -262,17 +284,22 @@ msgstr "साइन अप मा फर्कनुहोस्"
 msgid "Backup file"
 msgstr "ब्याकअप फाइल"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "Backup file is corrupted"
 msgstr "ब्याकअप फाइल बिग्रिएको छ"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Backup is too new"
 msgstr "ब्याकअप धेरै नयाँ छ"
 
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "ब्यानर"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+msgid "Blocked navigation to untrusted link"
+msgstr "अविश्वसित लिङ्कमा नेभिगेसन रोकियो"
 
 #: ../../../lib/web/src/components/post-tags.tsx:180
 #: ../../../lib/web/src/components/post-tags.tsx:192
@@ -320,7 +347,7 @@ msgstr "च्याट"
 msgid "Check \"All\" to see your past notifications."
 msgstr "विगतका सूचनाहरू हेर्न \"सबै\" छान्नुहोस्।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:131
+#: src/features/auth/sign-in/components/user-auth-form.tsx:132
 msgid "Check your email."
 msgstr "आफ्नो इमेल जाँच गर्नुहोस्।"
 
@@ -328,9 +355,13 @@ msgstr "आफ्नो इमेल जाँच गर्नुहोस्।
 msgid "Checking…"
 msgstr "जाँच गरिँदैछ…"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:175
 msgid "Choose a different local email or log in instead."
 msgstr "अर्को स्थानीय इमेल छनोट गर्नुहोस् वा यसको सट्टा लग इन गर्नुहोस्।"
+
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+msgid "Choose a game from the sidebar or start a new one."
+msgstr "साइडबारबाट खेल छनोट गर्नुहोस् वा नयाँ सुरु गर्नुहोस्।"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
@@ -405,7 +436,7 @@ msgstr "प्यानल बन्द गर्नुहोस्"
 msgid "Close search"
 msgstr "खोजी बन्द गर्नुहोस्"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:130
+#: src/features/auth/sign-in/components/user-auth-form.tsx:131
 msgid "Code sent."
 msgstr "कोड पठाइयो।"
 
@@ -569,6 +600,10 @@ msgstr "अँध्यारो मोड"
 msgid "Data conflict"
 msgstr "डेटा द्वन्द्व"
 
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
+msgid "Decline"
+msgstr "अस्वीकार गर्नुहोस्"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "पूर्वनिर्धारित"
@@ -577,7 +612,7 @@ msgstr "पूर्वनिर्धारित"
 msgid "Default AI account"
 msgstr "पूर्वनिर्धारित AI खाता"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "पुरानो सर्भरमा आफ्नो खाता मेटाउनुहोस्"
 
@@ -629,8 +664,8 @@ msgstr "मस्यौदा हटाउने?"
 msgid "Disconnected"
 msgstr "जडान विच्छेद"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "हटाउनुहोस्"
 
@@ -660,11 +695,11 @@ msgid "Edit {label}"
 msgstr "{label} सम्पादन गर्नुहोस्"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:531
+#: src/features/auth/sign-in/components/user-auth-form.tsx:535
 msgid "Email"
 msgstr "इमेल"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "Email already in use"
 msgstr "इमेल पहिले नै प्रयोगमा छ"
 
@@ -674,15 +709,15 @@ msgstr "इमेल कोड"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:383
+#: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Email code"
 msgstr "इमेल कोड"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:408
+#: src/features/auth/sign-in/components/user-auth-form.tsx:412
 msgid "Email me a code"
 msgstr "मलाई इमेलमा कोड पठाउनुहोस्"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:315
+#: src/features/auth/sign-in/components/user-auth-form.tsx:319
 msgid "Enter a code to continue"
 msgstr "जारी राख्न कोड प्रविष्ट गर्नुहोस्"
 
@@ -690,7 +725,7 @@ msgstr "जारी राख्न कोड प्रविष्ट गर�
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "साइन इन गर्न \"{userEmail}\" को लागि रिकभरी कोड प्रविष्ट गर्नुहोस्"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:368
 msgid "Enter the code from your authenticator app"
 msgstr "तपाईंको प्रमाणिकरण एपको कोड लेख्नुहोस्"
 
@@ -711,7 +746,7 @@ msgstr "आफ्नो {initial} र {last} प्रविष्ट गर्�
 msgid "Enter your authenticator code"
 msgstr "आफ्नो प्रमाणक कोड हाल्नुहोस्"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:356
+#: src/features/auth/sign-in/components/user-auth-form.tsx:360
 msgid "Enter your email code and authenticator code"
 msgstr "तपाईंको इमेल कोड र प्रमाणिकरण कोड लेख्नुहोस्"
 
@@ -746,7 +781,7 @@ msgstr "खाता थप्न असफल"
 msgid "Failed to add tag"
 msgstr "ट्याग थप्न असफल"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:233
 msgid "Failed to continue"
 msgstr "जारी राख्न असफल"
 
@@ -771,7 +806,7 @@ msgstr "भिडियो लोड गर्न असफल"
 msgid "Failed to remove account"
 msgstr "खाता हटाउन असफल"
 
-#: src/services/auth-service.ts:136
+#: src/services/auth-service.ts:137
 msgid "Failed to request login code"
 msgstr "लगइन कोड अनुरोध गर्न असफल"
 
@@ -795,7 +830,7 @@ msgstr "फिडहरू"
 msgid "Filter..."
 msgstr "फिल्टर..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "आफ्नो खाता सार्ने काम सम्पन्न गर्नुहोस्"
 
@@ -939,7 +974,7 @@ msgstr "इनसेट"
 msgid "Interests"
 msgstr "रुचिहरू"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:308
+#: src/features/auth/sign-in/components/user-auth-form.tsx:312
 msgid "Invalid authenticator code"
 msgstr "अमान्य प्रमाणिकरण कोड"
 
@@ -948,10 +983,14 @@ msgstr "अमान्य प्रमाणिकरण कोड"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:260
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:264
+#: src/features/auth/sign-in/components/user-auth-form.tsx:332
 msgid "Invalid code"
 msgstr "अमान्य कोड"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr "अमान्य मिति"
 
 #: src/features/auth/recovery/index.tsx:81
 #: src/features/auth/recovery/index.tsx:92
@@ -963,8 +1002,8 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "अमान्य ट्याग: अक्षर, अंक, स्पेस, हाइफन र स्ल्यास मात्र (बढीमा 50 वर्ण)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:272
-#: src/features/auth/sign-in/components/user-auth-form.tsx:291
+#: src/features/auth/sign-in/components/user-auth-form.tsx:276
+#: src/features/auth/sign-in/components/user-auth-form.tsx:295
 msgid "Invalid verification code"
 msgstr "अमान्य प्रमाणीकरण कोड"
 
@@ -1032,7 +1071,7 @@ msgstr "लोड हुँदै..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:455
+#: src/features/auth/sign-in/components/user-auth-form.tsx:459
 msgid "Log in"
 msgstr "लग इन गर्नुहोस्"
 
@@ -1076,7 +1115,7 @@ msgid "Login session expired, please try again"
 msgstr "लगइन सत्र समाप्त भयो, कृपया पुनः प्रयास गर्नुहोस्"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:506
+#: src/features/auth/sign-in/components/user-auth-form.tsx:510
 msgid "Lost access? Use a recovery code"
 msgstr "पहुँच गुमाउनुभयो? रिकभरी कोड प्रयोग गर्नुहोस्"
 
@@ -1084,8 +1123,8 @@ msgstr "पहुँच गुमाउनुभयो? रिकभरी क�
 msgid "Manage your connected accounts for notifications and services."
 msgstr "सूचना र सेवाहरूका लागि तपाईंका जडान भएका खाताहरू व्यवस्थापन गर्नुहोस्।"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "सबै पढिएको रूपमा चिन्ह लगाउनुहोस्"
@@ -1105,6 +1144,10 @@ msgstr "मध्यम"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:173
 msgid "Menu"
 msgstr "मेनु"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
+msgid "Message"
+msgstr "सन्देश"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:85
 msgid "Metric"
@@ -1143,13 +1186,18 @@ msgstr "नयाँ"
 msgid "New accounts are disabled on this server"
 msgstr "यो सर्भरमा नयाँ खाताहरू असक्षम छन्"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:177
-#: src/features/auth/sign-in/components/user-auth-form.tsx:226
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+msgid "New game"
+msgstr "नयाँ खेल"
+
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
+#: src/features/auth/sign-in/components/user-auth-form.tsx:230
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
 msgid "New user signup is disabled."
 msgstr "नयाँ प्रयोगकर्ता साइनअप असक्षम गरिएको छ।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:544
+#: src/features/auth/sign-in/components/user-auth-form.tsx:550
 msgid "Next"
 msgstr "अर्को"
 
@@ -1162,7 +1210,7 @@ msgstr "अर्को तस्बिर"
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "कुनै पहुँच नियम कन्फिगर गरिएको छैन। यो स्रोतमा को पहुँच गर्न सक्छ नियन्त्रण गर्न नियमहरू थप्नुहोस्।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "No backup file selected"
 msgstr "कुनै ब्याकअप फाइल चयन गरिएको छैन"
 
@@ -1170,12 +1218,16 @@ msgstr "कुनै ब्याकअप फाइल चयन गरिए�
 msgid "No connected accounts"
 msgstr "कुनै जडान गरिएको खाता छैन"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+msgid "No games yet"
+msgstr "अहिलेसम्म कुनै खेल छैन"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:241
 msgid "No groups available"
 msgstr "कुनै समूह उपलब्ध छैन"
 
-#: src/services/auth-service.ts:201
-#: src/services/auth-service.ts:233
+#: src/services/auth-service.ts:200
+#: src/services/auth-service.ts:232
 msgid "No MFA session"
 msgstr "कुनै MFA सत्र छैन"
 
@@ -1183,6 +1235,7 @@ msgstr "कुनै MFA सत्र छैन"
 msgid "No notifications yet"
 msgstr "अझै कुनै सूचना छैन"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "कुनै व्यक्ति भेटिएन"
@@ -1232,7 +1285,7 @@ msgstr "केही पनि छैन; नयाँ खाता बनाउ
 msgid "Normal"
 msgstr "सामान्य"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "Not a migration bundle"
 msgstr "माइग्रेसन बन्डल होइन"
 
@@ -1253,7 +1306,7 @@ msgid "Notifications"
 msgstr "सूचनाहरू"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
 msgid "Notifications: {0}"
 msgstr "सूचनाहरू: {0}"
 
@@ -1294,11 +1347,11 @@ msgstr "नेभिगेसन मेनु खोल्नुहोस्"
 msgid "Open theme settings"
 msgstr "थिम सेटिङ खोल्नुहोस्"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:425
+#: src/features/auth/sign-in/components/user-auth-form.tsx:429
 msgid "Or enter authenticator code"
 msgstr "वा प्रमाणीकरण कोड प्रविष्ट गर्नुहोस्"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:467
+#: src/features/auth/sign-in/components/user-auth-form.tsx:471
 #: src/features/landing/landing-page.tsx:404
 msgid "Or log in with"
 msgstr "वा यससँग लग इन गर्नुहोस्"
@@ -1340,7 +1393,7 @@ msgstr "पासकी लग इन रद्द गरियो"
 msgid "Passkey login failed"
 msgstr "पासकी लग इन असफल भयो"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:205
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
 msgid "Passkey login required"
 msgstr "पासकी लग इन आवश्यक छ"
 
@@ -1348,7 +1401,7 @@ msgstr "पासकी लग इन आवश्यक छ"
 msgid "Passkey verification failed. Please try again."
 msgstr "पासकी प्रमाणीकरण असफल भयो। कृपया फेरि प्रयास गर्नुहोस्।"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "पासकीहरू"
 
@@ -1356,7 +1409,7 @@ msgstr "पासकीहरू"
 msgid "Passphrase"
 msgstr "पासफ्रेज"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:364
 msgid "Paste the login code you received by email"
 msgstr "तपाईंले इमेलमा प्राप्त गरेको लग इन कोड टाँस्नुहोस्"
 
@@ -1364,25 +1417,25 @@ msgstr "तपाईंले इमेलमा प्राप्त गरे
 msgid "Pick a date"
 msgstr "मिति छान्नुहोस्"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:309
+#: src/features/auth/sign-in/components/user-auth-form.tsx:313
 msgid "Please check your authenticator app and try again."
 msgstr "कृपया आफ्नो प्रमाणक एप जाँच गर्नुहोस् र पुनः प्रयास गर्नुहोस्।"
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:333
 msgid "Please check your code and try again."
 msgstr "कृपया आफ्नो कोड जाँच गर्नुहोस् र पुनः प्रयास गर्नुहोस्।"
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:261
+#: src/features/auth/sign-in/components/user-auth-form.tsx:265
 msgid "Please check your codes and try again."
 msgstr "कृपया आफ्ना कोडहरू जाँच गर्नुहोस् र पुनः प्रयास गर्नुहोस्।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:273
-#: src/features/auth/sign-in/components/user-auth-form.tsx:292
+#: src/features/auth/sign-in/components/user-auth-form.tsx:277
+#: src/features/auth/sign-in/components/user-auth-form.tsx:296
 msgid "Please check your email and try again."
 msgstr "कृपया आफ्नो इमेल जाँच गर्नुहोस् र पुनः प्रयास गर्नुहोस्।"
 
@@ -1397,7 +1450,7 @@ msgstr "कृपया आफ्नो इन्टरनेट जडान �
 msgid "Please check your recovery code and try again."
 msgstr "कृपया आफ्नो रिकभरी कोड जाँच गर्नुहोस् र फेरि प्रयास गर्नुहोस्।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:68
+#: src/features/auth/sign-in/components/user-auth-form.tsx:69
 msgid "Please enter a valid email"
 msgstr "कृपया मान्य इमेल प्रविष्ट गर्नुहोस्"
 
@@ -1413,9 +1466,9 @@ msgstr "कृपया आफ्नो रिकभरी कोड प्र�
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "यो स्रोतमा पहुँच गर्न <0/> कृपया उपयुक्त प्रमाणहरूसँग लग इन गर्नुहोस्।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:185
+#: src/features/auth/sign-in/components/user-auth-form.tsx:234
+#: src/features/auth/sign-in/components/user-auth-form.tsx:337
 msgid "Please try again or contact support."
 msgstr "कृपया फेरि प्रयास गर्नुहोस् वा सपोर्टलाई सम्पर्क गर्नुहोस्।"
 
@@ -1423,7 +1476,7 @@ msgstr "कृपया फेरि प्रयास गर्नुहोस
 msgid "Please try again."
 msgstr "कृपया फेरि प्रयास गर्नुहोस्।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:206
+#: src/features/auth/sign-in/components/user-auth-form.tsx:210
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "कृपया \"पासकीसँग लग इन गर्नुहोस्\" बटन प्रयोग गर्नुहोस्।"
 
@@ -1476,11 +1529,11 @@ msgstr "पुश सूचना"
 msgid "Raised"
 msgstr "उठाइएको"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "यस सर्भरमा आफ्ना खाताहरू पुनः लिङ्क गर्नुहोस्"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "यस सर्भरमा तपाईंका पासकीहरू पुन: दर्ता गर्नुहोस्"
 
@@ -1514,9 +1567,9 @@ msgstr "तपाईंलाई ड्यासबोर्डमा रिड�
 msgid "Reduce interest"
 msgstr "रुचि घटाउनुहोस्"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:176
-#: src/features/auth/sign-in/components/user-auth-form.tsx:225
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:229
+#: src/features/auth/sign-in/components/user-auth-form.tsx:328
 msgid "Registration disabled"
 msgstr "दर्ता असक्षम गरिएको छ"
 
@@ -1559,6 +1612,10 @@ msgstr "पहुँच हटाउने?"
 msgid "Remove interest"
 msgstr "रुचि हटाउनुहोस्"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr "आइटम हटाउनुहोस्"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "इमेल फेरि पठाउनुहोस्"
@@ -1581,7 +1638,7 @@ msgstr "सबै सेटिङहरू पूर्वनिर्धार�
 msgid "Restore a backup file"
 msgstr "ब्याकअप फाइल पुनःस्थापना गर्नुहोस्"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "पुनर्स्थापना असफल भयो"
@@ -1662,6 +1719,10 @@ msgstr "खोज्दै..."
 msgid "Select {0}"
 msgstr "{0} छान्नुहोस्"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+msgid "Select a game"
+msgstr "खेल छान्नुहोस्"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:150
 msgid "Select a user, group, or other rule to grant access."
 msgstr "पहुँच दिन प्रयोगकर्ता, समूह वा अन्य नियम छान्नुहोस्।"
@@ -1706,6 +1767,11 @@ msgstr "साइट दिशा छान्नुहोस्"
 msgid "Select theme preference"
 msgstr "थिम प्राथमिकता छान्नुहोस्"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr "छान्नुहोस्..."
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "चयन गरिएको"
@@ -1722,6 +1788,11 @@ msgstr "फेरि पठाउनुहोस्"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:307
 msgid "Send email"
 msgstr "इमेल पठाउनुहोस्"
+
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
+msgid "Send message"
+msgstr "सन्देश पठाउनुहोस्"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:145
 msgid "Serif"
@@ -1883,11 +1954,11 @@ msgstr "त्यो साइन-इन प्रदायक उपलब्�
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "तपाईंले माथि प्रविष्ट गर्ने इमेल यो सर्भरमा नयाँ खाताको नाम बन्छ। ब्याकअपको पहिचान यहाँ पहिले नै सक्रिय हुनुहुँदैन — अर्को सर्भरमा पुनर्स्थापना गर्नुहोस्, वा अवस्थित खाता पहिले मेट्नुहोस्।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:171
 msgid "The file may be damaged or have been modified."
 msgstr "फाइल बिग्रिएको वा परिमार्जन गरिएको हुन सक्छ।"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:151
+#: src/features/auth/sign-in/components/user-auth-form.tsx:155
 msgid "The passphrase you entered does not match the backup."
 msgstr "तपाईंले प्रविष्ट गर्नुभएको पासफ्रेज ब्याकअपसँग मेल खाँदैन।"
 
@@ -1915,7 +1986,7 @@ msgstr "थिम"
 msgid "Theme Settings"
 msgstr "थिम सेटिङहरू"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:163
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "यो ब्याकअप Mochi को नयाँ संस्करणद्वारा सिर्जना गरिएको थियो। पहिले यो सर्भर अपडेट गर्नुहोस्।"
 
@@ -1993,6 +2064,10 @@ msgstr "मङ्गलबार"
 msgid "Type a command or search..."
 msgstr "आदेश टाइप गर्नुहोस् वा खोज्नुहोस्..."
 
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "सन्देश टाइप गर्नुहोस्…"
+
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
 msgstr "प्रयोगकर्ता खोज्न टाइप गर्नुहोस्"
@@ -2039,7 +2114,7 @@ msgstr "तपाईंको डाटा अनप्याक गरिँद
 msgid "Unverified"
 msgstr "अप्रमाणित"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:159
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Mochi को डाटा निर्यातबाट निर्यात गरिएको .zip फाइल अपलोड गर्नुहोस्।"
 
@@ -2051,7 +2126,7 @@ msgstr "अपलोड प्रगति"
 msgid "Use a different account"
 msgstr "फरक खाता प्रयोग गर्नुहोस्"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:482
+#: src/features/auth/sign-in/components/user-auth-form.tsx:486
 msgid "Use a passkey"
 msgstr "पासकी प्रयोग गर्नुहोस्"
 
@@ -2077,7 +2152,7 @@ msgid "Verification code sent"
 msgstr "प्रमाणीकरण कोड पठाइयो"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:336
 msgid "Verification failed"
 msgstr "प्रमाणीकरण असफल भयो"
 
@@ -2116,8 +2191,8 @@ msgstr "हेर्नुहोस्"
 msgid "View all"
 msgstr "सबै हेर्नुहोस्"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
 msgid "View all notifications"
 msgstr "सबै सूचना हेर्नुहोस्"
 
@@ -2150,7 +2225,7 @@ msgstr "बुधबार"
 msgid "Wikis"
 msgstr "विकिहरू"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:150
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
 msgid "Wrong passphrase"
 msgstr "गलत पासफ्रेज"
 
@@ -2189,7 +2264,7 @@ msgstr "तपाईंको खाता निलम्बन गरिएक
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:321
+#: src/features/auth/sign-in/components/user-auth-form.tsx:325
 msgid "Your account has been suspended."
 msgstr "तपाईंको खाता निलम्बित गरिएको छ।"
 
@@ -2205,7 +2280,7 @@ msgstr "तपाईंको खाता मेटाउन निर्धा
 msgid "Your account requires a passkey to sign in"
 msgstr "साइन इन गर्न तपाईंको खातालाई पासकी आवश्यक छ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "तपाईंको खाता {source} बाट यहाँ सारिएको छ। त्यहाँ मेटाउनु नभएसम्म, सन्देश र सूचनाहरू दुवै सर्भरमा पुग्न सक्छन्, तपाईंको केही सामग्री पुरानो सर्भरबाट आउन सक्छ, र अनुयायीहरूलाई तपाईंलाई यहाँ भेट्न केही मिनेट लाग्न सक्छ।"
 
