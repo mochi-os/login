@@ -61,6 +61,10 @@ export function OauthButtons({
         }
       }
       setEnabled(set)
+    }).catch(() => {
+      // See landing-page.tsx: an unhandled rejection here silently removes
+      // every OAuth button.
+      setEnabled(new Set())
     })
   }, [])
 

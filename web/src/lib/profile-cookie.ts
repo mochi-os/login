@@ -8,7 +8,9 @@ import { getCookie, setCookie, removeCookie, type CookieOptions } from '@mochi/w
 // Auth cookies constants
 const AUTH_COOKIES = {
   PROFILE: 'mochi_me',
-  TOKEN: 'token',
+  // No TOKEN entry: nothing read it, and naming a cookie for a token invites
+  // code to put one there. The session cookie is set by the server and is
+  // HttpOnly, so this layer neither sees nor stores it.
 } as const
 
 export interface ProfileCookieData {

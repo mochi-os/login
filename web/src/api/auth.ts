@@ -40,8 +40,9 @@ interface TotpLoginRequest {
 }
 
 interface TotpLoginResponse {
-  token?: string
-  login?: string
+  // No token or login field: the server sets a session cookie and returns
+  // neither. They were declared but never sent, which left a token-shaped
+  // slot for future code to start persisting a credential into.
   name?: string
   mfa?: boolean
   partial?: string

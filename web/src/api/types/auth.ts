@@ -22,7 +22,10 @@ export interface VerifyCodeRequest {
 }
 
 export interface VerifyCodeResponse {
-  success: boolean
+  // No success field: /_/auth/verify answers with either the MFA object or a
+  // completed login, never a success flag, so declaring one non-optional made
+  // `if (result.success)` silently always false. The services layer adds its
+  // own success on top - that one is real.
   user?: AuthUser
   name?: string
   message?: string

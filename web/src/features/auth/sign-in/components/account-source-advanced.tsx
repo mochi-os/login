@@ -122,7 +122,12 @@ export function AccountSourceAdvanced({
                 </label>
                 <Input
                   type='password'
-                  autoComplete='current-password'
+                  // Not current-password: this unlocks the restore bundle, not
+                  // the account. Naming it current-password had the password
+                  // manager offer the saved Mochi password for a field it does
+                  // not open, so the likely outcome is a silently wrong value
+                  // and a failed restore.
+                  autoComplete='off'
                   spellCheck={false}
                   disabled={disabled}
                   value={restorePassphrase}
