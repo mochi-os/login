@@ -151,12 +151,16 @@ export const signupRestore = async (
   email: string,
   passphrase: string,
   bundle: File,
+  code: string,
   onProgress?: (event: AxiosProgressEvent) => void,
 ): Promise<{ status: string; uid: string }> => {
   const form = new FormData()
   form.append('email', email)
   form.append('passphrase', passphrase)
   form.append('bundle', bundle)
+  // The emailed code proves the address is the caller's. The passphrase only
+  // proves the bundle is theirs, which is a different claim.
+  form.append('code', code)
   // Plain axios rather than fetch so onUploadProgress can report byte progress
   // on the bundle upload; errors keep the {response: {data}} shape the caller
   // reads. No timeout — bundles can be large.

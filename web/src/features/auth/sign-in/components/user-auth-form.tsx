@@ -126,11 +126,71 @@ export function UserAuthForm({
   // step shows the code input rather than the "Email me a code" button.
   async function sendCode(email: string) {
     const codeResult = await requestCode(email)
-    if (codeResult?.status?.toLowerCase() !== 'ok') return
+    if (codeResult?.status?.toLowerCase() !== 'ok') return false
     setCodeSent(true)
     toast.success(t`Code sent.`, {
       description: t`Check your email.`,
     })
+    return true
+  }
+
+  // Upload the bundle once the address has been verified. Split out of
+  // onSubmitEmail because the submit that starts a restore now only requests
+  // the code; the upload happens on the verification step with that code.
+  async function runRestore(email: string, code: string) {
+    if (!restoreBundle) return
+    const bundle = restoreBundle
+    setIsLoading(true)
+    try {
+      await upload((onProgress) =>
+        signupRestore(email, restorePassphrase, bundle, code, onProgress)
+      )
+      window.location.href = '/login/restore'
+    } catch (error) {
+      const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
+      const reason = (responseData as { error?: string } | undefined)?.error
+      if (reason === 'invalid_code' || reason === 'missing_code') {
+        toast.error(t`Invalid verification code`, {
+          description: t`Please check your email and try again.`,
+        })
+      } else if (reason === 'wrong_passphrase') {
+        toast.error(t`Wrong passphrase`, {
+          description: t`The passphrase you entered does not match the backup.`,
+        })
+      } else if (reason === 'bundle_not_migration') {
+        toast.error(t`Not a migration bundle`, {
+          description: t`Upload a .zip file exported from Mochi's data export.`,
+        })
+      } else if (reason === 'bundle_version' || reason === 'bundle_schema_newer') {
+        toast.error(t`Backup is too new`, {
+          description: t`This backup was created by a newer version of Mochi. Update this server first.`,
+        })
+      } else if (reason === 'entity_collision') {
+        toast.error(t`Account already on this server`, {
+          description: getErrorMessage(error, t`An account with this identity already exists here.`),
+        })
+      } else if (reason === 'bundle_tampered') {
+        toast.error(t`Backup file is corrupted`, {
+          description: t`The file may be damaged or have been modified.`,
+        })
+      } else if (reason === 'username_taken') {
+        toast.error(t`Email already in use`, {
+          description: t`Choose a different local email or log in instead.`,
+        })
+      } else if (reason === 'bundle_required') {
+        toast.error(t`No backup file selected`)
+      } else if (reason === 'signup_disabled') {
+        toast.error(t`Registration disabled`, {
+          description: getErrorMessage(error, t`New user signup is disabled.`),
+        })
+      } else {
+        toast.error(t`Restore failed`, {
+          description: getErrorMessage(error, t`Please try again or contact support.`),
+        })
+      }
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   // Step 1: Submit email to get required methods (or, when the Advanced
@@ -139,49 +199,29 @@ export function UserAuthForm({
     setIsLoading(true)
     setUserEmail(data.email)
 
-    // Restore from backup bundle
+    // Restore from backup bundle. The bundle's passphrase proves the bundle is
+    // the caller's; it says nothing about whether this address is. So the
+    // address is verified first, exactly as ordinary signup does, and the
+    // upload waits for the code on the next step.
     if (restoreBundle) {
-      const bundle = restoreBundle
       try {
-        await upload((onProgress) =>
-          signupRestore(data.email, restorePassphrase, bundle, onProgress)
-        )
-        window.location.href = '/login/restore'
+        if (!(await sendCode(data.email))) {
+          toast.error(t`Couldn't send the code. Please try again.`)
+          return
+        }
+        setRequiredMethods(['email'])
+        setAllowedMethods(['email'])
+        setStep('verification')
       } catch (error) {
-        const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
-        const code = (responseData as { error?: string } | undefined)?.error
-        if (code === 'wrong_passphrase') {
-          toast.error(t`Wrong passphrase`, {
-            description: t`The passphrase you entered does not match the backup.`,
-          })
-        } else if (code === 'bundle_not_migration') {
-          toast.error(t`Not a migration bundle`, {
-            description: t`Upload a .zip file exported from Mochi's data export.`,
-          })
-        } else if (code === 'bundle_version' || code === 'bundle_schema_newer') {
-          toast.error(t`Backup is too new`, {
-            description: t`This backup was created by a newer version of Mochi. Update this server first.`,
-          })
-        } else if (code === 'entity_collision') {
-          toast.error(t`Account already on this server`, {
-            description: getErrorMessage(error, t`An account with this identity already exists here.`),
-          })
-        } else if (code === 'bundle_tampered') {
-          toast.error(t`Backup file is corrupted`, {
-            description: t`The file may be damaged or have been modified.`,
-          })
-        } else if (code === 'username_taken') {
-          toast.error(t`Email already in use`, {
-            description: t`Choose a different local email or log in instead.`,
-          })
-        } else if (code === 'bundle_required') {
-          toast.error(t`No backup file selected`)
-        } else if (code === 'signup_disabled') {
+        const code = (error as { response?: { data?: { error?: string } } })?.response?.data?.error
+        if (code === 'signup_disabled') {
           toast.error(t`Registration disabled`, {
             description: getErrorMessage(error, t`New user signup is disabled.`),
           })
+        } else if (code === 'too_many_codes') {
+          toast.error(t`Too many requests`)
         } else {
-          toast.error(t`Restore failed`, {
+          toast.error(t`Couldn't send the code. Please try again.`, {
             description: getErrorMessage(error, t`Please try again or contact support.`),
           })
         }
@@ -245,6 +285,19 @@ export function UserAuthForm({
   async function onSubmitVerification(data: VerificationFormValues) {
     const emailCode = data.emailCode?.trim()
     const totpCode = data.totpCode?.trim()
+
+    // A restore verifies the address and creates the account in one request,
+    // so the code goes to /_/auth/restore rather than /_/auth/verify - there
+    // is no account yet for verify to log in to.
+    if (restoreBundle) {
+      if (!emailCode) {
+        toast.error(t`Enter the code from your email`)
+        return
+      }
+      await runRestore(userEmail, emailCode)
+      return
+    }
+
     setIsLoading(true)
 
     try {
@@ -456,10 +509,15 @@ export function UserAuthForm({
 
             {(offerEmail || offerTotp) && (
               <Button type='submit' className='w-full' disabled={isLoading}>
-                <Trans>Log in</Trans>
+                {restoreBundle ? <Trans>Restore</Trans> : <Trans>Log in</Trans>}
                 {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight className="rtl:rotate-180" />}
               </Button>
             )}
+
+            {/* The bundle uploads from this step now that the code is entered
+                here, so the progress bar has to live here too - the one on the
+                email step never renders during a restore. */}
+            {restoreBundle && <UploadProgress progress={progress} />}
 
             {(offerPasskey || offerOauth) && (
               <div className='relative'>

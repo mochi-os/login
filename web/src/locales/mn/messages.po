@@ -18,15 +18,15 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Интернет холболтоо шалгаад дахин оролдоно уу."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:302
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:293
 msgid " or "
 msgstr " эсвэл "
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:228
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:229
 msgid "(edited)"
 msgstr "(засварласан)"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:212
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:213
 msgid "(expand)"
 msgstr "(дэлгэх)"
 
@@ -44,19 +44,19 @@ msgstr "{0, plural, one {# сонгогдсон} other {# сонгогдсон}}
 msgid "{0} option preview"
 msgstr "{0} сонголтын урьдчилан харах"
 
-#: ../../../lib/web/src/lib/locale-format.ts:121
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#ө} other {#ө}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:117
+#: ../../../lib/web/src/lib/locale-format.ts:179
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#ц} other {#ц}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:113
+#: ../../../lib/web/src/lib/locale-format.ts:175
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#мин} other {#мин}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:125
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#дол} other {#дол}}"
 
@@ -88,6 +88,7 @@ msgstr "{selectedCount, plural, one {# сонгогдсон} other {# сонго
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# сонгосон {entityName}-д зориулсан бөөнөөр үйлдэл} other {# сонгосон {manyName}-д зориулсан бөөнөөр үйлдэл}}"
 
+#: ../../../lib/web/src/components/attachment-composer.tsx:189
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
 msgstr "{totalLabel}-с {sentLabel}"
@@ -105,11 +106,11 @@ msgstr "{unreadCount, plural, one {Цэс нээх (# уншаагүй мэдэ�
 msgid "+{0} nested"
 msgstr "+{0} үүрлэсэн"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:210
 msgid "+{totalDescendants} more replies"
 msgstr "+{totalDescendants} нэмэлт хариулт"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:208
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
 msgid "1 reply"
 msgstr "1 хариулт"
 
@@ -145,7 +146,7 @@ msgstr "Хандалтын түвшин"
 msgid "Account added"
 msgstr "Бүртгэл нэмэгдсэн"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:166
+#: src/features/auth/sign-in/components/user-auth-form.tsx:169
 msgid "Account already on this server"
 msgstr "Энэ серверт бүртгэл аль хэдийн байна"
 
@@ -155,7 +156,7 @@ msgstr "Бүртгэл хасагдсан"
 
 #: src/features/auth/mfa/index.tsx:195
 #: src/features/auth/recovery/index.tsx:88
-#: src/features/auth/sign-in/components/user-auth-form.tsx:324
+#: src/features/auth/sign-in/components/user-auth-form.tsx:377
 msgid "Account suspended"
 msgstr "Бүртгэлийг түр зогсоосон"
 
@@ -173,7 +174,7 @@ msgstr "Бүртгэл баталгаажсан"
 msgid "Add"
 msgstr "Нэмэх"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:360
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:363
 msgid "Add a comment..."
 msgstr "Сэтгэгдэл нэмэх..."
 
@@ -281,7 +282,7 @@ msgstr "Дараах байдлаар эрэмбэлэхийг зөвшөөрө�
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
 msgstr "Энэ имэйлтэй бүртгэл аль хэдийн байна. Эхлээд нэвтэрч, дараа нь auth тохиргооноос {0}-г холбоно уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:167
+#: src/features/auth/sign-in/components/user-auth-form.tsx:170
 msgid "An account with this identity already exists here."
 msgstr "Энэ таниулбар бүхий бүртгэл энд аль хэдийн байна."
 
@@ -306,8 +307,12 @@ msgstr "Хэн ч"
 msgid "Anyone who is logged in"
 msgstr "Нэвтэрсэн хэн ч"
 
+#: ../../../lib/web/src/components/options-menu.tsx:249
+msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
+msgstr "Энэ хангамжид бүртгүүлсэн бүх зүйл хүлээн авахаа болино. Дараа нь та шинэ URL хуулж болно."
+
 #. placeholder {0}: deleteTarget?.name
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:271
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:308
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "\"{0}\"-г устгахдаа итгэлтэй байна уу?"
 
@@ -315,7 +320,7 @@ msgstr "\"{0}\"-г устгахдаа итгэлтэй байна уу?"
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "\"{name}\" баганыг устгахдаа итгэлтэй байна уу? Энэ үйлдлийг буцаах боломжгүй."
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:485
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:491
 msgid "Are you sure you want to delete this comment? This will also delete all replies."
 msgstr "Энэ сэтгэгдлийг устгахдаа итгэлтэй байна уу? Энэ нь бүх хариултыг бас устгана."
 
@@ -331,13 +336,13 @@ msgstr "Өсөх"
 msgid "Ascending"
 msgstr "Өсөхөөр"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:398
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:403
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:406
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:411
 msgid "Attach comment files"
 msgstr "Сэтгэгдлийн файл хавсаргах"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:439
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:444
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:445
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:450
 msgid "Attach reply files"
 msgstr "Хариултын файл хавсаргах"
 
@@ -350,7 +355,7 @@ msgstr "Баталгаажсан хэрэглэгчид"
 msgid "authenticator code"
 msgstr "баталгаажуулагч код"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:315
+#: ../../../lib/web/src/components/step-up-dialog.tsx:329
 #: src/features/auth/mfa/index.tsx:272
 msgid "Authenticator code"
 msgstr "Authenticator код"
@@ -368,7 +373,7 @@ msgid "Avatar for {name}"
 msgstr "{name}-ийн аватар"
 
 #: ../../../lib/web/src/components/place-picker.tsx:156
-#: src/features/auth/sign-in/components/user-auth-form.tsx:501
+#: src/features/auth/sign-in/components/user-auth-form.tsx:559
 msgid "Back"
 msgstr "Буцах"
 
@@ -386,11 +391,11 @@ msgstr "Бүртгүүлэх хуудас руу буцах"
 msgid "Backup file"
 msgstr "Нөөцлөлтийн файл"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:170
+#: src/features/auth/sign-in/components/user-auth-form.tsx:173
 msgid "Backup file is corrupted"
 msgstr "Нөөцлөлтийн файл гэмтсэн"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:162
+#: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "Backup is too new"
 msgstr "Нөөцлөлт хэт шинэ байна"
 
@@ -438,11 +443,11 @@ msgid "By creating your account, you agree to the <0>Server rules</0>, <1>Terms 
 msgstr "Бүртгэлээ үүсгэснээр та <0>Серверийн дүрэм</0>, <1>Үйлчилгээний нөхцөл</1>, <2>Нууцлал</2>-тай зөвшөөрөгдөнө."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:628
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:249
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:250
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:169
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:186
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:67
-#: ../../../lib/web/src/components/step-up-dialog.tsx:363
+#: ../../../lib/web/src/components/step-up-dialog.tsx:377
 #: ../../../lib/web/src/components/travelling-picker.tsx:308
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:249
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
@@ -453,13 +458,13 @@ msgstr "Бүртгэлээ үүсгэснээр та <0>Серверийн дү�
 msgid "Cancel"
 msgstr "Цуцлах"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:415
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:420
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:423
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:428
 msgid "Cancel comment"
 msgstr "Сэтгэгдлийг цуцлах"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:455
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:460
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:461
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:466
 msgid "Cancel reply"
 msgstr "Хариултыг цуцлах"
 
@@ -496,7 +501,7 @@ msgstr "Шалгаж байна…"
 msgid "Checklist"
 msgstr "Жагсаалт"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:175
+#: src/features/auth/sign-in/components/user-auth-form.tsx:178
 msgid "Choose a different local email or log in instead."
 msgstr "Өөр локал имэйл сонгох эсвэл оронд нь нэвтэрнэ үү."
 
@@ -556,8 +561,8 @@ msgstr "Сонголтыг цэвэрлэх"
 msgid "Clear selection (Escape)"
 msgstr "Сонголтыг цэвэрлэх (Escape)"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:490
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:478
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:483
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
@@ -630,8 +635,8 @@ msgstr "Удахгүй!"
 msgid "Command Palette"
 msgstr "Командын самбар"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:330
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:337
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:331
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:338
 msgid "Comment actions"
 msgstr "Сэтгэгдлийн үйлдлүүд"
 
@@ -690,7 +695,7 @@ msgstr "Үргэлжлүүлэх"
 msgid "Continue closing and sign out"
 msgstr "Хаахаа үргэлжлүүлж, системээс гарах"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:352
+#: ../../../lib/web/src/components/step-up-dialog.tsx:366
 #: src/features/auth/components/oauth-buttons.tsx:98
 msgid "Continue with {label}"
 msgstr "{label}-р үргэлжлүүлэх"
@@ -733,22 +738,24 @@ msgstr "Нэвтрэлт эхлүүлж чадсангүй"
 msgid "Couldn't load notifications"
 msgstr "Мэдэгдлийг ачаалж чадсангүй"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:184
+#: ../../../lib/web/src/components/step-up-dialog.tsx:193
+#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:224
 msgid "Couldn't send the code. Please try again."
 msgstr "Кодыг илгээж чадсангүй. Дахин оролдоно уу."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:136
+#: ../../../lib/web/src/components/step-up-dialog.tsx:145
 msgid "Couldn't start re-authentication. Please try again."
 msgstr "Дахин баталгаажуулалтыг эхлүүлж чадсангүй. Дахин оролдоно уу."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:221
+#: ../../../lib/web/src/components/step-up-dialog.tsx:235
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Тэр бүртгэлээр баталгаажуулж чадсангүй. Дахин оролдоно уу."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:564
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:703
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:475
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:468
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:624
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "Үүсгэх"
@@ -771,7 +778,7 @@ msgstr "Шинэ зүйл үүсгэх"
 msgid "Created"
 msgstr "Үүсгэгдсэн"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:624
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
 msgid "Creating..."
 msgstr "Үүсгэж байна..."
@@ -825,17 +832,17 @@ msgstr "Үндсэн эрэмбэлэлт"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:583
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:644
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:318
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:361
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:173
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:178
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:227
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:272
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:319
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:362
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:492
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:196
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:201
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:250
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:309
 msgid "Delete"
 msgstr "Устгах"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:270
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:307
 msgid "Delete attachment"
 msgstr "Хавсралт устгах"
 
@@ -843,7 +850,7 @@ msgstr "Хавсралт устгах"
 msgid "Delete column"
 msgstr "Багана устгах"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:484
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:490
 msgid "Delete comment"
 msgstr "Сэтгэгдэл устгах"
 
@@ -904,11 +911,11 @@ msgstr "Чиглэл"
 msgid "Directory"
 msgstr "Лавлах"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:304
+#: ../../../lib/web/src/components/comment-composer.tsx:288
 msgid "Discard"
 msgstr "Хаях"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:286
 msgid "Discard draft?"
 msgstr "Ноорогийг хаах уу?"
 
@@ -932,7 +939,7 @@ msgstr "Гар утасны хажуугийн самбарыг харуулна
 msgid "Done"
 msgstr "Дууссан"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:214
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:237
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
@@ -950,8 +957,8 @@ msgstr "Давхардлууд"
 msgid "Dyslexia-friendly"
 msgstr "Дислексид зориулсан"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:307
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:352
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:308
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:353
 msgid "Edit"
 msgstr "Засах"
 
@@ -986,11 +993,11 @@ msgid "Edit view"
 msgstr "Харагдац засах"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
-#: src/features/auth/sign-in/components/user-auth-form.tsx:535
+#: src/features/auth/sign-in/components/user-auth-form.tsx:593
 msgid "Email"
 msgstr "Имэйл"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:174
+#: src/features/auth/sign-in/components/user-auth-form.tsx:177
 msgid "Email already in use"
 msgstr "Имэйл аль хэдийн ашиглагдаж байна"
 
@@ -998,17 +1005,17 @@ msgstr "Имэйл аль хэдийн ашиглагдаж байна"
 msgid "email code"
 msgstr "имэйл код"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:289
+#: ../../../lib/web/src/components/step-up-dialog.tsx:303
 #: src/features/auth/mfa/index.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:387
+#: src/features/auth/sign-in/components/user-auth-form.tsx:440
 msgid "Email code"
 msgstr "Имэйл код"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:412
+#: src/features/auth/sign-in/components/user-auth-form.tsx:465
 msgid "Email me a code"
 msgstr "Надад имэйлээр код илгээнэ үү"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:319
+#: src/features/auth/sign-in/components/user-auth-form.tsx:372
 msgid "Enter a code to continue"
 msgstr "Үргэлжлүүлэхийн тулд код оруулна уу"
 
@@ -1016,11 +1023,12 @@ msgstr "Үргэлжлүүлэхийн тулд код оруулна уу"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Нэвтрэхийн тулд \"{userEmail}\"-н сэргээх кодыг оруулна уу"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:368
+#: src/features/auth/sign-in/components/user-auth-form.tsx:421
 msgid "Enter the code from your authenticator app"
 msgstr "Authenticator апп-аасаа кодоо оруулна уу"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:299
+#: ../../../lib/web/src/components/step-up-dialog.tsx:313
+#: src/features/auth/sign-in/components/user-auth-form.tsx:294
 msgid "Enter the code from your email"
 msgstr "Имэйлд ирсэн кодоо оруулна уу"
 
@@ -1033,11 +1041,11 @@ msgstr "{0} оруулна уу"
 msgid "Enter your {initial} and {last}"
 msgstr "{initial} болон {last} оруулна уу"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:324
+#: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Enter your authenticator code"
 msgstr "Баталгаажуулагчийн кодоо оруулна уу"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:360
+#: src/features/auth/sign-in/components/user-auth-form.tsx:413
 msgid "Enter your email code and authenticator code"
 msgstr "Имэйл код болон authenticator кодоо оруулна уу"
 
@@ -1072,7 +1080,7 @@ msgstr "Бүртгэл нэмж чадсангүй"
 msgid "Failed to add tag"
 msgstr "Шошго нэмж чадсангүй"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:233
+#: src/features/auth/sign-in/components/user-auth-form.tsx:273
 msgid "Failed to continue"
 msgstr "Үргэлжлүүлж чадсангүй"
 
@@ -1082,15 +1090,15 @@ msgid "Failed to copy"
 msgstr "Хуулж чадсангүй"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
-#: ../../../lib/web/src/components/options-menu.tsx:99
+#: ../../../lib/web/src/components/options-menu.tsx:101
 msgid "Failed to create link"
 msgstr "Холбоос үүсгэж чадсангүй"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:110
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:128
 msgid "Failed to delete attachment"
 msgstr "Хавсралт устгаж чадсангүй"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:207
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:210
 msgid "Failed to delete comment"
 msgstr "Сэтгэгдэл устгаж чадсангүй"
 
@@ -1098,7 +1106,7 @@ msgstr "Сэтгэгдэл устгаж чадсангүй"
 msgid "Failed to delete link"
 msgstr "Холбоос устгаж чадсангүй"
 
-#: ../../../lib/web/src/components/options-menu.tsx:123
+#: ../../../lib/web/src/components/options-menu.tsx:125
 msgid "Failed to get RSS token"
 msgstr "RSS token авч чадсангүй"
 
@@ -1118,7 +1126,7 @@ msgstr "Зургийг ачаалж чадсангүй"
 msgid "Failed to load video"
 msgstr "Видеог ачаалж чадсангүй"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:170
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:173
 msgid "Failed to post comment"
 msgstr "Сэтгэгдэл нийтэлж чадсангүй"
 
@@ -1130,7 +1138,7 @@ msgstr "Бүртгэл хасч чадсангүй"
 msgid "Failed to request login code"
 msgstr "Нэвтрэх кодыг хүсэх амжилтгүй боллоо"
 
-#: ../../../lib/web/src/components/options-menu.tsx:133
+#: ../../../lib/web/src/components/options-menu.tsx:136
 msgid "Failed to revoke RSS access"
 msgstr "RSS хандалтыг цуцалж чадсангүй"
 
@@ -1142,11 +1150,11 @@ msgstr "Identity хадгалж чадсангүй"
 msgid "Failed to send verification code"
 msgstr "Баталгаажуулах код илгээж чадсангүй"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:190
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:193
 msgid "Failed to update comment"
 msgstr "Сэтгэгдэл шинэчилж чадсангүй"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:95
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:112
 msgid "Failed to upload attachment"
 msgstr "Хавсралт байршуулж чадсангүй"
 
@@ -1154,9 +1162,9 @@ msgstr "Хавсралт байршуулж чадсангүй"
 msgid "Feeds"
 msgstr "Feed-үүд"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:133
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:150
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:153
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:173
 msgid "Files"
 msgstr "Файлууд"
 
@@ -1324,7 +1332,7 @@ msgstr "Дотогшоо"
 msgid "Interests"
 msgstr "Сонирхлууд"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:312
+#: src/features/auth/sign-in/components/user-auth-form.tsx:365
 msgid "Invalid authenticator code"
 msgstr "Authenticator код хүчингүй"
 
@@ -1333,8 +1341,8 @@ msgstr "Authenticator код хүчингүй"
 #: src/features/auth/mfa/index.tsx:168
 #: src/features/auth/mfa/index.tsx:188
 #: src/features/auth/mfa/index.tsx:199
-#: src/features/auth/sign-in/components/user-auth-form.tsx:264
-#: src/features/auth/sign-in/components/user-auth-form.tsx:332
+#: src/features/auth/sign-in/components/user-auth-form.tsx:317
+#: src/features/auth/sign-in/components/user-auth-form.tsx:385
 msgid "Invalid code"
 msgstr "Код хүчингүй"
 
@@ -1352,8 +1360,9 @@ msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 
 msgstr "Буруу шошго: зөвхөн үсэг, тоо, зай, зураас, ташуу зураас (дээд тал нь 50 тэмдэгт)"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
-#: src/features/auth/sign-in/components/user-auth-form.tsx:276
-#: src/features/auth/sign-in/components/user-auth-form.tsx:295
+#: src/features/auth/sign-in/components/user-auth-form.tsx:153
+#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:348
 msgid "Invalid verification code"
 msgstr "Баталгаажуулах код хүчингүй"
 
@@ -1361,7 +1370,7 @@ msgstr "Баталгаажуулах код хүчингүй"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Таны хайж буй хуудас <0/>байхгүй эсвэл устгагдсан бололтой."
 
-#: ../../../lib/web/src/lib/locale-format.ts:110
+#: ../../../lib/web/src/lib/locale-format.ts:172
 msgid "Just now"
 msgstr "Дөнгөж сая"
 
@@ -1398,7 +1407,7 @@ msgstr "Зөвхөн үсэг, тоо, зай, зураас"
 msgid "Light"
 msgstr "Цайвар"
 
-#: ../../../lib/web/src/components/options-menu.tsx:190
+#: ../../../lib/web/src/components/options-menu.tsx:193
 msgid "Link"
 msgstr "Холбоос"
 
@@ -1438,7 +1447,7 @@ msgstr "Ачаалж байна..."
 
 #: src/features/auth/mfa/index.tsx:333
 #: src/features/auth/recovery/index.tsx:132
-#: src/features/auth/sign-in/components/user-auth-form.tsx:459
+#: src/features/auth/sign-in/components/user-auth-form.tsx:512
 msgid "Log in"
 msgstr "Нэвтрэх"
 
@@ -1479,7 +1488,7 @@ msgid "Login session expired, please try again"
 msgstr "Нэвтрэх сешн дууссан, дахин оролдоно уу"
 
 #: src/features/auth/mfa/index.tsx:357
-#: src/features/auth/sign-in/components/user-auth-form.tsx:510
+#: src/features/auth/sign-in/components/user-auth-form.tsx:568
 msgid "Lost access? Use a recovery code"
 msgstr "Хандалт алдсан уу? Сэргээх код ашиглана уу"
 
@@ -1541,7 +1550,7 @@ msgstr "Mochi бол тархсан аппликейшнд зориулсан н
 msgid "Mochi web"
 msgstr "Mochi веб"
 
-#: ../../../lib/web/src/components/options-menu.tsx:164
+#: ../../../lib/web/src/components/options-menu.tsx:167
 msgid "Moderation"
 msgstr ""
 
@@ -1549,8 +1558,8 @@ msgstr ""
 msgid "Monday"
 msgstr "Даваа"
 
-#: ../../../lib/web/src/components/options-menu.tsx:145
-#: ../../../lib/web/src/components/options-menu.tsx:152
+#: ../../../lib/web/src/components/options-menu.tsx:148
+#: ../../../lib/web/src/components/options-menu.tsx:155
 msgid "More options"
 msgstr "Бусад сонголтууд"
 
@@ -1575,7 +1584,7 @@ msgstr "Нэр 1000 тэмдэгтээс хэтрэхгүй байх ёстой"
 msgid "Network error"
 msgstr "Сүлжээний алдаа"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:460
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:453
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Шинэ"
@@ -1589,13 +1598,14 @@ msgstr "Энэ серверт шинэ бүртгэл идэвхгүй байн�
 msgid "New game"
 msgstr "Шинэ тоглоом"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:181
-#: src/features/auth/sign-in/components/user-auth-form.tsx:230
-#: src/features/auth/sign-in/components/user-auth-form.tsx:329
+#: src/features/auth/sign-in/components/user-auth-form.tsx:184
+#: src/features/auth/sign-in/components/user-auth-form.tsx:219
+#: src/features/auth/sign-in/components/user-auth-form.tsx:270
+#: src/features/auth/sign-in/components/user-auth-form.tsx:382
 msgid "New user signup is disabled."
 msgstr "Шинэ хэрэглэгчийн бүртгэл идэвхгүй байна."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:550
+#: src/features/auth/sign-in/components/user-auth-form.tsx:608
 msgid "Next"
 msgstr "Дараах"
 
@@ -1604,7 +1614,7 @@ msgstr "Дараах"
 msgid "Next image"
 msgstr "Дараагийн зураг"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:533
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:526
 msgid "No {parentClassNames} to add to"
 msgstr "Нэмэх {parentClassNames} алга"
 
@@ -1616,11 +1626,11 @@ msgstr "Хандалтын дүрэм тохируулагдаагүй байн�
 msgid "No activity yet"
 msgstr "Үйл ажиллагаа алга"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:178
+#: src/features/auth/sign-in/components/user-auth-form.tsx:181
 msgid "No backup file selected"
 msgstr "Нөөцлөлтийн файл сонгогдоогүй"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:458
 msgid "No comments yet"
 msgstr "Сэтгэгдэл алга"
 
@@ -1636,7 +1646,7 @@ msgstr "Тоглоом алга"
 msgid "No groups available"
 msgstr "Боломжит групп байхгүй"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:493
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Одоогоор зүйл үүсгэх боломжгүй. Эхлээд шаардлагатай эх зүйлийг үүсгэнэ үү."
 
@@ -1644,8 +1654,8 @@ msgstr "Одоогоор зүйл үүсгэх боломжгүй. Эхлээд 
 msgid "No matching objects"
 msgstr "Тохирох обьект алга"
 
-#: src/services/auth-service.ts:200
-#: src/services/auth-service.ts:232
+#: src/services/auth-service.ts:204
+#: src/services/auth-service.ts:236
 msgid "No MFA session"
 msgstr "MFA сесс байхгүй"
 
@@ -1666,6 +1676,7 @@ msgstr "Газар олдсонгүй"
 msgid "No profile"
 msgstr "Профайл алга"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:74
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:82
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
 msgid "No results found"
@@ -1703,9 +1714,9 @@ msgid "No views"
 msgstr "Үзэлт алга"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:509
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:512
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:519
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:365
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:391
@@ -1727,7 +1738,7 @@ msgstr "Юу ч үгүй; шинэ данс үүсгэх"
 msgid "Normal"
 msgstr "Энгийн"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:158
+#: src/features/auth/sign-in/components/user-auth-form.tsx:161
 msgid "Not a migration bundle"
 msgstr "Шилжүүлгийн багц биш"
 
@@ -1828,11 +1839,11 @@ msgstr "Сонголтын нэр"
 msgid "Options"
 msgstr "Сонголтууд"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:429
+#: src/features/auth/sign-in/components/user-auth-form.tsx:482
 msgid "Or enter authenticator code"
 msgstr "Эсвэл баталгаажуулалтын кодыг оруулна уу"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:471
+#: src/features/auth/sign-in/components/user-auth-form.tsx:529
 #: src/features/landing/landing-page.tsx:412
 msgid "Or log in with"
 msgstr "Эсвэл-ээр нэвтрэх"
@@ -1854,7 +1865,7 @@ msgstr "Эзэмшигч"
 msgid "Page {currentPage} of {totalPages}"
 msgstr "{totalPages}-с {currentPage}-р хуудас"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:508
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
 msgid "Parent"
 msgstr "Эх"
 
@@ -1862,7 +1873,7 @@ msgstr "Эх"
 msgid "passkey"
 msgstr "passkey"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:334
+#: ../../../lib/web/src/components/step-up-dialog.tsx:348
 #: src/features/auth/mfa/index.tsx:303
 #: src/features/landing/landing-page.tsx:431
 msgid "Passkey"
@@ -1878,11 +1889,11 @@ msgstr "Passkey-ээр нэвтрэх цуцлагдсан"
 msgid "Passkey login failed"
 msgstr "Passkey-ээр нэвтрэх амжилтгүй"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:209
+#: src/features/auth/sign-in/components/user-auth-form.tsx:249
 msgid "Passkey login required"
 msgstr "Passkey-ээр нэвтрэх шаардлагатай"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:209
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
 msgid "Passkey verification failed. Please try again."
 msgstr "Нэвтрэх түлхүүрийн баталгаажуулалт амжилтгүй боллоо. Дахин оролдоно уу."
 
@@ -1894,7 +1905,7 @@ msgstr "Passkey-ууд"
 msgid "Passphrase"
 msgstr "Нууц үг"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:364
+#: src/features/auth/sign-in/components/user-auth-form.tsx:417
 msgid "Paste the login code you received by email"
 msgstr "Имэйлээр хүлээн авсан нэвтрэх кодоо буулгана уу"
 
@@ -1906,29 +1917,30 @@ msgstr "Загвар (regex)"
 msgid "Pick a date"
 msgstr "Огноо сонгох"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:313
+#: src/features/auth/sign-in/components/user-auth-form.tsx:366
 msgid "Please check your authenticator app and try again."
 msgstr "Authenticator апп-аа шалгаад дахин оролдоно уу."
 
 #: src/features/auth/mfa/index.tsx:169
 #: src/features/auth/mfa/index.tsx:189
 #: src/features/auth/mfa/index.tsx:200
-#: src/features/auth/sign-in/components/user-auth-form.tsx:333
+#: src/features/auth/sign-in/components/user-auth-form.tsx:386
 msgid "Please check your code and try again."
 msgstr "Кодоо шалгаад дахин оролдоно уу."
 
 #: src/features/auth/mfa/index.tsx:127
 #: src/features/auth/mfa/index.tsx:149
-#: src/features/auth/sign-in/components/user-auth-form.tsx:265
+#: src/features/auth/sign-in/components/user-auth-form.tsx:318
 msgid "Please check your codes and try again."
 msgstr "Кодуудаа шалгаад дахин оролдоно уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:277
-#: src/features/auth/sign-in/components/user-auth-form.tsx:296
+#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:330
+#: src/features/auth/sign-in/components/user-auth-form.tsx:349
 msgid "Please check your email and try again."
 msgstr "Имэйлээ шалгаад дахин оролдоно уу."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:99
+#: ../../../lib/web/src/components/comment-composer.tsx:84
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:323
 msgid "Please check your internet connection and try again."
@@ -1955,9 +1967,10 @@ msgstr "Сэргээх кодоо оруулна уу"
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Энэ нөөцөд хандахын тулд <0/> тохирох мэдээллээр нэвтэрнэ үү."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:185
-#: src/features/auth/sign-in/components/user-auth-form.tsx:234
-#: src/features/auth/sign-in/components/user-auth-form.tsx:337
+#: src/features/auth/sign-in/components/user-auth-form.tsx:188
+#: src/features/auth/sign-in/components/user-auth-form.tsx:225
+#: src/features/auth/sign-in/components/user-auth-form.tsx:274
+#: src/features/auth/sign-in/components/user-auth-form.tsx:390
 msgid "Please try again or contact support."
 msgstr "Дахин оролдох эсвэл дэмжлэг авна уу."
 
@@ -1965,7 +1978,7 @@ msgstr "Дахин оролдох эсвэл дэмжлэг авна уу."
 msgid "Please try again."
 msgstr "Дахин оролдоно уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:210
+#: src/features/auth/sign-in/components/user-auth-form.tsx:250
 msgid "Please use the \"Log in with passkey\" button."
 msgstr "\"Passkey-ээр нэвтрэх\" товчийг ашиглана уу."
 
@@ -1973,11 +1986,11 @@ msgstr "\"Passkey-ээр нэвтрэх\" товчийг ашиглана уу."
 msgid "Please wait a moment and try again."
 msgstr "Түр хүлээгээд дахин оролдоно уу."
 
-#: ../../../lib/web/src/components/options-menu.tsx:175
+#: ../../../lib/web/src/components/options-menu.tsx:178
 msgid "Posts"
 msgstr "Нийтлэлүүд"
 
-#: ../../../lib/web/src/components/options-menu.tsx:178
+#: ../../../lib/web/src/components/options-menu.tsx:181
 msgid "Posts and comments"
 msgstr "Нийтлэл болон сэтгэгдэл"
 
@@ -2063,9 +2076,10 @@ msgstr "Dashboard руу шилжүүлж байна…"
 msgid "Reduce interest"
 msgstr "Хүүг бууруулах"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:180
-#: src/features/auth/sign-in/components/user-auth-form.tsx:229
-#: src/features/auth/sign-in/components/user-auth-form.tsx:328
+#: src/features/auth/sign-in/components/user-auth-form.tsx:183
+#: src/features/auth/sign-in/components/user-auth-form.tsx:218
+#: src/features/auth/sign-in/components/user-auth-form.tsx:269
+#: src/features/auth/sign-in/components/user-auth-form.tsx:381
 msgid "Registration disabled"
 msgstr "Бүртгэл идэвхгүй"
 
@@ -2081,9 +2095,9 @@ msgstr "Харьцангуй (5м, 3ц, 2ө)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 цагийн дотор харьцангуй, эс бөгөөс үнэмлэхүй"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:236
+#: ../../../lib/web/src/components/attachment-composer.tsx:210
+#: ../../../lib/web/src/components/attachment-composer.tsx:247
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:190
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:598
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -2136,13 +2150,13 @@ msgstr "Багана нэр өөрчлөх"
 msgid "Rename this board column"
 msgstr "Энэ board-ын баганын нэр өөрчлөх"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:294
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:342
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:295
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:343
 msgid "Reply"
 msgstr "Хариу"
 
 #. placeholder {0}: comment.name || comment.author
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:385
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:386
 msgid "Reply to {0}..."
 msgstr "{0}-д хариу..."
 
@@ -2150,7 +2164,7 @@ msgstr "{0}-д хариу..."
 msgid "Required"
 msgstr "Шаардлагатай"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:367
+#: ../../../lib/web/src/components/step-up-dialog.tsx:381
 msgid "Resend email"
 msgstr "Имэйлийг дахин илгээх"
 
@@ -2168,11 +2182,15 @@ msgstr "{title}-ийг шинэчлэх"
 msgid "Reset all settings to default values"
 msgstr "Бүх тохиргоог анхдагч утгад нь сэргээх"
 
+#: src/features/auth/sign-in/components/user-auth-form.tsx:512
+msgid "Restore"
+msgstr "Сэргээх"
+
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:87
 msgid "Restore a backup file"
 msgstr "Нөөцлөлтийн файлыг сэргээх"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:184
+#: src/features/auth/sign-in/components/user-auth-form.tsx:187
 #: src/routes/restore.tsx:108
 msgid "Restore failed"
 msgstr "Сэргээх амжилтгүй болсон"
@@ -2181,13 +2199,21 @@ msgstr "Сэргээх амжилтгүй болсон"
 msgid "Restoring your account"
 msgstr "Таны бүртгэлийг сэргээж байна"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:253
+#: ../../../lib/web/src/components/attachment-composer.tsx:264
 msgid "Retry"
 msgstr "Дахин оролдох"
 
-#: ../../../lib/web/src/components/options-menu.tsx:181
+#: ../../../lib/web/src/components/options-menu.tsx:250
+msgid "Revoke"
+msgstr "Цуцлах"
+
+#: ../../../lib/web/src/components/options-menu.tsx:184
 msgid "Revoke access"
 msgstr "Хандалтыг цуцлах"
+
+#: ../../../lib/web/src/components/options-menu.tsx:244
+msgid "Revoke RSS access?"
+msgstr "RSS хандалтыг цуцлах уу?"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -2206,15 +2232,15 @@ msgstr "Мөрүүдийг группд хуваах"
 msgid "Rows per page"
 msgstr "Хуудас тутамын мөр"
 
-#: ../../../lib/web/src/components/options-menu.tsx:131
+#: ../../../lib/web/src/components/options-menu.tsx:134
 msgid "RSS access revoked"
 msgstr "RSS хандалтыг цуцаллаа"
 
-#: ../../../lib/web/src/components/options-menu.tsx:171
+#: ../../../lib/web/src/components/options-menu.tsx:174
 msgid "RSS feed"
 msgstr "RSS фид"
 
-#: ../../../lib/web/src/components/options-menu.tsx:121
+#: ../../../lib/web/src/components/options-menu.tsx:123
 msgid "RSS URL copied to clipboard"
 msgstr "RSS URL clipboard руу хуулагдсан"
 
@@ -2222,7 +2248,7 @@ msgstr "RSS URL clipboard руу хуулагдсан"
 msgid "Saturday"
 msgstr "Бямба"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:269
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:270
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:173
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:77
@@ -2274,6 +2300,7 @@ msgstr "Энэ үзэмжээр хайх, ажиглах, эрэмбэлэх."
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:181
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:257
+#: ../../../lib/web/src/components/inline-entity-search.tsx:73
 #: ../../../lib/web/src/components/person-picker.tsx:324
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:81
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
@@ -2373,7 +2400,7 @@ msgstr "Сонгогдсон: <0>{0}</0>"
 msgid "Send again"
 msgstr "Дахин илгээх"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:307
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
 msgid "Send email"
 msgstr "Имэйл илгээх"
 
@@ -2407,7 +2434,7 @@ msgstr "Эхлэл, очих газрыг тогтоох"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:126
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
-#: ../../../lib/web/src/components/options-menu.tsx:196
+#: ../../../lib/web/src/components/options-menu.tsx:199
 msgid "Settings"
 msgstr "Тохиргоо"
 
@@ -2476,7 +2503,7 @@ msgstr "Жижиг"
 msgid "Sort"
 msgstr "Эрэмбэлэх"
 
-#: ../../../lib/web/src/components/options-menu.tsx:158
+#: ../../../lib/web/src/components/options-menu.tsx:161
 msgid "Sources"
 msgstr "Эх сурвалжууд"
 
@@ -2489,7 +2516,7 @@ msgstr "Уужим"
 msgid "Start again"
 msgstr "Дахин эхлэх"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:451
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:459
 msgid "Start the discussion by adding the first comment."
 msgstr "Эхний сэтгэгдэл нэмж хэлэлцүүлэг эхлүүл."
 
@@ -2505,16 +2532,18 @@ msgstr "Гэхдээ хүлээж бай!"
 msgid "Subject"
 msgstr "Сэдэв"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:431
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:440
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:439
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:448
 msgid "Submit comment"
 msgstr "Сэтгэгдэл илгээх"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:470
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:475
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:476
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:481
 msgid "Submit reply"
 msgstr "Хариу илгээх"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:76
+#: ../../../lib/web/src/components/recommended-entities.tsx:66
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:83
 #: ../../../lib/web/src/components/search-entity-page.tsx:74
 msgid "Subscribe"
@@ -2576,7 +2605,7 @@ msgstr "Текст"
 msgid "That {0} account is already linked to another user"
 msgstr "Тэр {0} данс өөр хэрэглэгчтэй холбогдсон байна"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/components/step-up-dialog.tsx:204
 msgid "That code is incorrect or has expired."
 msgstr "Энэ код буруу эсвэл хугацаа нь дууссан байна."
 
@@ -2588,11 +2617,11 @@ msgstr "Тэр нэвтрэх үйлчилгээ боломжгүй байна"
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Дээр оруулсан имэйл нь энэ серверт шинэ бүртгэлийн нэр болно. Нөөшлөлтийн таних мэдээлэл энд аль хэдийн идэвхтэй байж болохгүй — өөр сервер рүү сэргээх, эсвэл одоо байгаа бүртгэлийг эхлээд устгана уу."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:171
+#: src/features/auth/sign-in/components/user-auth-form.tsx:174
 msgid "The file may be damaged or have been modified."
 msgstr "Файл гэмтсэн эсвэл өөрчлөгдсөн байж магадгүй."
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:155
+#: src/features/auth/sign-in/components/user-auth-form.tsx:158
 msgid "The passphrase you entered does not match the backup."
 msgstr "Таны оруулсан нууц үг нөөцлөлттэй тохирохгүй байна."
 
@@ -2625,7 +2654,7 @@ msgstr "Загвар"
 msgid "Theme Settings"
 msgstr "Загварын тохиргоо"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:163
+#: src/features/auth/sign-in/components/user-auth-form.tsx:166
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Энэ нөөцлөлтийг Mochi-ийн шинэ хувилбараар үүсгэсэн. Эхлээд энэ серверийг шинэчилнэ үү."
 
@@ -2682,6 +2711,7 @@ msgid "Toggle watched filter"
 msgstr "Үзэх шүүлтүүрийг сэлгэх"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:74
+#: src/features/auth/sign-in/components/user-auth-form.tsx:222
 msgid "Too many requests"
 msgstr "Хэт олон хүсэлт"
 
@@ -2763,11 +2793,11 @@ msgstr "Үл мэдэгдэх"
 msgid "Unpacking your data"
 msgstr "Таны өгөгдлийг задалж байна"
 
-#: ../../../lib/web/src/components/options-menu.tsx:211
+#: ../../../lib/web/src/components/options-menu.tsx:214
 msgid "Unsubscribe"
 msgstr "Захиалгаас гарах"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:286
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:277
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
 msgid "Untitled"
@@ -2782,12 +2812,12 @@ msgstr "Баталгаажаагүй"
 msgid "Updated"
 msgstr "Шинэчлэгдсэн"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:630
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:259
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:607
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:296
 msgid "Upload"
 msgstr "Байршуулах"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:159
+#: src/features/auth/sign-in/components/user-auth-form.tsx:162
 msgid "Upload a .zip file exported from Mochi's data export."
 msgstr "Mochi-ийн өгөгдлийн экспортоос экспортолсон .zip файлыг байршуулна уу."
 
@@ -2799,11 +2829,11 @@ msgstr "Байршуулалтын явц"
 msgid "Use a different account"
 msgstr "Өөр данс ашиглах"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:486
+#: src/features/auth/sign-in/components/user-auth-form.tsx:544
 msgid "Use a passkey"
 msgstr "Нэвтрэх түлхүүр ашиглах"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:338
+#: ../../../lib/web/src/components/step-up-dialog.tsx:352
 msgid "Use your passkey"
 msgstr "Нэвтрэх түлхүүрээ ашиглах"
 
@@ -2826,11 +2856,11 @@ msgid "Verification code sent"
 msgstr "Баталгаажуулах код илгээгдсэн"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:248
-#: src/features/auth/sign-in/components/user-auth-form.tsx:336
+#: src/features/auth/sign-in/components/user-auth-form.tsx:389
 msgid "Verification failed"
 msgstr "Баталгаажуулалт амжилтгүй"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:388
+#: ../../../lib/web/src/components/step-up-dialog.tsx:402
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
@@ -2908,7 +2938,7 @@ msgstr "Лхагва гараг"
 msgid "Wikis"
 msgstr "Wiki-нууд"
 
-#: src/features/auth/sign-in/components/user-auth-form.tsx:154
+#: src/features/auth/sign-in/components/user-auth-form.tsx:157
 msgid "Wrong passphrase"
 msgstr "Нууц үг буруу"
 
@@ -2943,7 +2973,7 @@ msgstr "Таны данс түр зогсоосон"
 
 #: src/features/auth/mfa/index.tsx:196
 #: src/features/auth/recovery/index.tsx:89
-#: src/features/auth/sign-in/components/user-auth-form.tsx:325
+#: src/features/auth/sign-in/components/user-auth-form.tsx:378
 msgid "Your account has been suspended."
 msgstr "Таны данс түр зогсоосон."
 
@@ -2963,7 +2993,7 @@ msgstr "Таны данс нэвтрэхэд passkey шаардаж байна"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Таны бүртгэл {source}-с энд шилжсэн. Тэнд устгах хүртэл мессеж, мэдэгдлүүд хоёр сервер рүү хүрч болно, таны зарим контент хуучин серверээс ирсээр байж болно, дагагчид таныг эндээс олоход хэдэн минут зарцуулж магадгүй."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:295
+#: ../../../lib/web/src/components/comment-composer.tsx:279
 msgid "Your attachments will be lost."
 msgstr "Таны хавсралтууд устах болно."
 
@@ -2975,10 +3005,10 @@ msgstr "Таны өгөгдлийг нөөцлөлтөөс сэргээж бай
 msgid "Your name, as you'd like others to see it"
 msgstr "Бусдад харагдах байдлаар таны нэр"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:293
+#: ../../../lib/web/src/components/comment-composer.tsx:277
 msgid "Your text and attachments will be lost."
 msgstr "Таны текст болон хавсралтууд устах болно."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:296
+#: ../../../lib/web/src/components/comment-composer.tsx:280
 msgid "Your text will be lost."
 msgstr "Чиний текст алдагдана."
