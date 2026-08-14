@@ -11,7 +11,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2, ArrowRight } from 'lucide-react'
 import { toast, getErrorMessage, Button, Input, Form, FormControl, FormField, FormItem, FormLabel, FormMessage, RadioGroup, RadioGroupItem } from '@mochi/web'
 import { submitIdentity, abandonSignup } from '@/services/auth-service'
-import { safeRedirect } from '@/lib/redirect'
+import { appUrl, safeRedirect } from '@/lib/redirect'
 import { mergeProfileCookie, readProfileCookie } from '@/lib/profile-cookie'
 
 type IdentityFormValues = {
@@ -143,9 +143,9 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
         <p className="text-center text-xs text-muted-foreground">
           <Trans>
             By creating your account, you agree to the{' '}
-            <a href="/login/rules" className="underline-offset-4 hover:underline">Server rules</a>,{' '}
-            <a href="/login/terms" className="underline-offset-4 hover:underline">Terms and conditions</a>, and{' '}
-            <a href="/login/privacy" className="underline-offset-4 hover:underline">Privacy</a>.
+            <a href={appUrl('rules')} className="underline-offset-4 hover:underline">Server rules</a>,{' '}
+            <a href={appUrl('terms')} className="underline-offset-4 hover:underline">Terms and conditions</a>, and{' '}
+            <a href={appUrl('privacy')} className="underline-offset-4 hover:underline">Privacy</a>.
           </Trans>
         </p>
 
@@ -157,7 +157,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
             onClick={async () => {
               try {
                 await abandonSignup()
-                window.location.href = '/login/'
+                window.location.href = appUrl('')
               } catch (error) {
                 toast.error(getErrorMessage(error, t`Could not cancel`))
               }

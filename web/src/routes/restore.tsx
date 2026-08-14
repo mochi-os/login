@@ -9,6 +9,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { requestHelpers } from '@mochi/web'
 import { Loader2 } from 'lucide-react'
 import { AuthLayout } from '@/features/auth/auth-layout'
+import { appUrl } from '@/lib/redirect'
 
 // Waiting page shown after POST /_/auth/restore succeeds. A session
 // cookie for a placeholder user in status='pending-restore' is now set.
@@ -117,7 +118,7 @@ function RestoringRouteComponent() {
             </Trans>
           </p>
           <a
-            href='/login/'
+            href={appUrl('')}
             className='text-primary text-sm underline-offset-4 hover:underline'
           >
             <Trans>Back to sign up</Trans>

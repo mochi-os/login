@@ -3,6 +3,20 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
+import { getRouterBasepath } from '@mochi/web'
+
+/** Build an absolute URL inside this app for full-page navigations, links
+ * and asset references. The prefix is derived the same way the router's
+ * basepath is, so a non-standard prefix keeps working. When the app is
+ * served at the root (the anonymous default app — no mochi:app meta, no
+ * prefix in the URL), full-page URLs use the canonical /login/ prefix that
+ * the server's own redirects use: a bare '/identity' load would derive
+ * 'identity' as the app prefix and route wrong. */
+export const appUrl = (path: string): string => {
+  const base = getRouterBasepath()
+  return (base === '/' ? '/login/' : base) + path
+}
+
 /** Validate a redirect URL is a safe same-origin path, not an open redirect. */
 export function safeRedirect(url: string | undefined, fallback?: string): string {
   const defaultUrl = fallback || import.meta.env.VITE_DEFAULT_APP_URL || '/'

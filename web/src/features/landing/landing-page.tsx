@@ -44,7 +44,7 @@ import {
   XIcon,
 } from '@/features/auth/components/brand-icons'
 import { passkeyLogin } from '@/services/auth-service'
-import { safeRedirect } from '@/lib/redirect'
+import { appUrl, safeRedirect } from '@/lib/redirect'
 import { authApi } from '@/api/auth'
 import { type OAuthProvider } from '@/api/types/auth'
 import { oauthErrorMessage } from '@/lib/oauth-errors'
@@ -76,7 +76,7 @@ function MochiLogo({
 }) {
   return (
     <img
-      src="/login/images/logo-header.png"
+      src={appUrl('images/logo-header.png')}
       alt="Mochi"
       width={size}
       height={size}
@@ -215,7 +215,7 @@ export function LandingPage() {
             ? `?redirect=${encodeURIComponent(redirect)}`
             : ''
 
-          window.location.replace(`/login/codes${codesParams}`)
+          window.location.replace(appUrl(`codes${codesParams}`))
         } else {
           toast.success(t`Logged in`)
 
@@ -230,7 +230,7 @@ export function LandingPage() {
                 ? `?redirect=${encodeURIComponent(targetPath)}`
                 : ''
 
-            window.location.replace(`/login/identity${identityParams}`)
+            window.location.replace(appUrl(`identity${identityParams}`))
           }
         }
       }
@@ -470,7 +470,7 @@ export function LandingPage() {
           {step === 'email' && (
             <p className="space-x-2 pt-2 text-center text-xs text-muted-foreground">
               <a
-                href="/login/rules"
+                href={appUrl('rules')}
                 className="transition-colors hover:text-foreground"
               >
                 <Trans>Server rules</Trans>
@@ -479,7 +479,7 @@ export function LandingPage() {
               <span aria-hidden="true">·</span>
 
               <a
-                href="/login/terms"
+                href={appUrl('terms')}
                 className="transition-colors hover:text-foreground"
               >
                 <Trans>Terms and conditions</Trans>
@@ -488,7 +488,7 @@ export function LandingPage() {
               <span aria-hidden="true">·</span>
 
               <a
-                href="/login/privacy"
+                href={appUrl('privacy')}
                 className="transition-colors hover:text-foreground"
               >
                 <Trans>Privacy</Trans>

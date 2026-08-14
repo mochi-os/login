@@ -7,7 +7,7 @@ import { z } from 'zod'
 import { createFileRoute } from '@tanstack/react-router'
 import { useAuthStore } from '@/stores/auth-store'
 import { resolveSession } from '@/services/auth-service'
-import { safeRedirect } from '@/lib/redirect'
+import { appUrl, safeRedirect } from '@/lib/redirect'
 import { LandingPage } from '@/features/landing/landing-page'
 
 const searchSchema = z.object({
@@ -39,13 +39,13 @@ export const Route = createFileRoute('/')({
       // Account pending closure: route to the reactivation interstitial
       // rather than into the app.
       if (session.closing) {
-        window.location.replace('/login/closing')
+        window.location.replace(appUrl('closing'))
         return new Promise(() => {})
       }
 
       if (!session.hasIdentity) {
         const params = search.redirect ? `?redirect=${encodeURIComponent(search.redirect)}` : ''
-        window.location.replace(`/login/identity${params}`)
+        window.location.replace(appUrl(`identity${params}`))
         return new Promise(() => {})
       }
 

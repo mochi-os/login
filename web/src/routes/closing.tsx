@@ -9,6 +9,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { RotateCcw } from 'lucide-react'
 import { Button, getErrorMessage, requestHelpers, toast, useFormat } from '@mochi/web'
 import { AuthLayout } from '@/features/auth/auth-layout'
+import { appUrl } from '@/lib/redirect'
 
 // The reactivation interstitial. A user whose account is pending closure
 // (status='closing') re-authenticated and was routed here instead of into
@@ -52,7 +53,7 @@ function ClosingRouteComponent() {
       })
       .catch(() => {
         // No valid session — back to login.
-        if (!cancelled) window.location.href = '/login/'
+        if (!cancelled) window.location.href = appUrl('')
       })
     return () => {
       cancelled = true
@@ -78,7 +79,7 @@ function ClosingRouteComponent() {
     } catch {
       // Going to login regardless — the goal is to leave this session.
     }
-    window.location.href = '/login/'
+    window.location.href = appUrl('')
   }
 
   // Resolving status (or redirecting away) — render nothing rather than flash

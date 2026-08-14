@@ -14,18 +14,12 @@ import { OauthButtons } from '@/features/auth/components/oauth-buttons'
 import { Loader2, Mail, ArrowLeft, ArrowRight, Key } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
 import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot, UploadProgress, useUploadProgress } from '@mochi/web'
-import { safeRedirect } from '@/lib/redirect'
+import { appUrl, safeRedirect } from '@/lib/redirect'
 
 type EmailFormValues = { email: string }
 type VerificationFormValues = { emailCode?: string; totpCode?: string }
 
-/** Stable id for the email <form>. The Advanced disclosure renders
- * BELOW the passkey/oauth buttons (parent layout) for visual priority
- * but its inputs use the HTML5 `form="..."` attribute to associate
- * back to this form so they submit together — that's what gets the
- * username + peer ID into Chrome's autofill memory. Exported so the
- * parent can pass the same id to AccountSourceAdvanced. */
-export const emailFormId = 'login-email-form'
+const emailFormId = 'login-email-form'
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLFormElement> {
   redirectTo?: string
@@ -109,14 +103,14 @@ export function UserAuthForm({
       window.location.href = targetPath
     } else {
       const identityParams = targetPath && targetPath !== '/' ? `?redirect=${encodeURIComponent(targetPath)}` : ''
-      window.location.replace(`/login/identity${identityParams}`)
+      window.location.replace(appUrl(`identity${identityParams}`))
     }
   }
 
   // Handle MFA redirect
   function handleMfaRequired() {
     const codesParams = redirectTo && redirectTo !== '/' ? `?redirect=${encodeURIComponent(redirectTo)}` : ''
-    window.location.replace(`/login/codes${codesParams}`)
+    window.location.replace(appUrl(`codes${codesParams}`))
   }
 
   // Send (or resend) the emailed login code. Marks codeSent so the verification
@@ -162,7 +156,7 @@ export function UserAuthForm({
       await upload((onProgress) =>
         signupRestore(email, restorePassphrase, bundle, code, onProgress)
       )
-      window.location.href = '/login/restore'
+      window.location.href = appUrl('restore')
     } catch (error) {
       const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
       const reason = (responseData as { error?: string } | undefined)?.error

@@ -4,6 +4,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
 import { LanguagePicker } from '@mochi/web'
+import { appUrl } from '@/lib/redirect'
 
 type AuthLayoutProps = {
   children: React.ReactNode
@@ -20,7 +21,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
       <div className='mx-auto flex w-full flex-col justify-center space-y-2 py-8 sm:w-[480px] sm:p-8'>
         <div className='mb-4 flex flex-col items-center justify-center gap-2'>
           <img
-            src='/login/images/logo-header.png'
+            src={appUrl('images/logo-header.png')}
             alt='Mochi'
             className='h-24 w-24 sm:h-32 sm:w-32'
           />
