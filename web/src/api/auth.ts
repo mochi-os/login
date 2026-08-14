@@ -28,9 +28,16 @@ interface BeginLoginRequest {
   email: string
 }
 
-interface BeginLoginResponse {
+export interface BeginLoginResponse {
+  // The factors AND-ed at login (empty = any one allowed factor suffices).
   methods: string[]
-  hasPasskey?: boolean
+  // The factors the user may use as a sign-in proof after entering their
+  // email — email code, passkey, authenticator — with disabled ones removed.
+  allowed?: string[]
+  has_passkey?: boolean
+  // Offer "Continue with <provider>" in the verification step: OAuth can verify
+  // this identified account (usable, and required or nothing-else-required).
+  oauth?: boolean
   new?: boolean
 }
 
@@ -39,7 +46,7 @@ interface TotpLoginRequest {
   code: string
 }
 
-interface TotpLoginResponse {
+export interface TotpLoginResponse {
   // No token or login field: the server sets a session cookie and returns
   // neither. They were declared but never sent, which left a token-shaped
   // slot for future code to start persisting a credential into.

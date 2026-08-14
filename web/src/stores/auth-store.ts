@@ -4,18 +4,12 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
 import { create } from 'zustand'
+import { type AuthUser } from '@/api/types/auth'
 import {
   clearProfileCookie,
   mergeProfileCookie,
   readProfileCookie,
 } from '@/lib/profile-cookie'
-
-export type IdentityPrivacy = 'public' | 'private'
-
-export interface AuthUser {
-  email?: string
-  name?: string
-}
 
 export interface MfaState {
   required: boolean
@@ -25,11 +19,7 @@ export interface MfaState {
 
 interface AuthState {
   user: AuthUser | null
-  isLoading: boolean
   isInitialized: boolean
-  identityName: string
-  identityPrivacy: IdentityPrivacy | ''
-  isAuthenticated: boolean
   hasIdentity: boolean
   mfa: MfaState
 
@@ -37,7 +27,7 @@ interface AuthState {
   setUser: (user: AuthUser | null) => void
   clearAuth: () => void
   initialize: () => void
-  setIdentity: (name: string, privacy: IdentityPrivacy) => void
+  setIdentity: (name: string) => void
   clearIdentity: () => void
   setMfa: (partial: string, remaining: string[]) => void
   clearMfa: () => void
@@ -48,11 +38,7 @@ export const useAuthStore = create<AuthState>()((set) => {
 
   return {
     user: null,
-    isLoading: false,
     isInitialized: false,
-    identityName: initialProfile.name || '',
-    identityPrivacy: '',
-    isAuthenticated: false,
     hasIdentity: Boolean(initialProfile.name),
     mfa: { required: false, partial: '', remaining: [] },
 
@@ -67,8 +53,6 @@ export const useAuthStore = create<AuthState>()((set) => {
 
       set({
         user,
-        isAuthenticated: true,
-        identityName: user?.name || '',
         hasIdentity: Boolean(user?.name),
         isInitialized: true,
       })
@@ -92,11 +76,7 @@ export const useAuthStore = create<AuthState>()((set) => {
 
       set({
         user: null,
-        identityName: '',
-        identityPrivacy: '',
-        isAuthenticated: false,
         hasIdentity: false,
-        isLoading: false,
         isInitialized: true,
         mfa: { required: false, partial: '', remaining: [] },
       })
@@ -116,20 +96,16 @@ export const useAuthStore = create<AuthState>()((set) => {
                 ...(profile.name ? { name: profile.name } : {}),
               }
             : null,
-        identityName: profile.name || '',
-        identityPrivacy: '',
         hasIdentity: Boolean(profile.name),
         isInitialized: true,
       })
     },
 
-    setIdentity: (name, privacy) => {
+    setIdentity: (name) => {
       mergeProfileCookie({
         name,
       })
       set({
-        identityName: name,
-        identityPrivacy: privacy,
         hasIdentity: Boolean(name),
       })
     },
@@ -139,8 +115,6 @@ export const useAuthStore = create<AuthState>()((set) => {
       // is the OAuth-provided prefill that seeds /login/identity. It is only
       // removed when the user explicitly logs out (clearAuth).
       set({
-        identityName: '',
-        identityPrivacy: '',
         hasIdentity: false,
       })
     },

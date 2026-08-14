@@ -52,7 +52,6 @@ export function Mfa() {
   const navigate = useNavigate()
   const { mfa, clearMfa, user } = useAuthStore()
   const [isLoading, setIsLoading] = useState(false)
-  const [completedMethods, setCompletedMethods] = useState<string[]>([])
 
   const remaining = mfa.remaining || []
   const needsEmail = remaining.includes('email')
@@ -134,7 +133,6 @@ export function Mfa() {
 
         if (result.mfa && result.remaining) {
           // More methods required (passkey?)
-          setCompletedMethods([...completedMethods, 'email', 'totp'])
           return
         }
 
@@ -154,7 +152,6 @@ export function Mfa() {
         const result = await completeMfa('email', data.emailCode)
 
         if (result.mfa && result.remaining) {
-          setCompletedMethods([...completedMethods, 'email'])
           return
         }
 
@@ -174,7 +171,6 @@ export function Mfa() {
         const result = await completeMfa('totp', data.totpCode)
 
         if (result.mfa && result.remaining) {
-          setCompletedMethods([...completedMethods, 'totp'])
           return
         }
 

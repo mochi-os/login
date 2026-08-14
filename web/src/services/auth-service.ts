@@ -8,8 +8,10 @@ import { i18n } from '@lingui/core'
 import axios, { type AxiosProgressEvent } from 'axios'
 import { authApi,
   type AuthUser,
+  type BeginLoginResponse,
   type MfaResponse,
   type RequestCodeResponse,
+  type TotpLoginResponse,
   type VerifyCodeResponse,
 } from '@/api/auth'
 import endpoints from '@/api/endpoints'
@@ -64,8 +66,8 @@ export const resolveSession = async (): Promise<{
     ...(data.user?.email ? { email: data.user.email } : {}),
     ...(name ? { name } : {}),
   })
-  if (data.identity?.name && data.identity.privacy) {
-    store.setIdentity(data.identity.name, data.identity.privacy)
+  if (data.identity?.name) {
+    store.setIdentity(data.identity.name)
   } else {
     store.clearIdentity()
   }
@@ -74,19 +76,6 @@ export const resolveSession = async (): Promise<{
     closing: data.user?.status === 'closing',
     hasIdentity: Boolean(name),
   }
-}
-
-interface BeginLoginResponse {
-  // The factors AND-ed at login (empty = any one allowed factor suffices).
-  methods: string[]
-  // The factors the user may use as a sign-in proof after entering their
-  // email — email code, passkey, authenticator — with disabled ones removed.
-  allowed?: string[]
-  has_passkey?: boolean
-  // Offer "Continue with <provider>" in the verification step: OAuth can verify
-  // this identified account (usable, and required or nothing-else-required).
-  oauth?: boolean
-  new?: boolean
 }
 
 export const beginLogin = async (email: string): Promise<BeginLoginResponse> => {
@@ -99,13 +88,6 @@ export const beginLogin = async (email: string): Promise<BeginLoginResponse> => 
   })
 
   return response
-}
-
-interface TotpLoginResponse {
-  name?: string
-  mfa?: boolean
-  partial?: string
-  remaining?: string[]
 }
 
 export const totpLogin = async (
@@ -331,12 +313,10 @@ export const submitIdentity = async ({
     privacy,
     ...(language ? { language } : {}),
   })
-  useAuthStore.getState().setIdentity(name, privacy)
+  useAuthStore.getState().setIdentity(name)
 }
 
 export const abandonSignup = async (): Promise<void> => {
   await requestHelpers.post(endpoints.auth.abandon, {})
   useAuthStore.getState().clearAuth()
 }
-
-export type { AuthUser, RequestCodeResponse, VerifyCodeResponse }
