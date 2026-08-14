@@ -105,6 +105,17 @@ export const useAuthStore = create<AuthState>()((set) => {
     initialize: () => {
       const profile = readProfileCookie()
       set({
+        // The cookie is the only login state that survives a page load, so
+        // user is restored from it too — the recovery and MFA pages read the
+        // email after a mid-flow reload, when memory is gone but the cookie
+        // is not.
+        user:
+          profile.email || profile.name
+            ? {
+                ...(profile.email ? { email: profile.email } : {}),
+                ...(profile.name ? { name: profile.name } : {}),
+              }
+            : null,
         identityName: profile.name || '',
         identityPrivacy: '',
         hasIdentity: Boolean(profile.name),

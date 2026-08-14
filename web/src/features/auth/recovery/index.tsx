@@ -83,8 +83,8 @@ export function Recovery() {
         })
       }
     } catch (error) {
-      const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
-      if (responseData?.error === 'suspended') {
+      const code = (error as { data?: { error?: string } })?.data?.error
+      if (code === 'suspended') {
         toast.error(t`Account suspended`, {
           description: getErrorMessage(error, t`Your account has been suspended.`),
         })

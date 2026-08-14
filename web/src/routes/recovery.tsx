@@ -39,6 +39,17 @@ export const Route = createFileRoute('/recovery')({
       window.location.href = targetPath
       return
     }
+
+    // Recovery submits the store's email as the username, so without one the
+    // page can only send "" and present a valid code as invalid. When neither
+    // memory nor the profile cookie knows the email, the visitor must enter
+    // it on the login form first.
+    if (!useAuthStore.getState().user?.email) {
+      throw redirect({
+        to: '/',
+        search: { redirect: search.redirect },
+      })
+    }
   },
   component: Recovery,
   validateSearch: searchSchema,
