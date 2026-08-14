@@ -124,9 +124,29 @@ export function UserAuthForm({
 
   // Send (or resend) the emailed login code. Marks codeSent so the verification
   // step shows the code input rather than the "Email me a code" button.
+  // requestCode reports failure by throwing (axios on non-2xx, non-ok status),
+  // so the mapping to error toasts lives here and every caller shares it; the
+  // return says whether a code went out.
   async function sendCode(email: string) {
-    const codeResult = await requestCode(email)
-    if (codeResult?.status?.toLowerCase() !== 'ok') return false
+    try {
+      await requestCode(email)
+    } catch (error) {
+      // requestHelpers throws ApiError, which carries the response body on
+      // .data — not the raw-axios .response.data shape runRestore reads.
+      const code = (error as { data?: { error?: string } })?.data?.error
+      if (code === 'signup_disabled') {
+        toast.error(t`Registration disabled`, {
+          description: getErrorMessage(error, t`New user signup is disabled.`),
+        })
+      } else if (code === 'too_many_login_attempts_please_try_again_later') {
+        toast.error(t`Too many requests`)
+      } else {
+        toast.error(t`Couldn't send the code. Please try again.`, {
+          description: getErrorMessage(error, t`Please try again or contact support.`),
+        })
+      }
+      return false
+    }
     setCodeSent(true)
     toast.success(t`Code sent.`, {
       description: t`Check your email.`,
@@ -204,30 +224,12 @@ export function UserAuthForm({
     // address is verified first, exactly as ordinary signup does, and the
     // upload waits for the code on the next step.
     if (restoreBundle) {
-      try {
-        if (!(await sendCode(data.email))) {
-          toast.error(t`Couldn't send the code. Please try again.`)
-          return
-        }
+      if (await sendCode(data.email)) {
         setRequiredMethods(['email'])
         setAllowedMethods(['email'])
         setStep('verification')
-      } catch (error) {
-        const code = (error as { response?: { data?: { error?: string } } })?.response?.data?.error
-        if (code === 'signup_disabled') {
-          toast.error(t`Registration disabled`, {
-            description: getErrorMessage(error, t`New user signup is disabled.`),
-          })
-        } else if (code === 'too_many_codes') {
-          toast.error(t`Too many requests`)
-        } else {
-          toast.error(t`Couldn't send the code. Please try again.`, {
-            description: getErrorMessage(error, t`Please try again or contact support.`),
-          })
-        }
-      } finally {
-        setIsLoading(false)
       }
+      setIsLoading(false)
       return
     }
 
@@ -258,8 +260,8 @@ export function UserAuthForm({
       // email ("Email me a code") - otherwise we send a code they may not use,
       // and if they pick a non-email factor its continuation sends a second one.
       const emailSole = allowed.length === 1 && allowed[0] === 'email'
-      if (emailSole) {
-        await sendCode(data.email)
+      if (emailSole && !(await sendCode(data.email))) {
+        return
       }
 
       setStep('verification')
