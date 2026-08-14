@@ -3,7 +3,7 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { createFileRoute } from '@tanstack/react-router'
 import { requestHelpers } from '@mochi/web'
@@ -44,7 +44,6 @@ function RestoringRouteComponent() {
   const { t } = useLingui()
   const [failed, setFailed] = useState(false)
   const [progress, setProgress] = useState<ProgressResponse | null>(null)
-  const cancelled = useRef(false)
 
   // Map the server's step codes to translated labels.
   const stepLabels: Record<string, string> = {
@@ -58,11 +57,15 @@ function RestoringRouteComponent() {
   }
 
   useEffect(() => {
+    // Effect-local, not a ref: StrictMode's dev double-effect runs cleanup
+    // then the effect again on the same instance, and a ref stays true — the
+    // second run must get its own false (same pattern as closing.tsx).
+    let cancelled = false
     let identityTimer: ReturnType<typeof setTimeout> | null = null
     let progressTimer: ReturnType<typeof setTimeout> | null = null
 
     const pollIdentity = async () => {
-      if (cancelled.current) return
+      if (cancelled) return
       try {
         const data = await requestHelpers.get<IdentityResponse>('/_/identity')
         if (data.user?.status === 'active') {
@@ -80,7 +83,7 @@ function RestoringRouteComponent() {
     }
 
     const pollProgress = async () => {
-      if (cancelled.current) return
+      if (cancelled) return
       try {
         const data = await requestHelpers.get<ProgressResponse>('/_/auth/restore/progress')
         setProgress(data)
@@ -94,7 +97,7 @@ function RestoringRouteComponent() {
     pollProgress()
 
     return () => {
-      cancelled.current = true
+      cancelled = true
       if (identityTimer) clearTimeout(identityTimer)
       if (progressTimer) clearTimeout(progressTimer)
     }
