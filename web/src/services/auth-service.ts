@@ -37,8 +37,12 @@ const completeAuth = (response: {
 // The session lives in an HttpOnly cookie the client cannot see, so a page
 // reload knows nothing — the only way to learn whether the visitor is
 // already logged in is to ask the server. Resolves /_/identity and syncs
-// the store: setAuth/setIdentity for a live session, clearAuth when
-// anonymous. Returns the session summary, or null for anonymous visitors.
+// the store with setAuth/setIdentity for a live session. Returns the
+// session summary, or null when the visitor is anonymous or the request
+// failed. Never clears the store here: a 401 is the normal answer for
+// anonymous and mid-login (partial MFA) visitors, so clearing would erase
+// the profile-cookie prefill and in-memory login state. State is wiped
+// only by explicit paths — logout, ?reauth, abandonSignup.
 export const resolveSession = async (): Promise<{
   closing: boolean
   hasIdentity: boolean
@@ -51,7 +55,6 @@ export const resolveSession = async (): Promise<{
   try {
     data = await requestHelpers.get('/_/identity')
   } catch {
-    store.clearAuth()
     return null
   }
 
