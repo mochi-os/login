@@ -219,8 +219,6 @@ export function LandingPage() {
         } else {
           toast.success(t`Logged in`)
 
-          await new Promise((resolve) => setTimeout(resolve, 250))
-
           const { hasIdentity } = useAuthStore.getState()
           const targetPath = safeRedirect(redirect)
 

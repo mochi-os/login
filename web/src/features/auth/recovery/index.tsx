@@ -45,8 +45,6 @@ export function Recovery() {
       description: t`Successfully signed in with recovery code`,
     })
 
-    await new Promise((resolve) => setTimeout(resolve, 250))
-
     const store = useAuthStore.getState()
     const targetPath = safeRedirect(redirectTo)
 

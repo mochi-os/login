@@ -66,8 +66,6 @@ export function Mfa() {
   })
 
   const handleSuccess = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 250))
-
     const store = useAuthStore.getState()
     const targetPath = safeRedirect(redirectTo)
 

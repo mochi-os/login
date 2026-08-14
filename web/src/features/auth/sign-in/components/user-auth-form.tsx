@@ -102,9 +102,6 @@ export function UserAuthForm({
 
   // Handle successful login completion
   async function handleLoginSuccess() {
-    // Small delay to ensure store state is updated and cookies are synced
-    await new Promise((resolve) => setTimeout(resolve, 250))
-
     const { hasIdentity } = useAuthStore.getState()
     const targetPath = safeRedirect(redirectTo)
 
