@@ -58,11 +58,9 @@ export const useAuthStore = create<AuthState>()((set) => {
       })
     },
 
-    // Profile data only — authentication is a cookie session the client
-    // cannot see, so setUser never changes isAuthenticated (use setAuth
-    // after the server has confirmed the session). clearAuth is reserved
-    // for explicit paths — logout, ?reauth, abandonSignup — never for a
-    // mere 401, which is the normal answer for anonymous visitors.
+    // Profile data only; setUser never marks the session confirmed - use
+    // setAuth once the server has. clearAuth is for explicit paths (logout,
+    // ?reauth, abandonSignup), never a bare 401.
     setUser: (user) => {
       mergeProfileCookie({
         email: user?.email,

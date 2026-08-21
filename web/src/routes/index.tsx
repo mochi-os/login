@@ -31,9 +31,8 @@ export const Route = createFileRoute('/')({
       return
     }
 
-    // Always resolve the cookie session against the server — the store holds
-    // no token, so on a page reload it cannot know the visitor is already
-    // logged in. Anonymous visitors fall through to the login form.
+    // The store holds no token, so only the server knows whether the visitor is
+    // already logged in.
     const session = await resolveSession()
     if (session) {
       // Account pending closure: route to the reactivation interstitial

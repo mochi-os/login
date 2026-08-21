@@ -113,11 +113,8 @@ export function UserAuthForm({
     window.location.replace(appUrl(`codes${codesParams}`))
   }
 
-  // Send (or resend) the emailed login code. Marks codeSent so the verification
-  // step shows the code input rather than the "Email me a code" button.
-  // requestCode reports failure by throwing (axios on non-2xx, non-ok status),
-  // so the mapping to error toasts lives here and every caller shares it; the
-  // return says whether a code went out.
+  // Send or resend the emailed code; error toasts are mapped here for every
+  // caller. Returns whether a code went out.
   async function sendCode(email: string) {
     try {
       await requestCode(email)

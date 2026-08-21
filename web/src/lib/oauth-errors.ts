@@ -26,12 +26,9 @@ const providerLabel = (provider?: string): string => {
     case 'x':
       return 'X'
     default:
-      // Anything unrecognised becomes the generic label. `provider` is a query
-      // parameter, so anyone can put text in a link and have it rendered
-      // inside an error the page presents as its own - React escapes it, so
-      // this is a sentence an attacker gets to write rather than script they
-      // get to run, which is a social-engineering problem, not XSS. An
-      // allowlist is the whole fix: the set of providers is known here.
+      // `provider` comes from a query parameter, so anything unrecognised gets
+      // the generic label rather than attacker-written text in the page's own
+      // error.
       return i18n._(msg`the provider`)
   }
 }

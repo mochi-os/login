@@ -47,9 +47,7 @@ interface TotpLoginRequest {
 }
 
 export interface TotpLoginResponse {
-  // No token or login field: the server sets a session cookie and returns
-  // neither. They were declared but never sent, which left a token-shaped
-  // slot for future code to start persisting a credential into.
+  // No token field: the server sets a session cookie and returns none.
   name?: string
   mfa?: boolean
   partial?: string

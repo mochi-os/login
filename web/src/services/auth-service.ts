@@ -18,9 +18,9 @@ import endpoints from '@/api/endpoints'
 import { requestHelpers, LANGUAGE_STORAGE_KEY } from '@mochi/web'
 import { useAuthStore } from '@/stores/auth-store'
 
-// Helper to complete authentication (shared by email verify, MFA, passkey, recovery).
-// The server sets the session cookie and returns {name, has_identity}.
-// No JWT token is returned — app-scoped tokens are injected into HTML on page load.
+// Complete authentication (email verify, MFA, passkey, recovery). The server
+// sets the session cookie; app tokens are injected into HTML at page load, not
+// returned here.
 const completeAuth = (response: {
   name?: string
   has_identity?: boolean
@@ -36,15 +36,9 @@ const completeAuth = (response: {
   return true
 }
 
-// The session lives in an HttpOnly cookie the client cannot see, so a page
-// reload knows nothing — the only way to learn whether the visitor is
-// already logged in is to ask the server. Resolves /_/identity and syncs
-// the store with setAuth/setIdentity for a live session. Returns the
-// session summary, or null when the visitor is anonymous or the request
-// failed. Never clears the store here: a 401 is the normal answer for
-// anonymous and mid-login (partial MFA) visitors, so clearing would erase
-// the profile-cookie prefill and in-memory login state. State is wiped
-// only by explicit paths — logout, ?reauth, abandonSignup.
+// Ask the server whether the cookie session is live and sync the store. Returns
+// null for anonymous or on failure, and never clears the store: a 401 is normal
+// for anonymous and mid-MFA visitors.
 export const resolveSession = async (): Promise<{
   closing: boolean
   hasIdentity: boolean

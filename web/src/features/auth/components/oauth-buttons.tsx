@@ -3,14 +3,8 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-// Mochi login: OAuth provider buttons for the verification step.
-//
-// Renders a "Continue with <provider>" button for each operator-enabled OAuth
-// provider and starts the OAuth redirect. Shown in the email-login verification
-// step when OAuth can verify the identified account; the typed email is passed
-// through so the callback binds the sign-in to that account and rejects any
-// other. (The landing screen keeps its own inline copy for the pre-email
-// discoverable path, where no email is typed yet.)
+// OAuth buttons for the email-login verification step. The typed email is
+// passed through so the callback binds the sign-in to that account.
 
 import { useState, useEffect } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'

@@ -11,22 +11,17 @@ import { Button, getErrorMessage, requestHelpers, toast, useFormat } from '@moch
 import { AuthLayout } from '@/features/auth/auth-layout'
 import { appUrl } from '@/lib/redirect'
 
-// The reactivation interstitial. A user whose account is pending closure
-// (status='closing') re-authenticated and was routed here instead of into
-// the app. They can cancel the closure and restore full access, or continue
-// closing and sign out. The grace-period purge happens server-side; this
-// page is the self-service escape hatch during the window.
+// Reactivation interstitial for an account pending closure (status='closing'):
+// cancel the closure, or continue and sign out.
 
 type IdentityResponse = {
   user?: { email?: string; name?: string; status?: string; purge?: number }
 }
 
 export const Route = createFileRoute('/closing')({
-  // No beforeLoad guard (mirrors /restore): this page is
-  // reached right after a redirect, and a guard that fetched /_/identity and
-  // redirected on the result races the just-confirmed session — a transient
-  // hiccup bounces the user to the landing. Resolve status in the component
-  // instead: only a closing account stays here; anyone else leaves.
+  // No beforeLoad guard: an /_/identity fetch here races the just-confirmed
+  // session and a transient failure would bounce the user to the landing. The
+  // component resolves status instead.
   component: ClosingRouteComponent,
 })
 

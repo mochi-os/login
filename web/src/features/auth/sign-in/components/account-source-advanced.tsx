@@ -21,11 +21,6 @@ interface AccountSourceAdvancedProps {
   disabled?: boolean
 }
 
-/**
- * Collapsible "Advanced" disclosure that lets the user choose where a
- * new account comes from: a fresh local signup (default) or restore
- * from a backup bundle.
- */
 export function AccountSourceAdvanced({
   source,
   onSourceChange,
@@ -122,11 +117,9 @@ export function AccountSourceAdvanced({
                 </label>
                 <Input
                   type='password'
-                  // Not current-password: this unlocks the restore bundle, not
-                  // the account. Naming it current-password had the password
-                  // manager offer the saved Mochi password for a field it does
-                  // not open, so the likely outcome is a silently wrong value
-                  // and a failed restore.
+                  // Not current-password: the password manager would offer the
+                  // account password for a field that unlocks the restore
+                  // bundle.
                   autoComplete='off'
                   spellCheck={false}
                   disabled={disabled}

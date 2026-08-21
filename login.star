@@ -3,11 +3,8 @@
 # This file is part of Mochi, licensed under the GNU AGPL v3 with the
 # Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-# Login app - authentication UI
-# Unauthenticated login is handled by core at /_/auth/*. Account management
-# (passkeys, TOTP, recovery codes, OAuth links, method preferences) lives in the
-# settings app; this app only serves the login SPA and the public document
-# endpoint below.
+# Login app. Unauthenticated login is handled by core at /_/auth/*; account
+# management lives in the settings app.
 
 def action_document_get(a):
     """Public: return one of the server documents (rules / terms / privacy)

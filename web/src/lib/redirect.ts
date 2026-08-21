@@ -5,13 +5,10 @@
 
 import { getRouterBasepath } from '@mochi/web'
 
-/** Build an absolute URL inside this app for full-page navigations, links
- * and asset references. The prefix is derived the same way the router's
- * basepath is, so a non-standard prefix keeps working. When the app is
- * served at the root (the anonymous default app — no mochi:app meta, no
- * prefix in the URL), full-page URLs use the canonical /login/ prefix that
- * the server's own redirects use: a bare '/identity' load would derive
- * 'identity' as the app prefix and route wrong. */
+/** Absolute URL inside this app for full-page navigations. When served at the root (anonymous
+ * default app) use the canonical /login/ prefix: a bare '/identity' would
+ * derive 'identity' as
+ * the app prefix. */
 export const appUrl = (path: string): string => {
   const base = getRouterBasepath()
   return (base === '/' ? '/login/' : base) + path
@@ -21,12 +18,8 @@ export const appUrl = (path: string): string => {
 export function safeRedirect(url: string | undefined, fallback?: string): string {
   const defaultUrl = fallback || import.meta.env.VITE_DEFAULT_APP_URL || '/'
   if (!url || url.length === 0) return defaultUrl
-  // Resolve against our own origin and compare — a string prefix check on
-  // '/' vs '//' is not enough, because the browser normalises backslashes and
-  // control characters ('/\evil.com', '/\t/evil.com') into a protocol-relative
-  // URL when the result is later assigned to window.location. Anything that
-  // resolves to a different origin (including javascript:/data: and userinfo
-  // tricks) falls back to the default.
+  // Resolve against our origin rather than prefix-checking '/': browsers
+  // normalise '/\evil.com' and '/\t/evil.com' into protocol-relative URLs.
   try {
     const resolved = new URL(url, window.location.origin)
     if (resolved.origin !== window.location.origin) return defaultUrl

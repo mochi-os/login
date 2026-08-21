@@ -167,12 +167,8 @@ export function LandingPage() {
 
       setEnabledOauth(enabled)
     }).catch(() => {
-      // This rejected unhandled, and the state it never set is what decides
-      // whether the passkey and OAuth buttons render - so a network blip
-      // removed every sign-in method except the email form, silently. Someone
-      // whose only credential is a passkey then sees a page that looks like it
-      // simply does not offer passkeys. Say so instead: the buttons still
-      // cannot be shown, but the reason is now on screen.
+      // Without a visible error a failed methods fetch looks like the server
+      // simply offers no passkeys or OAuth.
       setOauthError(t`Could not load sign-in methods. Reload to try again.`)
     })
   }, [])

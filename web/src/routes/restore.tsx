@@ -11,12 +11,10 @@ import { Loader2 } from 'lucide-react'
 import { AuthLayout } from '@/features/auth/auth-layout'
 import { appUrl } from '@/lib/redirect'
 
-// Waiting page shown after POST /_/auth/restore succeeds. A session
-// cookie for a placeholder user in status='pending-restore' is now set.
-// The page polls /_/identity until the placeholder flips to active
-// (restore finished), then navigates to the dashboard.
-// It also polls /_/auth/restore/progress to show step / percent / detail.
-// If /_/identity returns 401, the placeholder was deleted (restore failed).
+// Waiting page after POST /_/auth/restore. Polls /_/identity until the
+// pending-restore placeholder turns active, then goes to the dashboard; a 401
+// means the placeholder was deleted (restore failed). Progress comes from
+// /_/auth/restore/progress.
 
 type IdentityResponse = {
   user?: { email?: string; name?: string; status?: string }
@@ -30,14 +28,9 @@ type ProgressResponse = {
 }
 
 export const Route = createFileRoute('/restore')({
-  // No beforeLoad guard: this is a waiting page reached right after the
-  // restore POST sets a pending-restore session, while the async swap is
-  // still running. A guard that fetched /_/identity here and redirected
-  // on any hiccup would bounce the user to the landing page on a single
-  // transient failure (which is exactly what happened). The component's
-  // poll below is resilient — it retries transient errors, treats 401 as
-  // a failed restore, and navigates to the dashboard once status flips
-  // to active — so it handles every case without losing the user.
+  // No beforeLoad guard: a guard fetching /_/identity here would bounce the
+  // user to the landing on one transient failure. The poll below retries,
+  // treats 401 as failure, and navigates when active.
   component: RestoringRouteComponent,
 })
 
