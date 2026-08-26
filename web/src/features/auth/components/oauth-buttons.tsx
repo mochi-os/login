@@ -18,7 +18,7 @@ import {
 } from '@/features/auth/components/brand-icons'
 import { authApi } from '@/api/auth'
 import { type OAuthProvider } from '@/api/types/auth'
-import { safeRedirect } from '@/lib/redirect'
+import { navigable, safeRedirect } from '@/lib/redirect'
 
 // Brand names are never translated.
 /* eslint-disable lingui/no-unlocalized-strings */
@@ -67,6 +67,7 @@ export function OauthButtons({
     try {
       const target = redirect ? safeRedirect(redirect) : '/'
       const { url } = await authApi.oauthBegin(provider, { target, email })
+      if (!navigable(url)) throw new Error(t`Could not start sign-in`)
       window.location.href = url
     } catch (error) {
       setLoading(null)

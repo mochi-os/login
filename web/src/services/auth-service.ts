@@ -9,6 +9,7 @@ import axios, { type AxiosProgressEvent } from 'axios'
 import { authApi,
   type AuthUser,
   type BeginLoginResponse,
+  type MfaRequest,
   type MfaResponse,
   type RequestCodeResponse,
   type TotpLoginResponse,
@@ -174,9 +175,10 @@ export const verifyCode = async (
   }
 }
 
-export const completeMfa = async (
-  method: string,
-  code?: string
+// One factor or several in one submission: the continuation is the same either
+// way, so only the payload differs.
+const submitMfa = async (
+  factors: Omit<MfaRequest, 'partial'>
 ): Promise<MfaResponse & { success: boolean }> => {
   const { mfa } = useAuthStore.getState()
   if (!mfa.partial) {
@@ -185,8 +187,7 @@ export const completeMfa = async (
 
   const response = await authApi.completeMfa({
     partial: mfa.partial,
-    method,
-    code,
+    ...factors,
   })
 
   // Check if more MFA is required
@@ -206,36 +207,15 @@ export const completeMfa = async (
   }
 }
 
-export const completeMfaMultiple = async (codes: {
+export const completeMfa = (
+  method: string,
+  code?: string
+): Promise<MfaResponse & { success: boolean }> => submitMfa({ method, code })
+
+export const completeMfaMultiple = (codes: {
   email_code?: string
   totp_code?: string
-}): Promise<MfaResponse & { success: boolean }> => {
-  const { mfa } = useAuthStore.getState()
-  if (!mfa.partial) {
-    throw new Error(i18n._(msg`No MFA session`))
-  }
-
-  const response = await authApi.completeMfa({
-    partial: mfa.partial,
-    ...codes,
-  })
-
-  // Check if more MFA is required
-  if (response.mfa && response.partial && response.remaining) {
-    useAuthStore.getState().setMfa(response.partial, response.remaining)
-    return {
-      ...response,
-      success: true, // Partial success - more MFA required
-    }
-  }
-
-  const success = completeAuth(response)
-
-  return {
-    ...response,
-    success,
-  }
-}
+}): Promise<MfaResponse & { success: boolean }> => submitMfa(codes)
 
 export const passkeyLogin = async (): Promise<{
   success: boolean

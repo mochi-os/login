@@ -5,12 +5,12 @@
 
 import { useMemo, useState } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
-import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2, ArrowRight } from 'lucide-react'
 import { toast, getErrorMessage, Button, Input, Form, FormControl, FormField, FormItem, FormLabel, FormMessage, RadioGroup, RadioGroupItem } from '@mochi/web'
 import { submitIdentity, abandonSignup } from '@/services/auth-service'
+import { identitySchema } from '@/features/auth/identity-schema'
 import { appUrl, safeRedirect } from '@/lib/redirect'
 import { mergeProfileCookie, readProfileCookie } from '@/lib/profile-cookie'
 
@@ -28,17 +28,18 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const initialProfile = readProfileCookie()
 
-  const identitySchema = useMemo(
+  const schema = useMemo(
     () =>
-      z.object({
-        name: z.string().min(2, t`Please enter your name`),
-        privacy: z.enum(['public', 'private']),
+      identitySchema({
+        short: t`Please enter your name`,
+        long: t`Name too long`,
+        characters: t`Invalid name`,
       }),
     [t],
   )
 
   const form = useForm<IdentityFormValues>({
-    resolver: zodResolver(identitySchema),
+    resolver: zodResolver(schema),
     defaultValues: {
       name: initialProfile.name || '',
       privacy: 'public',

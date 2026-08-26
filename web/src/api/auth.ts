@@ -135,6 +135,7 @@ export const authApi = {
 
 export type {
   AuthUser,
+  MfaRequest,
   MfaResponse,
   RequestCodeResponse,
   VerifyCodeResponse,
