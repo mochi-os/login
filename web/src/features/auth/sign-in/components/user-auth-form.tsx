@@ -165,10 +165,6 @@ export function UserAuthForm({
         toast.error(t`Wrong passphrase`, {
           description: t`The passphrase you entered does not match the backup.`,
         })
-      } else if (reason === 'bundle_not_migration') {
-        toast.error(t`Not a migration bundle`, {
-          description: t`Upload a .zip file exported from Mochi's data export.`,
-        })
       } else if (reason === 'bundle_version' || reason === 'bundle_schema_newer') {
         toast.error(t`Backup is too new`, {
           description: t`This backup was created by a newer version of Mochi. Update this server first.`,
