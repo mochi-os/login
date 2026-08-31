@@ -137,10 +137,12 @@ export const signupRestore = async (
   const form = new FormData()
   form.append('email', email)
   form.append('passphrase', passphrase)
-  form.append('bundle', bundle)
   // The emailed code proves the address is the caller's. The passphrase only
-  // proves the bundle is theirs, which is a different claim.
+  // proves the bundle is theirs, which is a different claim. Ordered before the
+  // bundle deliberately: the server reads the parts in order and refuses to
+  // spool a bundle it cannot yet attribute to a proven address.
   form.append('code', code)
+  form.append('bundle', bundle)
   // Plain axios rather than fetch so onUploadProgress can report byte progress
   // on the bundle upload; errors keep the {response: {data}} shape the caller
   // reads. No timeout — bundles can be large.
