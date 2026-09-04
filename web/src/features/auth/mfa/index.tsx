@@ -5,7 +5,7 @@
 
 import { useState } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
-import { useNavigate, Link } from '@tanstack/react-router'
+import { useNavigate, useSearch, Link } from '@tanstack/react-router'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -30,7 +30,6 @@ import {
 } from '@mochi/web'
 import { AuthLayout } from '../auth-layout'
 import { OauthButtons } from '@/features/auth/components/oauth-buttons'
-import { Route } from '@/routes/codes'
 import { useAuthStore } from '@/stores/auth-store'
 import {
   completeMfa,
@@ -38,6 +37,7 @@ import {
   passkeyLogin,
 } from '@/services/auth-service'
 import { safeRedirect } from '@/lib/redirect'
+import { authErrorCode } from '@/lib/auth-error'
 
 const mfaSchema = z.object({
   emailCode: z.string().optional(),
@@ -46,8 +46,10 @@ const mfaSchema = z.object({
 
 export function Mfa() {
   // Read the requested destination from the route search (the recovery
-  // component does the same) so it survives MFA completion and cancel.
-  const { redirect: redirectTo } = Route.useSearch()
+  // component does the same) so it survives MFA completion and cancel. Typed
+  // by route id rather than by importing the route module: routes/codes.tsx
+  // imports this component, so the other direction would be a cycle.
+  const { redirect: redirectTo } = useSearch({ from: '/codes' })
   const { t } = useLingui()
   const navigate = useNavigate()
   const { mfa, clearMfa, user } = useAuthStore()
@@ -95,7 +97,7 @@ export function Mfa() {
     setIsLoading(true)
     try {
       const result = await passkeyLogin()
-      if (result.success && !result.mfa) {
+      if (!result.mfa) {
         await handleSuccess()
       }
     } catch (error) {
@@ -136,14 +138,7 @@ export function Mfa() {
           return
         }
 
-        if (result.success) {
-          await handleSuccess()
-          return
-        }
-
-        toast.error(t`Invalid code`, {
-          description: t`Please check your codes and try again.`,
-        })
+        await handleSuccess()
         return
       }
 
@@ -155,14 +150,7 @@ export function Mfa() {
           return
         }
 
-        if (result.success) {
-          await handleSuccess()
-          return
-        }
-
-        toast.error(t`Invalid code`, {
-          description: t`Please check your code and try again.`,
-        })
+        await handleSuccess()
         return
       }
 
@@ -174,21 +162,20 @@ export function Mfa() {
           return
         }
 
-        if (result.success) {
-          await handleSuccess()
-          return
-        }
-
-        toast.error(t`Invalid code`, {
-          description: t`Please check your code and try again.`,
-        })
+        await handleSuccess()
       }
     } catch (error) {
-      const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
-      if (responseData?.error === 'suspended') {
+      const code = authErrorCode(error)
+      if (code === 'suspended') {
         toast.error(t`Account suspended`, {
           description: getErrorMessage(error, t`Your account has been suspended.`),
         })
+      } else if (code === 'session_expired') {
+        // The partial lives five minutes on the server; once it has lapsed no
+        // code can complete it, so start the login over rather than asking
+        // for another code.
+        toast.error(t`Login session expired, please try again`)
+        handleCancel()
       } else {
         toast.error(t`Invalid code`, {
           description: t`Please check your code and try again.`,

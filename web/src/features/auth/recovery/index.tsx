@@ -5,7 +5,7 @@
 
 import { useMemo, useState } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
-import { useNavigate } from '@tanstack/react-router'
+import { useNavigate, useSearch } from '@tanstack/react-router'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -15,14 +15,16 @@ import { AuthLayout } from '../auth-layout'
 import { useAuthStore } from '@/stores/auth-store'
 import { recoveryLogin } from '@/services/auth-service'
 import { safeRedirect } from '@/lib/redirect'
-import { Route } from '@/routes/recovery'
+import { authErrorCode } from '@/lib/auth-error'
 
 type RecoveryFormValues = { code: string }
 
 export function Recovery() {
   const { t } = useLingui()
   const navigate = useNavigate()
-  const { redirect: redirectTo } = Route.useSearch()
+  // By route id, not the route module: routes/recovery.tsx imports this
+  // component, so importing it back would be a cycle.
+  const { redirect: redirectTo } = useSearch({ from: '/recovery' })
   const [isLoading, setIsLoading] = useState(false)
   const { user } = useAuthStore()
   const userEmail = user?.email || ''
@@ -71,17 +73,10 @@ export function Recovery() {
     setIsLoading(true)
 
     try {
-      const result = await recoveryLogin(userEmail, data.code)
-
-      if (result.success) {
-        await handleSuccess()
-      } else {
-        toast.error(t`Invalid recovery code`, {
-          description: t`Please check your recovery code and try again.`,
-        })
-      }
+      await recoveryLogin(userEmail, data.code)
+      await handleSuccess()
     } catch (error) {
-      const code = (error as { data?: { error?: string } })?.data?.error
+      const code = authErrorCode(error)
       if (code === 'suspended') {
         toast.error(t`Account suspended`, {
           description: getErrorMessage(error, t`Your account has been suspended.`),

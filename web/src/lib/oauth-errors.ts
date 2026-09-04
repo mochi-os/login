@@ -9,30 +9,18 @@
 
 import { msg } from '@lingui/core/macro'
 import { i18n } from '@lingui/core'
+import { providerName } from '@mochi/web'
+import { oauthProviderKeys } from '@/lib/oauth-providers'
 
-// Brand names — never translated.
-/* eslint-disable lingui/no-unlocalized-strings */
+// `provider` comes from a query parameter, so anything outside the providers
+// this app offers gets the generic label rather than attacker-written text in
+// the page's own error.
 const providerLabel = (provider?: string): string => {
-  if (!provider) return i18n._(msg`the provider`)
-  switch (provider) {
-    case 'github':
-      return 'GitHub'
-    case 'google':
-      return 'Google'
-    case 'microsoft':
-      return 'Microsoft'
-    case 'facebook':
-      return 'Facebook'
-    case 'x':
-      return 'X'
-    default:
-      // `provider` comes from a query parameter, so anything unrecognised gets
-      // the generic label rather than attacker-written text in the page's own
-      // error.
-      return i18n._(msg`the provider`)
+  if (provider && (oauthProviderKeys as readonly string[]).includes(provider)) {
+    return providerName(provider)
   }
+  return i18n._(msg`the provider`)
 }
-/* eslint-enable lingui/no-unlocalized-strings */
 
 export function oauthErrorMessage(code: string, provider?: string): string {
   switch (code) {

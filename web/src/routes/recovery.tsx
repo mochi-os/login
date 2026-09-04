@@ -36,8 +36,9 @@ export const Route = createFileRoute('/recovery')({
         })
       }
 
-      window.location.href = targetPath
-      return
+      window.location.replace(targetPath)
+      // Return a pending promise to prevent route from rendering
+      return new Promise(() => {})
     }
 
     // Recovery submits the store's email as the username, so without one the

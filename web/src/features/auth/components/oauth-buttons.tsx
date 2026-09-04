@@ -8,32 +8,11 @@
 
 import { useState, useEffect } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
-import { Github, Loader2 } from 'lucide-react'
+import { Loader2 } from 'lucide-react'
 import { Button, toast, getErrorMessage } from '@mochi/web'
-import {
-  FacebookIcon,
-  GoogleIcon,
-  MicrosoftIcon,
-  XIcon,
-} from '@/features/auth/components/brand-icons'
 import { authApi } from '@/api/auth'
 import { type OAuthProvider } from '@/api/types/auth'
-import { navigable, safeRedirect } from '@/lib/redirect'
-
-// Brand names are never translated.
-/* eslint-disable lingui/no-unlocalized-strings */
-const oauthProviders: Array<{
-  key: OAuthProvider
-  label: string
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
-}> = [
-  { key: 'facebook', label: 'Facebook', Icon: FacebookIcon },
-  { key: 'github', label: 'GitHub', Icon: Github },
-  { key: 'google', label: 'Google', Icon: GoogleIcon },
-  { key: 'microsoft', label: 'Microsoft', Icon: MicrosoftIcon },
-  { key: 'x', label: 'X', Icon: XIcon },
-]
-/* eslint-enable lingui/no-unlocalized-strings */
+import { oauthEnabled, oauthProviders, startOauth } from '@/lib/oauth-providers'
 
 export function OauthButtons({
   email,
@@ -48,13 +27,7 @@ export function OauthButtons({
 
   useEffect(() => {
     authApi.getMethods().then((methods) => {
-      const set = new Set<OAuthProvider>()
-      if (methods.oauth) {
-        for (const provider of oauthProviders) {
-          if (methods.oauth[provider.key]) set.add(provider.key)
-        }
-      }
-      setEnabled(set)
+      setEnabled(oauthEnabled(methods))
     }).catch(() => {
       // See landing-page.tsx: an unhandled rejection here silently removes
       // every OAuth button.
@@ -65,10 +38,7 @@ export function OauthButtons({
   const start = async (provider: OAuthProvider) => {
     setLoading(provider)
     try {
-      const target = redirect ? safeRedirect(redirect) : '/'
-      const { url } = await authApi.oauthBegin(provider, { target, email })
-      if (!navigable(url)) throw new Error(t`Could not start sign-in`)
-      window.location.href = url
+      await startOauth(provider, { redirect, email })
     } catch (error) {
       setLoading(null)
       toast.error(getErrorMessage(error, t`Could not start sign-in`))

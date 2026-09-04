@@ -11,7 +11,7 @@ import {
   readProfileCookie,
 } from '@/lib/profile-cookie'
 
-export interface MfaState {
+interface MfaState {
   required: boolean
   partial: string
   remaining: string[]

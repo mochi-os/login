@@ -15,6 +15,7 @@ import { Loader2, Mail, ArrowLeft, ArrowRight, Key } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
 import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot, UploadProgress, useUploadProgress } from '@mochi/web'
 import { appUrl, safeRedirect } from '@/lib/redirect'
+import { authErrorCode } from '@/lib/auth-error'
 
 type EmailFormValues = { email: string }
 type VerificationFormValues = { emailCode?: string; totpCode?: string }
@@ -119,9 +120,7 @@ export function UserAuthForm({
     try {
       await requestCode(email)
     } catch (error) {
-      // requestHelpers throws ApiError, which carries the response body on
-      // .data — not the raw-axios .response.data shape runRestore reads.
-      const code = (error as { data?: { error?: string } })?.data?.error
+      const code = authErrorCode(error)
       if (code === 'signup_disabled') {
         toast.error(t`Registration disabled`, {
           description: getErrorMessage(error, t`New user signup is disabled.`),
@@ -250,8 +249,7 @@ export function UserAuthForm({
 
       setStep('verification')
     } catch (error) {
-      const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
-      if (responseData?.error === 'signup_disabled') {
+      if (authErrorCode(error) === 'signup_disabled') {
         toast.error(t`Registration disabled`, {
           description: getErrorMessage(error, t`New user signup is disabled.`),
         })
@@ -297,25 +295,15 @@ export function UserAuthForm({
             const totpResult = await completeMfa('totp', totpCode)
             if (totpResult.mfa && totpResult.remaining) {
               handleMfaRequired()
-            } else if (totpResult.success) {
-              await handleLoginSuccess()
             } else {
-              toast.error(t`Invalid code`, {
-                description: t`Please check your codes and try again.`,
-              })
+              await handleLoginSuccess()
             }
             return
           }
           handleMfaRequired()
           return
         }
-        if (result.success) {
-          await handleLoginSuccess()
-        } else {
-          toast.error(t`Invalid verification code`, {
-            description: result.message || t`Please check your email and try again.`,
-          })
-        }
+        await handleLoginSuccess()
         return
       }
 
@@ -328,13 +316,7 @@ export function UserAuthForm({
           handleMfaRequired()
           return
         }
-        if (result.success) {
-          await handleLoginSuccess()
-        } else {
-          toast.error(t`Invalid verification code`, {
-            description: result.message || t`Please check your email and try again.`,
-          })
-        }
+        await handleLoginSuccess()
         return
       }
 
@@ -345,29 +327,27 @@ export function UserAuthForm({
           handleMfaRequired()
           return
         }
-        if (result.success) {
-          await handleLoginSuccess()
-        } else {
-          toast.error(t`Invalid authenticator code`, {
-            description: t`Please check your authenticator app and try again.`,
-          })
-        }
+        await handleLoginSuccess()
         return
       }
 
       toast.error(t`Enter a code to continue`)
     } catch (error) {
-      const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
-      const errorCode = responseData?.error
-      if (errorCode === 'suspended') {
+      const code = authErrorCode(error)
+      if (code === 'suspended') {
         toast.error(t`Account suspended`, {
           description: getErrorMessage(error, t`Your account has been suspended.`),
         })
-      } else if (errorCode === 'signup_disabled') {
+      } else if (code === 'signup_disabled') {
         toast.error(t`Registration disabled`, {
           description: getErrorMessage(error, t`New user signup is disabled.`),
         })
-      } else if (errorCode === 'invalid_code' || errorCode === 'invalid code') {
+      } else if (code === 'session_expired') {
+        // The partial the first factor opened has lapsed on the server, so
+        // the second factor can never complete it: start again.
+        toast.error(t`Login session expired, please try again`)
+        goBackToEmail()
+      } else if (code === 'invalid_code') {
         toast.error(t`Invalid code`, {
           description: t`Please check your code and try again.`,
         })

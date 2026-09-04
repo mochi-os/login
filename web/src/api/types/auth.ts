@@ -23,9 +23,7 @@ export interface VerifyCodeRequest {
 
 export interface VerifyCodeResponse {
   // No success field: /_/auth/verify answers with either the MFA object or a
-  // completed login, never a success flag, so declaring one non-optional made
-  // `if (result.success)` silently always false. The services layer adds its
-  // own success on top - that one is real.
+  // completed login; a refusal is an HTTP error, which throws in the caller.
   user?: AuthUser
   name?: string
   message?: string
@@ -42,7 +40,7 @@ export type OAuthProvider =
   | 'microsoft'
   | 'x'
 
-export interface OAuthProvidersEnabled {
+interface OAuthProvidersEnabled {
   facebook: boolean
   github: boolean
   google: boolean

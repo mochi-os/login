@@ -21,11 +21,11 @@ import { useAuthStore } from '@/stores/auth-store'
 
 // Complete authentication (email verify, MFA, passkey, recovery). The server
 // sets the session cookie; app tokens are injected into HTML at page load, not
-// returned here.
-const completeAuth = (response: {
-  name?: string
-  has_identity?: boolean
-}) => {
+// returned here. Failure never reaches this point: the server refuses with an
+// HTTP error, which throws in the caller. The body also carries has_identity,
+// but the store derives hasIdentity from name, which the server sends exactly
+// when an identity exists, so nothing here reads the flag.
+const completeAuth = (response: { name?: string }): void => {
   const email = useAuthStore.getState().user?.email
   const user: AuthUser = {
     ...(email ? { email } : {}),
@@ -34,7 +34,6 @@ const completeAuth = (response: {
 
   useAuthStore.getState().setAuth(user)
   useAuthStore.getState().clearMfa()
-  return true
 }
 
 // Ask the server whether the cookie session is live and sync the store. Returns
@@ -88,24 +87,17 @@ export const beginLogin = async (email: string): Promise<BeginLoginResponse> => 
 export const totpLogin = async (
   email: string,
   code: string
-): Promise<TotpLoginResponse & { success: boolean }> => {
+): Promise<TotpLoginResponse> => {
   const response = await authApi.totpLogin({ email, code })
 
   // Check for MFA requirement
   if (response.mfa && response.partial && response.remaining) {
     useAuthStore.getState().setMfa(response.partial, response.remaining)
-    return {
-      ...response,
-      success: true,
-    }
+    return response
   }
 
-  const success = completeAuth(response)
-
-  return {
-    ...response,
-    success,
-  }
+  completeAuth(response)
+  return response
 }
 
 export const requestCode = async (
@@ -157,31 +149,24 @@ export const signupRestore = async (
 
 export const verifyCode = async (
   code: string
-): Promise<VerifyCodeResponse & { success: boolean }> => {
+): Promise<VerifyCodeResponse> => {
   const response = await authApi.verifyCode({ code })
 
   // Check for MFA requirement
   if (response.mfa && response.partial && response.remaining) {
     useAuthStore.getState().setMfa(response.partial, response.remaining)
-    return {
-      ...response,
-      success: true, // Partial success - MFA required
-    }
+    return response
   }
 
-  const success = completeAuth(response)
-
-  return {
-    ...response,
-    success,
-  }
+  completeAuth(response)
+  return response
 }
 
 // One factor or several in one submission: the continuation is the same either
 // way, so only the payload differs.
 const submitMfa = async (
   factors: Omit<MfaRequest, 'partial'>
-): Promise<MfaResponse & { success: boolean }> => {
+): Promise<MfaResponse> => {
   const { mfa } = useAuthStore.getState()
   if (!mfa.partial) {
     throw new Error(i18n._(msg`No MFA session`))
@@ -195,32 +180,24 @@ const submitMfa = async (
   // Check if more MFA is required
   if (response.mfa && response.partial && response.remaining) {
     useAuthStore.getState().setMfa(response.partial, response.remaining)
-    return {
-      ...response,
-      success: true, // Partial success - more MFA required
-    }
+    return response
   }
 
-  const success = completeAuth(response)
-
-  return {
-    ...response,
-    success,
-  }
+  completeAuth(response)
+  return response
 }
 
 export const completeMfa = (
   method: string,
   code?: string
-): Promise<MfaResponse & { success: boolean }> => submitMfa({ method, code })
+): Promise<MfaResponse> => submitMfa({ method, code })
 
 export const completeMfaMultiple = (codes: {
   email_code?: string
   totp_code?: string
-}): Promise<MfaResponse & { success: boolean }> => submitMfa(codes)
+}): Promise<MfaResponse> => submitMfa(codes)
 
 export const passkeyLogin = async (): Promise<{
-  success: boolean
   mfa?: boolean
   remaining?: string[]
 }> => {
@@ -242,25 +219,19 @@ export const passkeyLogin = async (): Promise<{
   // Check for MFA requirement
   if (response.mfa && response.partial && response.remaining) {
     useAuthStore.getState().setMfa(response.partial, response.remaining)
-    return {
-      success: true,
-      mfa: true,
-      remaining: response.remaining,
-    }
+    return { mfa: true, remaining: response.remaining }
   }
 
-  const success = completeAuth(response)
-
-  return { success }
+  completeAuth(response)
+  return {}
 }
 
 export const recoveryLogin = async (
   username: string,
   code: string
-): Promise<{ success: boolean }> => {
+): Promise<void> => {
   const response = await authApi.recoveryLogin({ username, code })
-  const success = completeAuth(response)
-  return { success }
+  completeAuth(response)
 }
 
 

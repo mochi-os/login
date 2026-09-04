@@ -58,6 +58,15 @@ function RestoringRouteComponent() {
     let identityTimer: ReturnType<typeof setTimeout> | null = null
     let progressTimer: ReturnType<typeof setTimeout> | null = null
 
+    // A 401 from either endpoint means the placeholder user is gone: the
+    // restore failed, and neither poll has anything left to ask. Both polls
+    // check the flag again after their request, so whichever one is in flight
+    // when the other fails stops too.
+    const fail = () => {
+      cancelled = true
+      setFailed(true)
+    }
+
     const pollIdentity = async () => {
       if (cancelled) return
       try {
@@ -67,12 +76,12 @@ function RestoringRouteComponent() {
           return
         }
       } catch (err) {
-        // 401 = placeholder deleted, restore failed
         if (requestHelpers.isAuthError(err)) {
-          setFailed(true)
+          fail()
           return
         }
       }
+      if (cancelled) return
       identityTimer = setTimeout(pollIdentity, 1000)
     }
 
@@ -81,9 +90,14 @@ function RestoringRouteComponent() {
       try {
         const data = await requestHelpers.get<ProgressResponse>('/_/auth/restore/progress')
         setProgress(data)
-      } catch {
-        // transient — ignore, keep polling
+      } catch (err) {
+        if (requestHelpers.isAuthError(err)) {
+          fail()
+          return
+        }
+        // transient - ignore, keep polling
       }
+      if (cancelled) return
       progressTimer = setTimeout(pollProgress, 1000)
     }
 

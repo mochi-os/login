@@ -10,12 +10,12 @@ const AUTH_COOKIES = {
   PROFILE: 'mochi_me',
 } as const
 
-export interface ProfileCookieData {
+interface ProfileCookieData {
   email?: string
   name?: string
 }
 
-export interface ProfileCookiePatch {
+interface ProfileCookiePatch {
   email?: string | null
   name?: string | null
 }

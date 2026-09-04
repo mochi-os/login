@@ -57,7 +57,8 @@ export function DocumentPage({ name }: { name: DocumentName }) {
   }, [name])
 
   return (
-    <div className='min-h-svh bg-[#FAF9F6] dark:bg-background text-[#2D2D3A] dark:text-foreground'>
+    // The background is the body's, from the theme variables, as on the landing.
+    <div className='min-h-svh text-foreground'>
       <main className='max-w-[760px] mx-auto px-6 py-12'>
         {error ? (
           <p className='text-destructive'>

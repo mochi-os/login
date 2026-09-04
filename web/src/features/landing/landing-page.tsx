@@ -13,7 +13,6 @@ import {
   Contact,
   Crown,
   GitBranch,
-  Github,
   Key,
   Loader2,
   MessageSquare,
@@ -37,35 +36,13 @@ import {
   AccountSourceAdvanced,
   type AccountSource,
 } from '@/features/auth/sign-in/components/account-source-advanced'
-import {
-  FacebookIcon,
-  GoogleIcon,
-  MicrosoftIcon,
-  XIcon,
-} from '@/features/auth/components/brand-icons'
 import { passkeyLogin } from '@/services/auth-service'
 import { appUrl, safeRedirect } from '@/lib/redirect'
 import { authApi } from '@/api/auth'
 import { type OAuthProvider } from '@/api/types/auth'
 import { oauthErrorMessage } from '@/lib/oauth-errors'
+import { oauthEnabled, oauthProviders, startOauth } from '@/lib/oauth-providers'
 import { useAuthStore } from '@/stores/auth-store'
-
-// Alphabetical by provider key; the filter below drops ones the operator
-// hasn't enabled, so unused providers simply never appear in the row.
-// Brand names — never translated.
-/* eslint-disable lingui/no-unlocalized-strings */
-const oauthProviders: Array<{
-  key: OAuthProvider
-  label: string
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
-}> = [
-    { key: 'facebook', label: 'Facebook', Icon: FacebookIcon },
-    { key: 'github', label: 'GitHub', Icon: Github },
-    { key: 'google', label: 'Google', Icon: GoogleIcon },
-    { key: 'microsoft', label: 'Microsoft', Icon: MicrosoftIcon },
-    { key: 'x', label: 'X', Icon: XIcon },
-  ]
-/* eslint-enable lingui/no-unlocalized-strings */
 
 function MochiLogo({
   size = 32,
@@ -154,18 +131,7 @@ export function LandingPage() {
   useEffect(() => {
     authApi.getMethods().then((methods) => {
       setPasskeyEnabled(methods.passkey === true)
-
-      const enabled = new Set<OAuthProvider>()
-
-      if (methods.oauth) {
-        for (const provider of oauthProviders) {
-          if (methods.oauth[provider.key]) {
-            enabled.add(provider.key)
-          }
-        }
-      }
-
-      setEnabledOauth(enabled)
+      setEnabledOauth(oauthEnabled(methods))
     }).catch(() => {
       // Without a visible error a failed methods fetch looks like the server
       // simply offers no passkeys or OAuth.
@@ -177,10 +143,7 @@ export function LandingPage() {
     setOauthLoading(provider)
 
     try {
-      const target = redirect ? safeRedirect(redirect) : '/'
-      const { url } = await authApi.oauthBegin(provider, { target })
-
-      window.location.href = url
+      await startOauth(provider, { redirect })
     } catch (error) {
       setOauthLoading(null)
       toast.error(getErrorMessage(error, t`Could not start sign-in`))
@@ -205,29 +168,27 @@ export function LandingPage() {
     try {
       const result = await passkeyLogin()
 
-      if (result.success) {
-        if (result.mfa) {
-          const codesParams = redirect
-            ? `?redirect=${encodeURIComponent(redirect)}`
-            : ''
+      if (result.mfa) {
+        const codesParams = redirect
+          ? `?redirect=${encodeURIComponent(redirect)}`
+          : ''
 
-          window.location.replace(appUrl(`codes${codesParams}`))
+        window.location.replace(appUrl(`codes${codesParams}`))
+      } else {
+        toast.success(t`Logged in`)
+
+        const { hasIdentity } = useAuthStore.getState()
+        const targetPath = safeRedirect(redirect)
+
+        if (hasIdentity) {
+          window.location.href = targetPath
         } else {
-          toast.success(t`Logged in`)
+          const identityParams =
+            targetPath && targetPath !== '/'
+              ? `?redirect=${encodeURIComponent(targetPath)}`
+              : ''
 
-          const { hasIdentity } = useAuthStore.getState()
-          const targetPath = safeRedirect(redirect)
-
-          if (hasIdentity) {
-            window.location.href = targetPath
-          } else {
-            const identityParams =
-              targetPath && targetPath !== '/'
-                ? `?redirect=${encodeURIComponent(targetPath)}`
-                : ''
-
-            window.location.replace(appUrl(`identity${identityParams}`))
-          }
+          window.location.replace(appUrl(`identity${identityParams}`))
         }
       }
     } catch (error) {
