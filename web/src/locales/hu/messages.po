@@ -124,6 +124,10 @@ msgstr "Fiók felfüggesztve"
 msgid "Account type"
 msgstr "Fióktípus"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+msgid "Activity"
+msgstr "Tevékenység"
+
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:758
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:209
@@ -167,7 +171,7 @@ msgstr "Mező hozzáadása"
 msgid "Add item..."
 msgstr "Elem hozzáadása..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "Hivatkozás hozzáadása"
 
@@ -254,6 +258,10 @@ msgstr "Minden, ami feliratkozott erre a hírcsatornára, nem kapja meg többé.
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Biztosan törli a következőt: „{0}”?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr "Biztosan törli a következőt: „{title}”? Ez a művelet nem vonható vissza."
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:631
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "Biztosan törli a(z) „{name}” oszlopot? Ez nem vonható vissza."
@@ -265,6 +273,14 @@ msgstr "Biztosan törli ezt a megjegyzést? Ez az összes választ is törli."
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:27
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Biztosan kijelentkezik? A fiók eléréséhez újra be kell jelentkeznie."
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
+msgid "Are you sure you want to resign?"
+msgstr "Biztos, hogy feladod a játszmát?"
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
+msgid "Are you sure you want to resign? {opponentName} will win the game."
+msgstr "Biztosan feladja? {opponentName} fog nyerni."
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
@@ -330,12 +346,21 @@ msgstr "A biztonsági mentés fájl sérült"
 msgid "Backup is too new"
 msgstr "A biztonsági mentés túl új"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Fejléckép"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr "Banner eltávolítva"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr "Banner frissítve"
+
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "Blokkolja"
 
@@ -344,7 +369,7 @@ msgstr "Blokkolja"
 msgid "Blocked navigation to untrusted link"
 msgstr "Megbízhatatlan hivatkozásra való navigáció letiltva"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "Blokkolja"
 
@@ -467,6 +492,7 @@ msgstr "Válasszon egy játékot az oldalsávból, vagy kezdjen újat."
 msgid "Choose language"
 msgstr "Nyelv kiválasztása"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -484,8 +510,8 @@ msgstr "Összes törlése"
 msgid "Clear search"
 msgstr "Keresés törlése"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:528
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:517
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:480
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:483
@@ -563,6 +589,11 @@ msgstr "Megjegyzésműveletek"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:455
 msgid "Comments"
 msgstr "Megjegyzések"
+
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+msgid "Comments ({0})"
+msgstr "Megjegyzések ({0})"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
@@ -673,8 +704,8 @@ msgstr "Nem sikerült ellenőrizni azzal a fiókkal. Kérjük, próbálja újra.
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:551
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:691
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:513
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:682
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:507
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:676
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "Létrehozás"
@@ -701,7 +732,7 @@ msgstr "Létrehozva"
 msgid "Created {field}"
 msgstr "{field} létrehozva"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:682
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:676
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:260
 msgid "Creating..."
 msgstr "Létrehozás..."
@@ -756,6 +787,8 @@ msgstr "Alapértelmezett rendezés"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Törlés"
 
@@ -774,6 +807,16 @@ msgstr "Megjegyzés törlése"
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:304
 msgid "Delete field"
 msgstr "Mező törlése"
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
+msgid "Delete game?"
+msgstr "Törli a játékot?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+msgid "Delete item"
+msgstr "Elem törlése"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:117
 msgid "Delete option"
@@ -800,6 +843,10 @@ msgstr "Törölve"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx:58
 msgid "Deleted {field}"
 msgstr "{field} törölve"
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
+msgid "Deleting..."
+msgstr "Törlés..."
 
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Descending"
@@ -855,6 +902,7 @@ msgid "Does not match the required pattern"
 msgstr "Nem felel meg a megadott mintának"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 #: src/routes/restore.tsx:49
 msgid "Done"
@@ -871,7 +919,7 @@ msgstr "Letöltés"
 msgid "Download failed"
 msgstr "A letöltés sikertelen"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "Duplikálja"
 
@@ -949,6 +997,10 @@ msgstr "Adjon meg egy kódot a folytatáshoz"
 msgid "Enter a recovery code for \"{userEmail}\" to sign in"
 msgstr "Adjon meg helyreállítási kódot \"{userEmail}\" számára a bejelentkezéshez"
 
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr "Adja meg a banner szövegét (markdown támogatott)..."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx:387
 msgid "Enter the code from your authenticator app"
 msgstr "Adja meg a hitelesítő alkalmazásból származó kódot"
@@ -974,6 +1026,10 @@ msgstr "Adja meg a hitelesítő kódját"
 #: src/features/auth/sign-in/components/user-auth-form.tsx:379
 msgid "Enter your email code and authenticator code"
 msgstr "Adja meg az e-mail kódot és a hitelesítő kódot"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+msgid "Error"
+msgstr "Hiba"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
@@ -1011,10 +1067,14 @@ msgstr "Nem sikerült folytatni"
 msgid "Failed to copy"
 msgstr "Nem sikerült másolni"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "Nem sikerült létrehozni a hivatkozást"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:303
+msgid "Failed to delete"
+msgstr "Nem sikerült törölni"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -1024,7 +1084,7 @@ msgstr "Nem sikerült törölni a mellékletet"
 msgid "Failed to delete comment"
 msgstr "Nem sikerült törölni a hozzászólást"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "Nem sikerült törölni a hivatkozást"
 
@@ -1044,6 +1104,11 @@ msgstr "Nem sikerült betölteni az előzményeket"
 msgid "Failed to load image"
 msgstr "A kép betöltése sikertelen"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+msgid "Failed to load item"
+msgstr "Nem sikerült betölteni az elemet"
+
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
 msgid "Failed to load prompts"
 msgstr "Nem sikerült betölteni az utasításokat"
@@ -1051,6 +1116,10 @@ msgstr "Nem sikerült betölteni az utasításokat"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:350
 msgid "Failed to load video"
 msgstr "A videó betöltése sikertelen"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:317
+msgid "Failed to move"
+msgstr "Az áthelyezés sikertelen"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:155
 msgid "Failed to post comment"
@@ -1068,6 +1137,10 @@ msgstr "Nem sikerült visszaállítani az utasítást"
 msgid "Failed to revoke RSS access"
 msgstr "Az RSS-hozzáférés visszavonása sikertelen"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:273
+msgid "Failed to save"
+msgstr "Nem sikerült menteni"
+
 #: src/features/auth/identity-form.tsx:62
 msgid "Failed to save identity"
 msgstr "Nem sikerült menteni az azonosítót"
@@ -1076,9 +1149,17 @@ msgstr "Nem sikerült menteni az azonosítót"
 msgid "Failed to save prompt"
 msgstr "Nem sikerült menteni az utasítást"
 
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr "Nem sikerült frissíteni a bannert"
+
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to update comment"
 msgstr "Nem sikerült frissíteni a hozzászólást"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:288
+msgid "Failed to update watching"
+msgstr "A követés frissítése sikertelen"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
@@ -1088,7 +1169,7 @@ msgstr "Nem sikerült feltölteni a mellékletet"
 msgid "Feeds"
 msgstr "Hírcsatornák"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:611
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:605
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:160
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:180
 msgid "Files"
@@ -1242,6 +1323,10 @@ msgstr "Érvénytelen ellenőrző kód"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Úgy tűnik, a keresett oldal <0/>nem létezik, vagy eltávolították."
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+msgid "Item details"
+msgstr "Elem részletei"
+
 #: ../../../lib/web/src/lib/locale-format.ts:180
 msgid "Just now"
 msgstr "Épp most"
@@ -1283,7 +1368,7 @@ msgstr "Összekapcsolt fiók"
 msgid "Linking your identity"
 msgstr "Az identitás összekapcsolása"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "Hivatkozások"
 
@@ -1298,6 +1383,14 @@ msgstr "Továbbiak betöltése"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "Tartalom betöltése…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+msgid "Loading item"
+msgstr "Elem betöltése"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+msgid "Loading item details"
+msgstr "Elem részleteinek betöltése"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:39
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1463,7 +1556,7 @@ msgstr "A név túl hosszú"
 msgid "Network error"
 msgstr "Hálózati hiba"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:498
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:492
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Új"
@@ -1493,7 +1586,7 @@ msgstr "Következő"
 msgid "Next image"
 msgstr "Következő kép"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:577
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:571
 msgid "No {parentClassNames} to add to"
 msgstr "Nincs {parentClassNames}, amelyhez hozzáadható"
 
@@ -1521,11 +1614,11 @@ msgstr "Még nincsenek játékok"
 msgid "No groups available"
 msgstr "Nincsenek elérhető csoportok"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:544
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Egyetlen elemtípus sem hozható még létre. Először hozza létre a szükséges szülőelemeket."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "Nincs egyező objektum"
 
@@ -1578,9 +1671,13 @@ msgid "No views"
 msgstr "Nincsenek nézetek"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:563
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1697,7 +1794,9 @@ msgstr "Más felhasználók megtalálhatják a profilját."
 msgid "Owner"
 msgstr "Tulajdonos"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:552
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
 msgid "Parent"
 msgstr "Szülő"
 
@@ -1844,6 +1943,10 @@ msgstr "Projektek"
 msgid "Prompt saved"
 msgstr "Prompt mentve"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+msgid "Properties"
+msgstr "Tulajdonságok"
+
 #: src/features/auth/identity-form.tsx:111
 msgid "Public"
 msgstr "Nyilvános"
@@ -1908,7 +2011,7 @@ msgstr "Érdeklődés csökkentése"
 msgid "Registration disabled"
 msgstr "Regisztráció letiltva"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "Kapcsolódik"
 
@@ -1964,8 +2067,8 @@ msgstr "Érdeklődés eltávolítása"
 msgid "Remove item"
 msgstr "Elem eltávolítása"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "Hivatkozás eltávolítása"
 
@@ -1999,6 +2102,18 @@ msgstr "Kötelező"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:358
 msgid "Resend email"
 msgstr "E-mail újraküldése"
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+msgid "Resign"
+msgstr "Feladás"
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
+msgid "Resign game?"
+msgstr "Feladja a játékot?"
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
+msgid "Resigning..."
+msgstr "Feladás..."
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:478
 msgid "Restore"
@@ -2060,6 +2175,7 @@ msgstr "Szombat"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2098,7 +2214,7 @@ msgstr "Cél keresése..."
 msgid "Search for origin..."
 msgstr "Kiindulási pont keresése..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "Objektumok keresése..."
 
@@ -2303,6 +2419,11 @@ msgstr "Indítsa el a beszélgetést az első hozzászólás hozzáadásával."
 msgid "Stay hidden from directory searches."
 msgstr "Maradjon rejtve a címtárkeresések elől."
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+msgid "Stop watching"
+msgstr "Figyelés leállítása"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "Tárgy"
@@ -2436,6 +2557,10 @@ msgstr "Ez az alkalmazás nem használhatja az Ön passkey-ét. Engedélyezze a 
 msgid "This backup was created by a newer version of Mochi. Update this server first."
 msgstr "Ez a biztonsági mentés a Mochi újabb verziójával készült. Frissítse először ezt a szervert."
 
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
+msgid "This permanently deletes the game and its chat. This cannot be undone."
+msgstr "Ez véglegesen törli a játékot és a hozzá tartozó csevegést. Ez a művelet nem vonható vissza."
+
 #: ../../../lib/web/src/lib/preference-utils.ts:57
 msgid "Thursday"
 msgstr "Csütörtök"
@@ -2557,9 +2682,8 @@ msgstr "Adatok kicsomagolása"
 msgid "Unsubscribe"
 msgstr "Leiratkozás"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:299
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "Cím nélküli"
 
@@ -2573,7 +2697,7 @@ msgstr "Frissítve"
 msgid "Updated {field}"
 msgstr "{field} frissítve"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:661
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:655
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:304
 msgid "Upload"
 msgstr "Feltöltés"
@@ -2647,6 +2771,10 @@ msgstr "Videónézegető: {0}"
 msgid "View all notifications"
 msgstr "Összes értesítés megtekintése"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+msgid "View and edit item details"
+msgstr "Tétel adatainak megtekintése és szerkesztése"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "Vezérlők megtekintése"
@@ -2654,6 +2782,11 @@ msgstr "Vezérlők megtekintése"
 #: ../../../lib/web/src/lib/shell-errors.ts:33
 msgid "Voice recording is not supported in this browser"
 msgstr "A hangfelvétel nem támogatott ebben a böngészőben"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+msgid "Watch"
+msgstr "Figyelés"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
