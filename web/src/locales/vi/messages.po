@@ -40,19 +40,19 @@ msgstr "{0, plural, one {# đã chọn} other {# đã chọn}}"
 msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, other {+# lồng nhau}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:176
+#: ../../../lib/web/src/lib/locale-format.ts:191
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#ng} other {#ng}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:172
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#g} other {#g}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:168
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#ph} other {#ph}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:180
+#: ../../../lib/web/src/lib/locale-format.ts:195
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#tu} other {#tu}}"
 
@@ -88,6 +88,10 @@ msgstr "12 giờ"
 #: ../../../lib/web/src/lib/preference-utils.ts:36
 msgid "24 hours"
 msgstr "24 giờ"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:35
+msgid "A recording is already in progress."
+msgstr "Đang có một bản ghi âm được thực hiện."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:46
 msgid "Absolute (date and time)"
@@ -369,6 +373,14 @@ msgstr "Thông báo trình duyệt"
 msgid "By creating your account, you agree to the <0>Server rules</0>, <1>Terms and conditions</1>, and <2>Privacy</2>."
 msgstr "Bằng việc tạo tài khoản, bạn đồng ý với <0>Quy tắc máy chủ</0>, <1>Điều khoản và điều kiện</1>, và <2>Quyền riêng tư</2>."
 
+#: ../../../lib/web/src/lib/shell-errors.ts:48
+msgid "Camera permission denied"
+msgstr "Quyền truy cập máy ảnh bị từ chối"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:56
+msgid "Camera unavailable"
+msgstr "Camera không khả dụng"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:426
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:616
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:211
@@ -393,6 +405,12 @@ msgstr "Hủy bình luận"
 #: ../../../lib/web/src/components/comment-composer.tsx:429
 msgid "Cancel reply"
 msgstr "Hủy phản hồi"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:24
+#: ../../../lib/web/src/lib/shell-errors.ts:37
+#: ../../../lib/web/src/lib/shell-errors.ts:52
+msgid "Cancelled"
+msgstr "Đã hủy"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx:386
 #: ../../../lib/web/src/components/attachment-composer.tsx:421
@@ -771,7 +789,7 @@ msgstr "Xóa tùy chọn {0}"
 msgid "Delete view"
 msgstr "Xóa chế độ xem"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:95
+#: ../../../lib/web/src/components/restore-banner.tsx:101
 msgid "Delete your account on the old server"
 msgstr "Xóa tài khoản của bạn trên máy chủ cũ"
 
@@ -823,8 +841,8 @@ msgstr "Hủy bản nháp?"
 msgid "Disconnected"
 msgstr "Đã ngắt kết nối"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:74
 #: ../../../lib/web/src/components/restore-banner.tsx:80
+#: ../../../lib/web/src/components/restore-banner.tsx:86
 msgid "Dismiss"
 msgstr "Bỏ qua"
 
@@ -1076,7 +1094,7 @@ msgstr "Nguồn cấp"
 msgid "Files"
 msgstr "Tệp"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:83
+#: ../../../lib/web/src/components/restore-banner.tsx:89
 msgid "Finish moving your account"
 msgstr "Hoàn tất việc chuyển tài khoản của bạn"
 
@@ -1224,7 +1242,7 @@ msgstr "Mã xác minh không hợp lệ"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Có vẻ như trang bạn đang tìm <0/>không tồn tại hoặc đã bị xóa."
 
-#: ../../../lib/web/src/lib/locale-format.ts:165
+#: ../../../lib/web/src/lib/locale-format.ts:180
 msgid "Just now"
 msgstr "Vừa xong"
 
@@ -1378,6 +1396,10 @@ msgstr "Tin nhắn"
 #: ../../../lib/web/src/lib/preference-utils.ts:80
 msgid "Metric"
 msgstr "Hệ mét"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:31
+msgid "Microphone permission denied"
+msgstr "Quyền micrô bị từ chối"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:191
 msgid "Minimum length"
@@ -1704,12 +1726,17 @@ msgid "Passkey login required"
 msgstr "Yêu cầu đăng nhập bằng passkey"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/lib/shell-errors.ts:26
 msgid "Passkey verification failed. Please try again."
 msgstr "Xác minh mã khóa không thành công. Vui lòng thử lại."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:132
+#: ../../../lib/web/src/components/restore-banner.tsx:138
 msgid "Passkeys"
 msgstr "Passkey"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:19
+msgid "Passkeys are not available in this browser"
+msgstr "Passkey không khả dụng trên trình duyệt này"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:116
 msgid "Passphrase"
@@ -1829,11 +1856,11 @@ msgstr "Thông báo đẩy"
 msgid "Raised"
 msgstr "Nổi lên"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:104
+#: ../../../lib/web/src/components/restore-banner.tsx:110
 msgid "Re-link your accounts on this server"
 msgstr "Liên kết lại các tài khoản của bạn trên máy chủ này"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:126
+#: ../../../lib/web/src/components/restore-banner.tsx:132
 msgid "Re-register your passkeys on this server"
 msgstr "Đăng ký lại mã khóa của bạn trên máy chủ này"
 
@@ -1848,6 +1875,14 @@ msgstr "Được đề xuất"
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Reconnecting ({retries})..."
 msgstr "Đang kết nối lại ({retries})..."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:43
+msgid "Recording failed. Please try again."
+msgstr "Ghi âm thất bại. Vui lòng thử lại."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:39
+msgid "Recording produced no audio"
+msgstr "Bản ghi âm không có âm thanh"
 
 #: src/features/auth/recovery/index.tsx:113
 msgid "Recovery code"
@@ -2349,6 +2384,14 @@ msgstr "Nhà cung cấp đăng nhập đó không khả dụng"
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Quá lớn để tải lên. Hãy xóa hoặc thu nhỏ tệp rồi thử lại."
 
+#: ../../../lib/web/src/lib/shell-errors.ts:50
+msgid "The camera is already in use"
+msgstr "Máy ảnh đang được sử dụng"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:54
+msgid "The camera request was not answered"
+msgstr "Yêu cầu máy ảnh không được trả lời"
+
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:89
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Email bạn nhập ở trên sẽ trở thành tên của tài khoản mới trên máy chủ này. Danh tính của bản sao lưu không được đang hoạt động ở đây — khôi phục sang máy chủ khác, hoặc xóa tài khoản hiện có trước."
@@ -2356,6 +2399,14 @@ msgstr "Email bạn nhập ở trên sẽ trở thành tên của tài khoản m
 #: src/features/auth/sign-in/components/user-auth-form.tsx:177
 msgid "The file may be damaged or have been modified."
 msgstr "Tệp có thể bị hỏng hoặc đã bị sửa đổi."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:41
+msgid "The microphone request was not answered"
+msgstr "Yêu cầu micrô không được trả lời"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:21
+msgid "The passkey request was not answered"
+msgstr "Yêu cầu passkey không được trả lời"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "The passphrase you entered does not match the backup."
@@ -2376,6 +2427,10 @@ msgstr "Không thể hoàn tất khôi phục. Tệp sao lưu có thể bị h�
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:152
 msgid "The server returned a web page instead of data."
 msgstr "Máy chủ đã trả về một trang web thay vì dữ liệu."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:17
+msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
+msgstr "Ứng dụng này không được phép sử dụng passkey của bạn. Hãy cho phép trong Cài đặt, mục Quyền."
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
 msgid "This backup was created by a newer version of Mochi. Update this server first."
@@ -2596,6 +2651,10 @@ msgstr "Xem tất cả thông báo"
 msgid "View controls"
 msgstr "Điều khiển xem"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:33
+msgid "Voice recording is not supported in this browser"
+msgstr "Trình duyệt này không hỗ trợ ghi âm giọng nói"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
 msgid "Watched"
@@ -2661,7 +2720,7 @@ msgstr "Tài khoản của bạn đã được lên lịch xóa."
 msgid "Your account requires a passkey to sign in"
 msgstr "Tài khoản của bạn yêu cầu passkey để đăng nhập"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:86
+#: ../../../lib/web/src/components/restore-banner.tsx:92
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Tài khoản của bạn đã được chuyển đến đây từ {source}. Cho đến khi bạn xóa nó ở đó, tin nhắn và thông báo có thể đến cả hai máy chủ, một số nội dung của bạn vẫn được phục vụ từ máy chủ cũ và người theo dõi có thể mất vài phút để tìm thấy bạn ở đây."
 

@@ -40,19 +40,19 @@ msgstr "{0, plural, one {# gekies} other {# gekies}}"
 msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# geneste} other {+# geneste}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:176
+#: ../../../lib/web/src/lib/locale-format.ts:191
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#d} other {#d}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:172
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#u} other {#u}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:168
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#m} other {#m}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:180
+#: ../../../lib/web/src/lib/locale-format.ts:195
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#w} other {#w}}"
 
@@ -88,6 +88,10 @@ msgstr "12 uur"
 #: ../../../lib/web/src/lib/preference-utils.ts:36
 msgid "24 hours"
 msgstr "24 uur"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:35
+msgid "A recording is already in progress."
+msgstr "'n Opname is reeds aan die gang."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:46
 msgid "Absolute (date and time)"
@@ -369,6 +373,14 @@ msgstr "Blaaierkennisgewings"
 msgid "By creating your account, you agree to the <0>Server rules</0>, <1>Terms and conditions</1>, and <2>Privacy</2>."
 msgstr "Deur jou rekening te skep, stem jy in tot die <0>Bediener-reëls</0>, <1>Bepalings en voorwaardes</1>, en <2>Privaatheid</2>."
 
+#: ../../../lib/web/src/lib/shell-errors.ts:48
+msgid "Camera permission denied"
+msgstr "Kameratoestemming geweier"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:56
+msgid "Camera unavailable"
+msgstr "Kamera nie beskikbaar nie"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:426
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:616
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:211
@@ -393,6 +405,12 @@ msgstr "Kanselleer kommentaar"
 #: ../../../lib/web/src/components/comment-composer.tsx:429
 msgid "Cancel reply"
 msgstr "Kanselleer antwoord"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:24
+#: ../../../lib/web/src/lib/shell-errors.ts:37
+#: ../../../lib/web/src/lib/shell-errors.ts:52
+msgid "Cancelled"
+msgstr "Gekanselleer"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx:386
 #: ../../../lib/web/src/components/attachment-composer.tsx:421
@@ -771,7 +789,7 @@ msgstr "Verwyder opsie {0}"
 msgid "Delete view"
 msgstr "Verwyder aansig"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:95
+#: ../../../lib/web/src/components/restore-banner.tsx:101
 msgid "Delete your account on the old server"
 msgstr "Vee jou rekening op die ou bediener uit"
 
@@ -823,8 +841,8 @@ msgstr "Konsep weggooi?"
 msgid "Disconnected"
 msgstr "Ontkoppel"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:74
 #: ../../../lib/web/src/components/restore-banner.tsx:80
+#: ../../../lib/web/src/components/restore-banner.tsx:86
 msgid "Dismiss"
 msgstr "Sluit"
 
@@ -1076,7 +1094,7 @@ msgstr "Strome"
 msgid "Files"
 msgstr "Lêers"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:83
+#: ../../../lib/web/src/components/restore-banner.tsx:89
 msgid "Finish moving your account"
 msgstr "Voltooi die skuif van jou rekening"
 
@@ -1224,7 +1242,7 @@ msgstr "Ongeldige verifikasiekode"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Dit lyk of die bladsy wat jy soek <0/>nie bestaan nie of verwyder is."
 
-#: ../../../lib/web/src/lib/locale-format.ts:165
+#: ../../../lib/web/src/lib/locale-format.ts:180
 msgid "Just now"
 msgstr "Nou net"
 
@@ -1378,6 +1396,10 @@ msgstr "Boodskap"
 #: ../../../lib/web/src/lib/preference-utils.ts:80
 msgid "Metric"
 msgstr "Metriek"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:31
+msgid "Microphone permission denied"
+msgstr "Mikrofoontoestemming geweier"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:191
 msgid "Minimum length"
@@ -1704,12 +1726,17 @@ msgid "Passkey login required"
 msgstr "Passkey-aanmelding word vereis"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/lib/shell-errors.ts:26
 msgid "Passkey verification failed. Please try again."
 msgstr "Wagsleutel-verifikasie het misluk. Probeer asseblief weer."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:132
+#: ../../../lib/web/src/components/restore-banner.tsx:138
 msgid "Passkeys"
 msgstr "Wagwoordsleutels"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:19
+msgid "Passkeys are not available in this browser"
+msgstr "Passkeys is nie in hierdie blaaier beskikbaar nie"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:116
 msgid "Passphrase"
@@ -1829,11 +1856,11 @@ msgstr "Stootkennisgewing"
 msgid "Raised"
 msgstr "Verhoog"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:104
+#: ../../../lib/web/src/components/restore-banner.tsx:110
 msgid "Re-link your accounts on this server"
 msgstr "Koppel jou rekeninge op hierdie bediener weer"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:126
+#: ../../../lib/web/src/components/restore-banner.tsx:132
 msgid "Re-register your passkeys on this server"
 msgstr "Herregistreer jou wagwoordsleutels op hierdie bediener"
 
@@ -1848,6 +1875,14 @@ msgstr "Aanbeveel"
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Reconnecting ({retries})..."
 msgstr "Herverbind tans ({retries})..."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:43
+msgid "Recording failed. Please try again."
+msgstr "Opname het misluk. Probeer asseblief weer."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:39
+msgid "Recording produced no audio"
+msgstr "Die opname bevat geen klank nie"
 
 #: src/features/auth/recovery/index.tsx:113
 msgid "Recovery code"
@@ -2349,6 +2384,14 @@ msgstr "Daardie aanmeldingverskaffer is nie beskikbaar nie"
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Dit was te groot om op te laai. Verwyder of verklein lêers en probeer weer."
 
+#: ../../../lib/web/src/lib/shell-errors.ts:50
+msgid "The camera is already in use"
+msgstr "Die kamera is reeds in gebruik"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:54
+msgid "The camera request was not answered"
+msgstr "Die kameraversoek is nie beantwoord nie"
+
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:89
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Die e-pos wat jy hierbo invoer, word die nuwe rekening se naam op hierdie bediener. Die rugsteun se identiteit mag nie reeds hier aktief wees nie — herstel na 'n ander bediener, of skrap eers die bestaande rekening."
@@ -2356,6 +2399,14 @@ msgstr "Die e-pos wat jy hierbo invoer, word die nuwe rekening se naam op hierdi
 #: src/features/auth/sign-in/components/user-auth-form.tsx:177
 msgid "The file may be damaged or have been modified."
 msgstr "Die lêer is moontlik beskadig of gewysig."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:41
+msgid "The microphone request was not answered"
+msgstr "Die mikrofoonversoek is nie beantwoord nie"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:21
+msgid "The passkey request was not answered"
+msgstr "Die passkey-versoek is nie beantwoord nie"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "The passphrase you entered does not match the backup."
@@ -2376,6 +2427,10 @@ msgstr "Die herstel het nie voltooi nie. Die rugsteunlêer is moontlik beskadig,
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:152
 msgid "The server returned a web page instead of data."
 msgstr "Die bediener het 'n webblad in plaas van data teruggestuur."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:17
+msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
+msgstr "Hierdie toepassing mag nie jou passkey gebruik nie. Laat dit toe in Instellings, onder Toestemmings."
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
 msgid "This backup was created by a newer version of Mochi. Update this server first."
@@ -2596,6 +2651,10 @@ msgstr "Bekyk alle kennisgewings"
 msgid "View controls"
 msgstr "Bekyk-kontroles"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:33
+msgid "Voice recording is not supported in this browser"
+msgstr "Stemopname word nie in hierdie blaaier ondersteun nie"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
 msgid "Watched"
@@ -2661,7 +2720,7 @@ msgstr "Jou rekening is geskeduleer vir verwydering."
 msgid "Your account requires a passkey to sign in"
 msgstr "Jou rekening vereis 'n wagsleutel om aan te meld"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:86
+#: ../../../lib/web/src/components/restore-banner.tsx:92
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Jou rekening is hierheen geskuif vanaf {source}. Totdat jy dit daar uitvee, kan boodskappe en kennisgewings albei bedieners bereik, word sommige van jou inhoud steeds vanaf die ou bediener bedien, en kan volgelinge 'n paar minute neem om jou hier te vind."
 

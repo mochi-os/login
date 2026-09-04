@@ -40,19 +40,19 @@ msgstr "{0, plural, zero {# wedi'i ddewis} one {# wedi'i ddewis} two {# wedi'u d
 msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, zero {+# nythog} one {+# nythog} two {+# nythog} few {+# nythog} many {+# nythog} other {+# nythog}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:176
+#: ../../../lib/web/src/lib/locale-format.ts:191
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#dydd} other {#dydd}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:172
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#awr} other {#awr}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:168
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#mun} other {#mun}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:180
+#: ../../../lib/web/src/lib/locale-format.ts:195
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#wyth} other {#wyth}}"
 
@@ -88,6 +88,10 @@ msgstr "12 awr"
 #: ../../../lib/web/src/lib/preference-utils.ts:36
 msgid "24 hours"
 msgstr "24 awr"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:35
+msgid "A recording is already in progress."
+msgstr "Mae recordiad eisoes ar y gweill."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:46
 msgid "Absolute (date and time)"
@@ -369,6 +373,14 @@ msgstr "Hysbysiadau porwr"
 msgid "By creating your account, you agree to the <0>Server rules</0>, <1>Terms and conditions</1>, and <2>Privacy</2>."
 msgstr "Drwy greu eich cyfrif, rydych yn cytuno â'r <0>Rheolau gweinydd</0>, <1>Telerau ac amodau</1>, a <2>Phreifatrwydd</2>."
 
+#: ../../../lib/web/src/lib/shell-errors.ts:48
+msgid "Camera permission denied"
+msgstr "Gwrthodwyd caniatâd y camera"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:56
+msgid "Camera unavailable"
+msgstr "Camera ddim ar gael"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:426
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:616
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:211
@@ -393,6 +405,12 @@ msgstr "Canslo sylw"
 #: ../../../lib/web/src/components/comment-composer.tsx:429
 msgid "Cancel reply"
 msgstr "Canslo ateb"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:24
+#: ../../../lib/web/src/lib/shell-errors.ts:37
+#: ../../../lib/web/src/lib/shell-errors.ts:52
+msgid "Cancelled"
+msgstr "Wedi'i ganslo"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx:386
 #: ../../../lib/web/src/components/attachment-composer.tsx:421
@@ -771,7 +789,7 @@ msgstr "Dileu opsiwn {0}"
 msgid "Delete view"
 msgstr "Dileu golwg"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:95
+#: ../../../lib/web/src/components/restore-banner.tsx:101
 msgid "Delete your account on the old server"
 msgstr "Dilëwch eich cyfrif ar yr hen weinydd"
 
@@ -823,8 +841,8 @@ msgstr "Hepgor y drafft?"
 msgid "Disconnected"
 msgstr "Wedi datgysylltu"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:74
 #: ../../../lib/web/src/components/restore-banner.tsx:80
+#: ../../../lib/web/src/components/restore-banner.tsx:86
 msgid "Dismiss"
 msgstr "Diystyru"
 
@@ -1076,7 +1094,7 @@ msgstr "Ffrydiau"
 msgid "Files"
 msgstr "Ffeiliau"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:83
+#: ../../../lib/web/src/components/restore-banner.tsx:89
 msgid "Finish moving your account"
 msgstr "Gorffennwch symud eich cyfrif"
 
@@ -1224,7 +1242,7 @@ msgstr "Cod dilysu annilys"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Mae'n ymddangos nad yw'r dudalen rydych yn chwilio amdani <0/>yn bodoli neu ei bod wedi'i thynnu."
 
-#: ../../../lib/web/src/lib/locale-format.ts:165
+#: ../../../lib/web/src/lib/locale-format.ts:180
 msgid "Just now"
 msgstr "Nawr"
 
@@ -1378,6 +1396,10 @@ msgstr "Neges"
 #: ../../../lib/web/src/lib/preference-utils.ts:80
 msgid "Metric"
 msgstr "Metrig"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:31
+msgid "Microphone permission denied"
+msgstr "Gwrthodwyd caniatâd y meicroffon"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:191
 msgid "Minimum length"
@@ -1704,12 +1726,17 @@ msgid "Passkey login required"
 msgstr "Mae angen mewngofnodi pasallwedd"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/lib/shell-errors.ts:26
 msgid "Passkey verification failed. Please try again."
 msgstr "Methodd dilysu'r allwedd mynediad. Rhowch gynnig arall arni."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:132
+#: ../../../lib/web/src/components/restore-banner.tsx:138
 msgid "Passkeys"
 msgstr "Pasallweddi"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:19
+msgid "Passkeys are not available in this browser"
+msgstr "Nid yw pasallweddi ar gael yn y porwr hwn"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:116
 msgid "Passphrase"
@@ -1829,11 +1856,11 @@ msgstr "Hysbysiad gwthio"
 msgid "Raised"
 msgstr "Wedi codi"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:104
+#: ../../../lib/web/src/components/restore-banner.tsx:110
 msgid "Re-link your accounts on this server"
 msgstr "Ail-gysylltwch eich cyfrifon ar y gweinydd hwn"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:126
+#: ../../../lib/web/src/components/restore-banner.tsx:132
 msgid "Re-register your passkeys on this server"
 msgstr "Ailgofrestrwch eich allweddi mynediad ar y gweinydd hwn"
 
@@ -1848,6 +1875,14 @@ msgstr "Argymhellir"
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Reconnecting ({retries})..."
 msgstr "Ailgysylltu ({retries})..."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:43
+msgid "Recording failed. Please try again."
+msgstr "Methodd y recordiad. Rhowch gynnig arall arni."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:39
+msgid "Recording produced no audio"
+msgstr "Nid oes sain yn y recordiad"
 
 #: src/features/auth/recovery/index.tsx:113
 msgid "Recovery code"
@@ -2349,6 +2384,14 @@ msgstr "Nid yw'r darparwr mewngofnodi hwnnw ar gael"
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Roedd yn rhy fawr i'w lwytho i fyny. Tynnwch neu lleihewch ffeiliau a cheisiwch eto."
 
+#: ../../../lib/web/src/lib/shell-errors.ts:50
+msgid "The camera is already in use"
+msgstr "Mae'r camera eisoes yn cael ei ddefnyddio"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:54
+msgid "The camera request was not answered"
+msgstr "Ni chafodd y cais camera ei ateb"
+
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:89
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "Mae'r e-bost a roddwch uchod yn dod yn enw'r cyfrif newydd ar y gweinydd hwn. Rhaid i hunaniaeth y copi wrth gefn beidio â bod yn weithredol yma eisoes — adferwch i weinydd gwahanol, neu dilëwch y cyfrif presennol yn gyntaf."
@@ -2356,6 +2399,14 @@ msgstr "Mae'r e-bost a roddwch uchod yn dod yn enw'r cyfrif newydd ar y gweinydd
 #: src/features/auth/sign-in/components/user-auth-form.tsx:177
 msgid "The file may be damaged or have been modified."
 msgstr "Efallai fod y ffeil wedi'i difrodi neu ei newid."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:41
+msgid "The microphone request was not answered"
+msgstr "Ni chafodd y cais meicroffon ei ateb"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:21
+msgid "The passkey request was not answered"
+msgstr "Ni chafodd y cais pasallwedd ei ateb"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "The passphrase you entered does not match the backup."
@@ -2376,6 +2427,10 @@ msgstr "Ni chwblhaodd yr adferiad. Efallai fod y ffeil wrth gefn wedi'i difrodi,
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:152
 msgid "The server returned a web page instead of data."
 msgstr "Dychwelodd y gweinydd dudalen we yn lle data."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:17
+msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
+msgstr "Nid yw'r ap hwn yn cael defnyddio eich pasallwedd. Caniatewch hynny yn Gosodiadau, o dan Caniatadau."
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
 msgid "This backup was created by a newer version of Mochi. Update this server first."
@@ -2596,6 +2651,10 @@ msgstr "Gweld pob hysbysiad"
 msgid "View controls"
 msgstr "Rheolaethau golwg"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:33
+msgid "Voice recording is not supported in this browser"
+msgstr "Nid yw recordio llais yn cael ei gefnogi yn y porwr hwn"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
 msgid "Watched"
@@ -2661,7 +2720,7 @@ msgstr "Mae eich cyfrif wedi'i drefnu i'w ddileu."
 msgid "Your account requires a passkey to sign in"
 msgstr "Mae angen passkey ar eich cyfrif i fewngofnodi"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:86
+#: ../../../lib/web/src/components/restore-banner.tsx:92
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Symudwyd eich cyfrif yma o {source}. Hyd nes y byddwch yn ei ddileu yno, gall negeseuon a hysbysiadau gyrraedd y ddau weinydd, gall peth o'ch cynnwys barhau i gael ei weini o'r hen weinydd, a gall dilynwyr gymryd ychydig funudau i ddod o hyd i chi yma."
 

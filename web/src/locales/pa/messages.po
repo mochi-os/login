@@ -40,19 +40,19 @@ msgstr "{0, plural, one {# ਚੁਣੇ ਗਏ} other {# ਚੁਣੇ ਗਏ}}"
 msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# ਨੈਸਟਡ} other {+# ਨੈਸਟਡ}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:176
+#: ../../../lib/web/src/lib/locale-format.ts:191
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#ਦਿ} other {#ਦਿ}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:172
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#ਘੰ} other {#ਘੰ}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:168
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#ਮਿ} other {#ਮਿ}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:180
+#: ../../../lib/web/src/lib/locale-format.ts:195
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#ਹ} other {#ਹ}}"
 
@@ -88,6 +88,10 @@ msgstr "12 ਘੰਟੇ"
 #: ../../../lib/web/src/lib/preference-utils.ts:36
 msgid "24 hours"
 msgstr "24 ਘੰਟੇ"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:35
+msgid "A recording is already in progress."
+msgstr "ਇੱਕ ਰਿਕਾਰਡਿੰਗ ਪਹਿਲਾਂ ਤੋਂ ਚੱਲ ਰਹੀ ਹੈ।"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:46
 msgid "Absolute (date and time)"
@@ -369,6 +373,14 @@ msgstr "ਬ੍ਰਾਊਜ਼ਰ ਨੋਟੀਫਿਕੇਸ਼ਨਾਂ"
 msgid "By creating your account, you agree to the <0>Server rules</0>, <1>Terms and conditions</1>, and <2>Privacy</2>."
 msgstr "ਆਪਣਾ ਖਾਤਾ ਬਣਾ ਕੇ, ਤੁਸੀਂ <0>ਸਰਵਰ ਨਿਯਮਾਂ</0>, <1>ਸ਼ਰਤਾਂ ਅਤੇ ਨਿਯਮਾਂ</1>, ਅਤੇ <2>ਨਿੱਜਤਾ</2> ਨਾਲ ਸਹਿਮਤ ਹੁੰਦੇ ਹੋ।"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:48
+msgid "Camera permission denied"
+msgstr "ਕੈਮਰਾ ਇਜਾਜ਼ਤ ਅਸਵੀਕਾਰ ਕੀਤੀ ਗਈ"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:56
+msgid "Camera unavailable"
+msgstr "ਕੈਮਰਾ ਉਪਲਬਧ ਨਹੀਂ"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:426
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:616
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:211
@@ -393,6 +405,12 @@ msgstr "ਟਿੱਪਣੀ ਰੱਦ ਕਰੋ"
 #: ../../../lib/web/src/components/comment-composer.tsx:429
 msgid "Cancel reply"
 msgstr "ਜਵਾਬ ਰੱਦ ਕਰੋ"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:24
+#: ../../../lib/web/src/lib/shell-errors.ts:37
+#: ../../../lib/web/src/lib/shell-errors.ts:52
+msgid "Cancelled"
+msgstr "ਰੱਦ ਕੀਤਾ ਗਿਆ"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx:386
 #: ../../../lib/web/src/components/attachment-composer.tsx:421
@@ -771,7 +789,7 @@ msgstr "ਵਿਕਲਪ {0} ਮਿਟਾਓ"
 msgid "Delete view"
 msgstr "ਦ੍ਰਿਸ਼ ਮਿਟਾਓ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:95
+#: ../../../lib/web/src/components/restore-banner.tsx:101
 msgid "Delete your account on the old server"
 msgstr "ਪੁਰਾਣੇ ਸਰਵਰ 'ਤੇ ਆਪਣਾ ਖਾਤਾ ਮਿਟਾਓ"
 
@@ -823,8 +841,8 @@ msgstr "ਡਰਾਫਟ ਰੱਦ ਕਰਨਾ ਹੈ?"
 msgid "Disconnected"
 msgstr "ਡਿਸਕਨੈਕਟ ਹੋ ਗਿਆ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:74
 #: ../../../lib/web/src/components/restore-banner.tsx:80
+#: ../../../lib/web/src/components/restore-banner.tsx:86
 msgid "Dismiss"
 msgstr "ਖਾਰਜ ਕਰੋ"
 
@@ -1076,7 +1094,7 @@ msgstr "ਫੀਡਾਂ"
 msgid "Files"
 msgstr "ਫਾਈਲਾਂ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:83
+#: ../../../lib/web/src/components/restore-banner.tsx:89
 msgid "Finish moving your account"
 msgstr "ਆਪਣਾ ਖਾਤਾ ਬਦਲਣਾ ਪੂਰਾ ਕਰੋ"
 
@@ -1224,7 +1242,7 @@ msgstr "ਅਯੋਗ ਤਸਦੀਕ ਕੋਡ"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "ਜਾਪਦਾ ਹੈ ਕਿ ਜਿਹੜਾ ਪੰਨਾ ਤੁਸੀਂ ਲੱਭ ਰਹੇ ਹੋ <0/>ਉਹ ਮੌਜੂਦ ਨਹੀਂ ਹੈ ਜਾਂ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ।"
 
-#: ../../../lib/web/src/lib/locale-format.ts:165
+#: ../../../lib/web/src/lib/locale-format.ts:180
 msgid "Just now"
 msgstr "ਹੁਣੇ"
 
@@ -1378,6 +1396,10 @@ msgstr "ਸੁਨੇਹਾ"
 #: ../../../lib/web/src/lib/preference-utils.ts:80
 msgid "Metric"
 msgstr "ਮੈਟ੍ਰਿਕ"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:31
+msgid "Microphone permission denied"
+msgstr "ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਇਜਾਜ਼ਤ ਤੋਂ ਇਨਕਾਰ"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:191
 msgid "Minimum length"
@@ -1704,12 +1726,17 @@ msgid "Passkey login required"
 msgstr "ਪਾਸਕੀ ਲੌਗਇਨ ਜ਼ਰੂਰੀ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/lib/shell-errors.ts:26
 msgid "Passkey verification failed. Please try again."
 msgstr "ਪਾਸਕੀ ਤਸਦੀਕ ਅਸਫਲ ਰਹੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:132
+#: ../../../lib/web/src/components/restore-banner.tsx:138
 msgid "Passkeys"
 msgstr "ਪਾਸਕੀਆਂ"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:19
+msgid "Passkeys are not available in this browser"
+msgstr "ਇਸ ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ ਪਾਸਕੀਆਂ ਉਪਲਬਧ ਨਹੀਂ ਹਨ"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:116
 msgid "Passphrase"
@@ -1829,11 +1856,11 @@ msgstr "ਪੁਸ਼ ਸੂਚਨਾ"
 msgid "Raised"
 msgstr "ਉੱਚਾ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:104
+#: ../../../lib/web/src/components/restore-banner.tsx:110
 msgid "Re-link your accounts on this server"
 msgstr "ਇਸ ਸਰਵਰ 'ਤੇ ਆਪਣੇ ਖਾਤੇ ਮੁੜ-ਲਿੰਕ ਕਰੋ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:126
+#: ../../../lib/web/src/components/restore-banner.tsx:132
 msgid "Re-register your passkeys on this server"
 msgstr "ਇਸ ਸਰਵਰ 'ਤੇ ਆਪਣੀਆਂ ਪਾਸਕੀਆਂ ਮੁੜ-ਰਜਿਸਟਰ ਕਰੋ"
 
@@ -1848,6 +1875,14 @@ msgstr "ਸਿਫ਼ਾਰਸ਼ ਕੀਤੇ"
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Reconnecting ({retries})..."
 msgstr "ਮੁੜ ਕਨੈਕਟ ਹੋ ਰਿਹਾ ਹੈ ({retries})..."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:43
+msgid "Recording failed. Please try again."
+msgstr "ਰਿਕਾਰਡਿੰਗ ਅਸਫਲ ਰਹੀ। ਕਿਰਪਾ ਕਰਕੇ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:39
+msgid "Recording produced no audio"
+msgstr "ਰਿਕਾਰਡਿੰਗ ਵਿੱਚ ਕੋਈ ਆਵਾਜ਼ ਨਹੀਂ"
 
 #: src/features/auth/recovery/index.tsx:113
 msgid "Recovery code"
@@ -2349,6 +2384,14 @@ msgstr "ਉਹ ਸਾਈਨ-ਇਨ ਪ੍ਰਦਾਤਾ ਉਪਲਬਧ ਨਹ�
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "ਅੱਪਲੋਡ ਕਰਨ ਲਈ ਬਹੁਤ ਵੱਡਾ ਸੀ। ਫਾਈਲਾਂ ਹਟਾਓ ਜਾਂ ਛੋਟੀਆਂ ਕਰੋ ਅਤੇ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:50
+msgid "The camera is already in use"
+msgstr "ਕੈਮਰਾ ਪਹਿਲਾਂ ਹੀ ਵਰਤੋਂ ਵਿੱਚ ਹੈ"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:54
+msgid "The camera request was not answered"
+msgstr "ਕੈਮਰਾ ਬੇਨਤੀ ਦਾ ਜਵਾਬ ਨਹੀਂ ਮਿਲਿਆ"
+
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:89
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "ਜੋ ਈਮੇਲ ਤੁਸੀਂ ਉੱਪਰ ਦਰਜ ਕਰਦੇ ਹੋ ਉਹ ਇਸ ਸਰਵਰ 'ਤੇ ਨਵੇਂ ਖਾਤੇ ਦਾ ਨਾਮ ਬਣ ਜਾਂਦਾ ਹੈ। ਬੈਕਅੱਪ ਦੀ ਪਛਾਣ ਇੱਥੇ ਪਹਿਲਾਂ ਤੋਂ ਕਿਰਿਆਸ਼ੀਲ ਨਹੀਂ ਹੋਣੀ ਚਾਹੀਦੀ — ਕਿਸੇ ਹੋਰ ਸਰਵਰ 'ਤੇ ਬਹਾਲ ਕਰੋ, ਜਾਂ ਮੌਜੂਦਾ ਖਾਤਾ ਪਹਿਲਾਂ ਮਿਟਾਓ।"
@@ -2356,6 +2399,14 @@ msgstr "ਜੋ ਈਮੇਲ ਤੁਸੀਂ ਉੱਪਰ ਦਰਜ ਕਰਦੇ 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:177
 msgid "The file may be damaged or have been modified."
 msgstr "ਫ਼ਾਈਲ ਖਰਾਬ ਹੋ ਸਕਦੀ ਹੈ ਜਾਂ ਬਦਲੀ ਗਈ ਹੋ ਸਕਦੀ ਹੈ।"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:41
+msgid "The microphone request was not answered"
+msgstr "ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਬੇਨਤੀ ਦਾ ਜਵਾਬ ਨਹੀਂ ਮਿਲਿਆ"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:21
+msgid "The passkey request was not answered"
+msgstr "ਪਾਸਕੀ ਬੇਨਤੀ ਦਾ ਜਵਾਬ ਨਹੀਂ ਮਿਲਿਆ"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "The passphrase you entered does not match the backup."
@@ -2376,6 +2427,10 @@ msgstr "ਰੀਸਟੋਰ ਪੂਰਾ ਨਹੀਂ ਹੋਇਆ। ਬੈਕ�
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:152
 msgid "The server returned a web page instead of data."
 msgstr "ਸਰਵਰ ਨੇ ਡਾਟੇ ਦੀ ਬਜਾਏ ਵੈੱਬ ਪੰਨਾ ਵਾਪਸ ਕੀਤਾ।"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:17
+msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
+msgstr "ਇਸ ਐਪ ਨੂੰ ਤੁਹਾਡੀ ਪਾਸਕੀ ਵਰਤਣ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ। ਸੈਟਿੰਗਾਂ ਵਿੱਚ, ਇਜਾਜ਼ਤਾਂ ਹੇਠ ਇਸ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ।"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
 msgid "This backup was created by a newer version of Mochi. Update this server first."
@@ -2596,6 +2651,10 @@ msgstr "ਸਾਰੀਆਂ ਸੂਚਨਾਵਾਂ ਦੇਖੋ"
 msgid "View controls"
 msgstr "ਨਿਯੰਤਰਣ ਦੇਖੋ"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:33
+msgid "Voice recording is not supported in this browser"
+msgstr "ਇਸ ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ ਵੌਇਸ ਰਿਕਾਰਡਿੰਗ ਸਮਰਥਿਤ ਨਹੀਂ"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
 msgid "Watched"
@@ -2661,7 +2720,7 @@ msgstr "ਤੁਹਾਡਾ ਖਾਤਾ ਮਿਟਾਉਣ ਲਈ ਨਿਯਤ �
 msgid "Your account requires a passkey to sign in"
 msgstr "ਸਾਈਨ ਇਨ ਕਰਨ ਲਈ ਤੁਹਾਡੇ ਖਾਤੇ ਨੂੰ ਪਾਸਕੀ ਦੀ ਲੋੜ ਹੈ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:86
+#: ../../../lib/web/src/components/restore-banner.tsx:92
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "ਤੁਹਾਡਾ ਖਾਤਾ {source} ਤੋਂ ਇੱਥੇ ਲਿਆਂਦਾ ਗਿਆ। ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਉੱਥੇ ਇਸਨੂੰ ਮਿਟਾ ਨਹੀਂ ਲੈਂਦੇ, ਸੁਨੇਹੇ ਅਤੇ ਸੂਚਨਾਵਾਂ ਦੋਵੇਂ ਸਰਵਰਾਂ ਤੱਕ ਪਹੁੰਚ ਸਕਦੀਆਂ ਹਨ, ਕੁਝ ਸਮੱਗਰੀ ਪੁਰਾਣੇ ਸਰਵਰ ਤੋਂ ਪਰੋਸੀ ਜਾਂਦੀ ਰਹੇਗੀ, ਅਤੇ ਫ਼ੋਲੋਅਰਾਂ ਨੂੰ ਤੁਹਾਨੂੰ ਇੱਥੇ ਲੱਭਣ ਵਿੱਚ ਕੁਝ ਮਿੰਟ ਲੱਗ ਸਕਦੇ ਹਨ।"
 

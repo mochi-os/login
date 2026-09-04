@@ -40,19 +40,19 @@ msgstr "{0, plural, one {# ተመርጧል} other {# ተመርጠዋል}}"
 msgid "{0, plural, one {+# nested} other {+# nested}}"
 msgstr "{0, plural, one {+# ውስጠኛ} other {+# ውስጠኛ}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:176
+#: ../../../lib/web/src/lib/locale-format.ts:191
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#ቀ} other {#ቀ}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:172
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#ሰ} other {#ሰ}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:168
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#ደ} other {#ደ}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:180
+#: ../../../lib/web/src/lib/locale-format.ts:195
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#ሳ} other {#ሳ}}"
 
@@ -88,6 +88,10 @@ msgstr "12 ሰዓት"
 #: ../../../lib/web/src/lib/preference-utils.ts:36
 msgid "24 hours"
 msgstr "24 ሰዓት"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:35
+msgid "A recording is already in progress."
+msgstr "ቀረጻ አስቀድሞ በሂደት ላይ ነው።"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:46
 msgid "Absolute (date and time)"
@@ -369,6 +373,14 @@ msgstr "የአሳሽ ማሳወቂያዎች"
 msgid "By creating your account, you agree to the <0>Server rules</0>, <1>Terms and conditions</1>, and <2>Privacy</2>."
 msgstr "መለያዎን በመፍጠር በ<0>የሰርቨር ህጎች</0>፣ <1>ውሎችና መመሪያዎች</1>፣ እና <2>ግላዊነት</2> ለመስማማት ይስማማሉ።"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:48
+msgid "Camera permission denied"
+msgstr "የካሜራ ፈቃድ ተከልክሏል"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:56
+msgid "Camera unavailable"
+msgstr "ካሜራ አይገኝም"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:426
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:616
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:211
@@ -393,6 +405,12 @@ msgstr "አስተያየት ሰርዝ"
 #: ../../../lib/web/src/components/comment-composer.tsx:429
 msgid "Cancel reply"
 msgstr "ምላሽ ሰርዝ"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:24
+#: ../../../lib/web/src/lib/shell-errors.ts:37
+#: ../../../lib/web/src/lib/shell-errors.ts:52
+msgid "Cancelled"
+msgstr "ተሰርዟል"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx:386
 #: ../../../lib/web/src/components/attachment-composer.tsx:421
@@ -771,7 +789,7 @@ msgstr "አማራጭ {0} ሰርዝ"
 msgid "Delete view"
 msgstr "እይታ ሰርዝ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:95
+#: ../../../lib/web/src/components/restore-banner.tsx:101
 msgid "Delete your account on the old server"
 msgstr "በድሮ ሰርቨር ላይ ያለ መለያህን ሰርዝ"
 
@@ -823,8 +841,8 @@ msgstr "ረቂቁን ይጣል?"
 msgid "Disconnected"
 msgstr "ተቋርጧል"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:74
 #: ../../../lib/web/src/components/restore-banner.tsx:80
+#: ../../../lib/web/src/components/restore-banner.tsx:86
 msgid "Dismiss"
 msgstr "አጥፋ"
 
@@ -1076,7 +1094,7 @@ msgstr "ምግቦች"
 msgid "Files"
 msgstr "ፋይሎች"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:83
+#: ../../../lib/web/src/components/restore-banner.tsx:89
 msgid "Finish moving your account"
 msgstr "የመለያ ዝውውርን አጠናቅ"
 
@@ -1224,7 +1242,7 @@ msgstr "ልክ ያልሆነ የማረጋገጫ ኮድ"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "የሚፈልጉት ገጽ <0/>የለም ወይም ተወግዷል።"
 
-#: ../../../lib/web/src/lib/locale-format.ts:165
+#: ../../../lib/web/src/lib/locale-format.ts:180
 msgid "Just now"
 msgstr "አሁን"
 
@@ -1378,6 +1396,10 @@ msgstr "መልዕክት"
 #: ../../../lib/web/src/lib/preference-utils.ts:80
 msgid "Metric"
 msgstr "ሜትሪክ"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:31
+msgid "Microphone permission denied"
+msgstr "የማይክሮፎን ፈቃድ ተከልክሏል"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:191
 msgid "Minimum length"
@@ -1704,12 +1726,17 @@ msgid "Passkey login required"
 msgstr "የፓስኪ መግቢያ ያስፈልጋል"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/lib/shell-errors.ts:26
 msgid "Passkey verification failed. Please try again."
 msgstr "የይለፍ ቁልፍ ማረጋገጫ አልተሳካም። እባክዎ እንደገና ይሞክሩ።"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:132
+#: ../../../lib/web/src/components/restore-banner.tsx:138
 msgid "Passkeys"
 msgstr "ፓስኪዎች"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:19
+msgid "Passkeys are not available in this browser"
+msgstr "ፓስኪዎች በዚህ አሳሽ ውስጥ አይገኙም"
 
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:116
 msgid "Passphrase"
@@ -1829,11 +1856,11 @@ msgstr "የግፋ ማሳወቂያ"
 msgid "Raised"
 msgstr "ከፍ ያለ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:104
+#: ../../../lib/web/src/components/restore-banner.tsx:110
 msgid "Re-link your accounts on this server"
 msgstr "በዚህ ሰርቨር ላይ መለያዎችህን እንደገና አገናኝ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:126
+#: ../../../lib/web/src/components/restore-banner.tsx:132
 msgid "Re-register your passkeys on this server"
 msgstr "የይለፍ ቁልፎችዎን በዚህ አገልጋይ ላይ እንደገና ይመዝግቡ"
 
@@ -1848,6 +1875,14 @@ msgstr "የተመከረ"
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Reconnecting ({retries})..."
 msgstr "እንደገና በመገናኘት ላይ ({retries})..."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:43
+msgid "Recording failed. Please try again."
+msgstr "ቀረጻ አልተሳካም። እባክዎ እንደገና ይሞክሩ።"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:39
+msgid "Recording produced no audio"
+msgstr "ቀረጻው ድምፅ የለውም"
 
 #: src/features/auth/recovery/index.tsx:113
 msgid "Recovery code"
@@ -2349,6 +2384,14 @@ msgstr "ያ የመግቢያ አቅራቢ አይገኝም"
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "ለመስቀል በጣም ትልቅ ነበር። ፋይሎችን ያስወግዱ ወይም ያሳንሱ እና እንደገና ይሞክሩ።"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:50
+msgid "The camera is already in use"
+msgstr "ካሜራው አስቀድሞ በጥቅም ላይ ነው"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:54
+msgid "The camera request was not answered"
+msgstr "የካሜራ ጥያቄው መልስ አላገኘም"
+
 #: src/features/auth/sign-in/components/account-source-advanced.tsx:89
 msgid "The email you enter above becomes the new account's name on this server. The backup's identity must not already be active here — restore onto a different server, or delete the existing account first."
 msgstr "ከላይ የሚያስገቡት ኢሜይል በዚህ አገልጋይ ላይ የአዲሱ መለያ ስም ይሆናል። የምትኬው ማንነት እዚህ አስቀድሞ ንቁ መሆን የለበትም — ወደ ሌላ አገልጋይ ይመልሱ፣ ወይም ነባሩን መለያ ይሰርዙ።"
@@ -2356,6 +2399,14 @@ msgstr "ከላይ የሚያስገቡት ኢሜይል በዚህ አገልጋይ �
 #: src/features/auth/sign-in/components/user-auth-form.tsx:177
 msgid "The file may be damaged or have been modified."
 msgstr "ፋይሉ ተበላሽቷል ወይም ተቀይሮ ሊሆን ይችላል።"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:41
+msgid "The microphone request was not answered"
+msgstr "የማይክሮፎን ጥያቄው መልስ አላገኘም"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:21
+msgid "The passkey request was not answered"
+msgstr "የፓስኪ ጥያቄው መልስ አላገኘም"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:165
 msgid "The passphrase you entered does not match the backup."
@@ -2376,6 +2427,10 @@ msgstr "መልሶ ማቋቋሙ አልተጠናቀቀም። የምትኬ ፋይ�
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:152
 msgid "The server returned a web page instead of data."
 msgstr "አገልጋዩ ከመረጃ ይልቅ የድር ገጽ መልሷል።"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:17
+msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
+msgstr "ይህ መተግበሪያ የእርስዎን ፓስኪ እንዲጠቀም አልተፈቀደለትም። በቅንብሮች ውስጥ፣ በፈቃዶች ስር ይፍቀዱለት።"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx:169
 msgid "This backup was created by a newer version of Mochi. Update this server first."
@@ -2596,6 +2651,10 @@ msgstr "ሁሉንም ማሳወቂያዎች ይመልከቱ"
 msgid "View controls"
 msgstr "የእይታ መቆጣጠሪያዎች"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:33
+msgid "Voice recording is not supported in this browser"
+msgstr "በዚህ አሳሽ ውስጥ የድምፅ ቀረጻ አይደገፍም"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
 msgid "Watched"
@@ -2661,7 +2720,7 @@ msgstr "መለያዎ ለመሰረዝ ተይዟል።"
 msgid "Your account requires a passkey to sign in"
 msgstr "ለመግባት መለያዎ የይለፍ ቁልፍ ይጠይቃል"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:86
+#: ../../../lib/web/src/components/restore-banner.tsx:92
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "መለያህ ከ{source} ወደዚህ ተዛውሯል። እዚያ እስኪሰርዝ ድረስ፣ መልዕክቶችና ማሳወቂያዎች ሁለቱ ሰርቨሮች ሊደርሱ ይችላሉ፣ አንዳንድ ይዘቶችህ ከድሮ ሰርቨር ሲቀርቡ ይቀጥላሉ፣ ተከታዮችህ ወደዚህ ለማግኘት ጥቂት ደቂቃዎች ሊወስድ ይችላል።"
 
