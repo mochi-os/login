@@ -247,7 +247,7 @@ export function LandingPage() {
             />
           </div>
 
-          <h1 className="mx-auto mb-5 w-fit bg-linear-165 from-primary to-primary-light bg-clip-text text-[2.25rem] font-nunito font-semibold leading-[1.08] tracking-[3px] text-transparent sm:mb-6 sm:text-5xl lg:text-[3.5rem]">
+          <h1 className="mx-auto mb-5 w-fit bg-linear-165 from-primary to-primary-light bg-clip-text text-[2.25rem] font-light leading-[1.08] tracking-[3px] text-transparent sm:mb-6 sm:text-5xl lg:text-[3.5rem]">
             {/* jsx-text-ok: brand wordmark, verbatim in every locale */}
             mochi
           </h1>
