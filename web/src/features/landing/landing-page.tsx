@@ -329,7 +329,7 @@ export function LandingPage() {
               {step === 'verification' && userEmail ? (
                 userEmail
               ) : (
-                <Trans>Log in to Mochi</Trans>
+                <Trans>Sign up or log in</Trans>
               )}
             </ResponsiveDialogTitle>
           </ResponsiveDialogHeader>
