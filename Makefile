@@ -44,3 +44,6 @@ dev:
 
 i18n-extract:
 	bash -c 'cd web && $(SAFE_PNPM) i18n:extract --clean'
+
+test:
+	python3 ../../claude/scripts/p2p-test.py --app $(APP)
