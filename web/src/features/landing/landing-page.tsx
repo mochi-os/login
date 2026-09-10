@@ -76,6 +76,7 @@ export function LandingPage() {
   const [oauthLoading, setOauthLoading] = useState<OAuthProvider | null>(null)
   const [isPasskeyLoading, setIsPasskeyLoading] = useState(false)
   const [oauthError, setOauthError] = useState<string | null>(null)
+  const [methodsFailed, setMethodsFailed] = useState(false)
   const [accountSource, setAccountSource] = useState<AccountSource>('none')
   const [restoreBundle, setRestoreBundle] = useState<File | null>(null)
   const [restorePassphrase, setRestorePassphrase] = useState('')
@@ -135,7 +136,7 @@ export function LandingPage() {
     }).catch(() => {
       // Without a visible error a failed methods fetch looks like the server
       // simply offers no passkeys or OAuth.
-      setOauthError(t`Could not load sign-in methods. Reload to try again.`)
+      setMethodsFailed(true)
     })
   }, [])
 
@@ -334,10 +335,13 @@ export function LandingPage() {
             </ResponsiveDialogTitle>
           </ResponsiveDialogHeader>
 
-          {oauthError && (
+          {(oauthError || methodsFailed) && (
             <div className="flex items-start gap-2 rounded-md border border-destructive/50 bg-destructive/10 p-3 text-sm text-destructive">
               <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
-              <span>{oauthError}</span>
+              <span>
+                {oauthError ??
+                  t`Could not load sign-in methods. Reload to try again.`}
+              </span>
             </div>
           )}
 
