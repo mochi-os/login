@@ -13,7 +13,7 @@
       }
     </style>
     <script>
-      (function() {
+      ;(function () {
         var app = document.querySelector('meta[name="mochi:app"]')
         var fp = document.querySelector('meta[name="mochi:fingerprint"]')
         var domain = document.querySelector('meta[name="mochi:domain"]')
@@ -22,20 +22,40 @@
         else if (fp && app) base = '/' + app.content + '/' + fp.content + '/'
         else if (fp) base = '/' + fp.content + '/'
         else if (app) base = '/' + app.content + '/'
-        else { var m = location.pathname.match(/^\/([^/]+)/); if (m) base = '/' + m[1] + '/' }
+        else {
+          var m = location.pathname.match(/^\/([^/]+)/)
+          if (m) base = '/' + m[1] + '/'
+        }
         var el = document.createElement('base')
         el.href = base
         document.head.appendChild(el)
       })()
     </script>
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta Tags -->
     <title>Mochi &mdash; Your apps, your platform, your network</title>
-    <meta name="title" content="Mochi — Your apps, your platform, your network" />
+    <meta
+      name="title"
+      content="Mochi — Your apps, your platform, your network"
+    />
     <meta
       name="description"
       content="Mochi is a distributed application platform. Run feeds, forums, projects, CRM, and wikis on your own server, communicating peer-to-peer. Built with Go, libp2p, and Starlark."
@@ -44,7 +64,10 @@
     <!-- Open Graph / Facebook. og:url is stamped and the image made absolute
          by core for the serving host - see opengraph_landing in login.star. -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Mochi — Your apps, your platform, your network" />
+    <meta
+      property="og:title"
+      content="Mochi — Your apps, your platform, your network"
+    />
     <meta
       property="og:description"
       content="Mochi is a distributed application platform. Run feeds, forums, projects, CRM, and wikis on your own server, communicating peer-to-peer."
@@ -55,7 +78,10 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Mochi — Your apps, your platform, your network" />
+    <meta
+      property="twitter:title"
+      content="Mochi — Your apps, your platform, your network"
+    />
     <meta
       property="twitter:description"
       content="Mochi is a distributed application platform. Run feeds, forums, projects, CRM, and wikis on your own server, communicating peer-to-peer."

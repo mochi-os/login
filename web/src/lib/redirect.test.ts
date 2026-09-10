@@ -2,15 +2,17 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
-
 import { describe, expect, it } from 'vitest'
 import { navigable, safeRedirect } from './redirect'
 
 describe('navigable', () => {
   it('accepts the provider URLs an OAuth begin legitimately returns', () => {
-    expect(navigable('https://accounts.google.com/o/oauth2/v2/auth?x=1')).toBe(true)
-    expect(navigable('http://localhost:8081/_/auth/oauth/github/callback')).toBe(true)
+    expect(navigable('https://accounts.google.com/o/oauth2/v2/auth?x=1')).toBe(
+      true
+    )
+    expect(
+      navigable('http://localhost:8081/_/auth/oauth/github/callback')
+    ).toBe(true)
   })
 
   it('refuses schemes that execute rather than navigate', () => {

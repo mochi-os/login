@@ -2,10 +2,20 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { Fragment, useEffect, useState } from 'react'
 import { useSearch } from '@tanstack/react-router'
+import { passkeyLogin } from '@/services/auth-service'
 import { Trans, useLingui } from '@lingui/react/macro'
+import {
+  Button,
+  LanguagePicker,
+  ResponsiveDialog,
+  ResponsiveDialogContent,
+  ResponsiveDialogHeader,
+  ResponsiveDialogTitle,
+  getErrorMessage,
+  toast,
+} from '@mochi/web'
 import {
   AlertCircle,
   ArrowRight,
@@ -21,28 +31,17 @@ import {
   SquareKanban,
   Store,
 } from 'lucide-react'
-import {
-  Button,
-  LanguagePicker,
-  ResponsiveDialog,
-  ResponsiveDialogContent,
-  ResponsiveDialogHeader,
-  ResponsiveDialogTitle,
-  getErrorMessage,
-  toast,
-} from '@mochi/web'
-import { UserAuthForm } from '@/features/auth/sign-in/components/user-auth-form'
+import { authApi } from '@/api/auth'
+import { type OAuthProvider } from '@/api/types/auth'
+import { useAuthStore } from '@/stores/auth-store'
+import { oauthErrorMessage } from '@/lib/oauth-errors'
+import { oauthEnabled, oauthProviders, startOauth } from '@/lib/oauth-providers'
+import { appUrl, safeRedirect } from '@/lib/redirect'
 import {
   AccountSourceAdvanced,
   type AccountSource,
 } from '@/features/auth/sign-in/components/account-source-advanced'
-import { passkeyLogin } from '@/services/auth-service'
-import { appUrl, safeRedirect } from '@/lib/redirect'
-import { authApi } from '@/api/auth'
-import { type OAuthProvider } from '@/api/types/auth'
-import { oauthErrorMessage } from '@/lib/oauth-errors'
-import { oauthEnabled, oauthProviders, startOauth } from '@/lib/oauth-providers'
-import { useAuthStore } from '@/stores/auth-store'
+import { UserAuthForm } from '@/features/auth/sign-in/components/user-auth-form'
 
 function MochiLogo({
   size = 32,
@@ -54,7 +53,7 @@ function MochiLogo({
   return (
     <img
       src={appUrl('images/logo-header.png')}
-      alt="Mochi"
+      alt='Mochi'
       width={size}
       height={size}
       className={className}
@@ -130,14 +129,17 @@ export function LandingPage() {
   }, [])
 
   useEffect(() => {
-    authApi.getMethods().then((methods) => {
-      setPasskeyEnabled(methods.passkey === true)
-      setEnabledOauth(oauthEnabled(methods))
-    }).catch(() => {
-      // Without a visible error a failed methods fetch looks like the server
-      // simply offers no passkeys or OAuth.
-      setMethodsFailed(true)
-    })
+    authApi
+      .getMethods()
+      .then((methods) => {
+        setPasskeyEnabled(methods.passkey === true)
+        setEnabledOauth(oauthEnabled(methods))
+      })
+      .catch(() => {
+        // Without a visible error a failed methods fetch looks like the server
+        // simply offers no passkeys or OAuth.
+        setMethodsFailed(true)
+      })
   }, [])
 
   const handleOauthLogin = async (provider: OAuthProvider) => {
@@ -224,92 +226,96 @@ export function LandingPage() {
   ]
 
   return (
-    <div className="relative flex min-h-svh flex-col overflow-hidden text-foreground">
+    <div className='text-foreground relative flex min-h-svh flex-col overflow-hidden'>
       {/* Page background (colour + the theme's gentle gradient) comes from the
           body via the theme variables - see styles/index.css. */}
 
       {/* Top actions */}
-      <header className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between md:justify-end gap-2 px-4 pt-4 sm:gap-3 sm:px-6 sm:pt-5 lg:px-8">
+      <header className='relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between gap-2 px-4 pt-4 sm:gap-3 sm:px-6 sm:pt-5 md:justify-end lg:px-8'>
         <LanguagePicker />
 
-        <Button type="button" variant="outline" onClick={openDialog} className="h-9">
+        <Button
+          type='button'
+          variant='outline'
+          onClick={openDialog}
+          className='h-9'
+        >
           <Trans>Sign up or log in</Trans>
-          <ArrowRight className="size-4 shrink-0 rtl:rotate-180" />
+          <ArrowRight className='size-4 shrink-0 rtl:rotate-180' />
         </Button>
       </header>
 
       {/* Hero */}
-      <main className="relative z-10 flex flex-1 items-start justify-center px-4 pb-10 pt-2 sm:px-6 sm:pb-16 sm:pt-4 lg:px-8">
-        <section className="mx-auto w-full max-w-5xl text-center">
-          <div className="mb-6 flex justify-center sm:mb-8">
+      <main className='relative z-10 flex flex-1 items-start justify-center px-4 pt-2 pb-10 sm:px-6 sm:pt-4 sm:pb-16 lg:px-8'>
+        <section className='mx-auto w-full max-w-5xl text-center'>
+          <div className='mb-6 flex justify-center sm:mb-8'>
             <MochiLogo
               size={120}
-              className="h-24 w-24 object-contain sm:h-28 sm:w-28 lg:h-[120px] lg:w-[120px]"
+              className='h-24 w-24 object-contain sm:h-28 sm:w-28 lg:h-[120px] lg:w-[120px]'
             />
           </div>
 
-          <h1 className="mx-auto mb-5 w-fit bg-linear-165 from-primary to-primary-light bg-clip-text text-[2.25rem] font-light leading-[1.08] tracking-[3px] text-transparent sm:mb-6 sm:text-5xl lg:text-[3.5rem]">
+          <h1 className='from-primary to-primary-light mx-auto mb-5 w-fit bg-linear-165 bg-clip-text text-[2.25rem] leading-[1.08] font-light tracking-[3px] text-transparent sm:mb-6 sm:text-5xl lg:text-[3.5rem]'>
             {/* jsx-text-ok: brand wordmark, verbatim in every locale */}
             mochi
           </h1>
 
-          <p className="mx-auto mb-7 max-w-[820px] text-pretty text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
+          <p className='text-muted-foreground mx-auto mb-7 max-w-[820px] text-base leading-7 text-pretty sm:text-lg sm:leading-8'>
             <Trans>
               Mochi is an open source, federated, multi-user platform for
-              distributed
-              apps. Anyone can run their own server, and connect to any other
-              user on the Mochi network. Anyone can create and publish apps.
-              Every app is replaceable, even system ones. The server comes with
-              over 20 apps, including:
+              distributed apps. Anyone can run their own server, and connect to
+              any other user on the Mochi network. Anyone can create and publish
+              apps. Every app is replaceable, even system ones. The server comes
+              with over 20 apps, including:
             </Trans>
           </p>
 
           {/* Mobile: readable app cards. Desktop: compact inline list. */}
-          <div className="mx-auto grid max-w-md grid-cols-2 gap-2 text-sm text-muted-foreground sm:max-w-3xl sm:grid-cols-3 sm:text-base md:flex md:max-w-5xl md:flex-wrap md:items-center md:justify-center md:gap-x-2 md:gap-y-3">
+          <div className='text-muted-foreground mx-auto grid max-w-md grid-cols-2 gap-2 text-sm sm:max-w-3xl sm:grid-cols-3 sm:text-base md:flex md:max-w-5xl md:flex-wrap md:items-center md:justify-center md:gap-x-2 md:gap-y-3'>
             {apps.map(({ label, Icon }, i) => (
               <Fragment key={label}>
                 {i > 0 && (
                   <span
-                    aria-hidden="true"
-                    className="hidden text-muted-foreground/60 md:inline"
+                    aria-hidden='true'
+                    className='text-muted-foreground/60 hidden md:inline'
                   >
                     ·
                   </span>
                 )}
 
-                <span className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-border/70 bg-card/40 px-3 py-2 md:min-h-0 md:rounded-none md:border-0 md:bg-transparent md:px-0 md:py-0">
-                  <Icon className="size-4 shrink-0 sm:size-5" />
+                <span className='border-border/70 bg-card/40 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border px-3 py-2 md:min-h-0 md:rounded-none md:border-0 md:bg-transparent md:px-0 md:py-0'>
+                  <Icon className='size-4 shrink-0 sm:size-5' />
                   <span>{label}</span>
                 </span>
               </Fragment>
             ))}
           </div>
 
-          <p className="mx-auto mt-7 max-w-[820px] text-pretty text-base leading-7 text-muted-foreground sm:mt-8 sm:text-lg sm:leading-8">
+          <p className='text-muted-foreground mx-auto mt-7 max-w-[820px] text-base leading-7 text-pretty sm:mt-8 sm:text-lg sm:leading-8'>
             <Trans>
               Create a{' '}
               <button
-                type="button"
+                type='button'
                 onClick={openDialog}
-                className="cursor-pointer underline underline-offset-4 transition-colors hover:text-primary"
+                className='hover:text-primary cursor-pointer underline underline-offset-4 transition-colors'
               >
                 free account
               </button>
               , run{' '}
               <a
-                href="https://docs.mochi-os.org/install"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 transition-colors hover:text-primary"
+                href='https://docs.mochi-os.org/install'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='hover:text-primary underline underline-offset-4 transition-colors'
               >
                 your own server
               </a>
               , or explore the{' '}
               <a
-                href="https://git.mochi-os.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 transition-colors hover:text-primary"
+                href='https://git.mochi-os.org/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='hover:text-primary underline underline-offset-4 transition-colors'
               >
                 source code
               </a>
@@ -322,7 +328,7 @@ export function LandingPage() {
       {/* Login dialog */}
       <ResponsiveDialog open={dialogOpen} onOpenChange={handleOpenChange}>
         <ResponsiveDialogContent
-          className="sm:max-w-[420px]"
+          className='sm:max-w-[420px]'
           onOpenAutoFocus={(e) => e.preventDefault()}
         >
           <ResponsiveDialogHeader>
@@ -336,8 +342,8 @@ export function LandingPage() {
           </ResponsiveDialogHeader>
 
           {(oauthError || methodsFailed) && (
-            <div className="flex items-start gap-2 rounded-md border border-destructive/50 bg-destructive/10 p-3 text-sm text-destructive">
-              <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+            <div className='border-destructive/50 bg-destructive/10 text-destructive flex items-start gap-2 rounded-md border p-3 text-sm'>
+              <AlertCircle className='mt-0.5 h-4 w-4 shrink-0' />
               <span>
                 {oauthError ??
                   t`Could not load sign-in methods. Reload to try again.`}
@@ -351,9 +357,7 @@ export function LandingPage() {
             setStep={setStep}
             onPasskeyLogin={handlePasskeyLogin}
             disabled={oauthLoading !== null || isPasskeyLoading}
-            restoreBundle={
-              accountSource === 'restore' ? restoreBundle : null
-            }
+            restoreBundle={accountSource === 'restore' ? restoreBundle : null}
             restorePassphrase={
               accountSource === 'restore' ? restorePassphrase : ''
             }
@@ -361,30 +365,30 @@ export function LandingPage() {
 
           {(passkeyEnabled || enabledOauth.size > 0) && step === 'email' && (
             <>
-              <div className="relative">
-                <div className="absolute inset-0 flex items-center">
-                  <span className="w-full border-t" />
+              <div className='relative'>
+                <div className='absolute inset-0 flex items-center'>
+                  <span className='w-full border-t' />
                 </div>
 
-                <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-background px-2 py-2 text-muted-foreground">
+                <div className='relative flex justify-center text-xs uppercase'>
+                  <span className='bg-background text-muted-foreground px-2 py-2'>
                     <Trans>Or log in with</Trans>
                   </span>
                 </div>
               </div>
 
-              <div className="space-y-2">
+              <div className='space-y-2'>
                 {passkeyEnabled && (
                   <Button
-                    variant="outline"
-                    className="w-full justify-start"
+                    variant='outline'
+                    className='w-full justify-start'
                     onClick={handlePasskeyLogin}
                     disabled={isPasskeyLoading || oauthLoading !== null}
                   >
                     {isPasskeyLoading ? (
-                      <Loader2 className="me-2 h-5 w-5 animate-spin" />
+                      <Loader2 className='me-2 h-5 w-5 animate-spin' />
                     ) : (
-                      <Key className="me-2 h-5 w-5" />
+                      <Key className='me-2 h-5 w-5' />
                     )}
 
                     <Trans>Passkey</Trans>
@@ -396,17 +400,17 @@ export function LandingPage() {
                   .map(({ key, label, Icon }) => (
                     <Button
                       key={key}
-                      type="button"
-                      variant="outline"
-                      className="w-full justify-start"
+                      type='button'
+                      variant='outline'
+                      className='w-full justify-start'
                       aria-label={t`Log in with ${label}`}
                       onClick={() => handleOauthLogin(key)}
                       disabled={oauthLoading !== null || isPasskeyLoading}
                     >
                       {oauthLoading === key ? (
-                        <Loader2 className="me-2 h-5 w-5 animate-spin" />
+                        <Loader2 className='me-2 h-5 w-5 animate-spin' />
                       ) : (
-                        <Icon className="me-2 h-5 w-5" />
+                        <Icon className='me-2 h-5 w-5' />
                       )}
 
                       {label}
@@ -429,28 +433,28 @@ export function LandingPage() {
           )}
 
           {step === 'email' && (
-            <p className="space-x-2 pt-2 text-center text-xs text-muted-foreground">
+            <p className='text-muted-foreground space-x-2 pt-2 text-center text-xs'>
               <a
                 href={appUrl('rules')}
-                className="transition-colors hover:text-foreground"
+                className='hover:text-foreground transition-colors'
               >
                 <Trans>Server rules</Trans>
               </a>
 
-              <span aria-hidden="true">·</span>
+              <span aria-hidden='true'>·</span>
 
               <a
                 href={appUrl('terms')}
-                className="transition-colors hover:text-foreground"
+                className='hover:text-foreground transition-colors'
               >
                 <Trans>Terms and conditions</Trans>
               </a>
 
-              <span aria-hidden="true">·</span>
+              <span aria-hidden='true'>·</span>
 
               <a
                 href={appUrl('privacy')}
-                className="transition-colors hover:text-foreground"
+                className='hover:text-foreground transition-colors'
               >
                 <Trans>Privacy</Trans>
               </a>

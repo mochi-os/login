@@ -33,12 +33,7 @@ export interface VerifyCodeResponse {
   remaining?: string[]
 }
 
-export type OAuthProvider =
-  | 'facebook'
-  | 'github'
-  | 'google'
-  | 'microsoft'
-  | 'x'
+export type OAuthProvider = 'facebook' | 'github' | 'google' | 'microsoft' | 'x'
 
 interface OAuthProvidersEnabled {
   facebook: boolean

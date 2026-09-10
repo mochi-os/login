@@ -2,20 +2,42 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useMemo, useState } from 'react'
-import { Trans, useLingui } from '@lingui/react/macro'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Link } from '@tanstack/react-router'
-import { requestCode, verifyCode, beginLogin, totpLogin, completeMfa, signupRestore } from '@/services/auth-service'
-import { OauthButtons } from '@/features/auth/components/oauth-buttons'
+import {
+  requestCode,
+  verifyCode,
+  beginLogin,
+  totpLogin,
+  completeMfa,
+  signupRestore,
+} from '@/services/auth-service'
+import { Trans, useLingui } from '@lingui/react/macro'
+import {
+  toast,
+  getErrorMessage,
+  cn,
+  Button,
+  Form,
+  FormField,
+  FormItem,
+  FormMessage,
+  FormControl,
+  Input,
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSlot,
+  UploadProgress,
+  useUploadProgress,
+} from '@mochi/web'
 import { Loader2, Mail, ArrowLeft, ArrowRight, Key } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
-import { toast, getErrorMessage, cn, Button, Form, FormField, FormItem, FormMessage, FormControl, Input, InputOTP, InputOTPGroup, InputOTPSlot, UploadProgress, useUploadProgress } from '@mochi/web'
-import { appUrl, safeRedirect } from '@/lib/redirect'
 import { authErrorCode } from '@/lib/auth-error'
+import { appUrl, safeRedirect } from '@/lib/redirect'
+import { OauthButtons } from '@/features/auth/components/oauth-buttons'
 
 type EmailFormValues = { email: string }
 type VerificationFormValues = { emailCode?: string; totpCode?: string }
@@ -47,7 +69,9 @@ export function UserAuthForm({
   const { t } = useLingui()
   const { progress, upload } = useUploadProgress()
   const [isLoading, setIsLoading] = useState(false)
-  const [internalStep, setInternalStep] = useState<'email' | 'verification'>('email')
+  const [internalStep, setInternalStep] = useState<'email' | 'verification'>(
+    'email'
+  )
   const [userEmail, setUserEmail] = useState('')
   const [requiredMethods, setRequiredMethods] = useState<string[]>([])
   const [allowedMethods, setAllowedMethods] = useState<string[]>([])
@@ -63,7 +87,7 @@ export function UserAuthForm({
       z.object({
         email: z.string().email(t`Please enter a valid email`),
       }),
-    [t],
+    [t]
   )
 
   const verificationSchema = useMemo(
@@ -72,7 +96,7 @@ export function UserAuthForm({
         emailCode: z.string().optional(),
         totpCode: z.string().optional(),
       }),
-    [],
+    []
   )
 
   const emailForm = useForm<EmailFormValues>({
@@ -103,14 +127,20 @@ export function UserAuthForm({
     if (hasIdentity) {
       window.location.href = targetPath
     } else {
-      const identityParams = targetPath && targetPath !== '/' ? `?redirect=${encodeURIComponent(targetPath)}` : ''
+      const identityParams =
+        targetPath && targetPath !== '/'
+          ? `?redirect=${encodeURIComponent(targetPath)}`
+          : ''
       window.location.replace(appUrl(`identity${identityParams}`))
     }
   }
 
   // Handle MFA redirect
   function handleMfaRequired() {
-    const codesParams = redirectTo && redirectTo !== '/' ? `?redirect=${encodeURIComponent(redirectTo)}` : ''
+    const codesParams =
+      redirectTo && redirectTo !== '/'
+        ? `?redirect=${encodeURIComponent(redirectTo)}`
+        : ''
     window.location.replace(appUrl(`codes${codesParams}`))
   }
 
@@ -129,7 +159,10 @@ export function UserAuthForm({
         toast.error(t`Too many requests`)
       } else {
         toast.error(t`Couldn't send the code. Please try again.`, {
-          description: getErrorMessage(error, t`Please try again or contact support.`),
+          description: getErrorMessage(
+            error,
+            t`Please try again or contact support.`
+          ),
         })
       }
       return false
@@ -154,7 +187,9 @@ export function UserAuthForm({
       )
       window.location.href = appUrl('restore')
     } catch (error) {
-      const responseData = (error as { response?: { data?: { error?: string } } })?.response?.data
+      const responseData = (
+        error as { response?: { data?: { error?: string } } }
+      )?.response?.data
       const reason = (responseData as { error?: string } | undefined)?.error
       if (reason === 'invalid_code' || reason === 'missing_code') {
         toast.error(t`Invalid verification code`, {
@@ -164,13 +199,19 @@ export function UserAuthForm({
         toast.error(t`Wrong passphrase`, {
           description: t`The passphrase you entered does not match the backup.`,
         })
-      } else if (reason === 'bundle_version' || reason === 'bundle_schema_newer') {
+      } else if (
+        reason === 'bundle_version' ||
+        reason === 'bundle_schema_newer'
+      ) {
         toast.error(t`Backup is too new`, {
           description: t`This backup was created by a newer version of Mochi. Update this server first.`,
         })
       } else if (reason === 'entity_collision') {
         toast.error(t`Account already on this server`, {
-          description: getErrorMessage(error, t`An account with this identity already exists here.`),
+          description: getErrorMessage(
+            error,
+            t`An account with this identity already exists here.`
+          ),
         })
       } else if (reason === 'bundle_tampered') {
         toast.error(t`Backup file is corrupted`, {
@@ -188,7 +229,10 @@ export function UserAuthForm({
         })
       } else {
         toast.error(t`Restore failed`, {
-          description: getErrorMessage(error, t`Please try again or contact support.`),
+          description: getErrorMessage(
+            error,
+            t`Please try again or contact support.`
+          ),
         })
       }
     } finally {
@@ -255,7 +299,10 @@ export function UserAuthForm({
         })
       } else {
         toast.error(t`Failed to continue`, {
-          description: getErrorMessage(error, t`Please try again or contact support.`),
+          description: getErrorMessage(
+            error,
+            t`Please try again or contact support.`
+          ),
         })
       }
     } finally {
@@ -336,7 +383,10 @@ export function UserAuthForm({
       const code = authErrorCode(error)
       if (code === 'suspended') {
         toast.error(t`Account suspended`, {
-          description: getErrorMessage(error, t`Your account has been suspended.`),
+          description: getErrorMessage(
+            error,
+            t`Your account has been suspended.`
+          ),
         })
       } else if (code === 'signup_disabled') {
         toast.error(t`Registration disabled`, {
@@ -353,7 +403,10 @@ export function UserAuthForm({
         })
       } else {
         toast.error(t`Verification failed`, {
-          description: getErrorMessage(error, t`Please try again or contact support.`),
+          description: getErrorMessage(
+            error,
+            t`Please try again or contact support.`
+          ),
         })
       }
     } finally {
@@ -375,15 +428,15 @@ export function UserAuthForm({
     return (
       <div className={cn('grid gap-4', className)}>
         {needsEmail && needsTotp ? (
-          <p className='text-muted-foreground text-sm text-center'>
+          <p className='text-muted-foreground text-center text-sm'>
             <Trans>Enter your email code and authenticator code</Trans>
           </p>
         ) : offerEmail && offerCount === 1 ? (
-          <p className='text-muted-foreground text-sm text-center'>
+          <p className='text-muted-foreground text-center text-sm'>
             <Trans>Paste the login code you received by email</Trans>
           </p>
         ) : offerTotp && offerCount === 1 ? (
-          <p className='text-muted-foreground text-sm text-center'>
+          <p className='text-muted-foreground text-center text-sm'>
             <Trans>Enter the code from your authenticator app</Trans>
           </p>
         ) : null}
@@ -401,9 +454,11 @@ export function UserAuthForm({
                   render={({ field }) => (
                     <FormItem>
                       {offerCount > 1 && (
-                        <div className='flex items-center gap-2 text-sm font-medium mb-2'>
+                        <div className='mb-2 flex items-center gap-2 text-sm font-medium'>
                           <Mail className='h-4 w-4' />
-                          <span><Trans>Email code</Trans></span>
+                          <span>
+                            <Trans>Email code</Trans>
+                          </span>
                         </div>
                       )}
                       <FormControl>
@@ -439,7 +494,7 @@ export function UserAuthForm({
                 render={({ field }) => (
                   <FormItem className='flex flex-col items-center'>
                     {offerCount > 1 && (
-                      <div className='relative w-full mb-2'>
+                      <div className='relative mb-2 w-full'>
                         <div className='absolute inset-0 flex items-center'>
                           <span className='w-full border-t' />
                         </div>
@@ -476,7 +531,11 @@ export function UserAuthForm({
             {(offerEmail || offerTotp) && (
               <Button type='submit' className='w-full' disabled={isLoading}>
                 {restoreBundle ? <Trans>Restore</Trans> : <Trans>Log in</Trans>}
-                {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight className="rtl:rotate-180" />}
+                {isLoading ? (
+                  <Loader2 className='animate-spin' />
+                ) : (
+                  <ArrowRight className='rtl:rotate-180' />
+                )}
               </Button>
             )}
 
@@ -521,14 +580,18 @@ export function UserAuthForm({
               onClick={goBackToEmail}
               className='w-full'
             >
-              <ArrowLeft className="rtl:rotate-180" />
+              <ArrowLeft className='rtl:rotate-180' />
               <Trans>Back</Trans>
             </Button>
 
             <div className='pt-4 text-center'>
               <Link
                 to='/recovery'
-                search={redirectTo && redirectTo !== '/' ? { redirect: redirectTo } : {}}
+                search={
+                  redirectTo && redirectTo !== '/'
+                    ? { redirect: redirectTo }
+                    : {}
+                }
                 className='text-muted-foreground hover:text-foreground text-xs underline-offset-4 hover:underline'
               >
                 <Trans>Lost access? Use a recovery code</Trans>
@@ -572,10 +635,13 @@ export function UserAuthForm({
 
         <Button className='mt-2' disabled={disabled || isLoading}>
           <Trans>Next</Trans>
-          {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight className="rtl:rotate-180" />}
+          {isLoading ? (
+            <Loader2 className='animate-spin' />
+          ) : (
+            <ArrowRight className='rtl:rotate-180' />
+          )}
         </Button>
       </form>
     </Form>
   )
 }
-

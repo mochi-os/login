@@ -2,11 +2,10 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { z } from 'zod'
 import { createFileRoute } from '@tanstack/react-router'
-import { useAuthStore } from '@/stores/auth-store'
 import { resolveSession } from '@/services/auth-service'
+import { useAuthStore } from '@/stores/auth-store'
 import { appUrl, safeRedirect } from '@/lib/redirect'
 import { LandingPage } from '@/features/landing/landing-page'
 
@@ -43,7 +42,9 @@ export const Route = createFileRoute('/')({
       }
 
       if (!session.hasIdentity) {
-        const params = search.redirect ? `?redirect=${encodeURIComponent(search.redirect)}` : ''
+        const params = search.redirect
+          ? `?redirect=${encodeURIComponent(search.redirect)}`
+          : ''
         window.location.replace(appUrl(`identity${params}`))
         return new Promise(() => {})
       }

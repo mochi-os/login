@@ -2,11 +2,12 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
-import { msg } from '@lingui/core/macro'
-import { i18n } from '@lingui/core'
 import axios, { type AxiosProgressEvent } from 'axios'
-import { authApi,
+import { i18n } from '@lingui/core'
+import { msg } from '@lingui/core/macro'
+import { requestHelpers, LANGUAGE_STORAGE_KEY } from '@mochi/web'
+import {
+  authApi,
   type AuthUser,
   type BeginLoginResponse,
   type MfaRequest,
@@ -16,7 +17,6 @@ import { authApi,
   type VerifyCodeResponse,
 } from '@/api/auth'
 import endpoints from '@/api/endpoints'
-import { requestHelpers, LANGUAGE_STORAGE_KEY } from '@mochi/web'
 import { useAuthStore } from '@/stores/auth-store'
 
 // Complete authentication (email verify, MFA, passkey, recovery). The server
@@ -72,7 +72,9 @@ export const resolveSession = async (): Promise<{
   }
 }
 
-export const beginLogin = async (email: string): Promise<BeginLoginResponse> => {
+export const beginLogin = async (
+  email: string
+): Promise<BeginLoginResponse> => {
   const response = await authApi.beginLogin({ email })
 
   const currentUser = useAuthStore.getState().user
@@ -106,7 +108,9 @@ export const requestCode = async (
   const response = await authApi.requestCode({ email })
 
   if (response.status?.toLowerCase() !== 'ok') {
-    throw new Error(response.message || i18n._(msg`Failed to request login code`))
+    throw new Error(
+      response.message || i18n._(msg`Failed to request login code`)
+    )
   }
 
   const currentUser = useAuthStore.getState().user
@@ -118,13 +122,12 @@ export const requestCode = async (
   return response
 }
 
-
 export const signupRestore = async (
   email: string,
   passphrase: string,
   bundle: File,
   code: string,
-  onProgress?: (event: AxiosProgressEvent) => void,
+  onProgress?: (event: AxiosProgressEvent) => void
 ): Promise<{ status: string; uid: string }> => {
   const form = new FormData()
   form.append('email', email)
@@ -141,15 +144,13 @@ export const signupRestore = async (
   const response = await axios.post<{ status: string; uid: string }>(
     endpoints.auth.restore,
     form,
-    { timeout: 0, onUploadProgress: onProgress },
+    { timeout: 0, onUploadProgress: onProgress }
   )
   useAuthStore.getState().setUser({ email })
   return response.data
 }
 
-export const verifyCode = async (
-  code: string
-): Promise<VerifyCodeResponse> => {
+export const verifyCode = async (code: string): Promise<VerifyCodeResponse> => {
   const response = await authApi.verifyCode({ code })
 
   // Check for MFA requirement
@@ -207,8 +208,10 @@ export const passkeyLogin = async (): Promise<{
   const beginResponse = await authApi.passkeyLoginBegin()
 
   // Perform WebAuthn ceremony
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const credential = await startAuthentication({ optionsJSON: beginResponse.options as any })
+  const credential = await startAuthentication({
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    optionsJSON: beginResponse.options as any,
+  })
 
   // Finish passkey login
   const response = await authApi.passkeyLoginFinish(
@@ -233,7 +236,6 @@ export const recoveryLogin = async (
   const response = await authApi.recoveryLogin({ username, code })
   completeAuth(response)
 }
-
 
 type IdentityPayload = {
   name: string

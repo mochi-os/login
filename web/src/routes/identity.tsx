@@ -2,17 +2,16 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useEffect } from 'react'
-import { Trans } from '@lingui/react/macro'
 import { z } from 'zod'
 import { createFileRoute, redirect } from '@tanstack/react-router'
+import { resolveSession } from '@/services/auth-service'
+import { Trans } from '@lingui/react/macro'
 import { Card, CardContent, CardHeader, CardTitle } from '@mochi/web'
+import { useAuthStore } from '@/stores/auth-store'
+import { safeRedirect } from '@/lib/redirect'
 import { AuthLayout } from '@/features/auth/auth-layout'
 import { IdentityForm } from '@/features/auth/identity-form'
-import { useAuthStore } from '@/stores/auth-store'
-import { resolveSession } from '@/services/auth-service'
-import { safeRedirect } from '@/lib/redirect'
 
 const searchSchema = z.object({
   redirect: z.string().optional(),
@@ -68,16 +67,14 @@ function IdentityRouteComponent() {
     <AuthLayout>
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg tracking-tight">
+          <CardTitle className='text-lg tracking-tight'>
             <Trans>Finish setting up your account</Trans>
           </CardTitle>
         </CardHeader>
         <CardContent>
           <IdentityForm redirectTo={redirectTo} />
-
         </CardContent>
       </Card>
     </AuthLayout>
   )
 }
-

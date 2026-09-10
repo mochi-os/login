@@ -2,8 +2,12 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
-import { getCookie, setCookie, removeCookie, type CookieOptions } from '@mochi/web'
+import {
+  getCookie,
+  setCookie,
+  removeCookie,
+  type CookieOptions,
+} from '@mochi/web'
 
 // Auth cookies constants
 const AUTH_COOKIES = {
@@ -30,9 +34,7 @@ const defaultCookieOptions = (): CookieOptions => ({
       : true,
 })
 
-const sanitizeProfile = (
-  profile: ProfileCookieData
-): ProfileCookieData => {
+const sanitizeProfile = (profile: ProfileCookieData): ProfileCookieData => {
   const sanitized: ProfileCookieData = {}
 
   if (typeof profile.email === 'string' && profile.email.length > 0) {
@@ -90,9 +92,8 @@ export const mergeProfileCookie = (
   return writeProfileCookie(
     {
       email:
-        partial.email === null ? undefined : partial.email ?? current.email,
-      name:
-        partial.name === null ? undefined : partial.name ?? current.name,
+        partial.email === null ? undefined : (partial.email ?? current.email),
+      name: partial.name === null ? undefined : (partial.name ?? current.name),
     },
     options
   )

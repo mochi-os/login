@@ -2,14 +2,12 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 // OAuth buttons for the email-login verification step. The typed email is
 // passed through so the callback binds the sign-in to that account.
-
 import { useState, useEffect } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
-import { Loader2 } from 'lucide-react'
 import { Button, toast, getErrorMessage } from '@mochi/web'
+import { Loader2 } from 'lucide-react'
 import { authApi } from '@/api/auth'
 import { type OAuthProvider } from '@/api/types/auth'
 import { oauthEnabled, oauthProviders, startOauth } from '@/lib/oauth-providers'
@@ -26,13 +24,16 @@ export function OauthButtons({
   const [loading, setLoading] = useState<OAuthProvider | null>(null)
 
   useEffect(() => {
-    authApi.getMethods().then((methods) => {
-      setEnabled(oauthEnabled(methods))
-    }).catch(() => {
-      // See landing-page.tsx: an unhandled rejection here silently removes
-      // every OAuth button.
-      setEnabled(new Set())
-    })
+    authApi
+      .getMethods()
+      .then((methods) => {
+        setEnabled(oauthEnabled(methods))
+      })
+      .catch(() => {
+        // See landing-page.tsx: an unhandled rejection here silently removes
+        // every OAuth button.
+        setEnabled(new Set())
+      })
   }, [])
 
   const start = async (provider: OAuthProvider) => {

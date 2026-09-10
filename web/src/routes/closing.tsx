@@ -2,14 +2,19 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useEffect, useState } from 'react'
-import { Trans, useLingui } from '@lingui/react/macro'
 import { createFileRoute } from '@tanstack/react-router'
+import { Trans, useLingui } from '@lingui/react/macro'
+import {
+  Button,
+  getErrorMessage,
+  requestHelpers,
+  toast,
+  useFormat,
+} from '@mochi/web'
 import { RotateCcw } from 'lucide-react'
-import { Button, getErrorMessage, requestHelpers, toast, useFormat } from '@mochi/web'
-import { AuthLayout } from '@/features/auth/auth-layout'
 import { appUrl } from '@/lib/redirect'
+import { AuthLayout } from '@/features/auth/auth-layout'
 
 // Reactivation interstitial for an account pending closure (status='closing'):
 // cancel the closure, or continue and sign out.
@@ -92,7 +97,10 @@ function ClosingRouteComponent() {
           </h1>
           <p className='text-muted-foreground text-sm break-words'>
             {purge ? (
-              <Trans>Your account and all its data will be permanently deleted on {purgeDate}.</Trans>
+              <Trans>
+                Your account and all its data will be permanently deleted on{' '}
+                {purgeDate}.
+              </Trans>
             ) : (
               <Trans>Your account is scheduled for deletion.</Trans>
             )}

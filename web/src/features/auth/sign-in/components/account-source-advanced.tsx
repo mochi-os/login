@@ -2,11 +2,10 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { type ChangeEvent, useRef, useState } from 'react'
 import { Trans } from '@lingui/react/macro'
-import { ChevronRight } from 'lucide-react'
 import { cn, Input } from '@mochi/web'
+import { ChevronRight } from 'lucide-react'
 
 export type AccountSource = 'none' | 'restore'
 
@@ -41,7 +40,9 @@ export function AccountSourceAdvanced({
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
       >
-        <ChevronRight className={cn('h-3 w-3 transition-transform', open && 'rotate-90')} />
+        <ChevronRight
+          className={cn('h-3 w-3 transition-transform', open && 'rotate-90')}
+        />
         <Trans>Advanced</Trans>
       </button>
 
@@ -52,7 +53,7 @@ export function AccountSourceAdvanced({
           </p>
 
           {/* None */}
-          <label className='flex items-center gap-2 cursor-pointer'>
+          <label className='flex cursor-pointer items-center gap-2'>
             <input
               type='radio'
               name='account-source'
@@ -68,7 +69,7 @@ export function AccountSourceAdvanced({
           </label>
 
           {/* Restore */}
-          <label className='flex items-center gap-2 cursor-pointer'>
+          <label className='flex cursor-pointer items-center gap-2'>
             <input
               type='radio'
               name='account-source'
@@ -87,9 +88,10 @@ export function AccountSourceAdvanced({
             <div className='ms-5 space-y-2'>
               <p className='text-muted-foreground text-xs'>
                 <Trans>
-                  The email you enter above becomes the new account's name on this server.
-                  The backup's identity must not already be active here — restore onto a
-                  different server, or delete the existing account first.
+                  The email you enter above becomes the new account's name on
+                  this server. The backup's identity must not already be active
+                  here — restore onto a different server, or delete the existing
+                  account first.
                 </Trans>
               </p>
               <div>
@@ -101,14 +103,16 @@ export function AccountSourceAdvanced({
                   type='file'
                   accept='.zip'
                   disabled={disabled}
-                  className='text-muted-foreground block w-full text-xs file:me-2 file:rounded file:border-0 file:bg-muted file:px-2 file:py-1 file:text-xs file:font-medium'
+                  className='text-muted-foreground file:bg-muted block w-full text-xs file:me-2 file:rounded file:border-0 file:px-2 file:py-1 file:text-xs file:font-medium'
                   onChange={(e: ChangeEvent<HTMLInputElement>) => {
                     const file = e.target.files?.[0] ?? null
                     onRestoreBundleChange(file)
                   }}
                 />
                 {restoreBundle && (
-                  <p className='text-muted-foreground mt-1 text-xs'>{restoreBundle.name}</p>
+                  <p className='text-muted-foreground mt-1 text-xs'>
+                    {restoreBundle.name}
+                  </p>
                 )}
               </div>
               <div>

@@ -2,14 +2,13 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useEffect, useState } from 'react'
-import { Trans, useLingui } from '@lingui/react/macro'
 import { createFileRoute } from '@tanstack/react-router'
+import { Trans, useLingui } from '@lingui/react/macro'
 import { requestHelpers } from '@mochi/web'
 import { Loader2 } from 'lucide-react'
-import { AuthLayout } from '@/features/auth/auth-layout'
 import { appUrl } from '@/lib/redirect'
+import { AuthLayout } from '@/features/auth/auth-layout'
 
 // Waiting page after POST /_/auth/restore. Polls /_/identity until the
 // pending-restore placeholder turns active, then goes to the dashboard; a 401
@@ -88,7 +87,9 @@ function RestoringRouteComponent() {
     const pollProgress = async () => {
       if (cancelled) return
       try {
-        const data = await requestHelpers.get<ProgressResponse>('/_/auth/restore/progress')
+        const data = await requestHelpers.get<ProgressResponse>(
+          '/_/auth/restore/progress'
+        )
         setProgress(data)
       } catch (err) {
         if (requestHelpers.isAuthError(err)) {
@@ -120,8 +121,8 @@ function RestoringRouteComponent() {
           </h1>
           <p className='text-muted-foreground text-sm'>
             <Trans>
-              The restore did not complete. The backup file may be damaged, the passphrase
-              may be wrong, or the server encountered an error.
+              The restore did not complete. The backup file may be damaged, the
+              passphrase may be wrong, or the server encountered an error.
             </Trans>
           </p>
           <a
@@ -144,7 +145,8 @@ function RestoringRouteComponent() {
           </h1>
           <p className='text-muted-foreground text-sm'>
             <Trans>
-              Your data is being restored from the backup. Do not close this window.
+              Your data is being restored from the backup. Do not close this
+              window.
             </Trans>
           </p>
         </div>

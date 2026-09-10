@@ -2,11 +2,10 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useEffect, useState } from 'react'
 import { Trans } from '@lingui/react/macro'
-import { Loader2 } from 'lucide-react'
 import { requestHelpers } from '@mochi/web'
+import { Loader2 } from 'lucide-react'
 import endpoints from '@/api/endpoints'
 
 type DocumentName = 'rules' | 'terms' | 'privacy'
@@ -58,14 +57,14 @@ export function DocumentPage({ name }: { name: DocumentName }) {
 
   return (
     // The background is the body's, from the theme variables, as on the landing.
-    <div className='min-h-svh text-foreground'>
-      <main className='max-w-[760px] mx-auto px-6 py-12'>
+    <div className='text-foreground min-h-svh'>
+      <main className='mx-auto max-w-[760px] px-6 py-12'>
         {error ? (
           <p className='text-destructive'>
             <Trans>Could not load this document. Please try again later.</Trans>
           </p>
         ) : html === null ? (
-          <div className='flex items-center gap-2 text-muted-foreground'>
+          <div className='text-muted-foreground flex items-center gap-2'>
             <Loader2 className='size-4 animate-spin' />
             <span>
               <Trans>Loading...</Trans>

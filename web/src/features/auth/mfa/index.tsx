@@ -2,14 +2,17 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useState } from 'react'
-import { Trans, useLingui } from '@lingui/react/macro'
-import { useNavigate, useSearch, Link } from '@tanstack/react-router'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Loader2, ArrowLeft, ArrowRight, Smartphone, Key, Mail, Globe } from 'lucide-react'
+import { useNavigate, useSearch, Link } from '@tanstack/react-router'
+import {
+  completeMfa,
+  completeMfaMultiple,
+  passkeyLogin,
+} from '@/services/auth-service'
+import { Trans, useLingui } from '@lingui/react/macro'
 import {
   Card,
   CardContent,
@@ -28,16 +31,20 @@ import {
   InputOTPSlot,
   Input,
 } from '@mochi/web'
-import { AuthLayout } from '../auth-layout'
-import { OauthButtons } from '@/features/auth/components/oauth-buttons'
-import { useAuthStore } from '@/stores/auth-store'
 import {
-  completeMfa,
-  completeMfaMultiple,
-  passkeyLogin,
-} from '@/services/auth-service'
-import { safeRedirect } from '@/lib/redirect'
+  Loader2,
+  ArrowLeft,
+  ArrowRight,
+  Smartphone,
+  Key,
+  Mail,
+  Globe,
+} from 'lucide-react'
+import { useAuthStore } from '@/stores/auth-store'
 import { authErrorCode } from '@/lib/auth-error'
+import { safeRedirect } from '@/lib/redirect'
+import { OauthButtons } from '@/features/auth/components/oauth-buttons'
+import { AuthLayout } from '../auth-layout'
 
 const mfaSchema = z.object({
   emailCode: z.string().optional(),
@@ -168,7 +175,10 @@ export function Mfa() {
       const code = authErrorCode(error)
       if (code === 'suspended') {
         toast.error(t`Account suspended`, {
-          description: getErrorMessage(error, t`Your account has been suspended.`),
+          description: getErrorMessage(
+            error,
+            t`Your account has been suspended.`
+          ),
         })
       } else if (code === 'session_expired') {
         // The partial lives five minutes on the server; once it has lapsed no
@@ -221,9 +231,11 @@ export function Mfa() {
                   render={({ field }) => (
                     <FormItem>
                       {(needsTotp || needsPasskey) && (
-                        <div className='flex items-center gap-2 text-sm font-medium mb-2'>
+                        <div className='mb-2 flex items-center gap-2 text-sm font-medium'>
                           <Mail className='h-4 w-4' />
-                          <span><Trans>Email code</Trans></span>
+                          <span>
+                            <Trans>Email code</Trans>
+                          </span>
                         </div>
                       )}
                       <FormControl>
@@ -248,9 +260,11 @@ export function Mfa() {
                   render={({ field }) => (
                     <FormItem className='flex flex-col items-center'>
                       {(needsEmail || needsPasskey) && (
-                        <div className='mb-2 flex items-center gap-2 text-sm font-medium self-start'>
+                        <div className='mb-2 flex items-center gap-2 self-start text-sm font-medium'>
                           <Smartphone className='h-4 w-4' />
-                          <span><Trans>Authenticator code</Trans></span>
+                          <span>
+                            <Trans>Authenticator code</Trans>
+                          </span>
                         </div>
                       )}
                       <FormControl>
@@ -281,7 +295,9 @@ export function Mfa() {
                   {(needsEmail || needsTotp || needsOauth) && (
                     <div className='mb-2 flex items-center gap-2 text-sm font-medium'>
                       <Key className='h-4 w-4' />
-                      <span><Trans>Passkey</Trans></span>
+                      <span>
+                        <Trans>Passkey</Trans>
+                      </span>
                     </div>
                   )}
                   <Button
@@ -302,7 +318,9 @@ export function Mfa() {
                   {(needsEmail || needsTotp || needsPasskey) && (
                     <div className='mb-2 flex items-center gap-2 text-sm font-medium'>
                       <Globe className='h-4 w-4' />
-                      <span><Trans>Linked account</Trans></span>
+                      <span>
+                        <Trans>Linked account</Trans>
+                      </span>
                     </div>
                   )}
                   <OauthButtons email={user?.email} redirect={redirectTo} />
@@ -312,7 +330,11 @@ export function Mfa() {
               {(needsEmail || needsTotp) && (
                 <Button type='submit' className='w-full' disabled={isLoading}>
                   <Trans>Log in</Trans>
-                  {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight className="rtl:rotate-180" />}
+                  {isLoading ? (
+                    <Loader2 className='animate-spin' />
+                  ) : (
+                    <ArrowRight className='rtl:rotate-180' />
+                  )}
                 </Button>
               )}
 
@@ -324,15 +346,18 @@ export function Mfa() {
                 disabled={isLoading}
               >
                 <Trans>Start again</Trans>
-                <ArrowLeft className="rtl:rotate-180" />
+                <ArrowLeft className='rtl:rotate-180' />
               </Button>
-
             </form>
 
             <div className='pt-4 text-center'>
               <Link
                 to='/recovery'
-                search={redirectTo && redirectTo !== '/' ? { redirect: redirectTo } : {}}
+                search={
+                  redirectTo && redirectTo !== '/'
+                    ? { redirect: redirectTo }
+                    : {}
+                }
                 className='text-muted-foreground/70 hover:text-muted-foreground text-xs underline-offset-4 hover:underline'
               >
                 <Trans>Lost access? Use a recovery code</Trans>

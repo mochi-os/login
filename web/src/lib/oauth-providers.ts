@@ -2,26 +2,24 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 // The one place this app lists the OAuth providers it can offer. The label is
 // the brand name, verbatim in every locale; the icon is the brand mark. Both
 // components that render the buttons and the callback-error mapping read from
 // here, so adding a provider is one entry.
-
 import type { ComponentType, SVGProps } from 'react'
-import { Github } from 'lucide-react'
-import { msg } from '@lingui/core/macro'
 import { i18n } from '@lingui/core'
+import { msg } from '@lingui/core/macro'
 import { providerName } from '@mochi/web'
+import { Github } from 'lucide-react'
 import { authApi } from '@/api/auth'
 import { type AuthMethodsResponse, type OAuthProvider } from '@/api/types/auth'
+import { navigable, safeRedirect } from '@/lib/redirect'
 import {
   FacebookIcon,
   GoogleIcon,
   MicrosoftIcon,
   XIcon,
 } from '@/features/auth/components/brand-icons'
-import { navigable, safeRedirect } from '@/lib/redirect'
 
 type Icon = ComponentType<SVGProps<SVGSVGElement>>
 
@@ -72,7 +70,7 @@ export function oauthEnabled(methods: AuthMethodsResponse): Set<OAuthProvider> {
 // URL would execute rather than navigate.
 export async function startOauth(
   provider: OAuthProvider,
-  options: { redirect?: string; email?: string } = {},
+  options: { redirect?: string; email?: string } = {}
 ): Promise<void> {
   const target = options.redirect ? safeRedirect(options.redirect) : '/'
   const { url } = await authApi.oauthBegin(provider, {

@@ -2,17 +2,29 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useMemo, useState } from 'react'
-import { Trans, useLingui } from '@lingui/react/macro'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Loader2, ArrowRight } from 'lucide-react'
-import { toast, getErrorMessage, Button, Input, Form, FormControl, FormField, FormItem, FormLabel, FormMessage, RadioGroup, RadioGroupItem } from '@mochi/web'
 import { submitIdentity, abandonSignup } from '@/services/auth-service'
-import { identitySchema } from '@/features/auth/identity-schema'
-import { appUrl, safeRedirect } from '@/lib/redirect'
+import { Trans, useLingui } from '@lingui/react/macro'
+import {
+  toast,
+  getErrorMessage,
+  Button,
+  Input,
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+  RadioGroup,
+  RadioGroupItem,
+} from '@mochi/web'
+import { Loader2, ArrowRight } from 'lucide-react'
 import { mergeProfileCookie, readProfileCookie } from '@/lib/profile-cookie'
+import { appUrl, safeRedirect } from '@/lib/redirect'
+import { identitySchema } from '@/features/auth/identity-schema'
 
 type IdentityFormValues = {
   name: string
@@ -35,7 +47,7 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
         long: t`Name too long`,
         characters: t`Invalid name`,
       }),
-    [t],
+    [t]
   )
 
   const form = useForm<IdentityFormValues>({
@@ -67,16 +79,18 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
 
   return (
     <Form {...form}>
-      <form className="mt-6 space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
+      <form className='mt-6 space-y-6' onSubmit={form.handleSubmit(onSubmit)}>
         <FormField
           control={form.control}
-          name="name"
+          name='name'
           render={({ field }) => (
             <FormItem>
-              <FormLabel><Trans>Your name, as you'd like others to see it</Trans></FormLabel>
+              <FormLabel>
+                <Trans>Your name, as you'd like others to see it</Trans>
+              </FormLabel>
               <FormControl>
                 <Input
-                  autoComplete="off"
+                  autoComplete='off'
                   {...field}
                   onChange={(event) => {
                     field.onChange(event)
@@ -92,38 +106,50 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
 
         <FormField
           control={form.control}
-          name="privacy"
+          name='privacy'
           render={({ field }) => (
-            <FormItem className="space-y-3">
-              <FormLabel><Trans>Privacy</Trans></FormLabel>
+            <FormItem className='space-y-3'>
+              <FormLabel>
+                <Trans>Privacy</Trans>
+              </FormLabel>
               <FormControl>
                 <RadioGroup
                   onValueChange={field.onChange}
                   value={field.value}
-                  className="grid gap-4 sm:grid-cols-2"
+                  className='grid gap-4 sm:grid-cols-2'
                 >
-                  <FormItem className="space-y-0">
-                    <label className="flex cursor-pointer items-start gap-3 rounded-md border-2 p-3 has-[[data-state=checked]]:border-primary has-[[data-state=checked]]:bg-primary/10">
+                  <FormItem className='space-y-0'>
+                    <label className='has-[[data-state=checked]]:border-primary has-[[data-state=checked]]:bg-primary/10 flex cursor-pointer items-start gap-3 rounded-md border-2 p-3'>
                       <FormControl>
-                        <RadioGroupItem value="public" className="data-[state=checked]:border-primary data-[state=checked]:bg-primary" />
+                        <RadioGroupItem
+                          value='public'
+                          className='data-[state=checked]:border-primary data-[state=checked]:bg-primary'
+                        />
                       </FormControl>
-                      <div className="space-y-1">
-                        <span className="text-sm font-medium"><Trans>Public</Trans></span>
-                        <p className="text-sm text-muted-foreground">
+                      <div className='space-y-1'>
+                        <span className='text-sm font-medium'>
+                          <Trans>Public</Trans>
+                        </span>
+                        <p className='text-muted-foreground text-sm'>
                           <Trans>Other users can find your profile.</Trans>
                         </p>
                       </div>
                     </label>
                   </FormItem>
 
-                  <FormItem className="space-y-0">
-                    <label className="flex cursor-pointer items-start gap-3 rounded-md border-2 p-3 has-[[data-state=checked]]:border-primary has-[[data-state=checked]]:bg-primary/10">
+                  <FormItem className='space-y-0'>
+                    <label className='has-[[data-state=checked]]:border-primary has-[[data-state=checked]]:bg-primary/10 flex cursor-pointer items-start gap-3 rounded-md border-2 p-3'>
                       <FormControl>
-                        <RadioGroupItem value="private" className="data-[state=checked]:border-primary data-[state=checked]:bg-primary" />
+                        <RadioGroupItem
+                          value='private'
+                          className='data-[state=checked]:border-primary data-[state=checked]:bg-primary'
+                        />
                       </FormControl>
-                      <div className="space-y-1">
-                        <span className="text-sm font-medium"><Trans>Private</Trans></span>
-                        <p className="text-sm text-muted-foreground">
+                      <div className='space-y-1'>
+                        <span className='text-sm font-medium'>
+                          <Trans>Private</Trans>
+                        </span>
+                        <p className='text-muted-foreground text-sm'>
                           <Trans>Stay hidden from directory searches.</Trans>
                         </p>
                       </div>
@@ -136,24 +162,46 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
           )}
         />
 
-        <Button className="w-full" disabled={isSubmitting}>
+        <Button className='w-full' disabled={isSubmitting}>
           <Trans>Continue</Trans>
-          {isSubmitting ? <Loader2 className="animate-spin" /> : <ArrowRight className="rtl:rotate-180" />}
+          {isSubmitting ? (
+            <Loader2 className='animate-spin' />
+          ) : (
+            <ArrowRight className='rtl:rotate-180' />
+          )}
         </Button>
 
-        <p className="text-center text-xs text-muted-foreground">
+        <p className='text-muted-foreground text-center text-xs'>
           <Trans>
             By creating your account, you agree to the{' '}
-            <a href={appUrl('rules')} className="underline-offset-4 hover:underline">Server rules</a>,{' '}
-            <a href={appUrl('terms')} className="underline-offset-4 hover:underline">Terms and conditions</a>, and{' '}
-            <a href={appUrl('privacy')} className="underline-offset-4 hover:underline">Privacy</a>.
+            <a
+              href={appUrl('rules')}
+              className='underline-offset-4 hover:underline'
+            >
+              Server rules
+            </a>
+            ,{' '}
+            <a
+              href={appUrl('terms')}
+              className='underline-offset-4 hover:underline'
+            >
+              Terms and conditions
+            </a>
+            , and{' '}
+            <a
+              href={appUrl('privacy')}
+              className='underline-offset-4 hover:underline'
+            >
+              Privacy
+            </a>
+            .
           </Trans>
         </p>
 
-        <p className="text-center text-sm text-muted-foreground">
+        <p className='text-muted-foreground text-center text-sm'>
           <button
-            type="button"
-            className="underline-offset-4 hover:underline disabled:opacity-60"
+            type='button'
+            className='underline-offset-4 hover:underline disabled:opacity-60'
             disabled={isSubmitting}
             onClick={async () => {
               try {

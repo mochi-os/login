@@ -2,8 +2,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
-
 import { describe, expect, it } from 'vitest'
 import { authErrorCode } from './auth-error'
 
@@ -22,16 +20,24 @@ class Refusal extends Error {
 
 describe('authErrorCode', () => {
   it('reads the code from the body an ApiError carries on .data', () => {
-    expect(authErrorCode(new Refusal(403, { error: 'suspended', message: 'Suspended' })))
-      .toBe('suspended')
-    expect(authErrorCode(new Refusal(400, { error: 'session_expired', message: 'x' })))
-      .toBe('session_expired')
+    expect(
+      authErrorCode(
+        new Refusal(403, { error: 'suspended', message: 'Suspended' })
+      )
+    ).toBe('suspended')
+    expect(
+      authErrorCode(
+        new Refusal(400, { error: 'session_expired', message: 'x' })
+      )
+    ).toBe('session_expired')
   })
 
   it('does not read the raw-axios .response.data shape', () => {
     // This is the shape the catch blocks used to read, which an ApiError never
     // has - reading it left every code-specific branch dead.
-    expect(authErrorCode({ response: { data: { error: 'suspended' } } })).toBeUndefined()
+    expect(
+      authErrorCode({ response: { data: { error: 'suspended' } } })
+    ).toBeUndefined()
   })
 
   it('answers undefined for anything that is not a coded refusal', () => {
@@ -40,6 +46,8 @@ describe('authErrorCode', () => {
     expect(authErrorCode(new Error('network'))).toBeUndefined()
     expect(authErrorCode(new Refusal(500, 'not json'))).toBeUndefined()
     expect(authErrorCode(new Refusal(400, { error: 7 }))).toBeUndefined()
-    expect(authErrorCode(new Refusal(400, { message: 'no code' }))).toBeUndefined()
+    expect(
+      authErrorCode(new Refusal(400, { message: 'no code' }))
+    ).toBeUndefined()
   })
 })

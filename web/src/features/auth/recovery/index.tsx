@@ -2,20 +2,33 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useMemo, useState } from 'react'
-import { Trans, useLingui } from '@lingui/react/macro'
-import { useNavigate, useSearch } from '@tanstack/react-router'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Loader2, ArrowLeft, ArrowRight } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, toast, getErrorMessage, Button, Form, FormField, FormItem, FormControl, FormMessage, Input } from '@mochi/web'
-import { AuthLayout } from '../auth-layout'
-import { useAuthStore } from '@/stores/auth-store'
+import { useNavigate, useSearch } from '@tanstack/react-router'
 import { recoveryLogin } from '@/services/auth-service'
-import { safeRedirect } from '@/lib/redirect'
+import { Trans, useLingui } from '@lingui/react/macro'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  toast,
+  getErrorMessage,
+  Button,
+  Form,
+  FormField,
+  FormItem,
+  FormControl,
+  FormMessage,
+  Input,
+} from '@mochi/web'
+import { Loader2, ArrowLeft, ArrowRight } from 'lucide-react'
+import { useAuthStore } from '@/stores/auth-store'
 import { authErrorCode } from '@/lib/auth-error'
+import { safeRedirect } from '@/lib/redirect'
+import { AuthLayout } from '../auth-layout'
 
 type RecoveryFormValues = { code: string }
 
@@ -34,7 +47,7 @@ export function Recovery() {
       z.object({
         code: z.string().min(1, t`Please enter your recovery code`),
       }),
-    [t],
+    [t]
   )
 
   const form = useForm<RecoveryFormValues>({
@@ -55,7 +68,8 @@ export function Recovery() {
     } else {
       navigate({
         to: '/identity',
-        search: redirectTo && redirectTo !== '/' ? { redirect: redirectTo } : {},
+        search:
+          redirectTo && redirectTo !== '/' ? { redirect: redirectTo } : {},
         replace: true,
       })
     }
@@ -79,7 +93,10 @@ export function Recovery() {
       const code = authErrorCode(error)
       if (code === 'suspended') {
         toast.error(t`Account suspended`, {
-          description: getErrorMessage(error, t`Your account has been suspended.`),
+          description: getErrorMessage(
+            error,
+            t`Your account has been suspended.`
+          ),
         })
       } else {
         toast.error(t`Invalid recovery code`, {
@@ -96,13 +113,14 @@ export function Recovery() {
       <Card className='gap-4'>
         <CardHeader>
           <CardDescription>
-            <Trans>Enter a recovery code for &quot;{userEmail}&quot; to sign in</Trans>
+            <Trans>
+              Enter a recovery code for &quot;{userEmail}&quot; to sign in
+            </Trans>
           </CardDescription>
         </CardHeader>
         <CardContent>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className='grid gap-4'>
-
               <FormField
                 control={form.control}
                 name='code'
@@ -111,7 +129,7 @@ export function Recovery() {
                     <FormControl>
                       <Input
                         placeholder={t`Recovery code`}
-                        className='font-mono tracking-wider text-center'
+                        className='text-center font-mono tracking-wider'
                         autoComplete='off'
                         {...field}
                       />
@@ -123,7 +141,11 @@ export function Recovery() {
 
               <Button type='submit' className='w-full' disabled={isLoading}>
                 <Trans>Log in</Trans>
-                {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight className="rtl:rotate-180" />}
+                {isLoading ? (
+                  <Loader2 className='animate-spin' />
+                ) : (
+                  <ArrowRight className='rtl:rotate-180' />
+                )}
               </Button>
 
               <Button
@@ -134,7 +156,7 @@ export function Recovery() {
                 disabled={isLoading}
               >
                 <Trans>Start again</Trans>
-                <ArrowLeft className="rtl:rotate-180" />
+                <ArrowLeft className='rtl:rotate-180' />
               </Button>
             </form>
           </Form>

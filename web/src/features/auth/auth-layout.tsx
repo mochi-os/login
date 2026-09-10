@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { LanguagePicker } from '@mochi/web'
 import { appUrl } from '@/lib/redirect'
 
@@ -25,7 +24,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
             alt='Mochi'
             className='h-24 w-24 sm:h-32 sm:w-32'
           />
-          <span className='text-3xl font-light tracking-[0.2em] text-foreground/80'>
+          <span className='text-foreground/80 text-3xl font-light tracking-[0.2em]'>
             {/* jsx-text-ok: brand wordmark, verbatim in every locale */}
             mochi
           </span>
