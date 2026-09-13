@@ -300,8 +300,8 @@ export function LandingPage() {
                 className='hover:text-primary cursor-pointer underline underline-offset-4 transition-colors'
               >
                 free account
-              </button>
-              , run{' '}
+              </button>{' '}
+              on our public server, run{' '}
               <a
                 href='https://docs.mochi-os.org/install'
                 target='_blank'
