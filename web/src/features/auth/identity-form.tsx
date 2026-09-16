@@ -21,7 +21,7 @@ import {
   RadioGroup,
   RadioGroupItem,
 } from '@mochi/web'
-import { Loader2, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { mergeProfileCookie, readProfileCookie } from '@/lib/profile-cookie'
 import { appUrl, safeRedirect } from '@/lib/redirect'
 import { identitySchema } from '@/features/auth/identity-schema'
@@ -162,13 +162,12 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
           )}
         />
 
-        <Button className='w-full' disabled={isSubmitting}>
+        <Button
+          className='w-full'
+          loading={isSubmitting}
+          trailingIcon={<ArrowRight className='rtl:rotate-180' />}
+        >
           <Trans>Continue</Trans>
-          {isSubmitting ? (
-            <Loader2 className='animate-spin' />
-          ) : (
-            <ArrowRight className='rtl:rotate-180' />
-          )}
         </Button>
 
         <p className='text-muted-foreground text-center text-xs'>

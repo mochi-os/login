@@ -7,7 +7,6 @@
 import { useState, useEffect } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { Button, toast, getErrorMessage } from '@mochi/web'
-import { Loader2 } from 'lucide-react'
 import { authApi } from '@/api/auth'
 import { type OAuthProvider } from '@/api/types/auth'
 import { oauthEnabled, oauthProviders, startOauth } from '@/lib/oauth-providers'
@@ -58,9 +57,10 @@ export function OauthButtons({
           variant='outline'
           className='w-full'
           onClick={() => start(key)}
+          loading={loading === key}
           disabled={loading !== null}
+          icon={<Icon />}
         >
-          {loading === key ? <Loader2 className='animate-spin' /> : <Icon />}
           <Trans>Continue with {label}</Trans>
         </Button>
       ))}

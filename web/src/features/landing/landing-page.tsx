@@ -24,7 +24,6 @@ import {
   Crown,
   GitBranch,
   Key,
-  Loader2,
   MessageSquare,
   MessagesSquare,
   Rss,
@@ -383,14 +382,10 @@ export function LandingPage() {
                     variant='outline'
                     className='w-full justify-start'
                     onClick={handlePasskeyLogin}
-                    disabled={isPasskeyLoading || oauthLoading !== null}
+                    loading={isPasskeyLoading}
+                    disabled={oauthLoading !== null}
+                    icon={<Key className='me-2 h-5 w-5' />}
                   >
-                    {isPasskeyLoading ? (
-                      <Loader2 className='me-2 h-5 w-5 animate-spin' />
-                    ) : (
-                      <Key className='me-2 h-5 w-5' />
-                    )}
-
                     <Trans>Passkey</Trans>
                   </Button>
                 )}
@@ -405,14 +400,10 @@ export function LandingPage() {
                       className='w-full justify-start'
                       aria-label={t`Log in with ${label}`}
                       onClick={() => handleOauthLogin(key)}
+                      loading={oauthLoading === key}
                       disabled={oauthLoading !== null || isPasskeyLoading}
+                      icon={<Icon className='me-2 h-5 w-5' />}
                     >
-                      {oauthLoading === key ? (
-                        <Loader2 className='me-2 h-5 w-5 animate-spin' />
-                      ) : (
-                        <Icon className='me-2 h-5 w-5' />
-                      )}
-
                       {label}
                     </Button>
                   ))}
