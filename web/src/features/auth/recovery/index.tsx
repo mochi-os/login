@@ -24,7 +24,7 @@ import {
   FormMessage,
   Input,
 } from '@mochi/web'
-import { Loader2, ArrowLeft, ArrowRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
 import { authErrorCode } from '@/lib/auth-error'
 import { safeRedirect } from '@/lib/redirect'
@@ -139,13 +139,13 @@ export function Recovery() {
                 )}
               />
 
-              <Button type='submit' className='w-full' disabled={isLoading}>
+              <Button
+                type='submit'
+                className='w-full'
+                loading={isLoading}
+                trailingIcon={<ArrowRight className='rtl:rotate-180' />}
+              >
                 <Trans>Log in</Trans>
-                {isLoading ? (
-                  <Loader2 className='animate-spin' />
-                ) : (
-                  <ArrowRight className='rtl:rotate-180' />
-                )}
               </Button>
 
               <Button

@@ -33,7 +33,7 @@ import {
   UploadProgress,
   useUploadProgress,
 } from '@mochi/web'
-import { Loader2, Mail, ArrowLeft, ArrowRight, Key } from 'lucide-react'
+import { Mail, ArrowLeft, ArrowRight, Key } from 'lucide-react'
 import { useAuthStore } from '@/stores/auth-store'
 import { authErrorCode } from '@/lib/auth-error'
 import { appUrl, safeRedirect } from '@/lib/redirect'
@@ -529,13 +529,13 @@ export function UserAuthForm({
             )}
 
             {(offerEmail || offerTotp) && (
-              <Button type='submit' className='w-full' disabled={isLoading}>
+              <Button
+                type='submit'
+                className='w-full'
+                loading={isLoading}
+                trailingIcon={<ArrowRight className='rtl:rotate-180' />}
+              >
                 {restoreBundle ? <Trans>Restore</Trans> : <Trans>Log in</Trans>}
-                {isLoading ? (
-                  <Loader2 className='animate-spin' />
-                ) : (
-                  <ArrowRight className='rtl:rotate-180' />
-                )}
               </Button>
             )}
 
@@ -633,13 +633,13 @@ export function UserAuthForm({
 
         <UploadProgress progress={progress} />
 
-        <Button className='mt-2' disabled={disabled || isLoading}>
+        <Button
+          className='mt-2'
+          loading={isLoading}
+          disabled={disabled}
+          trailingIcon={<ArrowRight className='rtl:rotate-180' />}
+        >
           <Trans>Next</Trans>
-          {isLoading ? (
-            <Loader2 className='animate-spin' />
-          ) : (
-            <ArrowRight className='rtl:rotate-180' />
-          )}
         </Button>
       </form>
     </Form>

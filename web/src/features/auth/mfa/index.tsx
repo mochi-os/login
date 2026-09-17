@@ -32,7 +32,6 @@ import {
   Input,
 } from '@mochi/web'
 import {
-  Loader2,
   ArrowLeft,
   ArrowRight,
   Smartphone,
@@ -305,10 +304,10 @@ export function Mfa() {
                     variant='outline'
                     className='w-full'
                     onClick={handlePasskeyAuth}
-                    disabled={isLoading}
+                    loading={isLoading}
+                    trailingIcon={<Key />}
                   >
                     <Trans>Verify with passkey</Trans>
-                    {isLoading ? <Loader2 className='animate-spin' /> : <Key />}
                   </Button>
                 </div>
               )}
@@ -328,13 +327,13 @@ export function Mfa() {
               )}
 
               {(needsEmail || needsTotp) && (
-                <Button type='submit' className='w-full' disabled={isLoading}>
+                <Button
+                  type='submit'
+                  className='w-full'
+                  loading={isLoading}
+                  trailingIcon={<ArrowRight className='rtl:rotate-180' />}
+                >
                   <Trans>Log in</Trans>
-                  {isLoading ? (
-                    <Loader2 className='animate-spin' />
-                  ) : (
-                    <ArrowRight className='rtl:rotate-180' />
-                  )}
                 </Button>
               )}
 
