@@ -65,9 +65,23 @@ msgstr "{count, plural, one {#min} other {#min}}"
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#mgg} other {#mgg}}"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{day}, {from} to {to}"
+msgstr "{day}, {from} hingga {to}"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "{entityLabel} name"
 msgstr "Nama {entityLabel}"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{from} to {to}"
+msgstr "{from} hingga {to}"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+msgid "{hidden, plural, one {+# more} other {+# more}}"
+msgstr "{hidden, plural, other {+# lagi}}"
 
 #: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx
 msgid "{opponentName} offered a draw"
@@ -215,6 +229,11 @@ msgstr "Lanjutan"
 msgid "AI"
 msgstr "AI"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "All day"
+msgstr "Sepanjang hari"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Benarkan sesiapa sahaja mencari {entityLabel}"
@@ -290,6 +309,10 @@ msgstr "Adakah anda pasti mahu mengaku kalah? {opponentName} akan memenangi perm
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Ascending"
 msgstr "Menaik"
+
+#: ../../../lib/web/src/components/timezone-select.tsx
+msgid "At sea"
+msgstr "Di laut"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Attach comment files"
@@ -408,6 +431,10 @@ msgstr "Pemberitahuan pelayar"
 msgid "By creating your account, you agree to the <0>Server rules</0>, <1>Terms and conditions</1>, and <2>Privacy</2>."
 msgstr "Dengan mencipta akaun anda, anda bersetuju dengan <0>Peraturan pelayan</0>, <1>Terma dan syarat</1>, dan <2>Privasi</2>."
 
+#: ../../../lib/web/src/features/accounts/types.ts
+msgid "Calendar server"
+msgstr "Pelayan kalendar"
+
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
 msgstr "Kebenaran kamera ditolak"
@@ -469,6 +496,11 @@ msgstr "Diubah"
 msgid "Changed {field}"
 msgstr "{field} diubah"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Changed occurrence"
+msgstr "Ulangan yang diubah"
+
 #: src/features/landing/landing-page.tsx
 msgid "Chat"
 msgstr "Sembang"
@@ -488,6 +520,10 @@ msgstr "Menyemak…"
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checklist"
 msgstr "Senarai semak"
+
+#: ../../../lib/web/src/components/ui/date-picker.tsx
+msgid "Choose a date"
+msgstr "Pilih tarikh"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Choose a different local email or log in instead."
@@ -570,6 +606,7 @@ msgid "Collapse sidebar"
 msgstr "Runtuhkan bar sisi"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Colour"
 msgstr "Warna"
 
@@ -658,6 +695,10 @@ msgstr "Teruskan penutupan dan log keluar"
 msgid "Continue with {label}"
 msgstr "Teruskan dengan {label}"
 
+#: ../../../lib/web/src/features/accounts/account-add.tsx
+msgid "Continue with {providerLabel}"
+msgstr "Teruskan dengan {providerLabel}"
+
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Copied"
 msgstr "Disalin"
@@ -666,6 +707,10 @@ msgstr "Disalin"
 msgid "Copied to clipboard"
 msgstr "Disalin ke papan keratan"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copy"
 msgstr "Salin"
@@ -987,6 +1032,10 @@ msgstr "Kod e-mel"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Email me a code"
 msgstr "E-melkan saya kod"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Ends before it starts"
+msgstr "Tamat sebelum bermula"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter a code to continue"
@@ -1512,6 +1561,10 @@ msgstr "Penyederhanaan"
 msgid "Monday"
 msgstr "Isnin"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Month"
+msgstr "Bulan"
+
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "More options"
 msgstr "Lagi pilihan"
@@ -1523,6 +1576,13 @@ msgstr "Dipindahkan"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Moved {field}"
 msgstr "{field} dipindahkan"
+
+#. placeholder {0}: dayName(current.day)
+#. placeholder {0}: dayName(dragging.day)
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Moving to {0}"
+msgstr "Mengalihkan ke {0}"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1582,6 +1642,14 @@ msgstr "Seterusnya"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Next image"
 msgstr "Imej seterusnya"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next month"
+msgstr "Bulan hadapan"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next year"
+msgstr "Tahun hadapan"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -1915,6 +1983,14 @@ msgstr "Hantaran dan komen"
 msgid "Previous image"
 msgstr "Imej sebelumnya"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous month"
+msgstr "Bulan sebelumnya"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous year"
+msgstr "Tahun sebelumnya"
+
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
 #: src/features/auth/identity-form.tsx
@@ -2084,6 +2160,11 @@ msgstr "Namakan semula lajur"
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 msgid "Rename this board column"
 msgstr "Namakan semula lajur papan ini"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Repeats"
+msgstr "Berulang"
 
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
@@ -2806,6 +2887,10 @@ msgstr "Wiki"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Wrong passphrase"
 msgstr "Frasa laluan salah"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Year"
+msgstr "Tahun"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."

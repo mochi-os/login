@@ -65,9 +65,23 @@ msgstr "{count, plural, one {#min} other {#min}}"
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#sem} other {#sem}}"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{day}, {from} to {to}"
+msgstr "{day}, {from} {to} kama"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "{entityLabel} name"
 msgstr "{entityLabel} suti"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{from} to {to}"
+msgstr "{from} {to} kama"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+msgid "{hidden, plural, one {+# more} other {+# more}}"
+msgstr "{hidden, plural, one {+# juk'ampi} other {+# juk'ampi}}"
 
 #: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx
 msgid "{opponentName} offered a draw"
@@ -215,6 +229,11 @@ msgstr "Nayrar"
 msgid "AI"
 msgstr "AI"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "All day"
+msgstr "Taqi uru"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Khitirus {entityLabel} thaqhaña iyawsaña"
@@ -290,6 +309,10 @@ msgstr "Chiqpach jaytaña munta? {opponentName} ukax anatawix atipiyani."
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Ascending"
 msgstr "Wichhukama"
+
+#: ../../../lib/web/src/components/timezone-select.tsx
+msgid "At sea"
+msgstr "Lamarana"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Attach comment files"
@@ -408,6 +431,10 @@ msgstr "Browser yatiyäwinaka"
 msgid "By creating your account, you agree to the <0>Server rules</0>, <1>Terms and conditions</1>, and <2>Privacy</2>."
 msgstr "Cuentam lurasaxa, juma iyawstaw <0>Server kamachinaka</0>, <1>Términonaka ukat condicionanaka</1>, ukat <2>Imantawi</2> ukanakaru."
 
+#: ../../../lib/web/src/features/accounts/types.ts
+msgid "Calendar server"
+msgstr "Calendario servidor"
+
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
 msgstr "Cámara permisox janiw iyawsatäkiti"
@@ -469,6 +496,11 @@ msgstr "Mayjt'ayata"
 msgid "Changed {field}"
 msgstr "{field} mayjt'ayata"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Changed occurrence"
+msgstr "Turkata lurawi"
+
 #: src/features/landing/landing-page.tsx
 msgid "Chat"
 msgstr "Chat"
@@ -488,6 +520,10 @@ msgstr "Jikiñani..."
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checklist"
 msgstr "Comprobación lista"
+
+#: ../../../lib/web/src/components/ui/date-picker.tsx
+msgid "Choose a date"
+msgstr "Mä uru ajlliña"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Choose a different local email or log in instead."
@@ -570,6 +606,7 @@ msgid "Collapse sidebar"
 msgstr "Sidebar jist'antaña"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Colour"
 msgstr "Colora"
 
@@ -658,6 +695,10 @@ msgstr "Jist'antaña sarantayañ ukatx mistsuña"
 msgid "Continue with {label}"
 msgstr "{label} ukampi sarantañani"
 
+#: ../../../lib/web/src/features/accounts/account-add.tsx
+msgid "Continue with {providerLabel}"
+msgstr "{providerLabel} ukamp sarantaña"
+
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Copied"
 msgstr "Copiatawa"
@@ -666,6 +707,10 @@ msgstr "Copiatawa"
 msgid "Copied to clipboard"
 msgstr "Clipboard-ru copiata"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copy"
 msgstr "Copiaña"
@@ -987,6 +1032,10 @@ msgstr "Email código"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Email me a code"
 msgstr "Mä yatiyaña ch'imi correo electrónico apayanita"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Ends before it starts"
+msgstr "Janïr qalltkipan tukusi"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter a code to continue"
@@ -1512,6 +1561,10 @@ msgstr "Moderación"
 msgid "Monday"
 msgstr "Lunes"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Month"
+msgstr "Phaxsi"
+
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "More options"
 msgstr "Yaqha chimpunaka"
@@ -1523,6 +1576,13 @@ msgstr "Astata"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Moved {field}"
 msgstr "{field} astata"
+
+#. placeholder {0}: dayName(current.day)
+#. placeholder {0}: dayName(dragging.day)
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Moving to {0}"
+msgstr "{0} uksaru unuqtayaskiwa"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1582,6 +1642,14 @@ msgstr "Arkiri"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Next image"
 msgstr "Arkiri imagen"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next month"
+msgstr "Arkiri phaxsi"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next year"
+msgstr "Arkiri mara"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -1915,6 +1983,14 @@ msgstr "Qillqatanak comentarionakampi"
 msgid "Previous image"
 msgstr "Nayrïri imagen"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous month"
+msgstr "Nayrïri phaxsi"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous year"
+msgstr "Nayrïri mara"
+
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
 #: src/features/auth/identity-form.tsx
@@ -2084,6 +2160,11 @@ msgstr "Columna suti machaqachama"
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 msgid "Rename this board column"
 msgstr "Aka board columna suti machaqachama"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Repeats"
+msgstr "Kutiptiwa"
 
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
@@ -2806,6 +2887,10 @@ msgstr "Wikinaka"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Wrong passphrase"
 msgstr "Contraseña parlana jan walikitiw"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Year"
+msgstr "Mara"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."

@@ -65,9 +65,23 @@ msgstr "{count, plural, one {#Min} other {#Min}}"
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#Wo} other {#Wo}}"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{day}, {from} to {to}"
+msgstr "{day}, {from} bis {to}"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "{entityLabel} name"
 msgstr "{entityLabel}-Name"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{from} to {to}"
+msgstr "{from} bis {to}"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+msgid "{hidden, plural, one {+# more} other {+# more}}"
+msgstr "{hidden, plural, one {+# weiterer} other {+# weitere}}"
 
 #: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx
 msgid "{opponentName} offered a draw"
@@ -215,6 +229,11 @@ msgstr "Erweitert"
 msgid "AI"
 msgstr "KI"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "All day"
+msgstr "Ganztägig"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Allen erlauben, nach {entityLabel} zu suchen"
@@ -290,6 +309,10 @@ msgstr "Möchten Sie wirklich aufgeben? {opponentName} gewinnt die Partie."
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Ascending"
 msgstr "Aufsteigend"
+
+#: ../../../lib/web/src/components/timezone-select.tsx
+msgid "At sea"
+msgstr "Auf See"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Attach comment files"
@@ -408,6 +431,10 @@ msgstr "Browser-Benachrichtigungen"
 msgid "By creating your account, you agree to the <0>Server rules</0>, <1>Terms and conditions</1>, and <2>Privacy</2>."
 msgstr "Mit der Erstellung Ihres Kontos akzeptieren Sie die <0>Serverregeln</0>, die <1>Allgemeinen Geschäftsbedingungen</1> und den <2>Datenschutz</2>."
 
+#: ../../../lib/web/src/features/accounts/types.ts
+msgid "Calendar server"
+msgstr "Kalenderserver"
+
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
 msgstr "Kameraberechtigung verweigert"
@@ -469,6 +496,11 @@ msgstr "Geändert"
 msgid "Changed {field}"
 msgstr "{field} geändert"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Changed occurrence"
+msgstr "Geänderter Einzeltermin"
+
 #: src/features/landing/landing-page.tsx
 msgid "Chat"
 msgstr "Chat"
@@ -488,6 +520,10 @@ msgstr "Überprüfen…"
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checklist"
 msgstr "Checkliste"
+
+#: ../../../lib/web/src/components/ui/date-picker.tsx
+msgid "Choose a date"
+msgstr "Datum wählen"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Choose a different local email or log in instead."
@@ -570,6 +606,7 @@ msgid "Collapse sidebar"
 msgstr "Seitenleiste einklappen"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Colour"
 msgstr "Farbe"
 
@@ -658,6 +695,10 @@ msgstr "Schließen fortsetzen und abmelden"
 msgid "Continue with {label}"
 msgstr "Mit {label} fortsetzen"
 
+#: ../../../lib/web/src/features/accounts/account-add.tsx
+msgid "Continue with {providerLabel}"
+msgstr "Weiter mit {providerLabel}"
+
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Copied"
 msgstr "Kopiert"
@@ -666,6 +707,10 @@ msgstr "Kopiert"
 msgid "Copied to clipboard"
 msgstr "In die Zwischenablage kopiert"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copy"
 msgstr "Kopieren"
@@ -987,6 +1032,10 @@ msgstr "E-Mail-Code"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Email me a code"
 msgstr "Code per E-Mail senden"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Ends before it starts"
+msgstr "Endet vor dem Beginn"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter a code to continue"
@@ -1512,6 +1561,10 @@ msgstr "Moderation"
 msgid "Monday"
 msgstr "Montag"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Month"
+msgstr "Monat"
+
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "More options"
 msgstr "Weitere Optionen"
@@ -1523,6 +1576,13 @@ msgstr "Verschoben"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Moved {field}"
 msgstr "{field} verschoben"
+
+#. placeholder {0}: dayName(current.day)
+#. placeholder {0}: dayName(dragging.day)
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Moving to {0}"
+msgstr "Wird auf {0} verschoben"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1582,6 +1642,14 @@ msgstr "Weiter"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Next image"
 msgstr "Nächstes Bild"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next month"
+msgstr "Nächster Monat"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next year"
+msgstr "Nächstes Jahr"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -1915,6 +1983,14 @@ msgstr "Beiträge und Kommentare"
 msgid "Previous image"
 msgstr "Vorheriges Bild"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous month"
+msgstr "Vorheriger Monat"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous year"
+msgstr "Vorheriges Jahr"
+
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
 #: src/features/auth/identity-form.tsx
@@ -2084,6 +2160,11 @@ msgstr "Spalte umbenennen"
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 msgid "Rename this board column"
 msgstr "Diese Board-Spalte umbenennen"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Repeats"
+msgstr "Wiederholt sich"
 
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
@@ -2806,6 +2887,10 @@ msgstr "Wikis"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Wrong passphrase"
 msgstr "Falsche Passphrase"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Year"
+msgstr "Jahr"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."

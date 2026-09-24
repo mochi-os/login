@@ -65,9 +65,23 @@ msgstr "{count, plural, one {#خ} other {#خ}}"
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#ه} other {#ه}}"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{day}, {from} to {to}"
+msgstr "{day}، لە {from} بۆ {to}"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "{entityLabel} name"
 msgstr "ناوی {entityLabel}"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{from} to {to}"
+msgstr "لە {from} بۆ {to}"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+msgid "{hidden, plural, one {+# more} other {+# more}}"
+msgstr "{hidden, plural, one {+# زیاتر} other {+# زیاتر}}"
 
 #: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx
 msgid "{opponentName} offered a draw"
@@ -215,6 +229,11 @@ msgstr "پێشکەوتوو"
 msgid "AI"
 msgstr "AI"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "All day"
+msgstr "هەموو ڕۆژ"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "ڕێگە بدە بە هەموان بۆ گەڕان بەدوای {entityLabel}"
@@ -290,6 +309,10 @@ msgstr "ئایا دڵنیایت لە دەستلەکارکێشانەوە؟ {oppon
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Ascending"
 msgstr "سەرکەوتوو"
+
+#: ../../../lib/web/src/components/timezone-select.tsx
+msgid "At sea"
+msgstr "لە دەریادا"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Attach comment files"
@@ -408,6 +431,10 @@ msgstr "ئاگادارکردنەوەی وێبگەڕ"
 msgid "By creating your account, you agree to the <0>Server rules</0>, <1>Terms and conditions</1>, and <2>Privacy</2>."
 msgstr "بە دروستکردنی هەژمارەکەت، تۆ ڕەزامەند دەبیت لەگەڵ <0>یاساکانی سێرڤەر</0>، <1>مەرج و ڕێسا</1>، و <2>تایبەتمەندی</2>."
 
+#: ../../../lib/web/src/features/accounts/types.ts
+msgid "Calendar server"
+msgstr "ڕاژەکاری ڕۆژژمێر"
+
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
 msgstr "ڕێگەپێدانی کامێرا ڕەتکرایەوە"
@@ -469,6 +496,11 @@ msgstr "گۆڕدرا"
 msgid "Changed {field}"
 msgstr "{field} گۆڕدرا"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Changed occurrence"
+msgstr "ڕوودانی گۆڕاو"
+
 #: src/features/landing/landing-page.tsx
 msgid "Chat"
 msgstr "گفتوگۆ"
@@ -488,6 +520,10 @@ msgstr "پشکنین…"
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checklist"
 msgstr "لیستی پشکنین"
+
+#: ../../../lib/web/src/components/ui/date-picker.tsx
+msgid "Choose a date"
+msgstr "بەروارێک هەڵبژێرە"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Choose a different local email or log in instead."
@@ -570,6 +606,7 @@ msgid "Collapse sidebar"
 msgstr "نوقاندنی لاتەنیشت"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Colour"
 msgstr "ڕەنگ"
 
@@ -658,6 +695,10 @@ msgstr "بەردەوامبە لە داخستن و بچۆ دەرەوە"
 msgid "Continue with {label}"
 msgstr "بەردەوامبە بە {label}"
 
+#: ../../../lib/web/src/features/accounts/account-add.tsx
+msgid "Continue with {providerLabel}"
+msgstr "بەردەوامبوون بە {providerLabel}"
+
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Copied"
 msgstr "کۆپی کرا"
@@ -666,6 +707,10 @@ msgstr "کۆپی کرا"
 msgid "Copied to clipboard"
 msgstr "کۆپی کرا بۆ کلیپبۆرد"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copy"
 msgstr "کۆپیکردن"
@@ -987,6 +1032,10 @@ msgstr "کۆدی ئیمەیڵ"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Email me a code"
 msgstr "بە ئیمەیڵ کۆدێکم بۆ بنێرە"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Ends before it starts"
+msgstr "پێش دەستپێکردن کۆتایی دێت"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter a code to continue"
@@ -1512,6 +1561,10 @@ msgstr "چاودێری"
 msgid "Monday"
 msgstr "دووشەممە"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Month"
+msgstr "مانگ"
+
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "More options"
 msgstr "هەڵبژاردنی زیاتر"
@@ -1523,6 +1576,13 @@ msgstr "گواسترایەوە"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Moved {field}"
 msgstr "{field} گواسترایەوە"
+
+#. placeholder {0}: dayName(current.day)
+#. placeholder {0}: dayName(dragging.day)
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Moving to {0}"
+msgstr "گواستنەوە بۆ {0}"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1582,6 +1642,14 @@ msgstr "دواتر"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Next image"
 msgstr "وێنەی دواتر"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next month"
+msgstr "مانگی داهاتوو"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next year"
+msgstr "ساڵی داهاتوو"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -1915,6 +1983,14 @@ msgstr "پۆستەکان و بۆچوونەکان"
 msgid "Previous image"
 msgstr "وێنەی پێشوو"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous month"
+msgstr "مانگی پێشوو"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous year"
+msgstr "ساڵی پێشوو"
+
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
 #: src/features/auth/identity-form.tsx
@@ -2084,6 +2160,11 @@ msgstr "ناوگۆڕکردنی ستوون"
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 msgid "Rename this board column"
 msgstr "ناوگۆڕکردنی ئەم ستوونەی تەختە"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Repeats"
+msgstr "دووبارە دەبێتەوە"
 
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
@@ -2806,6 +2887,10 @@ msgstr "Wiki-یەکان"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Wrong passphrase"
 msgstr "دەستەواژەی نهێنی هەڵەیە"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Year"
+msgstr "ساڵ"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
