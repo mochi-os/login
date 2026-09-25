@@ -275,8 +275,9 @@ export function UserAuthForm({
         if (onPasskeyLogin) {
           onPasskeyLogin()
         } else {
+          const button = t`Use a passkey`
           toast.error(t`Passkey login required`, {
-            description: t`Please use the "Log in with passkey" button.`,
+            description: t`Please use the "${button}" button.`,
           })
         }
         return

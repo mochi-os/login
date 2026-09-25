@@ -245,7 +245,7 @@ msgstr "వీటి ద్వారా క్రమబద్ధీకరణన�
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
-msgstr "ఆ ఇమెయిల్‌తో ఖాతా ఇప్పటికే ఉంది. ముందుగా సైన్ ఇన్ చేసి, ఆపై మీ auth సెట్టింగ్‌ల నుండి {0}ని లింక్ చేయండి."
+msgstr "ఆ ఇమెయిల్‌తో ఖాతా ఇప్పటికే ఉంది. ముందుగా సైన్ ఇన్ చేసి, ఆపై మీ ప్రామాణీకరణ సెట్టింగ్‌ల నుండి {0}ని లింక్ చేయండి."
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "An account with this identity already exists here."
@@ -956,7 +956,7 @@ msgstr "పూర్తయింది"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Download"
-msgstr "డౌన్‌లోడ్"
+msgstr "డౌన్‌లోడ్ చేయండి"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1614,9 +1614,13 @@ msgid "Network error"
 msgstr "నెట్‌వర్క్ లోపం"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "కొత్తది"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "సరికొత్తవి"
 
 #: src/lib/oauth-errors.ts
 msgid "New accounts are disabled on this server"
@@ -1781,9 +1785,13 @@ msgstr "ఏమీ కనుగొనబడలేదు"
 msgid "Notifications: {0}"
 msgstr "నోటిఫికేషన్‌లు: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "సంఖ్య"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "సంఖ్య"
 
@@ -1865,7 +1873,7 @@ msgstr "పేరెంట్"
 
 #: src/features/auth/mfa/index.tsx
 msgid "passkey"
-msgstr "passkey"
+msgstr "పాస్‌కీ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: src/features/auth/mfa/index.tsx
@@ -1914,7 +1922,7 @@ msgstr "నమూనా (regex)"
 
 #: ../../../lib/web/src/components/person-picker.tsx
 msgid "People"
-msgstr "పీపుల్"
+msgstr "వ్యక్తులు"
 
 #: src/features/auth/mfa/index.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -1963,8 +1971,8 @@ msgid "Please try again."
 msgstr "దయచేసి మళ్లీ ప్రయత్నించండి."
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
-msgid "Please use the \"Log in with passkey\" button."
-msgstr "\"పాస్‌కీతో లాగిన్ చేయండి\" బటన్‌ను ఉపయోగించండి."
+msgid "Please use the \"{button}\" button."
+msgstr "\"{button}\" బటన్‌ను ఉపయోగించండి."
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "Please wait a moment and try again."
@@ -2318,7 +2326,7 @@ msgstr "శోధిస్తోంది..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "ఎంచుకోండి"
+msgstr "ఎంపిక"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2500,7 +2508,7 @@ msgstr "చూడటం ఆపండి"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "విషయం"
+msgstr "వినియోగదారు లేదా సమూహం"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Submit comment"
@@ -2528,9 +2536,13 @@ msgstr "ఆదివారం"
 msgid "Switch to view 1-9"
 msgstr "వీక్షణ 1-9 కి మారండి"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "సిస్టమ్"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "సిస్టమ్"
 
@@ -2673,7 +2685,7 @@ msgstr "చాలా ఎక్కువ అభ్యర్థనలు"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "ఎగువ"
+msgstr "ఉత్తమమైనవి"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
@@ -2785,6 +2797,7 @@ msgid "Use a different account"
 msgstr "వేరే ఖాతాను ఉపయోగించండి"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
+#: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Use a passkey"
 msgstr "పాస్‌కీని ఉపయోగించండి"
 
@@ -2825,7 +2838,7 @@ msgstr "ఇమెయిల్ చిరునామాను ధృవీకర�
 
 #: src/features/auth/mfa/index.tsx
 msgid "Verify with passkey"
-msgstr "passkeyతో ధృవీకరించండి"
+msgstr "పాస్‌కీతో ధృవీకరించండి"
 
 #: src/routes/restore.tsx
 msgid "Verifying backup"
@@ -2929,7 +2942,7 @@ msgstr "మీ ఖాతా తొలగింపు కోసం షెడ్�
 
 #: src/lib/oauth-errors.ts
 msgid "Your account requires a passkey to sign in"
-msgstr "సైన్ ఇన్ చేయడానికి మీ ఖాతాకు passkey అవసరం"
+msgstr "సైన్ ఇన్ చేయడానికి మీ ఖాతాకు పాస్‌కీ అవసరం"
 
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

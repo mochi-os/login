@@ -245,7 +245,7 @@ msgstr "Дараах байдлаар эрэмбэлэхийг зөвшөөрө�
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
 msgid "An account with that email already exists. Sign in first, then link {0} from your auth settings."
-msgstr "Энэ имэйлтэй бүртгэл аль хэдийн байна. Эхлээд нэвтэрч, дараа нь auth тохиргооноос {0}-г холбоно уу."
+msgstr "Энэ имэйлтэй бүртгэл аль хэдийн байна. Эхлээд нэвтэрч, дараа нь нэвтрэлтийн тохиргооноос {0}-г холбоно уу."
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "An account with this identity already exists here."
@@ -262,7 +262,7 @@ msgstr "Гэнэтийн алдаа гарлаа"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Android push"
-msgstr "Android push мэдэгдэл"
+msgstr "Android пуш мэдэгдэл"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 #: ../../../lib/web/src/features/access/types.ts
@@ -334,7 +334,7 @@ msgstr "баталгаажуулагч код"
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: src/features/auth/mfa/index.tsx
 msgid "Authenticator code"
-msgstr "Authenticator код"
+msgstr "Баталгаажуулагчийн код"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Available keyboard shortcuts"
@@ -603,7 +603,7 @@ msgstr "Хураах"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx
 msgid "Collapse sidebar"
-msgstr "Sidebar хумих"
+msgstr "Хажуугийн самбарыг хумих"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
@@ -1051,7 +1051,7 @@ msgstr "Баннерын текст оруулна уу (markdown дэмждэг
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter the code from your authenticator app"
-msgstr "Authenticator апп-аасаа кодоо оруулна уу"
+msgstr "Баталгаажуулагч аппаасаа кодоо оруулна уу"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -1073,7 +1073,7 @@ msgstr "Баталгаажуулагчийн кодоо оруулна уу"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
-msgstr "Имэйл код болон authenticator кодоо оруулна уу"
+msgstr "Имэйл код болон баталгаажуулагчийн кодоо оруулна уу"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Error"
@@ -1138,7 +1138,7 @@ msgstr "Холбоос устгаж чадсангүй"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Failed to get RSS token"
-msgstr "RSS token авч чадсангүй"
+msgstr "RSS токен авч чадсангүй"
 
 #: ../../../lib/web/src/hooks/use-load-more.ts
 msgid "Failed to load"
@@ -1195,7 +1195,7 @@ msgstr "Хадгалж чадсангүй"
 
 #: src/features/auth/identity-form.tsx
 msgid "Failed to save identity"
-msgstr "Identity хадгалж чадсангүй"
+msgstr "Танилтыг хадгалж чадсангүй"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Failed to save prompt"
@@ -1219,7 +1219,7 @@ msgstr "Хавсралт байршуулж чадсангүй"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
-msgstr "Feed-үүд"
+msgstr "Фийдүүд"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -1318,7 +1318,7 @@ msgstr "ID"
 
 #: src/features/auth/identity-form.tsx
 msgid "Identity saved"
-msgstr "Identity хадгалагдсан"
+msgstr "Танилт хадгалагдсан"
 
 #. placeholder {0}: currentMedia.name
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
@@ -1327,7 +1327,7 @@ msgstr "Зураг үзэгч: {0}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Imperial"
-msgstr "Imperial"
+msgstr "Империал"
 
 #: ../../../lib/web/src/features/access/types.ts
 msgid "Including anonymous users"
@@ -1614,9 +1614,13 @@ msgid "Network error"
 msgstr "Сүлжээний алдаа"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Шинэ"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Хамгийн шинэ"
 
 #: src/lib/oauth-errors.ts
 msgid "New accounts are disabled on this server"
@@ -1781,11 +1785,15 @@ msgstr "Юу ч олдсонгүй"
 msgid "Notifications: {0}"
 msgstr "Мэдэгдэл: {0}"
 
-#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
-#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Number"
 msgstr "Тоо"
+
+#: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
+#: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
+msgctxt "item number"
+msgid "Number"
+msgstr "Дугаар"
 
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "On"
@@ -1865,7 +1873,7 @@ msgstr "Эх"
 
 #: src/features/auth/mfa/index.tsx
 msgid "passkey"
-msgstr "passkey"
+msgstr "нэвтрэх түлхүүр"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: src/features/auth/mfa/index.tsx
@@ -1876,16 +1884,16 @@ msgstr "Нэвтрэх түлхүүр"
 #: src/features/auth/mfa/index.tsx
 #: src/features/landing/landing-page.tsx
 msgid "Passkey login cancelled"
-msgstr "Passkey-ээр нэвтрэх цуцлагдсан"
+msgstr "Нэвтрэх түлхүүрээр нэвтрэх цуцлагдсан"
 
 #: src/features/auth/mfa/index.tsx
 #: src/features/landing/landing-page.tsx
 msgid "Passkey login failed"
-msgstr "Passkey-ээр нэвтрэх амжилтгүй"
+msgstr "Нэвтрэх түлхүүрээр нэвтрэх амжилтгүй"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Passkey login required"
-msgstr "Passkey-ээр нэвтрэх шаардлагатай"
+msgstr "Нэвтрэх түлхүүрээр нэвтрэх шаардлагатай"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: ../../../lib/web/src/lib/shell-errors.ts
@@ -1963,8 +1971,8 @@ msgid "Please try again."
 msgstr "Дахин оролдоно уу."
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
-msgid "Please use the \"Log in with passkey\" button."
-msgstr "\"Passkey-ээр нэвтрэх\" товчийг ашиглана уу."
+msgid "Please use the \"{button}\" button."
+msgstr "\"{button}\" товчийг ашиглана уу."
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "Please wait a moment and try again."
@@ -2012,7 +2020,7 @@ msgstr "Төслүүд"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Prompt saved"
-msgstr "Prompt хадгалагдсан"
+msgstr "Промпт хадгалагдсан"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Properties"
@@ -2024,7 +2032,7 @@ msgstr "Нийтийн"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Push notification"
-msgstr "Push мэдэгдэл"
+msgstr "Пуш мэдэгдэл"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Raised"
@@ -2068,7 +2076,7 @@ msgstr "Нэвтрэх рүү дахин чиглүүлж байна."
 
 #: src/features/auth/identity-form.tsx
 msgid "Redirecting you to the dashboard…"
-msgstr "Dashboard руу шилжүүлж байна…"
+msgstr "Хяналтын самбар руу шилжүүлж байна…"
 
 #: ../../../lib/web/src/components/post-tags.tsx
 #: ../../../lib/web/src/components/post-tags.tsx
@@ -2159,7 +2167,7 @@ msgstr "Багана нэр өөрчлөх"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 msgid "Rename this board column"
-msgstr "Энэ board-ын баганын нэр өөрчлөх"
+msgstr "Энэ самбарын баганын нэр өөрчлөх"
 
 #: ../../../lib/web/src/components/calendar/month-grid.tsx
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
@@ -2244,7 +2252,7 @@ msgstr "RSS фид"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "RSS URL copied to clipboard"
-msgstr "RSS URL clipboard руу хуулагдсан"
+msgstr "RSS URL түр санах ой руу хуулагдсан"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Saturday"
@@ -2318,7 +2326,7 @@ msgstr "Хайж байна..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Сонгох"
+msgstr "Сонголт"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2500,7 +2508,7 @@ msgstr "Үзэхээ зогсоох"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Сэдэв"
+msgstr "Хэрэглэгч эсвэл бүлэг"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Submit comment"
@@ -2528,9 +2536,13 @@ msgstr "Ням гараг"
 msgid "Switch to view 1-9"
 msgstr "1-9 харагдац руу шилжих"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Систем"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Систем"
 
@@ -2601,7 +2613,7 @@ msgstr "Микрофоны хүсэлтэд хариу ирсэнгүй"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "Passkey хүсэлтэд хариу ирсэнгүй"
+msgstr "Нэвтрэх түлхүүрийн хүсэлтэд хариу ирсэнгүй"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "The passphrase you entered does not match the backup."
@@ -2625,7 +2637,7 @@ msgstr "Сервер өгөгдлийн оронд вэб хуудас буца�
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "Энэ аппад таны passkey-г ашиглахыг зөвшөөрөөгүй. Тохиргооны Зөвшөөрөл хэсэгт зөвшөөрнө үү."
+msgstr "Энэ аппад таны нэвтрэх түлхүүрийг ашиглахыг зөвшөөрөөгүй. Тохиргооны Зөвшөөрөл хэсэгт зөвшөөрнө үү."
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "This backup was created by a newer version of Mochi. Update this server first."
@@ -2673,7 +2685,7 @@ msgstr "Хэт олон хүсэлт"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Дээд"
+msgstr "Шилдэг"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
@@ -2785,6 +2797,7 @@ msgid "Use a different account"
 msgstr "Өөр данс ашиглах"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
+#: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Use a passkey"
 msgstr "Нэвтрэх түлхүүр ашиглах"
 
@@ -2825,7 +2838,7 @@ msgstr "Имэйл хаягийг баталгаажуулах"
 
 #: src/features/auth/mfa/index.tsx
 msgid "Verify with passkey"
-msgstr "Passkey-аар баталгаажуулах"
+msgstr "Нэвтрэх түлхүүрээр баталгаажуулах"
 
 #: src/routes/restore.tsx
 msgid "Verifying backup"
@@ -2929,7 +2942,7 @@ msgstr "Таны акаунт устгахаар товлогдсон байна
 
 #: src/lib/oauth-errors.ts
 msgid "Your account requires a passkey to sign in"
-msgstr "Таны данс нэвтрэхэд passkey шаардаж байна"
+msgstr "Таны данс нэвтрэхэд нэвтрэх түлхүүр шаардаж байна"
 
 #: ../../../lib/web/src/components/restore-banner.tsx
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
