@@ -5,7 +5,7 @@
 import { useEffect, useState } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { Trans, useLingui } from '@lingui/react/macro'
-import { requestHelpers } from '@mochi/web'
+import { Progress, requestHelpers } from '@mochi/web'
 import { Loader2 } from 'lucide-react'
 import { appUrl } from '@/lib/redirect'
 import { AuthLayout } from '@/features/auth/auth-layout'
@@ -159,12 +159,11 @@ function RestoringRouteComponent() {
               </p>
             )}
             {progress.percent > 0 && (
-              <div className='bg-muted h-2 w-full overflow-hidden rounded-full'>
-                <div
-                  className='bg-primary h-full rounded-full transition-all duration-300'
-                  style={{ width: `${Math.min(100, progress.percent)}%` }}
-                />
-              </div>
+              <Progress
+                aria-label={t`Restoring your account`}
+                className='h-2'
+                value={Math.min(100, progress.percent)}
+              />
             )}
             {progress.detail && (
               <p className='text-muted-foreground text-xs'>{progress.detail}</p>
