@@ -65,9 +65,23 @@ msgstr "{count, plural, one {#წთ} other {#წთ}}"
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#კვ} other {#კვ}}"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{day}, {from} to {to}"
+msgstr "{day}, {from}-დან {to}-მდე"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "{entityLabel} name"
 msgstr "{entityLabel}-ის სახელი"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{from} to {to}"
+msgstr "{from}-დან {to}-მდე"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+msgid "{hidden, plural, one {+# more} other {+# more}}"
+msgstr "{hidden, plural, one {+# სხვა} other {+# სხვა}}"
 
 #: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx
 msgid "{opponentName} offered a draw"
@@ -215,6 +229,11 @@ msgstr "გაფართოებული"
 msgid "AI"
 msgstr "AI"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "All day"
+msgstr "მთელი დღე"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "ყველას შეეძლოს მოძებნოს {entityLabel}"
@@ -290,6 +309,10 @@ msgstr "დარწმუნებული ხართ, რომ გსუ�
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Ascending"
 msgstr "ზრდადობით"
+
+#: ../../../lib/web/src/components/timezone-select.tsx
+msgid "At sea"
+msgstr "ზღვაზე"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Attach comment files"
@@ -408,6 +431,10 @@ msgstr "ბრაუზერის შეტყობინებები"
 msgid "By creating your account, you agree to the <0>Server rules</0>, <1>Terms and conditions</1>, and <2>Privacy</2>."
 msgstr "ანგარიშის შექმნით თქვენ ეთანხმებით <0>სერვერის წესებს</0>, <1>წესებსა და პირობებს</1> და <2>კონფიდენციალურობას</2>."
 
+#: ../../../lib/web/src/features/accounts/types.ts
+msgid "Calendar server"
+msgstr "კალენდრის სერვერი"
+
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
 msgstr "კამერის უფლება უარყოფილია"
@@ -469,6 +496,11 @@ msgstr "შეიცვალა"
 msgid "Changed {field}"
 msgstr "შეიცვალა {field}"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Changed occurrence"
+msgstr "შეცვლილი გამეორება"
+
 #: src/features/landing/landing-page.tsx
 msgid "Chat"
 msgstr "ჩატი"
@@ -488,6 +520,10 @@ msgstr "შემოწმება…"
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checklist"
 msgstr "ჩამონათვალი"
+
+#: ../../../lib/web/src/components/ui/date-picker.tsx
+msgid "Choose a date"
+msgstr "აირჩიეთ თარიღი"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Choose a different local email or log in instead."
@@ -563,6 +599,7 @@ msgid "Collapse sidebar"
 msgstr "გვერდითა პანელის შეკვრა"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Colour"
 msgstr "ფერი"
 
@@ -651,6 +688,10 @@ msgstr "დახურვის გაგრძელება და გას
 msgid "Continue with {label}"
 msgstr "გაგრძელება {label}-ით"
 
+#: ../../../lib/web/src/features/accounts/account-add.tsx
+msgid "Continue with {providerLabel}"
+msgstr "გაგრძელება {providerLabel}-ით"
+
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Copied"
 msgstr "დაკოპირდა"
@@ -659,6 +700,10 @@ msgstr "დაკოპირდა"
 msgid "Copied to clipboard"
 msgstr "ბუფერში დაკოპირდა"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copy"
 msgstr "კოპირება"
@@ -968,7 +1013,7 @@ msgstr "ელფოსტა უკვე გამოიყენება"
 
 #: src/features/auth/mfa/index.tsx
 msgid "email code"
-msgstr "მაგ., სამუშაო ლეპტოპი"
+msgstr "ელფოსტის კოდი"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: src/features/auth/mfa/index.tsx
@@ -979,6 +1024,10 @@ msgstr "ელფოსტის კოდი"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Email me a code"
 msgstr "გამომიგზავნეთ კოდი ელფოსტით"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Ends before it starts"
+msgstr "სრულდება დაწყებამდე"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter a code to continue"
@@ -1441,7 +1490,7 @@ msgstr "კატეგორიების მართვა"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 msgid "Manual"
-msgstr "სახელმძღვანელო"
+msgstr "ხელით"
 
 #: ../../../lib/web/src/components/layout/notification-menu.tsx
 #: ../../../lib/web/src/components/layout/notification-menu.tsx
@@ -1504,6 +1553,10 @@ msgstr "მოდერაცია"
 msgid "Monday"
 msgstr "ორშაბათი"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Month"
+msgstr "თვე"
+
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "More options"
 msgstr "მეტი ვარიანტი"
@@ -1515,6 +1568,13 @@ msgstr "გადაადგილდა"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Moved {field}"
 msgstr "გადაადგილდა {field}"
+
+#. placeholder {0}: dayName(current.day)
+#. placeholder {0}: dayName(dragging.day)
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Moving to {0}"
+msgstr "მიმდინარეობს გადატანა {0}-ზე"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1574,6 +1634,14 @@ msgstr "შემდეგი"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Next image"
 msgstr "შემდეგი სურათი"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next month"
+msgstr "შემდეგი თვე"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next year"
+msgstr "შემდეგი წელი"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -1907,6 +1975,14 @@ msgstr "პოსტები და კომენტარები"
 msgid "Previous image"
 msgstr "წინა სურათი"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous month"
+msgstr "წინა თვე"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous year"
+msgstr "წინა წელი"
+
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
 #: src/features/auth/identity-form.tsx
@@ -2077,6 +2153,11 @@ msgstr "სვეტის სახელის შეცვლა"
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 msgid "Rename this board column"
 msgstr "ამ დაფის სვეტის სახელის შეცვლა"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Repeats"
+msgstr "მეორდება"
 
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
@@ -2522,7 +2603,7 @@ msgstr "შეყვანილი პაროლის ფრაზა სა
 
 #: src/lib/oauth-errors.ts
 msgid "the provider"
-msgstr "სისტემა"
+msgstr "პროვაიდერი"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "The requested content could not be found."
@@ -2586,7 +2667,7 @@ msgstr "ზედმეტად ბევრი მოთხოვნა"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "ძალიან დიდი"
+msgstr "ზედა"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
@@ -2641,7 +2722,7 @@ msgstr "მიუნიჭებელი"
 
 #: ../../../lib/web/src/components/attachment-image.tsx
 msgid "Unavailable"
-msgstr "არაავტორიზებული წვდომა"
+msgstr "მიუწვდომელი"
 
 #: ../../../lib/web/src/lib/request.ts
 #: ../../../lib/web/src/lib/request.ts
@@ -2650,7 +2731,7 @@ msgstr "API-ის მოულოდნელი შეცდომა"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "United States"
-msgstr "ამ ვიკის უნიკალური იდენტიფიკატორები."
+msgstr "შეერთებული შტატები"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
@@ -2659,7 +2740,7 @@ msgstr "ამ ვიკის უნიკალური იდენტიფ
 #: ../../../lib/web/src/components/tree-table-header.tsx
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Unknown"
-msgstr "ერთეულები"
+msgstr "უცნობი"
 
 #: src/routes/restore.tsx
 msgid "Unpacking your data"
@@ -2667,12 +2748,12 @@ msgstr "თქვენი მონაცემების გახსნა"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Unsubscribe"
-msgstr "ამოუცნობი ანგარიში"
+msgstr "გამოწერის გაუქმება"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 #: ../../../lib/web/src/lib/entity-title.ts
 msgid "Untitled"
-msgstr "შეჩერება მოხსნილია"
+msgstr "უსათაურო"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
@@ -2730,7 +2811,7 @@ msgstr "შემოწმების კოდი გაიგზავნა"
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: ../../../lib/web/src/features/accounts/account-verify.tsx
 msgid "Verify"
-msgstr "შემოწმებული"
+msgstr "შემოწმება"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx
 msgid "Verify email address"
@@ -2778,11 +2859,11 @@ msgstr "თვალყურის დევნება"
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/filter-bar.tsx
 msgid "Watched"
-msgstr "ყურება"
+msgstr "თვალყურის ქვეშ"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 msgid "Watched only"
-msgstr "ნანახი"
+msgstr "მხოლოდ თვალყურის ქვეშ"
 
 #. placeholder {0}: account.identifier
 #: ../../../lib/web/src/features/accounts/account-verify.tsx
@@ -2800,6 +2881,10 @@ msgstr "ვიკები"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Wrong passphrase"
 msgstr "არასწორი პაროლის ფრაზა"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Year"
+msgstr "წელი"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."

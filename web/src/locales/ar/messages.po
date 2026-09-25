@@ -65,9 +65,23 @@ msgstr "{count, plural, one {#د} other {#د}}"
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#أ} other {#أ}}"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{day}, {from} to {to}"
+msgstr "{day}، {from} إلى {to}"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "{entityLabel} name"
 msgstr "اسم {entityLabel}"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{from} to {to}"
+msgstr "{from} إلى {to}"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+msgid "{hidden, plural, one {+# more} other {+# more}}"
+msgstr "{hidden, plural, zero {+# أخرى} one {+# أخرى} two {+# أخرى} few {+# أخرى} many {+# أخرى} other {+# أخرى}}"
 
 #: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx
 msgid "{opponentName} offered a draw"
@@ -215,6 +229,11 @@ msgstr "متقدم"
 msgid "AI"
 msgstr "الذكاء الاصطناعي"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "All day"
+msgstr "طوال اليوم"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "السماح لأي شخص بالبحث عن {entityLabel}"
@@ -290,6 +309,10 @@ msgstr "هل أنت متأكد أنك تريد الاستسلام؟ سيفوز {
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Ascending"
 msgstr "تصاعدي"
+
+#: ../../../lib/web/src/components/timezone-select.tsx
+msgid "At sea"
+msgstr "في البحر"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Attach comment files"
@@ -408,6 +431,10 @@ msgstr "إشعارات المتصفح"
 msgid "By creating your account, you agree to the <0>Server rules</0>, <1>Terms and conditions</1>, and <2>Privacy</2>."
 msgstr "بإنشاء حسابك، فإنك توافق على <0>قواعد الخادم</0> و<1>الشروط والأحكام</1> و<2>الخصوصية</2>."
 
+#: ../../../lib/web/src/features/accounts/types.ts
+msgid "Calendar server"
+msgstr "خادم تقويم"
+
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
 msgstr "تم رفض إذن الكاميرا"
@@ -469,6 +496,11 @@ msgstr "تم التغيير"
 msgid "Changed {field}"
 msgstr "تم تغيير {field}"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Changed occurrence"
+msgstr "تكرار معدَّل"
+
 #: src/features/landing/landing-page.tsx
 msgid "Chat"
 msgstr "الدردشة"
@@ -488,6 +520,10 @@ msgstr "جارٍ التحقق…"
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Checklist"
 msgstr "قائمة المهام"
+
+#: ../../../lib/web/src/components/ui/date-picker.tsx
+msgid "Choose a date"
+msgstr "اختر تاريخًا"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Choose a different local email or log in instead."
@@ -563,6 +599,7 @@ msgid "Collapse sidebar"
 msgstr "طيّ الشريط الجانبي"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Colour"
 msgstr "اللون"
 
@@ -651,6 +688,10 @@ msgstr "متابعة الإغلاق وتسجيل الخروج"
 msgid "Continue with {label}"
 msgstr "المتابعة باستخدام {label}"
 
+#: ../../../lib/web/src/features/accounts/account-add.tsx
+msgid "Continue with {providerLabel}"
+msgstr "المتابعة باستخدام {providerLabel}"
+
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Copied"
 msgstr "تم النسخ"
@@ -659,6 +700,10 @@ msgstr "تم النسخ"
 msgid "Copied to clipboard"
 msgstr "تم النسخ إلى الحافظة"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copy"
 msgstr "نسخ"
@@ -979,6 +1024,10 @@ msgstr "رمز البريد الإلكتروني"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Email me a code"
 msgstr "أرسل لي رمزًا عبر البريد الإلكتروني"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Ends before it starts"
+msgstr "ينتهي قبل أن يبدأ"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter a code to continue"
@@ -1504,6 +1553,10 @@ msgstr "الإشراف"
 msgid "Monday"
 msgstr "الاثنين"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Month"
+msgstr "شهر"
+
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "More options"
 msgstr "خيارات أخرى"
@@ -1515,6 +1568,13 @@ msgstr "تم النقل"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Moved {field}"
 msgstr "تم نقل {field}"
+
+#. placeholder {0}: dayName(current.day)
+#. placeholder {0}: dayName(dragging.day)
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Moving to {0}"
+msgstr "جارٍ النقل إلى {0}"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1574,6 +1634,14 @@ msgstr "التالي"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Next image"
 msgstr "الصورة التالية"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next month"
+msgstr "الشهر التالي"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next year"
+msgstr "السنة التالية"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -1907,6 +1975,14 @@ msgstr "المنشورات والتعليقات"
 msgid "Previous image"
 msgstr "الصورة السابقة"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous month"
+msgstr "الشهر السابق"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous year"
+msgstr "السنة السابقة"
+
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
 #: src/features/auth/identity-form.tsx
@@ -2077,6 +2153,11 @@ msgstr "إعادة تسمية العمود"
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 msgid "Rename this board column"
 msgstr "إعادة تسمية عمود اللوحة هذا"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Repeats"
+msgstr "يتكرر"
 
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
@@ -2800,6 +2881,10 @@ msgstr "الويكي"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Wrong passphrase"
 msgstr "عبارة مرور خاطئة"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Year"
+msgstr "السنة"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
