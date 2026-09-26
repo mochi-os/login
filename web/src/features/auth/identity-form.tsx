@@ -44,8 +44,8 @@ export function IdentityForm({ redirectTo }: IdentityFormProps) {
     () =>
       identitySchema({
         short: t`Please enter your name`,
-        long: t`Name too long`,
-        characters: t`Invalid name`,
+        long: t({ message: 'Name too long', context: 'person' }),
+        characters: t({ message: 'Invalid name', context: 'person' }),
       }),
     [t]
   )
