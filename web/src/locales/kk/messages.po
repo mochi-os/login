@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Тағы # файл көрсетілмеді} o
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Мәзірді ашу (# оқылмаған хабарландыру)} other {Мәзірді ашу (# оқылмаған хабарландыру)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> сіздің {1} тіркелгіңізге кіруді сұрайды."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 сағат"
@@ -134,6 +140,11 @@ msgstr "12 сағат"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 сағат"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} атты жаңа таспа"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Қол жеткізу қабылданбады"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Қол жеткізу деңгейі"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Тіркелгі"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Бұл жеке куәлікпен тіркелгі мұнда бұры�
 msgid "An error occurred"
 msgstr "Қате орын алды"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Бұрыннан бар қоғамдық таспа"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Кірген кез келген адам"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Осы арнаға жазылған барлық нәрсе оны алуды тоқтатады. Содан кейін жаңа URL мекенжайын көшіре аласыз."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Мақұлдау"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} аватары"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Артқа"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Мәтінмәндік ақпарат пен мәліметтер."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Жалғастыру"
@@ -745,6 +770,10 @@ msgstr "Алмасу буферіне көшірілді"
 msgid "Copy"
 msgstr "Көшіру"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Кіруді мақұлдау мүмкін болмады"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Болдырылмады"
@@ -762,6 +791,11 @@ msgstr "Бұл құжатты жүктеу мүмкін болмады. Кейі
 msgid "Could not reactivate your account"
 msgstr "Тіркелгіңізді қайта белсендіру мүмкін болмады"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Кіруден бас тарту мүмкін болмады"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "{initial} және {last} енгізіңіз"
 msgid "Enter your authenticator code"
 msgstr "Аутентификатор кодын енгізіңіз"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} арқылы кіруді аяқтау үшін электрондық пошта мекенжайыңызды енгізіңіз."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Электрондық пошта кодын және аутентификатор кодын енгізіңіз"
@@ -1249,6 +1288,14 @@ msgstr "Бақылауды жаңарту сәтсіз аяқталды"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Тіркемені жүктеп салу сәтсіз аяқталды"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Федиверс"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Таспа"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Жарамсыз қалпына келтіру коды"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Жарамсыз растау коды"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Ол тіркелгіңізді оқып, оның атынан жариялай алады."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Ол тіркелгіңізді оқи алады."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Бақылау тақтасына қайта бағыттаулыда…
 msgid "Reduce interest"
 msgstr "Қызығушылықты азайту"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Бас тарту"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total} ішінен {totalShown} көрсетілуде"
 msgid "Sidebar"
 msgstr "Бүйірлік панель"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Тіркелгіңізге кіріңіз"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Осы ресурсқа қатынасы бар есептік жазбамен <0/> жүйеге кіріңіз."
@@ -2705,6 +2768,10 @@ msgstr "Бұл резервтік көшірме Mochi жаңа нұсқасым
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Бұл ойын мен оның чатын біржола жояды. Бұл әрекетті болдырмауға болмайды."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Бұл кіру сұрауының мерзімі өтіп кеткен немесе оған жауап берілген."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Біз <0>{0}</0> мекенжайына растау кодын жіб�
 msgid "Wednesday"
 msgstr "Сәрсенбі"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Осы қолданбадан жасалған жазбалар қайда жариялансын?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki-лер"
@@ -2963,6 +3034,10 @@ msgstr "Wiki-лер"
 msgid "Wrong passphrase"
 msgstr "Кілт сөз тіркесі қате"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Жыл"
@@ -2970,6 +3045,10 @@ msgstr "Жыл"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Сізде бұл бөлімге кіру мүмкіндігі жоқ."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Бұл желіде тіркелгіңіз жоқ. Алдымен Параметрлерде пайдаланушы атын брондаңыз."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Тіркелгіңіз {source} жерінен осында ауысты
 msgid "Your attachments will be lost."
 msgstr "Тіркемелеріңіз жоғалады."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Bluesky пайдаланушы атыңыз"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Деректеріңіз резервтік көшірмеден қалпына келтірілуде. Бұл терезені жаппаңыз."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Mastodon серверіңіз"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

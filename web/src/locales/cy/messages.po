@@ -127,6 +127,12 @@ msgstr "{truncated, plural, zero {# ffeil arall heb eu dangos} one {# ffeil aral
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, zero {Agor y ddewislen (# hysbysiad heb ei ddarllen)} one {Agor y ddewislen (# hysbysiad heb ei ddarllen)} two {Agor y ddewislen (# hysbysiad heb eu darllen)} few {Agor y ddewislen (# hysbysiad heb eu darllen)} many {Agor y ddewislen (# hysbysiad heb eu darllen)} other {Agor y ddewislen (# hysbysiad heb eu darllen)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "Mae <0>{0}</0> yn gofyn am gael mewngofnodi i'ch cyfrif {1}."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 awr"
@@ -134,6 +140,11 @@ msgstr "12 awr"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 awr"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Ffrwd newydd o'r enw {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Mynediad wedi'i wrthod"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Lefel mynediad"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Cyfrif"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Mae cyfrif gyda'r hunaniaeth hon eisoes yn bodoli yma."
 msgid "An error occurred"
 msgstr "Digwyddodd gwall"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Ffrwd gyhoeddus sy'n bodoli eisoes"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Unrhyw un sydd wedi mewngofnodi"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Bydd unrhyw beth sydd wedi tanysgrifio i'r porthiant hwn yn peidio â'i dderbyn. Gallwch gopïo URL newydd wedyn."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Cymeradwyo"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Afatar ar gyfer {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Yn ôl"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Gwybodaeth a manylion cyd-destunol."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Parhau"
@@ -745,6 +770,10 @@ msgstr "Wedi'i gopïo i'r clipfwrdd"
 msgid "Copy"
 msgstr "Copïo"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Methwyd cymeradwyo'r mewngofnodi"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Methwyd canslo"
@@ -762,6 +791,11 @@ msgstr "Methwyd llwytho'r ddogfen hon. Rhowch gynnig arni eto yn nes ymlaen."
 msgid "Could not reactivate your account"
 msgstr "Methwyd ag ailysgogi eich cyfrif"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Methwyd gwrthod y mewngofnodi"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Rhowch eich {initial} a {last}"
 msgid "Enter your authenticator code"
 msgstr "Rhowch god eich ap dilysu"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Rhowch eich cyfeiriad e-bost i orffen mewngofnodi gyda {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Rhowch eich cod e-bost a chod dilysu"
@@ -1249,6 +1288,14 @@ msgstr "Methwyd diweddaru gwylio"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Methwyd llwytho'r atodiad"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Ffrwd"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Cod adfer annilys"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Cod dilysu annilys"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Gall ddarllen eich cyfrif a phostio fel y cyfrif hwnnw."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Gall ddarllen eich cyfrif."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Yn eich ailgyfeirio i'r dangosfwrdd…"
 msgid "Reduce interest"
 msgstr "Lleihau diddordeb"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Gwrthod"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Yn dangos {totalShown} o {total}"
 msgid "Sidebar"
 msgstr "Bar ochr"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Mewngofnodwch i'ch cyfrif"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Mewngofnodwch gyda chyfrif sydd â mynediad <0/> at yr adnodd hwn."
@@ -2705,6 +2768,10 @@ msgstr "Crëwyd y copi wrth gefn hwn gan fersiwn newydd o Mochi. Diweddarwch y g
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Bydd hyn yn dileu'r gêm a'i sgwrs yn barhaol. Ni ellir dadwneud hyn."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Mae'r cais mewngofnodi hwn wedi dod i ben neu wedi'i ateb eisoes."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Rydym wedi anfon cod dilysu i <0>{0}</0>. Rhowch y cod isod i ddilysu ei
 msgid "Wednesday"
 msgstr "Dydd Mercher"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "I ble dylai postiadau a wneir o'r ap hwn fynd?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wicis"
@@ -2963,6 +3034,10 @@ msgstr "Wicis"
 msgid "Wrong passphrase"
 msgstr "Ymadrodd cyfrinachol anghywir"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Blwyddyn"
@@ -2970,6 +3045,10 @@ msgstr "Blwyddyn"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Nid oes gennych fynediad i'r adran hon."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Does gennych chi ddim cyfrif ar y rhwydwaith hwn. Neilltuwch enw defnyddiwr yn y Gosodiadau yn gyntaf."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Symudwyd eich cyfrif yma o {source}. Hyd nes y byddwch yn ei ddileu yno,
 msgid "Your attachments will be lost."
 msgstr "Bydd eich atodiadau'n cael eu colli."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Eich enw defnyddiwr Bluesky"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Mae eich data yn cael ei adfer o'r copi wrth gefn. Peidiwch â chau'r ffenestr hon."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Eich gweinydd Mastodon"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

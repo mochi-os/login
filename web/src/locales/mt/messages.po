@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# fajl ieħor mhux muri} two {# fajls oħra mhu
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Iftaħ il-menu (# notifika mhux moqrija)} two {Iftaħ il-menu (# notifiki mhux moqrija)} few {Iftaħ il-menu (# notifiki mhux moqrija)} many {Iftaħ il-menu (# notifika mhux moqrija)} other {Iftaħ il-menu (# notifika mhux moqrija)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> qed titlob li tidħol fil-kont tiegħek ta' {1}."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12-il siegħa"
@@ -134,6 +140,11 @@ msgstr "12-il siegħa"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 siegħa"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Feed ġdid bl-isem {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Aċċess miċħud"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Livell ta' aċċess"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Kont"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Kont b'din l-identità diġà jeżisti hawn."
 msgid "An error occurred"
 msgstr "Seħħet żball"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Feed pubbliku eżistenti"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Kull min hu llogjat"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Kull ma huwa abbonat għal din il-feed se jieqaf jirċeviha. Wara tista' tikkopja URL ġdid."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Approva"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Avatar għal {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Lura"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Informazzjoni u dettalji kuntestwali."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Kompli"
@@ -745,6 +770,10 @@ msgstr "Ikkupjat fil-clipboard"
 msgid "Copy"
 msgstr "Ikkupja"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Ma setax jiġi approvat id-dħul"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Ma setax jiġi kkanċellat"
@@ -762,6 +791,11 @@ msgstr "Ma setax itella' dan id-dokument. Jekk jogħġbok ipprova mill-ġdid ikt
 msgid "Could not reactivate your account"
 msgstr "Ma setax jiġi attivat mill-ġdid il-kont tiegħek"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Ma setax jiġi rrifjutat id-dħul"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Daħħal {initial} u {last}"
 msgid "Enter your authenticator code"
 msgstr "Daħħal il-kodiċi tal-awtentikatur tiegħek"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Daħħal l-indirizz tal-email tiegħek biex tlesti d-dħul b'{0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Daħħal il-kodiċi tal-email u l-kodiċi tal-awtentikatur tiegħek"
@@ -1249,6 +1288,14 @@ msgstr "Ma rnexxiex jiġi aġġornat is-segwitu"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Ma rnexxiex jittella' l-attachment"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Feed"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Kodiċi tal-irkupru invalidu"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Kodiċi tal-verifika invalidu"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Tista' taqra l-kont tiegħek u tippubblika f'ismu."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Tista' taqra l-kont tiegħek."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Qed inwassluk għad-dashboard…"
 msgid "Reduce interest"
 msgstr "Naqqas l-interess"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Irrifjuta"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Qed juri {totalShown} minn {total}"
 msgid "Sidebar"
 msgstr "Barra tal-ġenb"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Idħol fil-kont tiegħek"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Idħol b'kont li għandu aċċess <0/> għal din ir-riżorsa."
@@ -2705,6 +2768,10 @@ msgstr "Dan il-backup inħoloq minn verżjoni aktar ġdida ta' Mochi. Aġġorna 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Dan għad iħassar il-logħba u ċ-chat tagħha b'mod permanenti. Din l-azzjoni ma tistax titħassar."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Din it-talba għad-dħul skadiet jew diġà ngħatat tweġiba."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Bgħatna kodiċi ta' verifika lil <0>{0}</0>. Daħħal il-kodiċi hawn t
 msgid "Wednesday"
 msgstr "L-Erbgħa"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Fejn għandhom imorru l-posts magħmula minn din l-applikazzjoni?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikis"
@@ -2963,6 +3034,10 @@ msgstr "Wikis"
 msgid "Wrong passphrase"
 msgstr "Frażi tal-password ħażina"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Sena"
@@ -2970,6 +3045,10 @@ msgstr "Sena"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "M'għandekx aċċess għal din it-taqsima."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "M'għandekx kont fuq dan in-netwerk. L-ewwel irriżerva isem tal-utent fl-Issettjar."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Il-kont tiegħek ġie miċċaqqlaq hawn minn {source}. Sakemm tħassru h
 msgid "Your attachments will be lost."
 msgstr "L-annessi tiegħek se jintilfu."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "L-isem tal-utent tiegħek fuq Bluesky"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Id-data tiegħek qiegħda tiġi rrestawrata mill-backup. Tagħlaqx din it-tieqa."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Is-server Mastodon tiegħek"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Încă # fișier neafișat} few {Încă # fiși
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Deschideți meniul (# notificare necitită)} few {Deschideți meniul (# notificări necitite)} other {Deschideți meniul (# de notificări necitite)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> cere să se autentifice în contul tău {1}."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ore"
@@ -134,6 +140,11 @@ msgstr "12 ore"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 de ore"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Un flux nou numit {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Acces refuzat"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Nivel de acces"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Cont"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Un cont cu această identitate există deja aici."
 msgid "An error occurred"
 msgstr "A apărut o eroare"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Un flux public existent"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Oricine este autentificat"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Tot ce este abonat la acest flux va înceta să îl primească. Puteți copia un URL nou după aceea."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Aprobă"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Avatar pentru {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Înapoi"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Informații și detalii contextuale."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Continuă"
@@ -745,6 +770,10 @@ msgstr "Copiat în clipboard"
 msgid "Copy"
 msgstr "Copiază"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Nu s-a putut aproba autentificarea"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Nu s-a putut anula"
@@ -762,6 +791,11 @@ msgstr "Nu s-a putut încărca acest document. Încearcă din nou mai târziu."
 msgid "Could not reactivate your account"
 msgstr "Contul nu a putut fi reactivat"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Nu s-a putut refuza autentificarea"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Introdu {initial} și {last}"
 msgid "Enter your authenticator code"
 msgstr "Introdu codul din aplicația de autentificare"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Introdu adresa de email pentru a finaliza autentificarea cu {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Introdu codul email și codul autentificatorului"
@@ -1249,6 +1288,14 @@ msgstr "Actualizarea urmăririi a eșuat"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Încărcarea atașamentului a eșuat"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fedivers"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Flux"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Cod de recuperare invalid"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Cod de verificare invalid"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Poate citi contul tău și poate posta în numele lui."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Poate citi contul tău."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Te redirecționăm către dashboard…"
 msgid "Reduce interest"
 msgstr "Reduce interesul"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Refuză"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Se afișează {totalShown} din {total}"
 msgid "Sidebar"
 msgstr "Bară laterală"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Autentifică-te în contul tău"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Conectați-vă cu un cont care are acces <0/> la această resursă."
@@ -2705,6 +2768,10 @@ msgstr "Această copie de rezervă a fost creată de o versiune mai nouă a Moch
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Aceasta va șterge definitiv jocul și discuția asociată. Această acțiune nu poate fi anulată."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Această cerere de autentificare a expirat sau a primit deja un răspuns."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Am trimis un cod de verificare la <0>{0}</0>. Introduceți codul mai jos
 msgid "Wednesday"
 msgstr "Miercuri"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Unde ar trebui să ajungă postările făcute din această aplicație?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki-uri"
@@ -2963,6 +3034,10 @@ msgstr "Wiki-uri"
 msgid "Wrong passphrase"
 msgstr "Frază de acces greșită"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "An"
@@ -2970,6 +3045,10 @@ msgstr "An"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Nu aveți acces la această secțiune."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Nu ai un cont în această rețea. Rezervă mai întâi un pseudonim în Setări."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Contul dvs. a fost mutat aici de la {source}. Până când îl ștergeț
 msgid "Your attachments will be lost."
 msgstr "Atașamentele tale se vor pierde."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Pseudonimul tău Bluesky"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Datele tale sunt restaurate din copia de rezervă. Nu închide această fereastră."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Serverul tău Mastodon"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

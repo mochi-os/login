@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# weitere Datei nicht angezeigt} other {# weite
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Menü öffnen (# ungelesene Benachrichtigung)} other {Menü öffnen (# ungelesene Benachrichtigungen)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> möchte sich bei Ihrem {1}-Konto anmelden."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 Stunden"
@@ -134,6 +140,11 @@ msgstr "12 Stunden"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 Stunden"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Ein neuer Feed namens {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Zugriff verweigert"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Zugriffsebene"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Konto"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Ein Konto mit dieser Identität existiert hier bereits."
 msgid "An error occurred"
 msgstr "Ein Fehler ist aufgetreten"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Ein bestehender öffentlicher Feed"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Alle angemeldeten Personen"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Alles, was diesen Feed abonniert hat, empfängt ihn nicht mehr. Danach können Sie eine neue URL kopieren."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Genehmigen"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Avatar für {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Zurück"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Kontextinformationen und Details."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Fortfahren"
@@ -745,6 +770,10 @@ msgstr "In die Zwischenablage kopiert"
 msgid "Copy"
 msgstr "Kopieren"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Die Anmeldung konnte nicht genehmigt werden"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Konnte nicht abgebrochen werden"
@@ -762,6 +791,11 @@ msgstr "Dieses Dokument konnte nicht geladen werden. Bitte versuchen Sie es spä
 msgid "Could not reactivate your account"
 msgstr "Ihr Konto konnte nicht reaktiviert werden"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Die Anmeldung konnte nicht abgelehnt werden"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Geben Sie Ihren {initial} und {last} ein"
 msgid "Enter your authenticator code"
 msgstr "Code Ihrer Authenticator-App eingeben"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Geben Sie Ihre E-Mail-Adresse ein, um die Anmeldung mit {0} abzuschließen."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Geben Sie Ihren E-Mail-Code und Authenticator-Code ein"
@@ -1249,6 +1288,14 @@ msgstr "Beobachtung konnte nicht aktualisiert werden"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Anhang konnte nicht hochgeladen werden"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Feed"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Ungültiger Wiederherstellungscode"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Ungültiger Bestätigungscode"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Die App darf Ihr Konto lesen und in seinem Namen veröffentlichen."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Die App darf Ihr Konto lesen."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Sie werden zum Dashboard weitergeleitet…"
 msgid "Reduce interest"
 msgstr "Interesse reduzieren"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Ablehnen"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{totalShown} von {total} werden angezeigt"
 msgid "Sidebar"
 msgstr "Seitenleiste"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Bei Ihrem Konto anmelden"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Melden Sie sich mit einem Konto an, das Zugriff <0/> auf diese Ressource hat."
@@ -2705,6 +2768,10 @@ msgstr "Diese Sicherung wurde mit einer neueren Version von Mochi erstellt. Aktu
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Dadurch werden das Spiel und sein Chat dauerhaft gelöscht. Dies kann nicht rückgängig gemacht werden."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Diese Anmeldeanfrage ist abgelaufen oder wurde bereits beantwortet."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Wir haben einen Bestätigungscode an <0>{0}</0> gesendet. Geben Sie den 
 msgid "Wednesday"
 msgstr "Mittwoch"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Wohin sollen Beiträge aus dieser App gehen?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikis"
@@ -2963,6 +3034,10 @@ msgstr "Wikis"
 msgid "Wrong passphrase"
 msgstr "Falsche Passphrase"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Jahr"
@@ -2970,6 +3045,10 @@ msgstr "Jahr"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Sie haben keinen Zugriff auf diesen Bereich."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Sie haben kein Konto in diesem Netzwerk. Reservieren Sie zuerst ein Handle in den Einstellungen."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Ihr Konto wurde von {source} hierher verschoben. Bis Sie es dort lösche
 msgid "Your attachments will be lost."
 msgstr "Deine Anhänge gehen verloren."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Ihr Bluesky-Handle"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Deine Daten werden aus der Sicherung wiederhergestellt. Schließe dieses Fenster nicht."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Ihr Mastodon-Server"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# dosya daha gösterilmiyor} other {# dosya dah
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Menüyü aç (# okunmamış bildirim)} other {Menüyü aç (# okunmamış bildirim)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0>, {1} hesabına giriş yapmak istiyor."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 saat"
@@ -134,6 +140,11 @@ msgstr "12 saat"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 saat"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} adlı yeni bir akış"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Erişim reddedildi"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Erişim düzeyi"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Hesap"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Bu kimlikle bir hesap zaten burada mevcut."
 msgid "An error occurred"
 msgstr "Bir hata oluştu"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Mevcut bir herkese açık akış"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Giriş yapmış herkes"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Bu akışa abone olan her şey almayı durduracak. Sonrasında yeni bir URL kopyalayabilirsiniz."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Onayla"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} için avatar"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Geri"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Bağlamsal bilgi ve ayrıntılar."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Devam et"
@@ -745,6 +770,10 @@ msgstr "Panoya kopyalandı"
 msgid "Copy"
 msgstr "Kopyala"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Giriş onaylanamadı"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "İptal edilemedi"
@@ -762,6 +791,11 @@ msgstr "Bu belge yüklenemedi. Lütfen daha sonra tekrar deneyin."
 msgid "Could not reactivate your account"
 msgstr "Hesabınız yeniden etkinleştirilemedi"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Giriş reddedilemedi"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "{initial} ve {last} bilginizi girin"
 msgid "Enter your authenticator code"
 msgstr "Kimlik doğrulayıcı kodunuzu girin"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} ile girişi tamamlamak için e-posta adresini gir."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "E-posta kodunuzu ve kimlik doğrulayıcı kodunuzu girin"
@@ -1249,6 +1288,14 @@ msgstr "İzleme güncellenemedi"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Ek yüklenemedi"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Akış"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Geçersiz kurtarma kodu"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Geçersiz doğrulama kodu"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Hesabını okuyabilir ve onun adına paylaşım yapabilir."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Hesabını okuyabilir."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Dashboard'a yönlendiriliyorsunuz…"
 msgid "Reduce interest"
 msgstr "İlgiyi azalt"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Reddet"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total} öğenin {totalShown} tanesi gösteriliyor"
 msgid "Sidebar"
 msgstr "Kenar çubuğu"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Hesabına giriş yap"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Bu kaynağa <0/> erişimi olan bir hesapla oturum açın."
@@ -2705,6 +2768,10 @@ msgstr "Bu yedek, Mochi'nin daha yeni bir sürümü tarafından oluşturuldu. Ö
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Bu işlem oyunu ve sohbetini kalıcı olarak siler. Bu işlem geri alınamaz."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Bu giriş isteğinin süresi doldu veya istek zaten yanıtlandı."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "<0>{0}</0> adresine bir doğrulama kodu gönderdik. E-posta adresinizi d
 msgid "Wednesday"
 msgstr "Çarşamba"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Bu uygulamadan yapılan gönderiler nereye gitsin?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki'ler"
@@ -2963,6 +3034,10 @@ msgstr "Wiki'ler"
 msgid "Wrong passphrase"
 msgstr "Yanlış parola cümlesi"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Yıl"
@@ -2970,6 +3045,10 @@ msgstr "Yıl"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Bu bölüme erişiminiz yok."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Bu ağda hesabın yok. Önce Ayarlar'dan bir rumuz ayır."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Hesabınız {source} adresinden buraya taşındı. Orada silene kadar me
 msgid "Your attachments will be lost."
 msgstr "Ekleriniz kaybolacak."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Bluesky rumuzun"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Verileriniz yedekten geri yükleniyor. Bu pencereyi kapatmayın."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Mastodon sunucun"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

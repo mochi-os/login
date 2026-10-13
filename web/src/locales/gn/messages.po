@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# archivo ambue nojehechaukái} other {# archiv
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Eipe'a menú (# momarandu noñemoñe'ẽiva)} other {Eipe'a menú (# momarandu noñemoñe'ẽiva)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> ojerure oike hag̃ua nde mba'ete {1}-pe."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 aravo"
@@ -134,6 +140,11 @@ msgstr "12 aravo"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 aravo"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Marandu syry pyahu hérava {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Jeike noñemoneĩri"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Jeike nivel"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Mba'ete"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Oĩma ko'ápe peteĩ mba'ete ko identidad reheve."
 msgid "An error occurred"
 msgstr "Oĩ peteĩ jejavy"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Marandu syry ojeikéva oĩmava"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Oimeraẽva oikéva"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Opa mba'e osuscribíva ko feed-pe ndohupytyvéima. Upéi ikatu embokopia peteĩ URL pyahu."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Emoneĩ"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} avatar"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Ejevy"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Contexto marandu ha detalle."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Tenonde"
@@ -745,6 +770,10 @@ msgstr "Oñekopiáma clipboard-pe"
 msgid "Copy"
 msgstr "Kopia"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Ndaikatúi oñemoneĩ jeike"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Ndaikatúi oñeheja"
@@ -762,6 +791,11 @@ msgstr "Ndaikatúi oñemyanyhẽ ko documento. Eha'ã jeýta upéi."
 msgid "Could not reactivate your account"
 msgstr "Ndaikatúi oñemyendy jey nde mba'ete"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Ndaikatúi oñembotove jeike"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Emoinge ne {initial} ha {last}"
 msgid "Enter your authenticator code"
 msgstr "Emoinge nde código autenticador rehegua"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Emoinge nde ñanduti veve kundaharape emohu'ã hag̃ua jeike {0} rupive."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Emoinge ne email código ha autenticador código"
@@ -1249,6 +1288,14 @@ msgstr "Ndaikatúi oñembohekopyahu ñemaña"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Ndaikatúi ojehupi adjunto"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Marandu syry"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Recuperación código ndoikóiva"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Jehechajey código ndovaléi"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Ikatu omoñe'ẽ nde mba'ete ha omoherakuã hérape."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Ikatu omoñe'ẽ nde mba'ete."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Ojegueraha hína panel-pe…"
 msgid "Reduce interest"
 msgstr "Emomichĩ interés"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Embotove"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Ojehechauka {totalShown} {total} apytégui"
 msgid "Sidebar"
 msgstr "Yke panel"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Eike nde mba'etépe"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Eike peteĩ mba'ete oguerekóva jeike <0/> ko mba'épe."
@@ -2705,6 +2768,10 @@ msgstr "Ko respaldo oñemoheñói Mochi versión pyahuvévape. Embohekopyahu ra�
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Kóva ombogue tapiaite ñembosarái ha ichat. Kóva ndaikatúi oñembojevy."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Ko jeike jerure opáma hi'aravo térã oñembohováima."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Romondo peteĩ verificación código <0>{0}</0>-pe. Emoinge código ko'�
 msgid "Wednesday"
 msgstr "Araapy"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Moõpa oho va'erã umi marandu ojejapóva ko app-gui?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikikuéra"
@@ -2963,6 +3034,10 @@ msgstr "Wikikuéra"
 msgid "Wrong passphrase"
 msgstr "Ñe'ẽñemi ndoikoporãi"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Ary"
@@ -2970,6 +3045,10 @@ msgstr "Ary"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Ndereguerekói jeike ko vorépe."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Ndereguerekói mba'ete ko ñandutípe. Eñongatu raẽ peteĩ puruhára réra Ñembohekópe."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Nde mba'ete oñemongu'e ko'ápe {source}-gui. Rembogue peve upépe, ñe'
 msgid "Your attachments will be lost."
 msgstr "Ne adjunto okañýta."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Nde puruhára réra Bluesky-pe"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Ne datos oñemoĩ jeyhína respaldo-gui. Ani remboty ko ventana."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Nde mohendaha Mastodon"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# بله دوتنه نه ده ښودل شوې} 
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {مینو خلاص کړئ (# نالوستې خبرتیا)} other {مینو خلاص کړئ (# نالوستې خبرتیاوې)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> غواړي ستاسو {1} حساب ته ننوځي."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ساعته"
@@ -134,6 +140,11 @@ msgstr "12 ساعته"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 ساعته"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "د {0} په نوم نوی فیډ"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "لاسرسی رد شو"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "د لاسرسي کچه"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "حساب"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "د دې هویت سره یو حساب دلته دمخه شتون لري.
 msgid "An error occurred"
 msgstr "یوه تېروتنه رامنځته شوه"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "یو موجود عامه فیډ"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "هر څوک چې ننوتی وي"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "هر څه چې دې فیډ ته ګډون کړی، ترلاسه کول به ودروي. وروسته تاسو کولی شئ نوی URL کاپي کړئ."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "ومنه"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "د {name} لپاره اوتار"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "شاته"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "د شالید معلومات او توضیحات."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "دوام ورکړئ"
@@ -745,6 +770,10 @@ msgstr "په کلیپ بورډ کاپي شو"
 msgid "Copy"
 msgstr "کاپي کړئ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "ننوتل نشي تایید کیدلی"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "نشي لغوه کیدلی"
@@ -762,6 +791,11 @@ msgstr "دا سند نشي پورته کیدلی. مهرباني وکړئ ورو
 msgid "Could not reactivate your account"
 msgstr "ستاسو حساب بیا فعال نشو"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "ننوتل نشي رد کیدلی"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "خپل {initial} او {last} دننه کړئ"
 msgid "Enter your authenticator code"
 msgstr "د خپل تصدیق کوونکي کوډ دننه کړئ"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "خپله د بریښنالیک پته ولیکئ ترڅو د {0} له لارې ننوتل بشپړ کړئ."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "د خپل بریښنالیک کوډ او د تصدیق کوونکي کوډ دننه کړئ"
@@ -1249,6 +1288,14 @@ msgstr "د څارنې تازه کول ناکام شول"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "د ضمیمې اپلوډ پاتې راغلل"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "فیډ"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "د بیرته راګرځولو ناسم کوډ"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "د تصدیق ناسم کوډ"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "دا کولی شي ستاسو حساب ولولي او د هغه په نوم لیکنې خپرې کړي."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "دا کولی شي ستاسو حساب ولولي."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "تاسو ډشبورډ ته بیرته لارښود کیږي…"
 msgid "Reduce interest"
 msgstr "د علاقې کمول"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "انکار وکړئ"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "د {total} څخه {totalShown} ښودل کیږي"
 msgid "Sidebar"
 msgstr "سایډبار"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "خپل حساب ته ننوځئ"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "په داسې حساب سره ننوځئ چې دې سرچینې ته <0/> لاسرسی ولري."
@@ -2705,6 +2768,10 @@ msgstr "دا بیک اپ د Mochi د نوي نسخه لخوا جوړ شوی دی
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "دا به لوبه او د هغې چیټ د تل لپاره ړنګ کړي. دا کړنه بیرته نشي کیدی."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "د ننوتلو دا غوښتنه پای ته رسېدلې یا مخکې ځواب شوې ده."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "موږ تصدیق کوډ <0>{0}</0> ته ولیږه. د خپل بریښ�
 msgid "Wednesday"
 msgstr "چهارشنبه"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "له دې اپلیکیشن څخه جوړې شوې لیکنې باید چېرته ولاړې شي؟"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "ویکي ګانې"
@@ -2963,6 +3034,10 @@ msgstr "ویکي ګانې"
 msgid "Wrong passphrase"
 msgstr "غلط پاسفریز"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "کال"
@@ -2970,6 +3045,10 @@ msgstr "کال"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "تاسو دې برخې ته لاسرسی نه لرئ."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "تاسو په دې شبکه کې حساب نه لرئ. لومړی په تنظیماتو کې یو مستعار نوم ریزرو کړئ."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "ستاسو حساب له {source} دلته لیږدول شوی. تر ه�
 msgid "Your attachments will be lost."
 msgstr "ستاسو ضمیمې به له لاسه ولاړې شي."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "ستاسو د Bluesky مستعار نوم"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "ستاسو معلومات له بیک اپ نه بیرته راوړل کیږي. دا کړکۍ مه تړئ."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "ستاسو د Mastodon سرور"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {আরও #টি ফাইল দেখান�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {মেনু খুলুন (# অপঠিত বিজ্ঞপ্তি)} other {মেনু খুলুন (# অপঠিত বিজ্ঞপ্তি)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> আপনার {1} অ্যাকাউন্টে সাইন ইন করার অনুমতি চাইছে।"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "১২ ঘণ্টা"
@@ -134,6 +140,11 @@ msgstr "১২ ঘণ্টা"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "২৪ ঘণ্টা"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} নামে একটি নতুন ফিড"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "অ্যাক্সেস অস্বীকৃত"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "অ্যাক্সেস লেভেল"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "অ্যাকাউন্ট"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "এই পরিচয় সহ একটি অ্যাকাউন�
 msgid "An error occurred"
 msgstr "একটি ত্রুটি ঘটেছে"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "একটি বিদ্যমান সর্বজনীন ফিড"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "যে কেউ লগ ইন করেছেন"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "এই ফিডে সাবস্ক্রাইব করা সবকিছু এটি পাওয়া বন্ধ করবে। পরে আপনি একটি নতুন URL কপি করতে পারেন।"
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "অনুমোদন করুন"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name}-এর অবতার"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "ফিরে যান"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "প্রাসঙ্গিক তথ্য এবং বিবরণ।"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "চালিয়ে যান"
@@ -745,6 +770,10 @@ msgstr "ক্লিপবোর্ডে কপি করা হয়েছে
 msgid "Copy"
 msgstr "কপি করুন"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "সাইন-ইন অনুমোদন করা যায়নি"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "বাতিল করা যায়নি"
@@ -762,6 +791,11 @@ msgstr "এই ডকুমেন্টটি লোড করা যায়�
 msgid "Could not reactivate your account"
 msgstr "আপনার অ্যাকাউন্ট পুনরায় সক্রিয় করা যায়নি"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "সাইন-ইন প্রত্যাখ্যান করা যায়নি"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "আপনার {initial} এবং {last} লিখুন"
 msgid "Enter your authenticator code"
 msgstr "আপনার প্রমাণীকরণকারী কোড লিখুন"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} দিয়ে সাইন ইন সম্পন্ন করতে আপনার ইমেল ঠিকানা লিখুন।"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "আপনার ইমেইল কোড এবং অথেনটিকেটর কোড লিখুন"
@@ -1249,6 +1288,14 @@ msgstr "পর্যবেক্ষণ আপডেট ব্যর্থ"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "সংযুক্তি আপলোড করতে ব্যর্থ"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "ফিড"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "অবৈধ পুনরুদ্ধার কোড"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "অবৈধ যাচাইকরণ কোড"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "এটি আপনার অ্যাকাউন্ট পড়তে এবং সেই অ্যাকাউন্ট হিসেবে পোস্ট করতে পারবে।"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "এটি আপনার অ্যাকাউন্ট পড়তে পারবে।"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "আপনাকে ড্যাশবোর্ডে রিডাইর�
 msgid "Reduce interest"
 msgstr "আগ্রহ কমান"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "প্রত্যাখ্যান করুন"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total} এর মধ্যে {totalShown} দেখানো হচ্
 msgid "Sidebar"
 msgstr "সাইডবার"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "আপনার অ্যাকাউন্টে সাইন ইন করুন"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "এই রিসোর্সে প্রবেশাধিকার আছে এমন অ্যাকাউন্ট দিয়ে <0/> সাইন ইন করুন।"
@@ -2705,6 +2768,10 @@ msgstr "এই ব্যাকআপ Mochi-এর একটি নতুন স�
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "এটি গেম এবং এর চ্যাট স্থায়ীভাবে মুছে ফেলবে। এটি ফিরিয়ে আনা যাবে না।"
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "এই সাইন-ইন অনুরোধের মেয়াদ শেষ হয়ে গেছে অথবা ইতিমধ্যে উত্তর দেওয়া হয়েছে।"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "আমরা <0>{0}</0> এ একটি যাচাইকরণ কো
 msgid "Wednesday"
 msgstr "বুধবার"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "এই অ্যাপ থেকে করা পোস্টগুলো কোথায় যাবে?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -2963,6 +3034,10 @@ msgstr "Wiki"
 msgid "Wrong passphrase"
 msgstr "ভুল পাসফ্রেজ"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "বছর"
@@ -2970,6 +3045,10 @@ msgstr "বছর"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "এই বিভাগে আপনার অ্যাক্সেস নেই।"
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "এই নেটওয়ার্কে আপনার কোনো অ্যাকাউন্ট নেই। প্রথমে সেটিংসে একটি হ্যান্ডেল রিজার্ভ করুন।"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "আপনার অ্যাকাউন্ট {source} থেকে এ
 msgid "Your attachments will be lost."
 msgstr "আপনার সংযুক্তিগুলি হারিয়ে যাবে।"
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "আপনার Bluesky হ্যান্ডেল"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "আপনার ডেটা ব্যাকআপ থেকে পুনরুদ্ধার করা হচ্ছে। এই উইন্ডোটি বন্ধ করবেন না।"
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "আপনার Mastodon সার্ভার"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

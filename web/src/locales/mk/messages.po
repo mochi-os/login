@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Уште # датотека не е прика�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Отвори мени (# непрочитано известување)} other {Отвори мени (# непрочитани известувања)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> бара да се најави на вашата сметка на мрежата {1}."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 часа"
@@ -134,6 +140,11 @@ msgstr "12 часа"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 часа"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Нов канал со име {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Пристапот е одбиен"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Ниво на пристап"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Сметка"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Сметка со овој идентитет веќе постои ту
 msgid "An error occurred"
 msgstr "Се појави грешка"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Постоечки јавен канал"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Секој што е најавен"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Сè што е претплатено на овој канал ќе престане да го прима. Потоа можете да копирате нов URL."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Одобри"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Аватар за {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Назад"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Контекстуални информации и детали."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Продолжи"
@@ -745,6 +770,10 @@ msgstr "Копирано во клипборд"
 msgid "Copy"
 msgstr "Копирај"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Најавата не можеше да се одобри"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Не може да се откаже"
@@ -762,6 +791,11 @@ msgstr "Овој документ не може да се вчита. Обиди
 msgid "Could not reactivate your account"
 msgstr "Не може повторно да се активира вашата сметка"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Најавата не можеше да се одбие"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Внесете го вашето {initial} и {last}"
 msgid "Enter your authenticator code"
 msgstr "Внесете го кодот од автентикаторот"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Внесете ја вашата адреса за е-пошта за да ја завршите најавата со {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Внесете го кодот од е-поштата и кодот од автентикаторот"
@@ -1249,6 +1288,14 @@ msgstr "Ажурирањето на следењето не успеа"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Неуспешно прикачување на прилог"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Федиверс"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Канал"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Невалиден код за обновување"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Невалиден код за верификација"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Ќе може да ја чита вашата сметка и да објавува во нејзино име."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Ќе може да ја чита вашата сметка."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Се пренасочувате кон таблата…"
 msgid "Reduce interest"
 msgstr "Намали интерес"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Одбиј"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Се прикажуваат {totalShown} од {total}"
 msgid "Sidebar"
 msgstr "Странична лента"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Најавете се на вашата сметка"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Најавете се со сметка што има пристап <0/> до овој ресурс."
@@ -2705,6 +2768,10 @@ msgstr "Оваа резервна копија е создадена од пон
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Ова трајно ќе ја избрише играта и нејзиниот разговор. Ова дејство не може да се врати."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Ова барање за најава истече или веќе е одговорено."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Испративме код за потврда на <0>{0}</0>. Вне�
 msgid "Wednesday"
 msgstr "Среда"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Каде да одат објавите направени од оваа апликација?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Викија"
@@ -2963,6 +3034,10 @@ msgstr "Викија"
 msgid "Wrong passphrase"
 msgstr "Погрешна лозинка"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Година"
@@ -2970,6 +3045,10 @@ msgstr "Година"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Немате пристап до овој дел."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Немате сметка на оваа мрежа. Прво резервирајте корисничко име во Поставки."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Вашиот профил беше преместен овде од {sou
 msgid "Your attachments will be lost."
 msgstr "Вашите прилози ќе бидат изгубени."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Вашето корисничко име на Bluesky"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Вашите податоци се враќаат од резервната копија. Не го затворајте ова прозорче."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Вашиот Mastodon сервер"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

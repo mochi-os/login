@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# fil till visas inte} other {# filer till visa
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Öppna meny (# oläst avisering)} other {Öppna meny (# olästa aviseringar)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> ber om att logga in på ditt {1}-konto."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 timmar"
@@ -134,6 +140,11 @@ msgstr "12 timmar"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 timmar"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Ett nytt flöde med namnet {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Åtkomst nekad"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Åtkomstnivå"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Konto"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Ett konto med den här identiteten finns redan här."
 msgid "An error occurred"
 msgstr "Ett fel uppstod"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Ett befintligt offentligt flöde"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Alla som är inloggade"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Allt som prenumererar på det här flödet slutar ta emot det. Du kan kopiera en ny webbadress efteråt."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Godkänn"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Avatar för {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Tillbaka"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Kontextuell information och detaljer."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Fortsätt"
@@ -745,6 +770,10 @@ msgstr "Kopierat till urklipp"
 msgid "Copy"
 msgstr "Kopiera"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Kunde inte godkänna inloggningen"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Kunde inte avbryta"
@@ -762,6 +791,11 @@ msgstr "Kunde inte ladda detta dokument. Försök igen senare."
 msgid "Could not reactivate your account"
 msgstr "Det gick inte att återaktivera ditt konto"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Kunde inte neka inloggningen"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Ange din {initial} och {last}"
 msgid "Enter your authenticator code"
 msgstr "Ange din autentiseringskod"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Ange din e-postadress för att slutföra inloggningen med {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Ange din e-postkod och autentiserarkod"
@@ -1249,6 +1288,14 @@ msgstr "Kunde inte uppdatera bevakning"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Kunde inte ladda upp bilaga"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediversum"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Flöde"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Ogiltig återställningskod"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Ogiltig verifieringskod"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Den får läsa ditt konto och publicera som det."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Den får läsa ditt konto."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Omdirigerar dig till instrumentpanelen…"
 msgid "Reduce interest"
 msgstr "Minska intresse"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Neka"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Visar {totalShown} av {total}"
 msgid "Sidebar"
 msgstr "Sidofält"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Logga in på ditt konto"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Logga in med ett konto som har åtkomst <0/> till den här resursen."
@@ -2705,6 +2768,10 @@ msgstr "Den här säkerhetskopian skapades av en nyare version av Mochi. Uppdate
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Detta tar bort partiet och dess chatt permanent. Detta går inte att ångra."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Den här inloggningsbegäran har gått ut eller har redan besvarats."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Vi skickade en verifieringskod till <0>{0}</0>. Ange koden nedan för at
 msgid "Wednesday"
 msgstr "Onsdag"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Vart ska inlägg som görs från den här appen gå?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikier"
@@ -2963,6 +3034,10 @@ msgstr "Wikier"
 msgid "Wrong passphrase"
 msgstr "Fel lösenfras"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "År"
@@ -2970,6 +3045,10 @@ msgstr "År"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Du har inte åtkomst till det här avsnittet."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Du har inget konto i det här nätverket. Reservera först ett alias i Inställningar."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Ditt konto flyttades hit från {source}. Tills du tar bort det där kan 
 msgid "Your attachments will be lost."
 msgstr "Dina bilagor går förlorade."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Ditt Bluesky-alias"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Dina data återställs från säkerhetskopian. Stäng inte det här fönstret."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Din Mastodon-server"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

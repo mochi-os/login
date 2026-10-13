@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# pelê din nehat nîşandan} other {# pelên d
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Pêşek veke (# agahdariya nexwendî)} other {Pêşek veke (# agahdariyên nexwendî)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> dixwaze têkeve hesabê te yê {1}."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 saet"
@@ -134,6 +140,11 @@ msgstr "12 saet"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 saet"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Feedek nû bi navê {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Gihîştin hat redkirin"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Asta gihîştinê"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Hesab"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Hesabek bi vê nasnameyê jixwe li vir heye."
 msgid "An error occurred"
 msgstr "Çewtiyek çêbû"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Feedeke giştî ya heyî"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Her kesê ku têketiye"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Her tiştê ku li vê feedê abone ye dê wergirtinê rawestîne. Piştre tu dikarî URLyeke nû jiber bigirî."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Erê bike"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Avatar ji bo {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Vegere"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Agahî û hûragahiyên kontekstê."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Berdewam bike"
@@ -745,6 +770,10 @@ msgstr "Hat kopîkirin li clipboard"
 msgid "Copy"
 msgstr "Kopî bike"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Têketin nehat pejirandin"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Nikarîbû betal bibe"
@@ -762,6 +791,11 @@ msgstr "Ev belge nikarîbû were barkirin. Ji kerema xwe re paşê dîsa bicerib
 msgid "Could not reactivate your account"
 msgstr "Hesabê we ji nû ve nehat çalakkirin"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Têketin nehat redkirin"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "{initial} û {last} ya xwe binivîse"
 msgid "Enter your authenticator code"
 msgstr "Koda authenticator-a xwe têkevê"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Ji bo ku têketina bi {0} temam bikî, navnîşana e-nameya xwe binivîse."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Koda e-nameyê û koda rastandinê binivîse"
@@ -1249,6 +1288,14 @@ msgstr "Nûvekirina şopandinê bi ser neket"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Barkirina pêvekê neserkeftî bû"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Feed"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Koda vegerandinê nederbasdar"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Koda rastandinê nederbasdar"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Ew dikare hesabê te bixwîne û bi navê wî biweşîne."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Ew dikare hesabê te bixwîne."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Em te ber bi dashboardê ve beralî dikin…"
 msgid "Reduce interest"
 msgstr "Balkêşî kêm bike"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Red bike"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Nîşandana {totalShown} ji {total}"
 msgid "Sidebar"
 msgstr "Milê alî"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Têkeve hesabê xwe"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Bi hesabekî ku xwedî gihîştina vê çavkaniyê ye <0/> têkeve."
@@ -2705,6 +2768,10 @@ msgstr "Ev piştgirî ji hêla guhertoya nûtir a Mochi ve hatiye çêkirin. Pê
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Ev ê lîstik û sohbeta wê bi awayekî domdar jê bibe. Ev kirin nayê vegerandin."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Dema vê daxwaza têketinê derbas bûye an jî berê bersiv hatiye dayîn."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Me kodek pejirandinê şand bo <0>{0}</0>. Ji bo pejirandina navnîşana
 msgid "Wednesday"
 msgstr "Çarşem"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Postên ku ji vê sepanê têne çêkirin divê biçin ku derê?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -2963,6 +3034,10 @@ msgstr "Wiki"
 msgid "Wrong passphrase"
 msgstr "Pêvajo xelet e"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Sal"
@@ -2970,6 +3045,10 @@ msgstr "Sal"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Destûra te ya gihîştina vê beşê tune ye."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Hesabê te li ser vê torê tune ye. Pêşî di Mîhengan de navekî bikarhêner rezerve bike."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Hesabê we ji {source} hat vir veguheztin. Heya ku hûn wê li wir jêne
 msgid "Your attachments will be lost."
 msgstr "Pêvekên te wê winda bibin."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Navê bikarhêner ê te yê Bluesky"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Daneyên we ji piştgirîyê têne vegerandin. Vê pencereyê negirin."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Servera te ya Mastodon"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

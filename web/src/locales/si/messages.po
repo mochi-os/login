@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {තවත් ගොනු # ක් නොපෙ
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {මෙනුව විවෘත කරන්න (කියවා නැති දැනුම්දීම් #)} other {මෙනුව විවෘත කරන්න (කියවා නැති දැනුම්දීම් #)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> ඔබගේ {1} ගිණුමට පුරනය වීමට ඉල්ලා සිටී."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "පැය 12"
@@ -134,6 +140,11 @@ msgstr "පැය 12"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "පැය 24"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} නමින් නව සංග්‍රහයක්"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "ප්‍රවේශය ප්‍රතික්ෂේප විය"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "ප්‍රවේශ මට්ටම"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "ගිණුම"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "මෙම හැඳුනුම්පතකින් ගිණුමක�
 msgid "An error occurred"
 msgstr "දෝෂයක් සිදු විය"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "පවතින ප්‍රසිද්ධ සංග්‍රහයක්"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "පිවිසී සිටින ඕනෑම කෙනෙක්"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "මෙම සංග්‍රහයට දායක වූ සියල්ල එය ලැබීම නවත්වනු ඇත. පසුව ඔබට නව URL එකක් පිටපත් කළ හැකිය."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "අනුමත කරන්න"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} සඳහා අවතාරය"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "ආපසු"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "සන්දර්භීය තොරතුරු සහ විස්තර."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "ඉදිරියට"
@@ -745,6 +770,10 @@ msgstr "ක්ලිප්බෝඩ් වෙත පිටපත් කරන �
 msgid "Copy"
 msgstr "පිටපත් කරන්න"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "පුරනය වීම අනුමත කළ නොහැකි විය"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "අවලංගු කළ නොහැකි විය"
@@ -762,6 +791,11 @@ msgstr "මෙම ලේඛනය පූරණය කළ නොහැකි ව�
 msgid "Could not reactivate your account"
 msgstr "ඔබේ ගිණුම නැවත සක්‍රිය කිරීමට නොහැකි විය"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "පුරනය වීම ප්‍රතික්ෂේප කළ නොහැකි විය"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "ඔබේ {initial} සහ {last} ඇතුළත් කරන්න"
 msgid "Enter your authenticator code"
 msgstr "ඔබගේ සත්‍යාපන කේතය ඇතුළත් කරන්න"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} සමඟ පුරනය වීම අවසන් කිරීමට ඔබගේ ඊමේල් ලිපිනය ඇතුළු කරන්න."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "ඔබේ ඊමේල් කේතය සහ සත්‍යාපක කේතය ඇතුළු කරන්න"
@@ -1249,6 +1288,14 @@ msgstr "නිරීක්ෂණය යාවත්කාලීන කිරී�
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "ඇමුණුම උඩුගත කිරීමට අසමත් විය"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "සංග්‍රහය"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "අවලංගු ප්‍රතිසාධන කේතය"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "අවලංගු සත්‍යාපන කේතය"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "එයට ඔබගේ ගිණුම කියවීමට සහ එහි නමින් පළ කිරීමට හැකිය."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "එයට ඔබගේ ගිණුම කියවීමට හැකිය."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "ඔබව උපකරණ පුවරුවට යොමු කරම�
 msgid "Reduce interest"
 msgstr "උනන්දුව අඩු කරන්න"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "ප්‍රතික්ෂේප කරන්න"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total}න් {totalShown}ක් පෙන්වමින්"
 msgid "Sidebar"
 msgstr "පැති තීරුව"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "ඔබගේ ගිණුමට පුරනය වන්න"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "මෙම සම්පතට <0/> ප්‍රවේශය ඇති ගිණුමකින් පිවිසෙන්න."
@@ -2705,6 +2768,10 @@ msgstr "මෙම උපස්ථය Mochi හි නව අනුවාදය�
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "මෙය ක්‍රීඩාව සහ එහි කතාබස් ස්ථිරවම මකා දමයි. මෙම ක්‍රියාව අහෝසි කළ නොහැක."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "මෙම පුරනය වීමේ ඉල්ලීම කල් ඉකුත් වී ඇත හෝ දැනටමත් පිළිතුරු දී ඇත."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "අපි <0>{0}</0> වෙත සත්‍යාපන කේතයක�
 msgid "Wednesday"
 msgstr "බදාදා"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "මෙම යෙදුමෙන් සාදන පළ කිරීම් කොතැනට යා යුතුද?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "විකි"
@@ -2963,6 +3034,10 @@ msgstr "විකි"
 msgid "Wrong passphrase"
 msgstr "වැරදි රහස් ශ්‍රේණිය"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "වර්ෂය"
@@ -2970,6 +3045,10 @@ msgstr "වර්ෂය"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "ඔබට මෙම කොටසට ප්‍රවේශය නොමැත."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "ඔබට මෙම ජාලයේ ගිණුමක් නැත. පළමුව සැකසුම් තුළ අන්වර්ථ නාමයක් වෙන් කරන්න."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "ඔබේ ගිණුම {source} සිට මෙහි ගෙන ආ�
 msgid "Your attachments will be lost."
 msgstr "ඔබගේ ඇමුණුම් නැති වනු ඇත."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "ඔබගේ Bluesky අන්වර්ථ නාමය"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "ඔබේ දත්ත උපස්ථයෙන් ප්‍රතිසාධනය කරමින් පවතී. මෙම කවුළුව වසා නොදමන්න."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "ඔබගේ Mastodon සේවාදායකය"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

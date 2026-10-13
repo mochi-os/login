@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Dar # failas nerodomas} few {Dar # failai nerod
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Atidaryti meniu (# neperskaitytas pranešimas)} few {Atidaryti meniu (# neperskaityti pranešimai)} many {Atidaryti meniu (# neperskaityto pranešimo)} other {Atidaryti meniu (# neperskaitytų pranešimų)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> prašo prisijungti prie jūsų {1} paskyros."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 valandų"
@@ -134,6 +140,11 @@ msgstr "12 valandų"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 valandos"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Naujas srautas pavadinimu {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Prieiga atmesta"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Prieigos lygis"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Paskyra"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Čia jau egzistuoja paskyra su šia tapatybe."
 msgid "An error occurred"
 msgstr "Įvyko klaida"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Esamas viešas srautas"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Bet kas, kas prisijungęs"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Viskas, kas prenumeruoja šį srautą, nustos jį gauti. Vėliau galėsite nukopijuoti naują URL."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Patvirtinti"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} avataras"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Atgal"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Kontekstinė informacija ir detalės."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Tęsti"
@@ -745,6 +770,10 @@ msgstr "Nukopijuota į iškarpinę"
 msgid "Copy"
 msgstr "Kopijuoti"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Nepavyko patvirtinti prisijungimo"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Nepavyko atšaukti"
@@ -762,6 +791,11 @@ msgstr "Nepavyko įkelti šio dokumento. Pabandykite dar kartą vėliau."
 msgid "Could not reactivate your account"
 msgstr "Nepavyko vėl suaktyvinti jūsų paskyros"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Nepavyko atmesti prisijungimo"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Įveskite savo {initial} ir {last}"
 msgid "Enter your authenticator code"
 msgstr "Įveskite autentifikatoriaus kodą"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Įveskite savo el. pašto adresą, kad baigtumėte prisijungimą per {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Įveskite el. pašto kodą ir autentifikatoriaus kodą"
@@ -1249,6 +1288,14 @@ msgstr "Nepavyko atnaujinti stebėjimo"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Nepavyko įkelti priedo"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Srautas"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Netinkamas atkūrimo kodas"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Netinkamas patvirtinimo kodas"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Ji galės skaityti jūsų paskyrą ir skelbti jos vardu."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Ji galės skaityti jūsų paskyrą."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Peradresuojama į skydelį…"
 msgid "Reduce interest"
 msgstr "Sumažinti susidomėjimą"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Atmesti"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Rodoma {totalShown} iš {total}"
 msgid "Sidebar"
 msgstr "Šoninė juosta"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Prisijunkite prie savo paskyros"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Prisijunkite su paskyra, kuri turi prieigą <0/> prie šio ištekliaus."
@@ -2705,6 +2768,10 @@ msgstr "Ši atsarginė kopija buvo sukurta naujesnės Mochi versijos. Pirmiausia
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Tai visam laikui ištrins žaidimą ir jo pokalbį. Šio veiksmo negalima anuliuoti."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Ši prisijungimo užklausa nebegalioja arba į ją jau atsakyta."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Išsiuntėme patvirtinimo kodą adresu <0>{0}</0>. Įveskite kodą žemi
 msgid "Wednesday"
 msgstr "Trečiadienis"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Kur turėtų būti skelbiami šioje programėlėje sukurti įrašai?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Vikiai"
@@ -2963,6 +3034,10 @@ msgstr "Vikiai"
 msgid "Wrong passphrase"
 msgstr "Neteisinga slaptafrazė"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Metai"
@@ -2970,6 +3045,10 @@ msgstr "Metai"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Neturite prieigos prie šios skilties."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Šiame tinkle neturite paskyros. Pirmiausia rezervuokite vartotojo vardą nustatymuose."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Jūsų paskyra buvo perkelta čia iš {source}. Kol jos ten neištrinate
 msgid "Your attachments will be lost."
 msgstr "Jūsų priedai bus prarasti."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Jūsų Bluesky vartotojo vardas"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Jūsų duomenys atkuriami iš atsarginės kopijos. Neuždarykite šio lango."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Jūsų Mastodon serveris"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# berkas deui teu ditampilkeun} other {# berkas
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Buka menu (# wawaran anu can dibaca)} other {Buka menu (# wawaran anu can dibaca)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> ménta asup ka akun {1} anjeun."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 jam"
@@ -134,6 +140,11 @@ msgstr "12 jam"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 jam"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Feed anyar nu ngaranna {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Aksés ditolak"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Tingkat aksés"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Akun"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Akun jeung identitas ieu tos aya di dieu."
 msgid "An error occurred"
 msgstr "Aya kasalahan"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Feed publik nu geus aya"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Saha waé anu asup"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Sagala nu ngalanggan feed ieu bakal eureun narima. Anjeun bisa nyalin URL anyar sanggeusna."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Satujuan"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Avatar pikeun {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Tukang"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Inpormasi konteks jeung détil."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Teruskeun"
@@ -745,6 +770,10 @@ msgstr "Disalin ka clipboard"
 msgid "Copy"
 msgstr "Salin"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Teu bisa nyatujuan asup"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Teu bisa dibatalkeun"
@@ -762,6 +791,11 @@ msgstr "Teu bisa ngamuat dokumén ieu. Mangga cobian deui engké."
 msgid "Could not reactivate your account"
 msgstr "Teu tiasa ngaaktipkeun deui akun anjeun"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Teu bisa nolak asup"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Asupkeun {initial} jeung {last} anjeun"
 msgid "Enter your authenticator code"
 msgstr "Lebetkeun kode aplikasi pamariksa"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Lebetkeun alamat surélék anjeun pikeun ngaréngsékeun asup ku {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Asupkeun kode surélék jeung kode authenticator anjeun"
@@ -1249,6 +1288,14 @@ msgstr "Gagal ngapdet pangawasan"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Gagal ngunggah lampiran"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Feed"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Kode pamulihan teu sah"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Kode vérifikasi teu sah"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Éta bisa maca akun anjeun jeung ngirim pos atas nama akun éta."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Éta bisa maca akun anjeun."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Ngalihkeun anjeun ka dashboard…"
 msgid "Reduce interest"
 msgstr "Kurangan minat"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Tolak"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Némbongkeun {totalShown} ti {total}"
 msgid "Sidebar"
 msgstr "Bar sisi"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Asup ka akun anjeun"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Asup ku akun anu boga aksés <0/> ka sumber daya ieu."
@@ -2705,6 +2768,10 @@ msgstr "Cadangan ieu dijieun ku versi Mochi nu langkung anyar. Apdet server ieu 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Ieu bakal ngahapus kaulinan sareng obrolanana sacara permanén. Tindakan ieu teu tiasa dibatalkeun."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Pamundut asup ieu geus kadaluwarsa atawa geus diwaler."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Kami ngirim kode verifikasi ka <0>{0}</0>. Lebetkeun kode di handap pike
 msgid "Wednesday"
 msgstr "Rebo"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Pos nu dijieun tina aplikasi ieu kudu ka mana?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -2963,6 +3034,10 @@ msgstr "Wiki"
 msgid "Wrong passphrase"
 msgstr "Frasa sandi salah"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Taun"
@@ -2970,6 +3045,10 @@ msgstr "Taun"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Anjeun teu gaduh aksés kana bagian ieu."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Anjeun teu boga akun di jaringan ieu. Pesen heula landihan di Setélan."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Akun anjeun dipindahkeun ka dieu ti {source}. Dugi ka anjeun mupus éta 
 msgid "Your attachments will be lost."
 msgstr "Lampiran anjeun bakal leungit."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Landihan Bluesky anjeun"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Data anjeun keur dipulihkeun tina cadangan. Ulah nutup jandela ieu."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Server Mastodon anjeun"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# ተጨማሪ ፋይል አልታየም} other
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {ምናሌን ክፈት (# ያልተነበበ ማሳወቂያ)} other {ምናሌን ክፈት (# ያልተነበቡ ማሳወቂያዎች)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> ወደ {1} መለያዎ ለመግባት ይጠይቃል።"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ሰዓት"
@@ -134,6 +140,11 @@ msgstr "12 ሰዓት"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 ሰዓት"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} የተባለ አዲስ ፊድ"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "መዳረሻ ተከልክሏል"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "የመዳረሻ ደረጃ"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "መለያ"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "በዚህ ማንነት የተፈጠረ መለያ አስቀድሞ እዚ�
 msgid "An error occurred"
 msgstr "ስህተት ተከስቷል"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "አሁን ያለ ሕዝባዊ ፊድ"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "የገባ ማንኛውም ሰው"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "በዚህ ፊድ የተመዘገበ ማንኛውም ነገር መቀበሉን ያቆማል። ከዚያ በኋላ አዲስ URL መቅዳት ይችላሉ።"
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "አጽድቅ"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "የ{name} አምሳያ"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "ተመለስ"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "የአውድ መረጃና ዝርዝሮች።"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "ቀጥል"
@@ -745,6 +770,10 @@ msgstr "ወደ ቅንጥብ ሰሌዳ ተቀድቷል"
 msgid "Copy"
 msgstr "ቅዳ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "መግቢያውን ማጽደቅ አልተቻለም"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "ሊሰረዝ አልቻለም"
@@ -762,6 +791,11 @@ msgstr "ይህን ሰነድ መጫን አልተቻለም። እባክዎ በኋ�
 msgid "Could not reactivate your account"
 msgstr "መለያዎን እንደገና ማንቃት አልተቻለም"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "መግቢያውን አለመቀበል አልተቻለም"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "የእርስዎን {initial} እና {last} ያስገቡ"
 msgid "Enter your authenticator code"
 msgstr "የአረጋጋጭዎን ኮድ ያስገቡ"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "በ{0} መግባትን ለማጠናቀቅ የኢሜይል አድራሻዎን ያስገቡ።"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "የኢሜይል ኮድዎን እና የአረጋጋጭ ኮድዎን ያስገቡ"
@@ -1249,6 +1288,14 @@ msgstr "መከታተልን ማዘመን አልተሳካም"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "አባሪ መስቀል አልተሳካም"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "ፊድ"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "ልክ ያልሆነ የመልሶ ማግኛ ኮድ"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "ልክ ያልሆነ የማረጋገጫ ኮድ"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "መለያዎን ማንበብ እና በመለያው ስም መለጠፍ ይችላል።"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "መለያዎን ማንበብ ይችላል።"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "ወደ ዳሽቦርድ በማዞር ላይ…"
 msgid "Reduce interest"
 msgstr "ፍላጎትን ቀንስ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "እምቢ በል"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "ከ{total} ውስጥ {totalShown} እያሳየ"
 msgid "Sidebar"
 msgstr "የጎን አሞሌ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "ወደ መለያዎ ይግቡ"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "ወደዚህ መርጃ መዳረሻ ባለው <0/> መለያ ይግቡ።"
@@ -2705,6 +2768,10 @@ msgstr "ይህ ምትኬ በ Mochi አዲስ ስሪት የተፈጠረ ነው።
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ይህ ጨዋታውን እና ውይይቱን በቋሚነት ይሰርዛል። ይህ ወደኋላ ሊመለስ አይችልም።"
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "ይህ የመግቢያ ጥያቄ ጊዜው አልፎበታል ወይም አስቀድሞ ምላሽ ተሰጥቶታል።"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "የማረጋገጫ ኮድ ወደ <0>{0}</0> ልከናል። የኢሜይ
 msgid "Wednesday"
 msgstr "ረቡዕ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "ከዚህ መተግበሪያ የሚለጠፉ ልጥፎች ወዴት ይሂዱ?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "ዊኪዎች"
@@ -2963,6 +3034,10 @@ msgstr "ዊኪዎች"
 msgid "Wrong passphrase"
 msgstr "የይለፍ ሐረጉ ስህተት ነው"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "ዓመት"
@@ -2970,6 +3045,10 @@ msgstr "ዓመት"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "የዚህ ክፍል መዳረሻ የለዎትም።"
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "በዚህ አውታረ መረብ ላይ መለያ የለዎትም። መጀመሪያ በቅንብሮች ውስጥ የተጠቃሚ ስም ይያዙ።"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "መለያህ ከ{source} ወደዚህ ተዛውሯል። እዚያ እ�
 msgid "Your attachments will be lost."
 msgstr "አባሪዎችህ ይጠፋሉ።"
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "የእርስዎ Bluesky የተጠቃሚ ስም"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "ውሂብዎ ከምትኬ እየተመለሰ ነው። ይህን መስኮት አይዝጉ።"
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "የእርስዎ Mastodon አገልጋይ"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

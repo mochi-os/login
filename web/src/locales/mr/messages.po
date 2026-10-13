@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {आणखी # फाइल दाखवली 
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {मेनू उघडा (# न वाचलेली सूचना)} other {मेनू उघडा (# न वाचलेल्या सूचना)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> तुमच्या {1} खात्यात साइन इन करण्याची परवानगी मागत आहे."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 तास"
@@ -134,6 +140,11 @@ msgstr "12 तास"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 तास"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} नावाचे नवीन फीड"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "प्रवेश नाकारला"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "प्रवेश स्तर"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "खाते"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "या ओळखीसह खाते आधीच येथे अस�
 msgid "An error occurred"
 msgstr "त्रुटी आली"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "विद्यमान सार्वजनिक फीड"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "लॉग इन असलेले कोणीही"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "या फीडची सदस्यता घेतलेले सर्व काही ते मिळणे थांबवेल. नंतर तुम्ही नवीन URL कॉपी करू शकता."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "मंजूर करा"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} साठी अवतार"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "मागे"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "संदर्भात्मक माहिती आणि तपशील."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "सुरू ठेवा"
@@ -745,6 +770,10 @@ msgstr "क्लिपबोर्डवर कॉपी केले"
 msgid "Copy"
 msgstr "कॉपी करा"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "साइन-इन मंजूर करता आले नाही"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "रद्द करता आले नाही"
@@ -762,6 +791,11 @@ msgstr "हा दस्तऐवज लोड करता आला नाह�
 msgid "Could not reactivate your account"
 msgstr "तुमचे खाते पुन्हा सक्रिय करता आले नाही"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "साइन-इन नाकारता आले नाही"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "तुमचा {initial} आणि {last} एंटर करा"
 msgid "Enter your authenticator code"
 msgstr "तुमचा ऑथेंटिकेटर कोड टाका"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} सह साइन इन पूर्ण करण्यासाठी तुमचा ईमेल पत्ता प्रविष्ट करा."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "तुमचा ईमेल कोड आणि ऑथेंटिकेटर कोड टाका"
@@ -1249,6 +1288,14 @@ msgstr "निरीक्षण अद्ययावत करण्यात 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "संलग्नक अपलोड करण्यात अयशस्वी"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "फीड"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "अवैध रिकव्हरी कोड"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "अवैध पडताळणी कोड"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "ते तुमचे खाते वाचू शकते आणि त्याच्या नावाने पोस्ट करू शकते."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "ते तुमचे खाते वाचू शकते."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "तुम्हाला डॅशबोर्डवर रीडाय�
 msgid "Reduce interest"
 msgstr "स्वारस्य कमी करा"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "नाकारा"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total} पैकी {totalShown} दर्शवत आहे"
 msgid "Sidebar"
 msgstr "साइडबार"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "तुमच्या खात्यात साइन इन करा"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "या संसाधनात प्रवेश असलेल्या खात्याने <0/> साइन इन करा."
@@ -2705,6 +2768,10 @@ msgstr "हा बॅकअप Mochi च्या नवीन आवृत्�
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "यामुळे गेम आणि त्याचे चॅट कायमचे हटवले जाईल. ही क्रिया पूर्ववत केली जाऊ शकत नाही."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "या साइन-इन विनंतीची मुदत संपली आहे किंवा तिला आधीच उत्तर दिले गेले आहे."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "आम्ही <0>{0}</0> वर एक पडताळणी कोड
 msgid "Wednesday"
 msgstr "बुधवार"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "या अॅपमधून केलेल्या पोस्ट्स कुठे जाव्यात?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "विकीज"
@@ -2963,6 +3034,10 @@ msgstr "विकीज"
 msgid "Wrong passphrase"
 msgstr "चुकीचा पासफ्रेज"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "वर्ष"
@@ -2970,6 +3045,10 @@ msgstr "वर्ष"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "तुम्हाला या विभागात प्रवेश नाही."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "या नेटवर्कवर तुमचे खाते नाही. आधी सेटिंग्जमध्ये वापरकर्तानाव राखीव करा."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "तुमचे खाते {source} वरून येथे हल�
 msgid "Your attachments will be lost."
 msgstr "तुमची संलग्नके गमावली जातील."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "तुमचे Bluesky वापरकर्तानाव"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "बॅकअपमधून डेटा पुनर्संचयित केला जात आहे. हे विंडो बंद करू नका."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "तुमचा Mastodon सर्व्हर"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

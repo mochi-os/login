@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {另有 # 個檔案未顯示} other {另有 # �
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {開啟選單（# 則未讀通知）} other {開啟選單（# 則未讀通知）}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> 請求登入您的 {1} 帳戶。"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 小時"
@@ -134,6 +140,11 @@ msgstr "12 小時"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 小時"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "名為 {0} 的新資訊流"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "拒絕存取"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "存取層級"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "帳戶"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "此處已存在具有此身份的帳號。"
 msgid "An error occurred"
 msgstr "發生錯誤"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "現有的公開資訊流"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "任何已登入的人"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "任何訂閱此訂閱源的程式都將無法再接收更新。之後你可以複製新的網址。"
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "核准"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} 的頭像"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "返回"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "情境資訊與詳細資料。"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "繼續"
@@ -745,6 +770,10 @@ msgstr "已複製到剪貼簿"
 msgid "Copy"
 msgstr "複製"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "無法核准此次登入"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "無法取消"
@@ -762,6 +791,11 @@ msgstr "無法載入此文件,請稍後再試。"
 msgid "Could not reactivate your account"
 msgstr "無法重新啟用你的帳戶"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "無法拒絕此次登入"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "輸入您的 {initial} 與 {last}"
 msgid "Enter your authenticator code"
 msgstr "請輸入您的驗證器代碼"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "請輸入您的電子郵件地址，以完成透過 {0} 登入。"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "請輸入電子郵件代碼與驗證器代碼"
@@ -1249,6 +1288,14 @@ msgstr "更新關注失敗"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "上傳附件失敗"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "聯邦宇宙"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "資訊流"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "無效的還原代碼"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "無效的驗證碼"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "它可以讀取您的帳戶，並以該帳戶的身分發文。"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "它可以讀取您的帳戶。"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "正在重新導向至儀表板…"
 msgid "Reduce interest"
 msgstr "降低興趣"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "拒絕"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "顯示 {totalShown} / {total}"
 msgid "Sidebar"
 msgstr "側邊欄"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "登入您的帳戶"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "請使用有權存取 <0/> 此資源的帳戶登入。"
@@ -2705,6 +2768,10 @@ msgstr "此備份由較新版本的 Mochi 建立。請先更新此伺服器。"
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "此操作將永久刪除對局及其聊天記錄，且無法復原。"
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "此登入請求已過期或已被處理。"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "我們已將驗證碼傳送至 <0>{0}</0>。請在下方輸入驗證碼�
 msgid "Wednesday"
 msgstr "星期三"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "從此應用程式發布的貼文應發到哪裡？"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -2963,6 +3034,10 @@ msgstr "Wiki"
 msgid "Wrong passphrase"
 msgstr "密語錯誤"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "年"
@@ -2970,6 +3045,10 @@ msgstr "年"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "您沒有存取此區段的權限。"
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "您在此網路上沒有帳戶。請先在設定中保留一個帳號代碼。"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "您的帳號已從 {source} 遷移至此。在您於該處刪除帳號�
 msgid "Your attachments will be lost."
 msgstr "您的附件將遺失。"
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "您的 Bluesky 帳號代碼"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "正在從備份還原您的資料。請勿關閉此視窗。"
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "您的 Mastodon 伺服器"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

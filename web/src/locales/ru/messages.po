@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Ещё # файл не показан} few {Е�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Открыть меню (# непрочитанное уведомление)} few {Открыть меню (# непрочитанных уведомления)} many {Открыть меню (# непрочитанных уведомлений)} other {Открыть меню (# непрочитанного уведомления)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> просит разрешения войти в ваш аккаунт {1}."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 часов"
@@ -134,6 +140,11 @@ msgstr "12 часов"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 часа"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Новая лента с названием {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Доступ запрещён"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Уровень доступа"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Аккаунт"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Аккаунт с этой учётной записью уже суще
 msgid "An error occurred"
 msgstr "Произошла ошибка"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Существующая публичная лента"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Любой вошедший в систему"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Всё, что подписано на эту ленту, перестанет её получать. После этого вы сможете скопировать новый URL."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Одобрить"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Аватар для {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Назад"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Контекстная информация и подробности."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Продолжить"
@@ -745,6 +770,10 @@ msgstr "Скопировано в буфер обмена"
 msgid "Copy"
 msgstr "Копировать"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Не удалось одобрить вход"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Не удалось отменить"
@@ -762,6 +791,11 @@ msgstr "Не удалось загрузить этот документ. Пож
 msgid "Could not reactivate your account"
 msgstr "Не удалось повторно активировать ваш аккаунт"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Не удалось отклонить вход"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Введите ваш {initial} и {last}"
 msgid "Enter your authenticator code"
 msgstr "Введите код из приложения-аутентификатора"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Введите адрес электронной почты, чтобы завершить вход через {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Введите код из электронной почты и код аутентификатора"
@@ -1249,6 +1288,14 @@ msgstr "Не удалось обновить отслеживание"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Не удалось загрузить вложение"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Федиверс"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Лента"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Недопустимый код восстановления"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Недопустимый код подтверждения"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Сможет читать ваш аккаунт и публиковать от его имени."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Сможет читать ваш аккаунт."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Перенаправление на панель управления…
 msgid "Reduce interest"
 msgstr "Снизить интерес"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Отказать"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Показано {totalShown} из {total}"
 msgid "Sidebar"
 msgstr "Боковая панель"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Войдите в свой аккаунт"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Войдите в учётную запись, у которой есть доступ <0/> к этому ресурсу."
@@ -2705,6 +2768,10 @@ msgstr "Этот резервный файл был создан более но
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Это навсегда удалит игру и её чат. Это действие нельзя отменить."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Этот запрос на вход истёк или на него уже ответили."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Мы отправили код подтверждения на <0>{0}</0
 msgid "Wednesday"
 msgstr "Среда"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Куда отправлять публикации, сделанные из этого приложения?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Вики"
@@ -2963,6 +3034,10 @@ msgstr "Вики"
 msgid "Wrong passphrase"
 msgstr "Неверная кодовая фраза"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Год"
@@ -2970,6 +3045,10 @@ msgstr "Год"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "У вас нет доступа к этому разделу."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "У вас нет аккаунта в этой сети. Сначала зарезервируйте псевдоним в настройках."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Ваш аккаунт был перенесён сюда с {source}. П
 msgid "Your attachments will be lost."
 msgstr "Ваши вложения будут потеряны."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Ваш псевдоним Bluesky"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Ваши данные восстанавливаются из резервной копии. Не закрывайте это окно."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Ваш сервер Mastodon"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {נאָך # טעקע ניט געוויזן} othe
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {עפֿנט מעניו (# אומגעלײענטע מעלדונג)} other {עפֿנט מעניו (# אומגעלײענטע מעלדונגען)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> בעט זיך אַרײַנמעלדן אין אײַער {1} קאָנטע."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 שעה"
@@ -134,6 +140,11 @@ msgstr "12 שעה"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 שעה"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "אַ נײַער פֿיד מיטן נאָמען {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "צוטריט אָפּגעזאָגט"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "צוטריט שטאַפּל"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "קאָנטע"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "אַ קאָנטע מיט אָט דער אידענטיטעט עקזיסט
 msgid "An error occurred"
 msgstr "אַ פֿעלער איז פֿאָרגעקומען"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "אַן עקזיסטירנדיקער עפֿנטלעכער פֿיד"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "װער עס איז אײַנגעלאָגט"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "אַלץ וואָס איז אַבאָנירט אויף דעם פֿיד וועט אויפֿהערן עס צו באַקומען. איר קענט קאָפּירן אַ נייַעם URL דערנאָך."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "באַשטעטיקן"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "אַװאַטאַר פֿאַר {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "צוריק"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "קאָנטעקסטועלע אינפֿאָרמאַציע און פּרטים."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "ממשיך"
@@ -745,6 +770,10 @@ msgstr "קאָפּירט צו קליפּברעט"
 msgid "Copy"
 msgstr "קאָפּירן"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "האָט נישט געקאָנט באַשטעטיקן דאָס אַרײַנמעלדן"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "האָט נישט געקאָנט אָפּזאָגן"
@@ -762,6 +791,11 @@ msgstr "האָט נישט געקאָנט לאָדן דעם דאָקומענט. �
 msgid "Could not reactivate your account"
 msgstr "מע האָט נישט געקענט ווידער אַקטיווירן אײַער קאָנטע"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "האָט נישט געקאָנט אָפּוואַרפֿן דאָס אַרײַנמעלדן"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "גיט אַרײַן אײַער {initial} און {last}"
 msgid "Enter your authenticator code"
 msgstr "גיט אַרײַן אײַער אויטענטיפֿיקאַטאָר־קאָד"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "שרײַבט אַרײַן אײַער בליצפּאָסט אַדרעס כּדי צו פֿאַרענדיקן דאָס אַרײַנמעלדן מיט {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "גיט אַרײַן אײַער בליצפּאָסט־קאָד און אויטענטיפֿיקאַטאָר־קאָד"
@@ -1249,6 +1288,14 @@ msgstr "דורכפֿאַל צו דערהײַנטיקן אָבסערוואַצי�
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "ניט געלונגען אַרויפֿצולאָדן בײַלאַגע"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "פֿיד"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "ניט גילטיקער צוריקגעווינס־קאָד"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "ניט גילטיקער פֿאַרזיכערונג־קאָד"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "עס קען לייענען אײַער קאָנטע און פּאָסטן אין איר נאָמען."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "עס קען לייענען אײַער קאָנטע."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "רעדירעקטירן אײַך צו דעם דאַשבאָרד…"
 msgid "Reduce interest"
 msgstr "פֿאַרמינער אינטערעס"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "אָפּוואַרפֿן"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "ווײַזן {totalShown} פֿון {total}"
 msgid "Sidebar"
 msgstr "זײַטנשטאַנג"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "מעלדט זיך אַרײַן אין אײַער קאָנטע"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "לאָג זיך אַרײַן מיט אַ קאָנטע וואָס האָט צוטריט <0/> צו דעם רעסורס."
@@ -2705,6 +2768,10 @@ msgstr "דאָסע זיכערקאָפּיע איז באַשאַפֿן אין א�
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "דאָס וועט אויף שטענדיק אויסמעקן דעם שפּיל און זײַן טשאַט. מע קען דעם ניט מבֿטל מאַכן."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "די דאָזיקע אַרײַנמעלד־בקשה איז אויסגעגאַנגען אָדער מע האָט שוין אויף איר געענטפֿערט."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "מיר האָבן געשיקט אַ באַשטעטיקונג־קאָד �
 msgid "Wednesday"
 msgstr "מיטוואָך"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "וווּהין זאָלן גיין פּאָסטן געמאַכט פֿון דער דאָזיקער אַפּ?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "וויקיס"
@@ -2963,6 +3034,10 @@ msgstr "וויקיס"
 msgid "Wrong passphrase"
 msgstr "פֿאַלשער פּאַסזאַץ"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "יאָר"
@@ -2970,6 +3045,10 @@ msgstr "יאָר"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "איר האָט נישט קיין צוטריט צו דעם אָפּטייל."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "איר האָט נישט קיין קאָנטע אין דער דאָזיקער נעץ. רעזערווירט פֿריִער אַ צונאָמען אין די אײַנשטעלונגען."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "דיין קאנטע איז אהערגעברענגט ווארן פון {s
 msgid "Your attachments will be lost."
 msgstr "דײַנע צוגעלייגטע טעקעס וועלן פֿאַרלוירן גיין."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "אײַער Bluesky צונאָמען"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "אײַערע דאַטן ווערן ווידערהערשטעלט פֿון דער זיכערקאָפּיע. מאַכט נישט צו דאָס פֿענצטער."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "אײַער Mastodon סערווער"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

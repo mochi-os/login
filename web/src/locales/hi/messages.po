@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# और फ़ाइल नहीं दिख
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {मेन्यू खोलें (# अपठित सूचना)} other {मेन्यू खोलें (# अपठित सूचनाएँ)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> आपके {1} खाते में साइन इन करने की अनुमति माँग रहा है।"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 घंटे"
@@ -134,6 +140,11 @@ msgstr "12 घंटे"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 घंटे"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} नाम की नई फीड"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "एक्सेस अस्वीकृत"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "एक्सेस स्तर"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "अकाउंट"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "इस पहचान वाला एक खाता यहाँ प
 msgid "An error occurred"
 msgstr "एक त्रुटि हुई"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "मौजूदा सार्वजनिक फीड"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "कोई भी जो लॉग इन है"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "इस फ़ीड की सदस्यता लेने वाली हर चीज़ इसे मिलना बंद हो जाएगी। बाद में आप नया URL कॉपी कर सकते हैं।"
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "स्वीकृत करें"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} के लिए अवतार"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "वापस"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "प्रासंगिक जानकारी और विवरण।"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "जारी रखें"
@@ -745,6 +770,10 @@ msgstr "क्लिपबोर्ड पर कॉपी किया गय�
 msgid "Copy"
 msgstr "कॉपी करें"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "साइन-इन स्वीकृत नहीं किया जा सका"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "रद्द नहीं किया जा सका"
@@ -762,6 +791,11 @@ msgstr "यह दस्तावेज़ लोड नहीं किया �
 msgid "Could not reactivate your account"
 msgstr "आपका खाता पुनः सक्रिय नहीं किया जा सका"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "साइन-इन अस्वीकार नहीं किया जा सका"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "अपना {initial} और {last} दर्ज करें"
 msgid "Enter your authenticator code"
 msgstr "अपना प्रमाणक कोड दर्ज करें"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} से साइन इन पूरा करने के लिए अपना ईमेल पता दर्ज करें।"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "अपना ईमेल कोड और ऑथेंटिकेटर कोड दर्ज करें"
@@ -1249,6 +1288,14 @@ msgstr "निगरानी अपडेट करने में विफ�
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "अनुलग्नक अपलोड करने में विफल"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "फीड"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "अमान्य रिकवरी कोड"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "अमान्य सत्यापन कोड"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "यह आपका खाता पढ़ सकता है और उसके नाम से पोस्ट कर सकता है।"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "यह आपका खाता पढ़ सकता है।"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "आपको डैशबोर्ड पर रीडायरेक्
 msgid "Reduce interest"
 msgstr "रुचि कम करें"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "अस्वीकार करें"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total} में से {totalShown} दिखाए जा रहे �
 msgid "Sidebar"
 msgstr "साइडबार"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "अपने खाते में साइन इन करें"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "इस संसाधन तक पहुँच रखने वाले खाते से <0/> साइन इन करें।"
@@ -2705,6 +2768,10 @@ msgstr "यह बैकअप Mochi के एक नए संस्करण 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "यह गेम और उसकी चैट को स्थायी रूप से हटा देगा। इसे वापस नहीं लाया जा सकता।"
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "यह साइन-इन अनुरोध समाप्त हो चुका है या इसका जवाब पहले ही दिया जा चुका है।"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "हमने <0>{0}</0> पर एक सत्यापन कोड �
 msgid "Wednesday"
 msgstr "बुधवार"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "इस ऐप से की गई पोस्ट कहाँ जानी चाहिए?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "विकीज़"
@@ -2963,6 +3034,10 @@ msgstr "विकीज़"
 msgid "Wrong passphrase"
 msgstr "गलत पासफ़्रेज़"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "वर्ष"
@@ -2970,6 +3045,10 @@ msgstr "वर्ष"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "आपके पास इस अनुभाग तक पहुँच नहीं है।"
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "इस नेटवर्क पर आपका कोई खाता नहीं है। पहले सेटिंग्स में एक हैंडल आरक्षित करें।"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "आपका खाता {source} से यहाँ स्थान�
 msgid "Your attachments will be lost."
 msgstr "आपके अनुलग्नक खो जाएँगे।"
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "आपका Bluesky हैंडल"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "आपका डेटा बैकअप से पुनर्स्थापित हो रहा है। इस विंडो को बंद न करें।"
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "आपका Mastodon सर्वर"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

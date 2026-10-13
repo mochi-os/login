@@ -127,6 +127,12 @@ msgstr "{truncated, plural, zero {لا ملفات إضافية غير معروض
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, zero {فتح القائمة (لا إشعارات غير مقروءة)} one {فتح القائمة (إشعار واحد غير مقروء)} two {فتح القائمة (إشعاران غير مقروءين)} few {فتح القائمة (# إشعارات غير مقروءة)} many {فتح القائمة (# إشعارًا غير مقروء)} other {فتح القائمة (# إشعار غير مقروء)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "يطلب <0>{0}</0> تسجيل الدخول إلى حسابك على {1}."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ساعة"
@@ -134,6 +140,11 @@ msgstr "12 ساعة"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 ساعة"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "تغذية جديدة باسم {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "تم رفض الوصول"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "مستوى الوصول"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "الحساب"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "يوجد حساب بهذه الهوية بالفعل هنا."
 msgid "An error occurred"
 msgstr "حدث خطأ"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "تغذية عامة موجودة"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "أي شخص مسجّل الدخول"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "سيتوقف أي شيء مشترك في هذه التغذية عن تلقيها. يمكنك نسخ عنوان URL جديد بعد ذلك."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "موافقة"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "صورة {name} الرمزية"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "رجوع"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "معلومات وتفاصيل سياقية."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "متابعة"
@@ -745,6 +770,10 @@ msgstr "تم النسخ إلى الحافظة"
 msgid "Copy"
 msgstr "نسخ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "تعذّر الموافقة على تسجيل الدخول"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "تعذّر الإلغاء"
@@ -762,6 +791,11 @@ msgstr "تعذّر تحميل هذا المستند. يرجى المحاولة �
 msgid "Could not reactivate your account"
 msgstr "تعذّر إعادة تنشيط حسابك"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "تعذّر رفض تسجيل الدخول"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "أدخل {initial} و {last}"
 msgid "Enter your authenticator code"
 msgstr "أدخل رمز تطبيق المصادقة"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "أدخل عنوان بريدك الإلكتروني لإكمال تسجيل الدخول باستخدام {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "أدخل رمز البريد الإلكتروني ورمز المصادق"
@@ -1249,6 +1288,14 @@ msgstr "فشل تحديث المتابعة"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "فشل رفع المرفق"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "تغذية"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "رمز الاسترداد غير صالح"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "رمز التحقق غير صالح"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "يمكنه قراءة حسابك والنشر باسمه."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "يمكنه قراءة حسابك."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "جارٍ التوجيه إلى لوحة التحكم…"
 msgid "Reduce interest"
 msgstr "تقليل الاهتمام"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "رفض"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "عرض {totalShown} من {total}"
 msgid "Sidebar"
 msgstr "الشريط الجانبي"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "سجّل الدخول إلى حسابك"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "سجّل الدخول بحساب لديه حق الوصول <0/> إلى هذا المورد."
@@ -2705,6 +2768,10 @@ msgstr "تم إنشاء هذه النسخة الاحتياطية بإصدار أ
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "سيؤدي هذا إلى حذف اللعبة ومحادثتها نهائيًا. لا يمكن التراجع عن هذا الإجراء."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "انتهت صلاحية طلب تسجيل الدخول هذا أو تمت الإجابة عليه بالفعل."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "أرسلنا رمز تحقق إلى <0>{0}</0>. أدخل الرمز أد
 msgid "Wednesday"
 msgstr "الأربعاء"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "أين يجب أن تذهب المنشورات التي تُنشر من هذا التطبيق؟"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "الويكي"
@@ -2963,6 +3034,10 @@ msgstr "الويكي"
 msgid "Wrong passphrase"
 msgstr "عبارة مرور خاطئة"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "السنة"
@@ -2970,6 +3045,10 @@ msgstr "السنة"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "ليس لديك صلاحية الوصول إلى هذا القسم."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "ليس لديك حساب على هذه الشبكة. احجز معرّفًا في الإعدادات أولًا."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "تم نقل حسابك إلى هنا من {source}. حتى تحذفه م
 msgid "Your attachments will be lost."
 msgstr "سيتم فقدان مرفقاتك."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "معرّفك على Bluesky"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "جارٍ استعادة بياناتك من النسخة الاحتياطية. لا تغلق هذه النافذة."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "خادم Mastodon الخاص بك"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

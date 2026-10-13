@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {ಇನ್ನೂ # ಫೈಲ್ ತೋರಿಸ�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {ಮೆನು ತೆರೆಯಿರಿ (# ಓದದ ಅಧಿಸೂಚನೆ)} other {ಮೆನು ತೆರೆಯಿರಿ (# ಓದದ ಅಧಿಸೂಚನೆಗಳು)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> ನಿಮ್ಮ {1} ಖಾತೆಗೆ ಸೈನ್ ಇನ್ ಮಾಡಲು ಕೇಳುತ್ತಿದೆ."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ಗಂಟೆಗಳು"
@@ -134,6 +140,11 @@ msgstr "12 ಗಂಟೆಗಳು"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 ಗಂಟೆಗಳು"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} ಹೆಸರಿನ ಹೊಸ ಫೀಡ್"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "ಪ್ರವೇಶ ನಿರಾಕರಿಸಲಾಗಿದೆ"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "ಪ್ರವೇಶ ಮಟ್ಟ"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "ಖಾತೆ"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "ಈ ಗುರುತಿನೊಂದಿಗೆ ಒಂದು ಖಾತೆ �
 msgid "An error occurred"
 msgstr "ದೋಷ ಸಂಭವಿಸಿದೆ"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "ಈಗಾಗಲೇ ಇರುವ ಸಾರ್ವಜನಿಕ ಫೀಡ್"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "ಲಾಗಿನ್ ಆಗಿರುವ ಯಾರಾದರೂ"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "ಈ ಫೀಡ್‌ಗೆ ಚಂದಾದಾರರಾದ ಎಲ್ಲವೂ ಅದನ್ನು ಸ್ವೀಕರಿಸುವುದನ್ನು ನಿಲ್ಲಿಸುತ್ತದೆ. ನಂತರ ನೀವು ಹೊಸ URL ಅನ್ನು ನಕಲಿಸಬಹುದು."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "ಅನುಮೋದಿಸಿ"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} ಗಾಗಿ ಅವತಾರ್"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "ಹಿಂದೆ"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "ಸಂದರ್ಭಾನುಸಾರ ಮಾಹಿತಿ ಮತ್ತು ವಿವರಗಳು."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "ಮುಂದುವರಿಸಿ"
@@ -745,6 +770,10 @@ msgstr "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾ�
 msgid "Copy"
 msgstr "ನಕಲಿಸಿ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "ಸೈನ್-ಇನ್ ಅನುಮೋದಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "ರದ್ದುಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"
@@ -762,6 +791,11 @@ msgstr "ಈ ಡಾಕ್ಯುಮೆಂಟ್ ಲೋಡ್ ಮಾಡಲು ಸ�
 msgid "Could not reactivate your account"
 msgstr "ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಮರುಸಕ್ರಿಯಗೊಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "ಸೈನ್-ಇನ್ ನಿರಾಕರಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "ನಿಮ್ಮ {initial} ಮತ್ತು {last} ನಮೂದಿಸಿ"
 msgid "Enter your authenticator code"
 msgstr "ನಿಮ್ಮ ಅಥೆಂಟಿಕೇಟರ್ ಕೋಡ್ ನಮೂದಿಸಿ"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} ಮೂಲಕ ಸೈನ್ ಇನ್ ಪೂರ್ಣಗೊಳಿಸಲು ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "ನಿಮ್ಮ ಇಮೇಲ್ ಕೋಡ್ ಮತ್ತು ಅಥೆಂಟಿಕೇಟರ್ ಕೋಡ್ ನಮೂದಿಸಿ"
@@ -1249,6 +1288,14 @@ msgstr "ವೀಕ್ಷಣೆ ನವೀಕರಿಸಲು ವಿಫಲವಾಗ�
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "ಲಗತ್ತು ಅಪ್‌ಲೋಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "ಫೀಡ್"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "ಅಮಾನ್ಯ ರಿಕವರಿ ಕೋಡ್"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "ಅಮಾನ್ಯ ಪರಿಶೀಲನಾ ಕೋಡ್"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "ಇದು ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಓದಬಹುದು ಮತ್ತು ಅದರ ಹೆಸರಿನಲ್ಲಿ ಪೋಸ್ಟ್ ಮಾಡಬಹುದು."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "ಇದು ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಓದಬಹುದು."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "ನಿಮ್ಮನ್ನು ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌�
 msgid "Reduce interest"
 msgstr "ಆಸಕ್ತಿ ಕಡಿಮೆಗೊಳಿಸಿ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "ನಿರಾಕರಿಸಿ"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total} ರಲ್ಲಿ {totalShown} ತೋರಿಸಲಾಗುತ್�
 msgid "Sidebar"
 msgstr "ಸೈಡ್‌ಬಾರ್"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "ನಿಮ್ಮ ಖಾತೆಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "ಈ ಸಂಪನ್ಮೂಲಕ್ಕೆ ಪ್ರವೇಶವಿರುವ ಖಾತೆಯೊಂದಿಗೆ <0/> ಸೈನ್ ಇನ್ ಮಾಡಿ."
@@ -2705,6 +2768,10 @@ msgstr "ಈ ಬ್ಯಾಕಪ್ Mochi ನ ಹೊಸ ಆವೃತ್ತಿಯ�
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ಇದು ಆಟ ಮತ್ತು ಅದರ ಚಾಟ್ ಅನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸುತ್ತದೆ. ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "ಈ ಸೈನ್-ಇನ್ ವಿನಂತಿಯ ಅವಧಿ ಮುಗಿದಿದೆ ಅಥವಾ ಈಗಾಗಲೇ ಉತ್ತರಿಸಲಾಗಿದೆ."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "ನಾವು <0>{0}</0> ಗೆ ಪರಿಶೀಲನಾ ಕೋಡ್ ಕ
 msgid "Wednesday"
 msgstr "ಬುಧವಾರ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "ಈ ಆ್ಯಪ್‌ನಿಂದ ಮಾಡಿದ ಪೋಸ್ಟ್‌ಗಳು ಎಲ್ಲಿಗೆ ಹೋಗಬೇಕು?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "ವಿಕಿಗಳು"
@@ -2963,6 +3034,10 @@ msgstr "ವಿಕಿಗಳು"
 msgid "Wrong passphrase"
 msgstr "ತಪ್ಪಾದ ಪಾಸ್‌ಫ್ರೇಸ್"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "ವರ್ಷ"
@@ -2970,6 +3045,10 @@ msgstr "ವರ್ಷ"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "ಈ ವಿಭಾಗಕ್ಕೆ ನಿಮಗೆ ಪ್ರವೇಶವಿಲ್ಲ."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "ಈ ನೆಟ್‌ವರ್ಕ್‌ನಲ್ಲಿ ನಿಮಗೆ ಖಾತೆ ಇಲ್ಲ. ಮೊದಲು ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಬಳಕೆದಾರಹೆಸರನ್ನು ಕಾಯ್ದಿರಿಸಿ."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "ನಿಮ್ಮ ಖಾತೆಯನ್ನು {source} ನಿಂದ ಇಲ
 msgid "Your attachments will be lost."
 msgstr "ನಿಮ್ಮ ಲಗತ್ತುಗಳು ಕಳೆದುಹೋಗುತ್ತವೆ."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "ನಿಮ್ಮ Bluesky ಬಳಕೆದಾರಹೆಸರು"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "ಬ್ಯಾಕಪ್‌ನಿಂದ ನಿಮ್ಮ ಡೇಟಾ ಮರುಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ. ಈ ವಿಂಡೋ ಮುಚ್ಚಬೇಡಿ."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "ನಿಮ್ಮ Mastodon ಸರ್ವರ್"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

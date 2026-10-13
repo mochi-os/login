@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# chomhad eile gan taispeáint} two {# chomhad 
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Oscail an roghchlár (# fhógra gan léamh)} two {Oscail an roghchlár (# fhógra gan léamh)} few {Oscail an roghchlár (# fhógra gan léamh)} many {Oscail an roghchlár (# bhfógra gan léamh)} other {Oscail an roghchlár (# fógra gan léamh)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "Iarrann <0>{0}</0> síniú isteach i do chuntas {1}."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 uair"
@@ -134,6 +140,11 @@ msgstr "12 uair"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 uair"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Fotha nua darb ainm {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Rochtain diúltaithe"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Leibhéal rochtana"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Cuntas"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Tá cuntas leis an gcéannacht seo ann cheana anseo."
 msgid "An error occurred"
 msgstr "Tharla earráid"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Fotha poiblí atá ann cheana"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Aon duine atá logáilte isteach"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Stopfaidh aon rud atá liostáilte leis an bhfotha seo á fháil. Is féidir leat URL nua a chóipeáil ina dhiaidh sin."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Faomh"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Abhatár do {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Ar ais"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Eolas comhthéacsúil agus sonraí."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Lean ar aghaidh"
@@ -745,6 +770,10 @@ msgstr "Cóipeáilte chuig an ngearrthaisce"
 msgid "Copy"
 msgstr "Cóipeáil"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Níorbh fhéidir an síniú isteach a fhaomhadh"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Níorbh fhéidir é a chealú"
@@ -762,6 +791,11 @@ msgstr "Níorbh fhéidir an cháipéis seo a luchtú. Bain triail eile as ar bal
 msgid "Could not reactivate your account"
 msgstr "Níorbh fhéidir do chuntas a athghníomhachtú"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Níorbh fhéidir an síniú isteach a dhiúltú"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Iontráil do {initial} agus {last}"
 msgid "Enter your authenticator code"
 msgstr "Cuir isteach cód d'aip fhíordheimhnithe"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Cuir isteach do sheoladh ríomhphoist chun síniú isteach le {0} a chríochnú."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Iontráil do chód ríomhphoist agus cód fíordheimhnitheora"
@@ -1249,6 +1288,14 @@ msgstr "Theip ar an bhfaire a nuashonrú"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Theip ar uaslódáil ceangaltáin"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Fotha"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Cód aisghabhála neamhbhailí"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Cód fíoraithe neamhbhailí"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Féadfaidh sé do chuntas a léamh agus postáil thar a cheann."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Féadfaidh sé do chuntas a léamh."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Á atreorú chuig an bpainéal…"
 msgid "Reduce interest"
 msgstr "Laghdaigh spéis"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Diúltaigh"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{totalShown} de {total} á dtaispeáint"
 msgid "Sidebar"
 msgstr "Taobh-bharra"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Sínigh isteach i do chuntas"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Sínigh isteach le cuntas a bhfuil rochtain aige <0/> ar an acmhainn seo."
@@ -2705,6 +2768,10 @@ msgstr "Cruthaíodh an cúltaca seo ag leagan níos nuaí de Mochi. Nuashonraigh
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Scriosfaidh sé seo an cluiche agus a chomhrá go buan. Ní féidir é seo a chur ar ceal."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Tá an t-iarratas síniú isteach seo imithe in éag nó freagraíodh cheana é."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Sheolamar cód fíoraithe chuig <0>{0}</0>. Cuir an cód isteach thíos 
 msgid "Wednesday"
 msgstr "Céadaoin"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Cá háit ar cheart do phostálacha a dhéantar ón aip seo dul?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Vicíonna"
@@ -2963,6 +3034,10 @@ msgstr "Vicíonna"
 msgid "Wrong passphrase"
 msgstr "Frása faire mícheart"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Bliain"
@@ -2970,6 +3045,10 @@ msgstr "Bliain"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Níl rochtain agat ar an rannán seo."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Níl aon chuntas agat ar an líonra seo. Cuir ainm úsáideora in áirithe i Socruithe ar dtús."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Aistríodh do chuntas anseo ó {source}. Go dtí go scriosann tú é ans
 msgid "Your attachments will be lost."
 msgstr "Caillfear do cheangaltáin."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "D'ainm úsáideora Bluesky"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Tá do chuid sonraí á n-athchóiriú ón gcúltaca. Ná dún an fhuinneog seo."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Do fhreastalaí Mastodon"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

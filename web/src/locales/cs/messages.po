@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# další soubor není zobrazen} few {# další
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Otevřít nabídku (# nepřečtené oznámení)} few {Otevřít nabídku (# nepřečtená oznámení)} other {Otevřít nabídku (# nepřečtených oznámení)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> žádá o přihlášení k vašemu účtu {1}."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 hodin"
@@ -134,6 +140,11 @@ msgstr "12 hodin"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 hodin"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Nový kanál s názvem {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Přístup odepřen"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Úroveň přístupu"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Účet"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Účet s touto identitou zde již existuje."
 msgid "An error occurred"
 msgstr "Došlo k chybě"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Existující veřejný kanál"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Kdokoli, kdo je přihlášen"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Vše, co je k tomuto kanálu přihlášeno, jej přestane dostávat. Poté můžete zkopírovat novou adresu URL."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Schválit"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Avatar uživatele {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Zpět"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Kontextové informace a podrobnosti."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Pokračovat"
@@ -745,6 +770,10 @@ msgstr "Zkopírováno do schránky"
 msgid "Copy"
 msgstr "Kopírovat"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Přihlášení se nepodařilo schválit"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Nelze zrušit"
@@ -762,6 +791,11 @@ msgstr "Tento dokument nelze načíst. Zkuste to prosím později."
 msgid "Could not reactivate your account"
 msgstr "Váš účet se nepodařilo znovu aktivovat"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Přihlášení se nepodařilo odmítnout"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Zadejte svůj {initial} a {last}"
 msgid "Enter your authenticator code"
 msgstr "Zadejte kód z autentizační aplikace"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Zadejte svou e-mailovou adresu a dokončete přihlášení přes {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Zadejte e-mailový kód a kód z autentizátoru"
@@ -1249,6 +1288,14 @@ msgstr "Sledování se nepodařilo aktualizovat"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Nepodařilo se nahrát přílohu"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverzum"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Kanál"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Neplatný obnovovací kód"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Neplatný ověřovací kód"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Může číst váš účet a publikovat jeho jménem."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Může číst váš účet."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Přesměrování na dashboard…"
 msgid "Reduce interest"
 msgstr "Snížit zájem"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Odmítnout"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Zobrazeno {totalShown} z {total}"
 msgid "Sidebar"
 msgstr "Postranní panel"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Přihlaste se ke svému účtu"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Přihlaste se účtem, který má přístup <0/> k tomuto zdroji."
@@ -2705,6 +2768,10 @@ msgstr "Tato záloha byla vytvořena novější verzí Mochi. Nejprve aktualizuj
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Tímto trvale smažete hru a její chat. Tuto akci nelze vzít zpět."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Platnost této žádosti o přihlášení vypršela nebo již byla zodpovězena."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Ověřovací kód jsme odeslali na <0>{0}</0>. Zadejte kód níže pro o
 msgid "Wednesday"
 msgstr "Středa"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Kam mají jít příspěvky vytvořené z této aplikace?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -2963,6 +3034,10 @@ msgstr "Wiki"
 msgid "Wrong passphrase"
 msgstr "Nesprávné přístupové heslo"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Rok"
@@ -2970,6 +3045,10 @@ msgstr "Rok"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "K této sekci nemáte přístup."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "V této síti nemáte žádný účet. Nejprve si v Nastavení rezervujte uživatelské jméno."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Váš účet byl přesunut sem z {source}. Dokud ho tam nesmažete, zpr�
 msgid "Your attachments will be lost."
 msgstr "Vaše přílohy budou ztraceny."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Vaše uživatelské jméno na Bluesky"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Vaše data se obnovují ze zálohy. Nezavírejte toto okno."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Váš server Mastodon"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

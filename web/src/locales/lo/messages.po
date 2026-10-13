@@ -127,6 +127,12 @@ msgstr "{truncated, plural, other {ອີກ # ໄຟລ໌ບໍ່ໄດ້ສ
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, other {ເປີດເມນູ (ການແຈ້ງເຕືອນທີ່ຍັງບໍ່ໄດ້ອ່ານ # ລາຍການ)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> ຂໍເຂົ້າສູ່ລະບົບບັນຊີ {1} ຂອງທ່ານ."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ຊົ່ວໂມງ"
@@ -134,6 +140,11 @@ msgstr "12 ຊົ່ວໂມງ"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 ຊົ່ວໂມງ"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "ຟີດໃໝ່ຊື່ {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "ປະຕິເສດການເຂົ້າເຖິງ"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "ລະດັບການເຂົ້າເຖິງ"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "ບັນຊີ"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "ບັນຊີທີ່ມີຕົວຕົນນີ້ມີຢູ່
 msgid "An error occurred"
 msgstr "ເກີດຂໍ້ຜິດພາດ"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "ຟີດສາທາລະນະທີ່ມີຢູ່ແລ້ວ"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "ໃຜກໍໄດ້ທີ່ເຂົ້າສູ່ລະບົບ"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "ທຸກຢ່າງທີ່ສະໝັກຮັບຟີດນີ້ຈະຢຸດຮັບມັນ. ທ່ານສາມາດສຳເນົາ URL ໃໝ່ໄດ້ຫຼັງຈາກນັ້ນ."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "ອະນຸມັດ"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "ອະວາຕາສຳລັບ {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "ກັບຄືນ"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "ຂໍ້ມູນຕາມບໍລິບົດ ແລະ ລາຍລະອຽດ."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "ຕໍ່"
@@ -745,6 +770,10 @@ msgstr "ສຳເນົາໄປຄລິບບອດແລ້ວ"
 msgid "Copy"
 msgstr "ສຳເນົາ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "ບໍ່ສາມາດອະນຸມັດການເຂົ້າສູ່ລະບົບໄດ້"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "ບໍ່ສາມາດຍົກເລີກໄດ້"
@@ -762,6 +791,11 @@ msgstr "ບໍ່ສາມາດໂຫລດເອກະສານນີ້ໄດ
 msgid "Could not reactivate your account"
 msgstr "ບໍ່ສາມາດເປີດໃຊ້ບັນຊີຂອງທ່ານຄືນໄດ້"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "ບໍ່ສາມາດປະຕິເສດການເຂົ້າສູ່ລະບົບໄດ້"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "ປ້ອນ {initial} ແລະ {last} ຂອງທ່ານ"
 msgid "Enter your authenticator code"
 msgstr "ໃສ່ລະຫັດຢືນຢັນຕົວຕົນຂອງທ່ານ"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "ປ້ອນທີ່ຢູ່ອີເມວຂອງທ່ານເພື່ອເຂົ້າສູ່ລະບົບດ້ວຍ {0} ໃຫ້ສຳເລັດ."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "ປ້ອນລະຫັດອີເມວ ແລະ ລະຫັດຢືນຢັນຕົວຕົນຂອງທ່ານ"
@@ -1249,6 +1288,14 @@ msgstr "ອັບເດດການຕິດຕາມບໍ່ສຳເລັດ
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "ອັບໂຫຼດໄຟລ໌ແນບລົ້ມເຫຼວ"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "ຟີດ"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "ລະຫັດກູ້ຄືນບໍ່ຖືກຕ້ອງ"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "ລະຫັດຢືນຢັນບໍ່ຖືກຕ້ອງ"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "ມັນສາມາດອ່ານບັນຊີຂອງທ່ານ ແລະ ໂພສໃນນາມບັນຊີນັ້ນໄດ້."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "ມັນສາມາດອ່ານບັນຊີຂອງທ່ານໄດ້."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "ກຳລັງປ່ຽນເສັ້ນທາງໄປຫາແຜງ
 msgid "Reduce interest"
 msgstr "ຫຼຸດຄວາມສົນໃຈ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "ປະຕິເສດ"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "ກຳລັງສະແດງ {totalShown} ຈາກ {total}"
 msgid "Sidebar"
 msgstr "ແຖບຂ້າງ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "ເຂົ້າສູ່ລະບົບບັນຊີຂອງທ່ານ"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "ກະລຸນາເຂົ້າສູ່ລະບົບດ້ວຍບັນຊີທີ່ມີສິດເຂົ້າເຖິງ <0/> ຊັບພະຍາກອນນີ້."
@@ -2705,6 +2768,10 @@ msgstr "ໄຟລ໌ສຳຮອງນີ້ຖືກສ້າງໂດຍ Mochi
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ການດຳເນີນການນີ້ຈະລົບເກມ ແລະ ການສົນທະນາຂອງມັນຖາວອນ. ບໍ່ສາມາດຍົກເລີກການດຳເນີນການນີ້ໄດ້."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "ຄຳຂໍເຂົ້າສູ່ລະບົບນີ້ໝົດອາຍຸແລ້ວ ຫຼື ໄດ້ຮັບການຕອບແລ້ວ."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "ພວກເຮົາໄດ້ສົ່ງລະຫັດຢືນຢັ
 msgid "Wednesday"
 msgstr "ວັນພຸດ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "ໂພສທີ່ສ້າງຈາກແອັບນີ້ຄວນໄປໃສ?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "ວິກິ"
@@ -2963,6 +3034,10 @@ msgstr "ວິກິ"
 msgid "Wrong passphrase"
 msgstr "ລະຫັດຜ່ານຜິດ"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "ປີ"
@@ -2970,6 +3045,10 @@ msgstr "ປີ"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "ທ່ານບໍ່ມີສິດເຂົ້າເຖິງພາກສ່ວນນີ້."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "ທ່ານບໍ່ມີບັນຊີໃນເຄືອຂ່າຍນີ້. ກະລຸນາຈອງຊື່ຜູ້ໃຊ້ໃນການຕັ້ງຄ່າກ່ອນ."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "ບັນຊີຂອງທ່ານໄດ້ຍ້າຍມາທີ່
 msgid "Your attachments will be lost."
 msgstr "ໄຟລ໌ແນບຂອງທ່ານຈະສູນຫາຍ."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "ຊື່ຜູ້ໃຊ້ Bluesky ຂອງທ່ານ"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "ຂໍ້ມູນຂອງທ່ານກໍາລັງຖືກກູ້ຄືນຈາກໄຟລ໌ສຳຮອງ. ຢ່າປິດໜ້າຕ່າງນີ້."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "ເຊີບເວີ Mastodon ຂອງທ່ານ"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

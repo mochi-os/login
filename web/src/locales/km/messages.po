@@ -127,6 +127,12 @@ msgstr "{truncated, plural, other {ឯកសារ # ទៀតមិនបាន
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, other {បើកម៉ឺនុយ (ការជូនដំណឹងមិនទាន់អាន # )}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> សុំចូលគណនី {1} របស់អ្នក។"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "១២ ម៉ោង"
@@ -134,6 +140,11 @@ msgstr "១២ ម៉ោង"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "២៤ ម៉ោង"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "ព័ត៌មានបង្ហាញថ្មីដែលមានឈ្មោះ {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "ការចូលប្រើត្រូវបានបដិសេធ
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "កម្រិតការចូលប្រើ"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "គណនី"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "គណនីដែលមានអត្តសញ្ញាណនេះម
 msgid "An error occurred"
 msgstr "មានកំហុសកើតឡើង"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "ព័ត៌មានបង្ហាញសាធារណៈដែលមានស្រាប់"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "នរណាម្នាក់ដែលបានចូល"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "អ្វីៗដែលបានជាវព័ត៌មាននេះនឹងឈប់ទទួលបាន។ បន្ទាប់មកអ្នកអាចចម្លង URL ថ្មី។"
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "យល់ព្រម"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "រូបតំណាងសម្រាប់ {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "ត្រឡប់"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "ព័ត៌មាន និងព័ត៌មានលម្អិតតាមបរិបទ។"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "បន្ត"
@@ -745,6 +770,10 @@ msgstr "បានចម្លងទៅក្ដារតម្បៀតខ្ទ
 msgid "Copy"
 msgstr "ចម្លង"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "មិនអាចយល់ព្រមការចូលបានទេ"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "មិនអាចបោះបង់"
@@ -762,6 +791,11 @@ msgstr "មិនអាចផ្ទុកឯកសារនេះ។ សូម�
 msgid "Could not reactivate your account"
 msgstr "មិនអាចបើកដំណើរការគណនីរបស់អ្នកឡើងវិញបានទេ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "មិនអាចបដិសេធការចូលបានទេ"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "បញ្ចូល {initial} និង {last} របស់អ្នក"
 msgid "Enter your authenticator code"
 msgstr "បញ្ចូលកូដកម្មវិធីផ្ទៀងផ្ទាត់របស់អ្នក"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "បញ្ចូលអាសយដ្ឋានអ៊ីមែលរបស់អ្នក ដើម្បីបញ្ចប់ការចូលជាមួយ {0}។"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "បញ្ចូលកូដអ៊ីមែល និងកូដផ្ទៀងផ្ទាត់របស់អ្នក"
@@ -1249,6 +1288,14 @@ msgstr "ការធ្វើបច្ចុប្បន្នភាពការ
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "បរាជ័យក្នុងការផ្ទុកឡើងឯកសារភ្ជាប់"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "ព័ត៌មានបង្ហាញ"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "កូដសង្គ្រោះមិនត្រឹមត្រូវ
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "កូដផ្ទៀងផ្ទាត់មិនត្រឹមត្រូវ"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "វាអាចអានគណនីរបស់អ្នក និងប្រកាសក្នុងនាមគណនីនោះ។"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "វាអាចអានគណនីរបស់អ្នក។"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "កំពុងបញ្ជូនបន្តអ្នកទៅផ្ទ
 msgid "Reduce interest"
 msgstr "កាត់បន្ថយចំណាប់អារម្មណ៍"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "បដិសេធ"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "កំពុងបង្ហាញ {totalShown} នៃ {total}"
 msgid "Sidebar"
 msgstr "របារចំហៀង"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "ចូលគណនីរបស់អ្នក"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "សូមចូលដោយប្រើគណនីដែលមានសិទ្ធិចូលប្រើ <0/> ធនធាននេះ។"
@@ -2705,6 +2768,10 @@ msgstr "ការបម្រុងទុកនេះត្រូវបានប
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "សកម្មភាពនេះនឹងលុបហ្គេម និងជជែកកំសាន្តរបស់វាជាអចិន្ត្រៃយ៍។ សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។"
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "សំណើចូលនេះបានផុតកំណត់ ឬត្រូវបានឆ្លើយតបរួចហើយ។"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "យើងបានផ្ញើលេខកូដផ្ទៀងផ្ទ
 msgid "Wednesday"
 msgstr "ថ្ងៃពុធ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "តើការប្រកាសដែលធ្វើពីកម្មវិធីនេះគួរទៅណា?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "វិគី"
@@ -2963,6 +3034,10 @@ msgstr "វិគី"
 msgid "Wrong passphrase"
 msgstr "ឃ្លាសម្ងាត់មិនត្រឹមត្រូវ"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "ឆ្នាំ"
@@ -2970,6 +3045,10 @@ msgstr "ឆ្នាំ"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "អ្នកមិនមានសិទ្ធិចូលប្រើផ្នែកនេះទេ។"
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "អ្នកមិនមានគណនីនៅលើបណ្តាញនេះទេ។ សូមកក់ឈ្មោះអ្នកប្រើនៅក្នុងការកំណត់ជាមុនសិន។"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "គណនីរបស់អ្នកត្រូវបានផ្លា
 msgid "Your attachments will be lost."
 msgstr "ឯកសារភ្ជាប់របស់អ្នកនឹងបាត់បង់។"
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "ឈ្មោះអ្នកប្រើ Bluesky របស់អ្នក"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "ទិន្នន័យរបស់អ្នកកំពុងត្រូវបានស្តារពីការបម្រុងទុក។ កុំបិទបង្អួចនេះ។"
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "ម៉ាស៊ីនមេ Mastodon របស់អ្នក"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

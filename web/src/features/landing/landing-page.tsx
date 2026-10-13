@@ -34,7 +34,13 @@ import { authApi } from '@/api/auth'
 import { type OAuthProvider } from '@/api/types/auth'
 import { useAuthStore } from '@/stores/auth-store'
 import { oauthErrorMessage } from '@/lib/oauth-errors'
-import { oauthEnabled, oauthProviders, startOauth } from '@/lib/oauth-providers'
+import {
+  oauthEnabled,
+  oauthProviders,
+  providerAsks,
+  startOauth,
+} from '@/lib/oauth-providers'
+import { NetworkSignIn } from '@/features/auth/components/network-sign-in'
 import { appUrl, safeRedirect } from '@/lib/redirect'
 import {
   AccountSourceAdvanced,
@@ -72,6 +78,13 @@ export function LandingPage() {
     new Set()
   )
   const [oauthLoading, setOauthLoading] = useState<OAuthProvider | null>(null)
+  // A network provider asks for the account's server or handle first.
+  const [asking, setAsking] = useState<OAuthProvider | null>(null)
+  // A sign-in with a network account nobody holds yet finishes here, with the
+  // email address the user gives and proves.
+  const [networkPending, setNetworkPending] = useState<OAuthProvider | null>(
+    null
+  )
   const [isPasskeyLoading, setIsPasskeyLoading] = useState(false)
   const [oauthError, setOauthError] = useState<string | null>(null)
   const [methodsFailed, setMethodsFailed] = useState(false)
@@ -104,6 +117,19 @@ export function LandingPage() {
   // it survives the post-redirect page flash and the dialog opening.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
+    const network = params.get('network')
+    if (network === 'mastodon' || network === 'bluesky') {
+      setNetworkPending(network)
+      params.delete('network')
+      const qs = params.toString()
+      window.history.replaceState(
+        {},
+        '',
+        (qs ? `${window.location.pathname}?${qs}` : window.location.pathname) +
+          window.location.hash
+      )
+      setDialogOpen(true)
+    }
     const err = params.get('oauth_error')
 
     if (!err) {
@@ -142,6 +168,10 @@ export function LandingPage() {
   }, [])
 
   const handleOauthLogin = async (provider: OAuthProvider) => {
+    if (providerAsks(provider)) {
+      setAsking(provider)
+      return
+    }
     setOauthLoading(provider)
 
     try {
@@ -158,6 +188,7 @@ export function LandingPage() {
     if (!open) {
       setStep('email')
       setOauthError(null)
+      setAsking(null)
       setAccountSource('none')
       setRestoreBundle(null)
       setRestorePassphrase('')
@@ -350,6 +381,15 @@ export function LandingPage() {
             </div>
           )}
 
+          {networkPending && step === 'email' && (
+            <p className='text-muted-foreground text-sm'>
+              <Trans>
+                Enter your email address to finish signing in with{' '}
+                {oauthProviders.find((p) => p.key === networkPending)?.label}.
+              </Trans>
+            </p>
+          )}
+
           <UserAuthForm
             redirectTo={redirect}
             step={step}
@@ -376,6 +416,13 @@ export function LandingPage() {
                 </div>
               </div>
 
+              {asking ? (
+                <NetworkSignIn
+                  provider={asking}
+                  redirect={redirect}
+                  onCancel={() => setAsking(null)}
+                />
+              ) : (
               <div className='space-y-2'>
                 {passkeyEnabled && (
                   <Button
@@ -408,6 +455,7 @@ export function LandingPage() {
                     </Button>
                   ))}
               </div>
+              )}
             </>
           )}
 

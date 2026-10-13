@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Боз # файл нишон дода нашу�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Менюро кушоед (# огоҳиномаи хонданашуда)} other {Менюро кушоед (# огоҳиномаи хонданашуда)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> иҷозат мепурсад, ки ба ҳисоби {1}-и шумо ворид шавад."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 соат"
@@ -134,6 +140,11 @@ msgstr "12 соат"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 соат"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Фиди нав бо номи {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Дастрасӣ рад карда шуд"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Сатҳи дастрасӣ"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Ҳисоб"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Ҳисоб бо ин шахсият аллакай дар ин ҷо ву
 msgid "An error occurred"
 msgstr "Хатогӣ рух дод"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Фиди ҷамъиятии мавҷуда"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Ҳар касе ки ворид шудааст"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Ҳама чизе, ки ба ин ҷараён обуна шудааст, гирифтани онро қатъ мекунад. Пас аз он шумо метавонед URL-и навро нусха бардоред."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Тасдиқ кардан"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Аватар барои {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Бозгашт"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Маълумоти заминавӣ ва тафсилот."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Идома"
@@ -745,6 +770,10 @@ msgstr "Ба буфер нусхабардорӣ шуд"
 msgid "Copy"
 msgstr "Нусхабардорӣ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Воридшавиро тасдиқ карда натавонист"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Бекор карда натавонист"
@@ -762,6 +791,11 @@ msgstr "Ин ҳуҷҷатро бор карда натавонист. Лутфа
 msgid "Could not reactivate your account"
 msgstr "Аз нав фаъол кардани ҳисоби шумо имконнопазир буд"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Воридшавиро рад карда натавонист"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "{initial} ва {last} худро ворид кунед"
 msgid "Enter your authenticator code"
 msgstr "Рамзи аутентификатори худро ворид кунед"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Барои анҷом додани воридшавӣ бо {0} суроғаи почтаи электронии худро ворид кунед."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Рамзи email ва рамзи аутентификатори худро ворид кунед"
@@ -1249,6 +1288,14 @@ msgstr "Навсозии пайгирӣ ноком шуд"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Боркунии замима ба анҷом нарасид"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Федиверс"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Фид"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Рамзи барқароркунӣ нодуруст"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Рамзи тасдиқ нодуруст"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Он метавонад ҳисоби шуморо хонад ва аз номи он нашр кунад."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Он метавонад ҳисоби шуморо хонад."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Шуморо ба панели идоракунӣ равона меку�
 msgid "Reduce interest"
 msgstr "Кам кардани шавқу ҳавас"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Рад кардан"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{totalShown} аз {total} нишон дода мешавад"
 msgid "Sidebar"
 msgstr "Панели паҳлӯ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Ба ҳисоби худ ворид шавед"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Бо ҳисобе ворид шавед, ки ба ин манбаъ <0/> дастрасӣ дорад."
@@ -2705,6 +2768,10 @@ msgstr "Ин захира аз нусхаи навтари Mochi сохта шу
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Ин бозӣ ва чати онро якумра нест мекунад. Ин амалро баргардонидан мумкин нест."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Мӯҳлати ин дархости воридшавӣ гузаштааст ё ба он аллакай ҷавоб дода шудааст."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Мо рамзи тасдиқро ба <0>{0}</0> фиристодем. �
 msgid "Wednesday"
 msgstr "Чоршанбе"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Постҳое, ки аз ин барнома сохта мешаванд, ба куҷо раванд?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Викиҳо"
@@ -2963,6 +3034,10 @@ msgstr "Викиҳо"
 msgid "Wrong passphrase"
 msgstr "Ибораи рамзии нодуруст"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Сол"
@@ -2970,6 +3045,10 @@ msgstr "Сол"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Шумо ба ин бахш дастрасӣ надоред."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Шумо дар ин шабака ҳисоб надоред. Аввал дар Танзимот тахаллус захира кунед."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Ҳисоби шумо аз {source} ба ин ҷо интиқол дод
 msgid "Your attachments will be lost."
 msgstr "Замимаҳои шумо гум мешаванд."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Тахаллуси Bluesky-и шумо"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Маълумоти шумо аз захира барқарор карда мешавад. Ин тирезаро напӯшед."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Сервери Mastodon-и шумо"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# پروندهٔ دیگر نمایش داده �
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {باز کردن منو (# اعلان خوانده‌نشده)} other {باز کردن منو (# اعلان خوانده‌نشده)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> درخواست ورود به حساب {1} شما را دارد."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "۱۲ ساعت"
@@ -134,6 +140,11 @@ msgstr "۱۲ ساعت"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "۲۴ ساعت"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "فید جدیدی به نام {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "دسترسی رد شد"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "سطح دسترسی"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "حساب"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "یک حساب با این هویت از قبل در اینجا وجود 
 msgid "An error occurred"
 msgstr "خطایی رخ داد"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "یک فید عمومی موجود"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "هر کسی که وارد شده باشد"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "هر چیزی که مشترک این خوراک است دیگر آن را دریافت نمی‌کند. پس از آن می‌توانید نشانی جدیدی کپی کنید."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "تأیید"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "آواتار {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "بازگشت"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "اطلاعات زمینه‌ای و جزئیات."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "ادامه"
@@ -745,6 +770,10 @@ msgstr "در کلیپ‌بورد کپی شد"
 msgid "Copy"
 msgstr "کپی"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "تأیید ورود ممکن نشد"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "لغو ممکن نشد"
@@ -762,6 +791,11 @@ msgstr "بارگذاری این سند ممکن نشد. لطفاً بعداً د
 msgid "Could not reactivate your account"
 msgstr "فعال‌سازی مجدد حساب شما ممکن نشد"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "رد ورود ممکن نشد"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "{initial} و {last} خود را وارد کنید"
 msgid "Enter your authenticator code"
 msgstr "کد برنامه احرازکننده هویت خود را وارد کنید"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "برای تکمیل ورود با {0}، نشانی ایمیل خود را وارد کنید."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "کد ایمیل و کد احراز هویت خود را وارد کنید"
@@ -1249,6 +1288,14 @@ msgstr "به‌روزرسانی دنبال‌کردن ناموفق بود"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "بارگذاری پیوست ناموفق بود"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "فید"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "کد بازیابی نامعتبر"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "کد تأیید نامعتبر"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "می‌تواند حساب شما را بخواند و از طرف آن پست بگذارد."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "می‌تواند حساب شما را بخواند."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "در حال تغییر مسیر شما به داشبورد…"
 msgid "Reduce interest"
 msgstr "کاهش علاقه"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "رد کردن"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "نمایش {totalShown} از {total}"
 msgid "Sidebar"
 msgstr "نوار کناری"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "به حساب خود وارد شوید"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "با حسابی که به این منبع دسترسی دارد <0/> وارد شوید."
@@ -2705,6 +2768,10 @@ msgstr "این نسخه پشتیبان توسط نسخه جدیدتری از Moc
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "این کار بازی و گفتگوی آن را برای همیشه حذف می‌کند. این عمل قابل بازگشت نیست."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "این درخواست ورود منقضی شده یا قبلاً به آن پاسخ داده شده است."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "کد تأیید را به <0>{0}</0> ارسال کردیم. برای ت�
 msgid "Wednesday"
 msgstr "چهارشنبه"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "پست‌هایی که از این برنامه گذاشته می‌شوند کجا بروند؟"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "ویکی‌ها"
@@ -2963,6 +3034,10 @@ msgstr "ویکی‌ها"
 msgid "Wrong passphrase"
 msgstr "عبارت عبور اشتباه"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "سال"
@@ -2970,6 +3045,10 @@ msgstr "سال"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "شما به این بخش دسترسی ندارید."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "در این شبکه حسابی ندارید. ابتدا در تنظیمات یک نام کاربری رزرو کنید."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "حساب کاربری شما از {source} به اینجا منتقل ش
 msgid "Your attachments will be lost."
 msgstr "پیوست‌های شما از دست خواهند رفت."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "نام کاربری Bluesky شما"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "داده‌های شما از نسخه پشتیبان در حال بازیابی است. این پنجره را نبندید."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "سرور Mastodon شما"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

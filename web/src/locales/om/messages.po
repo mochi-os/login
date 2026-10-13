@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Faayilli dabalataa # hin mul'ifamne} other {Faa
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Baafata bani (# beeksisa hin dubbifamne)} other {Baafata bani (# beeksisa hin dubbifamne)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> akkaawuntii {1} kee seenuuf gaafachaa jira."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "Sa'aatii 12"
@@ -134,6 +140,11 @@ msgstr "Sa'aatii 12"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "Sa'aatii 24"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Feed haaraa maqaa {0} jedhu"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Seensi dhorkamee jira"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Sadarkaa seensaa"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Akkaawuntii"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Akkaawuntiin eenyummaa kana waliin asitti duraan jira."
 msgid "An error occurred"
 msgstr "Dogoggorri uumame"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Feed uummataa duraan jiru"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Namni seene kamiyyuu"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Wanti kamiyyuu feed kana ajaje fudhachuu ni dhaaba. Booda URL haaraa garagalchuu dandeessa."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Mirkaneessi"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Fakkii {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Duuba"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Odeeffannoo fi caasaa naannoo."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Itti fufi"
@@ -745,6 +770,10 @@ msgstr "Garagalfamee gara saanduqa garagalchaa"
 msgid "Copy"
 msgstr "Garagalchi"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Seensa mirkaneessuu hin dandeenye"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Haquu hin dandeenye"
@@ -762,6 +791,11 @@ msgstr "Galmee kana fe'uu hin dandeenye. Booda yaali."
 msgid "Could not reactivate your account"
 msgstr "Akaawuntii kee deebisanii hojjechiisuu hin dandeenye"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Seensa diduu hin dandeenye"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "{initial} fi {last} keessan galchi"
 msgid "Enter your authenticator code"
 msgstr "Koodii mirkaneessaa kee galchi"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Seensa {0} fayyadamuun xumuruuf teessoo imeelii kee galchi."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Koodii imeelii fi koodii eegumsa keessanii galchi"
@@ -1249,6 +1288,14 @@ msgstr "Hordoffii haaromsuun hin milkoofne"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Mallattoo olkaa'uu hin dandeenye"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Feed"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Koodii deebisaa sirrii hin taane"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Koodii mirkanaa sirrii hin taane"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Akkaawuntii kee dubbisuu fi maqaa akkaawuntii sanaatiin maxxansuu ni danda'a."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Akkaawuntii kee dubbisuu ni danda'a."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Gara daashboordiitti si deebisaa jira…"
 msgid "Reduce interest"
 msgstr "Dantaa hir'isi"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Didi"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Agarsiisaa jira {totalShown} keessaa {total}"
 msgid "Sidebar"
 msgstr "Cinaa"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Akkaawuntii kee seeni"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Herrega qabeenya kana argachuu danda'uun <0/> seeni."
@@ -2705,6 +2768,10 @@ msgstr "Kuusaan kun versiyon haaraa Mochi tiin uumame. Sarvarii kana dursa haaro
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Kun taphicha fi haasawa isaa bara baraan ni haqa. Wanti kun deebi'ee hin dandeenyu."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Gaaffiin seensaa kun yeroon isaa darbeera ykn duraan deebii argateera."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Koodii mirkaneessaa gara <0>{0}</0> ergineerra. Teessoo imeelii kee mirk
 msgid "Wednesday"
 msgstr "Roobii"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Maxxansoonni appii kana irraa hojjetaman eessa deemuu qabu?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikiwwan"
@@ -2963,6 +3034,10 @@ msgstr "Wikiwwan"
 msgid "Wrong passphrase"
 msgstr "Jecha darbii dogoggoraa"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Waggaa"
@@ -2970,6 +3045,10 @@ msgstr "Waggaa"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Kutaa kanaaf dhaqqabummaa hin qabdu."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Network kana irratti akkaawuntii hin qabdu. Dura Qindaa'inoota keessatti maqaa fayyadamaa dursee qabadhu."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Akkaawuntiin kee {source} irraa as fidame. Achitti haqtee hanga fixtutti
 msgid "Your attachments will be lost."
 msgstr "Miiltoowwan kee ni badu."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Maqaa fayyadamaa Bluesky kee"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Daataan kee kuusaa irraa deebifamaa jira. Foddaa kana hin cufin."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Sarvarii Mastodon kee"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

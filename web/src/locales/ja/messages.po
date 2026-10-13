@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {他 # 件のファイルは表示されてい�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {メニューを開く（未読の通知 # 件）} other {メニューを開く（未読の通知 # 件）}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> があなたの {1} アカウントへのサインインを求めています。"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12時間"
@@ -134,6 +140,11 @@ msgstr "12時間"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24時間"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "新しいフィード「{0}」"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "アクセスが拒否されました"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "アクセスレベル"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "アカウント"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "この ID を持つアカウントがすでにここに存在します�
 msgid "An error occurred"
 msgstr "エラーが発生しました"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "既存の公開フィード"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "ログインしている全員"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "このフィードを購読しているものはすべて受信しなくなります。あとで新しい URL をコピーできます。"
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "承認"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} のアバター"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "戻る"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "コンテキスト情報と詳細。"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "続行"
@@ -745,6 +770,10 @@ msgstr "クリップボードにコピーしました"
 msgid "Copy"
 msgstr "コピー"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "サインインを承認できませんでした"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "キャンセルできませんでした"
@@ -762,6 +791,11 @@ msgstr "このドキュメントを読み込めませんでした。後ほども
 msgid "Could not reactivate your account"
 msgstr "アカウントを再有効化できませんでした"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "サインインを拒否できませんでした"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "{initial} と {last} を入力してください"
 msgid "Enter your authenticator code"
 msgstr "認証アプリのコードを入力"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} でのサインインを完了するには、メールアドレスを入力してください。"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "メールコードと認証コードを入力してください"
@@ -1249,6 +1288,14 @@ msgstr "追跡の更新に失敗しました"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "添付ファイルのアップロードに失敗しました"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "フェディバース"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "フィード"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "リカバリーコードが無効です"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "確認コードが無効です"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "アカウントの読み取りと、そのアカウントとしての投稿が許可されます。"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "アカウントの読み取りが許可されます。"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "ダッシュボードにリダイレクトしています…"
 msgid "Reduce interest"
 msgstr "関心を下げる"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "拒否"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total}件中{totalShown}件を表示"
 msgid "Sidebar"
 msgstr "サイドバー"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "アカウントにサインイン"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "このリソースにアクセスできるアカウントで <0/> サインインしてください。"
@@ -2705,6 +2768,10 @@ msgstr "このバックアップは新しいバージョンの Mochi で作成�
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "この操作でゲームとそのチャットが完全に削除されます。この操作は元に戻せません。"
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "このサインインリクエストは期限切れか、すでに応答済みです。"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "<0>{0}</0> に確認コードを送信しました。メールアドレ�
 msgid "Wednesday"
 msgstr "水曜日"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "このアプリからの投稿をどこに公開しますか？"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "ウィキ"
@@ -2963,6 +3034,10 @@ msgstr "ウィキ"
 msgid "Wrong passphrase"
 msgstr "パスフレーズが間違っています"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "年"
@@ -2970,6 +3045,10 @@ msgstr "年"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "このセクションへのアクセス権がありません。"
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "このネットワークにアカウントがありません。先に設定でハンドルを予約してください。"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "アカウントが{source}からここに移行されました。そち�
 msgid "Your attachments will be lost."
 msgstr "添付ファイルは失われます。"
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Bluesky のハンドル"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "バックアップからデータを復元中です。このウィンドウを閉じないでください。"
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Mastodon のサーバー"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

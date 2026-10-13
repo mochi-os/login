@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Edhe # skedar tjetër nuk shfaqet} other {Edhe 
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Hap menynë (# njoftim i palexuar)} other {Hap menynë (# njoftime të palexuara)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> kërkon të hyjë në llogarinë tënde {1}."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 orë"
@@ -134,6 +140,11 @@ msgstr "12 orë"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 orë"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Një feed i ri me emrin {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Qasja u refuzua"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Niveli i qasjes"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Llogaria"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Një llogari me këtë identitet ekziston tashmë këtu."
 msgid "An error occurred"
 msgstr "Ndodhi një gabim"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Një feed publik ekzistues"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Kushdo që ka hyrë"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Gjithçka e abonuar në këtë prurje do të ndalojë ta marrë. Më pas mund të kopjoni një URL të ri."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Mirato"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Avatar për {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Mbrapa"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Informacion kontekstual dhe detaje."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Vazhdo"
@@ -745,6 +770,10 @@ msgstr "U kopjua në kujtesën e fragmenteve"
 msgid "Copy"
 msgstr "Kopjo"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Hyrja nuk mund të miratohej"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Nuk mund të anulohej"
@@ -762,6 +791,11 @@ msgstr "Nuk mund të ngarkohej ky dokument. Provo më vonë."
 msgid "Could not reactivate your account"
 msgstr "Llogaria juaj nuk mund të riaktivizohej"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Hyrja nuk mund të refuzohej"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Shkruani {initial} dhe {last} tuaj"
 msgid "Enter your authenticator code"
 msgstr "Vendosni kodin e aplikacionit të vërtetimit"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Fut adresën tënde të email-it për të përfunduar hyrjen me {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Shkruani kodin e emailit dhe kodin e autentikuesit"
@@ -1249,6 +1288,14 @@ msgstr "Përditësimi i ndjekjes dështoi"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Ngarkimi i bashkëngjitjes dështoi"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Feed"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Kod rikuperimi i pavlefshëm"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Kod verifikimi i pavlefshëm"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Mund të lexojë llogarinë tënde dhe të postojë në emër të saj."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Mund të lexojë llogarinë tënde."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Duke ju ridrejtuar te paneli…"
 msgid "Reduce interest"
 msgstr "Zvogëlo interesin"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Refuzo"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Duke shfaqur {totalShown} nga {total}"
 msgid "Sidebar"
 msgstr "Shiriti anësor"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Hyr në llogarinë tënde"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Hyni me një llogari që ka qasje <0/> te ky burim."
@@ -2705,6 +2768,10 @@ msgstr "Ky arkivim u krijua nga një version më i ri i Mochi. Përditësoni kë
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Kjo do të fshijë përgjithmonë lojën dhe bisedën e saj. Ky veprim nuk mund të zhbëhet."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Kjo kërkesë për hyrje ka skaduar ose ka marrë tashmë përgjigje."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Dërguam një kod verifikimi te <0>{0}</0>. Shkruani kodin më poshtë p
 msgid "Wednesday"
 msgstr "E mërkurë"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Ku duhet të shkojnë postimet e bëra nga ky aplikacion?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki-t"
@@ -2963,6 +3034,10 @@ msgstr "Wiki-t"
 msgid "Wrong passphrase"
 msgstr "Fjalëkalim i gabuar"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Viti"
@@ -2970,6 +3045,10 @@ msgstr "Viti"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Nuk keni qasje në këtë seksion."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Nuk ke llogari në këtë rrjet. Rezervo fillimisht një pseudonim te Cilësimet."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Llogaria juaj u zhvendos këtu nga {source}. Derisa ta fshini atje, mesa
 msgid "Your attachments will be lost."
 msgstr "Bashkëngjitjet tuaja do të humbasin."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Pseudonimi yt në Bluesky"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Të dhënat tuaja po rikthehen nga kopja rezervë. Mos e mbyllni këtë dritare."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Serveri yt Mastodon"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Veel # fail on kuvamata} other {Veel # faili on
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Ava menüü (# lugemata teatis)} other {Ava menüü (# lugemata teatist)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> soovib sisse logida sinu {1} kontole."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 tundi"
@@ -134,6 +140,11 @@ msgstr "12 tundi"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 tundi"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Uus voog nimega {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Juurdepääs keelatud"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Juurdepääsu tase"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Konto"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Selle identiteediga konto on siin juba olemas."
 msgid "An error occurred"
 msgstr "Tekkis viga"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Olemasolev avalik voog"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Kõik, kes on sisse logitud"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Kõik, mis on selle voo tellinud, lakkab seda saamast. Pärast saad kopeerida uue URL-i."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Kinnita"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} avatar"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Tagasi"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Kontekstuaalne teave ja üksikasjad."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Jätka"
@@ -745,6 +770,10 @@ msgstr "Kopeeritud lõikelauale"
 msgid "Copy"
 msgstr "Kopeeri"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Sisselogimist ei õnnestunud kinnitada"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Tühistamine ebaõnnestus"
@@ -762,6 +791,11 @@ msgstr "Selle dokumendi laadimine ebaõnnestus. Palun proovi hiljem uuesti."
 msgid "Could not reactivate your account"
 msgstr "Teie kontot ei õnnestunud taasaktiveerida"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Sisselogimist ei õnnestunud tagasi lükata"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Sisesta {initial} ja {last}"
 msgid "Enter your authenticator code"
 msgstr "Sisestage oma autentimisrakenduse kood"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Sisesta oma e-posti aadress, et lõpetada sisselogimine teenusega {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Sisesta e-posti kood ja autentija kood"
@@ -1249,6 +1288,14 @@ msgstr "Jälgimise uuendamine ebaõnnestus"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Manuse üleslaadimine ebaõnnestus"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Voog"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Vigane taastekood"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Vigane kinnituskood"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "See võib lugeda sinu kontot ja postitada selle nimel."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "See võib lugeda sinu kontot."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Ümbersuunamine töölauale…"
 msgid "Reduce interest"
 msgstr "Vähenda huvi"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Keeldu"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Näidatakse {totalShown} / {total}"
 msgid "Sidebar"
 msgstr "Külgriba"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Logi sisse oma kontole"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Logi sisse kontoga, millel on juurdepääs <0/> sellele ressursile."
@@ -2705,6 +2768,10 @@ msgstr "See varukoopia loodi Mochi uuema versiooniga. Uuenda esmalt seda serveri
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "See kustutab mängu ja selle vestluse jäädavalt. Seda ei saa tagasi võtta."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "See sisselogimistaotlus on aegunud või sellele on juba vastatud."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Saatsime kinnituskoodi aadressile <0>{0}</0>. Sisestage kood allpool, et
 msgid "Wednesday"
 msgstr "Kolmapäev"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Kuhu peaksid selle rakenduse kaudu tehtud postitused minema?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Vikid"
@@ -2963,6 +3034,10 @@ msgstr "Vikid"
 msgid "Wrong passphrase"
 msgstr "Vale paroolifraas"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Aasta"
@@ -2970,6 +3045,10 @@ msgstr "Aasta"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Sul puudub juurdepääs sellele jaotisele."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Sul pole selles võrgus kontot. Broneeri esmalt jaotises Seaded kasutajanimi."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Sinu konto liideti siia asukohast {source}. Kuni sa selle sealt ei kustu
 msgid "Your attachments will be lost."
 msgstr "Teie manused lähevad kaotsi."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Sinu Bluesky kasutajanimi"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Sinu andmeid taastatakse varukoopias. Ära sulge seda akent."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Sinu Mastodoni server"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

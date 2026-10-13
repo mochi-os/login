@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Fáìlì # síi kò hàn} other {Àwọn fáìl
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Ṣí àkójọ àṣàyàn (# ìfitónilétí tí a kò kà)} other {Ṣí àkójọ àṣàyàn (# ìfitónilétí tí a kò kà)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> ń béèrè láti wọlé sí àkáǹtì {1} rẹ."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "Wákàtí 12"
@@ -134,6 +140,11 @@ msgstr "Wákàtí 12"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "Wákàtí 24"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Feed tuntun tí orúkọ rẹ̀ ń jẹ́ {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "A kọ̀ ìwọlé"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Ìpele ìwọlé"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Àkáǹtì"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Akọọlẹ kan pẹlu idanimọ yii ti wa tẹlẹ nibi."
 msgid "An error occurred"
 msgstr "Àṣìṣe kan wáyé"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Feed gbangba tí ó ti wà tẹ́lẹ̀"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Ẹnikẹ́ni tó ti wọlé"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Gbogbo ohun tí ó forúkọsílẹ̀ sí ìjẹun yìí yóò dáwọ́ gbígbà rẹ̀ dúró. O lè ṣe àdàkọ URL tuntun lẹ́yìn náà."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Fọwọ́sí"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Àwòrán fún {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Padà"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Ìròyìn àti ẹ̀kúnrẹ́rẹ́ ipò."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Tẹ̀síwájú"
@@ -745,6 +770,10 @@ msgstr "A ti ṣe àdàkọ sí clipboard"
 msgid "Copy"
 msgstr "Ṣe àdàkọ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Kò lè fọwọ́sí ìwọlé náà"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Kò lè fagilé"
@@ -762,6 +791,11 @@ msgstr "Kò lè kó ìwé yìí. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i."
 msgid "Could not reactivate your account"
 msgstr "Kò lè tún àkáǹtì rẹ ṣíṣẹ́"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Kò lè kọ̀ ìwọlé náà"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Tẹ {initial} àti {last} rẹ"
 msgid "Enter your authenticator code"
 msgstr "Tẹ kóòdù authenticator rẹ"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Tẹ àdírẹ́sì email rẹ láti parí wíwọlé pẹ̀lú {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Tẹ kóòdù ímẹ́ẹ̀lì rẹ àti kóòdù authenticator"
@@ -1249,6 +1288,14 @@ msgstr "Ìkùnà láti ṣàtúnṣe ìṣọ́"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Kò lè gbé àfikún sókè"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Feed"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Kóòdù ìgbàpadà aláìdára"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Kóòdù ìjẹ́rìí aláìdára"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Ó lè ka àkáǹtì rẹ kí ó sì ṣe ìfìránṣẹ́ ní orúkọ rẹ̀."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Ó lè ka àkáǹtì rẹ."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Ní ríràn ọ́ lọ sí ojú-òpó ìṣàkóso…"
 msgid "Reduce interest"
 msgstr "Dín ìfẹ́ kù"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Kọ̀"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Ń fi {totalShown} hàn nínú {total}"
 msgid "Sidebar"
 msgstr "Ọ̀pá ẹ̀gbẹ́"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Wọlé sí àkáǹtì rẹ"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Wọlé pẹ̀lú àkọọ́lẹ̀ tí ó ní ààyè <0/> sí ohun àmúlò yìí."
@@ -2705,6 +2768,10 @@ msgstr "Afẹyinti yii ni ẹya tuntun ti Mochi ṣẹda. Ṣe imudojuiwọn olu
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Èyí yóò pa eré náà àti ìjíròrò rẹ̀ rẹ́ pátápátá. A kò lè yí ìṣe yìí padà."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Ìbéèrè ìwọlé yìí ti parí àkókò tàbí a ti dáhùn rẹ̀ tẹ́lẹ̀."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "A rán kóòdù ìjẹ́rìísí sí <0>{0}</0>. Tẹ kóòdù náà sí
 msgid "Wednesday"
 msgstr "Ọjọ́rú"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Ibo ni àwọn ìfìránṣẹ́ tí a ṣe láti inú app yìí yẹ kí ó lọ?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Àwọn Wiki"
@@ -2963,6 +3034,10 @@ msgstr "Àwọn Wiki"
 msgid "Wrong passphrase"
 msgstr "Gbolohun ọrọ igbaniwọle ti ko tọ"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Ọdún"
@@ -2970,6 +3045,10 @@ msgstr "Ọdún"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "O kò ní ààyè sí abala yìí."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "O kò ní àkáǹtì lórí nẹ́tíwọ́kì yìí. Kọ́kọ́ gba ìnagijẹ sílẹ̀ nínú Àwọn ìṣètò."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "A gbe akonti rẹ wá ibi lati {source}. Titi iwọ o fi pa rẹ nibẹ,
 msgid "Your attachments will be lost."
 msgstr "Àwọn fáìlì àsomọ́ rẹ yóò sọnù."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Ìnagijẹ Bluesky rẹ"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Data rẹ n pada wa lati afẹyinti. Maṣe pa ferese yii."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Sáfà Mastodon rẹ"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

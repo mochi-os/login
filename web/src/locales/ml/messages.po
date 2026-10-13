@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# ഫയൽ കൂടി കാണിച്ച�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {മെനു തുറക്കുക (# വായിക്കാത്ത അറിയിപ്പ്)} other {മെനു തുറക്കുക (# വായിക്കാത്ത അറിയിപ്പുകൾ)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> നിങ്ങളുടെ {1} അക്കൗണ്ടിലേക്ക് സൈൻ ഇൻ ചെയ്യാൻ അനുമതി ചോദിക്കുന്നു."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 മണിക്കൂർ"
@@ -134,6 +140,11 @@ msgstr "12 മണിക്കൂർ"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 മണിക്കൂർ"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} എന്ന പേരിൽ ഒരു പുതിയ ഫീഡ്"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "ആക്സസ് നിരസിച്ചു"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "ആക്സസ് ലെവൽ"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "അക്കൗണ്ട്"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "ഈ ഐഡന്റിറ്റിയുള്ള ഒരു അക്ക
 msgid "An error occurred"
 msgstr "ഒരു പിശക് സംഭവിച്ചു"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "നിലവിലുള്ള ഒരു പൊതു ഫീഡ്"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "ലോഗിൻ ചെയ്ത ആരും"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "ഈ ഫീഡ് സബ്‌സ്‌ക്രൈബ് ചെയ്ത എല്ലാം അത് ലഭിക്കുന്നത് നിർത്തും. പിന്നീട് നിങ്ങൾക്ക് ഒരു പുതിയ URL പകർത്താം."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "അംഗീകരിക്കുക"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name}-ന്റെ അവതാർ"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "തിരികെ"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "സന്ദർഭോചിത വിവരങ്ങളും വിശദാംശങ്ങളും."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "തുടരുക"
@@ -745,6 +770,10 @@ msgstr "ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത�
 msgid "Copy"
 msgstr "പകർത്തുക"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "സൈൻ-ഇൻ അംഗീകരിക്കാൻ കഴിഞ്ഞില്ല"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "റദ്ദാക്കാൻ കഴിഞ്ഞില്ല"
@@ -762,6 +791,11 @@ msgstr "ഈ ഡോക്യുമെന്റ് ലോഡ് ചെയ്യാ
 msgid "Could not reactivate your account"
 msgstr "നിങ്ങളുടെ അക്കൗണ്ട് വീണ്ടും സജീവമാക്കാനായില്ല"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "സൈൻ-ഇൻ നിരസിക്കാൻ കഴിഞ്ഞില്ല"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "നിങ്ങളുടെ {initial}, {last} എന്നിവ നൽ�
 msgid "Enter your authenticator code"
 msgstr "നിങ്ങളുടെ ഓതെന്റിക്കേറ്റർ കോഡ് നൽകുക"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} ഉപയോഗിച്ച് സൈൻ ഇൻ പൂർത്തിയാക്കാൻ നിങ്ങളുടെ ഇമെയിൽ വിലാസം നൽകുക."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "നിങ്ങളുടെ ഇമെയിൽ കോഡും ഓതന്റിക്കേറ്റർ കോഡും നൽകുക"
@@ -1249,6 +1288,14 @@ msgstr "നിരീക്ഷണം അപ്‌ഡേറ്റ് ചെയ്�
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "അറ്റാച്ച്മെന്റ് അപ്‌ലോഡ് ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "ഫീഡ്"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "അസാധുവായ വീണ്ടെടുക്കൽ കോഡ�
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "അസാധുവായ സ്ഥിരീകരണ കോഡ്"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "ഇതിന് നിങ്ങളുടെ അക്കൗണ്ട് വായിക്കാനും അതിന്റെ പേരിൽ പോസ്റ്റ് ചെയ്യാനും കഴിയും."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "ഇതിന് നിങ്ങളുടെ അക്കൗണ്ട് വായിക്കാൻ കഴിയും."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "നിങ്ങളെ ഡാഷ്ബോർഡിലേക്ക് റ�
 msgid "Reduce interest"
 msgstr "താൽപ്പര്യം കുറയ്ക്കുക"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "നിരസിക്കുക"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total}-ൽ {totalShown} കാണിക്കുന്നു"
 msgid "Sidebar"
 msgstr "സൈഡ്ബാർ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "നിങ്ങളുടെ അക്കൗണ്ടിലേക്ക് സൈൻ ഇൻ ചെയ്യുക"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "ഈ വിഭവത്തിലേക്ക് ആക്‌സസ് ഉള്ള ഒരു അക്കൗണ്ട് ഉപയോഗിച്ച് <0/> സൈൻ ഇൻ ചെയ്യുക."
@@ -2705,6 +2768,10 @@ msgstr "ഈ ബാക്കപ്പ് Mochi-ന്റെ ഒരു പുത�
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ഇത് ഗെയിമും അതിന്റെ ചാറ്റും ശാശ്വതമായി ഇല്ലാതാക്കും. ഈ പ്രവർത്തി പഴയപടിയാക്കാൻ കഴിയില്ല."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "ഈ സൈൻ-ഇൻ അഭ്യർത്ഥനയുടെ കാലാവധി കഴിഞ്ഞു, അല്ലെങ്കിൽ ഇതിന് ഇതിനകം മറുപടി നൽകിയിട്ടുണ്ട്."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "ഞങ്ങൾ <0>{0}</0> എന്നതിലേക്ക് ഒര�
 msgid "Wednesday"
 msgstr "ബുധനാഴ്ച"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "ഈ ആപ്പിൽ നിന്ന് ഉണ്ടാക്കുന്ന പോസ്റ്റുകൾ എവിടേക്കാണ് പോകേണ്ടത്?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "വിക്കികൾ"
@@ -2963,6 +3034,10 @@ msgstr "വിക്കികൾ"
 msgid "Wrong passphrase"
 msgstr "തെറ്റായ രഹസ്യ വാക്യം"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "വർഷം"
@@ -2970,6 +3045,10 @@ msgstr "വർഷം"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "ഈ വിഭാഗത്തിലേക്ക് നിങ്ങൾക്ക് പ്രവേശനമില്ല."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "ഈ നെറ്റ്‌വർക്കിൽ നിങ്ങൾക്ക് അക്കൗണ്ട് ഇല്ല. ആദ്യം ക്രമീകരണങ്ങളിൽ ഒരു ഉപയോക്തൃനാമം റിസർവ് ചെയ്യുക."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "നിങ്ങളുടെ അക്കൗണ്ട് {source} ൽ ന
 msgid "Your attachments will be lost."
 msgstr "നിങ്ങളുടെ അറ്റാച്ചുമെന്റുകൾ നഷ്ടപ്പെടും."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "നിങ്ങളുടെ Bluesky ഉപയോക്തൃനാമം"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "നിങ്ങളുടെ ഡേറ്റ ബാക്കപ്പിൽ നിന്ന് പുനഃസ്ഥാപിക്കപ്പെടുന്നു. ഈ വിൻഡോ അടയ്ക്കരുത്."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "നിങ്ങളുടെ Mastodon സെർവർ"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

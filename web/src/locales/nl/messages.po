@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# bestand meer niet weergegeven} other {# besta
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Menu openen (# ongelezen melding)} other {Menu openen (# ongelezen meldingen)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> vraagt om in te loggen op je {1}-account."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 uur"
@@ -134,6 +140,11 @@ msgstr "12 uur"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 uur"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Een nieuwe feed met de naam {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Toegang geweigerd"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Toegangsniveau"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Account"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Een account met deze identiteit bestaat hier al."
 msgid "An error occurred"
 msgstr "Er is een fout opgetreden"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Een bestaande openbare feed"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Iedereen die is ingelogd"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Alles wat op deze feed is geabonneerd, ontvangt deze niet meer. Je kunt daarna een nieuwe URL kopiëren."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Goedkeuren"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Avatar voor {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Terug"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Contextuele informatie en details."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Doorgaan"
@@ -745,6 +770,10 @@ msgstr "Gekopieerd naar klembord"
 msgid "Copy"
 msgstr "Kopiëren"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Kan de aanmelding niet goedkeuren"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Annuleren mislukt"
@@ -762,6 +791,11 @@ msgstr "Kan dit document niet laden. Probeer het later opnieuw."
 msgid "Could not reactivate your account"
 msgstr "Kan uw account niet heractiveren"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Kan de aanmelding niet weigeren"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Voer je {initial} en {last} in"
 msgid "Enter your authenticator code"
 msgstr "Voer je authenticatorcode in"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Voer je e-mailadres in om het inloggen met {0} te voltooien."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Voer je e-mailcode en authenticatorcode in"
@@ -1249,6 +1288,14 @@ msgstr "Kan volgen niet bijwerken"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Bijlage uploaden mislukt"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Feed"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Ongeldige herstelcode"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Ongeldige verificatiecode"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "De app mag je account lezen en namens het account posten."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "De app mag je account lezen."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Je wordt doorgestuurd naar het dashboard…"
 msgid "Reduce interest"
 msgstr "Interesse verminderen"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Weigeren"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Toont {totalShown} van {total}"
 msgid "Sidebar"
 msgstr "Zijbalk"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Inloggen op je account"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Meld je aan met een account dat toegang heeft <0/> tot deze bron."
@@ -2705,6 +2768,10 @@ msgstr "Deze back-up is gemaakt door een nieuwere versie van Mochi. Werk deze se
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Hierdoor worden het spel en de bijbehorende chat permanent verwijderd. Deze actie kan niet ongedaan worden gemaakt."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Dit aanmeldverzoek is verlopen of al beantwoord."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "We hebben een verificatiecode naar <0>{0}</0> gestuurd. Voer de code hie
 msgid "Wednesday"
 msgstr "Woensdag"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Waar moeten posts uit deze app terechtkomen?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki's"
@@ -2963,6 +3034,10 @@ msgstr "Wiki's"
 msgid "Wrong passphrase"
 msgstr "Verkeerde wachtzin"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Jaar"
@@ -2970,6 +3045,10 @@ msgstr "Jaar"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Je hebt geen toegang tot dit onderdeel."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Je hebt geen account op dit netwerk. Reserveer eerst een gebruikersnaam in Instellingen."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Uw account is hier naartoe verplaatst van {source}. Totdat u het daar ve
 msgid "Your attachments will be lost."
 msgstr "Je bijlagen gaan verloren."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Je Bluesky-gebruikersnaam"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Uw gegevens worden hersteld vanuit de back-up. Sluit dit venster niet."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Je Mastodon-server"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

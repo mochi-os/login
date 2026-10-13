@@ -127,6 +127,12 @@ msgstr "{truncated, plural, other {နောက်ထပ်ဖိုင် # ခ
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, other {မီနူးဖွင့်ရန် (မဖတ်ရသေးသော အကြောင်းကြားချက် # ခု)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> က သင်၏ {1} အကောင့်သို့ ဝင်ရောက်ရန် တောင်းဆိုနေသည်။"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "၁၂ နာရီ"
@@ -134,6 +140,11 @@ msgstr "၁၂ နာရီ"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "၂၄ နာရီ"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} အမည်ရှိ ဖိဒ်အသစ်"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "ဝင်ရောက်ခွင့် ငြင်းပယ်ခံ�
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "ဝင်ရောက်ခွင့်အဆင့်"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "အကောင့်"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "ဤ ကိုယ်ပိုင်အမှတ်အသား ဖြင�
 msgid "An error occurred"
 msgstr "အမှားတစ်ခု ဖြစ်ပွားခဲ့သည်"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "ရှိပြီးသား အများသုံး ဖိဒ်"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "ဝင်ရောက်ထားသူ မည်သူမဆို"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "ဤဖိဒ်ကို စာရင်းသွင်းထားသည့် အရာအားလုံး လက်ခံရရှိမှု ရပ်တန့်ပါမည်။ ထို့နောက် URL အသစ်ကို ကူးယူနိုင်ပါသည်။"
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "အတည်ပြုမည်"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} အတွက် အသွင်ပုံ"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "နောက်သို့"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "ဆက်စပ်အချက်အလက်နှင့် အသေးစိတ်များ။"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "ဆက်လက်လုပ်ဆောင်မည်"
@@ -745,6 +770,10 @@ msgstr "ကလစ်ဘုတ်သို့ ကူးပြီး"
 msgid "Copy"
 msgstr "ကူးမည်"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "ဝင်ရောက်ခြင်းကို အတည်ပြု၍ မရပါ"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "ဖျက်သိမ်း၍ မရပါ"
@@ -762,6 +791,11 @@ msgstr "ဤစာရွက်စာတမ်းကို ဖွင့်၍ မ�
 msgid "Could not reactivate your account"
 msgstr "သင့်အကောင့်ကို ပြန်လည်အသက်သွင်း၍မရပါ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "ဝင်ရောက်ခြင်းကို ငြင်းပယ်၍ မရပါ"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "သင်၏ {initial} နှင့် {last} ကို ထည့်ပ�
 msgid "Enter your authenticator code"
 msgstr "သင့်အထောက်အထားစိစစ်ရေးကုဒ်ကို ထည့်ပါ"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} ဖြင့် ဝင်ရောက်ခြင်းကို အပြီးသတ်ရန် သင်၏ အီးမေးလ်လိပ်စာကို ထည့်ပါ။"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "သင်၏ အီးမေးလ်ကုဒ်နှင့် အထောက်အထားကုဒ်ကို ထည့်ပါ"
@@ -1249,6 +1288,14 @@ msgstr "စောင့်ကြည့်မှု အပ်ဒိတ်လု�
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "တွဲဖက်ဖိုင် တင်၍ မရပါ"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "ဖိဒ်"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "မမှန်ကန်သော ပြန်လည်ရယူရေ�
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "မမှန်ကန်သော အတည်ပြု ကုဒ်"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "၎င်းသည် သင်၏အကောင့်ကို ဖတ်နိုင်ပြီး ထိုအကောင့်အမည်ဖြင့် ပို့စ်တင်နိုင်သည်။"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "၎င်းသည် သင်၏အကောင့်ကို ဖတ်နိုင်သည်။"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "ဒက်ရှ်ဘုတ် သို့ လမ်းကြောင�
 msgid "Reduce interest"
 msgstr "စိတ်ဝင်စားမှု လျှော့ချ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "ငြင်းပယ်မည်"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total} ထဲမှ {totalShown} ကို ပြသနေသည်"
 msgid "Sidebar"
 msgstr "ဘေးဘား"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "သင်၏အကောင့်သို့ ဝင်ရောက်ပါ"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "ဤအရင်းအမြစ်ကို ဝင်ရောက်ခွင့်ရှိသော အကောင့်ဖြင့် <0/> ဝင်ရောက်ပါ။"
@@ -2705,6 +2768,10 @@ msgstr "ဤ အရန် ကို Mochi ၏ သစ်သောဗားရှ�
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ဤလုပ်ဆောင်ချက်သည် ဂိမ်းနှင့် ၎င်း၏ ချတ်ကို အပြီးအပိုင် ဖျက်ပစ်မည်ဖြစ်သည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြောင်း၍မရပါ။"
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "ဤဝင်ရောက်ရန် တောင်းဆိုချက် သက်တမ်းကုန်သွားပြီ သို့မဟုတ် ဖြေကြားပြီးဖြစ်သည်။"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "<0>{0}</0> သို့ အတည်ပြုကုဒ် ပို့�
 msgid "Wednesday"
 msgstr "ဗုဒ္ဓဟူး"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "ဤအက်ပ်မှ ပြုလုပ်သော ပို့စ်များကို မည်သည့်နေရာသို့ ပို့ရမလဲ?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikis"
@@ -2963,6 +3034,10 @@ msgstr "Wikis"
 msgid "Wrong passphrase"
 msgstr "စကားဝှက်စာတန်း မှားသည်"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "နှစ်"
@@ -2970,6 +3045,10 @@ msgstr "နှစ်"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "ဤအပိုင်းသို့ သင့်တွင် ဝင်ရောက်ခွင့်မရှိပါ။"
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "ဤကွန်ရက်တွင် သင့်အကောင့် မရှိပါ။ ဆက်တင်များတွင် သုံးစွဲသူအမည်ကို ဦးစွာ ကြိုတင်ယူပါ။"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "သင်၏အကောင့်ကို {source} မှ ဤနေရ�
 msgid "Your attachments will be lost."
 msgstr "သင့်ပူးတွဲဖိုင်များ ပျောက်ဆုံးသွားပါမည်။"
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "သင်၏ Bluesky သုံးစွဲသူအမည်"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "သင်၏ ဒေတာကို အရန် မှ ပြန်လည်ရယူနေသည်။ ဤဝင်းဒိုးကို မပိတ်ပါနှင့်။"
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "သင်၏ Mastodon ဆာဗာ"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

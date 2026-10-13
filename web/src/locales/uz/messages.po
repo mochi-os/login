@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Yana # fayl koʻrsatilmadi} other {Yana # fayl 
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Menyuni ochish (# o'qilmagan bildirishnoma)} other {Menyuni ochish (# o'qilmagan bildirishnoma)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> {1} hisobingizga kirishga ruxsat soʻramoqda."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 soat"
@@ -134,6 +140,11 @@ msgstr "12 soat"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 soat"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} nomli yangi tasma"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Kirish rad etildi"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Kirish darajasi"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Hisob"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Bu shaxsiyat bilan hisob allaqachon mavjud."
 msgid "An error occurred"
 msgstr "Xatolik yuz berdi"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Mavjud ommaviy tasma"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Tizimga kirgan har kim"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Bu tasmaga obuna boʻlgan hamma narsa uni olishni toʻxtatadi. Keyin yangi URL nusxalashingiz mumkin."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Tasdiqlash"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} uchun avatar"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Orqaga"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Kontekstli maʼlumotlar va tafsilotlar."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Davom etish"
@@ -745,6 +770,10 @@ msgstr "Buferga nusxalandi"
 msgid "Copy"
 msgstr "Nusxalash"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Kirishni tasdiqlab boʻlmadi"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Bekor qilib boʻlmadi"
@@ -762,6 +791,11 @@ msgstr "Bu hujjatni yuklab boʻlmadi. Iltimos, keyinroq qayta urinib koʻring."
 msgid "Could not reactivate your account"
 msgstr "Hisobingizni qayta faollashtirib bo'lmadi"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Kirishni rad etib boʻlmadi"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "{initial} va {last} ni kiriting"
 msgid "Enter your authenticator code"
 msgstr "Autentifikator kodingizni kiriting"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} orqali kirishni yakunlash uchun email manzilingizni kiriting."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Email kodingizni va autentifikator kodingizni kiriting"
@@ -1249,6 +1288,14 @@ msgstr "Kuzatuvni yangilab bo'lmadi"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Ilovani yuklab boʻlmadi"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Tasma"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Notoʻgʻri tiklash kodi"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Notoʻgʻri tasdiqlash kodi"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "U hisobingizni oʻqiy oladi va uning nomidan post joylay oladi."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "U hisobingizni oʻqiy oladi."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Sizni boshqaruv paneliga yoʻnaltirmoqdamiz…"
 msgid "Reduce interest"
 msgstr "Qiziqishni kamaytirish"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Rad etish"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total} dan {totalShown} koʻrsatilmoqda"
 msgid "Sidebar"
 msgstr "Yon panel"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Hisobingizga kiring"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Bu resursga <0/> kirish huquqiga ega hisob bilan kiring."
@@ -2705,6 +2768,10 @@ msgstr "Bu zaxira nusxa Mochi-ning yangi versiyasi tomonidan yaratilgan. Avval u
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Bu oʻyin va uning chatini butunlay oʻchirib tashlaydi. Bu amalni bekor qilib boʻlmaydi."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Bu kirish soʻrovining muddati tugagan yoki unga allaqachon javob berilgan."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Biz <0>{0}</0> manziliga tasdiqlash kodini yubordik. Elektron pochta man
 msgid "Wednesday"
 msgstr "Chorshanba"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Bu ilovadan yaratilgan postlar qayerga borsin?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki’lar"
@@ -2963,6 +3034,10 @@ msgstr "Wiki’lar"
 msgid "Wrong passphrase"
 msgstr "Noto'g'ri parol iborasi"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Yil"
@@ -2970,6 +3045,10 @@ msgstr "Yil"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Bu boʻlimga kirish huquqingiz yoʻq."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Bu tarmoqda hisobingiz yoʻq. Avval Sozlamalarda taxallus band qiling."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Hisobingiz {source} dan bu yerga ko'chirildi. U yerdan o'chirmaguncha, x
 msgid "Your attachments will be lost."
 msgstr "Biriktirmalaringiz yo‘qoladi."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Bluesky taxallusingiz"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Ma'lumotlaringiz zaxira nusxadan tiklanmoqda. Bu oynani yopmang."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Mastodon serveringiz"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

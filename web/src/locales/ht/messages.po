@@ -127,6 +127,12 @@ msgstr "{truncated, plural, other {# lòt fichye pa parèt}}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, other {Louvri meni (# notifikasyon ki poko li)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> mande pou konekte nan kont {1} ou."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 èdtan"
@@ -134,6 +140,11 @@ msgstr "12 èdtan"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 èdtan"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Yon nouvo fil ki rele {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Aksè refize"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Nivo aksè"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Kont"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Yon kont ak idantite sa a deja egziste isit la."
 msgid "An error occurred"
 msgstr "Yon erè te rive"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Yon fil piblik ki egziste deja"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Nenpòt moun ki konekte"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Tout sa ki abòne nan fil sa a ap sispann resevwa l. Ou ka kopye yon nouvo URL apre."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Apwouve"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Avata pou {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Retounen"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Enfòmasyon ak detay kontèks."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Kontinye"
@@ -745,6 +770,10 @@ msgstr "Kopye nan clipboard"
 msgid "Copy"
 msgstr "Kopye"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Pa t kapab apwouve koneksyon an"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Pa t kapab anile"
@@ -762,6 +791,11 @@ msgstr "Pa t kapab chaje dokiman sa a. Tanpri eseye ankò pita."
 msgid "Could not reactivate your account"
 msgstr "Nou pa t kapab reaktive kont ou an"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Pa t kapab refize koneksyon an"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Antre {initial} ak {last} ou"
 msgid "Enter your authenticator code"
 msgstr "Antre kòd otantifikatè ou"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Antre adrès imèl ou pou fini konekte ak {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Antre kòd imèl ou ak kòd otantifikatè ou"
@@ -1249,6 +1288,14 @@ msgstr "Echèk mizajou siveyans"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Echwe pou telechaje atachman"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Fil"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Kòd rekiperasyon envalid"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Kòd verifikasyon envalid"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Li ka li kont ou epi pibliye nan non kont lan."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Li ka li kont ou."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Ap redirije ou nan dashboard la…"
 msgid "Reduce interest"
 msgstr "Diminye enterè"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Refize"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Ap montre {totalShown} nan {total}"
 msgid "Sidebar"
 msgstr "Ba sou kote"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Konekte nan kont ou"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Konekte ak yon kont ki gen aksè <0/> a resous sa a."
@@ -2705,6 +2768,10 @@ msgstr "Kopi sa a te kreye pa yon vèsyon pi resan Mochi. Mete jou sèvè sa a a
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Sa a ap efase jwèt la ak chat li pou tout tan. Aksyon sa a pa ka anile."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Demann koneksyon sa a ekspire oswa yo te deja reponn li."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Nou voye yon kòd verifikasyon nan <0>{0}</0>. Antre kòd la anba a pou 
 msgid "Wednesday"
 msgstr "Mèkredi"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Ki kote piblikasyon ki fèt nan aplikasyon sa a dwe ale?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -2963,6 +3034,10 @@ msgstr "Wiki"
 msgid "Wrong passphrase"
 msgstr "Fraz sekrè mal"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Ane"
@@ -2970,6 +3045,10 @@ msgstr "Ane"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Ou pa gen aksè nan seksyon sa a."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Ou pa gen kont sou rezo sa a. Rezève yon non itilizatè nan Paramèt anvan."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Kont ou te deplase isit la depi {source}. Jiskaske ou efase li la, mesaj
 msgid "Your attachments will be lost."
 msgstr "Fichye ou tache yo ap pèdi."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Non itilizatè Bluesky ou"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Done ou yo ap restabli soti nan kopi a. Pa fèmen fenèt sa a."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Sèvè Mastodon ou"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

@@ -33,12 +33,21 @@ export interface VerifyCodeResponse {
   remaining?: string[]
 }
 
-export type OAuthProvider = 'facebook' | 'github' | 'google' | 'microsoft' | 'x'
+export type OAuthProvider =
+  | 'bluesky'
+  | 'facebook'
+  | 'github'
+  | 'google'
+  | 'mastodon'
+  | 'microsoft'
+  | 'x'
 
 interface OAuthProvidersEnabled {
+  bluesky?: boolean
   facebook: boolean
   github: boolean
   google: boolean
+  mastodon?: boolean
   microsoft: boolean
   x: boolean
 }
@@ -57,6 +66,9 @@ export interface OAuthBeginRequest {
   // Set on the email-login verification step: binds the OAuth sign-in to the
   // typed account so the callback rejects a different one.
   email?: string
+  // A Mastodon sign-in names the account's server; a Bluesky one its handle.
+  server?: string
+  handle?: string
 }
 
 export interface OAuthBeginResponse {

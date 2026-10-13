@@ -9,6 +9,7 @@ import {
   oauthEnabled,
   oauthProviderKeys,
   oauthProviders,
+  providerAsks,
   startOauth,
 } from './oauth-providers'
 
@@ -33,8 +34,10 @@ vi.mock('@/api/auth', () => ({
   authApi: { oauthBegin: (...args: unknown[]) => oauthBegin(...args) },
 }))
 vi.mock('@/features/auth/components/brand-icons', () => ({
+  BlueskyIcon: () => null,
   FacebookIcon: () => null,
   GoogleIcon: () => null,
+  MastodonIcon: () => null,
   MicrosoftIcon: () => null,
   XIcon: () => null,
 }))
@@ -50,12 +53,14 @@ const methods = (
 })
 
 describe('oauthProviders', () => {
-  it('lists the five providers alphabetically with their brand names', () => {
+  it('lists the seven providers alphabetically with their brand names', () => {
     expect(oauthProviders.map((p) => p.key)).toEqual([...oauthProviderKeys])
     expect(oauthProviders.map((p) => p.label)).toEqual([
+      'Bluesky',
       'Facebook',
       'GitHub',
       'Google',
+      'Mastodon',
       'Microsoft',
       'X',
     ])
@@ -111,6 +116,51 @@ describe('startOauth', () => {
     expect(oauthBegin).toHaveBeenLastCalledWith('google', {
       target: '/feeds/',
       email: undefined,
+    })
+  })
+
+  it('offers the two networks when the server lists them', () => {
+    const methods: AuthMethodsResponse = {
+      email: true,
+      passkey: false,
+      recovery: false,
+      signup: true,
+      oauth: {
+        bluesky: true,
+        facebook: false,
+        github: false,
+        google: false,
+        mastodon: true,
+        microsoft: false,
+        x: false,
+      },
+    }
+    expect([...oauthEnabled(methods)].sort()).toEqual(['bluesky', 'mastodon'])
+    expect(oauthProviders.map((p) => p.key)).toEqual([...oauthProviderKeys])
+  })
+
+  it('asks a network provider for its server or handle, and no other', () => {
+    expect(providerAsks('mastodon')).toBe('server')
+    expect(providerAsks('bluesky')).toBe('handle')
+    expect(providerAsks('google')).toBeNull()
+  })
+
+  it('passes the server or handle to begin', async () => {
+    oauthBegin.mockResolvedValue({ url: 'https://mastodon.example/oauth/authorize?x' })
+    await startOauth('mastodon', { server: 'mastodon.example' })
+    expect(oauthBegin).toHaveBeenCalledWith('mastodon', {
+      target: '/',
+      email: undefined,
+      server: 'mastodon.example',
+      handle: undefined,
+    })
+    oauthBegin.mockResolvedValue({ url: 'https://pds.example/oauth/authorize?y' })
+    await startOauth('bluesky', { handle: 'alice.example', redirect: '/feeds/' })
+    expect(oauthBegin).toHaveBeenLastCalledWith('bluesky', {
+      target: '/feeds/',
+      email: undefined,
+      server: undefined,
+      handle: 'alice.example',
     })
   })
 })

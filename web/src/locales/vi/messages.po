@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Còn # tệp nữa không hiển thị} other {
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Mở menu (# thông báo chưa đọc)} other {Mở menu (# thông báo chưa đọc)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> yêu cầu đăng nhập vào tài khoản {1} của bạn."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 giờ"
@@ -134,6 +140,11 @@ msgstr "12 giờ"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 giờ"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Nguồn cấp mới có tên {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Truy cập bị từ chối"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Cấp độ truy cập"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Tài khoản"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Tài khoản với danh tính này đã tồn tại ở đây."
 msgid "An error occurred"
 msgstr "Đã xảy ra lỗi"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Nguồn cấp công khai hiện có"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Bất kỳ ai đã đăng nhập"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Mọi thứ đã đăng ký nguồn cấp này sẽ ngừng nhận. Bạn có thể sao chép URL mới sau đó."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Phê duyệt"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Ảnh đại diện của {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Quay lại"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Thông tin và chi tiết theo ngữ cảnh."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Tiếp tục"
@@ -745,6 +770,10 @@ msgstr "Đã sao chép vào bộ nhớ tạm"
 msgid "Copy"
 msgstr "Sao chép"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Không thể phê duyệt đăng nhập"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Không thể hủy"
@@ -762,6 +791,11 @@ msgstr "Không thể tải tài liệu này. Vui lòng thử lại sau."
 msgid "Could not reactivate your account"
 msgstr "Không thể kích hoạt lại tài khoản của bạn"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Không thể từ chối đăng nhập"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Nhập {initial} và {last} của bạn"
 msgid "Enter your authenticator code"
 msgstr "Nhập mã từ ứng dụng xác thực của bạn"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Nhập địa chỉ email của bạn để hoàn tất đăng nhập bằng {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Nhập mã email và mã xác thực của bạn"
@@ -1249,6 +1288,14 @@ msgstr "Không thể cập nhật theo dõi"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Không tải tệp đính kèm lên được"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Nguồn cấp"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Mã khôi phục không hợp lệ"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Mã xác minh không hợp lệ"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Ứng dụng có thể đọc tài khoản của bạn và đăng bài dưới danh nghĩa tài khoản đó."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Ứng dụng có thể đọc tài khoản của bạn."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Đang chuyển hướng bạn đến bảng điều khiển…"
 msgid "Reduce interest"
 msgstr "Giảm sự quan tâm"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Từ chối"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Đang hiển thị {totalShown} trên {total}"
 msgid "Sidebar"
 msgstr "Thanh bên"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Đăng nhập vào tài khoản của bạn"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Hãy đăng nhập bằng tài khoản có quyền truy cập <0/> vào tài nguyên này."
@@ -2705,6 +2768,10 @@ msgstr "Bản sao lưu này được tạo bởi phiên bản mới hơn của M
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Thao tác này sẽ xóa vĩnh viễn trận đấu và cuộc trò chuyện của nó. Không thể hoàn tác thao tác này."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Yêu cầu đăng nhập này đã hết hạn hoặc đã được trả lời."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Chúng tôi đã gửi mã xác minh đến <0>{0}</0>. Nhập mã bên 
 msgid "Wednesday"
 msgstr "Thứ tư"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Bài viết tạo từ ứng dụng này nên được đăng vào đâu?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -2963,6 +3034,10 @@ msgstr "Wiki"
 msgid "Wrong passphrase"
 msgstr "Cụm mật khẩu sai"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Năm"
@@ -2970,6 +3045,10 @@ msgstr "Năm"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Bạn không có quyền truy cập vào phần này."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Bạn chưa có tài khoản trên mạng này. Hãy đặt trước một biệt danh trong Cài đặt."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Tài khoản của bạn đã được chuyển đến đây từ {sourc
 msgid "Your attachments will be lost."
 msgstr "Tệp đính kèm của bạn sẽ bị mất."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Biệt danh Bluesky của bạn"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Dữ liệu của bạn đang được khôi phục từ bản sao lưu. Đừng đóng cửa sổ này."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Máy chủ Mastodon của bạn"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

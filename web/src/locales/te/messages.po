@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {మరో # ఫైల్ చూపబడలే�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {మెనూ తెరవండి (# చదవని నోటిఫికేషన్)} other {మెనూ తెరవండి (# చదవని నోటిఫికేషన్‌లు)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> మీ {1} ఖాతాకు సైన్ ఇన్ చేయడానికి అనుమతి అడుగుతోంది."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 గంటలు"
@@ -134,6 +140,11 @@ msgstr "12 గంటలు"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 గంటలు"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} అనే పేరుతో కొత్త ఫీడ్"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "యాక్సెస్ నిరాకరించబడింది"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "యాక్సెస్ స్థాయి"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "ఖాతా"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "ఈ గుర్తింపుతో ఒక అకౌంట్ ఇక�
 msgid "An error occurred"
 msgstr "లోపం సంభవించింది"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "ఇప్పటికే ఉన్న పబ్లిక్ ఫీడ్"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "లాగిన్ అయిన ఎవరైనా"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "ఈ ఫీడ్‌కు సభ్యత్వం పొందిన ప్రతిదీ దాన్ని స్వీకరించడం ఆపేస్తుంది. ఆ తర్వాత మీరు కొత్త URLని కాపీ చేయవచ్చు."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "ఆమోదించండి"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} కోసం అవతార్"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "వెనుకకు"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "సందర్భోచిత సమాచారం మరియు వివరాలు."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "కొనసాగించండి"
@@ -745,6 +770,10 @@ msgstr "క్లిప్‌బోర్డ్‌కి కాపీ చేయ�
 msgid "Copy"
 msgstr "కాపీ చేయండి"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "సైన్-ఇన్‌ను ఆమోదించలేకపోయింది"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "రద్దు చేయలేకపోయింది"
@@ -762,6 +791,11 @@ msgstr "ఈ పత్రాన్ని లోడ్ చేయలేకపోయ
 msgid "Could not reactivate your account"
 msgstr "మీ ఖాతాను తిరిగి సక్రియం చేయడం సాధ్యం కాలేదు"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "సైన్-ఇన్‌ను నిరాకరించలేకపోయింది"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "మీ {initial} మరియు {last}ని నమోదు చేయ�
 msgid "Enter your authenticator code"
 msgstr "మీ ప్రమాణీకరణ కోడ్‌ను నమోదు చేయండి"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} తో సైన్ ఇన్ పూర్తి చేయడానికి మీ ఇమెయిల్ చిరునామాను నమోదు చేయండి."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "మీ ఇమెయిల్ కోడ్ మరియు ప్రామాణీకరణ కోడ్‌ను నమోదు చేయండి"
@@ -1249,6 +1288,14 @@ msgstr "పర్యవేక్షణ నవీకరించడంలో వ�
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "జోడింపును అప్‌లోడ్ చేయడంలో విఫలమైంది"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "ఫీడ్"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "చెల్లని రికవరీ కోడ్"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "చెల్లని ధృవీకరణ కోడ్"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "ఇది మీ ఖాతాను చదవగలదు మరియు దాని పేరుతో పోస్ట్ చేయగలదు."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "ఇది మీ ఖాతాను చదవగలదు."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "మిమ్మల్ని డ్యాష్‌బోర్డ్‌�
 msgid "Reduce interest"
 msgstr "ఆసక్తిని తగ్గించండి"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "నిరాకరించండి"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total}లో {totalShown} చూపిస్తోంది"
 msgid "Sidebar"
 msgstr "సైడ్‌బార్"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "మీ ఖాతాకు సైన్ ఇన్ చేయండి"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "ఈ వనరుకు ప్రాప్యత <0/> ఉన్న ఖాతాతో సైన్ ఇన్ చేయండి."
@@ -2705,6 +2768,10 @@ msgstr "ఈ బ్యాకప్ Mochi యొక్క కొత్త వె�
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ఇది గేమ్‌ను మరియు దాని చాట్‌ను శాశ్వతంగా తొలగిస్తుంది. ఈ చర్యను తిరిగి మార్చలేరు."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "ఈ సైన్-ఇన్ అభ్యర్థన గడువు ముగిసింది లేదా ఇప్పటికే సమాధానం ఇవ్వబడింది."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "మేము <0>{0}</0> కు ధృవీకరణ కోడ్‌న�
 msgid "Wednesday"
 msgstr "బుధవారం"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "ఈ యాప్ నుండి చేసిన పోస్ట్‌లు ఎక్కడికి వెళ్ళాలి?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikiలు"
@@ -2963,6 +3034,10 @@ msgstr "Wikiలు"
 msgid "Wrong passphrase"
 msgstr "తప్పుడు పాస్‌ఫ్రేజ్"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "సంవత్సరం"
@@ -2970,6 +3045,10 @@ msgstr "సంవత్సరం"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "ఈ విభాగానికి మీకు యాక్సెస్ లేదు."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "ఈ నెట్‌వర్క్‌లో మీకు ఖాతా లేదు. ముందుగా సెట్టింగ్‌లలో ఒక హ్యాండిల్‌ను రిజర్వ్ చేయండి."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "మీ ఖాతా {source} నుండి ఇక్కడికి �
 msgid "Your attachments will be lost."
 msgstr "మీ జోడింపులు పోతాయి."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "మీ Bluesky హ్యాండిల్"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "మీ డేటా బ్యాకప్ నుండి పునరుద్ధరించబడుతోంది. ఈ విండో మూయవద్దు."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "మీ Mastodon సర్వర్"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

@@ -10,13 +10,17 @@
   "paths": ["login"],
 
   "architecture": {"engine": "starlark", "version": 4},
-  "execute": ["login.star"],
+  "execute": ["login.star", "consent.star"],
 
   "actions": {
     "": {"file": "web/dist/index.html", "public": true, "opengraph": "opengraph_landing"},
     "assets": {"files": "web/dist/assets", "public": true},
     "images": {"files": "web/dist/images", "public": true},
 
-    "-/document/get": {"function": "action_document_get", "public": true}
+    "-/document/get": {"function": "action_document_get", "public": true},
+
+    "-/oauth/consent/request": {"function": "action_oauth_consent_request"},
+    "-/oauth/consent/approve": {"function": "action_oauth_consent_approve"},
+    "-/oauth/consent/refuse": {"function": "action_oauth_consent_refuse"}
   }
 }

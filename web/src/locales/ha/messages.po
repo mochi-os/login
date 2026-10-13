@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Ba a nuna ƙarin fayil # ba} other {Ba a nuna �
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Buɗe menu (# sanarwar da ba a karanta ba)} other {Buɗe menu (# sanarwar da ba a karanta ba)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> yana neman shiga asusunka na {1}."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "Awa 12"
@@ -134,6 +140,11 @@ msgstr "Awa 12"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "Awa 24"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Sabon jerin labarai mai suna {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "An hana shiga"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Matakin shiga"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Asusu"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Akwai asusun da wannan suna a nan."
 msgid "An error occurred"
 msgstr "An samu kuskure"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Jerin labarai na jama'a da ke akwai"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Duk wanda ya shiga"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Duk abin da ya biyan kuɗin wannan ciyarwar zai daina karɓarta. Za ka iya kwafi sabon URL bayan haka."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Amince"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Avatar na {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Komawa"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Bayanan da suka shafi mahallin da cikakkun bayanai."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Ci gaba"
@@ -745,6 +770,10 @@ msgstr "An kwafi zuwa clipboard"
 msgid "Copy"
 msgstr "Kwafi"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Ba a iya amincewa da shigan ba"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Ba a iya soke ba"
@@ -762,6 +791,11 @@ msgstr "Ba a iya loda wannan takarda ba. Da fatan a sake gwadawa daga baya."
 msgid "Could not reactivate your account"
 msgstr "An kasa sake kunna asusunka"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Ba a iya ƙin shigan ba"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Shigar da {initial} da {last} ɗin ka"
 msgid "Enter your authenticator code"
 msgstr "Shigar da lambar mai tantancewarka"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Shigar da adireshin imel ɗinka don kammala shiga da {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Shigar da email code da authenticator code ɗinka"
@@ -1249,6 +1288,14 @@ msgstr "An kasa sabunta sa ido"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "An gaza upload attachment"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Jerin labarai"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Recovery code mara inganci"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Verification code mara inganci"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Zai iya karanta asusunka kuma ya wallafa a madadinsa."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Zai iya karanta asusunka."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Ana kai ka zuwa dashboard…"
 msgid "Reduce interest"
 msgstr "Rage sha'awa"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Ƙi"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Ana nuna {totalShown} daga {total}"
 msgid "Sidebar"
 msgstr "Sandar gefe"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Shiga asusunka"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Shiga da asusun da ke da damar shiga <0/> wannan albarkatun."
@@ -2705,6 +2768,10 @@ msgstr "An ƙirƙiri wannan ajiyar ta sabuwar sigar Mochi. Da farko sabunta wann
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Wannan zai goge wasan da hirarsa har abada. Ba za a iya sokewa ba."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Wannan buƙatar shiga ta ƙare ko an riga an amsa ta."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Mun aika lambar tabbatarwa zuwa <0>{0}</0>. Shigar da lambar a ƙasa don
 msgid "Wednesday"
 msgstr "Laraba"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Ina ya kamata saƙonnin da aka wallafa daga wannan manhaja su tafi?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikis"
@@ -2963,6 +3034,10 @@ msgstr "Wikis"
 msgid "Wrong passphrase"
 msgstr "Kalmar sirri ba daidai ba"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Shekara"
@@ -2970,6 +3045,10 @@ msgstr "Shekara"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Ba ka da damar shiga wannan sashe ba."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Ba ka da asusu a wannan hanyar sadarwa. Ka keɓe sunan mai amfani a Saitunan tukuna."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "An ƙauri asusunka zuwa nan daga {source}. Sai ka goge shi a can, saƙon
 msgid "Your attachments will be lost."
 msgstr "Za a rasa fayilolin da ka makala."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Sunan mai amfaninka na Bluesky"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Ana maido da bayananku daga ajiyar. Kada ku rufe wannan taga."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Sabar Mastodon ɗinka"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

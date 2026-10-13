@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# huk archivo mana rikuchisqa} other {# huk arc
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Menuta kichay (# mana ñawinchasqa willakuy)} other {Menuta kichay (# mana ñawinchasqa willakuykuna)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> {1} cuentaykiman yaykuyta mañakun."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 hora"
@@ -134,6 +140,11 @@ msgstr "12 hora"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 hora"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Musuq feed {0} sutiyuq"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Yaykuy mana saqisqachu"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Yaykuy patachan"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Cuenta"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Kay identidadniyuq cuentaqa kaypi ñam kachkan."
 msgid "An error occurred"
 msgstr "Huk pantay rikurirqan"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Kaqña público feed"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Pipas yaykusqa"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Kay feed-ta suscribisqa tukuy imapas manaña chaskinqachu. Chaymanta musuq URL-ta copiayta atinki."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Aprobay"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} avatar"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Kutiy"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Contexto willariy hinaspa detallekuna."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Qatiy"
@@ -745,6 +770,10 @@ msgstr "Clipboard-man copiasqa"
 msgid "Copy"
 msgstr "Copiay"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Yaykuyta mana aprobay atirqachu"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Mana chinkachiyta atikurqanchu"
@@ -762,6 +791,11 @@ msgstr "Kay documentota mana cargayta atikurqanchu. Qhipaman kutimanta ruway."
 msgid "Could not reactivate your account"
 msgstr "Cuentaykita mana kutimanta activayta atikurqanchu"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Yaykuyta mana harkay atirqachu"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "{initial}-niykita hinaspa {last}-niykita qillqay"
 msgid "Enter your authenticator code"
 msgstr "Autenticador códigoykita qillqay"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Email direccionniykita qillqay, {0}-wan yaykuyta tukunaykipaq."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Email códigoykita autenticador códigoykitawan qillqay"
@@ -1249,6 +1288,14 @@ msgstr "Qatipayta mana musuqchayta atikurqanchu"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Mana adjuntota wichachiyta atinchu"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Feed"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Mana allin recuperación código"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Mana allin takyachiy código"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Cuentaykita ñawinchayta, paypa rantinpi qillqakunata churaytapas atinqa."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Cuentaykita ñawinchayta atinqa."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Panelman pusachkan…"
 msgid "Reduce interest"
 msgstr "Munayta pisichiy"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Harkay"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total}manta {totalShown} rikuchichkan"
 msgid "Sidebar"
 msgstr "Waqta barra"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Cuentaykiman yaykuy"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Kay recursoman <0/> yaykuyniyuq cuentawan yaykuy."
@@ -2705,6 +2768,10 @@ msgstr "Kay respaldoqa Mochipa aswan musuq versionninwan ruwasqa. Ñawpaqta kay 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Kayqa pukllayta rimanakuywantin wiñaypaq wischun. Kayqa mana kutichiy atikunchu."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Kay yaykuy mañakuyqa tukukunña utaq kutichisqañam."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "<0>{0}</0>-man huk takyachiy códigota apachirqayku. Email direccionniyk
 msgid "Wednesday"
 msgstr "Quyllurchaw"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Kay appmanta churasqa qillqakunaqa maymantaq rinan?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikikuna"
@@ -2963,6 +3034,10 @@ msgstr "Wikikuna"
 msgid "Wrong passphrase"
 msgstr "Pantasqa yaykuna rimay"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Wata"
@@ -2970,6 +3045,10 @@ msgstr "Wata"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Kay t'aqamanqa mana yaykuyta atinkichu."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Kay redpiqa mana cuentayki kanchu. Ñawpaqta Wakichiykunapi huk identificadorta reservay."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Cuentaykiqa {source}-manta kayman astasqa karqan. Chaypi manaraq wischuc
 msgid "Your attachments will be lost."
 msgstr "Adjuntoykikuna chinkanqa."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Bluesky identificadorniyki"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Datoykikuna respaldomanta kutichipuchkan. Ama kay ventanata wichq'aychu."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Mastodon servidorniyki"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

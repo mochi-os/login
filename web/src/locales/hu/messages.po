@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# további fájl nincs megjelenítve} other {# 
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Menü megnyitása (# olvasatlan értesítés)} other {Menü megnyitása (# olvasatlan értesítés)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> be szeretne jelentkezni az Ön {1}-fiókjába."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 óra"
@@ -134,6 +140,11 @@ msgstr "12 óra"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 óra"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Új hírcsatorna {0} néven"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Hozzáférés megtagadva"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Hozzáférési szint"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Fiók"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Ezzel az identitással már létezik fiók itt."
 msgid "An error occurred"
 msgstr "Hiba történt"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Egy meglévő nyilvános hírcsatorna"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Bárki, aki be van jelentkezve"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Minden, ami feliratkozott erre a hírcsatornára, nem kapja meg többé. Utána másolhat egy új URL-t."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Jóváhagyás"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} profilképe"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Vissza"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Kontextuális információk és részletek."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Folytatás"
@@ -745,6 +770,10 @@ msgstr "A vágólapra másolva"
 msgid "Copy"
 msgstr "Másolás"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Nem sikerült jóváhagyni a bejelentkezést"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "A visszavonás sikertelen"
@@ -762,6 +791,11 @@ msgstr "Nem sikerült betölteni ezt a dokumentumot. Kérjük, próbáld meg ké
 msgid "Could not reactivate your account"
 msgstr "Nem sikerült újraaktiválni a fiókját"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Nem sikerült elutasítani a bejelentkezést"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Adja meg a {initial} és {last} kódját"
 msgid "Enter your authenticator code"
 msgstr "Adja meg a hitelesítő kódját"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Adja meg az e-mail-címét, hogy befejezze a bejelentkezést ezzel: {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Adja meg az e-mail kódot és a hitelesítő kódot"
@@ -1249,6 +1288,14 @@ msgstr "A követés frissítése sikertelen"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Nem sikerült feltölteni a mellékletet"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverzum"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Hírcsatorna"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Érvénytelen helyreállítási kód"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Érvénytelen ellenőrző kód"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Olvashatja a fiókját, és a fiók nevében bejegyzéseket tehet közzé."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Olvashatja a fiókját."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Átirányítás az irányítópultra…"
 msgid "Reduce interest"
 msgstr "Érdeklődés csökkentése"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Elutasítás"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{totalShown} megjelenítve a következőből: {total}"
 msgid "Sidebar"
 msgstr "Oldalsáv"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Bejelentkezés a fiókjába"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Jelentkezzen be olyan fiókkal, amely hozzáfér <0/> ehhez az erőforráshoz."
@@ -2705,6 +2768,10 @@ msgstr "Ez a biztonsági mentés a Mochi újabb verziójával készült. Frissí
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Ez véglegesen törli a játékot és a hozzá tartozó csevegést. Ez a művelet nem vonható vissza."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Ez a bejelentkezési kérés lejárt, vagy már megválaszolták."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Küldtünk egy ellenőrző kódot ide: <0>{0}</0>. Adja meg a kódot al�
 msgid "Wednesday"
 msgstr "Szerda"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Hová kerüljenek az ebből az alkalmazásból készült bejegyzések?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikik"
@@ -2963,6 +3034,10 @@ msgstr "Wikik"
 msgid "Wrong passphrase"
 msgstr "Helytelen jelmondat"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Év"
@@ -2970,6 +3045,10 @@ msgstr "Év"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Nincs hozzáférése ehhez a részhez."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Nincs fiókja ezen a hálózaton. Előbb foglaljon le egy felhasználónevet a Beállításokban."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Fiókja ide lett áthelyezve innen: {source}. Amíg nem törli onnan, az
 msgid "Your attachments will be lost."
 msgstr "A mellékletei elvesznek."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Az Ön Bluesky-felhasználóneve"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Adatai visszaállnak a biztonsági mentésből. Ne zárja be ezt az ablakot."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Az Ön Mastodon-kiszolgálója"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

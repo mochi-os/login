@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# अउर फाइल ना देखाव
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {मेनू खोलीं (# बिना पढ़ल सूचना)} other {मेनू खोलीं (# बिना पढ़ल सूचना)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> रउआ {1} खाता में साइन इन करे के माँगत बा।"
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 घंटा"
@@ -134,6 +140,11 @@ msgstr "12 घंटा"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 घंटा"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} नाम के नया फीड"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "पहुंच मना"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "पहुंच स्तर"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "खाता"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "ई पहचान से एगो अकाउंट पहिलह�
 msgid "An error occurred"
 msgstr "एगो त्रुटि भइल"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "पहिले से मौजूद सार्वजनिक फीड"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "जे केहू लॉग इन बा"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "एह फीड के सब्सक्राइब कइल कवनो चीज़ ओकरा के मिलल बंद हो जाई। बाद में रउआ नया URL कॉपी कर सकीलें।"
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "स्वीकृत करीं"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} खातिर अवतार"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "वापस"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "प्रासंगिक जानकारी आ विवरण।"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "जारी रखीं"
@@ -745,6 +770,10 @@ msgstr "क्लिपबोर्ड पर कॉपी कइल गइल"
 msgid "Copy"
 msgstr "कॉपी करीं"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "साइन-इन स्वीकृत ना हो सकल"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "रद्द ना हो सकल"
@@ -762,6 +791,11 @@ msgstr "एह दस्तावेज के लोड ना कर सकल
 msgid "Could not reactivate your account"
 msgstr "रउआ के खाता फेर से चालू ना हो सकल"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "साइन-इन अस्वीकार ना हो सकल"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "आपन {initial} आ {last} लिखीं"
 msgid "Enter your authenticator code"
 msgstr "आपन प्रमाणक कोड डालीं"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} से साइन इन पूरा करे खातिर आपन ईमेल पता डालीं।"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "आपन ईमेल कोड आ ऑथेंटिकेटर कोड लिखीं"
@@ -1249,6 +1288,14 @@ msgstr "निगरानी अपडेट ना भइल"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "अटैचमेंट अपलोड करे में विफल"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "फीड"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "अमान्य रिकवरी कोड"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "अमान्य सत्यापन कोड"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "ई रउआ खाता पढ़ सकेला आ ओकरा नाम से पोस्ट कर सकेला।"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "ई रउआ खाता पढ़ सकेला।"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "रउआ के डैशबोर्ड पर रीडायरे�
 msgid "Reduce interest"
 msgstr "रुचि कम करीं"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "अस्वीकार करीं"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total} में से {totalShown} देखावल जा रह�
 msgid "Sidebar"
 msgstr "साइडबार"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "अपना खाता में साइन इन करीं"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "एह संसाधन तक पहुँच वाला खाता से <0/> साइन इन करीं।"
@@ -2705,6 +2768,10 @@ msgstr "ई बैकअप Mochi के नया वर्जन से बन
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ई खेल आ ओकर चैट के स्थायी रूप से मेटा दी। एकरा वापस नइखे कईल जा सकत।"
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "ई साइन-इन अनुरोध के समय खतम हो गइल बा या एकर जवाब पहिलहीं दिहल जा चुकल बा।"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "हमनी <0>{0}</0> पर सत्यापन कोड भेज
 msgid "Wednesday"
 msgstr "बुधवार"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "एह ऐप से कइल गइल पोस्ट कहाँ जाए के चाहीं?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "विकी"
@@ -2963,6 +3034,10 @@ msgstr "विकी"
 msgid "Wrong passphrase"
 msgstr "गलत पासफ्रेज"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "साल"
@@ -2970,6 +3045,10 @@ msgstr "साल"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "रउआ के ए खंड तक पहुँच नइखे।"
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "एह नेटवर्क पर रउआ कवनो खाता नइखे। पहिले सेटिंग सब में एगो हैंडल आरक्षित करीं।"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "आपन खाता {source} से इहाँ हिलावल �
 msgid "Your attachments will be lost."
 msgstr "राउर संलग्नक खतम हो जाई।"
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "रउआ Bluesky हैंडल"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "बैकअप से डेटा रिस्टोर हो रहल बा। ई विंडो बंद मत करीं।"
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "रउआ Mastodon सर्वर"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

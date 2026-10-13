@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {மேலும் # கோப்பு கா�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {மெனுவைத் திற (# படிக்காத அறிவிப்பு)} other {மெனுவைத் திற (# படிக்காத அறிவிப்புகள்)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> உங்கள் {1} கணக்கில் உள்நுழைய அனுமதி கேட்கிறது."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 மணிநேரம்"
@@ -134,6 +140,11 @@ msgstr "12 மணிநேரம்"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 மணிநேரம்"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} என்ற பெயரில் புதிய ஊட்டம்"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "அணுகல் மறுக்கப்பட்டது"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "அணுகல் நிலை"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "கணக்கு"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "இந்த அடையாளத்துடன் ஒரு கணக
 msgid "An error occurred"
 msgstr "பிழை ஏற்பட்டது"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "ஏற்கனவே உள்ள பொது ஊட்டம்"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "உள்நுழைந்த யாரும்"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "இந்த ஊட்டத்திற்கு குழுசேர்ந்த அனைத்தும் அதைப் பெறுவதை நிறுத்தும். பிறகு நீங்கள் புதிய URL ஐ நகலெடுக்கலாம்."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "அங்கீகரி"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} இன் அவதாரம்"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "பின்"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "சூழல் சார்ந்த தகவல் மற்றும் விவரங்கள்."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "தொடர்"
@@ -745,6 +770,10 @@ msgstr "கிளிப்போர்டுக்கு நகலெடுக�
 msgid "Copy"
 msgstr "நகலெடு"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "உள்நுழைவை அங்கீகரிக்க முடியவில்லை"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "ரத்துசெய்ய முடியவில்லை"
@@ -762,6 +791,11 @@ msgstr "இந்த ஆவணத்தை ஏற்ற முடியவில
 msgid "Could not reactivate your account"
 msgstr "உங்கள் கணக்கை மீண்டும் செயல்படுத்த முடியவில்லை"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "உள்நுழைவை நிராகரிக்க முடியவில்லை"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "உங்கள் {initial} மற்றும் {last} ஐ உள்�
 msgid "Enter your authenticator code"
 msgstr "உங்கள் அங்கீகரிப்பான் குறியீட்டை உள்ளிடவும்"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} மூலம் உள்நுழைவை முடிக்க உங்கள் மின்னஞ்சல் முகவரியை உள்ளிடவும்."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "உங்கள் மின்னஞ்சல் குறியீடு மற்றும் அங்கீகரிப்பான் குறியீட்டை உள்ளிடவும்"
@@ -1249,6 +1288,14 @@ msgstr "கண்காணிப்பைப் புதுப்பிக்�
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "இணைப்பைப் பதிவேற்ற முடியவில்லை"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "ஊட்டம்"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "தவறான மீட்பு குறியீடு"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "தவறான சரிபார்ப்பு குறியீடு"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "இது உங்கள் கணக்கைப் படிக்கவும் அதன் பெயரில் பதிவிடவும் முடியும்."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "இது உங்கள் கணக்கைப் படிக்க முடியும்."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "டாஷ்போர்டுக்கு திருப்பிவ�
 msgid "Reduce interest"
 msgstr "ஆர்வத்தைக் குறைக்கவும்"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "நிராகரி"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total}-ல் {totalShown} காட்டப்படுகிறத�
 msgid "Sidebar"
 msgstr "பக்கப்பட்டி"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "உங்கள் கணக்கில் உள்நுழையவும்"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "இந்த வளத்திற்கான அணுகல் <0/> உள்ள கணக்குடன் உள்நுழையவும்."
@@ -2705,6 +2768,10 @@ msgstr "இந்த காப்புப் பிரதி Mochi-யின்
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "இது விளையாட்டையும் அதன் அரட்டையையும் நிரந்தரமாக நீக்கும். இந்தச் செயலை மாற்ற முடியாது."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "இந்த உள்நுழைவுக் கோரிக்கை காலாவதியாகிவிட்டது அல்லது ஏற்கனவே பதிலளிக்கப்பட்டது."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "நாங்கள் <0>{0}</0> க்கு சரிபார்ப�
 msgid "Wednesday"
 msgstr "புதன்கிழமை"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "இந்தப் பயன்பாட்டிலிருந்து செய்யப்படும் பதிவுகள் எங்கே செல்ல வேண்டும்?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki-கள்"
@@ -2963,6 +3034,10 @@ msgstr "Wiki-கள்"
 msgid "Wrong passphrase"
 msgstr "தவறான கடவுச்சொற்றொடர்"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "ஆண்டு"
@@ -2970,6 +3045,10 @@ msgstr "ஆண்டு"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "இந்தப் பிரிவுக்கான அணுகல் உங்களுக்கு இல்லை."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "இந்தப் பிணையத்தில் உங்களுக்குக் கணக்கு இல்லை. முதலில் அமைப்புகளில் ஒரு புனைப்பெயரை முன்பதிவு செய்யவும்."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "உங்கள் கணக்கு {source} இலிருந்த�
 msgid "Your attachments will be lost."
 msgstr "உங்கள் இணைப்புகள் இழக்கப்படும்."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "உங்கள் Bluesky புனைப்பெயர்"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "உங்கள் தரவு காப்புப் பிரதியிலிருந்து மீட்டமைக்கப்படுகிறது. இந்த சாளரத்தை மூடாதீர்கள்."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "உங்கள் Mastodon சர்வர்"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

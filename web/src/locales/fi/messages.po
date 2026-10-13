@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Vielä # tiedosto jää näyttämättä} other 
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Avaa valikko (# lukematon ilmoitus)} other {Avaa valikko (# lukematonta ilmoitusta)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> pyytää lupaa kirjautua {1}-tiliisi."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 tuntia"
@@ -134,6 +140,11 @@ msgstr "12 tuntia"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 tuntia"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Uusi syöte nimeltä {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Käyttö evätty"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Käyttöoikeustaso"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Tili"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Tili, jolla on tämä henkilöllisyys, on jo olemassa täällä."
 msgid "An error occurred"
 msgstr "Tapahtui virhe"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Olemassa oleva julkinen syöte"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Kuka tahansa kirjautunut"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Kaikki tätä syötettä tilaavat lakkaavat vastaanottamasta sitä. Voit kopioida uuden URL-osoitteen jälkeenpäin."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Hyväksy"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Käyttäjän {name} avatar"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Takaisin"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Asiayhteyteen liittyvät tiedot ja yksityiskohdat."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Jatka"
@@ -745,6 +770,10 @@ msgstr "Kopioitu leikepöydälle"
 msgid "Copy"
 msgstr "Kopioi"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Kirjautumista ei voitu hyväksyä"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Ei voitu peruuttaa"
@@ -762,6 +791,11 @@ msgstr "Tätä dokumenttia ei voitu ladata. Yritä myöhemmin uudelleen."
 msgid "Could not reactivate your account"
 msgstr "Tiliäsi ei voitu aktivoida uudelleen"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Kirjautumista ei voitu hylätä"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Syötä {initial} ja {last}"
 msgid "Enter your authenticator code"
 msgstr "Anna todennussovelluksen koodi"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Viimeistele kirjautuminen palvelulla {0} antamalla sähköpostiosoitteesi."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Anna sähköpostikoodi ja todentajakoodi"
@@ -1249,6 +1288,14 @@ msgstr "Seurannan päivitys epäonnistui"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Liitteen lähetys epäonnistui"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediversumi"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Syöte"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Virheellinen palautuskoodi"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Virheellinen vahvistuskoodi"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Se voi lukea tiliäsi ja julkaista sen nimissä."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Se voi lukea tiliäsi."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Ohjataan koontinäyttöön…"
 msgid "Reduce interest"
 msgstr "Vähennä kiinnostusta"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Hylkää"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Näytetään {totalShown} / {total}"
 msgid "Sidebar"
 msgstr "Sivupalkki"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Kirjaudu tilillesi"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Kirjaudu sisään tilillä, jolla on käyttöoikeus <0/> tähän resurssiin."
@@ -2705,6 +2768,10 @@ msgstr "Tämä varmuuskopio on luotu Mochin uudemmalla versiolla. Päivitä ensi
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Tämä poistaa pelin ja sen keskustelun pysyvästi. Tätä ei voi peruuttaa."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Tämä kirjautumispyyntö on vanhentunut tai siihen on jo vastattu."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Lähetimme vahvistuskoodin osoitteeseen <0>{0}</0>. Syötä koodi alle v
 msgid "Wednesday"
 msgstr "Keskiviikko"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Minne tästä sovelluksesta tehtyjen julkaisujen pitäisi mennä?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikit"
@@ -2963,6 +3034,10 @@ msgstr "Wikit"
 msgid "Wrong passphrase"
 msgstr "Väärä tunnuslause"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Vuosi"
@@ -2970,6 +3045,10 @@ msgstr "Vuosi"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Sinulla ei ole pääsyä tähän osioon."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Sinulla ei ole tiliä tässä verkossa. Varaa ensin käyttäjätunnus Asetuksissa."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Tilisi siirrettiin tänne kohteesta {source}. Kunnes poistat sen sieltä
 msgid "Your attachments will be lost."
 msgstr "Liitteesi menetetään."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Bluesky-käyttäjätunnuksesi"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Tietosi palautetaan varmuuskopiosta. Älä sulje tätä ikkunaa."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Mastodon-palvelimesi"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

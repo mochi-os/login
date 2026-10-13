@@ -15,8 +15,10 @@ import { authApi } from '@/api/auth'
 import { type AuthMethodsResponse, type OAuthProvider } from '@/api/types/auth'
 import { navigable, safeRedirect } from '@/lib/redirect'
 import {
+  BlueskyIcon,
   FacebookIcon,
   GoogleIcon,
+  MastodonIcon,
   MicrosoftIcon,
   XIcon,
 } from '@/features/auth/components/brand-icons'
@@ -25,19 +27,37 @@ type Icon = ComponentType<SVGProps<SVGSVGElement>>
 
 // Alphabetical by key, which is the order the buttons render in.
 export const oauthProviderKeys: readonly OAuthProvider[] = [
+  'bluesky',
   'facebook',
   'github',
   'google',
+  'mastodon',
   'microsoft',
   'x',
 ]
 
 const icons: Record<OAuthProvider, Icon> = {
+  bluesky: BlueskyIcon,
   facebook: FacebookIcon,
   github: Github,
   google: GoogleIcon,
+  mastodon: MastodonIcon,
   microsoft: MicrosoftIcon,
   x: XIcon,
+}
+
+// What a network provider asks before it can begin: Mastodon the account's
+// server, Bluesky its handle. The other providers ask nothing.
+export function providerAsks(
+  provider: OAuthProvider
+): 'server' | 'handle' | null {
+  switch (provider) {
+    case 'mastodon':
+      return 'server'
+    case 'bluesky':
+      return 'handle'
+  }
+  return null
 }
 
 export const oauthProviders: ReadonlyArray<{
@@ -70,12 +90,19 @@ export function oauthEnabled(methods: AuthMethodsResponse): Set<OAuthProvider> {
 // URL would execute rather than navigate.
 export async function startOauth(
   provider: OAuthProvider,
-  options: { redirect?: string; email?: string } = {}
+  options: {
+    redirect?: string
+    email?: string
+    server?: string
+    handle?: string
+  } = {}
 ): Promise<void> {
   const target = options.redirect ? safeRedirect(options.redirect) : '/'
   const { url } = await authApi.oauthBegin(provider, {
     target,
     email: options.email,
+    server: options.server,
+    handle: options.handle,
   })
   if (!navigable(url)) {
     throw new Error(i18n._(msg`Could not start sign-in`))

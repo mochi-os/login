@@ -127,6 +127,12 @@ msgstr "{truncated, plural, other {კიდევ # ფაილი არ ა�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, other {მენიუს გახსნა (# წაუკითხავი შეტყობინება)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> ითხოვს თქვენს {1} ანგარიშში შესვლას."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 საათი"
@@ -134,6 +140,11 @@ msgstr "12 საათი"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 საათი"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "ახალი არხი სახელით {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "წვდომა უარყოფილია"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "წვდომის დონე"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "ანგარიში"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "ამ პირადობით ანგარიში უკვე
 msgid "An error occurred"
 msgstr "მოხდა შეცდომა"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "არსებული საჯარო არხი"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "ნებისმიერი, ვინც შესულია"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "ყველაფერი, რაც ამ არხზეა გამოწერილი, შეწყვეტს მის მიღებას. შემდეგ შეგიძლიათ დააკოპიროთ ახალი URL."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "დამტკიცება"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name}-ის ავატარი"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "უკან"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "კონტექსტური ინფორმაცია და დეტალები."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "გაგრძელება"
@@ -745,6 +770,10 @@ msgstr "ბუფერში დაკოპირდა"
 msgid "Copy"
 msgstr "კოპირება"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "შესვლის დამტკიცება ვერ მოხერხდა"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "ვერ გაუქმდა"
@@ -762,6 +791,11 @@ msgstr "ამ დოკუმენტის ჩატვირთვა ვე
 msgid "Could not reactivate your account"
 msgstr "თქვენი ანგარიშის ხელახლა გააქტიურება ვერ მოხერხდა"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "შესვლის უარყოფა ვერ მოხერხდა"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "შეიყვანეთ თქვენი {initial} და {last}"
 msgid "Enter your authenticator code"
 msgstr "შეიყვანეთ თქვენი ავთენტიფიკატორის კოდი"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "შეიყვანეთ თქვენი ელფოსტის მისამართი, რომ დაასრულოთ შესვლა {0}-ით."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "შეიყვანეთ თქვენი ელფოსტის კოდი და ავთენტიფიკატორის კოდი"
@@ -1249,6 +1288,14 @@ msgstr "თვალყურის დევნების განახლ�
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "დანართის ატვირთვა ვერ მოხერხდა"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "არხი"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "არასწორი აღდგენის კოდი"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "არასწორი დადასტურების კოდი"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "მას შეეძლება თქვენი ანგარიშის წაკითხვა და მისი სახელით გამოქვეყნება."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "მას შეეძლება თქვენი ანგარიშის წაკითხვა."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "თქვენს საინფორმაციო დაფაზ�
 msgid "Reduce interest"
 msgstr "ინტერესის შემცირება"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "უარყოფა"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "ნაჩვენებია {totalShown} {total}-დან"
 msgid "Sidebar"
 msgstr "გვერდითი პანელი"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "შედით თქვენს ანგარიშში"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "შედით ანგარიშით, რომელსაც აქვს წვდომა <0/> ამ რესურსზე."
@@ -2705,6 +2768,10 @@ msgstr "ეს სარეზერვო ასლი Mochi-ის უფრ�
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ეს სამუდამოდ წაშლის თამაშსა და მის ჩატს. ამ მოქმედების გაუქმება შეუძლებელია."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "შესვლის ამ მოთხოვნას ვადა გაუვიდა ან მას უკვე უპასუხეს."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "გავაგზავნეთ დამადასტურებ�
 msgid "Wednesday"
 msgstr "ოთხშაბათი"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "სად გამოქვეყნდეს ამ აპიდან შექმნილი პოსტები?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "ვიკები"
@@ -2963,6 +3034,10 @@ msgstr "ვიკები"
 msgid "Wrong passphrase"
 msgstr "არასწორი პაროლის ფრაზა"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "წელი"
@@ -2970,6 +3045,10 @@ msgstr "წელი"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "ამ განყოფილებაზე წვდომა არ გაქვთ."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "ამ ქსელში ანგარიში არ გაქვთ. ჯერ დაჯავშნეთ მომხმარებლის სახელი პარამეტრებში."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "თქვენი ანგარიში გადმოტანი�
 msgid "Your attachments will be lost."
 msgstr "თქვენი დანართები დაიკარგება."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "თქვენი Bluesky მომხმარებლის სახელი"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "თქვენი მონაცემები სარეზერვო ასლიდან აღდგება. ნუ დახურავთ ამ ფანჯარას."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "თქვენი Mastodon სერვერი"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

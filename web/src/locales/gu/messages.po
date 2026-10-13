@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {વધુ # ફાઇલ બતાવી નથ
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {મેનૂ ખોલો (# વણવાંચેલ સૂચના)} other {મેનૂ ખોલો (# વણવાંચેલ સૂચનાઓ)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> તમારા {1} ખાતામાં સાઇન ઇન કરવાની પરવાનગી માંગે છે."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 કલાક"
@@ -134,6 +140,11 @@ msgstr "12 કલાક"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 કલાક"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} નામની નવી ફીડ"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "ઍક્સેસ નકારી"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "ઍક્સેસ સ્તર"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "ખાતું"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "આ ઓળખ સાથેનું એકાઉન્ટ અહીં �
 msgid "An error occurred"
 msgstr "ભૂલ આવી"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "હાલની જાહેર ફીડ"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "લોગ ઇન થયેલ કોઈપણ"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "આ ફીડ પર સબ્સ્ક્રાઇબ થયેલું બધું તે મળવાનું બંધ કરશે. પછી તમે નવું URL કૉપિ કરી શકો છો."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "મંજૂર કરો"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name} માટે અવતાર"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "પાછળ"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "સંદર્ભ માહિતી અને વિગતો."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "ચાલુ રાખો"
@@ -745,6 +770,10 @@ msgstr "ક્લિપબોર્ડ પર કૉપિ કર્યું"
 msgid "Copy"
 msgstr "કૉપિ કરો"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "સાઇન-ઇન મંજૂર કરી શક્યા નહીં"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "રદ કરી શક્યા નહીં"
@@ -762,6 +791,11 @@ msgstr "આ દસ્તાવેજ લોડ કરી શક્યા નહ�
 msgid "Could not reactivate your account"
 msgstr "તમારું ખાતું ફરી સક્રિય કરી શકાયું નહીં"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "સાઇન-ઇન નકારી શક્યા નહીં"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "તમારો {initial} અને {last} દાખલ કરો"
 msgid "Enter your authenticator code"
 msgstr "તમારો ઑથેન્ટિકેટર કોડ દાખલ કરો"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "{0} વડે સાઇન ઇન પૂર્ણ કરવા માટે તમારું ઇમેઇલ સરનામું દાખલ કરો."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "તમારો ઇમેઇલ કોડ અને ઑથેન્ટિકેટર કોડ દાખલ કરો"
@@ -1249,6 +1288,14 @@ msgstr "નિરીક્ષણ અપડેટ કરવામાં નિષ
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "એટેચમેન્ટ અપલોડ કરવામાં નિષ્ફળ"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "ફીડ"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "અમાન્ય રિકવરી કોડ"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "અમાન્ય ચકાસણી કોડ"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "તે તમારું ખાતું વાંચી શકે છે અને તેના નામે પોસ્ટ કરી શકે છે."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "તે તમારું ખાતું વાંચી શકે છે."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "તમને ડેશબોર્ડ પર રીડાયરેક્
 msgid "Reduce interest"
 msgstr "રસ ઘટાડો"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "નકારો"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total} માંથી {totalShown} બતાવી રહ્યું 
 msgid "Sidebar"
 msgstr "સાઇડબાર"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "તમારા ખાતામાં સાઇન ઇન કરો"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "આ સંસાધનની ઍક્સેસ ધરાવતા ખાતાથી <0/> સાઇન ઇન કરો."
@@ -2705,6 +2768,10 @@ msgstr "આ બૅકઅપ Mochi ના નવા વર્ઝન દ્વા�
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "આ ગેમ અને તેની ચેટને કાયમ માટે કાઢી નાખશે. આ ક્રિયા પાછી લઈ શકાશે નહીં."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "આ સાઇન-ઇન વિનંતીની સમયમર્યાદા પૂરી થઈ ગઈ છે અથવા તેનો જવાબ પહેલેથી આપવામાં આવ્યો છે."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "અમે <0>{0}</0> પર ચકાસણી કોડ મોકલ્
 msgid "Wednesday"
 msgstr "બુધવાર"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "આ એપ્લિકેશનમાંથી કરેલી પોસ્ટ ક્યાં જવી જોઈએ?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "વિકિઓ"
@@ -2963,6 +3034,10 @@ msgstr "વિકિઓ"
 msgid "Wrong passphrase"
 msgstr "ખોટો પાસ-ફ્રેઝ"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "વર્ષ"
@@ -2970,6 +3045,10 @@ msgstr "વર્ષ"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "તમારી પાસે આ વિભાગની ઍક્સેસ નથી."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "આ નેટવર્ક પર તમારું કોઈ ખાતું નથી. પહેલા સેટિંગ્સમાં હેન્ડલ આરક્ષિત કરો."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "તમારું ખાતું {source} પરથી અહીં �
 msgid "Your attachments will be lost."
 msgstr "તમારા જોડાણો ખોવાઈ જશે."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "તમારું Bluesky હેન્ડલ"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "તમારો ડેટા બૅકઅપ થી પુનઃસ્થાપિત કરવામાં આવી રહ્યો છે. આ વિન્ડો બંધ ન કરો."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "તમારું Mastodon સર્વર"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

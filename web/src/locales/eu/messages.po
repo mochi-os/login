@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {Beste # fitxategi ez da erakusten} other {Beste
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Ireki menua (irakurri gabeko # jakinarazpen)} other {Ireki menua (irakurri gabeko # jakinarazpen)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> aplikazioak zure {1} kontuan saioa hasteko baimena eskatzen du."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ordu"
@@ -134,6 +140,11 @@ msgstr "12 ordu"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 ordu"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "{0} izeneko jario berri bat"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Sarbidea ukatua"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Sarbide maila"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Kontua"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Identitate honekin kontu bat badago dagoeneko hemen."
 msgid "An error occurred"
 msgstr "Errore bat gertatu da"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Lehendik dagoen jario publiko bat"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Saioa hasi duen edonor"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Jario honetara harpidetutako guztiak jasotzeari utziko dio. Ondoren URL berri bat kopia dezakezu."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Onartu"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "{name}(r)en avatarra"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Atzera"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Testuinguruko informazioa eta xehetasunak."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Jarraitu"
@@ -745,6 +770,10 @@ msgstr "Arbelera kopiatu da"
 msgid "Copy"
 msgstr "Kopiatu"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Ezin izan da saio-hasiera onartu"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Ezin izan da bertan behera utzi"
@@ -762,6 +791,11 @@ msgstr "Ezin izan da dokumentu hau kargatu. Saiatu berriro geroago."
 msgid "Could not reactivate your account"
 msgstr "Ezin izan da zure kontua berraktibatu"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Ezin izan da saio-hasiera ukatu"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Sartu zure {initial} eta {last}"
 msgid "Enter your authenticator code"
 msgstr "Sartu zure autentifikazio-aplikazioaren kodea"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Idatzi zure helbide elektronikoa {0} bidezko saio-hasiera amaitzeko."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Sartu zure posta-kodea eta autentifikatzaile-kodea"
@@ -1249,6 +1288,14 @@ msgstr "Ezin izan da jarraipena eguneratu"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Ezin izan da eranskina igo"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fedibertso"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Jarioa"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Berreskuratze-kode baliogabea"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Egiaztapen-kode baliogabea"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Zure kontua irakurri eta haren izenean argitaratu dezake."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Zure kontua irakurri dezake."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Aginte-panelera birbideratzen…"
 msgid "Reduce interest"
 msgstr "Murriztu interesa"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Ukatu"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "{total}etik {totalShown} erakusten"
 msgid "Sidebar"
 msgstr "Alboko barra"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Hasi saioa zure kontuan"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Hasi saioa baliabide honetarako sarbidea <0/> duen kontu batekin."
@@ -2705,6 +2768,10 @@ msgstr "Babeskopia hau Mochi-ren bertsio berriagoak sortu du. Eguneratu zerbitza
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Honek jokoa eta bere txata betiko ezabatuko ditu. Ekintza hau ezin da desegin."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Saio-hasierako eskaera hau iraungi egin da edo dagoeneko erantzun zaio."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Egiaztapen-kode bat bidali dugu <0>{0}</0> helbidera. Sartu kodea behean
 msgid "Wednesday"
 msgstr "Asteazkena"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Nora joan behar dute aplikazio honetatik egindako argitalpenek?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikiak"
@@ -2963,6 +3034,10 @@ msgstr "Wikiak"
 msgid "Wrong passphrase"
 msgstr "Pasahitz-esaldi okerra"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Urtea"
@@ -2970,6 +3045,10 @@ msgstr "Urtea"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Ez duzu atal honetarako sarbiderik."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Ez duzu konturik sare honetan. Erreserbatu lehenik erabiltzaile-izen bat Ezarpenak atalean."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Zure kontua {source}-etik hona mugitu da. Han ezabatu arte, mezuak eta j
 msgid "Your attachments will be lost."
 msgstr "Zure eranskinak galduko dira."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Zure Bluesky erabiltzaile-izena"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Zure datuak babeskopiatik berreskuratzen ari dira. Ez itxi leiho hau."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Zure Mastodon zerbitzaria"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

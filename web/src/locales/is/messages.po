@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {# skrá til viðbótar ekki sýnd} other {# skr
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Opna valmynd (# ólesin tilkynning)} other {Opna valmynd (# ólesnar tilkynningar)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> biður um að skrá sig inn á {1}-reikninginn þinn."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 klukkustundir"
@@ -134,6 +140,11 @@ msgstr "12 klukkustundir"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 klukkustundir"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "Nýtt streymi sem heitir {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "Aðgangi hafnað"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "Aðgangsstig"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "Reikningur"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "Aðgangur með þessa auðkenni er þegar til hér."
 msgid "An error occurred"
 msgstr "Villa kom upp"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "Fyrirliggjandi opinbert streymi"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "Allir sem eru skráðir inn"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Allt sem er áskrifandi að þessari veitu hættir að fá hana. Þú getur afritað nýja vefslóð á eftir."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "Samþykkja"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "Auðkennismynd fyrir {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "Til baka"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "Samhengisupplýsingar og smáatriði."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "Halda áfram"
@@ -745,6 +770,10 @@ msgstr "Afritað á klippiborðið"
 msgid "Copy"
 msgstr "Afrita"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "Ekki tókst að samþykkja innskráninguna"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "Tókst ekki að hætta við"
@@ -762,6 +791,11 @@ msgstr "Ekki tókst að hlaða þessu skjali. Reyndu aftur síðar."
 msgid "Could not reactivate your account"
 msgstr "Ekki tókst að virkja reikninginn þinn aftur"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "Ekki tókst að hafna innskráningunni"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "Sláðu inn {initial} og {last}"
 msgid "Enter your authenticator code"
 msgstr "Sláðu inn auðkenniskóðann þinn"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "Sláðu inn netfangið þitt til að ljúka innskráningu með {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "Sláðu inn tölvupóstkóðann og auðkenniskóðann"
@@ -1249,6 +1288,14 @@ msgstr "Ekki tókst að uppfæra vöktun"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "Tókst ekki að hlaða upp viðhengi"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "Streymi"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "Ógildur endurheimtarkóði"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Ógildur staðfestingarkóði"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "Það má lesa reikninginn þinn og birta færslur í nafni hans."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "Það má lesa reikninginn þinn."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "Áframsendi þig á stjórnborðið…"
 msgid "Reduce interest"
 msgstr "Minnka áhuga"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "Hafna"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "Sýni {totalShown} af {total}"
 msgid "Sidebar"
 msgstr "Hliðarstika"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "Skráðu þig inn á reikninginn þinn"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Skráðu þig inn með reikningi sem hefur aðgang <0/> að þessari auðlind."
@@ -2705,6 +2768,10 @@ msgstr "Þetta öryggisafrit var búið til af nýrri útgáfu af Mochi. Uppfær
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Þetta eyðir leiknum og spjallinu varanlega. Ekki er hægt að afturkalla þessa aðgerð."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "Þessi innskráningarbeiðni er útrunnin eða henni hefur þegar verið svarað."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "Við sendum staðfestingarkóða á <0>{0}</0>. Sláðu inn kóðann hé
 msgid "Wednesday"
 msgstr "Miðvikudagur"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "Hvert eiga færslur úr þessu forriti að fara?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki-síður"
@@ -2963,6 +3034,10 @@ msgstr "Wiki-síður"
 msgid "Wrong passphrase"
 msgstr "Röng lykilsetning"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "Ár"
@@ -2970,6 +3045,10 @@ msgstr "Ár"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "Þú hefur ekki aðgang að þessum hluta."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "Þú ert ekki með reikning á þessu neti. Taktu fyrst frá notandanafn í Stillingum."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "Reikningurinn þinn var fluttur hingað frá {source}. Þar til þú ey�
 msgid "Your attachments will be lost."
 msgstr "Viðhengin þín glatast."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "Bluesky-notandanafnið þitt"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "Gögn þín eru að vera endurheimtur úr öryggisafritinu. Ekki loka þessum glugga."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "Mastodon-þjónninn þinn"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"

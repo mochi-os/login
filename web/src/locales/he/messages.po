@@ -127,6 +127,12 @@ msgstr "{truncated, plural, one {קובץ נוסף אחד לא מוצג} two {ש
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {פתיחת התפריט (התראה אחת שלא נקראה)} two {פתיחת התפריט (# התראות שלא נקראו)} many {פתיחת התפריט (# התראות שלא נקראו)} other {פתיחת התפריט (# התראות שלא נקראו)}}"
 
+#. placeholder {0}: data.request.client.name
+#. placeholder {1}: networkLabel(data.request.network)
+#: src/features/consent/consent-page.tsx
+msgid "<0>{0}</0> asks to sign in to your {1} account."
+msgstr "<0>{0}</0> מבקש להתחבר לחשבון ה-{1} שלך."
+
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 שעות"
@@ -134,6 +140,11 @@ msgstr "12 שעות"
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "24 hours"
 msgstr "24 שעות"
+
+#. placeholder {0}: chosen.name || chosen.identifier
+#: src/features/consent/consent-page.tsx
+msgid "A new feed named {0}"
+msgstr "פיד חדש בשם {0}"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -155,6 +166,10 @@ msgstr "הגישה נדחתה"
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Access level"
 msgstr "רמת גישה"
+
+#: src/features/consent/consent-page.tsx
+msgid "Account"
+msgstr "חשבון"
 
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Account already on this server"
@@ -278,6 +293,10 @@ msgstr "חשבון עם זהות זו כבר קיים כאן."
 msgid "An error occurred"
 msgstr "אירעה שגיאה"
 
+#: src/features/consent/consent-page.tsx
+msgid "An existing public feed"
+msgstr "פיד ציבורי קיים"
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
 msgid "An unexpected error occurred"
@@ -299,6 +318,10 @@ msgstr "כל מי שמחובר"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "כל מה שרשום להזנה הזו יפסיק לקבל אותה. אפשר להעתיק כתובת חדשה לאחר מכן."
+
+#: src/features/consent/consent-page.tsx
+msgid "Approve"
+msgstr "אישור"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -372,6 +395,7 @@ msgid "Avatar for {name}"
 msgstr "אווטר של {name}"
 
 #: ../../../lib/web/src/components/place-picker.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Back"
 msgstr "חזור"
@@ -711,6 +735,7 @@ msgid "Contextual information and details."
 msgstr "מידע קונטקסטואלי ופרטים."
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/identity-form.tsx
 msgid "Continue"
 msgstr "המשך"
@@ -745,6 +770,10 @@ msgstr "הועתק ללוח"
 msgid "Copy"
 msgstr "העתק"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not approve the sign-in"
+msgstr "לא ניתן היה לאשר את ההתחברות"
+
 #: src/features/auth/identity-form.tsx
 msgid "Could not cancel"
 msgstr "לא ניתן היה לבטל"
@@ -762,6 +791,11 @@ msgstr "לא ניתן היה לטעון מסמך זה. אנא נסה שוב מא
 msgid "Could not reactivate your account"
 msgstr "לא ניתן היה להפעיל מחדש את החשבון שלך"
 
+#: src/features/consent/consent-page.tsx
+msgid "Could not refuse the sign-in"
+msgstr "לא ניתן היה לדחות את ההתחברות"
+
+#: src/features/auth/components/network-sign-in.tsx
 #: src/features/auth/components/oauth-buttons.tsx
 #: src/features/landing/landing-page.tsx
 #: src/lib/oauth-providers.ts
@@ -1100,6 +1134,11 @@ msgstr "הזן את {initial} ו-{last} שלך"
 msgid "Enter your authenticator code"
 msgstr "הזן את הקוד מאפליקציית האימות"
 
+#. placeholder {0}: oauthProviders.find((p) => p.key === networkPending)?.label
+#: src/features/landing/landing-page.tsx
+msgid "Enter your email address to finish signing in with {0}."
+msgstr "יש להזין את כתובת האימייל שלך כדי להשלים את ההתחברות עם {0}."
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Enter your email code and authenticator code"
 msgstr "הזן את קוד האימייל ואת קוד האימות"
@@ -1249,6 +1288,14 @@ msgstr "עדכון המעקב נכשל"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
 msgid "Failed to upload attachment"
 msgstr "העלאת הקובץ המצורף נכשלה"
+
+#: src/features/consent/consent-page.tsx
+msgid "Fediverse"
+msgstr "Fediverse"
+
+#: src/features/consent/consent-page.tsx
+msgid "Feed"
+msgstr "פיד"
 
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
@@ -1404,6 +1451,14 @@ msgstr "קוד שחזור לא תקין"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "קוד אימות לא תקין"
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account and post as it."
+msgstr "הוא יוכל לקרוא את החשבון שלך ולפרסם בשמו."
+
+#: src/features/consent/consent-page.tsx
+msgid "It may read your account."
+msgstr "הוא יוכל לקרוא את החשבון שלך."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2125,6 +2180,10 @@ msgstr "מפנה אותך ללוח הבקרה…"
 msgid "Reduce interest"
 msgstr "הפחת עניין"
 
+#: src/features/consent/consent-page.tsx
+msgid "Refuse"
+msgstr "דחייה"
+
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2490,6 +2549,10 @@ msgstr "מציג {totalShown} מתוך {total}"
 msgid "Sidebar"
 msgstr "סרגל צד"
 
+#: src/features/consent/consent-page.tsx
+msgid "Sign in to your account"
+msgstr "התחברות לחשבון שלך"
+
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "היכנס עם חשבון שיש לו גישה <0/> למשאב הזה."
@@ -2705,6 +2768,10 @@ msgstr "גיבוי זה נוצר על ידי גרסה חדשה יותר של Moc
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "פעולה זו תמחק לצמיתות את המשחק ואת הצ'אט שלו. לא ניתן לבטל פעולה זו."
+
+#: src/features/consent/consent-page.tsx
+msgid "This sign-in request has expired or was already answered."
+msgstr "תוקף בקשת ההתחברות הזו פג או שכבר ניתנה לה תשובה."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -2955,6 +3022,10 @@ msgstr "שלחנו קוד אימות אל <0>{0}</0>. הזן את הקוד למ�
 msgid "Wednesday"
 msgstr "יום רביעי"
 
+#: src/features/consent/consent-page.tsx
+msgid "Where should posts made from this app go?"
+msgstr "לאן יגיעו פוסטים שנכתבו מהאפליקציה הזו?"
+
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "ויקי"
@@ -2963,6 +3034,10 @@ msgstr "ויקי"
 msgid "Wrong passphrase"
 msgstr "ביטוי סיסמה שגוי"
 
+#: src/features/consent/consent-page.tsx
+msgid "XMPP"
+msgstr "XMPP"
+
 #: ../../../lib/web/src/components/calendar/date-header.tsx
 msgid "Year"
 msgstr "שנה"
@@ -2970,6 +3045,10 @@ msgstr "שנה"
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "You do not have access to this section."
 msgstr "אין לך גישה לאזור זה."
+
+#: src/features/consent/consent-page.tsx
+msgid "You have no account on this network. Reserve a handle in Settings first."
+msgstr "אין לך חשבון ברשת הזו. יש לשריין קודם שם משתמש בהגדרות."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
@@ -3014,9 +3093,17 @@ msgstr "חשבונך הועבר לכאן מ-{source}. עד שתמחק אותו �
 msgid "Your attachments will be lost."
 msgstr "הקבצים המצורפים שלך יאבדו."
 
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Bluesky handle"
+msgstr "שם המשתמש שלך ב-Bluesky"
+
 #: src/routes/restore.tsx
 msgid "Your data is being restored from the backup. Do not close this window."
 msgstr "הנתונים שלך משוחזרים מהגיבוי. אל תסגור חלון זה."
+
+#: src/features/auth/components/network-sign-in.tsx
+msgid "Your Mastodon server"
+msgstr "שרת ה-Mastodon שלך"
 
 #: src/features/auth/identity-form.tsx
 msgid "Your name, as you'd like others to see it"
