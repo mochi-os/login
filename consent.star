@@ -62,7 +62,7 @@ def action_oauth_consent_approve(a):
         if a.input("create", "") != "true":
             a.error.label(400, "errors.feed_is_required")
             return
-        made = mochi.service.call("feeds", "create", chosen.get("name") or chosen.get("identifier"), "public")
+        made = mochi.service.call("feeds", "create", chosen.get("name") or chosen.get("identifier"), "public", account)
         if not made:
             a.error.label(500, "errors.feed_not_created")
             return
