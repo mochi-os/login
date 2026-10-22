@@ -12,6 +12,7 @@ import {
   createQueryClient,
   getRouterBasepath,
   I18nProvider,
+  startRoutePrefetch,
   type Catalogs,
 } from '@mochi/web'
 import { useAuthStore } from '@/stores/auth-store'
@@ -188,6 +189,9 @@ const router = createRouter({
   defaultPreload: false,
   basepath: getRouterBasepath(),
 })
+
+// Fetch page code on hover, press or focus; never route data
+startRoutePrefetch(router)
 
 // Register the router instance for type safety
 declare module '@tanstack/react-router' {
