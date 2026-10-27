@@ -4,7 +4,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 import { type QueryClient } from '@tanstack/react-query'
 import { createRootRouteWithContext, Outlet } from '@tanstack/react-router'
-import { Toaster } from '@mochi/web'
+import { GeneralError, Toaster } from '@mochi/web'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 
@@ -25,4 +25,5 @@ export const Route = createRootRouteWithContext<{
       </>
     )
   },
+  errorComponent: GeneralError,
 })
