@@ -9,8 +9,6 @@
 // where posts made from the app should go (decision 42).
 import { useEffect, useMemo, useState } from 'react'
 import { useSearch } from '@tanstack/react-router'
-import { i18n } from '@lingui/core'
-import { msg } from '@lingui/core/macro'
 import { Trans, useLingui } from '@lingui/react/macro'
 import {
   Button,
@@ -34,19 +32,6 @@ import { Check, Loader2, X } from 'lucide-react'
 import { AuthLayout } from '@/features/auth/auth-layout'
 import { consentApi, type ConsentData } from '@/api/consent'
 import { navigable } from '@/lib/redirect'
-
-// The networks' names. The fediverse is a common noun the languages make their
-// own; XMPP is an initialism the provider naming would miscase; the rest are
-// brands the library capitalises.
-function networkLabel(network: string): string {
-  switch (network) {
-    case 'fediverse':
-      return i18n._(msg`Fediverse`)
-    case 'xmpp':
-      return i18n._(msg`XMPP`)
-  }
-  return providerName(network)
-}
 
 // Where the browser goes once the request is answered: the client's redirect,
 // which is not this origin and so is checked as a navigable URL first.
@@ -151,7 +136,7 @@ export function ConsentPage() {
               <p className='text-sm'>
                 <Trans>
                   <span className='font-medium'>{data.request.client.name}</span>{' '}
-                  asks to sign in to your {networkLabel(data.request.network)}{' '}
+                  asks to sign in to your {providerName(data.request.network)}{' '}
                   account.
                 </Trans>
               </p>

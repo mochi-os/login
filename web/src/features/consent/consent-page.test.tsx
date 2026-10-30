@@ -100,6 +100,10 @@ describe('Consent page', () => {
     expect(screen.getByText('https://ivory.example')).toBeTruthy()
     expect(screen.getByText('alice@example.com')).toBeTruthy()
     expect(screen.getByText('It may read your account.')).toBeTruthy()
+    // A hosted fediverse account goes by the protocol it speaks.
+    expect(document.body.textContent).toContain(
+      'asks to sign in to your ActivityPub account.'
+    )
     // A read-only sign-in asks nothing about a home feed.
     expect(
       screen.queryByText('Where should posts made from this app go?')
