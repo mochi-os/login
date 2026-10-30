@@ -14,7 +14,8 @@ import { tanstackRouter } from '@tanstack/router-plugin/vite'
 export default defineConfig({
   base: '/login/',
   plugins: [
-    mochiPlugin(),
+    // The sign-in page never loads in the shell's frame: native modules.
+    mochiPlugin({ frame: false }),
     tanstackRouter({
       target: 'react',
       autoCodeSplitting: true,
