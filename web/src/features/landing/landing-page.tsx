@@ -2,7 +2,8 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useEffect, useMemo, useState } from 'react'
+import { useQuery } from '@tanstack/react-query'
 import { useSearch } from '@tanstack/react-router'
 import { passkeyLogin } from '@/services/auth-service'
 import { Trans, useLingui } from '@lingui/react/macro'
@@ -30,7 +31,7 @@ import {
   SquareKanban,
   Store,
 } from 'lucide-react'
-import { authApi } from '@/api/auth'
+import { methodsQuery } from '@/api/auth'
 import { type OAuthProvider } from '@/api/types/auth'
 import { useAuthStore } from '@/stores/auth-store'
 import { oauthErrorMessage } from '@/lib/oauth-errors'
@@ -73,10 +74,17 @@ export function LandingPage() {
 
   const [dialogOpen, setDialogOpen] = useState(false)
   const [step, setStep] = useState<'email' | 'verification'>('email')
-  const [passkeyEnabled, setPasskeyEnabled] = useState(false)
-  const [enabledOauth, setEnabledOauth] = useState<Set<OAuthProvider>>(
-    new Set()
+  // Asked for by the route before it checked the session; read here once.
+  const methods = useQuery(methodsQuery)
+  const passkeyEnabled = methods.data?.passkey === true
+  const enabledOauth = useMemo(
+    () =>
+      methods.data ? oauthEnabled(methods.data) : new Set<OAuthProvider>(),
+    [methods.data]
   )
+  // Without a visible error a failed methods fetch looks like the server
+  // simply offers no passkeys or OAuth.
+  const methodsFailed = methods.isError
   const [oauthLoading, setOauthLoading] = useState<OAuthProvider | null>(null)
   // A network provider asks for the account's server or handle first.
   const [asking, setAsking] = useState<OAuthProvider | null>(null)
@@ -87,7 +95,6 @@ export function LandingPage() {
   )
   const [isPasskeyLoading, setIsPasskeyLoading] = useState(false)
   const [oauthError, setOauthError] = useState<string | null>(null)
-  const [methodsFailed, setMethodsFailed] = useState(false)
   const [accountSource, setAccountSource] = useState<AccountSource>('none')
   const [restoreBundle, setRestoreBundle] = useState<File | null>(null)
   const [restorePassphrase, setRestorePassphrase] = useState('')
@@ -151,20 +158,6 @@ export function LandingPage() {
 
     window.history.replaceState({}, '', next + window.location.hash)
     setDialogOpen(true)
-  }, [])
-
-  useEffect(() => {
-    authApi
-      .getMethods()
-      .then((methods) => {
-        setPasskeyEnabled(methods.passkey === true)
-        setEnabledOauth(oauthEnabled(methods))
-      })
-      .catch(() => {
-        // Without a visible error a failed methods fetch looks like the server
-        // simply offers no passkeys or OAuth.
-        setMethodsFailed(true)
-      })
   }, [])
 
   const handleOauthLogin = async (provider: OAuthProvider) => {

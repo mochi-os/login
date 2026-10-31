@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
+import { queryOptions } from '@tanstack/react-query'
 import { requestHelpers } from '@mochi/web'
 import endpoints from '@/api/endpoints'
 import {
@@ -68,6 +69,18 @@ const verifyCode = (payload: VerifyCodeRequest) =>
 
 const getMethods = () =>
   requestHelpers.get<AuthMethodsResponse>(endpoints.auth.methods)
+
+/**
+ * The sign-in methods the server offers: public, the same for every visitor,
+ * and fixed for the life of the page. The route starts it before it asks who
+ * the visitor is, and the page and the sign-in dialog both read this one
+ * answer rather than asking again on each mount.
+ */
+export const methodsQuery = queryOptions({
+  queryKey: ['auth', 'methods'],
+  queryFn: getMethods,
+  staleTime: Infinity,
+})
 
 // MFA
 const completeMfa = (payload: MfaRequest) =>

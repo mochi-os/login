@@ -5,10 +5,11 @@
 // OAuth buttons for the email-login verification step. The typed email is
 // passed through so the callback binds the sign-in to that account. A network
 // provider asks for the account's server or handle first.
-import { useState, useEffect } from 'react'
+import { useMemo, useState } from 'react'
+import { useQuery } from '@tanstack/react-query'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { Button, toast, getErrorMessage } from '@mochi/web'
-import { authApi } from '@/api/auth'
+import { methodsQuery } from '@/api/auth'
 import { type OAuthProvider } from '@/api/types/auth'
 import {
   oauthEnabled,
@@ -26,22 +27,16 @@ export function OauthButtons({
   redirect?: string
 }) {
   const { t } = useLingui()
-  const [enabled, setEnabled] = useState<Set<OAuthProvider>>(new Set())
+  // The page's own answer, which the route asked for before the dialog
+  // opened; a failure leaves no buttons, as an empty answer would.
+  const methods = useQuery(methodsQuery)
+  const enabled = useMemo(
+    () =>
+      methods.data ? oauthEnabled(methods.data) : new Set<OAuthProvider>(),
+    [methods.data]
+  )
   const [loading, setLoading] = useState<OAuthProvider | null>(null)
   const [asking, setAsking] = useState<OAuthProvider | null>(null)
-
-  useEffect(() => {
-    authApi
-      .getMethods()
-      .then((methods) => {
-        setEnabled(oauthEnabled(methods))
-      })
-      .catch(() => {
-        // See landing-page.tsx: an unhandled rejection here silently removes
-        // every OAuth button.
-        setEnabled(new Set())
-      })
-  }, [])
 
   const start = async (provider: OAuthProvider) => {
     if (providerAsks(provider)) {

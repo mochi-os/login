@@ -5,6 +5,7 @@
 import { z } from 'zod'
 import { createFileRoute } from '@tanstack/react-router'
 import { resolveSession } from '@/services/auth-service'
+import { methodsQuery } from '@/api/auth'
 import { useAuthStore } from '@/stores/auth-store'
 import { appUrl, safeRedirect } from '@/lib/redirect'
 import { LandingPage } from '@/features/landing/landing-page'
@@ -15,7 +16,17 @@ const searchSchema = z.object({
 })
 
 export const Route = createFileRoute('/')({
-  beforeLoad: async ({ search }) => {
+  beforeLoad: async ({ search, context }) => {
+    // What the page needs whoever the visitor turns out to be starts now
+    // rather than after the session check below: the sign-in methods, and
+    // the page's own code, which the router otherwise loads only once every
+    // beforeLoad has settled. A signed-in visitor leaves by redirect and the
+    // two answers go unused.
+    void context.queryClient.prefetchQuery(methodsQuery)
+    void (
+      Route.options.component as { preload?: () => Promise<void> } | undefined
+    )?.preload?.()
+
     const store = useAuthStore.getState()
 
     // Sync from cookies if not initialized (handles page refresh)
