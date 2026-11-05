@@ -60,6 +60,30 @@ export function providerAsks(
   return null
 }
 
+// The server or handle a network provider was last begun with in this browser,
+// kept so the next sign-in need not ask for it again. Kept in the browser
+// alone, as nothing on the server needs it; where storage is refused it is
+// simply not remembered.
+function rememberedKey(provider: OAuthProvider): string {
+  return `mochi:login:${provider}`
+}
+
+export function remembered(provider: OAuthProvider): string {
+  try {
+    return localStorage.getItem(rememberedKey(provider)) ?? ''
+  } catch {
+    return ''
+  }
+}
+
+export function remember(provider: OAuthProvider, value: string): void {
+  try {
+    localStorage.setItem(rememberedKey(provider), value)
+  } catch {
+    /* no storage: the next sign-in asks again */
+  }
+}
+
 export const oauthProviders: ReadonlyArray<{
   key: OAuthProvider
   label: string

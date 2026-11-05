@@ -4,13 +4,19 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 // Signing in with an account on another network asks one thing first: a
 // Mastodon account's server, or a Bluesky account's handle. The consent is
-// then that server's, as for any other provider.
+// then that server's, as for any other provider. What a sign-in began with is
+// offered again the next time.
 import { useState } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { Button, Input, Label, getErrorMessage, toast } from '@mochi/web'
 import { ArrowRight, Loader2 } from 'lucide-react'
 import { type OAuthProvider } from '@/api/types/auth'
-import { providerAsks, startOauth } from '@/lib/oauth-providers'
+import {
+  providerAsks,
+  remember,
+  remembered,
+  startOauth,
+} from '@/lib/oauth-providers'
 
 export function NetworkSignIn({
   provider,
@@ -25,7 +31,7 @@ export function NetworkSignIn({
 }) {
   const { t } = useLingui()
   const asks = providerAsks(provider)
-  const [value, setValue] = useState('')
+  const [value, setValue] = useState(() => remembered(provider))
   const [loading, setLoading] = useState(false)
 
   const start = async () => {
@@ -39,6 +45,7 @@ export function NetworkSignIn({
         server: asks === 'server' ? typed : undefined,
         handle: asks === 'handle' ? typed : undefined,
       })
+      remember(provider, typed)
     } catch (error) {
       setLoading(false)
       toast.error(getErrorMessage(error, t`Could not start sign-in`))
