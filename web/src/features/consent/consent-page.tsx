@@ -11,6 +11,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useSearch } from '@tanstack/react-router'
 import { Trans, useLingui } from '@lingui/react/macro'
 import {
+  ApiError,
   Button,
   Card,
   CardContent,
@@ -45,7 +46,8 @@ export function ConsentPage() {
   const { t } = useLingui()
   const { request } = useSearch({ from: '/oauth/consent' })
   const [data, setData] = useState<ConsentData | null>(null)
-  const [failed, setFailed] = useState(false)
+  // '' for a request that is gone; otherwise what failed, in the server's words.
+  const [failure, setFailure] = useState<string | null>(null)
   const [account, setAccount] = useState('')
   const [home, setHome] = useState<'existing' | 'new'>('existing')
   const [feed, setFeed] = useState('')
@@ -53,7 +55,7 @@ export function ConsentPage() {
 
   useEffect(() => {
     if (!request) {
-      setFailed(true)
+      setFailure('')
       return
     }
     let cancelled = false
@@ -67,13 +69,19 @@ export function ConsentPage() {
         setFeed(answer.feeds[0]?.id ?? '')
         if (answer.feeds.length === 0) setHome('new')
       })
-      .catch(() => {
-        if (!cancelled) setFailed(true)
+      .catch((error: unknown) => {
+        if (cancelled) return
+        const status = error instanceof ApiError ? error.status : undefined
+        setFailure(
+          status === 404 || status === 400
+            ? ''
+            : getErrorMessage(error, t`Failed to load`)
+        )
       })
     return () => {
       cancelled = true
     }
-  }, [request])
+  }, [request, t])
 
   const chosen = useMemo(
     () => data?.request.accounts.find((a) => a.id === account),
@@ -121,11 +129,13 @@ export function ConsentPage() {
           </CardTitle>
         </CardHeader>
         <CardContent className='space-y-4'>
-          {failed ? (
+          {failure !== null ? (
             <p className='text-muted-foreground text-sm'>
-              <Trans>
-                This sign-in request has expired or was already answered.
-              </Trans>
+              {failure || (
+                <Trans>
+                  This sign-in request has expired or was already answered.
+                </Trans>
+              )}
             </p>
           ) : !data ? (
             <div className='flex justify-center py-6'>

@@ -4,6 +4,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 import { i18n } from '@lingui/core'
 import { I18nProvider } from '@lingui/react'
+import { ApiError } from '@mochi/web'
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ConsentData } from '@/api/consent'
@@ -184,7 +185,9 @@ describe('Consent page', () => {
   })
 
   it('says when the request is gone', async () => {
-    state.request.mockRejectedValue(new Error('404'))
+    state.request.mockRejectedValue(
+      new ApiError({ message: 'Request not found', status: 404 })
+    )
     render(
       <I18nProvider i18n={i18n}>
         <ConsentPage />
@@ -195,5 +198,24 @@ describe('Consent page', () => {
         'This sign-in request has expired or was already answered.'
       )
     ).toBeTruthy()
+  })
+
+  // Every failure read as an expired request, which hid the page asking
+  // without its app token.
+  it('says what failed when the request is refused for another reason', async () => {
+    state.request.mockRejectedValue(
+      new ApiError({ message: 'App token required', status: 403 })
+    )
+    render(
+      <I18nProvider i18n={i18n}>
+        <ConsentPage />
+      </I18nProvider>
+    )
+    expect(await screen.findByText('App token required')).toBeTruthy()
+    expect(
+      screen.queryByText(
+        'This sign-in request has expired or was already answered.'
+      )
+    ).toBeNull()
   })
 })
