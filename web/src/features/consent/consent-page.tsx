@@ -87,9 +87,9 @@ export function ConsentPage() {
     () => data?.request.accounts.find((a) => a.id === account),
     [data, account]
   )
-  // The home feed question arises once: a write scope, an account with no
-  // home feed yet.
-  const asksHome = !!data?.request.writes && !!chosen && !chosen.home
+  // The home feed question arises once: an app whose posts land in a feed, an
+  // account with no home feed yet.
+  const asksHome = !!data?.request.feed && !!chosen && !chosen.home
 
   const approve = async () => {
     if (!data || !chosen) return

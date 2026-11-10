@@ -49,6 +49,7 @@ const data = (
     scope: writes ? 'read write' : 'read',
     scopes: writes ? ['read', 'write'] : ['read'],
     writes,
+    feed: writes,
     hint: '',
     accounts: [
       {
@@ -135,6 +136,36 @@ describe('Consent page', () => {
       create: true,
     })
     expect(state.left).toBe('https://ivory.example/cb?code=1')
+  })
+
+  // A Matrix client writes to rooms, not a feed: Element was asked where its
+  // posts should go, and could not be approved without naming a feed.
+  it('asks nothing about feeds when the app writes to rooms', async () => {
+    state.approve.mockResolvedValue({
+      url: 'https://element.example/cb?code=1',
+    })
+    const matrix = data(true)
+    show({
+      ...matrix,
+      request: { ...matrix.request, network: 'matrix', feed: false },
+    })
+    await screen.findByText('Ivory')
+    expect(
+      screen.getByText('It may read your account and post as it.')
+    ).toBeTruthy()
+    expect(
+      screen.queryByText('Where should posts made from this app go?')
+    ).toBeNull()
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Approve' }))
+    })
+    await waitFor(() => expect(state.approve).toHaveBeenCalled())
+    expect(state.approve).toHaveBeenCalledWith({
+      request: 'r1',
+      account: 'a1',
+      feed: undefined,
+      create: false,
+    })
   })
 
   it('offers the existing public feeds and passes the chosen one', async () => {

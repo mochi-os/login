@@ -29,6 +29,9 @@ export interface ConsentRequest {
   scopes: string[]
   // Whether the client asks to post, follow or otherwise write as the account.
   writes: boolean
+  // Whether its posts land in a feed, the account's home feed: a Mastodon or
+  // Bluesky app's do, a Matrix client's go to rooms.
+  feed: boolean
   hint: string
   accounts: ConsentAccount[]
 }
