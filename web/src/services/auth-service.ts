@@ -2,10 +2,14 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-import axios, { type AxiosProgressEvent } from 'axios'
 import { i18n } from '@lingui/core'
 import { msg } from '@lingui/core/macro'
-import { requestHelpers, LANGUAGE_STORAGE_KEY } from '@mochi/web'
+import {
+  createHttpClient,
+  requestHelpers,
+  LANGUAGE_STORAGE_KEY,
+  type TransferProgress,
+} from '@mochi/web'
 import {
   authApi,
   type AuthUser,
@@ -122,12 +126,18 @@ export const requestCode = async (
   return response
 }
 
+// axios's default Accept: without application/json in it the server answers
+// an error as an HTML page, and the caller could not read its reason.
+const restoreClient = createHttpClient({
+  defaults: { headers: { Accept: 'application/json, text/plain, */*' } },
+})
+
 export const signupRestore = async (
   email: string,
   passphrase: string,
   bundle: File,
   code: string,
-  onProgress?: (event: AxiosProgressEvent) => void
+  onProgress?: (event: TransferProgress) => void
 ): Promise<{ status: string; uid: string }> => {
   const form = new FormData()
   form.append('email', email)
@@ -138,10 +148,11 @@ export const signupRestore = async (
   // spool a bundle it cannot yet attribute to a proven address.
   form.append('code', code)
   form.append('bundle', bundle)
-  // Plain axios rather than fetch so onUploadProgress can report byte progress
-  // on the bundle upload; errors keep the {response: {data}} shape the caller
-  // reads. No timeout — bundles can be large.
-  const response = await axios.post<{ status: string; uid: string }>(
+  // A bare client rather than requestHelpers, as plain axios was before: no
+  // token, toasts or envelope handling, and errors keep the {response: {data}}
+  // shape the caller reads. onUploadProgress reports byte progress on the
+  // bundle upload. No timeout — bundles can be large.
+  const response = await restoreClient.post<{ status: string; uid: string }>(
     endpoints.auth.restore,
     form,
     { timeout: 0, onUploadProgress: onProgress }
