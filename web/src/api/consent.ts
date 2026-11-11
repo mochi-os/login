@@ -3,7 +3,13 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 // The consent page's calls: what another app asks, and the user's answer.
-import { requestHelpers } from '@mochi/web'
+import { requestHelpers, useAuthStore } from '@mochi/web'
+
+// The consent actions act as the signed-in user, so each call carries the
+// app token core requires. lib/web's store mints it and requestHelpers sends
+// it; the login app's own store, which its other pages use, holds none.
+let minted: Promise<void> | null = null
+const token = () => (minted ??= useAuthStore.getState().initialize())
 
 export interface ConsentAccount {
   id: string
@@ -23,6 +29,9 @@ export interface ConsentRequest {
   scopes: string[]
   // Whether the client asks to post, follow or otherwise write as the account.
   writes: boolean
+  // Whether its posts land in a feed, the account's home feed: a Mastodon or
+  // Bluesky app's do, a Matrix client's go to rooms.
+  feed: boolean
   hint: string
   accounts: ConsentAccount[]
 }
@@ -38,24 +47,30 @@ export interface ConsentData {
 }
 
 export const consentApi = {
-  request: (id: string) =>
-    requestHelpers.get<ConsentData>('-/oauth/consent/request', {
+  request: async (id: string) => {
+    await token()
+    return requestHelpers.get<ConsentData>('-/oauth/consent/request', {
       params: { request: id },
-    }),
-  approve: (data: {
+    })
+  },
+  approve: async (data: {
     request: string
     account: string
     feed?: string
     create?: boolean
-  }) =>
-    requestHelpers.post<{ url: string }>('-/oauth/consent/approve', {
+  }) => {
+    await token()
+    return requestHelpers.post<{ url: string }>('-/oauth/consent/approve', {
       request: data.request,
       account: data.account,
       feed: data.feed ?? '',
       create: data.create ? 'true' : '',
-    }),
-  refuse: (id: string) =>
-    requestHelpers.post<{ url: string }>('-/oauth/consent/refuse', {
+    })
+  },
+  refuse: async (id: string) => {
+    await token()
+    return requestHelpers.post<{ url: string }>('-/oauth/consent/refuse', {
       request: id,
-    }),
+    })
+  },
 }

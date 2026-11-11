@@ -4,6 +4,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 import { i18n } from '@lingui/core'
 import { I18nProvider } from '@lingui/react'
+import { ApiError } from '@mochi/web'
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ConsentData } from '@/api/consent'
@@ -48,6 +49,7 @@ const data = (
     scope: writes ? 'read write' : 'read',
     scopes: writes ? ['read', 'write'] : ['read'],
     writes,
+    feed: writes,
     hint: '',
     accounts: [
       {
@@ -136,6 +138,36 @@ describe('Consent page', () => {
     expect(state.left).toBe('https://ivory.example/cb?code=1')
   })
 
+  // A Matrix client writes to rooms, not a feed: Element was asked where its
+  // posts should go, and could not be approved without naming a feed.
+  it('asks nothing about feeds when the app writes to rooms', async () => {
+    state.approve.mockResolvedValue({
+      url: 'https://element.example/cb?code=1',
+    })
+    const matrix = data(true)
+    show({
+      ...matrix,
+      request: { ...matrix.request, network: 'matrix', feed: false },
+    })
+    await screen.findByText('Ivory')
+    expect(
+      screen.getByText('It may read your account and post as it.')
+    ).toBeTruthy()
+    expect(
+      screen.queryByText('Where should posts made from this app go?')
+    ).toBeNull()
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Approve' }))
+    })
+    await waitFor(() => expect(state.approve).toHaveBeenCalled())
+    expect(state.approve).toHaveBeenCalledWith({
+      request: 'r1',
+      account: 'a1',
+      feed: undefined,
+      create: false,
+    })
+  })
+
   it('offers the existing public feeds and passes the chosen one', async () => {
     state.approve.mockResolvedValue({ url: 'https://ivory.example/cb?code=2' })
     show(data(true))
@@ -184,7 +216,9 @@ describe('Consent page', () => {
   })
 
   it('says when the request is gone', async () => {
-    state.request.mockRejectedValue(new Error('404'))
+    state.request.mockRejectedValue(
+      new ApiError({ message: 'Request not found', status: 404 })
+    )
     render(
       <I18nProvider i18n={i18n}>
         <ConsentPage />
@@ -195,5 +229,24 @@ describe('Consent page', () => {
         'This sign-in request has expired or was already answered.'
       )
     ).toBeTruthy()
+  })
+
+  // Every failure read as an expired request, which hid the page asking
+  // without its app token.
+  it('says what failed when the request is refused for another reason', async () => {
+    state.request.mockRejectedValue(
+      new ApiError({ message: 'App token required', status: 403 })
+    )
+    render(
+      <I18nProvider i18n={i18n}>
+        <ConsentPage />
+      </I18nProvider>
+    )
+    expect(await screen.findByText('App token required')).toBeTruthy()
+    expect(
+      screen.queryByText(
+        'This sign-in request has expired or was already answered.'
+      )
+    ).toBeNull()
   })
 })

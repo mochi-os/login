@@ -10,6 +10,15 @@
 # holds the request and spends it on approval or refusal; only this app may
 # answer, under the restricted oauth/consent permission.
 
+# The networks whose apps' posts land in the account's home feed: a Mastodon
+# app's statuses and a Bluesky app's posts. A Matrix client writes to rooms.
+HOME_NETWORKS = ["fediverse", "bluesky"]
+
+def consent_homed(request):
+    """Whether the client's posts land in a feed: it asks to write, on a
+    network whose posts do."""
+    return bool(request.get("writes")) and request.get("network") in HOME_NETWORKS
+
 def action_oauth_consent_request(a):
     """The request named: the client, the network, the scopes, the user's
     hosted accounts on that network with their home feeds, and the user's own
@@ -29,6 +38,7 @@ def action_oauth_consent_request(a):
     for feed in mochi.service.call("feeds", "list") or []:
         if feed.get("privacy") == "public":
             feeds.append({"id": feed["id"], "name": feed["name"]})
+    request["feed"] = consent_homed(request)
     a.json({"request": request, "feeds": feeds})
 
 def action_oauth_consent_approve(a):
@@ -57,8 +67,8 @@ def action_oauth_consent_approve(a):
     if not chosen:
         a.error.label(404, "errors.account_not_found")
         return
-    feed = a.input("feed", "")
-    if request.get("writes") and not chosen.get("home") and not feed:
+    feed = a.input("feed", "") if consent_homed(request) else ""
+    if consent_homed(request) and not chosen.get("home") and not feed:
         if a.input("create", "") != "true":
             a.error.label(400, "errors.feed_is_required")
             return
