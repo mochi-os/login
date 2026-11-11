@@ -126,8 +126,9 @@ export const requestCode = async (
   return response
 }
 
-// axios's default Accept: without application/json in it the server answers
-// an error as an HTML page, and the caller could not read its reason.
+// Asks for JSON, as the old client did by default: without application/json
+// the server answers an error as an HTML page, and the caller could not read
+// its reason.
 const restoreClient = createHttpClient({
   defaults: { headers: { Accept: 'application/json, text/plain, */*' } },
 })
@@ -148,7 +149,7 @@ export const signupRestore = async (
   // spool a bundle it cannot yet attribute to a proven address.
   form.append('code', code)
   form.append('bundle', bundle)
-  // A bare client rather than requestHelpers, as plain axios was before: no
+  // A bare client rather than requestHelpers: no
   // token, toasts or envelope handling, and errors keep the {response: {data}}
   // shape the caller reads. onUploadProgress reports byte progress on the
   // bundle upload. No timeout — bundles can be large.

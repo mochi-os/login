@@ -32,7 +32,7 @@ describe('authErrorCode', () => {
     ).toBe('session_expired')
   })
 
-  it('does not read the raw-axios .response.data shape', () => {
+  it('does not read the raw HttpError .response.data shape', () => {
     // This is the shape the catch blocks used to read, which an ApiError never
     // has - reading it left every code-specific branch dead.
     expect(
