@@ -4,7 +4,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 import { z } from 'zod'
 import { createFileRoute } from '@tanstack/react-router'
-import { resolveSession } from '@/services/auth-service'
+import { discardSession, takeSession } from '@/services/auth-service'
 import { methodsQuery } from '@/api/auth'
 import { useAuthStore } from '@/stores/auth-store'
 import { appUrl, safeRedirect } from '@/lib/redirect'
@@ -21,7 +21,8 @@ export const Route = createFileRoute('/')({
     // rather than after the session check below: the sign-in methods, and
     // the page's own code, which the router otherwise loads only once every
     // beforeLoad has settled. A signed-in visitor leaves by redirect and the
-    // two answers go unused.
+    // two answers go unused. On the page's first load main.tsx has already
+    // asked for both, and these find them under way.
     void context.queryClient.prefetchQuery(methodsQuery)
     void (
       Route.options.component as { preload?: () => Promise<void> } | undefined
@@ -37,13 +38,16 @@ export const Route = createFileRoute('/')({
     // If server indicated reauth is needed (suspended, expired session, etc),
     // clear auth state to break redirect loop and show login form
     if (search.reauth) {
+      discardSession()
       store.clearAuth()
       return
     }
 
     // The store holds no token, so only the server knows whether the visitor is
-    // already logged in.
-    const session = await resolveSession()
+    // already logged in. On the page's first load the question was asked as
+    // its script loaded (main.tsx); the answer is applied only here, after the
+    // reauth check above.
+    const session = await takeSession()
     if (session) {
       // Account pending closure: route to the reactivation interstitial
       // rather than into the app.

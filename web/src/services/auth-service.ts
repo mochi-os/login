@@ -3,11 +3,14 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 import axios, { type AxiosProgressEvent } from 'axios'
+import type { QueryClient } from '@tanstack/react-query'
+import type { AnyRouter } from '@tanstack/react-router'
 import { i18n } from '@lingui/core'
 import { msg } from '@lingui/core/macro'
 import { requestHelpers, LANGUAGE_STORAGE_KEY } from '@mochi/web'
 import {
   authApi,
+  methodsQuery,
   type AuthUser,
   type BeginLoginResponse,
   type MfaRequest,
@@ -36,24 +39,28 @@ const completeAuth = (response: { name?: string }): void => {
   useAuthStore.getState().clearMfa()
 }
 
-// Ask the server whether the cookie session is live and sync the store. Returns
-// null for anonymous or on failure, and never clears the store: a 401 is normal
-// for anonymous and mid-MFA visitors.
-export const resolveSession = async (): Promise<{
-  closing: boolean
-  hasIdentity: boolean
-} | null> => {
-  const store = useAuthStore.getState()
-  let data: {
-    user?: { email?: string; name?: string; status?: string }
-    identity?: { name?: string; privacy?: 'public' | 'private' }
-  }
+type Identity = {
+  user?: { email?: string; name?: string; status?: string }
+  identity?: { name?: string; privacy?: 'public' | 'private' }
+}
+
+type Session = { closing: boolean; hasIdentity: boolean } | null
+
+// Who the server says the cookie session belongs to; null for anonymous or on
+// failure.
+const askIdentity = async (): Promise<Identity | null> => {
   try {
-    data = await requestHelpers.get('/_/identity')
+    return await requestHelpers.get<Identity>('/_/identity')
   } catch {
     return null
   }
+}
 
+// Sync the store from the server's answer. Never clears it: a 401 is normal
+// for anonymous and mid-MFA visitors.
+const applySession = (data: Identity | null): Session => {
+  if (!data) return null
+  const store = useAuthStore.getState()
   const name = data.identity?.name || data.user?.name
   store.setAuth({
     ...(store.user || {}),
@@ -70,6 +77,62 @@ export const resolveSession = async (): Promise<{
     closing: data.user?.status === 'closing',
     hasIdentity: Boolean(name),
   }
+}
+
+// Ask the server whether the cookie session is live and sync the store. Returns
+// null for anonymous or on failure.
+export const resolveSession = async (): Promise<Session> =>
+  applySession(await askIdentity())
+
+// The sign-in page's session check, asked as the page's script loads rather
+// than once the language catalogue has. Only the request starts early: its
+// answer reaches the store when the index route takes it, after that route's
+// reauth check, because a visitor sent back to sign in has their state
+// cleared, and an answer applied before the clear signs them straight back in.
+let early: { asked: number; answer: Promise<Identity | null> } | null = null
+
+// How long the early answer stands. One taken later - behind a slow catalogue,
+// or on a page restored from the back-forward cache - may describe a session
+// signed out or changed in another tab since, so the route asks again.
+const EARLY_LIFETIME = 5_000
+
+// The sign-in page's first requests, started with its script (main.tsx): the
+// router renders inside I18nProvider, which holds everything until the
+// language catalogue has loaded, so the index route's beforeLoad, and all it
+// asks for, waited on the catalogue. The sign-in methods, the page's code and
+// the session check; the last not for an address asking for reauth.
+export const prefetchSignIn = (
+  router: AnyRouter,
+  queryClient: QueryClient
+): void => {
+  const opening = router.state.location
+  const { matchedRoutes, foundRoute } = router.getMatchedRoutes(
+    opening.pathname
+  )
+  if (foundRoute?.id !== '/') return
+  void queryClient.prefetchQuery(methodsQuery)
+  for (const route of matchedRoutes) {
+    // undefined, not a promise, when a route has nothing left to load
+    Promise.resolve(router.loadRouteChunk(route)).catch(() => {})
+  }
+  if ('reauth' in opening.search) return
+  early ??= { asked: Date.now(), answer: askIdentity() }
+}
+
+// The early answer once, while it is fresh, then a fresh check each time after.
+export const takeSession = async (): Promise<Session> => {
+  const held = early
+  early = null
+  const pending =
+    held && Date.now() - held.asked <= EARLY_LIFETIME
+      ? held.answer
+      : askIdentity()
+  return applySession(await pending)
+}
+
+// Drop an early answer unapplied.
+export const discardSession = (): void => {
+  early = null
 }
 
 export const beginLogin = async (
@@ -202,10 +265,12 @@ export const passkeyLogin = async (): Promise<{
   mfa?: boolean
   remaining?: string[]
 }> => {
-  const { startAuthentication } = await import('@simplewebauthn/browser')
-
-  // Begin passkey login
-  const beginResponse = await authApi.passkeyLoginBegin()
+  // The library and the challenge are asked for together: neither needs the
+  // other, and the challenge is the slower of the two.
+  const [{ startAuthentication }, beginResponse] = await Promise.all([
+    import('@simplewebauthn/browser'),
+    authApi.passkeyLoginBegin(),
+  ])
 
   // Perform WebAuthn ceremony
   const credential = await startAuthentication({

@@ -6,6 +6,7 @@ import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
+import { prefetchSignIn } from '@/services/auth-service'
 import {
   ThemeProvider,
   isInShell,
@@ -210,6 +211,9 @@ declare module '@tanstack/react-router' {
 if (!isInShell()) {
   useAuthStore.getState().initialize()
 }
+
+// Before the first render, which waits for the language catalogue.
+prefetchSignIn(router, queryClient)
 
 // Render the app
 const rootElement = document.getElementById('root')!
