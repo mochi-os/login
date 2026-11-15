@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# ഫയൽ കൂടി കാണിച്ച�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {മെനു തുറക്കുക (# വായിക്കാത്ത അറിയിപ്പ്)} other {മെനു തുറക്കുക (# വായിക്കാത്ത അറിയിപ്പുകൾ)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> നിങ്ങളുടെ {1} അക്കൗണ്ടിലേക്ക് സൈൻ ഇൻ ചെയ്യാൻ അനുമതി ചോദിക്കുന്നു."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 മണിക്കൂർ"
@@ -145,10 +139,9 @@ msgstr "12 മണിക്കൂർ"
 msgid "24 hours"
 msgstr "24 മണിക്കൂർ"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "{0} എന്ന പേരിൽ ഒരു പുതിയ ഫീഡ്"
+msgid "A new feed"
+msgstr "ഒരു പുതിയ ഫീഡ്"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "എല്ലാ അഭിപ്രായങ്ങളും"
 msgid "All day"
 msgstr "ദിവസം മുഴുവൻ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "അനുവദിക്കുക"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "{name}-നെ വായിക്കാനും പോസ്റ്റ് ചെയ്യാനും അനുവദിക്കണോ?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "{name}-നെ വായിക്കാൻ അനുവദിക്കണോ?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "{entityLabel} ആർക്കും തിരയാൻ അനുവദിക്കുക"
@@ -300,10 +305,6 @@ msgstr "ഈ ഐഡന്റിറ്റിയുള്ള ഒരു അക്ക
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "ഒരു പിശക് സംഭവിച്ചു"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "നിലവിലുള്ള ഒരു പൊതു ഫീഡ്"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "ലോഗിൻ ചെയ്ത ആരും"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "ഈ ഫീഡ് സബ്‌സ്‌ക്രൈബ് ചെയ്ത എല്ലാം അത് ലഭിക്കുന്നത് നിർത്തും. പിന്നീട് നിങ്ങൾക്ക് ഒരു പുതിയ URL പകർത്താം."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "അംഗീകരിക്കുക"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "ഇല്ലാതാക്കി"
 msgid "Deleted {field}"
 msgstr "{field} ഇല്ലാതാക്കി"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "നിഷേധിക്കുക"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "അവരോഹണ ക്രമം"
@@ -1318,10 +1319,6 @@ msgstr "നിരീക്ഷണം അപ്‌ഡേറ്റ് ചെയ്�
 msgid "Failed to upload attachment"
 msgstr "അറ്റാച്ച്മെന്റ് അപ്‌ലോഡ് ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "ഫീഡ്"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "ഫീഡുകൾ"
@@ -1413,6 +1410,10 @@ msgstr "ചരിത്രം"
 msgid "Home"
 msgstr "ഹോം"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "ഹോം ഫീഡ്"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "ഹോട്ട്"
@@ -1476,14 +1477,6 @@ msgstr "അസാധുവായ വീണ്ടെടുക്കൽ കോഡ�
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "അസാധുവായ സ്ഥിരീകരണ കോഡ്"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "ഇതിന് നിങ്ങളുടെ അക്കൗണ്ട് വായിക്കാനും അതിന്റെ പേരിൽ പോസ്റ്റ് ചെയ്യാനും കഴിയും."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "ഇതിന് നിങ്ങളുടെ അക്കൗണ്ട് വായിക്കാൻ കഴിയും."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "നിങ്ങളെ ഡാഷ്ബോർഡിലേക്ക് റ�
 msgid "Reduce interest"
 msgstr "താൽപ്പര്യം കുറയ്ക്കുക"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "നിരസിക്കുക"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "{total}-ൽ {totalShown} കാണിക്കുന്നു"
 msgid "Sidebar"
 msgstr "സൈഡ്ബാർ"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "നിങ്ങളുടെ അക്കൗണ്ടിലേക്ക് സൈൻ ഇൻ ചെയ്യുക"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "ഈ വിഭവത്തിലേക്ക് ആക്‌സസ് ഉള്ള ഒരു അക്കൗണ്ട് ഉപയോഗിച്ച് <0/> സൈൻ ഇൻ ചെയ്യുക."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ഇത് ഗെയിമും അതിന്റെ ചാറ്റും ശാശ്വതമായി ഇല്ലാതാക്കും. ഈ പ്രവർത്തി പഴയപടിയാക്കാൻ കഴിയില്ല."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "ഈ സൈൻ-ഇൻ അഭ്യർത്ഥനയുടെ കാലാവധി കഴിഞ്ഞു, അല്ലെങ്കിൽ ഇതിന് ഇതിനകം മറുപടി നൽകിയിട്ടുണ്ട്."
+msgid "This request is no longer valid."
+msgstr "ഈ അഭ്യർത്ഥന ഇനി സാധുവല്ല."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "ഞങ്ങൾ <0>{0}</0> എന്നതിലേക്ക് ഒര�
 msgid "Wednesday"
 msgstr "ബുധനാഴ്ച"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "ഈ ആപ്പിൽ നിന്ന് ഉണ്ടാക്കുന്ന പോസ്റ്റുകൾ എവിടേക്കാണ് പോകേണ്ടത്?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "വിക്കികൾ"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "ഈ വിഭാഗത്തിലേക്ക് നിങ്ങൾക്ക് പ്രവേശനമില്ല."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "ഈ നെറ്റ്‌വർക്കിൽ നിങ്ങൾക്ക് അക്കൗണ്ട് ഇല്ല. ആദ്യം ക്രമീകരണങ്ങളിൽ ഒരു ഉപയോക്തൃനാമം റിസർവ് ചെയ്യുക."
+msgid "You have no {network} account here."
+msgstr "നിങ്ങൾക്ക് ഇവിടെ {network} അക്കൗണ്ട് ഇല്ല."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

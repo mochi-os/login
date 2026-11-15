@@ -4,9 +4,9 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 //
 // Another app signing in to one of the user's hosted accounts: which app is
-// asking, for which account and with what access, with approve and refuse.
-// When the app asks to write and the account has no home feed, the page asks
-// where posts made from the app should go (decision 42).
+// asking, with what access, for which account, to allow or deny. When the app
+// writes to a feed and the account has no home feed, the page asks for one
+// (decision 42).
 import { useEffect, useMemo, useState } from 'react'
 import { useSearch } from '@tanstack/react-router'
 import { Trans, useLingui } from '@lingui/react/macro'
@@ -18,8 +18,6 @@ import {
   CardHeader,
   CardTitle,
   Label,
-  RadioGroup,
-  RadioGroupItem,
   Select,
   SelectContent,
   SelectItem,
@@ -30,15 +28,28 @@ import {
   toast,
 } from '@mochi/web'
 import { Check, Loader2, X } from 'lucide-react'
-import { AuthLayout } from '@/features/auth/auth-layout'
 import { consentApi, type ConsentData } from '@/api/consent'
 import { navigable } from '@/lib/redirect'
+import { AuthLayout } from '@/features/auth/auth-layout'
+
+// The home feed choice that makes a new feed, beside the existing feeds' ids.
+const NEW = 'new'
 
 // Where the browser goes once the request is answered: the client's redirect,
 // which is not this origin and so is checked as a navigable URL first.
 function leave(url: string) {
   if (navigable(url)) {
     window.location.href = url
+  }
+}
+
+// The host of an app's website, which tells a real app from one borrowing its
+// name; the address as given where it is not a URL.
+function host(website: string) {
+  try {
+    return new URL(website).host
+  } catch {
+    return website
   }
 }
 
@@ -49,9 +60,9 @@ export function ConsentPage() {
   // '' for a request that is gone; otherwise what failed, in the server's words.
   const [failure, setFailure] = useState<string | null>(null)
   const [account, setAccount] = useState('')
-  const [home, setHome] = useState<'existing' | 'new'>('existing')
-  const [feed, setFeed] = useState('')
-  const [pending, setPending] = useState<'approve' | 'refuse' | null>(null)
+  // The home feed chosen: an existing feed's id, or NEW.
+  const [home, setHome] = useState('')
+  const [pending, setPending] = useState<'allow' | 'deny' | null>(null)
 
   useEffect(() => {
     if (!request) {
@@ -66,8 +77,7 @@ export function ConsentPage() {
         setData(answer)
         const hinted = answer.request.accounts.find((a) => a.hinted)
         setAccount((hinted ?? answer.request.accounts[0])?.id ?? '')
-        setFeed(answer.feeds[0]?.id ?? '')
-        if (answer.feeds.length === 0) setHome('new')
+        setHome(answer.feeds[0]?.id ?? NEW)
       })
       .catch((error: unknown) => {
         if (cancelled) return
@@ -91,15 +101,15 @@ export function ConsentPage() {
   // account with no home feed yet.
   const asksHome = !!data?.request.feed && !!chosen && !chosen.home
 
-  const approve = async () => {
+  const allow = async () => {
     if (!data || !chosen) return
-    setPending('approve')
+    setPending('allow')
     try {
       const answer = await consentApi.approve({
         request: data.request.id,
         account: chosen.id,
-        feed: asksHome && home === 'existing' ? feed : undefined,
-        create: asksHome && home === 'new',
+        feed: asksHome && home !== NEW ? home : undefined,
+        create: asksHome && home === NEW,
       })
       leave(answer.url)
     } catch (error) {
@@ -108,9 +118,9 @@ export function ConsentPage() {
     }
   }
 
-  const refuse = async () => {
+  const deny = async () => {
     if (!data) return
-    setPending('refuse')
+    setPending('deny')
     try {
       const answer = await consentApi.refuse(data.request.id)
       leave(answer.url)
@@ -120,154 +130,123 @@ export function ConsentPage() {
     }
   }
 
+  if (failure !== null || !data) {
+    return (
+      <AuthLayout compact>
+        <Card>
+          <CardContent>
+            {failure !== null ? (
+              <p className='text-muted-foreground text-sm'>
+                {failure || <Trans>This request is no longer valid.</Trans>}
+              </p>
+            ) : (
+              <div className='flex justify-center py-6'>
+                <Loader2 className='size-5 animate-spin' />
+              </div>
+            )}
+          </CardContent>
+        </Card>
+      </AuthLayout>
+    )
+  }
+
+  const name = data.request.client.name
+  const network = providerName(data.request.network)
+  const accounts = data.request.accounts
+
   return (
-    <AuthLayout>
+    <AuthLayout compact>
       <Card>
         <CardHeader>
           <CardTitle>
-            <Trans>Sign in to your account</Trans>
+            {data.request.writes ? (
+              <Trans>Allow {name} to read and post?</Trans>
+            ) : (
+              <Trans>Allow {name} to read?</Trans>
+            )}
           </CardTitle>
+          {data.request.client.website && (
+            <p className='text-muted-foreground truncate text-sm'>
+              {host(data.request.client.website)}
+            </p>
+          )}
         </CardHeader>
         <CardContent className='space-y-4'>
-          {failure !== null ? (
+          {accounts.length === 0 ? (
             <p className='text-muted-foreground text-sm'>
-              {failure || (
-                <Trans>
-                  This sign-in request has expired or was already answered.
-                </Trans>
-              )}
+              <Trans>You have no {network} account here.</Trans>
             </p>
-          ) : !data ? (
-            <div className='flex justify-center py-6'>
-              <Loader2 className='size-5 animate-spin' />
-            </div>
+          ) : accounts.length === 1 ? (
+            <p className='truncate text-sm font-medium'>
+              {accounts[0].identifier}
+            </p>
           ) : (
-            <>
-              <p className='text-sm'>
-                <Trans>
-                  <span className='font-medium'>{data.request.client.name}</span>{' '}
-                  asks to sign in to your {providerName(data.request.network)}{' '}
-                  account.
-                </Trans>
-              </p>
-              {data.request.client.website && (
-                <p className='text-muted-foreground truncate text-sm'>
-                  {data.request.client.website}
-                </p>
-              )}
-              <div className='rounded-lg border px-4 py-3 text-sm'>
-                {data.request.writes ? (
-                  <Trans>It may read your account and post as it.</Trans>
-                ) : (
-                  <Trans>It may read your account.</Trans>
-                )}
-              </div>
-
-              {data.request.accounts.length === 0 ? (
-                <p className='text-muted-foreground text-sm'>
-                  <Trans>
-                    You have no account on this network. Reserve a handle in
-                    Settings first.
-                  </Trans>
-                </p>
-              ) : data.request.accounts.length === 1 ? (
-                <p className='text-sm font-medium'>
-                  {data.request.accounts[0].identifier}
-                </p>
-              ) : (
-                <div className='grid gap-2'>
-                  <Label htmlFor='consent-account'>
-                    <Trans>Account</Trans>
-                  </Label>
-                  <Select value={account} onValueChange={setAccount}>
-                    <SelectTrigger id='consent-account'>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {data.request.accounts.map((a) => (
-                        <SelectItem key={a.id} value={a.id}>
-                          {a.identifier}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-              )}
-
-              {asksHome && (
-                <div className='grid gap-3'>
-                  <p className='text-sm'>
-                    <Trans>Where should posts made from this app go?</Trans>
-                  </p>
-                  <RadioGroup
-                    value={home}
-                    onValueChange={(value) => setHome(value as 'existing' | 'new')}
-                  >
-                    {data.feeds.length > 0 && (
-                      <div className='flex items-center gap-2'>
-                        <RadioGroupItem value='existing' id='home-existing' />
-                        <Label htmlFor='home-existing'>
-                          <Trans>An existing public feed</Trans>
-                        </Label>
-                      </div>
-                    )}
-                    <div className='flex items-center gap-2'>
-                      <RadioGroupItem value='new' id='home-new' />
-                      <Label htmlFor='home-new'>
-                        <Trans>
-                          A new feed named {chosen.name || chosen.identifier}
-                        </Trans>
-                      </Label>
-                    </div>
-                  </RadioGroup>
-                  {home === 'existing' && data.feeds.length > 0 && (
-                    <Select value={feed} onValueChange={setFeed}>
-                      <SelectTrigger aria-label={t`Feed`}>
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {data.feeds.map((f) => (
-                          <SelectItem key={f.id} value={f.id}>
-                            {f.name}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  )}
-                </div>
-              )}
-
-              <div className='flex gap-2 pt-2'>
-                <Button
-                  type='button'
-                  variant='outline'
-                  className='flex-1'
-                  onClick={() => void refuse()}
-                  disabled={pending !== null}
-                >
-                  {pending === 'refuse' ? (
-                    <Loader2 className='size-4 animate-spin' />
-                  ) : (
-                    <X className='size-4' />
-                  )}
-                  <Trans>Refuse</Trans>
-                </Button>
-                <Button
-                  type='button'
-                  className='flex-1'
-                  onClick={() => void approve()}
-                  disabled={pending !== null || !chosen}
-                >
-                  {pending === 'approve' ? (
-                    <Loader2 className='size-4 animate-spin' />
-                  ) : (
-                    <Check className='size-4' />
-                  )}
-                  <Trans>Approve</Trans>
-                </Button>
-              </div>
-            </>
+            <Select value={account} onValueChange={setAccount}>
+              <SelectTrigger aria-label={t`Account`}>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {accounts.map((a) => (
+                  <SelectItem key={a.id} value={a.id}>
+                    {a.identifier}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           )}
+
+          {asksHome && (
+            <div className='flex items-center gap-3'>
+              <Label htmlFor='consent-home' className='shrink-0'>
+                <Trans>Home feed</Trans>
+              </Label>
+              <Select value={home} onValueChange={setHome}>
+                <SelectTrigger id='consent-home' className='min-w-0 flex-1'>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {data.feeds.map((f) => (
+                    <SelectItem key={f.id} value={f.id}>
+                      {f.name}
+                    </SelectItem>
+                  ))}
+                  <SelectItem value={NEW}>
+                    <Trans>A new feed</Trans>
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          )}
+
+          <div className='flex gap-2 pt-2'>
+            <Button
+              type='button'
+              variant='outline'
+              className='flex-1'
+              onClick={() => void deny()}
+              disabled={pending !== null}
+            >
+              {pending === 'deny' ? (
+                <Loader2 className='size-4 animate-spin' />
+              ) : (
+                <X className='size-4' />
+              )}
+              <Trans>Deny</Trans>
+            </Button>
+            <Button
+              type='button'
+              className='flex-1'
+              onClick={() => void allow()}
+              disabled={pending !== null || !chosen}
+            >
+              {pending === 'allow' ? (
+                <Loader2 className='size-4 animate-spin' />
+              ) : (
+                <Check className='size-4' />
+              )}
+              <Trans>Allow</Trans>
+            </Button>
+          </div>
         </CardContent>
       </Card>
     </AuthLayout>

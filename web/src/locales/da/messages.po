@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# fil mere vises ikke} other {# filer mere vise
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Åbn menu (# ulæst notifikation)} other {Åbn menu (# ulæste notifikationer)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> beder om at logge ind på din {1}-konto."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 timer"
@@ -145,10 +139,9 @@ msgstr "12 timer"
 msgid "24 hours"
 msgstr "24 timer"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Et nyt feed med navnet {0}"
+msgid "A new feed"
+msgstr "Et nyt feed"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Alle kommentarer"
 msgid "All day"
 msgstr "Hele dagen"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Tillad"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Tillad {name} at læse og poste?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Tillad {name} at læse?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Tillad alle at søge efter {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "En konto med denne identitet eksisterer allerede her."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Der opstod en fejl"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Et eksisterende offentligt feed"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Alle, der er logget ind"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Alt, der abonnerer på dette feed, holder op med at modtage det. Du kan kopiere en ny URL bagefter."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Godkend"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Slettet"
 msgid "Deleted {field}"
 msgstr "{field} slettet"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Nægt"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Faldende"
@@ -1318,10 +1319,6 @@ msgstr "Kunne ikke opdatere overvågning"
 msgid "Failed to upload attachment"
 msgstr "Kunne ikke uploade vedhæftning"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Feed"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Feeds"
@@ -1413,6 +1410,10 @@ msgstr "Historik"
 msgid "Home"
 msgstr "Hjem"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Hjemmefeed"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Populære"
@@ -1476,14 +1477,6 @@ msgstr "Ugyldig gendannelseskode"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Ugyldig verifikationskode"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Den må læse din konto og skrive indlæg i dens navn."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Den må læse din konto."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Omdirigerer dig til dashboardet…"
 msgid "Reduce interest"
 msgstr "Reducér interesse"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Afvis"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "Viser {totalShown} af {total}"
 msgid "Sidebar"
 msgstr "Sidepanel"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Log ind på din konto"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Log ind med en konto, der har adgang <0/> til denne ressource."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Dette sletter spillet og dets chat permanent. Dette kan ikke fortrydes."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Denne loginanmodning er udløbet eller er allerede besvaret."
+msgid "This request is no longer valid."
+msgstr "Denne anmodning er ikke længere gyldig."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "Vi har sendt en bekræftelseskode til <0>{0}</0>. Indtast koden nedenfor
 msgid "Wednesday"
 msgstr "Onsdag"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Hvor skal indlæg fra denne app hen?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikier"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "Du har ikke adgang til denne sektion."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Du har ingen konto på dette netværk. Reserver først et brugernavn under Indstillinger."
+msgid "You have no {network} account here."
+msgstr "Du har ingen {network}-konto her."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

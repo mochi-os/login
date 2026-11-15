@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Дахин # файл харуулаагүй} o
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Цэс нээх (# уншаагүй мэдэгдэл)} other {Цэс нээх (# уншаагүй мэдэгдэл)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> таны {1} бүртгэлд нэвтрэх хүсэлт гаргаж байна."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 цаг"
@@ -145,10 +139,9 @@ msgstr "12 цаг"
 msgid "24 hours"
 msgstr "24 цаг"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "{0} нэртэй шинэ фийд"
+msgid "A new feed"
+msgstr "Шинэ фийд"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Бүх сэтгэгдэл"
 msgid "All day"
 msgstr "Өдөржин"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Зөвшөөрөх"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "{name}-д унших, нийтлэхийг зөвшөөрөх үү?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "{name}-д уншихыг зөвшөөрөх үү?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Хүн бүр {entityLabel} хайж болохыг зөвшөөрөх"
@@ -300,10 +305,6 @@ msgstr "Энэ таниулбар бүхий бүртгэл энд аль хэд
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Алдаа гарлаа"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Одоо байгаа нийтийн фийд"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Нэвтэрсэн хэн ч"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Энэ хангамжид бүртгүүлсэн бүх зүйл хүлээн авахаа болино. Дараа нь та шинэ URL хуулж болно."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Зөвшөөрөх"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Устгасан"
 msgid "Deleted {field}"
 msgstr "{field} устгасан"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Татгалзах"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Буурахаар"
@@ -1318,10 +1319,6 @@ msgstr "Хяналтыг шинэчилж чадсангүй"
 msgid "Failed to upload attachment"
 msgstr "Хавсралт байршуулж чадсангүй"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Фийд"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Фийдүүд"
@@ -1413,6 +1410,10 @@ msgstr "Түүх"
 msgid "Home"
 msgstr "Нүүр"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Үндсэн фийд"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Хот"
@@ -1476,14 +1477,6 @@ msgstr "Сэргээх код хүчингүй"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Баталгаажуулах код хүчингүй"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Энэ нь таны бүртгэлийг уншиж, түүний нэрээр нийтлэх боломжтой."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Энэ нь таны бүртгэлийг унших боломжтой."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Хяналтын самбар руу шилжүүлж байна…"
 msgid "Reduce interest"
 msgstr "Сонирхлыг бууруулах"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Татгалзах"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "Нийт {total}-аас {totalShown} харуулж байна"
 msgid "Sidebar"
 msgstr "Хажуугийн самбар"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Бүртгэлдээ нэвтрэх"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Энэ нөөцөд хандах эрхтэй бүртгэлээр <0/> нэвтэрнэ үү."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Энэ нь тоглоом болон түүний чатыг бүрмөсөн устгана. Энэ үйлдлийг буцаах боломжгүй."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Энэ нэвтрэх хүсэлтийн хугацаа дууссан эсвэл аль хэдийн хариулсан байна."
+msgid "This request is no longer valid."
+msgstr "Энэ хүсэлт хүчинтэй байхаа больсон."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "Бид <0>{0}</0> хаяг руу баталгаажуулах код и
 msgid "Wednesday"
 msgstr "Лхагва гараг"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Энэ аппаас хийсэн нийтлэлүүд хаана очих вэ?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki-нууд"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "Та энэ хэсэгт хандах эрхгүй байна."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Танд энэ сүлжээнд бүртгэл байхгүй байна. Эхлээд Тохиргоо хэсэгт хэрэглэгчийн нэр нөөцлөнө үү."
+msgid "You have no {network} account here."
+msgstr "Танд энд {network} бүртгэл байхгүй байна."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

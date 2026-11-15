@@ -131,12 +131,6 @@ msgstr "{truncated, plural, other {နောက်ထပ်ဖိုင် # ခ
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, other {မီနူးဖွင့်ရန် (မဖတ်ရသေးသော အကြောင်းကြားချက် # ခု)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> က သင်၏ {1} အကောင့်သို့ ဝင်ရောက်ရန် တောင်းဆိုနေသည်။"
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "၁၂ နာရီ"
@@ -145,10 +139,9 @@ msgstr "၁၂ နာရီ"
 msgid "24 hours"
 msgstr "၂၄ နာရီ"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "{0} အမည်ရှိ ဖိဒ်အသစ်"
+msgid "A new feed"
+msgstr "ဖိဒ်အသစ်"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "မှတ်ချက်အားလုံး"
 msgid "All day"
 msgstr "တစ်နေကုန်"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "ခွင့်ပြုရန်"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "{name} ကို ဖတ်ရန်နှင့် ပို့စ်တင်ရန် ခွင့်ပြုမလား?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "{name} ကို ဖတ်ရန် ခွင့်ပြုမလား?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "{entityLabel} ကို မည်သူမဆို ရှာဖွေခွင့်ပြုပါ"
@@ -300,10 +305,6 @@ msgstr "ဤ ကိုယ်ပိုင်အမှတ်အသား ဖြင�
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "အမှားတစ်ခု ဖြစ်ပွားခဲ့သည်"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "ရှိပြီးသား အများသုံး ဖိဒ်"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "ဝင်ရောက်ထားသူ မည်သူမဆို"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "ဤဖိဒ်ကို စာရင်းသွင်းထားသည့် အရာအားလုံး လက်ခံရရှိမှု ရပ်တန့်ပါမည်။ ထို့နောက် URL အသစ်ကို ကူးယူနိုင်ပါသည်။"
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "အတည်ပြုမည်"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "ဖျက်ခဲ့သည်"
 msgid "Deleted {field}"
 msgstr "{field} ကို ဖျက်ခဲ့သည်"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "ငြင်းပယ်မည်"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "ကြီးစဉ်ငယ်လိုက်"
@@ -1318,10 +1319,6 @@ msgstr "စောင့်ကြည့်မှု အပ်ဒိတ်လု�
 msgid "Failed to upload attachment"
 msgstr "တွဲဖက်ဖိုင် တင်၍ မရပါ"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "ဖိဒ်"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "ဖိဒ်များ"
@@ -1413,6 +1410,10 @@ msgstr "မှတ်တမ်း"
 msgid "Home"
 msgstr "ပင်မ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "ပင်မ ဖိဒ်"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "လူကြိုက်များ"
@@ -1476,14 +1477,6 @@ msgstr "မမှန်ကန်သော ပြန်လည်ရယူရေ�
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "မမှန်ကန်သော အတည်ပြု ကုဒ်"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "၎င်းသည် သင်၏အကောင့်ကို ဖတ်နိုင်ပြီး ထိုအကောင့်အမည်ဖြင့် ပို့စ်တင်နိုင်သည်။"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "၎င်းသည် သင်၏အကောင့်ကို ဖတ်နိုင်သည်။"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "ဒက်ရှ်ဘုတ် သို့ လမ်းကြောင�
 msgid "Reduce interest"
 msgstr "စိတ်ဝင်စားမှု လျှော့ချ"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "ငြင်းပယ်မည်"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "{total} ထဲမှ {totalShown} ကို ပြသနေသည်"
 msgid "Sidebar"
 msgstr "ဘေးဘား"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "သင်၏အကောင့်သို့ ဝင်ရောက်ပါ"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "ဤအရင်းအမြစ်ကို ဝင်ရောက်ခွင့်ရှိသော အကောင့်ဖြင့် <0/> ဝင်ရောက်ပါ။"
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ဤလုပ်ဆောင်ချက်သည် ဂိမ်းနှင့် ၎င်း၏ ချတ်ကို အပြီးအပိုင် ဖျက်ပစ်မည်ဖြစ်သည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြောင်း၍မရပါ။"
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "ဤဝင်ရောက်ရန် တောင်းဆိုချက် သက်တမ်းကုန်သွားပြီ သို့မဟုတ် ဖြေကြားပြီးဖြစ်သည်။"
+msgid "This request is no longer valid."
+msgstr "ဤတောင်းဆိုမှု အကျုံးမဝင်တော့ပါ။"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "<0>{0}</0> သို့ အတည်ပြုကုဒ် ပို့�
 msgid "Wednesday"
 msgstr "ဗုဒ္ဓဟူး"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "ဤအက်ပ်မှ ပြုလုပ်သော ပို့စ်များကို မည်သည့်နေရာသို့ ပို့ရမလဲ?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikis"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "ဤအပိုင်းသို့ သင့်တွင် ဝင်ရောက်ခွင့်မရှိပါ။"
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "ဤကွန်ရက်တွင် သင့်အကောင့် မရှိပါ။ ဆက်တင်များတွင် သုံးစွဲသူအမည်ကို ဦးစွာ ကြိုတင်ယူပါ။"
+msgid "You have no {network} account here."
+msgstr "သင့်တွင် ဤနေရာ၌ {network} အကောင့် မရှိပါ။"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

@@ -96,37 +96,33 @@ describe('Consent page', () => {
     })
   })
 
-  it('names the app, the account and what it may do', async () => {
+  it('names the app, what it may do, its site and the account', async () => {
     show(data(false))
-    expect(await screen.findByText('Ivory')).toBeTruthy()
-    expect(screen.getByText('https://ivory.example')).toBeTruthy()
+    expect(await screen.findByText('Allow Ivory to read?')).toBeTruthy()
+    // The site's host alone, which tells the real app from one borrowing its
+    // name.
+    expect(screen.getByText('ivory.example')).toBeTruthy()
+    expect(screen.queryByText('https://ivory.example')).toBeNull()
     expect(screen.getByText('alice@example.com')).toBeTruthy()
-    expect(screen.getByText('It may read your account.')).toBeTruthy()
-    // A hosted fediverse account goes by the protocol it speaks.
-    expect(document.body.textContent).toContain(
-      'asks to sign in to your ActivityPub account.'
-    )
     // A read-only sign-in asks nothing about a home feed.
-    expect(
-      screen.queryByText('Where should posts made from this app go?')
-    ).toBeNull()
+    expect(screen.queryByText('Home feed')).toBeNull()
   })
 
   it('asks for a home feed when the app writes and the account has none', async () => {
     state.approve.mockResolvedValue({ url: 'https://ivory.example/cb?code=1' })
     show(data(true))
-    await screen.findByText('Ivory')
     expect(
-      screen.getByText('It may read your account and post as it.')
+      await screen.findByText('Allow Ivory to read and post?')
     ).toBeTruthy()
+    const select = screen.getByLabelText('Home feed')
+    expect(select.textContent).toBe('Notes')
+    fireEvent.click(select)
     expect(
-      screen.getByText('Where should posts made from this app go?')
-    ).toBeTruthy()
+      screen.getAllByRole('option').map((option) => option.textContent)
+    ).toEqual(['Notes', 'A new feed'])
+    fireEvent.click(screen.getByRole('option', { name: 'A new feed' }))
     await act(async () => {
-      fireEvent.click(screen.getByLabelText('A new feed named Alice'))
-    })
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', { name: 'Approve' }))
+      fireEvent.click(screen.getByRole('button', { name: 'Allow' }))
     })
     await waitFor(() => expect(state.approve).toHaveBeenCalled())
     expect(state.approve).toHaveBeenCalledWith({
@@ -136,6 +132,21 @@ describe('Consent page', () => {
       create: true,
     })
     expect(state.left).toBe('https://ivory.example/cb?code=1')
+  })
+
+  it('offers only a new feed when the user has no public feed', async () => {
+    state.approve.mockResolvedValue({ url: 'https://ivory.example/cb?code=4' })
+    show(data(true, '', []))
+    await screen.findByText('Allow Ivory to read and post?')
+    expect(screen.getByLabelText('Home feed').textContent).toBe('A new feed')
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Allow' }))
+    })
+    await waitFor(() => expect(state.approve).toHaveBeenCalled())
+    expect(state.approve.mock.calls[0][0]).toMatchObject({
+      feed: undefined,
+      create: true,
+    })
   })
 
   // A Matrix client writes to rooms, not a feed: Element was asked where its
@@ -149,15 +160,12 @@ describe('Consent page', () => {
       ...matrix,
       request: { ...matrix.request, network: 'matrix', feed: false },
     })
-    await screen.findByText('Ivory')
     expect(
-      screen.getByText('It may read your account and post as it.')
+      await screen.findByText('Allow Ivory to read and post?')
     ).toBeTruthy()
-    expect(
-      screen.queryByText('Where should posts made from this app go?')
-    ).toBeNull()
+    expect(screen.queryByText('Home feed')).toBeNull()
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', { name: 'Approve' }))
+      fireEvent.click(screen.getByRole('button', { name: 'Allow' }))
     })
     await waitFor(() => expect(state.approve).toHaveBeenCalled())
     expect(state.approve).toHaveBeenCalledWith({
@@ -171,10 +179,10 @@ describe('Consent page', () => {
   it('offers the existing public feeds and passes the chosen one', async () => {
     state.approve.mockResolvedValue({ url: 'https://ivory.example/cb?code=2' })
     show(data(true))
-    await screen.findByText('Ivory')
+    await screen.findByText('Allow Ivory to read and post?')
     // The existing feed is the default when there is one.
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', { name: 'Approve' }))
+      fireEvent.click(screen.getByRole('button', { name: 'Allow' }))
     })
     await waitFor(() => expect(state.approve).toHaveBeenCalled())
     expect(state.approve).toHaveBeenCalledWith({
@@ -188,12 +196,10 @@ describe('Consent page', () => {
   it('asks nothing about feeds when the account has a home feed', async () => {
     state.approve.mockResolvedValue({ url: 'https://ivory.example/cb?code=3' })
     show(data(true, 'fd1'))
-    await screen.findByText('Ivory')
-    expect(
-      screen.queryByText('Where should posts made from this app go?')
-    ).toBeNull()
+    await screen.findByText('Allow Ivory to read and post?')
+    expect(screen.queryByText('Home feed')).toBeNull()
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', { name: 'Approve' }))
+      fireEvent.click(screen.getByRole('button', { name: 'Allow' }))
     })
     await waitFor(() => expect(state.approve).toHaveBeenCalled())
     expect(state.approve.mock.calls[0][0]).toMatchObject({
@@ -202,14 +208,56 @@ describe('Consent page', () => {
     })
   })
 
-  it('refuses and goes back to the app', async () => {
+  it('offers the accounts to choose from when there are several', async () => {
+    state.approve.mockResolvedValue({ url: 'https://ivory.example/cb?code=5' })
+    const several = data(false)
+    show({
+      ...several,
+      request: {
+        ...several.request,
+        accounts: [
+          { ...several.request.accounts[0], hinted: false },
+          {
+            id: 'a2',
+            identifier: 'work@example.com',
+            name: 'Work',
+            home: '',
+            hinted: true,
+          },
+        ],
+      },
+    })
+    await screen.findByText('Allow Ivory to read?')
+    // The account the app named is the one chosen.
+    const select = screen.getByLabelText('Account')
+    expect(select.textContent).toBe('work@example.com')
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Allow' }))
+    })
+    await waitFor(() => expect(state.approve).toHaveBeenCalled())
+    expect(state.approve.mock.calls[0][0]).toMatchObject({ account: 'a2' })
+  })
+
+  it('says when the user has no account on the network', async () => {
+    const none = data(false)
+    show({ ...none, request: { ...none.request, accounts: [] } })
+    expect(
+      await screen.findByText('You have no ActivityPub account here.')
+    ).toBeTruthy()
+    expect(
+      (screen.getByRole('button', { name: 'Allow' }) as HTMLButtonElement)
+        .disabled
+    ).toBe(true)
+  })
+
+  it('denies and goes back to the app', async () => {
     state.refuse.mockResolvedValue({
       url: 'https://ivory.example/cb?error=access_denied',
     })
     show(data(false))
-    await screen.findByText('Ivory')
+    await screen.findByText('Allow Ivory to read?')
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', { name: 'Refuse' }))
+      fireEvent.click(screen.getByRole('button', { name: 'Deny' }))
     })
     await waitFor(() => expect(state.refuse).toHaveBeenCalledWith('r1'))
     expect(state.left).toBe('https://ivory.example/cb?error=access_denied')
@@ -225,9 +273,7 @@ describe('Consent page', () => {
       </I18nProvider>
     )
     expect(
-      await screen.findByText(
-        'This sign-in request has expired or was already answered.'
-      )
+      await screen.findByText('This request is no longer valid.')
     ).toBeTruthy()
   })
 
@@ -243,10 +289,6 @@ describe('Consent page', () => {
       </I18nProvider>
     )
     expect(await screen.findByText('App token required')).toBeTruthy()
-    expect(
-      screen.queryByText(
-        'This sign-in request has expired or was already answered.'
-      )
-    ).toBeNull()
+    expect(screen.queryByText('This request is no longer valid.')).toBeNull()
   })
 })

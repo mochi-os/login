@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# more file not shown} other {# more files not 
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> asks to sign in to your {1} account."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 hours"
@@ -145,10 +139,9 @@ msgstr "12 hours"
 msgid "24 hours"
 msgstr "24 hours"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "A new feed named {0}"
+msgid "A new feed"
+msgstr "A new feed"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "All comments"
 msgid "All day"
 msgstr "All day"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Allow"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Allow {name} to read and post?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Allow {name} to read?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Allow anyone to search for {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "An account with this identity already exists here."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "An error occurred"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "An existing public feed"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Anyone who is logged in"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Approve"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Deleted"
 msgid "Deleted {field}"
 msgstr "Deleted {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Deny"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Descending"
@@ -1318,10 +1319,6 @@ msgstr "Failed to update watching"
 msgid "Failed to upload attachment"
 msgstr "Failed to upload attachment"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Feed"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Feeds"
@@ -1413,6 +1410,10 @@ msgstr "History"
 msgid "Home"
 msgstr "Home"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Home feed"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Hot"
@@ -1476,14 +1477,6 @@ msgstr "Invalid recovery code"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Invalid verification code"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "It may read your account and post as it."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "It may read your account."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Redirecting you to the dashboard…"
 msgid "Reduce interest"
 msgstr "Reduce interest"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Refuse"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "Showing {totalShown} of {total}"
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Sign in to your account"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Sign in with an account that has access <0/> to this resource."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "This permanently deletes the game and its chat. This cannot be undone."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "This sign-in request has expired or was already answered."
+msgid "This request is no longer valid."
+msgstr "This request is no longer valid."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "We sent a verification code to <0>{0}</0>. Enter the code below to verif
 msgid "Wednesday"
 msgstr "Wednesday"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Where should posts made from this app go?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikis"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "You do not have access to this section."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "You have no account on this network. Reserve a handle in Settings first."
+msgid "You have no {network} account here."
+msgstr "You have no {network} account here."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

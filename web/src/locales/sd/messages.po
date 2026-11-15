@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# وڌيڪ فائل نه ڏيکاري وئي} o
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {مينيو کوليو (# اڻ پڙهيل اطلاع)} other {مينيو کوليو (# اڻ پڙهيل اطلاعون)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> توهان جي {1} اڪائونٽ ۾ سائن ان ٿيڻ جي اجازت گهري ٿي."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ڪلاڪ"
@@ -145,10 +139,9 @@ msgstr "12 ڪلاڪ"
 msgid "24 hours"
 msgstr "24 ڪلاڪ"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "{0} نالي نئين فيڊ"
+msgid "A new feed"
+msgstr "نئون فيڊ"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "سڀ تبصرا"
 msgid "All day"
 msgstr "سڄو ڏينهن"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "اجازت ڏيو"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "ڇا {name} کي پڙهڻ ۽ پوسٽ ڪرڻ جي اجازت ڏيو ٿا؟"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "ڇا {name} کي پڙهڻ جي اجازت ڏيو ٿا؟"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "سڀ ڪنهن کي {entityLabel} ڳولڻ جي اجازت ڏيو"
@@ -300,10 +305,6 @@ msgstr "هن سڃاڻپ سان اڪائونٽ اڳ ۾ ئي موجود آهي."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "هڪ خرابي پيش آئي"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "موجوده عوامي فيڊ"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "ڪو به جيڪو لاگ ان آهي"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "هن فيڊ جي رڪنيت وٺندڙ سڀ ڪجهه ان کي حاصل ڪرڻ بند ڪري ڇڏيندو. بعد ۾ توهان نئون URL ڪاپي ڪري سگهو ٿا."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "منظور ڪريو"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "ختم ڪيو ويو"
 msgid "Deleted {field}"
 msgstr "{field} ختم ڪيو ويو"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "رد ڪريو"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "وڌيڪ کان گهٽ"
@@ -1318,10 +1319,6 @@ msgstr "نگراني اپڊيٽ ڪرڻ ۾ ناڪام"
 msgid "Failed to upload attachment"
 msgstr "ضميمو اپ لوڊ ڪرڻ ۾ ناڪام"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "فيڊ"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "فيڊز"
@@ -1413,6 +1410,10 @@ msgstr "تاريخ"
 msgid "Home"
 msgstr "گهر"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "گهر فيڊ"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "گرم"
@@ -1476,14 +1477,6 @@ msgstr "غلط بحالي ڪوڊ"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "غلط تصديق ڪوڊ"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "اها توهان جو اڪائونٽ پڙهي سگهي ٿي ۽ ان جي طرفان پوسٽ ڪري سگهي ٿي."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "اها توهان جو اڪائونٽ پڙهي سگهي ٿي."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "توهان کي ڊيش بورڊ ڏانهن ريڊائريڪٽ ڪيو پ�
 msgid "Reduce interest"
 msgstr "دلچسپي گهٽايو"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "انڪار ڪريو"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "{total} مان {totalShown} ڏيکاري رهيو آھي"
 msgid "Sidebar"
 msgstr "سائيڊبار"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "پنهنجي اڪائونٽ ۾ سائن ان ڪريو"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "اهڙي اڪائونٽ سان سائن ان ٿيو جنهن کي هن وسيلي تائين <0/> رسائي هجي."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "هي عمل گيم ۽ ان جي چيٽ کي مستقل طور ختم ڪندو. هي عمل واپس نه ٿي سگهندو."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "هي سائن ان درخواست ختم ٿي چڪي آهي يا ان جو اڳ ئي جواب ڏنو ويو آهي."
+msgid "This request is no longer valid."
+msgstr "هيءَ درخواست هاڻي درست ناهي."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "اسان تصديقي ڪوڊ <0>{0}</0> تي موڪليو. پنھنجو 
 msgid "Wednesday"
 msgstr "اربع"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "هن ايپ مان ڪيل پوسٽون ڪٿي وڃڻ گهرجن؟"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "وڪيز"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "توهان کي هن حصي تائين رسائي ناهي."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "هن نيٽ ورڪ تي توهان جو ڪو اڪائونٽ ناهي. پهريان سيٽنگن ۾ هڪ هينڊل مخصوص ڪريو."
+msgid "You have no {network} account here."
+msgstr "هتي توهان جو ڪو {network} اڪائونٽ ناهي."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

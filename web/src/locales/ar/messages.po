@@ -131,12 +131,6 @@ msgstr "{truncated, plural, zero {لا ملفات إضافية غير معروض
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, zero {فتح القائمة (لا إشعارات غير مقروءة)} one {فتح القائمة (إشعار واحد غير مقروء)} two {فتح القائمة (إشعاران غير مقروءين)} few {فتح القائمة (# إشعارات غير مقروءة)} many {فتح القائمة (# إشعارًا غير مقروء)} other {فتح القائمة (# إشعار غير مقروء)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "يطلب <0>{0}</0> تسجيل الدخول إلى حسابك على {1}."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ساعة"
@@ -145,10 +139,9 @@ msgstr "12 ساعة"
 msgid "24 hours"
 msgstr "24 ساعة"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "تغذية جديدة باسم {0}"
+msgid "A new feed"
+msgstr "موجز تغذية جديد"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "جميع التعليقات"
 msgid "All day"
 msgstr "طوال اليوم"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "السماح"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "هل تسمح لـ {name} بالقراءة والنشر؟"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "هل تسمح لـ {name} بالقراءة؟"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "السماح لأي شخص بالبحث عن {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "يوجد حساب بهذه الهوية بالفعل هنا."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "حدث خطأ"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "تغذية عامة موجودة"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "أي شخص مسجّل الدخول"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "سيتوقف أي شيء مشترك في هذه التغذية عن تلقيها. يمكنك نسخ عنوان URL جديد بعد ذلك."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "موافقة"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "تم الحذف"
 msgid "Deleted {field}"
 msgstr "تم حذف {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "رفض"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "تنازلي"
@@ -1318,10 +1319,6 @@ msgstr "فشل تحديث المتابعة"
 msgid "Failed to upload attachment"
 msgstr "فشل رفع المرفق"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "تغذية"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "التغذية"
@@ -1413,6 +1410,10 @@ msgstr "السجل"
 msgid "Home"
 msgstr "الرئيسية"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "موجز التغذية الرئيسي"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "رائج"
@@ -1476,14 +1477,6 @@ msgstr "رمز الاسترداد غير صالح"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "رمز التحقق غير صالح"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "يمكنه قراءة حسابك والنشر باسمه."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "يمكنه قراءة حسابك."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "جارٍ التوجيه إلى لوحة التحكم…"
 msgid "Reduce interest"
 msgstr "تقليل الاهتمام"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "رفض"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "عرض {totalShown} من {total}"
 msgid "Sidebar"
 msgstr "الشريط الجانبي"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "سجّل الدخول إلى حسابك"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "سجّل الدخول بحساب لديه حق الوصول <0/> إلى هذا المورد."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "سيؤدي هذا إلى حذف اللعبة ومحادثتها نهائيًا. لا يمكن التراجع عن هذا الإجراء."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "انتهت صلاحية طلب تسجيل الدخول هذا أو تمت الإجابة عليه بالفعل."
+msgid "This request is no longer valid."
+msgstr "لم يعد هذا الطلب صالحًا."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "أرسلنا رمز تحقق إلى <0>{0}</0>. أدخل الرمز أد
 msgid "Wednesday"
 msgstr "الأربعاء"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "أين يجب أن تذهب المنشورات التي تُنشر من هذا التطبيق؟"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "الويكي"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "ليس لديك صلاحية الوصول إلى هذا القسم."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "ليس لديك حساب على هذه الشبكة. احجز معرّفًا في الإعدادات أولًا."
+msgid "You have no {network} account here."
+msgstr "ليس لديك حساب {network} هنا."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

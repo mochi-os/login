@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Veel # fail on kuvamata} other {Veel # faili on
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Ava menüü (# lugemata teatis)} other {Ava menüü (# lugemata teatist)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> soovib sisse logida sinu {1} kontole."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 tundi"
@@ -145,10 +139,9 @@ msgstr "12 tundi"
 msgid "24 hours"
 msgstr "24 tundi"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Uus voog nimega {0}"
+msgid "A new feed"
+msgstr "Uus uudisvoog"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Kõik kommentaarid"
 msgid "All day"
 msgstr "Kogu päev"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Luba"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Kas lubada rakendusel {name} lugeda ja postitada?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Kas lubada rakendusel {name} lugeda?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Luba kõigil otsida {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Selle identiteediga konto on siin juba olemas."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Tekkis viga"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Olemasolev avalik voog"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Kõik, kes on sisse logitud"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Kõik, mis on selle voo tellinud, lakkab seda saamast. Pärast saad kopeerida uue URL-i."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Kinnita"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Kustutatud"
 msgid "Deleted {field}"
 msgstr "{field} kustutatud"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Keeldu"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Kahanev"
@@ -1318,10 +1319,6 @@ msgstr "Jälgimise uuendamine ebaõnnestus"
 msgid "Failed to upload attachment"
 msgstr "Manuse üleslaadimine ebaõnnestus"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Voog"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Uudisvood"
@@ -1413,6 +1410,10 @@ msgstr "Ajalugu"
 msgid "Home"
 msgstr "Avaleht"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Koduvoog"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Kuum"
@@ -1476,14 +1477,6 @@ msgstr "Vigane taastekood"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Vigane kinnituskood"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "See võib lugeda sinu kontot ja postitada selle nimel."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "See võib lugeda sinu kontot."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Ümbersuunamine töölauale…"
 msgid "Reduce interest"
 msgstr "Vähenda huvi"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Keeldu"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "Näidatakse {totalShown} / {total}"
 msgid "Sidebar"
 msgstr "Külgriba"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Logi sisse oma kontole"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Logi sisse kontoga, millel on juurdepääs <0/> sellele ressursile."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "See kustutab mängu ja selle vestluse jäädavalt. Seda ei saa tagasi võtta."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "See sisselogimistaotlus on aegunud või sellele on juba vastatud."
+msgid "This request is no longer valid."
+msgstr "See päring ei kehti enam."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "Saatsime kinnituskoodi aadressile <0>{0}</0>. Sisestage kood allpool, et
 msgid "Wednesday"
 msgstr "Kolmapäev"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Kuhu peaksid selle rakenduse kaudu tehtud postitused minema?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Vikid"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "Sul puudub juurdepääs sellele jaotisele."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Sul pole selles võrgus kontot. Broneeri esmalt jaotises Seaded kasutajanimi."
+msgid "You have no {network} account here."
+msgstr "Sul pole siin {network}-kontot."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

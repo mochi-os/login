@@ -131,12 +131,6 @@ msgstr "{truncated, plural, other {ឯកសារ # ទៀតមិនបាន
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, other {បើកម៉ឺនុយ (ការជូនដំណឹងមិនទាន់អាន # )}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> សុំចូលគណនី {1} របស់អ្នក។"
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "១២ ម៉ោង"
@@ -145,10 +139,9 @@ msgstr "១២ ម៉ោង"
 msgid "24 hours"
 msgstr "២៤ ម៉ោង"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "ព័ត៌មានបង្ហាញថ្មីដែលមានឈ្មោះ {0}"
+msgid "A new feed"
+msgstr "មតិព័ត៌មានថ្មី"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "មតិយោបល់ទាំងអស់"
 msgid "All day"
 msgstr "ពេញមួយថ្ងៃ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "អនុញ្ញាត"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "តើអនុញ្ញាតឱ្យ {name} អាន និងបង្ហោះទេ?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "តើអនុញ្ញាតឱ្យ {name} អានទេ?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "អនុញ្ញាតឱ្យអ្នកណាក៏ដោយស្វែងរក {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "គណនីដែលមានអត្តសញ្ញាណនេះម
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "មានកំហុសកើតឡើង"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "ព័ត៌មានបង្ហាញសាធារណៈដែលមានស្រាប់"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "នរណាម្នាក់ដែលបានចូល"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "អ្វីៗដែលបានជាវព័ត៌មាននេះនឹងឈប់ទទួលបាន។ បន្ទាប់មកអ្នកអាចចម្លង URL ថ្មី។"
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "យល់ព្រម"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "បានលុប"
 msgid "Deleted {field}"
 msgstr "បានលុប {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "បដិសេធ"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "តាមលំដាប់ថយ"
@@ -1318,10 +1319,6 @@ msgstr "ការធ្វើបច្ចុប្បន្នភាពការ
 msgid "Failed to upload attachment"
 msgstr "បរាជ័យក្នុងការផ្ទុកឡើងឯកសារភ្ជាប់"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "ព័ត៌មានបង្ហាញ"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "មតិព័ត៌មាន"
@@ -1413,6 +1410,10 @@ msgstr "ប្រវត្តិ"
 msgid "Home"
 msgstr "ទំព័រដើម"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "មតិព័ត៌មានដើម"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "ក្ដៅ"
@@ -1476,14 +1477,6 @@ msgstr "កូដសង្គ្រោះមិនត្រឹមត្រូវ
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "កូដផ្ទៀងផ្ទាត់មិនត្រឹមត្រូវ"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "វាអាចអានគណនីរបស់អ្នក និងប្រកាសក្នុងនាមគណនីនោះ។"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "វាអាចអានគណនីរបស់អ្នក។"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "កំពុងបញ្ជូនបន្តអ្នកទៅផ្ទ
 msgid "Reduce interest"
 msgstr "កាត់បន្ថយចំណាប់អារម្មណ៍"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "បដិសេធ"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "កំពុងបង្ហាញ {totalShown} នៃ {total}"
 msgid "Sidebar"
 msgstr "របារចំហៀង"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "ចូលគណនីរបស់អ្នក"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "សូមចូលដោយប្រើគណនីដែលមានសិទ្ធិចូលប្រើ <0/> ធនធាននេះ។"
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "សកម្មភាពនេះនឹងលុបហ្គេម និងជជែកកំសាន្តរបស់វាជាអចិន្ត្រៃយ៍។ សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។"
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "សំណើចូលនេះបានផុតកំណត់ ឬត្រូវបានឆ្លើយតបរួចហើយ។"
+msgid "This request is no longer valid."
+msgstr "សំណើនេះលែងមានសុពលភាពហើយ។"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "យើងបានផ្ញើលេខកូដផ្ទៀងផ្ទ
 msgid "Wednesday"
 msgstr "ថ្ងៃពុធ"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "តើការប្រកាសដែលធ្វើពីកម្មវិធីនេះគួរទៅណា?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "វិគី"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "អ្នកមិនមានសិទ្ធិចូលប្រើផ្នែកនេះទេ។"
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "អ្នកមិនមានគណនីនៅលើបណ្តាញនេះទេ។ សូមកក់ឈ្មោះអ្នកប្រើនៅក្នុងការកំណត់ជាមុនសិន។"
+msgid "You have no {network} account here."
+msgstr "អ្នកមិនមានគណនី {network} នៅទីនេះទេ។"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

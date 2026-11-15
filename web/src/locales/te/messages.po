@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {మరో # ఫైల్ చూపబడలే�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {మెనూ తెరవండి (# చదవని నోటిఫికేషన్)} other {మెనూ తెరవండి (# చదవని నోటిఫికేషన్‌లు)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> మీ {1} ఖాతాకు సైన్ ఇన్ చేయడానికి అనుమతి అడుగుతోంది."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 గంటలు"
@@ -145,10 +139,9 @@ msgstr "12 గంటలు"
 msgid "24 hours"
 msgstr "24 గంటలు"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "{0} అనే పేరుతో కొత్త ఫీడ్"
+msgid "A new feed"
+msgstr "ఒక కొత్త ఫీడ్"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "అన్ని వ్యాఖ్యలు"
 msgid "All day"
 msgstr "రోజంతా"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "అనుమతించండి"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "{name}ని చదవడానికి మరియు పోస్ట్ చేయడానికి అనుమతించాలా?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "{name}ని చదవడానికి అనుమతించాలా?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "{entityLabel} కోసం వెతకడానికి ఎవరినైనా అనుమతించు"
@@ -300,10 +305,6 @@ msgstr "ఈ గుర్తింపుతో ఒక అకౌంట్ ఇక�
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "లోపం సంభవించింది"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "ఇప్పటికే ఉన్న పబ్లిక్ ఫీడ్"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "లాగిన్ అయిన ఎవరైనా"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "ఈ ఫీడ్‌కు సభ్యత్వం పొందిన ప్రతిదీ దాన్ని స్వీకరించడం ఆపేస్తుంది. ఆ తర్వాత మీరు కొత్త URLని కాపీ చేయవచ్చు."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "ఆమోదించండి"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "తొలగించబడింది"
 msgid "Deleted {field}"
 msgstr "{field} తొలగించబడింది"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "నిరాకరించండి"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "అవరోహణ"
@@ -1318,10 +1319,6 @@ msgstr "పర్యవేక్షణ నవీకరించడంలో వ�
 msgid "Failed to upload attachment"
 msgstr "జోడింపును అప్‌లోడ్ చేయడంలో విఫలమైంది"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "ఫీడ్"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "ఫీడ్‌లు"
@@ -1413,6 +1410,10 @@ msgstr "చరిత్ర"
 msgid "Home"
 msgstr "హోమ్"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "హోమ్ ఫీడ్"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "హాట్"
@@ -1476,14 +1477,6 @@ msgstr "చెల్లని రికవరీ కోడ్"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "చెల్లని ధృవీకరణ కోడ్"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "ఇది మీ ఖాతాను చదవగలదు మరియు దాని పేరుతో పోస్ట్ చేయగలదు."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "ఇది మీ ఖాతాను చదవగలదు."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "మిమ్మల్ని డ్యాష్‌బోర్డ్‌�
 msgid "Reduce interest"
 msgstr "ఆసక్తిని తగ్గించండి"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "నిరాకరించండి"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "{total}లో {totalShown} చూపిస్తోంది"
 msgid "Sidebar"
 msgstr "సైడ్‌బార్"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "మీ ఖాతాకు సైన్ ఇన్ చేయండి"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "ఈ వనరుకు ప్రాప్యత <0/> ఉన్న ఖాతాతో సైన్ ఇన్ చేయండి."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ఇది గేమ్‌ను మరియు దాని చాట్‌ను శాశ్వతంగా తొలగిస్తుంది. ఈ చర్యను తిరిగి మార్చలేరు."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "ఈ సైన్-ఇన్ అభ్యర్థన గడువు ముగిసింది లేదా ఇప్పటికే సమాధానం ఇవ్వబడింది."
+msgid "This request is no longer valid."
+msgstr "ఈ అభ్యర్థన ఇకపై చెల్లదు."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "మేము <0>{0}</0> కు ధృవీకరణ కోడ్‌న�
 msgid "Wednesday"
 msgstr "బుధవారం"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "ఈ యాప్ నుండి చేసిన పోస్ట్‌లు ఎక్కడికి వెళ్ళాలి?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikiలు"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "ఈ విభాగానికి మీకు యాక్సెస్ లేదు."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "ఈ నెట్‌వర్క్‌లో మీకు ఖాతా లేదు. ముందుగా సెట్టింగ్‌లలో ఒక హ్యాండిల్‌ను రిజర్వ్ చేయండి."
+msgid "You have no {network} account here."
+msgstr "మీకు ఇక్కడ {network} ఖాతా లేదు."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
