@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# ďalší súbor nie je zobrazený} few {# ďa
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Otvoriť ponuku (# neprečítané oznámenie)} few {Otvoriť ponuku (# neprečítané oznámenia)} many {Otvoriť ponuku (# neprečítaného oznámenia)} other {Otvoriť ponuku (# neprečítaných oznámení)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> žiada o prihlásenie do vášho účtu {1}."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 hodín"
@@ -145,10 +139,9 @@ msgstr "12 hodín"
 msgid "24 hours"
 msgstr "24 hodín"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Nový kanál s názvom {0}"
+msgid "A new feed"
+msgstr "Nový kanál"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Všetky komentáre"
 msgid "All day"
 msgstr "Celý deň"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Povoliť"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Povoliť {name} čítať a pridávať príspevky?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Povoliť {name} čítať?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Povoliť komukoľvek vyhľadávať {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Účet s touto identitou tu už existuje."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Vyskytla sa chyba"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Existujúci verejný kanál"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Ktokoľvek, kto je prihlásený"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Všetko, čo je prihlásené na tento kanál, ho prestane dostávať. Potom môžete skopírovať novú adresu URL."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Schváliť"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Odstránené"
 msgid "Deleted {field}"
 msgstr "Odstránené {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Zamietnuť"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Zostupne"
@@ -1318,10 +1319,6 @@ msgstr "Sledovanie sa nepodarilo aktualizovať"
 msgid "Failed to upload attachment"
 msgstr "Nepodarilo sa nahrať prílohu"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Kanál"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Kanály"
@@ -1413,6 +1410,10 @@ msgstr "História"
 msgid "Home"
 msgstr "Domov"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Domovský kanál"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Populárne"
@@ -1476,14 +1477,6 @@ msgstr "Neplatný obnovovací kód"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Neplatný overovací kód"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Bude môcť čítať váš účet a uverejňovať v jeho mene."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Bude môcť čítať váš účet."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Presmerovávam vás na nástenku…"
 msgid "Reduce interest"
 msgstr "Znížiť záujem"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Zamietnuť"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "Zobrazuje sa {totalShown} z {total}"
 msgid "Sidebar"
 msgstr "Bočný panel"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Prihláste sa do svojho účtu"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Prihláste sa účtom, ktorý má prístup <0/> k tomuto zdroju."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Týmto trvalo odstránite hru a jej chat. Túto akciu nemožno vrátiť späť."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Platnosť tejto žiadosti o prihlásenie vypršala alebo už bola zodpovedaná."
+msgid "This request is no longer valid."
+msgstr "Táto požiadavka už nie je platná."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Overovací kód sme odoslali na <0>{0}</0>. Zadajte kód nižšie na ove
 msgid "Wednesday"
 msgstr "Streda"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Kam majú smerovať príspevky uverejnené z tejto aplikácie?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Nemáte prístup k tejto sekcii."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "V tejto sieti nemáte účet. Najprv si v Nastaveniach rezervujte prezývku."
+msgid "You have no {network} account here."
+msgstr "Nemáte tu účet {network}."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

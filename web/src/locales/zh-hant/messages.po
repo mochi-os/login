@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {另有 # 個檔案未顯示} other {另有 # �
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {開啟選單（# 則未讀通知）} other {開啟選單（# 則未讀通知）}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> 請求登入您的 {1} 帳戶。"
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 小時"
@@ -145,10 +139,9 @@ msgstr "12 小時"
 msgid "24 hours"
 msgstr "24 小時"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "名為 {0} 的新資訊流"
+msgid "A new feed"
+msgstr "新資訊流"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "所有留言"
 msgid "All day"
 msgstr "整天"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "允許"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "允許 {name} 讀取和發佈貼文?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "允許 {name} 讀取?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "允許任何人搜尋{entityLabel}"
@@ -300,10 +305,6 @@ msgstr "此處已存在具有此身份的帳號。"
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "發生錯誤"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "現有的公開資訊流"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "任何已登入的人"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "任何訂閱此訂閱源的程式都將無法再接收更新。之後你可以複製新的網址。"
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "核准"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "已刪除"
 msgid "Deleted {field}"
 msgstr "已刪除{field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "拒絕"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "降冪"
@@ -1318,10 +1319,6 @@ msgstr "更新關注失敗"
 msgid "Failed to upload attachment"
 msgstr "上傳附件失敗"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "資訊流"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "資訊流"
@@ -1413,6 +1410,10 @@ msgstr "記錄"
 msgid "Home"
 msgstr "首頁"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "主資訊流"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "熱門"
@@ -1476,14 +1477,6 @@ msgstr "無效的還原代碼"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "無效的驗證碼"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "它可以讀取您的帳戶，並以該帳戶的身分發文。"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "它可以讀取您的帳戶。"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "正在重新導向至儀表板…"
 msgid "Reduce interest"
 msgstr "降低興趣"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "拒絕"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "顯示 {totalShown} / {total}"
 msgid "Sidebar"
 msgstr "側邊欄"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "登入您的帳戶"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "請使用有權存取 <0/> 此資源的帳戶登入。"
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "此操作將永久刪除對局及其聊天記錄，且無法復原。"
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "此登入請求已過期或已被處理。"
+msgid "This request is no longer valid."
+msgstr "此要求已失效。"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "我們已將驗證碼傳送至 <0>{0}</0>。請在下方輸入驗證碼�
 msgid "Wednesday"
 msgstr "星期三"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "從此應用程式發布的貼文應發到哪裡？"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "您沒有存取此區段的權限。"
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "您在此網路上沒有帳戶。請先在設定中保留一個帳號代碼。"
+msgid "You have no {network} account here."
+msgstr "您在此處沒有 {network} 帳戶。"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

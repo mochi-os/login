@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# fajl ieħor mhux muri} two {# fajls oħra mhu
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Iftaħ il-menu (# notifika mhux moqrija)} two {Iftaħ il-menu (# notifiki mhux moqrija)} few {Iftaħ il-menu (# notifiki mhux moqrija)} many {Iftaħ il-menu (# notifika mhux moqrija)} other {Iftaħ il-menu (# notifika mhux moqrija)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> qed titlob li tidħol fil-kont tiegħek ta' {1}."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12-il siegħa"
@@ -145,10 +139,9 @@ msgstr "12-il siegħa"
 msgid "24 hours"
 msgstr "24 siegħa"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Feed ġdid bl-isem {0}"
+msgid "A new feed"
+msgstr "Feed ġdid"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Il-kummenti kollha"
 msgid "All day"
 msgstr "Il-ġurnata kollha"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Ippermetti"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Tippermetti lil {name} jaqra u jippostja?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Tippermetti lil {name} jaqra?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Ħalli lil kulħadd ifittex {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Kont b'din l-identità diġà jeżisti hawn."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Seħħet żball"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Feed pubbliku eżistenti"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Kull min hu llogjat"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Kull ma huwa abbonat għal din il-feed se jieqaf jirċeviha. Wara tista' tikkopja URL ġdid."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Approva"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Tħassar"
 msgid "Deleted {field}"
 msgstr "Tħassar {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Iċħad"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Dixxendenti"
@@ -1318,10 +1319,6 @@ msgstr "Ma rnexxiex jiġi aġġornat is-segwitu"
 msgid "Failed to upload attachment"
 msgstr "Ma rnexxiex jittella' l-attachment"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Feed"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Feeds"
@@ -1413,6 +1410,10 @@ msgstr "Storja"
 msgid "Home"
 msgstr "Paġna ewlenija"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Feed ewlieni"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Sħun"
@@ -1476,14 +1477,6 @@ msgstr "Kodiċi tal-irkupru invalidu"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Kodiċi tal-verifika invalidu"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Tista' taqra l-kont tiegħek u tippubblika f'ismu."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Tista' taqra l-kont tiegħek."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Qed inwassluk għad-dashboard…"
 msgid "Reduce interest"
 msgstr "Naqqas l-interess"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Irrifjuta"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "Qed juri {totalShown} minn {total}"
 msgid "Sidebar"
 msgstr "Barra tal-ġenb"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Idħol fil-kont tiegħek"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Idħol b'kont li għandu aċċess <0/> għal din ir-riżorsa."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Dan għad iħassar il-logħba u ċ-chat tagħha b'mod permanenti. Din l-azzjoni ma tistax titħassar."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Din it-talba għad-dħul skadiet jew diġà ngħatat tweġiba."
+msgid "This request is no longer valid."
+msgstr "Din it-talba m'għadhiex valida."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Bgħatna kodiċi ta' verifika lil <0>{0}</0>. Daħħal il-kodiċi hawn t
 msgid "Wednesday"
 msgstr "L-Erbgħa"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Fejn għandhom imorru l-posts magħmula minn din l-applikazzjoni?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikis"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "M'għandekx aċċess għal din it-taqsima."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "M'għandekx kont fuq dan in-netwerk. L-ewwel irriżerva isem tal-utent fl-Issettjar."
+msgid "You have no {network} account here."
+msgstr "M'għandekx kont {network} hawn."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

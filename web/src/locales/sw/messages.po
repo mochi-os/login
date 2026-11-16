@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Faili # zaidi haijaonyeshwa} other {Faili # zai
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Fungua menyu (arifa # ambayo haijasomwa)} other {Fungua menyu (arifa # ambazo hazijasomwa)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> inaomba kuingia kwenye akaunti yako ya {1}."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "Masaa 12"
@@ -145,10 +139,9 @@ msgstr "Masaa 12"
 msgid "24 hours"
 msgstr "Masaa 24"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Mlisho mpya unaoitwa {0}"
+msgid "A new feed"
+msgstr "Mlisho mpya"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Maoni yote"
 msgid "All day"
 msgstr "Siku nzima"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Ruhusu"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Ruhusu {name} kusoma na kuchapisha?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Ruhusu {name} kusoma?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Ruhusu mtu yeyote kutafuta {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Akaunti yenye utambulisho huu tayari ipo hapa."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Hitilafu imetokea"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Mlisho wa umma uliopo"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Yeyote aliyeingia"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Chochote kilichojiandikisha kwenye mlisho huu kitaacha kuupokea. Unaweza kunakili URL mpya baadaye."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Idhinisha"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Imefutwa"
 msgid "Deleted {field}"
 msgstr "Imefuta {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Kataa"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Kushuka"
@@ -1318,10 +1319,6 @@ msgstr "Imeshindwa kusasisha ufuatiliaji"
 msgid "Failed to upload attachment"
 msgstr "Imeshindwa kupakia kiambatisho"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Mlisho"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Mlisho"
@@ -1413,6 +1410,10 @@ msgstr "Historia"
 msgid "Home"
 msgstr "Nyumbani"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Mlisho mkuu"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Moto"
@@ -1476,14 +1477,6 @@ msgstr "Msimbo wa urejeshaji batili"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Msimbo wa uthibitisho batili"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Inaweza kusoma akaunti yako na kuchapisha kama akaunti hiyo."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Inaweza kusoma akaunti yako."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Kukuelekeza kwenye dashibodi…"
 msgid "Reduce interest"
 msgstr "Punguza shauku"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Kataa"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "Inaonyesha {totalShown} kati ya {total}"
 msgid "Sidebar"
 msgstr "Upau wa kando"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Ingia kwenye akaunti yako"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Ingia kwa akaunti yenye ufikiaji <0/> wa rasilimali hii."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Hatua hii itafuta mchezo na mazungumzo yake kabisa. Hatua hii haiwezi kutenduliwa."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Ombi hili la kuingia limeisha muda wake au tayari limejibiwa."
+msgid "This request is no longer valid."
+msgstr "Ombi hili si halali tena."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Tumetuma msimbo wa uthibitishaji kwa <0>{0}</0>. Weka msimbo hapa chini 
 msgid "Wednesday"
 msgstr "Jumatano"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Machapisho yaliyofanywa kutoka programu hii yaende wapi?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Huna ruhusa ya kufikia sehemu hii."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Huna akaunti kwenye mtandao huu. Tenga jina la utani kwanza katika Mipangilio."
+msgid "You have no {network} account here."
+msgstr "Huna akaunti ya {network} hapa."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

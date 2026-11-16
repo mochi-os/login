@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Vielä # tiedosto jää näyttämättä} other 
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Avaa valikko (# lukematon ilmoitus)} other {Avaa valikko (# lukematonta ilmoitusta)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> pyytää lupaa kirjautua {1}-tiliisi."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 tuntia"
@@ -145,10 +139,9 @@ msgstr "12 tuntia"
 msgid "24 hours"
 msgstr "24 tuntia"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Uusi syöte nimeltä {0}"
+msgid "A new feed"
+msgstr "Uusi syöte"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Kaikki kommentit"
 msgid "All day"
 msgstr "Koko päivä"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Salli"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Sallitaanko, että {name} lukee ja julkaisee?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Sallitaanko, että {name} lukee?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Salli kaikkien etsiä {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Tili, jolla on tämä henkilöllisyys, on jo olemassa täällä."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Tapahtui virhe"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Olemassa oleva julkinen syöte"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Kuka tahansa kirjautunut"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Kaikki tätä syötettä tilaavat lakkaavat vastaanottamasta sitä. Voit kopioida uuden URL-osoitteen jälkeenpäin."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Hyväksy"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Poistettu"
 msgid "Deleted {field}"
 msgstr "{field} poistettu"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Estä"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Laskeva"
@@ -1318,10 +1319,6 @@ msgstr "Seurannan päivitys epäonnistui"
 msgid "Failed to upload attachment"
 msgstr "Liitteen lähetys epäonnistui"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Syöte"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Syötteet"
@@ -1413,6 +1410,10 @@ msgstr "Historia"
 msgid "Home"
 msgstr "Etusivu"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Kotisyöte"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Kuuma"
@@ -1476,14 +1477,6 @@ msgstr "Virheellinen palautuskoodi"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Virheellinen vahvistuskoodi"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Se voi lukea tiliäsi ja julkaista sen nimissä."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Se voi lukea tiliäsi."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Ohjataan koontinäyttöön…"
 msgid "Reduce interest"
 msgstr "Vähennä kiinnostusta"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Hylkää"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "Näytetään {totalShown} / {total}"
 msgid "Sidebar"
 msgstr "Sivupalkki"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Kirjaudu tilillesi"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Kirjaudu sisään tilillä, jolla on käyttöoikeus <0/> tähän resurssiin."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Tämä poistaa pelin ja sen keskustelun pysyvästi. Tätä ei voi peruuttaa."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Tämä kirjautumispyyntö on vanhentunut tai siihen on jo vastattu."
+msgid "This request is no longer valid."
+msgstr "Tämä pyyntö ei ole enää voimassa."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Lähetimme vahvistuskoodin osoitteeseen <0>{0}</0>. Syötä koodi alle v
 msgid "Wednesday"
 msgstr "Keskiviikko"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Minne tästä sovelluksesta tehtyjen julkaisujen pitäisi mennä?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikit"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Sinulla ei ole pääsyä tähän osioon."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Sinulla ei ole tiliä tässä verkossa. Varaa ensin käyttäjätunnus Asetuksissa."
+msgid "You have no {network} account here."
+msgstr "Sinulla ei ole täällä {network}-tiliä."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

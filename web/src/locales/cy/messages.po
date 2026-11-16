@@ -131,12 +131,6 @@ msgstr "{truncated, plural, zero {# ffeil arall heb eu dangos} one {# ffeil aral
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, zero {Agor y ddewislen (# hysbysiad heb ei ddarllen)} one {Agor y ddewislen (# hysbysiad heb ei ddarllen)} two {Agor y ddewislen (# hysbysiad heb eu darllen)} few {Agor y ddewislen (# hysbysiad heb eu darllen)} many {Agor y ddewislen (# hysbysiad heb eu darllen)} other {Agor y ddewislen (# hysbysiad heb eu darllen)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "Mae <0>{0}</0> yn gofyn am gael mewngofnodi i'ch cyfrif {1}."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 awr"
@@ -145,10 +139,9 @@ msgstr "12 awr"
 msgid "24 hours"
 msgstr "24 awr"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Ffrwd newydd o'r enw {0}"
+msgid "A new feed"
+msgstr "Llif newydd"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Yr holl sylwadau"
 msgid "All day"
 msgstr "Trwy'r dydd"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Caniatáu"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Caniatáu i {name} ddarllen a phostio?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Caniatáu i {name} ddarllen?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Caniatáu i unrhyw un chwilio am {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Mae cyfrif gyda'r hunaniaeth hon eisoes yn bodoli yma."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Digwyddodd gwall"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Ffrwd gyhoeddus sy'n bodoli eisoes"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Unrhyw un sydd wedi mewngofnodi"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Bydd unrhyw beth sydd wedi tanysgrifio i'r porthiant hwn yn peidio â'i dderbyn. Gallwch gopïo URL newydd wedyn."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Cymeradwyo"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Dilëwyd"
 msgid "Deleted {field}"
 msgstr "Dilëwyd {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Gwrthod"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Disgynnol"
@@ -1318,10 +1319,6 @@ msgstr "Methwyd diweddaru gwylio"
 msgid "Failed to upload attachment"
 msgstr "Methwyd llwytho'r atodiad"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Ffrwd"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Llifoedd"
@@ -1413,6 +1410,10 @@ msgstr "Hanes"
 msgid "Home"
 msgstr "Cartref"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Llif cartref"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Poeth"
@@ -1476,14 +1477,6 @@ msgstr "Cod adfer annilys"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Cod dilysu annilys"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Gall ddarllen eich cyfrif a phostio fel y cyfrif hwnnw."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Gall ddarllen eich cyfrif."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Yn eich ailgyfeirio i'r dangosfwrdd…"
 msgid "Reduce interest"
 msgstr "Lleihau diddordeb"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Gwrthod"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "Yn dangos {totalShown} o {total}"
 msgid "Sidebar"
 msgstr "Bar ochr"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Mewngofnodwch i'ch cyfrif"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Mewngofnodwch gyda chyfrif sydd â mynediad <0/> at yr adnodd hwn."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Bydd hyn yn dileu'r gêm a'i sgwrs yn barhaol. Ni ellir dadwneud hyn."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Mae'r cais mewngofnodi hwn wedi dod i ben neu wedi'i ateb eisoes."
+msgid "This request is no longer valid."
+msgstr "Nid yw'r cais hwn yn ddilys mwyach."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Rydym wedi anfon cod dilysu i <0>{0}</0>. Rhowch y cod isod i ddilysu ei
 msgid "Wednesday"
 msgstr "Dydd Mercher"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "I ble dylai postiadau a wneir o'r ap hwn fynd?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wicis"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Nid oes gennych fynediad i'r adran hon."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Does gennych chi ddim cyfrif ar y rhwydwaith hwn. Neilltuwch enw defnyddiwr yn y Gosodiadau yn gyntaf."
+msgid "You have no {network} account here."
+msgstr "Does gennych chi ddim cyfrif {network} yma."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# pelê din nehat nîşandan} other {# pelên d
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Pêşek veke (# agahdariya nexwendî)} other {Pêşek veke (# agahdariyên nexwendî)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> dixwaze têkeve hesabê te yê {1}."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 saet"
@@ -145,10 +139,9 @@ msgstr "12 saet"
 msgid "24 hours"
 msgstr "24 saet"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Feedek nû bi navê {0}"
+msgid "A new feed"
+msgstr "Feedeke nû"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Hemû şîrove"
 msgid "All day"
 msgstr "Tevahiya rojê"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Destûr bide"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Destûrê didî {name} ku bixwîne û biweşîne?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Destûrê didî {name} ku bixwîne?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Destûrê bide her kesî ku li {entityLabel} bigere"
@@ -300,10 +305,6 @@ msgstr "Hesabek bi vê nasnameyê jixwe li vir heye."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Çewtiyek çêbû"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Feedeke giştî ya heyî"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Her kesê ku têketiye"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Her tiştê ku li vê feedê abone ye dê wergirtinê rawestîne. Piştre tu dikarî URLyeke nû jiber bigirî."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Erê bike"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Hate jêbirin"
 msgid "Deleted {field}"
 msgstr "{field} hate jêbirin"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Red bike"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Daketî"
@@ -1318,10 +1319,6 @@ msgstr "Nûvekirina şopandinê bi ser neket"
 msgid "Failed to upload attachment"
 msgstr "Barkirina pêvekê neserkeftî bû"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Feed"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Feed"
@@ -1413,6 +1410,10 @@ msgstr "Dîrok"
 msgid "Home"
 msgstr "Mal"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Feeda sereke"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Germ"
@@ -1476,14 +1477,6 @@ msgstr "Koda vegerandinê nederbasdar"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Koda rastandinê nederbasdar"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Ew dikare hesabê te bixwîne û bi navê wî biweşîne."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Ew dikare hesabê te bixwîne."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Em te ber bi dashboardê ve beralî dikin…"
 msgid "Reduce interest"
 msgstr "Balkêşî kêm bike"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Red bike"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "Nîşandana {totalShown} ji {total}"
 msgid "Sidebar"
 msgstr "Milê alî"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Têkeve hesabê xwe"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Bi hesabekî ku xwedî gihîştina vê çavkaniyê ye <0/> têkeve."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Ev ê lîstik û sohbeta wê bi awayekî domdar jê bibe. Ev kirin nayê vegerandin."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Dema vê daxwaza têketinê derbas bûye an jî berê bersiv hatiye dayîn."
+msgid "This request is no longer valid."
+msgstr "Ev daxwaz êdî ne derbasdar e."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Me kodek pejirandinê şand bo <0>{0}</0>. Ji bo pejirandina navnîşana
 msgid "Wednesday"
 msgstr "Çarşem"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Postên ku ji vê sepanê têne çêkirin divê biçin ku derê?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Destûra te ya gihîştina vê beşê tune ye."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Hesabê te li ser vê torê tune ye. Pêşî di Mîhengan de navekî bikarhêner rezerve bike."
+msgid "You have no {network} account here."
+msgstr "Li vir hesabekî te yê {network} tune ye."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

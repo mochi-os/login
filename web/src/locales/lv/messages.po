@@ -131,12 +131,6 @@ msgstr "{truncated, plural, zero {Vēl # failu nav parādīti} one {Vēl # fails
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, zero {Atvērt izvēlni (# neizlasītu paziņojumu)} one {Atvērt izvēlni (# neizlasīts paziņojums)} other {Atvērt izvēlni (# neizlasīti paziņojumi)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> lūdz atļauju pierakstīties jūsu {1} kontā."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 stundas"
@@ -145,10 +139,9 @@ msgstr "12 stundas"
 msgid "24 hours"
 msgstr "24 stundas"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Jauna plūsma ar nosaukumu {0}"
+msgid "A new feed"
+msgstr "Jauna plūsma"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Visi komentāri"
 msgid "All day"
 msgstr "Visu dienu"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Atļaut"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Atļaut {name} lasīt un publicēt?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Atļaut {name} lasīt?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Atļaut ikvienam meklēt: {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Konts ar šādu identitāti šeit jau pastāv."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Radās kļūda"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Esoša publiska plūsma"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Jebkurš, kas ir pieteicies"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Viss, kas ir abonējis šo plūsmu, pārstās to saņemt. Pēc tam varēsiet kopēt jaunu URL."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Apstiprināt"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Dzēsts"
 msgid "Deleted {field}"
 msgstr "Dzēsts {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Liegt"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Dilstošā secībā"
@@ -1318,10 +1319,6 @@ msgstr "Neizdevās atjaunināt novērošanu"
 msgid "Failed to upload attachment"
 msgstr "Neizdevās augšupielādēt pielikumu"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Plūsma"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Plūsmas"
@@ -1413,6 +1410,10 @@ msgstr "Vēsture"
 msgid "Home"
 msgstr "Sākums"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Sākuma plūsma"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Aktuāli"
@@ -1476,14 +1477,6 @@ msgstr "Nederīgs atkopšanas kods"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Nederīgs verifikācijas kods"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Tā varēs lasīt jūsu kontu un publicēt tā vārdā."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Tā varēs lasīt jūsu kontu."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Pāradresē jūs uz vadības paneli…"
 msgid "Reduce interest"
 msgstr "Samazināt interesi"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Noraidīt"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "Tiek rādīti {totalShown} no {total}"
 msgid "Sidebar"
 msgstr "Sānu josla"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Pierakstieties savā kontā"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Piesakieties ar kontu, kuram ir piekļuve <0/> šim resursam."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Tas neatgriezeniski dzēsīs spēli un tās tērzēšanu. Šo darbību nevar atsaukt."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Šī pierakstīšanās pieprasījuma derīguma termiņš ir beidzies, vai uz to jau ir atbildēts."
+msgid "This request is no longer valid."
+msgstr "Šis pieprasījums vairs nav derīgs."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Nosūtījām verifikācijas kodu uz <0>{0}</0>. Ievadiet kodu zemāk, la
 msgid "Wednesday"
 msgstr "Trešdiena"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Kur jānonāk ierakstiem, kas veikti no šīs lietotnes?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Jums nav piekļuves šai sadaļai."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Jums nav konta šajā tīklā. Vispirms rezervējiet lietotājvārdu iestatījumos."
+msgid "You have no {network} account here."
+msgstr "Jums šeit nav {network} konta."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

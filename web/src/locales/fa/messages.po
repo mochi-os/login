@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# پروندهٔ دیگر نمایش داده �
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {باز کردن منو (# اعلان خوانده‌نشده)} other {باز کردن منو (# اعلان خوانده‌نشده)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> درخواست ورود به حساب {1} شما را دارد."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "۱۲ ساعت"
@@ -145,10 +139,9 @@ msgstr "۱۲ ساعت"
 msgid "24 hours"
 msgstr "۲۴ ساعت"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "فید جدیدی به نام {0}"
+msgid "A new feed"
+msgstr "یک خوراک جدید"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "همه نظرها"
 msgid "All day"
 msgstr "تمام‌روز"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "اجازه"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "به {name} اجازهٔ خواندن و ارسال پست می‌دهید؟"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "به {name} اجازهٔ خواندن می‌دهید؟"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "به همه اجازه بده {entityLabel} را جستجو کنند"
@@ -300,10 +305,6 @@ msgstr "یک حساب با این هویت از قبل در اینجا وجود 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "خطایی رخ داد"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "یک فید عمومی موجود"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "هر کسی که وارد شده باشد"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "هر چیزی که مشترک این خوراک است دیگر آن را دریافت نمی‌کند. پس از آن می‌توانید نشانی جدیدی کپی کنید."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "تأیید"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "حذف شد"
 msgid "Deleted {field}"
 msgstr "{field} حذف شد"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "رد"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "نزولی"
@@ -1318,10 +1319,6 @@ msgstr "به‌روزرسانی دنبال‌کردن ناموفق بود"
 msgid "Failed to upload attachment"
 msgstr "بارگذاری پیوست ناموفق بود"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "فید"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "خوراک‌ها"
@@ -1413,6 +1410,10 @@ msgstr "تاریخچه"
 msgid "Home"
 msgstr "خانه"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "خوراک اصلی"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "داغ"
@@ -1476,14 +1477,6 @@ msgstr "کد بازیابی نامعتبر"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "کد تأیید نامعتبر"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "می‌تواند حساب شما را بخواند و از طرف آن پست بگذارد."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "می‌تواند حساب شما را بخواند."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "در حال تغییر مسیر شما به داشبورد…"
 msgid "Reduce interest"
 msgstr "کاهش علاقه"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "رد کردن"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "نمایش {totalShown} از {total}"
 msgid "Sidebar"
 msgstr "نوار کناری"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "به حساب خود وارد شوید"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "با حسابی که به این منبع دسترسی دارد <0/> وارد شوید."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "این کار بازی و گفتگوی آن را برای همیشه حذف می‌کند. این عمل قابل بازگشت نیست."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "این درخواست ورود منقضی شده یا قبلاً به آن پاسخ داده شده است."
+msgid "This request is no longer valid."
+msgstr "این درخواست دیگر معتبر نیست."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "کد تأیید را به <0>{0}</0> ارسال کردیم. برای ت�
 msgid "Wednesday"
 msgstr "چهارشنبه"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "پست‌هایی که از این برنامه گذاشته می‌شوند کجا بروند؟"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "ویکی‌ها"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "شما به این بخش دسترسی ندارید."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "در این شبکه حسابی ندارید. ابتدا در تنظیمات یک نام کاربری رزرو کنید."
+msgid "You have no {network} account here."
+msgstr "شما اینجا حساب {network} ندارید."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

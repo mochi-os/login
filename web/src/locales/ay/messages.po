@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# yaqha archivo janiw uñachayatakiti} other {#
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Menu jist'araña (# jan ullt'ata yatiyawi)} other {Menu jist'araña (# jan ullt'ata yatiyawinaka)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> jumana {1} cuentamar mantañ mayi."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ura"
@@ -145,10 +139,9 @@ msgstr "12 ura"
 msgid "24 hours"
 msgstr "24 ura"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Machaq feed {0} sutini"
+msgid "A new feed"
+msgstr "Machaq feed"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Taqpach comentarionaka"
 msgid "All day"
 msgstr "Taqi uru"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Iyaw saña"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "¿{name} ullañapataki ukat qillqañapataki iyawstati?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "¿{name} ullañapataki iyawstati?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Khitirus {entityLabel} thaqhaña iyawsaña"
@@ -300,10 +305,6 @@ msgstr "Aka identidadampix mä cuenta akan utjxiwa."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Mä pantjasiwi utjawayi"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Mä utjkir taqiniru feed"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Khitis mantki ukanaka"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Aka feed suscripción luriri taqi kunas janiw katuqxaniti. Ukat machaq URL copiaña atkasmawa."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Iyawsaña"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Chhaqtayata"
 msgid "Deleted {field}"
 msgstr "{field} chhaqtayata"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Jark'aña"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Jach'at jisk'aru"
@@ -1318,10 +1319,6 @@ msgstr "Janiw uñch'ukiña machaqachañ atkiti"
 msgid "Failed to upload attachment"
 msgstr "Janiw adjunto apkatañ atkiti"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Feed"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Feednaka"
@@ -1413,6 +1410,10 @@ msgstr "Sarawi"
 msgid "Home"
 msgstr "Uta"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Utan feed"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Junt'u"
@@ -1476,14 +1477,6 @@ msgstr "Jan wakisir recuperación código"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Chiqanchañ código jan walikiti"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Cuentam ullaspawa ukat uka cuentampi qillqt'aspawa."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Cuentam ullaspawa."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Panelar apayaskiwa…"
 msgid "Reduce interest"
 msgstr "Munaña juk'achaña"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Jan iyawsaña"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "{totalShown} uñstayasa, {total} taypita"
 msgid "Sidebar"
 msgstr "Thiya panel"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Cuentamar mantam"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Aka recursor mantañ atiri cuentampi <0/> mantam."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Akax anata ukat chatap wiñayatak chhaqtayi. Janiw kutt'ayañjamäkiti."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Aka mantañ mayiwix tukusxiwa jan ukax nayraqat jaysatawa."
+msgid "This request is no longer valid."
+msgstr "Aka mayiwix janiw wakiskxiti."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "<0>{0}</0> ukar mä chiqanchañ código apayapxsma. Email direccionam ch
 msgid "Wednesday"
 msgstr "Miércoles"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Aka aplicación ukat lurat qillqatanakax kawkir sarañapa?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikinaka"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Janiw aka t'aqar mantañ utjktamti."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Janiw aka redan cuentamax utjkiti. Nayraqat Wakichawinakan mä apnaqiri suti reservam."
+msgid "You have no {network} account here."
+msgstr "Akanx janiw {network} cuentamax utjkiti."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

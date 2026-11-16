@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Ba a nuna ƙarin fayil # ba} other {Ba a nuna �
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Buɗe menu (# sanarwar da ba a karanta ba)} other {Buɗe menu (# sanarwar da ba a karanta ba)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> yana neman shiga asusunka na {1}."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "Awa 12"
@@ -145,10 +139,9 @@ msgstr "Awa 12"
 msgid "24 hours"
 msgstr "Awa 24"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Sabon jerin labarai mai suna {0}"
+msgid "A new feed"
+msgstr "Sabon jerin labarai"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Duk sharhi"
 msgid "All day"
 msgstr "Duk rana"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Bayar da izini"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Za ka ba {name} izinin karantawa da wallafawa?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Za ka ba {name} izinin karantawa?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Bar kowa ya nemi {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Akwai asusun da wannan suna a nan."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "An samu kuskure"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Jerin labarai na jama'a da ke akwai"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Duk wanda ya shiga"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Duk abin da ya biyan kuɗin wannan ciyarwar zai daina karɓarta. Za ka iya kwafi sabon URL bayan haka."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Amince"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "An share"
 msgid "Deleted {field}"
 msgstr "An share {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Ƙi"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Sauka ƙasa"
@@ -1318,10 +1319,6 @@ msgstr "An kasa sabunta sa ido"
 msgid "Failed to upload attachment"
 msgstr "An gaza upload attachment"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Jerin labarai"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Jerukan labarai"
@@ -1413,6 +1410,10 @@ msgstr "Tarihi"
 msgid "Home"
 msgstr "Gida"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Babban jerin labarai"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Mai zafi"
@@ -1476,14 +1477,6 @@ msgstr "Recovery code mara inganci"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Verification code mara inganci"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Zai iya karanta asusunka kuma ya wallafa a madadinsa."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Zai iya karanta asusunka."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Ana kai ka zuwa dashboard…"
 msgid "Reduce interest"
 msgstr "Rage sha'awa"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Ƙi"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "Ana nuna {totalShown} daga {total}"
 msgid "Sidebar"
 msgstr "Sandar gefe"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Shiga asusunka"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Shiga da asusun da ke da damar shiga <0/> wannan albarkatun."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Wannan zai goge wasan da hirarsa har abada. Ba za a iya sokewa ba."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Wannan buƙatar shiga ta ƙare ko an riga an amsa ta."
+msgid "This request is no longer valid."
+msgstr "Wannan buƙatar ba ta da inganci kuma."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Mun aika lambar tabbatarwa zuwa <0>{0}</0>. Shigar da lambar a ƙasa don
 msgid "Wednesday"
 msgstr "Laraba"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Ina ya kamata saƙonnin da aka wallafa daga wannan manhaja su tafi?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikis"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Ba ka da damar shiga wannan sashe ba."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Ba ka da asusu a wannan hanyar sadarwa. Ka keɓe sunan mai amfani a Saitunan tukuna."
+msgid "You have no {network} account here."
+msgstr "Ba ka da asusun {network} a nan."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

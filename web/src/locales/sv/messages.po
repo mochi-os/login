@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# fil till visas inte} other {# filer till visa
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Öppna meny (# oläst avisering)} other {Öppna meny (# olästa aviseringar)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> ber om att logga in på ditt {1}-konto."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 timmar"
@@ -145,10 +139,9 @@ msgstr "12 timmar"
 msgid "24 hours"
 msgstr "24 timmar"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Ett nytt flöde med namnet {0}"
+msgid "A new feed"
+msgstr "Ett nytt flöde"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Alla kommentarer"
 msgid "All day"
 msgstr "Heldag"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Tillåt"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Tillåta {name} att läsa och publicera?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Tillåta {name} att läsa?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Tillåt alla att söka efter {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Ett konto med den här identiteten finns redan här."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Ett fel uppstod"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Ett befintligt offentligt flöde"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Alla som är inloggade"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Allt som prenumererar på det här flödet slutar ta emot det. Du kan kopiera en ny webbadress efteråt."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Godkänn"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Borttagen"
 msgid "Deleted {field}"
 msgstr "Raderade {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Neka"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Fallande"
@@ -1318,10 +1319,6 @@ msgstr "Kunde inte uppdatera bevakning"
 msgid "Failed to upload attachment"
 msgstr "Kunde inte ladda upp bilaga"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Flöde"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Flöden"
@@ -1413,6 +1410,10 @@ msgstr "Historik"
 msgid "Home"
 msgstr "Hem"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Hemflöde"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Het"
@@ -1476,14 +1477,6 @@ msgstr "Ogiltig återställningskod"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Ogiltig verifieringskod"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Den får läsa ditt konto och publicera som det."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Den får läsa ditt konto."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Omdirigerar dig till instrumentpanelen…"
 msgid "Reduce interest"
 msgstr "Minska intresse"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Neka"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "Visar {totalShown} av {total}"
 msgid "Sidebar"
 msgstr "Sidofält"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Logga in på ditt konto"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Logga in med ett konto som har åtkomst <0/> till den här resursen."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Detta tar bort partiet och dess chatt permanent. Detta går inte att ångra."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Den här inloggningsbegäran har gått ut eller har redan besvarats."
+msgid "This request is no longer valid."
+msgstr "Den här begäran är inte längre giltig."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Vi skickade en verifieringskod till <0>{0}</0>. Ange koden nedan för at
 msgid "Wednesday"
 msgstr "Onsdag"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Vart ska inlägg som görs från den här appen gå?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikier"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Du har inte åtkomst till det här avsnittet."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Du har inget konto i det här nätverket. Reservera först ett alias i Inställningar."
+msgid "You have no {network} account here."
+msgstr "Du har inget {network}-konto här."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

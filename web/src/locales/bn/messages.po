@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {আরও #টি ফাইল দেখান�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {মেনু খুলুন (# অপঠিত বিজ্ঞপ্তি)} other {মেনু খুলুন (# অপঠিত বিজ্ঞপ্তি)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> আপনার {1} অ্যাকাউন্টে সাইন ইন করার অনুমতি চাইছে।"
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "১২ ঘণ্টা"
@@ -145,10 +139,9 @@ msgstr "১২ ঘণ্টা"
 msgid "24 hours"
 msgstr "২৪ ঘণ্টা"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "{0} নামে একটি নতুন ফিড"
+msgid "A new feed"
+msgstr "একটি নতুন ফিড"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "সব মন্তব্য"
 msgid "All day"
 msgstr "সারাদিন"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "অনুমতি দিন"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "{name}-কে পড়তে ও পোস্ট করতে অনুমতি দেবেন?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "{name}-কে পড়তে অনুমতি দেবেন?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "যে কাউকে {entityLabel} খোঁজার অনুমতি দিন"
@@ -300,10 +305,6 @@ msgstr "এই পরিচয় সহ একটি অ্যাকাউন�
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "একটি ত্রুটি ঘটেছে"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "একটি বিদ্যমান সর্বজনীন ফিড"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "যে কেউ লগ ইন করেছেন"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "এই ফিডে সাবস্ক্রাইব করা সবকিছু এটি পাওয়া বন্ধ করবে। পরে আপনি একটি নতুন URL কপি করতে পারেন।"
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "অনুমোদন করুন"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "মুছে ফেলা হয়েছে"
 msgid "Deleted {field}"
 msgstr "{field} মুছে ফেলা হয়েছে"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "অস্বীকার করুন"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "অধঃক্রম"
@@ -1318,10 +1319,6 @@ msgstr "পর্যবেক্ষণ আপডেট ব্যর্থ"
 msgid "Failed to upload attachment"
 msgstr "সংযুক্তি আপলোড করতে ব্যর্থ"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "ফিড"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "ফিডসমূহ"
@@ -1413,6 +1410,10 @@ msgstr "ইতিহাস"
 msgid "Home"
 msgstr "হোম"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "হোম ফিড"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "জনপ্রিয়"
@@ -1476,14 +1477,6 @@ msgstr "অবৈধ পুনরুদ্ধার কোড"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "অবৈধ যাচাইকরণ কোড"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "এটি আপনার অ্যাকাউন্ট পড়তে এবং সেই অ্যাকাউন্ট হিসেবে পোস্ট করতে পারবে।"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "এটি আপনার অ্যাকাউন্ট পড়তে পারবে।"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "আপনাকে ড্যাশবোর্ডে রিডাইর�
 msgid "Reduce interest"
 msgstr "আগ্রহ কমান"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "প্রত্যাখ্যান করুন"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "{total} এর মধ্যে {totalShown} দেখানো হচ্
 msgid "Sidebar"
 msgstr "সাইডবার"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "আপনার অ্যাকাউন্টে সাইন ইন করুন"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "এই রিসোর্সে প্রবেশাধিকার আছে এমন অ্যাকাউন্ট দিয়ে <0/> সাইন ইন করুন।"
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "এটি গেম এবং এর চ্যাট স্থায়ীভাবে মুছে ফেলবে। এটি ফিরিয়ে আনা যাবে না।"
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "এই সাইন-ইন অনুরোধের মেয়াদ শেষ হয়ে গেছে অথবা ইতিমধ্যে উত্তর দেওয়া হয়েছে।"
+msgid "This request is no longer valid."
+msgstr "এই অনুরোধটি আর বৈধ নয়।"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "আমরা <0>{0}</0> এ একটি যাচাইকরণ কো
 msgid "Wednesday"
 msgstr "বুধবার"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "এই অ্যাপ থেকে করা পোস্টগুলো কোথায় যাবে?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "এই বিভাগে আপনার অ্যাক্সেস নেই।"
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "এই নেটওয়ার্কে আপনার কোনো অ্যাকাউন্ট নেই। প্রথমে সেটিংসে একটি হ্যান্ডেল রিজার্ভ করুন।"
+msgid "You have no {network} account here."
+msgstr "এখানে আপনার কোনো {network} অ্যাকাউন্ট নেই।"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

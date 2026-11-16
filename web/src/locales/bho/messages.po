@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# अउर फाइल ना देखाव
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {मेनू खोलीं (# बिना पढ़ल सूचना)} other {मेनू खोलीं (# बिना पढ़ल सूचना)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> रउआ {1} खाता में साइन इन करे के माँगत बा।"
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 घंटा"
@@ -145,10 +139,9 @@ msgstr "12 घंटा"
 msgid "24 hours"
 msgstr "24 घंटा"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "{0} नाम के नया फीड"
+msgid "A new feed"
+msgstr "नया फ़ीड"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "सब टिप्पणी"
 msgid "All day"
 msgstr "पूरा दिन"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "अनुमति दीं"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "का {name} के पढ़े आ पोस्ट करे के अनुमति दीं?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "का {name} के पढ़े के अनुमति दीं?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "केहू के भी {entityLabel} खोजे के अनुमति दीं"
@@ -300,10 +305,6 @@ msgstr "ई पहचान से एगो अकाउंट पहिलह�
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "एगो त्रुटि भइल"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "पहिले से मौजूद सार्वजनिक फीड"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "जे केहू लॉग इन बा"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "एह फीड के सब्सक्राइब कइल कवनो चीज़ ओकरा के मिलल बंद हो जाई। बाद में रउआ नया URL कॉपी कर सकीलें।"
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "स्वीकृत करीं"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "मेटावल गइल"
 msgid "Deleted {field}"
 msgstr "{field} मेटावल गइल"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "मना करीं"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "घटत क्रम"
@@ -1318,10 +1319,6 @@ msgstr "निगरानी अपडेट ना भइल"
 msgid "Failed to upload attachment"
 msgstr "अटैचमेंट अपलोड करे में विफल"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "फीड"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "फ़ीड"
@@ -1413,6 +1410,10 @@ msgstr "इतिहास"
 msgid "Home"
 msgstr "होम"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "होम फ़ीड"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "हॉट"
@@ -1476,14 +1477,6 @@ msgstr "अमान्य रिकवरी कोड"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "अमान्य सत्यापन कोड"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "ई रउआ खाता पढ़ सकेला आ ओकरा नाम से पोस्ट कर सकेला।"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "ई रउआ खाता पढ़ सकेला।"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "रउआ के डैशबोर्ड पर रीडायरे�
 msgid "Reduce interest"
 msgstr "रुचि कम करीं"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "अस्वीकार करीं"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "{total} में से {totalShown} देखावल जा रह�
 msgid "Sidebar"
 msgstr "साइडबार"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "अपना खाता में साइन इन करीं"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "एह संसाधन तक पहुँच वाला खाता से <0/> साइन इन करीं।"
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ई खेल आ ओकर चैट के स्थायी रूप से मेटा दी। एकरा वापस नइखे कईल जा सकत।"
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "ई साइन-इन अनुरोध के समय खतम हो गइल बा या एकर जवाब पहिलहीं दिहल जा चुकल बा।"
+msgid "This request is no longer valid."
+msgstr "ई अनुरोध अब मान्य नइखे।"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "हमनी <0>{0}</0> पर सत्यापन कोड भेज
 msgid "Wednesday"
 msgstr "बुधवार"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "एह ऐप से कइल गइल पोस्ट कहाँ जाए के चाहीं?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "विकी"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "रउआ के ए खंड तक पहुँच नइखे।"
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "एह नेटवर्क पर रउआ कवनो खाता नइखे। पहिले सेटिंग सब में एगो हैंडल आरक्षित करीं।"
+msgid "You have no {network} account here."
+msgstr "रउआ लगे इहाँ कौनो {network} खाता नइखे।"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

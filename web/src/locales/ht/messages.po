@@ -131,12 +131,6 @@ msgstr "{truncated, plural, other {# lòt fichye pa parèt}}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, other {Louvri meni (# notifikasyon ki poko li)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> mande pou konekte nan kont {1} ou."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 èdtan"
@@ -145,10 +139,9 @@ msgstr "12 èdtan"
 msgid "24 hours"
 msgstr "24 èdtan"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Yon nouvo fil ki rele {0}"
+msgid "A new feed"
+msgstr "Yon nouvo fil"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Tout kòmantè yo"
 msgid "All day"
 msgstr "Tout jounen"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Pèmèt"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Pèmèt {name} li ak pibliye?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Pèmèt {name} li?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Pèmèt tout moun chèche {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Yon kont ak idantite sa a deja egziste isit la."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Yon erè te rive"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Yon fil piblik ki egziste deja"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Nenpòt moun ki konekte"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Tout sa ki abòne nan fil sa a ap sispann resevwa l. Ou ka kopye yon nouvo URL apre."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Apwouve"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Efase"
 msgid "Deleted {field}"
 msgstr "{field} efase"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Refize"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Desann"
@@ -1318,10 +1319,6 @@ msgstr "Echèk mizajou siveyans"
 msgid "Failed to upload attachment"
 msgstr "Echwe pou telechaje atachman"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Fil"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Fil"
@@ -1413,6 +1410,10 @@ msgstr "Istwa"
 msgid "Home"
 msgstr "Akèy"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Fil lakay"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Cho"
@@ -1476,14 +1477,6 @@ msgstr "Kòd rekiperasyon envalid"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Kòd verifikasyon envalid"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Li ka li kont ou epi pibliye nan non kont lan."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Li ka li kont ou."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Ap redirije ou nan dashboard la…"
 msgid "Reduce interest"
 msgstr "Diminye enterè"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Refize"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "Ap montre {totalShown} nan {total}"
 msgid "Sidebar"
 msgstr "Ba sou kote"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Konekte nan kont ou"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Konekte ak yon kont ki gen aksè <0/> a resous sa a."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Sa a ap efase jwèt la ak chat li pou tout tan. Aksyon sa a pa ka anile."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Demann koneksyon sa a ekspire oswa yo te deja reponn li."
+msgid "This request is no longer valid."
+msgstr "Demann sa a pa valab ankò."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Nou voye yon kòd verifikasyon nan <0>{0}</0>. Antre kòd la anba a pou 
 msgid "Wednesday"
 msgstr "Mèkredi"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Ki kote piblikasyon ki fèt nan aplikasyon sa a dwe ale?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Ou pa gen aksè nan seksyon sa a."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Ou pa gen kont sou rezo sa a. Rezève yon non itilizatè nan Paramèt anvan."
+msgid "You have no {network} account here."
+msgstr "Ou pa gen kont {network} isit la."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

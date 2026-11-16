@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Още # файл не е показан} other
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Отваряне на менюто (# непрочетено известие)} other {Отваряне на менюто (# непрочетени известия)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> иска да влезе във вашия акаунт в {1}."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 часа"
@@ -145,10 +139,9 @@ msgstr "12 часа"
 msgid "24 hours"
 msgstr "24 часа"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Нова емисия с име {0}"
+msgid "A new feed"
+msgstr "Нова емисия"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Всички коментари"
 msgid "All day"
 msgstr "Цял ден"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Разрешаване"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Да се разреши ли на {name} да чете и публикува?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Да се разреши ли на {name} да чете?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Разрешаване на всеки да търси {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Профил с тази идентичност вече съществ�
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Възникна грешка"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Съществуваща публична емисия"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Всеки, който е влязъл"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Всичко, абонирано за този канал, ще спре да го получава. След това можете да копирате нов URL адрес."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Одобри"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Изтрито"
 msgid "Deleted {field}"
 msgstr "Изтрито {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Откажи"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Низходящ"
@@ -1318,10 +1319,6 @@ msgstr "Неуспешно обновяване на следенето"
 msgid "Failed to upload attachment"
 msgstr "Неуспешно качване на прикачен файл"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Емисия"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Емисии"
@@ -1413,6 +1410,10 @@ msgstr "История"
 msgid "Home"
 msgstr "Начало"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Основна емисия"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Горещо"
@@ -1476,14 +1477,6 @@ msgstr "Невалиден код за възстановяване"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Невалиден код за потвърждение"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Може да чете акаунта ви и да публикува от негово име."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Може да чете акаунта ви."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Пренасочване към таблото…"
 msgid "Reduce interest"
 msgstr "Намали интереса"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Откажи"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "Показани са {totalShown} от {total}"
 msgid "Sidebar"
 msgstr "Странична лента"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Влезте в акаунта си"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Влезте с профил, който има достъп <0/> до този ресурс."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Това ще изтрие завинаги играта и нейния чат. Това действие не може да бъде отменено."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Тази заявка за вход е изтекла или вече е получила отговор."
+msgid "This request is no longer valid."
+msgstr "Тази заявка вече не е валидна."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Изпратихме код за потвърждение на <0>{0}</0
 msgid "Wednesday"
 msgstr "Сряда"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Къде да отиват публикациите, направени от това приложение?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Уикита"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Нямате достъп до този раздел."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Нямате акаунт в тази мрежа. Първо запазете потребителско име в Настройки."
+msgid "You have no {network} account here."
+msgstr "Нямате {network} профил тук."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

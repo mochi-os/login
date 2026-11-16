@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# ακόμη αρχείο δεν εμφανίζ
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Άνοιγμα μενού (# μη αναγνωσμένη ειδοποίηση)} other {Άνοιγμα μενού (# μη αναγνωσμένες ειδοποιήσεις)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "Η εφαρμογή <0>{0}</0> ζητά να συνδεθεί στον λογαριασμό σας στο {1}."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ώρες"
@@ -145,10 +139,9 @@ msgstr "12 ώρες"
 msgid "24 hours"
 msgstr "24 ώρες"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Μια νέα ροή με όνομα {0}"
+msgid "A new feed"
+msgstr "Μια νέα ροή"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Όλα τα σχόλια"
 msgid "All day"
 msgstr "Ολοήμερο"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Να επιτρέπεται"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Να επιτρέπεται στο {name} η ανάγνωση και η ανάρτηση;"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Να επιτρέπεται στο {name} η ανάγνωση;"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Να επιτρέπεται σε οποιονδήποτε η αναζήτηση για {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Υπάρχει ήδη λογαριασμός με αυτή την ταυ
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Παρουσιάστηκε σφάλμα"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Μια υπάρχουσα δημόσια ροή"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Οποιοσδήποτε είναι συνδεδεμένος"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Ό,τι είναι εγγεγραμμένο σε αυτήν τη ροή θα σταματήσει να τη λαμβάνει. Μπορείτε να αντιγράψετε μια νέα διεύθυνση URL στη συνέχεια."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Έγκριση"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Διαγράφηκε"
 msgid "Deleted {field}"
 msgstr "Διαγράφηκε {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Άρνηση"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Φθίνουσα"
@@ -1318,10 +1319,6 @@ msgstr "Αποτυχία ενημέρωσης παρακολούθησης"
 msgid "Failed to upload attachment"
 msgstr "Αποτυχία μεταφόρτωσης συνημμένου"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Ροή"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Ροές"
@@ -1413,6 +1410,10 @@ msgstr "Ιστορικό"
 msgid "Home"
 msgstr "Αρχική"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Αρχική ροή"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Δημοφιλή"
@@ -1476,14 +1477,6 @@ msgstr "Μη έγκυρος κωδικός ανάκτησης"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Μη έγκυρος κωδικός επαλήθευσης"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Μπορεί να διαβάζει τον λογαριασμό σας και να αναρτά εκ μέρους του."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Μπορεί να διαβάζει τον λογαριασμό σας."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Ανακατεύθυνση στον πίνακα ελέγχου…"
 msgid "Reduce interest"
 msgstr "Μείωση ενδιαφέροντος"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Απόρριψη"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "Εμφανίζονται {totalShown} από {total}"
 msgid "Sidebar"
 msgstr "Πλευρική μπάρα"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Συνδεθείτε στον λογαριασμό σας"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Συνδεθείτε με λογαριασμό που έχει πρόσβαση <0/> σε αυτόν τον πόρο."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Αυτό θα διαγράψει οριστικά το παιχνίδι και τη συνομιλία του. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Αυτό το αίτημα σύνδεσης έχει λήξει ή έχει ήδη απαντηθεί."
+msgid "This request is no longer valid."
+msgstr "Αυτό το αίτημα δεν είναι πλέον έγκυρο."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Στείλαμε έναν κωδικό επαλήθευσης στο <0>
 msgid "Wednesday"
 msgstr "Τετάρτη"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Πού πρέπει να πηγαίνουν οι αναρτήσεις που γίνονται από αυτήν την εφαρμογή;"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Δεν έχετε πρόσβαση σε αυτήν την ενότητα."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Δεν έχετε λογαριασμό σε αυτό το δίκτυο. Δεσμεύστε πρώτα ένα όνομα χρήστη στις Ρυθμίσεις."
+msgid "You have no {network} account here."
+msgstr "Δεν έχετε λογαριασμό {network} εδώ."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

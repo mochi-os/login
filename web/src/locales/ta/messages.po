@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {மேலும் # கோப்பு கா�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {மெனுவைத் திற (# படிக்காத அறிவிப்பு)} other {மெனுவைத் திற (# படிக்காத அறிவிப்புகள்)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> உங்கள் {1} கணக்கில் உள்நுழைய அனுமதி கேட்கிறது."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 மணிநேரம்"
@@ -145,10 +139,9 @@ msgstr "12 மணிநேரம்"
 msgid "24 hours"
 msgstr "24 மணிநேரம்"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "{0} என்ற பெயரில் புதிய ஊட்டம்"
+msgid "A new feed"
+msgstr "ஒரு புதிய ஃபீட்"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "அனைத்து கருத்துகளும்"
 msgid "All day"
 msgstr "நாள் முழுவதும்"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "அனுமதி"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "{name}-ஐப் படிக்கவும் பதிவிடவும் அனுமதிக்கவா?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "{name}-ஐப் படிக்க அனுமதிக்கவா?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "{entityLabel} தேட அனைவரையும் அனுமதி"
@@ -300,10 +305,6 @@ msgstr "இந்த அடையாளத்துடன் ஒரு கணக
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "பிழை ஏற்பட்டது"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "ஏற்கனவே உள்ள பொது ஊட்டம்"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "உள்நுழைந்த யாரும்"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "இந்த ஊட்டத்திற்கு குழுசேர்ந்த அனைத்தும் அதைப் பெறுவதை நிறுத்தும். பிறகு நீங்கள் புதிய URL ஐ நகலெடுக்கலாம்."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "அங்கீகரி"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "நீக்கப்பட்டது"
 msgid "Deleted {field}"
 msgstr "{field} நீக்கப்பட்டது"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "மறு"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "இறங்குவரிசை"
@@ -1318,10 +1319,6 @@ msgstr "கண்காணிப்பைப் புதுப்பிக்�
 msgid "Failed to upload attachment"
 msgstr "இணைப்பைப் பதிவேற்ற முடியவில்லை"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "ஊட்டம்"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "ஃபீட்கள்"
@@ -1413,6 +1410,10 @@ msgstr "வரலாறு"
 msgid "Home"
 msgstr "முகப்பு"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "முகப்பு ஃபீட்"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "பிரபலமான"
@@ -1476,14 +1477,6 @@ msgstr "தவறான மீட்பு குறியீடு"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "தவறான சரிபார்ப்பு குறியீடு"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "இது உங்கள் கணக்கைப் படிக்கவும் அதன் பெயரில் பதிவிடவும் முடியும்."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "இது உங்கள் கணக்கைப் படிக்க முடியும்."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "டாஷ்போர்டுக்கு திருப்பிவ�
 msgid "Reduce interest"
 msgstr "ஆர்வத்தைக் குறைக்கவும்"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "நிராகரி"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "{total}-ல் {totalShown} காட்டப்படுகிறத�
 msgid "Sidebar"
 msgstr "பக்கப்பட்டி"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "உங்கள் கணக்கில் உள்நுழையவும்"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "இந்த வளத்திற்கான அணுகல் <0/> உள்ள கணக்குடன் உள்நுழையவும்."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "இது விளையாட்டையும் அதன் அரட்டையையும் நிரந்தரமாக நீக்கும். இந்தச் செயலை மாற்ற முடியாது."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "இந்த உள்நுழைவுக் கோரிக்கை காலாவதியாகிவிட்டது அல்லது ஏற்கனவே பதிலளிக்கப்பட்டது."
+msgid "This request is no longer valid."
+msgstr "இந்தக் கோரிக்கை இனி செல்லாது."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "நாங்கள் <0>{0}</0> க்கு சரிபார்ப�
 msgid "Wednesday"
 msgstr "புதன்கிழமை"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "இந்தப் பயன்பாட்டிலிருந்து செய்யப்படும் பதிவுகள் எங்கே செல்ல வேண்டும்?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki-கள்"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "இந்தப் பிரிவுக்கான அணுகல் உங்களுக்கு இல்லை."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "இந்தப் பிணையத்தில் உங்களுக்குக் கணக்கு இல்லை. முதலில் அமைப்புகளில் ஒரு புனைப்பெயரை முன்பதிவு செய்யவும்."
+msgid "You have no {network} account here."
+msgstr "உங்களுக்கு இங்கே {network} கணக்கு இல்லை."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

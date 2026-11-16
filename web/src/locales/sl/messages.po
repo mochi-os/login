@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Še # datoteka ni prikazana} two {Še # datotek
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Odpri meni (# neprebrano obvestilo)} two {Odpri meni (# neprebrani obvestili)} few {Odpri meni (# neprebrana obvestila)} other {Odpri meni (# neprebranih obvestil)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> prosi za prijavo v vaš račun {1}."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ur"
@@ -145,10 +139,9 @@ msgstr "12 ur"
 msgid "24 hours"
 msgstr "24 ur"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Nov kanal z imenom {0}"
+msgid "A new feed"
+msgstr "Nov kanal"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Vsi komentarji"
 msgid "All day"
 msgstr "Ves dan"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Dovoli"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Dovoliti {name} branje in objavljanje?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Dovoliti {name} branje?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Dovoli vsem, da poiščejo {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Račun s to identiteto že obstaja tukaj."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Prišlo je do napake"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Obstoječi javni kanal"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Kdor koli, ki je prijavljen"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Vse, kar je naročeno na ta kanal, ga ne bo več prejemalo. Nato lahko kopirate nov URL."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Odobri"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Izbrisano"
 msgid "Deleted {field}"
 msgstr "Izbrisano {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Zavrni"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Padajoče"
@@ -1318,10 +1319,6 @@ msgstr "Posodobitev spremljanja ni uspela"
 msgid "Failed to upload attachment"
 msgstr "Neuspešno nalaganje priponke"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Kanal"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Kanali"
@@ -1413,6 +1410,10 @@ msgstr "Zgodovina"
 msgid "Home"
 msgstr "Domov"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Domači kanal"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Vroče"
@@ -1476,14 +1477,6 @@ msgstr "Neveljavna obnovitvena koda"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Neveljavna potrditvena koda"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Aplikacija bo lahko brala vaš račun in objavljala v njegovem imenu."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Aplikacija bo lahko brala vaš račun."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Preusmerjanje na nadzorno ploščo…"
 msgid "Reduce interest"
 msgstr "Zmanjšaj zanimanje"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Odkloni"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "Prikaz {totalShown} od {total}"
 msgid "Sidebar"
 msgstr "Stranska vrstica"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Prijavite se v svoj račun"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Prijavite se z računom, ki ima dostop <0/> do tega vira."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "To bo trajno izbrisalo igro in njen klepet. Tega dejanja ni mogoče razveljaviti."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Ta zahteva za prijavo je potekla ali je bila že obravnavana."
+msgid "This request is no longer valid."
+msgstr "Ta zahteva ni več veljavna."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Poslali smo potrditveno kodo na <0>{0}</0>. Spodaj vnesite kodo za potrd
 msgid "Wednesday"
 msgstr "Sreda"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Kam naj gredo objave, ustvarjene iz te aplikacije?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikiji"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Nimate dostopa do tega razdelka."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "V tem omrežju nimate računa. Najprej si v Nastavitvah rezervirajte vzdevek."
+msgid "You have no {network} account here."
+msgstr "Tukaj nimate računa {network}."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

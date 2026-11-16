@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# fhaidhle eile gun sealltainn} two {# fhaidhle
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Fosgail an clàr-taice (# bhrath gun leughadh)} two {Fosgail an clàr-taice (# bhrath gun leughadh)} few {Fosgail an clàr-taice (# brathan gun leughadh)} other {Fosgail an clàr-taice (# brath gun leughadh)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "Tha <0>{0}</0> ag iarraidh clàradh a-steach dhan chunntas {1} agad."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 uair"
@@ -145,10 +139,9 @@ msgstr "12 uair"
 msgid "24 hours"
 msgstr "24 uair"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Inbhir ùr air a bheil {0}"
+msgid "A new feed"
+msgstr "Inbhir ùr"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Na beachdan uile"
 msgid "All day"
 msgstr "Fad an latha"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Ceadaich"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Cead a thoirt do {name} leughadh is postadh?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Cead a thoirt do {name} leughadh?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Ceadaich do dhuine sam bith {entityLabel} a lorg"
@@ -300,10 +305,6 @@ msgstr "Tha cunntas leis an dearbh-aithne seo ann an seo mar-thà."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Thachair mearachd"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Inbhir poblach a tha ann mu thràth"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Neach sam bith a tha air clàradh a-steach"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Sguiridh rud sam bith a tha air fo-sgrìobhadh ris an inbhir seo ga fhaighinn. 'S urrainn dhut URL ùr a chopaigeadh às a dhèidh."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Aontaich"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Air a sguabadh às"
 msgid "Deleted {field}"
 msgstr "Chaidh {field} a sguabadh às"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Diùlt"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "A' teàrnadh"
@@ -1318,10 +1319,6 @@ msgstr "Dh'fhàillig ùrachadh a' chumail-sùil"
 msgid "Failed to upload attachment"
 msgstr "Cha b' urrainn an ceangaltas a luchdadh suas"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Inbhir"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Inbhirean"
@@ -1413,6 +1410,10 @@ msgstr "Eachdraidh"
 msgid "Home"
 msgstr "Dachaigh"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Inbhir dachaigh"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Teth"
@@ -1476,14 +1477,6 @@ msgstr "Còd aiseig mì-dhligheach"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Còd dearbhaidh mì-dhligheach"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Faodaidh e an cunntas agad a leughadh agus postadh às a leth."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Faodaidh e an cunntas agad a leughadh."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Gad ath-stiùireadh dhan dashboard…"
 msgid "Reduce interest"
 msgstr "Lùghdaich an ùidh"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Diùlt"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "A' sealltainn {totalShown} de {total}"
 msgid "Sidebar"
 msgstr "Bàr-taoibh"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Clàraich a-steach dhan chunntas agad"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Clàraich a-steach le cunntas aig a bheil inntrigeadh <0/> dhan ghoireas seo."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Sguabaidh seo às an geama agus an cabadaich aige gu buan. Chan urrainn seo a neo-dhèanamh."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Dh'fhalbh an ùine air an iarrtas clàraidh a-steach seo no chaidh a fhreagairt mu thràth."
+msgid "This request is no longer valid."
+msgstr "Chan eil an t-iarrtas seo dligheach tuilleadh."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Chuir sinn còd dearbhaidh gu <0>{0}</0>. Cuir a-steach an còd gu h-ìo
 msgid "Wednesday"
 msgstr "Diciadain"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Càite am bu chòir do phostaichean on aplacaid seo a dhol?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Uicipeidean"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Chan eil cead-inntrigidh agad dhan earrann seo."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Chan eil cunntas agad air an lìonra seo. Glèidh ainm-cleachdaiche ann an Roghainnean an toiseach."
+msgid "You have no {network} account here."
+msgstr "Chan eil cunntas {network} agad an seo."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

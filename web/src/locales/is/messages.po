@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# skrá til viðbótar ekki sýnd} other {# skr
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Opna valmynd (# ólesin tilkynning)} other {Opna valmynd (# ólesnar tilkynningar)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> biður um að skrá sig inn á {1}-reikninginn þinn."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 klukkustundir"
@@ -145,10 +139,9 @@ msgstr "12 klukkustundir"
 msgid "24 hours"
 msgstr "24 klukkustundir"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Nýtt streymi sem heitir {0}"
+msgid "A new feed"
+msgstr "Nýtt streymi"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Allar athugasemdir"
 msgid "All day"
 msgstr "Allan daginn"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Leyfa"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Leyfa {name} að lesa og birta færslur?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Leyfa {name} að lesa?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Leyfa öllum að leita að {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Aðgangur með þessa auðkenni er þegar til hér."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Villa kom upp"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Fyrirliggjandi opinbert streymi"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Allir sem eru skráðir inn"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Allt sem er áskrifandi að þessari veitu hættir að fá hana. Þú getur afritað nýja vefslóð á eftir."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Samþykkja"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Eytt"
 msgid "Deleted {field}"
 msgstr "Eyddi {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Hafna"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Lækkandi"
@@ -1318,10 +1319,6 @@ msgstr "Ekki tókst að uppfæra vöktun"
 msgid "Failed to upload attachment"
 msgstr "Tókst ekki að hlaða upp viðhengi"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Streymi"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Streymi"
@@ -1413,6 +1410,10 @@ msgstr "Saga"
 msgid "Home"
 msgstr "Heim"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Heimastreymi"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Heitt"
@@ -1476,14 +1477,6 @@ msgstr "Ógildur endurheimtarkóði"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Ógildur staðfestingarkóði"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Það má lesa reikninginn þinn og birta færslur í nafni hans."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Það má lesa reikninginn þinn."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Áframsendi þig á stjórnborðið…"
 msgid "Reduce interest"
 msgstr "Minnka áhuga"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Hafna"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "Sýni {totalShown} af {total}"
 msgid "Sidebar"
 msgstr "Hliðarstika"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Skráðu þig inn á reikninginn þinn"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Skráðu þig inn með reikningi sem hefur aðgang <0/> að þessari auðlind."
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Þetta eyðir leiknum og spjallinu varanlega. Ekki er hægt að afturkalla þessa aðgerð."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Þessi innskráningarbeiðni er útrunnin eða henni hefur þegar verið svarað."
+msgid "This request is no longer valid."
+msgstr "Þessi beiðni er ekki lengur gild."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "Við sendum staðfestingarkóða á <0>{0}</0>. Sláðu inn kóðann hé
 msgid "Wednesday"
 msgstr "Miðvikudagur"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Hvert eiga færslur úr þessu forriti að fara?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki-síður"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "Þú hefur ekki aðgang að þessum hluta."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Þú ert ekki með reikning á þessu neti. Taktu fyrst frá notandanafn í Stillingum."
+msgid "You have no {network} account here."
+msgstr "Þú ert ekki með {network}-reikning hér."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

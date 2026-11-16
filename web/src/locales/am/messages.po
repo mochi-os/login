@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# ተጨማሪ ፋይል አልታየም} other
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {ምናሌን ክፈት (# ያልተነበበ ማሳወቂያ)} other {ምናሌን ክፈት (# ያልተነበቡ ማሳወቂያዎች)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> ወደ {1} መለያዎ ለመግባት ይጠይቃል።"
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ሰዓት"
@@ -145,10 +139,9 @@ msgstr "12 ሰዓት"
 msgid "24 hours"
 msgstr "24 ሰዓት"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "{0} የተባለ አዲስ ፊድ"
+msgid "A new feed"
+msgstr "አዲስ ፊድ"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "ሁሉም አስተያየቶች"
 msgid "All day"
 msgstr "ሙሉ ቀን"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "ፍቀድ"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "{name} እንዲያነብ እና እንዲለጥፍ ይፈቀድለት?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "{name} እንዲያነብ ይፈቀድለት?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "ማንኛውም ሰው {entityLabel} እንዲፈልግ ፍቀድ"
@@ -300,10 +305,6 @@ msgstr "በዚህ ማንነት የተፈጠረ መለያ አስቀድሞ እዚ�
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "ስህተት ተከስቷል"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "አሁን ያለ ሕዝባዊ ፊድ"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "የገባ ማንኛውም ሰው"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "በዚህ ፊድ የተመዘገበ ማንኛውም ነገር መቀበሉን ያቆማል። ከዚያ በኋላ አዲስ URL መቅዳት ይችላሉ።"
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "አጽድቅ"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "ተሰርዟል"
 msgid "Deleted {field}"
 msgstr "{field} ተሰርዟል"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "ተከለከል"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "ከላይ ወደ ታች"
@@ -1318,10 +1319,6 @@ msgstr "መከታተልን ማዘመን አልተሳካም"
 msgid "Failed to upload attachment"
 msgstr "አባሪ መስቀል አልተሳካም"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "ፊድ"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "ፊዶች"
@@ -1413,6 +1410,10 @@ msgstr "ታሪክ"
 msgid "Home"
 msgstr "መነሻ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "መነሻ ፊድ"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "ሞቅ ያለ"
@@ -1476,14 +1477,6 @@ msgstr "ልክ ያልሆነ የመልሶ ማግኛ ኮድ"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "ልክ ያልሆነ የማረጋገጫ ኮድ"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "መለያዎን ማንበብ እና በመለያው ስም መለጠፍ ይችላል።"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "መለያዎን ማንበብ ይችላል።"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "ወደ ዳሽቦርድ በማዞር ላይ…"
 msgid "Reduce interest"
 msgstr "ፍላጎትን ቀንስ"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "እምቢ በል"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2563,10 +2552,6 @@ msgstr "ከ{total} ውስጥ {totalShown} እያሳየ"
 msgid "Sidebar"
 msgstr "የጎን አሞሌ"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "ወደ መለያዎ ይግቡ"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "ወደዚህ መርጃ መዳረሻ ባለው <0/> መለያ ይግቡ።"
@@ -2784,8 +2769,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ይህ ጨዋታውን እና ውይይቱን በቋሚነት ይሰርዛል። ይህ ወደኋላ ሊመለስ አይችልም።"
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "ይህ የመግቢያ ጥያቄ ጊዜው አልፎበታል ወይም አስቀድሞ ምላሽ ተሰጥቶታል።"
+msgid "This request is no longer valid."
+msgstr "ይህ ጥያቄ ከአሁን በኋላ የሚሰራ አይደለም።"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3028,10 +3013,6 @@ msgstr "የማረጋገጫ ኮድ ወደ <0>{0}</0> ልከናል። የኢሜይ
 msgid "Wednesday"
 msgstr "ረቡዕ"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "ከዚህ መተግበሪያ የሚለጠፉ ልጥፎች ወዴት ይሂዱ?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "ዊኪዎች"
@@ -3049,8 +3030,8 @@ msgid "You do not have access to this section."
 msgstr "የዚህ ክፍል መዳረሻ የለዎትም።"
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "በዚህ አውታረ መረብ ላይ መለያ የለዎትም። መጀመሪያ በቅንብሮች ውስጥ የተጠቃሚ ስም ይያዙ።"
+msgid "You have no {network} account here."
+msgstr "እዚህ የ{network} መለያ የለዎትም።"
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
