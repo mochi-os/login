@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {파일 #개 더 표시되지 않음} other {파
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {메뉴 열기(읽지 않은 알림 #개)} other {메뉴 열기(읽지 않은 알림 #개)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> 앱이 내 {1} 계정에 로그인하도록 요청해요."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12시간"
@@ -145,10 +139,9 @@ msgstr "12시간"
 msgid "24 hours"
 msgstr "24시간"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "이름이 {0}인 새 피드"
+msgid "A new feed"
+msgstr "새 피드"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "모든 댓글"
 msgid "All day"
 msgstr "종일"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "허용"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "{name}에 읽기 및 게시를 허용할까요?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "{name}에 읽기를 허용할까요?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "누구나 {entityLabel} 검색을 허용"
@@ -300,10 +305,6 @@ msgstr "이 신원으로 계정이 이미 여기에 존재합니다."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "오류가 발생했습니다"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "기존 공개 피드"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "로그인한 모든 사람"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "이 피드를 구독 중인 모든 것이 수신을 중단합니다. 이후에 새 URL을 복사할 수 있습니다."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "승인"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "삭제됨"
 msgid "Deleted {field}"
 msgstr "{field} 삭제됨"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "거부"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "내림차순"
@@ -1318,10 +1319,6 @@ msgstr "알림 설정 업데이트 실패"
 msgid "Failed to upload attachment"
 msgstr "첨부 파일 업로드에 실패했어요"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "피드"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "피드"
@@ -1413,6 +1410,10 @@ msgstr "기록"
 msgid "Home"
 msgstr "홈"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "홈 피드"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "인기"
@@ -1476,14 +1477,6 @@ msgstr "잘못된 복구 코드"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "잘못된 인증 코드"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "계정을 읽고 해당 계정으로 게시할 수 있어요."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "계정을 읽을 수 있어요."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "대시보드로 이동 중…"
 msgid "Reduce interest"
 msgstr "관심사 줄이기"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "거절"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "{total} 중 {totalShown} 표시 중"
 msgid "Sidebar"
 msgstr "사이드바"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "계정에 로그인"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "이 리소스에 접근할 수 있는 계정으로 <0/> 로그인하세요."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "이 작업은 게임과 채팅을 영구적으로 삭제합니다. 이 작업은 되돌릴 수 없습니다."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "이 로그인 요청은 만료되었거나 이미 응답되었어요."
+msgid "This request is no longer valid."
+msgstr "이 요청은 더 이상 유효하지 않아요."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "<0>{0}</0>(으)로 인증 코드를 보냈어요. 이메일 주소를 �
 msgid "Wednesday"
 msgstr "수요일"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "이 앱에서 작성한 게시물을 어디에 올릴까요?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "위키"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "이 섹션에 대한 접근 권한이 없습니다."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "이 네트워크에 계정이 없어요. 먼저 설정에서 핸들을 예약하세요."
+msgid "You have no {network} account here."
+msgstr "여기에 {network} 계정이 없어요."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

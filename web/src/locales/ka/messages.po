@@ -131,12 +131,6 @@ msgstr "{truncated, plural, other {კიდევ # ფაილი არ ა�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, other {მენიუს გახსნა (# წაუკითხავი შეტყობინება)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> ითხოვს თქვენს {1} ანგარიშში შესვლას."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 საათი"
@@ -145,10 +139,9 @@ msgstr "12 საათი"
 msgid "24 hours"
 msgstr "24 საათი"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "ახალი არხი სახელით {0}"
+msgid "A new feed"
+msgstr "ახალი არხი"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "ყველა კომენტარი"
 msgid "All day"
 msgstr "მთელი დღე"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "დაშვება"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "მიეცეს {name}-ს წაკითხვისა და გამოქვეყნების უფლება?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "მიეცეს {name}-ს წაკითხვის უფლება?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "ყველას შეეძლოს მოძებნოს {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "ამ პირადობით ანგარიში უკვე
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "მოხდა შეცდომა"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "არსებული საჯარო არხი"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "ნებისმიერი, ვინც შესულია"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "ყველაფერი, რაც ამ არხზეა გამოწერილი, შეწყვეტს მის მიღებას. შემდეგ შეგიძლიათ დააკოპიროთ ახალი URL."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "დამტკიცება"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "წაიშალა"
 msgid "Deleted {field}"
 msgstr "წაიშალა {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "უარყოფა"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "კლებადობით"
@@ -1318,10 +1319,6 @@ msgstr "თვალყურის დევნების განახლ�
 msgid "Failed to upload attachment"
 msgstr "დანართის ატვირთვა ვერ მოხერხდა"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "არხი"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "არხები"
@@ -1413,6 +1410,10 @@ msgstr "ისტორია"
 msgid "Home"
 msgstr "მთავარი"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "მთავარი არხი"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "ცხელი"
@@ -1476,14 +1477,6 @@ msgstr "არასწორი აღდგენის კოდი"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "არასწორი დადასტურების კოდი"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "მას შეეძლება თქვენი ანგარიშის წაკითხვა და მისი სახელით გამოქვეყნება."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "მას შეეძლება თქვენი ანგარიშის წაკითხვა."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "თქვენს საინფორმაციო დაფაზ�
 msgid "Reduce interest"
 msgstr "ინტერესის შემცირება"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "უარყოფა"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "ნაჩვენებია {totalShown} {total}-დან"
 msgid "Sidebar"
 msgstr "გვერდითი პანელი"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "შედით თქვენს ანგარიშში"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "შედით ანგარიშით, რომელსაც აქვს წვდომა <0/> ამ რესურსზე."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ეს სამუდამოდ წაშლის თამაშსა და მის ჩატს. ამ მოქმედების გაუქმება შეუძლებელია."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "შესვლის ამ მოთხოვნას ვადა გაუვიდა ან მას უკვე უპასუხეს."
+msgid "This request is no longer valid."
+msgstr "ეს მოთხოვნა აღარ არის მოქმედი."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "გავაგზავნეთ დამადასტურებ�
 msgid "Wednesday"
 msgstr "ოთხშაბათი"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "სად გამოქვეყნდეს ამ აპიდან შექმნილი პოსტები?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "ვიკები"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "ამ განყოფილებაზე წვდომა არ გაქვთ."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "ამ ქსელში ანგარიში არ გაქვთ. ჯერ დაჯავშნეთ მომხმარებლის სახელი პარამეტრებში."
+msgid "You have no {network} account here."
+msgstr "აქ {network} ანგარიში არ გაქვთ."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

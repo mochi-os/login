@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Dar # failas nerodomas} few {Dar # failai nerod
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Atidaryti meniu (# neperskaitytas pranešimas)} few {Atidaryti meniu (# neperskaityti pranešimai)} many {Atidaryti meniu (# neperskaityto pranešimo)} other {Atidaryti meniu (# neperskaitytų pranešimų)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> prašo prisijungti prie jūsų {1} paskyros."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 valandų"
@@ -145,10 +139,9 @@ msgstr "12 valandų"
 msgid "24 hours"
 msgstr "24 valandos"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Naujas srautas pavadinimu {0}"
+msgid "A new feed"
+msgstr "Naujas sklaidos kanalas"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Visi komentarai"
 msgid "All day"
 msgstr "Visą dieną"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Leisti"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Leisti {name} skaityti ir skelbti?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Leisti {name} skaityti?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Leisti visiems ieškoti: {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Čia jau egzistuoja paskyra su šia tapatybe."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Įvyko klaida"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Esamas viešas srautas"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Bet kas, kas prisijungęs"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Viskas, kas prenumeruoja šį srautą, nustos jį gauti. Vėliau galėsite nukopijuoti naują URL."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Patvirtinti"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Ištrinta"
 msgid "Deleted {field}"
 msgstr "{field} ištrinta"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Atmesti"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Mažėjančiai"
@@ -1318,10 +1319,6 @@ msgstr "Nepavyko atnaujinti stebėjimo"
 msgid "Failed to upload attachment"
 msgstr "Nepavyko įkelti priedo"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Srautas"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Sklaidos kanalai"
@@ -1413,6 +1410,10 @@ msgstr "Istorija"
 msgid "Home"
 msgstr "Pradžia"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Pagrindinis sklaidos kanalas"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Karšta"
@@ -1476,14 +1477,6 @@ msgstr "Netinkamas atkūrimo kodas"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Netinkamas patvirtinimo kodas"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Ji galės skaityti jūsų paskyrą ir skelbti jos vardu."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Ji galės skaityti jūsų paskyrą."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Peradresuojama į skydelį…"
 msgid "Reduce interest"
 msgstr "Sumažinti susidomėjimą"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Atmesti"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "Rodoma {totalShown} iš {total}"
 msgid "Sidebar"
 msgstr "Šoninė juosta"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Prisijunkite prie savo paskyros"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Prisijunkite su paskyra, kuri turi prieigą <0/> prie šio ištekliaus."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Tai visam laikui ištrins žaidimą ir jo pokalbį. Šio veiksmo negalima anuliuoti."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Ši prisijungimo užklausa nebegalioja arba į ją jau atsakyta."
+msgid "This request is no longer valid."
+msgstr "Ši užklausa nebegalioja."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "Išsiuntėme patvirtinimo kodą adresu <0>{0}</0>. Įveskite kodą žemi
 msgid "Wednesday"
 msgstr "Trečiadienis"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Kur turėtų būti skelbiami šioje programėlėje sukurti įrašai?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Vikiai"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "Neturite prieigos prie šios skilties."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Šiame tinkle neturite paskyros. Pirmiausia rezervuokite vartotojo vardą nustatymuose."
+msgid "You have no {network} account here."
+msgstr "Čia neturite {network} paskyros."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

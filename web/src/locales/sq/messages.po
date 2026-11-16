@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Edhe # skedar tjetër nuk shfaqet} other {Edhe 
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Hap menynë (# njoftim i palexuar)} other {Hap menynë (# njoftime të palexuara)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> kërkon të hyjë në llogarinë tënde {1}."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 orë"
@@ -145,10 +139,9 @@ msgstr "12 orë"
 msgid "24 hours"
 msgstr "24 orë"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Një feed i ri me emrin {0}"
+msgid "A new feed"
+msgstr "Një feed i ri"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Të gjitha komentet"
 msgid "All day"
 msgstr "Gjithë ditën"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Lejo"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Të lejohet {name} të lexojë dhe të postojë?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Të lejohet {name} të lexojë?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Lejo këdo të kërkojë për {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Një llogari me këtë identitet ekziston tashmë këtu."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Ndodhi një gabim"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Një feed publik ekzistues"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Kushdo që ka hyrë"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Gjithçka e abonuar në këtë prurje do të ndalojë ta marrë. Më pas mund të kopjoni një URL të ri."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Mirato"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "U fshi"
 msgid "Deleted {field}"
 msgstr "U fshi {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Mohoj"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Në zbritje"
@@ -1318,10 +1319,6 @@ msgstr "Përditësimi i ndjekjes dështoi"
 msgid "Failed to upload attachment"
 msgstr "Ngarkimi i bashkëngjitjes dështoi"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Feed"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Feed-et"
@@ -1413,6 +1410,10 @@ msgstr "Historia"
 msgid "Home"
 msgstr "Faqja kryesore"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Feed-i kryesor"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Të nxehta"
@@ -1476,14 +1477,6 @@ msgstr "Kod rikuperimi i pavlefshëm"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Kod verifikimi i pavlefshëm"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Mund të lexojë llogarinë tënde dhe të postojë në emër të saj."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Mund të lexojë llogarinë tënde."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Duke ju ridrejtuar te paneli…"
 msgid "Reduce interest"
 msgstr "Zvogëlo interesin"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Refuzo"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "Duke shfaqur {totalShown} nga {total}"
 msgid "Sidebar"
 msgstr "Shiriti anësor"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Hyr në llogarinë tënde"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Hyni me një llogari që ka qasje <0/> te ky burim."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Kjo do të fshijë përgjithmonë lojën dhe bisedën e saj. Ky veprim nuk mund të zhbëhet."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Kjo kërkesë për hyrje ka skaduar ose ka marrë tashmë përgjigje."
+msgid "This request is no longer valid."
+msgstr "Kjo kërkesë nuk është më e vlefshme."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "Dërguam një kod verifikimi te <0>{0}</0>. Shkruani kodin më poshtë p
 msgid "Wednesday"
 msgstr "E mërkurë"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Ku duhet të shkojnë postimet e bëra nga ky aplikacion?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki-t"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "Nuk keni qasje në këtë seksion."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Nuk ke llogari në këtë rrjet. Rezervo fillimisht një pseudonim te Cilësimet."
+msgid "You have no {network} account here."
+msgstr "Nuk keni llogari {network} këtu."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

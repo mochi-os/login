@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Yana # fayl koʻrsatilmadi} other {Yana # fayl 
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Menyuni ochish (# o'qilmagan bildirishnoma)} other {Menyuni ochish (# o'qilmagan bildirishnoma)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> {1} hisobingizga kirishga ruxsat soʻramoqda."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 soat"
@@ -145,10 +139,9 @@ msgstr "12 soat"
 msgid "24 hours"
 msgstr "24 soat"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "{0} nomli yangi tasma"
+msgid "A new feed"
+msgstr "Yangi tasma"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Barcha izohlar"
 msgid "All day"
 msgstr "Kun boʻyi"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Ruxsat berish"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "{name}ga oʻqish va post joylashtirishga ruxsat berilsinmi?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "{name}ga oʻqishga ruxsat berilsinmi?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Hammaga {entityLabel} qidirishga ruxsat berish"
@@ -300,10 +305,6 @@ msgstr "Bu shaxsiyat bilan hisob allaqachon mavjud."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Xatolik yuz berdi"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Mavjud ommaviy tasma"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Tizimga kirgan har kim"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Bu tasmaga obuna boʻlgan hamma narsa uni olishni toʻxtatadi. Keyin yangi URL nusxalashingiz mumkin."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Tasdiqlash"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Oʻchirildi"
 msgid "Deleted {field}"
 msgstr "{field} oʻchirildi"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Rad etish"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Kamayish boʻyicha"
@@ -1318,10 +1319,6 @@ msgstr "Kuzatuvni yangilab bo'lmadi"
 msgid "Failed to upload attachment"
 msgstr "Ilovani yuklab boʻlmadi"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Tasma"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Tasmalar"
@@ -1413,6 +1410,10 @@ msgstr "Tarix"
 msgid "Home"
 msgstr "Bosh sahifa"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Asosiy tasma"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Qaynoq"
@@ -1476,14 +1477,6 @@ msgstr "Notoʻgʻri tiklash kodi"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Notoʻgʻri tasdiqlash kodi"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "U hisobingizni oʻqiy oladi va uning nomidan post joylay oladi."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "U hisobingizni oʻqiy oladi."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Sizni boshqaruv paneliga yoʻnaltirmoqdamiz…"
 msgid "Reduce interest"
 msgstr "Qiziqishni kamaytirish"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Rad etish"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "{total} dan {totalShown} koʻrsatilmoqda"
 msgid "Sidebar"
 msgstr "Yon panel"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Hisobingizga kiring"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Bu resursga <0/> kirish huquqiga ega hisob bilan kiring."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Bu oʻyin va uning chatini butunlay oʻchirib tashlaydi. Bu amalni bekor qilib boʻlmaydi."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Bu kirish soʻrovining muddati tugagan yoki unga allaqachon javob berilgan."
+msgid "This request is no longer valid."
+msgstr "Bu soʻrov endi amal qilmaydi."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "Biz <0>{0}</0> manziliga tasdiqlash kodini yubordik. Elektron pochta man
 msgid "Wednesday"
 msgstr "Chorshanba"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Bu ilovadan yaratilgan postlar qayerga borsin?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki’lar"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "Bu boʻlimga kirish huquqingiz yoʻq."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Bu tarmoqda hisobingiz yoʻq. Avval Sozlamalarda taxallus band qiling."
+msgid "You have no {network} account here."
+msgstr "Bu yerda {network} hisobingiz yoʻq."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

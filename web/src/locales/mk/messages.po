@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Уште # датотека не е прика�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Отвори мени (# непрочитано известување)} other {Отвори мени (# непрочитани известувања)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> бара да се најави на вашата сметка на мрежата {1}."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 часа"
@@ -145,10 +139,9 @@ msgstr "12 часа"
 msgid "24 hours"
 msgstr "24 часа"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Нов канал со име {0}"
+msgid "A new feed"
+msgstr "Нов канал"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Сите коментари"
 msgid "All day"
 msgstr "Цел ден"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Дозволи"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Дозволи {name} да чита и објавува?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Дозволи {name} да чита?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Дозволи секој да пребарува {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Сметка со овој идентитет веќе постои ту
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Се појави грешка"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Постоечки јавен канал"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Секој што е најавен"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Сè што е претплатено на овој канал ќе престане да го прима. Потоа можете да копирате нов URL."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Одобри"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Избришано"
 msgid "Deleted {field}"
 msgstr "Избришано {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Одбиј"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Опаѓачки"
@@ -1318,10 +1319,6 @@ msgstr "Ажурирањето на следењето не успеа"
 msgid "Failed to upload attachment"
 msgstr "Неуспешно прикачување на прилог"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Канал"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Канали"
@@ -1413,6 +1410,10 @@ msgstr "Историја"
 msgid "Home"
 msgstr "Почетна"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Почетен канал"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Жешко"
@@ -1476,14 +1477,6 @@ msgstr "Невалиден код за обновување"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Невалиден код за верификација"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Ќе може да ја чита вашата сметка и да објавува во нејзино име."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Ќе може да ја чита вашата сметка."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Се пренасочувате кон таблата…"
 msgid "Reduce interest"
 msgstr "Намали интерес"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Одбиј"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "Се прикажуваат {totalShown} од {total}"
 msgid "Sidebar"
 msgstr "Странична лента"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Најавете се на вашата сметка"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Најавете се со сметка што има пристап <0/> до овој ресурс."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Ова трајно ќе ја избрише играта и нејзиниот разговор. Ова дејство не може да се врати."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Ова барање за најава истече или веќе е одговорено."
+msgid "This request is no longer valid."
+msgstr "Ова барање повеќе не е важечко."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "Испративме код за потврда на <0>{0}</0>. Вне�
 msgid "Wednesday"
 msgstr "Среда"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Каде да одат објавите направени од оваа апликација?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Викија"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "Немате пристап до овој дел."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Немате сметка на оваа мрежа. Прво резервирајте корисничко име во Поставки."
+msgid "You have no {network} account here."
+msgstr "Немате {network} сметка тука."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

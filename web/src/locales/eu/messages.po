@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Beste # fitxategi ez da erakusten} other {Beste
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Ireki menua (irakurri gabeko # jakinarazpen)} other {Ireki menua (irakurri gabeko # jakinarazpen)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> aplikazioak zure {1} kontuan saioa hasteko baimena eskatzen du."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ordu"
@@ -145,10 +139,9 @@ msgstr "12 ordu"
 msgid "24 hours"
 msgstr "24 ordu"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "{0} izeneko jario berri bat"
+msgid "A new feed"
+msgstr "Jario berri bat"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Iruzkin guztiak"
 msgid "All day"
 msgstr "Egun osoa"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Baimendu"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Baimena eman {name} aplikazioari irakurtzeko eta argitaratzeko?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Baimena eman {name} aplikazioari irakurtzeko?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Baimendu edonork {entityLabel} bilatzea"
@@ -300,10 +305,6 @@ msgstr "Identitate honekin kontu bat badago dagoeneko hemen."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Errore bat gertatu da"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Lehendik dagoen jario publiko bat"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Saioa hasi duen edonor"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Jario honetara harpidetutako guztiak jasotzeari utziko dio. Ondoren URL berri bat kopia dezakezu."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Onartu"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Ezabatuta"
 msgid "Deleted {field}"
 msgstr "{field} ezabatu da"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Ukatu"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Beherakorra"
@@ -1318,10 +1319,6 @@ msgstr "Ezin izan da jarraipena eguneratu"
 msgid "Failed to upload attachment"
 msgstr "Ezin izan da eranskina igo"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Jarioa"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Jarioak"
@@ -1413,6 +1410,10 @@ msgstr "Historia"
 msgid "Home"
 msgstr "Hasiera"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Hasierako jarioa"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Beroa"
@@ -1476,14 +1477,6 @@ msgstr "Berreskuratze-kode baliogabea"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Egiaztapen-kode baliogabea"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Zure kontua irakurri eta haren izenean argitaratu dezake."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Zure kontua irakurri dezake."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Aginte-panelera birbideratzen…"
 msgid "Reduce interest"
 msgstr "Murriztu interesa"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Ukatu"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "{total}etik {totalShown} erakusten"
 msgid "Sidebar"
 msgstr "Alboko barra"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Hasi saioa zure kontuan"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Hasi saioa baliabide honetarako sarbidea <0/> duen kontu batekin."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Honek jokoa eta bere txata betiko ezabatuko ditu. Ekintza hau ezin da desegin."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Saio-hasierako eskaera hau iraungi egin da edo dagoeneko erantzun zaio."
+msgid "This request is no longer valid."
+msgstr "Eskaera hau ez da baliozkoa jada."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "Egiaztapen-kode bat bidali dugu <0>{0}</0> helbidera. Sartu kodea behean
 msgid "Wednesday"
 msgstr "Asteazkena"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Nora joan behar dute aplikazio honetatik egindako argitalpenek?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wikiak"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "Ez duzu atal honetarako sarbiderik."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Ez duzu konturik sare honetan. Erreserbatu lehenik erabiltzaile-izen bat Ezarpenak atalean."
+msgid "You have no {network} account here."
+msgstr "Ez duzu {network} konturik hemen."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

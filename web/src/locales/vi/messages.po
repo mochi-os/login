@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Còn # tệp nữa không hiển thị} other {
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Mở menu (# thông báo chưa đọc)} other {Mở menu (# thông báo chưa đọc)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> yêu cầu đăng nhập vào tài khoản {1} của bạn."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 giờ"
@@ -145,10 +139,9 @@ msgstr "12 giờ"
 msgid "24 hours"
 msgstr "24 giờ"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Nguồn cấp mới có tên {0}"
+msgid "A new feed"
+msgstr "Một nguồn cấp mới"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Tất cả bình luận"
 msgid "All day"
 msgstr "Cả ngày"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Cho phép"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Cho phép {name} đọc và đăng bài?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Cho phép {name} đọc?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Cho phép mọi người tìm kiếm {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Tài khoản với danh tính này đã tồn tại ở đây."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Đã xảy ra lỗi"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Nguồn cấp công khai hiện có"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Bất kỳ ai đã đăng nhập"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Mọi thứ đã đăng ký nguồn cấp này sẽ ngừng nhận. Bạn có thể sao chép URL mới sau đó."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Phê duyệt"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Đã xóa"
 msgid "Deleted {field}"
 msgstr "Đã xóa {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Từ chối"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Giảm dần"
@@ -1318,10 +1319,6 @@ msgstr "Không thể cập nhật theo dõi"
 msgid "Failed to upload attachment"
 msgstr "Không tải tệp đính kèm lên được"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Nguồn cấp"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Nguồn cấp"
@@ -1413,6 +1410,10 @@ msgstr "Lịch sử"
 msgid "Home"
 msgstr "Trang chủ"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Nguồn cấp chính"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Nóng"
@@ -1476,14 +1477,6 @@ msgstr "Mã khôi phục không hợp lệ"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Mã xác minh không hợp lệ"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Ứng dụng có thể đọc tài khoản của bạn và đăng bài dưới danh nghĩa tài khoản đó."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Ứng dụng có thể đọc tài khoản của bạn."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Đang chuyển hướng bạn đến bảng điều khiển…"
 msgid "Reduce interest"
 msgstr "Giảm sự quan tâm"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Từ chối"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "Đang hiển thị {totalShown} trên {total}"
 msgid "Sidebar"
 msgstr "Thanh bên"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Đăng nhập vào tài khoản của bạn"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Hãy đăng nhập bằng tài khoản có quyền truy cập <0/> vào tài nguyên này."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Thao tác này sẽ xóa vĩnh viễn trận đấu và cuộc trò chuyện của nó. Không thể hoàn tác thao tác này."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Yêu cầu đăng nhập này đã hết hạn hoặc đã được trả lời."
+msgid "This request is no longer valid."
+msgstr "Yêu cầu này không còn hợp lệ."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "Chúng tôi đã gửi mã xác minh đến <0>{0}</0>. Nhập mã bên 
 msgid "Wednesday"
 msgstr "Thứ tư"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Bài viết tạo từ ứng dụng này nên được đăng vào đâu?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "Bạn không có quyền truy cập vào phần này."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Bạn chưa có tài khoản trên mạng này. Hãy đặt trước một biệt danh trong Cài đặt."
+msgid "You have no {network} account here."
+msgstr "Bạn không có tài khoản {network} ở đây."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

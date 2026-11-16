@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# altro file non mostrato} other {# altri file 
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Apri il menu (# notifica non letta)} other {Apri il menu (# notifiche non lette)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> chiede di accedere al tuo account {1}."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 ore"
@@ -145,10 +139,9 @@ msgstr "12 ore"
 msgid "24 hours"
 msgstr "24 ore"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Un nuovo feed chiamato {0}"
+msgid "A new feed"
+msgstr "Un nuovo feed"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Tutti i commenti"
 msgid "All day"
 msgstr "Tutto il giorno"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Consenti"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Consentire a {name} di leggere e pubblicare?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Consentire a {name} di leggere?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Consenti a chiunque di cercare {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Un account con questa identità esiste già qui."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Si è verificato un errore"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Un feed pubblico esistente"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Chiunque abbia effettuato l'accesso"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Tutto ciò che è iscritto a questo feed smetterà di riceverlo. Potrai copiare un nuovo URL in seguito."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Approva"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Eliminato"
 msgid "Deleted {field}"
 msgstr "Eliminato {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Nega"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Decrescente"
@@ -1318,10 +1319,6 @@ msgstr "Impossibile aggiornare l'osservazione"
 msgid "Failed to upload attachment"
 msgstr "Impossibile caricare l'allegato"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Feed"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Feed"
@@ -1413,6 +1410,10 @@ msgstr "Cronologia"
 msgid "Home"
 msgstr "Home"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Feed principale"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Popolare"
@@ -1476,14 +1477,6 @@ msgstr "Codice di recupero non valido"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Codice di verifica non valido"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Potrà leggere il tuo account e pubblicare a suo nome."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Potrà leggere il tuo account."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Reindirizzamento alla dashboard…"
 msgid "Reduce interest"
 msgstr "Riduci interesse"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Rifiuta"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "Visualizzati {totalShown} di {total}"
 msgid "Sidebar"
 msgstr "Barra laterale"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Accedi al tuo account"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Accedi con un account che ha accesso <0/> a questa risorsa."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Questa azione eliminerà definitivamente la partita e la relativa chat. Questa azione non può essere annullata."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Questa richiesta di accesso è scaduta o ha già ricevuto una risposta."
+msgid "This request is no longer valid."
+msgstr "Questa richiesta non è più valida."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "Abbiamo inviato un codice di verifica a <0>{0}</0>. Inserisci il codice 
 msgid "Wednesday"
 msgstr "Mercoledì"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Dove devono andare i post creati da questa app?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "Non hai accesso a questa sezione."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Non hai un account su questa rete. Prima riserva un nome utente in Impostazioni."
+msgid "You have no {network} account here."
+msgstr "Non hai un account {network} qui."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

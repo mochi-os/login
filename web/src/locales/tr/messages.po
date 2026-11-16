@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {# dosya daha gösterilmiyor} other {# dosya dah
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Menüyü aç (# okunmamış bildirim)} other {Menüyü aç (# okunmamış bildirim)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0>, {1} hesabına giriş yapmak istiyor."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 saat"
@@ -145,10 +139,9 @@ msgstr "12 saat"
 msgid "24 hours"
 msgstr "24 saat"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "{0} adlı yeni bir akış"
+msgid "A new feed"
+msgstr "Yeni bir akış"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Tüm yorumlar"
 msgid "All day"
 msgstr "Tüm gün"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "İzin ver"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "{name} için okuma ve gönderi paylaşma izni verilsin mi?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "{name} için okuma izni verilsin mi?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Herkesin {entityLabel} aramasına izin ver"
@@ -300,10 +305,6 @@ msgstr "Bu kimlikle bir hesap zaten burada mevcut."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Bir hata oluştu"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Mevcut bir herkese açık akış"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Giriş yapmış herkes"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Bu akışa abone olan her şey almayı durduracak. Sonrasında yeni bir URL kopyalayabilirsiniz."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Onayla"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Silindi"
 msgid "Deleted {field}"
 msgstr "{field} silindi"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Reddet"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Azalan"
@@ -1318,10 +1319,6 @@ msgstr "İzleme güncellenemedi"
 msgid "Failed to upload attachment"
 msgstr "Ek yüklenemedi"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Akış"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Akışlar"
@@ -1413,6 +1410,10 @@ msgstr "Geçmiş"
 msgid "Home"
 msgstr "Ana sayfa"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Ana akış"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Popüler"
@@ -1476,14 +1477,6 @@ msgstr "Geçersiz kurtarma kodu"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Geçersiz doğrulama kodu"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Hesabını okuyabilir ve onun adına paylaşım yapabilir."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Hesabını okuyabilir."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Dashboard'a yönlendiriliyorsunuz…"
 msgid "Reduce interest"
 msgstr "İlgiyi azalt"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Reddet"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "{total} öğenin {totalShown} tanesi gösteriliyor"
 msgid "Sidebar"
 msgstr "Kenar çubuğu"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Hesabına giriş yap"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Bu kaynağa <0/> erişimi olan bir hesapla oturum açın."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Bu işlem oyunu ve sohbetini kalıcı olarak siler. Bu işlem geri alınamaz."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Bu giriş isteğinin süresi doldu veya istek zaten yanıtlandı."
+msgid "This request is no longer valid."
+msgstr "Bu istek artık geçerli değil."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "<0>{0}</0> adresine bir doğrulama kodu gönderdik. E-posta adresinizi d
 msgid "Wednesday"
 msgstr "Çarşamba"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Bu uygulamadan yapılan gönderiler nereye gitsin?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Wiki'ler"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "Bu bölüme erişiminiz yok."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Bu ağda hesabın yok. Önce Ayarlar'dan bir rumuz ayır."
+msgid "You have no {network} account here."
+msgstr "Burada {network} hesabınız yok."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

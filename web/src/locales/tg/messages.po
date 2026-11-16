@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Боз # файл нишон дода нашу�
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Менюро кушоед (# огоҳиномаи хонданашуда)} other {Менюро кушоед (# огоҳиномаи хонданашуда)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> иҷозат мепурсад, ки ба ҳисоби {1}-и шумо ворид шавад."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 соат"
@@ -145,10 +139,9 @@ msgstr "12 соат"
 msgid "24 hours"
 msgstr "24 соат"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Фиди нав бо номи {0}"
+msgid "A new feed"
+msgstr "Фиди нав"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Ҳамаи шарҳҳо"
 msgid "All day"
 msgstr "Тамоми рӯз"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Иҷозат додан"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Ба {name} иҷозати хондан ва гузоштани пост медиҳед?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Ба {name} иҷозати хондан медиҳед?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Ба ҳама иҷозат диҳед, ки {entityLabel}-ро ҷустуҷӯ кунанд"
@@ -300,10 +305,6 @@ msgstr "Ҳисоб бо ин шахсият аллакай дар ин ҷо ву
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Хатогӣ рух дод"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Фиди ҷамъиятии мавҷуда"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Ҳар касе ки ворид шудааст"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Ҳама чизе, ки ба ин ҷараён обуна шудааст, гирифтани онро қатъ мекунад. Пас аз он шумо метавонед URL-и навро нусха бардоред."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Тасдиқ кардан"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Нест карда шуд"
 msgid "Deleted {field}"
 msgstr "{field} нест карда шуд"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Рад кардан"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Камшаванда"
@@ -1318,10 +1319,6 @@ msgstr "Навсозии пайгирӣ ноком шуд"
 msgid "Failed to upload attachment"
 msgstr "Боркунии замима ба анҷом нарасид"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Фид"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Фидҳо"
@@ -1413,6 +1410,10 @@ msgstr "Таърих"
 msgid "Home"
 msgstr "Хона"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Фиди асосӣ"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Доғ"
@@ -1476,14 +1477,6 @@ msgstr "Рамзи барқароркунӣ нодуруст"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Рамзи тасдиқ нодуруст"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Он метавонад ҳисоби шуморо хонад ва аз номи он нашр кунад."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Он метавонад ҳисоби шуморо хонад."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Шуморо ба панели идоракунӣ равона меку�
 msgid "Reduce interest"
 msgstr "Кам кардани шавқу ҳавас"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Рад кардан"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "{totalShown} аз {total} нишон дода мешавад"
 msgid "Sidebar"
 msgstr "Панели паҳлӯ"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Ба ҳисоби худ ворид шавед"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Бо ҳисобе ворид шавед, ки ба ин манбаъ <0/> дастрасӣ дорад."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Ин бозӣ ва чати онро якумра нест мекунад. Ин амалро баргардонидан мумкин нест."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Мӯҳлати ин дархости воридшавӣ гузаштааст ё ба он аллакай ҷавоб дода шудааст."
+msgid "This request is no longer valid."
+msgstr "Ин дархост дигар эътибор надорад."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "Мо рамзи тасдиқро ба <0>{0}</0> фиристодем. �
 msgid "Wednesday"
 msgstr "Чоршанбе"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Постҳое, ки аз ин барнома сохта мешаванд, ба куҷо раванд?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Викиҳо"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "Шумо ба ин бахш дастрасӣ надоред."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "Шумо дар ин шабака ҳисоб надоред. Аввал дар Танзимот тахаллус захира кунед."
+msgid "You have no {network} account here."
+msgstr "Шумо дар ин ҷо ҳисоби {network} надоред."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts

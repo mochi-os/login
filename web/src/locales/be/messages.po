@@ -131,12 +131,6 @@ msgstr "{truncated, plural, one {Яшчэ # файл не паказаны} few 
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Адкрыць меню (# непрачытанае апавяшчэнне)} few {Адкрыць меню (# непрачытаных апавяшчэнні)} many {Адкрыць меню (# непрачытаных апавяшчэнняў)} other {Адкрыць меню (# непрачытанага апавяшчэння)}}"
 
-#. placeholder {0}: data.request.client.name
-#. placeholder {1}: providerName(data.request.network)
-#: src/features/consent/consent-page.tsx
-msgid "<0>{0}</0> asks to sign in to your {1} account."
-msgstr "<0>{0}</0> просіць увайсці ў ваш уліковы запіс {1}."
-
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "12 hours"
 msgstr "12 гадзін"
@@ -145,10 +139,9 @@ msgstr "12 гадзін"
 msgid "24 hours"
 msgstr "24 гадзіны"
 
-#. placeholder {0}: chosen.name || chosen.identifier
 #: src/features/consent/consent-page.tsx
-msgid "A new feed named {0}"
-msgstr "Новая стужка з назвай {0}"
+msgid "A new feed"
+msgstr "Новая стужка"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "A recording is already in progress."
@@ -280,6 +273,18 @@ msgstr "Усе каментарыі"
 msgid "All day"
 msgstr "Увесь дзень"
 
+#: src/features/consent/consent-page.tsx
+msgid "Allow"
+msgstr "Дазволіць"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read and post?"
+msgstr "Дазволіць {name} чытаць і публікаваць?"
+
+#: src/features/consent/consent-page.tsx
+msgid "Allow {name} to read?"
+msgstr "Дазволіць {name} чытаць?"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Дазволіць усім шукаць {entityLabel}"
@@ -300,10 +305,6 @@ msgstr "Акаўнт з гэтай ідэнтычнасцю ўжо існуе т
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 msgid "An error occurred"
 msgstr "Адбылася памылка"
-
-#: src/features/consent/consent-page.tsx
-msgid "An existing public feed"
-msgstr "Існуючая публічная стужка"
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts
 #: ../../../lib/web/src/lib/error-normalizer.ts
@@ -326,10 +327,6 @@ msgstr "Кожны, хто ўвайшоў"
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
 msgstr "Усё, што падпісана на гэтую стужку, перастане яе атрымліваць. Пасля вы можаце скапіяваць новы URL."
-
-#: src/features/consent/consent-page.tsx
-msgid "Approve"
-msgstr "Ухваліць"
 
 #. placeholder {0}: deleteTarget?.name
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx
@@ -975,6 +972,10 @@ msgstr "Выдалена"
 msgid "Deleted {field}"
 msgstr "Выдалена {field}"
 
+#: src/features/consent/consent-page.tsx
+msgid "Deny"
+msgstr "Адмовіць"
+
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Descending"
 msgstr "Па ўбыванні"
@@ -1318,10 +1319,6 @@ msgstr "Не ўдалося абнавіць адсочванне"
 msgid "Failed to upload attachment"
 msgstr "Не ўдалося загрузіць укладанне"
 
-#: src/features/consent/consent-page.tsx
-msgid "Feed"
-msgstr "Стужка"
-
 #: src/features/landing/landing-page.tsx
 msgid "Feeds"
 msgstr "Стужкі"
@@ -1413,6 +1410,10 @@ msgstr "Гісторыя"
 msgid "Home"
 msgstr "Галоўная"
 
+#: src/features/consent/consent-page.tsx
+msgid "Home feed"
+msgstr "Хатняя стужка"
+
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Hot"
 msgstr "Папулярнае"
@@ -1476,14 +1477,6 @@ msgstr "Няправільны код аднаўлення"
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 msgid "Invalid verification code"
 msgstr "Няправільны код пацвярджэння"
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account and post as it."
-msgstr "Можа чытаць ваш уліковы запіс і публікаваць ад яго імя."
-
-#: src/features/consent/consent-page.tsx
-msgid "It may read your account."
-msgstr "Можа чытаць ваш уліковы запіс."
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
@@ -2210,10 +2203,6 @@ msgstr "Перанакіраванне ў панэль кіравання…"
 msgid "Reduce interest"
 msgstr "Зменшыць цікавасць"
 
-#: src/features/consent/consent-page.tsx
-msgid "Refuse"
-msgstr "Адхіліць"
-
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
 #: src/features/auth/sign-in/components/user-auth-form.tsx
@@ -2559,10 +2548,6 @@ msgstr "Паказана {totalShown} з {total}"
 msgid "Sidebar"
 msgstr "Бакавая панэль"
 
-#: src/features/consent/consent-page.tsx
-msgid "Sign in to your account"
-msgstr "Увайдзіце ў свой уліковы запіс"
-
 #: ../../../lib/web/src/features/errors/access-denied-error.tsx
 msgid "Sign in with an account that has access <0/> to this resource."
 msgstr "Увайдзіце з уліковым запісам, які мае доступ <0/> да гэтага рэсурсу."
@@ -2780,8 +2765,8 @@ msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Гэта незваротна выдаліць гульню і яе чат. Гэтае дзеянне нельга адрабіць."
 
 #: src/features/consent/consent-page.tsx
-msgid "This sign-in request has expired or was already answered."
-msgstr "Тэрмін дзеяння гэтага запыту на ўваход скончыўся, або на яго ўжо адказалі."
+msgid "This request is no longer valid."
+msgstr "Гэты запыт больш не дзейсны."
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "Thursday"
@@ -3024,10 +3009,6 @@ msgstr "Мы адправілі код пацвярджэння на <0>{0}</0>.
 msgid "Wednesday"
 msgstr "Серада"
 
-#: src/features/consent/consent-page.tsx
-msgid "Where should posts made from this app go?"
-msgstr "Куды павінны трапляць пасты, зробленыя з гэтага дадатку?"
-
 #: src/features/landing/landing-page.tsx
 msgid "Wikis"
 msgstr "Вікі"
@@ -3045,8 +3026,8 @@ msgid "You do not have access to this section."
 msgstr "У вас няма доступу да гэтага раздзела."
 
 #: src/features/consent/consent-page.tsx
-msgid "You have no account on this network. Reserve a handle in Settings first."
-msgstr "У вас няма ўліковага запісу ў гэтай сетцы. Спачатку зарэзервуйце імя карыстальніка ў Наладах."
+msgid "You have no {network} account here."
+msgstr "У вас тут няма ўліковага запісу {network}."
 
 #. placeholder {0}: providerLabel(provider)
 #: src/lib/oauth-errors.ts
