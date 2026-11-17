@@ -5,8 +5,8 @@
 
 // The code a refused auth request carries. requestHelpers rejects with
 // ApiError, which holds the server's JSON body on .data: {"error": code,
-// "message": text} as respond_error writes it. The raw-axios shape,
-// error.response.data, belongs only to plain-axios calls such as
+// "message": text} as respond_error writes it. The raw HttpError
+// shape, error.response.data, belongs only to bare-client calls such as
 // signupRestore and is deliberately not read here: for an ApiError it is
 // always undefined, which is how the code-specific branches went dead.
 export function authErrorCode(error: unknown): string | undefined {
