@@ -21,7 +21,7 @@ vi.mock('@mochi/web', async (original) => ({
 }))
 vi.mock('@/services/auth-service', async (original) => ({
   ...(await original<typeof import('@/services/auth-service')>()),
-  resolveSession: state.session,
+  takeSession: state.session,
 }))
 
 const { Route } = await import('@/routes/index')
