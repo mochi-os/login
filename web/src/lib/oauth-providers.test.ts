@@ -23,12 +23,16 @@ beforeAll(() => {
   i18n.activate('en')
 })
 
-// The real provider names, without the rest of the @mochi/web barrel.
+// The real provider names and redirect rule, without the rest of the
+// @mochi/web barrel.
 vi.mock('@mochi/web', async () => {
   const names = await vi.importActual<
     typeof import('../../../../../lib/web/src/lib/provider-name')
   >('../../../../../lib/web/src/lib/provider-name')
-  return { ...names, getRouterBasepath: () => '/' }
+  const { safeRedirectPath } = await vi.importActual<
+    typeof import('../../../../../lib/web/src/lib/safe-navigation')
+  >('../../../../../lib/web/src/lib/safe-navigation')
+  return { ...names, safeRedirectPath, getRouterBasepath: () => '/' }
 })
 vi.mock('@/api/auth', () => ({
   authApi: { oauthBegin: (...args: unknown[]) => oauthBegin(...args) },

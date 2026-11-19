@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-import { getRouterBasepath } from '@mochi/web'
+import { getRouterBasepath, safeRedirectPath } from '@mochi/web'
 
 /** Absolute URL inside this app for full-page navigations. When served at the root (anonymous
  * default app) use the canonical /login/ prefix: a bare '/identity' would
@@ -30,20 +30,15 @@ export function navigable(url: string): boolean {
   }
 }
 
-/** Validate a redirect URL is a safe same-origin path, not an open redirect. */
+/** A redirect URL as a same-origin path, not an open redirect: the library's
+ * rule, which also refuses a path that resolves to `//host`, such as
+ * `/.//evil.example`. */
 export function safeRedirect(
   url: string | undefined,
   fallback?: string
 ): string {
-  const defaultUrl = fallback || import.meta.env.VITE_DEFAULT_APP_URL || '/'
-  if (!url || url.length === 0) return defaultUrl
-  // Resolve against our origin rather than prefix-checking '/': browsers
-  // normalise '/\evil.com' and '/\t/evil.com' into protocol-relative URLs.
-  try {
-    const resolved = new URL(url, window.location.origin)
-    if (resolved.origin !== window.location.origin) return defaultUrl
-    return resolved.pathname + resolved.search + resolved.hash
-  } catch {
-    return defaultUrl
-  }
+  return safeRedirectPath(
+    url,
+    fallback || import.meta.env.VITE_DEFAULT_APP_URL || '/'
+  )
 }
