@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
+import { path } from '@mochi/web'
 
 const endpoints = {
   auth: {
@@ -22,7 +23,7 @@ const endpoints = {
       login: '/_/auth/recovery',
     },
     oauth: {
-      begin: (provider: string) => `/_/auth/oauth/${provider}/begin`,
+      begin: (provider: string) => path`/_/auth/oauth/${provider}/begin`,
     },
   },
   document: {

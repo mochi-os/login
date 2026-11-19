@@ -46,4 +46,17 @@ describe('safeRedirect', () => {
     expect(safeRedirect('//evil.example/x', '/')).toBe('/')
     expect(safeRedirect('/\\evil.example', '/')).toBe('/')
   })
+
+  it('falls back for a path that resolves to another host', () => {
+    // Each resolves on this origin to the pathname '//evil.example/...',
+    // which a location reads as protocol-relative.
+    for (const value of [
+      '/.//evil.example/x',
+      '/a/..//evil.example/x',
+      '/%2e//evil.example/',
+      '/login/../..//evil.example',
+    ]) {
+      expect(safeRedirect(value, '/')).toBe('/')
+    }
+  })
 })
